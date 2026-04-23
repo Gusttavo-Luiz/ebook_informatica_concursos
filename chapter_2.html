@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Capítulo 2 — Sistemas Operacionais</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="chapter-page" data-pagina="capitulo2">
+<div class="background-animation"></div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="reading-container">
+<div class="chapter-header">
+<a class="back-home" href="index.html">← Voltar para a página inicial</a>
+<div class="chapter-tools">
+<button class="audio-button" id="botaoNarrar" type="button">🔊 Ouvir capítulo</button>
+<button class="audio-button" id="botaoPausarNarracao" type="button">⏸ Pausar narração</button>
+<button class="btn-primary" id="botaoConcluirCapitulo" type="button">
+          Marcar capítulo como concluído
+        </button>
+</div>
+</div>
+<article class="reading-card">
+<span class="chapter-badge">Capítulo 2</span>
+<h1>CAPÍTULO 2 — SISTEMAS OPERACIONAIS</h1>
+<div class="chapter-meta">
+<span class="chapter-status" id="statusLeitura">Status: leitura em andamento.</span>
+<span class="chapter-status" id="statusNarracao">Narração pronta para uso.</span>
+</div><section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Camada central do computador</h2><div class="figure-grid three"><div><span class="figure-label">Usuário</span><strong>Interação</strong></div><div><span class="figure-label">Sistema Operacional</span><strong>Gerencia recursos</strong></div><div><span class="figure-label">Hardware</span><strong>Executa fisicamente</strong></div></div></section>
+<h2>Conceito de Sistema Operacional</h2>
+<p class="chapter-intro">O Sistema Operacional (SO) é o software responsável por gerenciar todos os recursos do computador e permitir a interação entre:</p>
+<ul><li>hardware</li><li>softwares aplicativos</li><li>usuário</li></ul>
+<p>Sem um sistema operacional, o computador não conseguiria executar programas.</p>
+<p>Exemplos de sistemas operacionais:</p>
+<ul><li>Windows 10 / Windows 11</li></ul>
+<h3>Linux (Ubuntu, Debian, Fedora)</h3>
+<p>macOS</p>
+<h3>Principais funções do Sistema Operacional</h3>
+<p>O sistema operacional possui várias responsabilidades fundamentais.</p>
+<h3>Gerenciamento de Processos</h3>
+<p>Controla a execução dos programas.</p>
+<p>Exemplo:</p>
+<ul><li>abrir navegador</li><li>executar editor de texto</li><li>executar planilhas</li></ul>
+<h3>Gerenciamento de Memória</h3>
+<p>Controla o uso da memória RAM pelos programas.</p>
+<p>Isso evita que um programa utilize toda a memória do sistema.</p>
+<h3>Gerenciamento de Arquivos</h3>
+<p>Organiza dados em:</p>
+<ul><li>arquivos</li><li>pastas</li><li>diretórios</li></ul>
+<h3>Controle de Dispositivos</h3>
+<p>Gerencia periféricos como:</p>
+<ul><li>teclado</li><li>mouse</li><li>impressora</li><li>monitor</li></ul>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Funções principais do Sistema Operacional:</p></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><ul><li>Muitas provas afirmam:</li><li>"O sistema operacional é um hardware."</li><li>❌ Errado</li></ul><p>O sistema operacional é um software de sistema.</p></div>
+<div class="box-dica"><strong>🧠 Memorize:</strong><p>Tipos de software:</p></div>
+<h2>Kernel</h2>
+<p>O Kernel é o núcleo do sistema operacional.</p>
+<p>Ele é responsável por realizar a comunicação direta com o hardware.</p>
+<p>Principais funções do Kernel:</p>
+<ul><li>controle de processos</li><li>gerenciamento de memória</li><li>controle de dispositivos</li><li>gerenciamento de interrupções</li></ul>
+<h3>Tipos de Kernel</h3>
+<h3>Kernel Monolítico</h3>
+<p>Todos os serviços do sistema estão integrados no núcleo.</p>
+<p>Exemplo:</p>
+<ul><li>Linux</li><li>Microkernel</li></ul>
+<p>O núcleo possui apenas funções essenciais.</p>
+<p>Outros serviços são executados separadamente.</p>
+<p>Exemplo:</p>
+<ul><li>Minix</li></ul>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><ul><li>A banca costuma afirmar:</li><li>"O kernel é responsável pela interface gráfica."</li><li>❌ Errado</li></ul><p>A interface gráfica pertence ao ambiente gráfico, não ao kernel.</p></div>
+<h2>Sistemas de Arquivos</h2>
+<p>Os sistemas de arquivos definem como os dados são armazenados no disco.</p>
+<h3>NTFS</h3>
+<p>Sistema de arquivos padrão do Windows.</p>
+<p>Características:</p>
+<ul><li>suporte a permissões</li><li>criptografia</li><li>compressão</li><li>journaling</li><li>FAT32</li></ul>
+<p>Sistema de arquivos antigo.</p>
+<p>Características:</p>
+<ul><li>compatível com vários sistemas</li><li>limite de arquivos de 4 GB</li><li>EXT4</li></ul>
+<p>Sistema de arquivos utilizado no Linux.</p>
+<p>Características:</p>
+<ul><li>journaling</li><li>maior desempenho</li><li>melhor gerenciamento de arquivos grandes</li></ul>
+<h3>Comparação entre Sistemas de Arquivos</h3>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>Pergunta comum:</p><p>Qual sistema de arquivos é utilizado pelo Linux?</p><p><strong>Resposta correta:</strong></p><p>➡ EXT4</p></div>
+<h2>Permissões no Linux</h2>
+<p>O Linux possui um sistema de permissões baseado em três tipos de acesso.</p>
+<p>Essas permissões são aplicadas para:</p>
+<ul><li>usuário</li><li>grupo</li><li>outros</li><li>Comando chmod</li></ul>
+<p>O comando chmod altera permissões de arquivos.</p>
+<p>Exemplo:</p>
+<ul><li>chmod 755 arquivo</li><li>Significado:</li></ul>
+<h3>7 = leitura + escrita + execução</h3>
+<h3>5 = leitura + execução</h3>
+<div class="box-dica"><strong>🧠 Memorize:</strong><p>Valores das permissões:</p><p>Exemplo:</p><p>7 = 4 + 2 + 1</p></div>
+<h2>Comparação: Windows vs Linux</h2>
+<p>Nos concursos, é comum aparecer comparação entre sistemas operacionais.</p>
+<h3>Windows 10 / 11</h3>
+<p>Características:</p>
+<ul><li>interface gráfica amigável</li><li>grande compatibilidade de softwares</li><li>sistema proprietário (Microsoft)</li></ul>
+<h3>Linux (Ubuntu / Debian)</h3>
+<p>Características:</p>
+<ul><li>código aberto</li><li>altamente seguro</li><li>amplamente utilizado em servidores</li></ul>
+<h3>Comparação Windows vs Linux</h3>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><ul><li>Windows:</li><li>sistema proprietário</li><li>desenvolvido pela Microsoft</li><li>Linux:</li><li>sistema open source</li><li>utilizado em servidores</li></ul></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>A banca costuma afirmar:</p><p>"Linux é gratuito porque não possui licença."</p><p><strong>❌ Errado.</strong></p><p>Linux possui licença GPL (software livre).</p></div>
+<h2>Interface Gráfica (GUI)</h2>
+<p>A interface gráfica permite interação visual com o computador.</p>
+<p>Elementos principais:</p>
+<ul><li>janelas</li><li>ícones</li><li>menus</li><li>botões</li></ul>
+<h3>Exemplos de interfaces gráficas no Linux</h3>
+<h3>GNOME</h3>
+<h3>KDE</h3>
+<h3>XFCE</h3>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>GUI significa:</p><p>Graphical User Interface</p></div>
+<h2>Conclusão do Capítulo</h2>
+<p>O estudo de sistemas operacionais é essencial para concursos.</p>
+<p>Os pontos mais cobrados são:</p>
+<ul><li>conceito de sistema operacional</li><li>kernel</li><li>sistemas de arquivos</li><li>permissões Linux</li><li>comparação Windows vs Linux</li></ul>
+<section class="quiz-section" data-capitulo="2">
+<div class="quiz-header">
+<span class="chapter-badge">Desafio rápido</span>
+<h2>Teste seu entendimento</h2>
+<p>Responda às questões abaixo e descubra na hora se a sua escolha está correta.</p>
+</div>
+<article class="quiz-card" data-explicacao="O sistema operacional é um software de sistema responsável por gerenciar recursos." data-resposta="Software de sistema">
+<p class="quiz-pergunta">1. O sistema operacional é classificado como:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap2-q1-69801">
+<input id="cap2-q1-69801" name="cap2-q1" type="radio" value="Hardware principal"/>
+<span>Hardware principal</span>
+</label>
+
+<label class="quiz-opcao" for="cap2-q1-94269">
+<input id="cap2-q1-94269" name="cap2-q1" type="radio" value="Software de sistema"/>
+<span>Software de sistema</span>
+</label>
+
+<label class="quiz-opcao" for="cap2-q1-36677">
+<input id="cap2-q1-36677" name="cap2-q1" type="radio" value="Software aplicativo"/>
+<span>Software aplicativo</span>
+</label>
+
+<label class="quiz-opcao" for="cap2-q1-79919">
+<input id="cap2-q1-79919" name="cap2-q1" type="radio" value="Periférico de entrada"/>
+<span>Periférico de entrada</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article><article class="quiz-card" data-explicacao="EXT4 é um sistema de arquivos amplamente utilizado em distribuições Linux." data-resposta="EXT4">
+<p class="quiz-pergunta">2. Qual sistema de arquivos é típico do Linux?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap2-q2-45037">
+<input id="cap2-q2-45037" name="cap2-q2" type="radio" value="NTFS"/>
+<span>NTFS</span>
+</label>
+
+<label class="quiz-opcao" for="cap2-q2-78890">
+<input id="cap2-q2-78890" name="cap2-q2" type="radio" value="FAT32"/>
+<span>FAT32</span>
+</label>
+
+<label class="quiz-opcao" for="cap2-q2-28632">
+<input id="cap2-q2-28632" name="cap2-q2" type="radio" value="EXT4"/>
+<span>EXT4</span>
+</label>
+
+<label class="quiz-opcao" for="cap2-q2-33502">
+<input id="cap2-q2-33502" name="cap2-q2" type="radio" value="exFAT"/>
+<span>exFAT</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article><article class="quiz-card" data-explicacao="O kernel é o núcleo do sistema operacional e lida diretamente com o hardware." data-resposta="Fazer a comunicação direta com o hardware">
+<p class="quiz-pergunta">3. O kernel é responsável principalmente por:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap2-q3-97427">
+<input id="cap2-q3-97427" name="cap2-q3" type="radio" value="Criar planilhas"/>
+<span>Criar planilhas</span>
+</label>
+
+<label class="quiz-opcao" for="cap2-q3-36834">
+<input id="cap2-q3-36834" name="cap2-q3" type="radio" value="Editar textos"/>
+<span>Editar textos</span>
+</label>
+
+<label class="quiz-opcao" for="cap2-q3-43808">
+<input id="cap2-q3-43808" name="cap2-q3" type="radio" value="Fazer a comunicação direta com o hardware"/>
+<span>Fazer a comunicação direta com o hardware</span>
+</label>
+
+<label class="quiz-opcao" for="cap2-q3-61339">
+<input id="cap2-q3-61339" name="cap2-q3" type="radio" value="Substituir a interface gráfica"/>
+<span>Substituir a interface gráfica</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article></section><div class="chapter-navigation">
+<a class="btn-secondary" href="capitulo1.html">← Capítulo anterior</a>
+<a class="btn-primary" href="capitulo3.html">Próximo capítulo →</a>
+</div>
+</article>
+<footer class="page-footer">
+<p>Plataforma do e-book • Informática para Concursos</p>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

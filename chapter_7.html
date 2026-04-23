@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Capítulo 7 — Segurança da Informação</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="chapter-page" data-pagina="capitulo7">
+<div class="background-animation"></div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="reading-container">
+<div class="chapter-header">
+<a class="back-home" href="index.html">← Voltar para a página inicial</a>
+<div class="chapter-tools">
+<button class="audio-button" id="botaoNarrar" type="button">🔊 Ouvir capítulo</button>
+<button class="audio-button" id="botaoPausarNarracao" type="button">⏸ Pausar narração</button>
+<button class="btn-primary" id="botaoConcluirCapitulo" type="button">
+          Marcar capítulo como concluído
+        </button>
+</div>
+</div>
+<article class="reading-card">
+<span class="chapter-badge">Capítulo 7</span>
+<h1>CAPÍTULO 7 — SEGURANÇA DA INFORMAÇÃO</h1>
+<div class="chapter-meta">
+<span class="chapter-status" id="statusLeitura">Status: leitura em andamento.</span>
+<span class="chapter-status" id="statusNarracao">Narração pronta para uso.</span>
+</div><section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Tríade da segurança</h2><div class="figure-grid three"><div><span class="figure-label">C</span><strong>Confidencialidade</strong></div><div><span class="figure-label">I</span><strong>Integridade</strong></div><div><span class="figure-label">D</span><strong>Disponibilidade</strong></div></div></section>
+<h2>Conceito de Segurança da Informação</h2>
+<p class="chapter-intro">A Segurança da Informação é o conjunto de práticas, políticas e tecnologias utilizadas para proteger informações contra:</p>
+<ul><li>acesso não autorizado</li><li>alteração indevida</li><li>destruição de dados</li><li>indisponibilidade de sistemas</li></ul>
+<p>O objetivo é garantir que as informações permaneçam seguras e confiáveis.</p>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><ul><li>Segurança da Informação protege dados contra:</li><li>acesso indevido</li><li>alteração indevida</li><li>perda de disponibilidade</li></ul></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>A banca pode afirmar:</p><p>"Segurança da informação protege apenas dados digitais."</p><p><strong>❌ Errado.</strong></p><p>Ela protege qualquer tipo de informação, inclusive documentos físicos.</p></div>
+<h2>Princípios da Segurança da Informação</h2>
+<p>Os princípios da segurança da informação são conhecidos como modelo CIA.</p>
+<p>CIA significa:</p>
+<ul><li>Confidencialidade</li><li>Integridade</li><li>Disponibilidade</li><li>Confidencialidade</li></ul>
+<p>Garante que apenas usuários autorizados tenham acesso às informações.</p>
+<p>Exemplo:</p>
+<ul><li>senhas</li><li>criptografia</li><li>controle de acesso</li><li>Integridade</li></ul>
+<p>Garante que os dados não sejam alterados indevidamente.</p>
+<p>Exemplo:</p>
+<ul><li>assinatura digital</li><li>hash</li><li>Disponibilidade</li></ul>
+<p>Garante que os sistemas e dados estejam acessíveis quando necessários.</p>
+<p>Exemplo:</p>
+<ul><li>redundância de servidores</li><li>backup</li></ul>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Modelo clássico:</p><p>CIA</p></div>
+<div class="box-dica"><strong>🧠 Memorize:</strong><ul><li>CIA</li><li>Confidencialidade</li><li>Integridade</li></ul><p>Acesso (disponibilidade)</p></div>
+<h2>Princípios Estendidos da Segurança</h2>
+<p>Além do modelo CIA, existem princípios adicionais.</p>
+<h3>Autenticidade</h3>
+<p>Garante que a identidade do usuário seja verdadeira.</p>
+<p>Exemplo:</p>
+<ul><li>login e senha</li><li>autenticação em dois fatores</li><li>Não Repúdio</li></ul>
+<p>Impede que um usuário negue uma ação realizada.</p>
+<p>Exemplo:</p>
+<ul><li>assinatura digital</li></ul>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Modelo expandido de segurança:</p></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>Algumas provas afirmam:</p><p>"Autenticidade faz parte do modelo clássico CIA."</p><p><strong>❌ Errado.</strong></p><p>O modelo clássico possui apenas três princípios.</p></div>
+<h2>Tipos de Malware</h2>
+<p>Malware é qualquer software malicioso criado para prejudicar sistemas ou roubar informações.</p>
+<p>A palavra malware vem de:</p>
+<ul><li>Malicious Software</li><li>Vírus</li></ul>
+<p>Programa que se replica infectando outros arquivos.</p>
+<p>Pode causar:</p>
+<ul><li>corrupção de dados</li><li>danos ao sistema</li><li>Worm</li></ul>
+<p>Programa que se espalha automaticamente pela rede.</p>
+<p>Não precisa infectar arquivos.</p>
+<h3>Trojan (Cavalo de Troia)</h3>
+<p>Programa malicioso que se disfarça de software legítimo.</p>
+<p>Exemplo:</p>
+<ul><li>aplicativos falsos</li><li>downloads maliciosos</li><li>Ransomware</li></ul>
+<p>Malware que sequestra arquivos do usuário.</p>
+<p>O criminoso exige pagamento para liberar os dados.</p>
+<h3>Spyware</h3>
+<p>Software que espiona atividades do usuário.</p>
+<p>Pode coletar:</p>
+<ul><li>senhas</li><li>dados pessoais</li><li>hábitos de navegação</li><li>Rootkit</li></ul>
+<p>Malware que esconde sua presença no sistema.</p>
+<p>Ele permite que invasores tenham acesso remoto ao computador.</p>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><ul><li>Principais tipos de malware:</li><li>vírus</li><li>worm</li><li>trojan</li><li>ransomware</li><li>spyware</li><li>rootkit</li></ul></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>A banca costuma confundir:</p><p>Phishing ≠ Malware</p><p>Phishing é engenharia social, não um software.</p></div>
+<h2>Ferramentas de Proteção</h2>
+<p>Para proteger sistemas contra ataques, existem diversas ferramentas.</p>
+<h3>Antivírus</h3>
+<p>Software responsável por detectar e remover malwares.</p>
+<p>Exemplos:</p>
+<ul><li>Windows Defender</li><li>Kaspersky</li><li>Avast</li><li>Firewall</li></ul>
+<p>Sistema que controla o tráfego de rede.</p>
+<p>Ele permite ou bloqueia conexões de acordo com regras de segurança.</p>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Firewall:</p><p>➡ controla tráfego de rede</p><p>IDS (Intrusion Detection System)</p><p>Sistema de detecção de intrusão.</p><p>Ele monitora atividades suspeitas na rede.</p><p>Backup</p><p>Cópia de segurança dos dados.</p><p>Permite recuperar informações em caso de perda ou ataque.</p></div>
+<h3>Ferramentas de Segurança</h3>
+<div class="box-dica"><strong>🧠 Memorize:</strong><ul><li>Proteção básica de sistemas:</li><li>AFIB</li><li>Antivírus</li><li>Firewall</li><li>IDS</li><li>Backup</li></ul></div>
+<h2>Engenharia Social</h2>
+<p>A engenharia social consiste em manipular pessoas para obter informações sensíveis.</p>
+<p>Exemplos:</p>
+<ul><li>phishing</li><li>e-mails falsos</li><li>páginas falsas</li><li>Phishing</li></ul>
+<p>Golpe que tenta roubar informações do usuário.</p>
+<p>Normalmente utiliza:</p>
+<ul><li>e-mails falsos</li><li>páginas falsas de banco</li></ul>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>Phishing não invade sistemas.</p><p>Ele engana o usuário para que ele forneça informações.</p></div>
+<h2>Conclusão do Capítulo</h2>
+<p>Segurança da informação é um tema extremamente relevante em concursos.</p>
+<p>Os tópicos mais cobrados são:</p>
+<ul><li>modelo CIA</li><li>tipos de malware</li><li>ferramentas de proteção</li><li>engenharia social</li></ul>
+<p>Dominar esses conceitos é essencial para resolver questões de informática.</p>
+<section class="quiz-section" data-capitulo="7">
+<div class="quiz-header">
+<span class="chapter-badge">Desafio rápido</span>
+<h2>Teste seu entendimento</h2>
+<p>Responda às questões abaixo e descubra na hora se a sua escolha está correta.</p>
+</div>
+<article class="quiz-card" data-explicacao="A tríade CIA é a base da segurança da informação." data-resposta="Confidencialidade, Integridade e Disponibilidade">
+<p class="quiz-pergunta">1. A tríade clássica da segurança da informação é:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap7-q1-90042">
+<input id="cap7-q1-90042" name="cap7-q1" type="radio" value="Velocidade, Memória e Processamento"/>
+<span>Velocidade, Memória e Processamento</span>
+</label>
+
+<label class="quiz-opcao" for="cap7-q1-10774">
+<input id="cap7-q1-10774" name="cap7-q1" type="radio" value="Confidencialidade, Integridade e Disponibilidade"/>
+<span>Confidencialidade, Integridade e Disponibilidade</span>
+</label>
+
+<label class="quiz-opcao" for="cap7-q1-28169">
+<input id="cap7-q1-28169" name="cap7-q1" type="radio" value="Entrada, Saída e Armazenamento"/>
+<span>Entrada, Saída e Armazenamento</span>
+</label>
+
+<label class="quiz-opcao" for="cap7-q1-3916">
+<input id="cap7-q1-3916" name="cap7-q1" type="radio" value="Software, Hardware e Rede"/>
+<span>Software, Hardware e Rede</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article><article class="quiz-card" data-explicacao="Phishing usa engano para roubar dados, senhas ou informações financeiras." data-resposta="Enganar o usuário para obter dados sensíveis">
+<p class="quiz-pergunta">2. Phishing é uma tentativa de:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap7-q2-14373">
+<input id="cap7-q2-14373" name="cap7-q2" type="radio" value="Aumentar a velocidade da rede"/>
+<span>Aumentar a velocidade da rede</span>
+</label>
+
+<label class="quiz-opcao" for="cap7-q2-13047">
+<input id="cap7-q2-13047" name="cap7-q2" type="radio" value="Atualizar o antivírus automaticamente"/>
+<span>Atualizar o antivírus automaticamente</span>
+</label>
+
+<label class="quiz-opcao" for="cap7-q2-78986">
+<input id="cap7-q2-78986" name="cap7-q2" type="radio" value="Enganar o usuário para obter dados sensíveis"/>
+<span>Enganar o usuário para obter dados sensíveis</span>
+</label>
+
+<label class="quiz-opcao" for="cap7-q2-83609">
+<input id="cap7-q2-83609" name="cap7-q2" type="radio" value="Organizar arquivos em pastas"/>
+<span>Organizar arquivos em pastas</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article><article class="quiz-card" data-explicacao="Atualizações corrigem falhas e aumentam a proteção do sistema." data-resposta="Manter sistemas atualizados">
+<p class="quiz-pergunta">3. Qual alternativa representa uma boa prática de segurança?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap7-q3-88891">
+<input id="cap7-q3-88891" name="cap7-q3" type="radio" value="Clicar em qualquer link recebido"/>
+<span>Clicar em qualquer link recebido</span>
+</label>
+
+<label class="quiz-opcao" for="cap7-q3-96095">
+<input id="cap7-q3-96095" name="cap7-q3" type="radio" value="Usar a mesma senha em tudo"/>
+<span>Usar a mesma senha em tudo</span>
+</label>
+
+<label class="quiz-opcao" for="cap7-q3-56338">
+<input id="cap7-q3-56338" name="cap7-q3" type="radio" value="Manter sistemas atualizados"/>
+<span>Manter sistemas atualizados</span>
+</label>
+
+<label class="quiz-opcao" for="cap7-q3-51605">
+<input id="cap7-q3-51605" name="cap7-q3" type="radio" value="Desativar o antivírus"/>
+<span>Desativar o antivírus</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article></section><div class="chapter-navigation">
+<a class="btn-secondary" href="capitulo6.html">← Capítulo anterior</a>
+<a class="btn-primary" href="capitulo8.html">Próximo capítulo →</a>
+</div>
+</article>
+<footer class="page-footer">
+<p>Plataforma do e-book • Informática para Concursos</p>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

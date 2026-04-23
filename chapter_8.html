@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Seção 1 — Lógica de Programação</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="chapter-page" data-pagina="capitulo8">
+<div class="background-animation"></div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="reading-container">
+<div class="chapter-header">
+<a class="back-home" href="index.html">← Voltar para a página inicial</a>
+<div class="chapter-tools">
+<button class="audio-button" id="botaoNarrar" type="button">🔊 Ouvir capítulo</button>
+<button class="audio-button" id="botaoPausarNarracao" type="button">⏸ Pausar narração</button>
+<button class="btn-primary" id="botaoConcluirCapitulo" type="button">Marcar capítulo como concluído</button>
+</div>
+</div>
+<article class="reading-card">
+<span class="chapter-badge">Seção 1</span>
+<h1>Seção 1 — LÓGICA DE PROGRAMAÇÃO</h1>
+<div class="chapter-meta">
+<span class="chapter-status" id="statusLeitura">Status: leitura em andamento.</span>
+<span class="chapter-status" id="statusNarracao">Narração pronta para uso.</span>
+</div>
+
+<section class="figure-card">
+  <h2 class="figure-title">Figura ilustrativa — Estrutura base de um algoritmo</h2>
+  <div class="figure-grid four">
+    <div><span class="figure-label">1</span><strong>Entrada</strong></div>
+    <div><span class="figure-label">2</span><strong>Processamento</strong></div>
+    <div><span class="figure-label">3</span><strong>Decisão</strong></div>
+    <div><span class="figure-label">4</span><strong>Saída</strong></div>
+  </div>
+  <p class="figure-caption">Todo programa nasce de uma sequência lógica de passos. Antes do código, existe o raciocínio.</p>
+</section>
+
+<h2>O que é lógica de programação?</h2>
+<p class="chapter-intro">Lógica de programação é a capacidade de pensar, organizar e descrever uma sequência de passos para resolver um problema de forma correta, clara e eficiente.</p>
+<p>Antes de existir Python, Java, JavaScript ou C#, existe a lógica por trás da solução. Programar não começa digitando comandos: começa entendendo o problema.</p>
+<p>Quem domina lógica de programação aprende qualquer linguagem com muito mais facilidade, porque entende como resolver o problema antes de se preocupar com a sintaxe.</p>
+
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Lógica de programação é a base do raciocínio computacional. A linguagem é a ferramenta; a lógica é a estrutura mental da solução.</p></div>
+
+<h2>Exemplo do dia a dia</h2>
+<p>Imagine a tarefa de fazer café. Você não “gera” o café de forma instantânea. Existe uma ordem:</p>
+<div class="flow-steps">
+  <div class="flow-step"><div class="flow-step-number">01</div><div><strong>Pegar os ingredientes</strong><p>Você separa água, filtro e pó de café.</p></div></div>
+  <div class="flow-step"><div class="flow-step-number">02</div><div><strong>Preparar o ambiente</strong><p>Coloca a água para esquentar e organiza o filtro.</p></div></div>
+  <div class="flow-step"><div class="flow-step-number">03</div><div><strong>Executar a sequência</strong><p>Despeja a água, espera o café passar e acompanha o processo.</p></div></div>
+  <div class="flow-step"><div class="flow-step-number">04</div><div><strong>Obter o resultado</strong><p>O café pronto é a saída da sequência lógica.</p></div></div>
+</div>
+<p>Em programação, o computador também precisa de instruções detalhadas, na ordem correta.</p>
+
+<h2>O que é um algoritmo?</h2>
+<p>Um algoritmo é uma sequência finita, ordenada e lógica de passos para resolver um problema.</p>
+<ul>
+  <li><strong>Claro:</strong> sem ambiguidades</li>
+  <li><strong>Ordenado:</strong> cada passo deve respeitar uma sequência</li>
+  <li><strong>Executável:</strong> as ações devem poder ser realizadas</li>
+  <li><strong>Finito:</strong> precisa ter começo, meio e fim</li>
+</ul>
+
+<div class="pseudocode-card">
+  <h3>Exemplo simples — Somar dois números</h3>
+  <pre>INÍCIO
+    ESCREVA "Digite o primeiro número:"
+    LEIA numero1
+
+    ESCREVA "Digite o segundo número:"
+    LEIA numero2
+
+    soma &lt;- numero1 + numero2
+
+    ESCREVA "A soma é: ", soma
+FIM</pre>
+</div>
+
+<h2>Entrada, processamento e saída</h2>
+<p>Quase todo algoritmo pode ser entendido a partir de três partes.</p>
+<table class="comparison-table">
+  <thead>
+    <tr><th>Etapa</th><th>Função</th><th>Exemplo</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Entrada</td><td>Receber dados do usuário ou do sistema</td><td>ler nota, nome, idade</td></tr>
+    <tr><td>Processamento</td><td>Manipular os dados recebidos</td><td>somar, comparar, dividir, verificar condição</td></tr>
+    <tr><td>Saída</td><td>Exibir o resultado final</td><td>mostrar média, situação, mensagem</td></tr>
+  </tbody>
+</table>
+
+<div class="box-dica"><strong>🧠 Dica do mestre:</strong><p>Quando travar em um exercício, pergunte: o que entra? o que acontece com isso? o que sai no final?</p></div>
+
+<h2>Pseudocódigo</h2>
+<p>O pseudocódigo é uma forma estruturada de escrever a lógica sem depender da sintaxe de uma linguagem específica. Ele aproxima o aluno da programação real sem prender o raciocínio a regras rígidas de uma linguagem.</p>
+
+<section class="figure-card">
+  <h2 class="figure-title">Figura ilustrativa — Do pensamento ao código</h2>
+  <div class="figure-grid three">
+    <div><span class="figure-label">Problema</span><strong>Entender</strong></div>
+    <div><span class="figure-label">Pseudocódigo</span><strong>Organizar</strong></div>
+    <div><span class="figure-label">Código real</span><strong>Implementar</strong></div>
+  </div>
+</section>
+
+<h2>Variáveis e tipos de dados</h2>
+<p>Variáveis são espaços de memória que armazenam valores que podem ser usados e alterados durante a execução do programa.</p>
+<ul>
+  <li><strong>Inteiro:</strong> 5, 18, 120</li>
+  <li><strong>Real:</strong> 7.5, 1.85, 99.99</li>
+  <li><strong>Texto:</strong> "Gustavo", "Aluno aprovado"</li>
+  <li><strong>Lógico:</strong> VERDADEIRO ou FALSO</li>
+</ul>
+
+<div class="pseudocode-card">
+  <h3>Exemplo — Variáveis em uso</h3>
+  <pre>idade &lt;- 20
+nome &lt;- "Gustavo"
+nota &lt;- 8.5
+aprovado &lt;- VERDADEIRO</pre>
+</div>
+
+<h2>Operadores</h2>
+<p>Os operadores permitem calcular, comparar e montar expressões lógicas.</p>
+<ul>
+  <li><strong>Aritméticos:</strong> +, -, *, /</li>
+  <li><strong>Relacionais:</strong> =, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;=</li>
+  <li><strong>Lógicos:</strong> E, OU, NÃO</li>
+</ul>
+
+<h2>Estruturas sequenciais</h2>
+<p>Na estrutura sequencial, as instruções são executadas uma após a outra, na ordem em que aparecem.</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — Calcular a área de um retângulo</h3>
+  <pre>INÍCIO
+    ESCREVA "Digite a base:"
+    LEIA base
+
+    ESCREVA "Digite a altura:"
+    LEIA altura
+
+    area &lt;- base * altura
+
+    ESCREVA "A área do retângulo é: ", area
+FIM</pre>
+</div>
+
+<section class="figure-card">
+  <h2 class="figure-title">Figura ilustrativa — Passo a passo da área do retângulo</h2>
+  <div class="figure-grid four">
+    <div><span class="figure-label">Passo 1</span><strong>Ler base</strong></div>
+    <div><span class="figure-label">Passo 2</span><strong>Ler altura</strong></div>
+    <div><span class="figure-label">Passo 3</span><strong>Calcular área</strong></div>
+    <div><span class="figure-label">Passo 4</span><strong>Exibir resultado</strong></div>
+  </div>
+</section>
+
+<h2>Estruturas condicionais</h2>
+<p>As estruturas condicionais permitem que o programa tome decisões com base em testes lógicos.</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — Verificar se a pessoa é maior de idade</h3>
+  <pre>INÍCIO
+    ESCREVA "Digite sua idade:"
+    LEIA idade
+
+    SE idade &gt;= 18 ENTÃO
+        ESCREVA "Você é maior de idade."
+    SENÃO
+        ESCREVA "Você é menor de idade."
+    FIMSE
+FIM</pre>
+</div>
+
+<div class="flow-steps">
+  <div class="flow-step"><div class="flow-step-number">A</div><div><strong>Ler a idade</strong><p>O programa recebe o valor informado pelo usuário.</p></div></div>
+  <div class="flow-step"><div class="flow-step-number">B</div><div><strong>Testar a condição</strong><p>Ele verifica se idade é maior ou igual a 18.</p></div></div>
+  <div class="flow-step"><div class="flow-step-number">C</div><div><strong>Escolher um caminho</strong><p>Se a condição for verdadeira, segue um bloco; se for falsa, segue outro.</p></div></div>
+</div>
+
+<div class="box-prova"><strong>⚠️ Armadilha da banca:</strong><p>É comum confundir <span class="inline-code">x &lt;- 10</span> com <span class="inline-code">x = 10</span>. O primeiro representa atribuição; o segundo, comparação.</p></div>
+
+<h2>Condições encadeadas</h2>
+<p>Quando há mais de duas possibilidades, podemos encadear várias condições.</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — Classificação da nota</h3>
+  <pre>INÍCIO
+    ESCREVA "Digite a nota:"
+    LEIA nota
+
+    SE nota &gt;= 9 ENTÃO
+        ESCREVA "Excelente"
+    SENÃO
+        SE nota &gt;= 7 ENTÃO
+            ESCREVA "Aprovado"
+        SENÃO
+            SE nota &gt;= 5 ENTÃO
+                ESCREVA "Recuperação"
+            SENÃO
+                ESCREVA "Reprovado"
+            FIMSE
+        FIMSE
+    FIMSE
+FIM</pre>
+</div>
+
+<h2>Estruturas de repetição</h2>
+<p>As repetições servem para executar um bloco de instruções várias vezes, evitando escrever a mesma lógica manualmente.</p>
+
+<div class="pseudocode-card">
+  <h3>Exemplo com ENQUANTO — Contar de 1 até 5</h3>
+  <pre>INÍCIO
+    contador &lt;- 1
+
+    ENQUANTO contador &lt;= 5 FAÇA
+        ESCREVA contador
+        contador &lt;- contador + 1
+    FIMENQUANTO
+FIM</pre>
+</div>
+
+<div class="pseudocode-card">
+  <h3>Exemplo com PARA — Tabuada</h3>
+  <pre>INÍCIO
+    ESCREVA "Digite um número para ver a tabuada:"
+    LEIA numero
+
+    PARA contador DE 1 ATÉ 10 FAÇA
+        resultado &lt;- numero * contador
+        ESCREVA numero, " x ", contador, " = ", resultado
+    FIMPARA
+FIM</pre>
+</div>
+
+<section class="figure-card">
+  <h2 class="figure-title">Figura ilustrativa — Lógica da repetição</h2>
+  <div class="figure-grid three">
+    <div><span class="figure-label">Início</span><strong>Definir contador</strong></div>
+    <div><span class="figure-label">Laço</span><strong>Executar e atualizar</strong></div>
+    <div><span class="figure-label">Fim</span><strong>Encerrar quando a condição falhar</strong></div>
+  </div>
+</section>
+
+<h2>Contadores e acumuladores</h2>
+<p>Esses dois conceitos aparecem em praticamente todo algoritmo.</p>
+<ul>
+  <li><strong>Contador:</strong> normalmente aumenta de 1 em 1 para marcar quantas vezes algo aconteceu.</li>
+  <li><strong>Acumulador:</strong> soma valores ao longo da execução.</li>
+</ul>
+
+<div class="pseudocode-card">
+  <h3>Exemplo — Ler 3 notas e calcular a média</h3>
+  <pre>INÍCIO
+    soma &lt;- 0
+
+    PARA contador DE 1 ATÉ 3 FAÇA
+        ESCREVA "Digite a nota ", contador, ":"
+        LEIA nota
+        soma &lt;- soma + nota
+    FIMPARA
+
+    media &lt;- soma / 3
+    ESCREVA "A média é: ", media
+FIM</pre>
+</div>
+
+<h2>Teste de mesa</h2>
+<p>Teste de mesa é a simulação manual da execução do algoritmo. Ele ajuda a encontrar erros, prever resultados e entender como as variáveis mudam.</p>
+<table class="comparison-table">
+  <thead>
+    <tr><th>Passo</th><th>x</th><th>y</th><th>z</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>x &lt;- 2</td><td>2</td><td>-</td><td>-</td></tr>
+    <tr><td>y &lt;- 3</td><td>2</td><td>3</td><td>-</td></tr>
+    <tr><td>z &lt;- x + y</td><td>2</td><td>3</td><td>5</td></tr>
+  </tbody>
+</table>
+
+<h2>Exemplo completo</h2>
+<p>Agora, um algoritmo mais completo, usando entrada, processamento, condição e saída.</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — Aprovação com média e frequência</h3>
+  <pre>INÍCIO
+    ESCREVA "Digite a primeira nota:"
+    LEIA nota1
+
+    ESCREVA "Digite a segunda nota:"
+    LEIA nota2
+
+    ESCREVA "Digite a frequência do aluno:"
+    LEIA frequencia
+
+    media &lt;- (nota1 + nota2) / 2
+
+    SE media &gt;= 7 E frequencia &gt;= 75 ENTÃO
+        ESCREVA "Aluno aprovado."
+    SENÃO
+        ESCREVA "Aluno reprovado."
+    FIMSE
+
+    ESCREVA "Média final: ", media
+FIM</pre>
+</div>
+
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Programar bem é saber identificar entradas, processamentos, decisões, repetições e saídas com clareza.</p></div>
+
+<h2>Erros comuns de iniciantes</h2>
+<ul>
+  <li>não entender o problema antes de tentar resolver;</li>
+  <li>confundir entrada com saída;</li>
+  <li>esquecer de atualizar o contador em um laço;</li>
+  <li>montar condições erradas;</li>
+  <li>não testar o algoritmo com valores reais.</li>
+</ul>
+
+<div class="box-prova"><strong>⚠️ Pegadinha de lógica:</strong><p>Se o contador nunca for atualizado em um laço, o programa pode entrar em repetição infinita.</p></div>
+
+<h2>Conclusão do capítulo</h2>
+<p>Lógica de programação é o alicerce de qualquer carreira em desenvolvimento. Quando você aprende a pensar de forma estruturada, qualquer linguagem passa a ser apenas uma forma diferente de escrever a mesma solução.</p>
+<p>Por isso, dominar algoritmo, pseudocódigo, variáveis, condições e repetições é um passo decisivo para evoluir em programação de verdade.</p>
+
+<section class="quiz-section" data-capitulo="8">
+<div class="quiz-header">
+<span class="chapter-badge">Desafio rápido</span>
+<h2>Teste seu entendimento</h2>
+<p>Responda às questões abaixo e descubra na hora se a sua escolha está correta.</p>
+</div>
+
+<article class="quiz-card" data-explicacao="Algoritmo é uma sequência lógica, finita e ordenada de passos para resolver um problema." data-resposta="Uma sequência finita de passos para resolver um problema">
+<p class="quiz-pergunta">1. O que melhor define um algoritmo?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap8-q1-a"><input id="cap8-q1-a" name="cap8-q1" type="radio" value="Uma sequência finita de passos para resolver um problema"/><span>Uma sequência finita de passos para resolver um problema</span></label>
+<label class="quiz-opcao" for="cap8-q1-b"><input id="cap8-q1-b" name="cap8-q1" type="radio" value="Um antivírus do sistema"/><span>Um antivírus do sistema</span></label>
+<label class="quiz-opcao" for="cap8-q1-c"><input id="cap8-q1-c" name="cap8-q1" type="radio" value="Uma memória do computador"/><span>Uma memória do computador</span></label>
+<label class="quiz-opcao" for="cap8-q1-d"><input id="cap8-q1-d" name="cap8-q1" type="radio" value="Um tipo de navegador"/><span>Um tipo de navegador</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+
+<article class="quiz-card" data-explicacao="A estrutura condicional permite que o programa escolha caminhos diferentes com base em um teste lógico." data-resposta="Tomar decisões com base em condições">
+<p class="quiz-pergunta">2. Para que serve a estrutura condicional?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap8-q2-a"><input id="cap8-q2-a" name="cap8-q2" type="radio" value="Armazenar arquivos"/><span>Armazenar arquivos</span></label>
+<label class="quiz-opcao" for="cap8-q2-b"><input id="cap8-q2-b" name="cap8-q2" type="radio" value="Tomar decisões com base em condições"/><span>Tomar decisões com base em condições</span></label>
+<label class="quiz-opcao" for="cap8-q2-c"><input id="cap8-q2-c" name="cap8-q2" type="radio" value="Trocar memória RAM"/><span>Trocar memória RAM</span></label>
+<label class="quiz-opcao" for="cap8-q2-d"><input id="cap8-q2-d" name="cap8-q2" type="radio" value="Desligar o computador"/><span>Desligar o computador</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+
+<article class="quiz-card" data-explicacao="Sem atualizar a variável de controle, a condição pode continuar verdadeira para sempre." data-resposta="Laço infinito">
+<p class="quiz-pergunta">3. O que pode acontecer se um contador não for atualizado dentro de um laço?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap8-q3-a"><input id="cap8-q3-a" name="cap8-q3" type="radio" value="O programa melhora sozinho"/><span>O programa melhora sozinho</span></label>
+<label class="quiz-opcao" for="cap8-q3-b"><input id="cap8-q3-b" name="cap8-q3" type="radio" value="Laço infinito"/><span>Laço infinito</span></label>
+<label class="quiz-opcao" for="cap8-q3-c"><input id="cap8-q3-c" name="cap8-q3" type="radio" value="A variável vira texto"/><span>A variável vira texto</span></label>
+<label class="quiz-opcao" for="cap8-q3-d"><input id="cap8-q3-d" name="cap8-q3" type="radio" value="Nada acontece"/><span>Nada acontece</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+</section>
+
+<div class="chapter-navigation">
+<a class="btn-secondary" href="capitulo7.html">← Capítulo anterior</a>
+<a class="btn-primary" href="index.html">Voltar ao início →</a>
+</div>
+</article>
+<footer class="page-footer">
+<p>Plataforma do e-book • Informática para Concursos</p>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

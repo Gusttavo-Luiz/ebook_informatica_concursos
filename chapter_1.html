@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Capítulo 1 — Introdução à Informática</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="chapter-page" data-pagina="capitulo1">
+<div class="background-animation"></div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="reading-container">
+<div class="chapter-header">
+<a class="back-home" href="index.html">← Voltar para a página inicial</a>
+<div class="chapter-tools">
+<button class="audio-button" id="botaoNarrar" type="button">🔊 Ouvir capítulo</button>
+<button class="audio-button" id="botaoPausarNarracao" type="button">⏸ Pausar narração</button>
+<button class="btn-primary" id="botaoConcluirCapitulo" type="button">
+          Marcar capítulo como concluído
+        </button>
+</div>
+</div>
+<article class="reading-card">
+<span class="chapter-badge">Capítulo 1</span>
+<h1>CAPÍTULO 1 — INTRODUÇÃO À INFORMÁTICA</h1>
+<div class="chapter-meta">
+<span class="chapter-status" id="statusLeitura">Status: leitura em andamento.</span>
+<span class="chapter-status" id="statusNarracao">Narração pronta para uso.</span>
+</div><section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Mapa-base da informática</h2><div class="figure-grid three"><div><span class="figure-label">Entrada</span><strong>Dados</strong></div><div><span class="figure-label">Processamento</span><strong>CPU + memória</strong></div><div><span class="figure-label">Saída</span><strong>Informação</strong></div></div></section>
+<h2>Conceito de Informática</h2>
+<p class="chapter-intro">A Informática é a área responsável pelo tratamento automático da informação por meio de computadores.</p>
+<p>O termo deriva da junção de duas palavras:</p>
+<ul><li>Informação</li><li>Automática</li></ul>
+<p>Ou seja, refere-se ao processamento de dados de forma automática utilizando sistemas computacionais.</p>
+<p>Nos concursos públicos, a informática costuma aparecer em três grandes áreas:</p>
+<ul><li>conceitos básicos de computação</li><li>hardware e software</li><li>internet e segurança da informação</li></ul>
+<h2>Evolução dos Computadores</h2>
+<p>A evolução dos computadores é geralmente dividida em cinco gerações tecnológicas.</p>
+<h3>Primeira Geração (1940–1956)</h3>
+<p>Características:</p>
+<ul><li>uso de válvulas eletrônicas</li><li>computadores enormes</li><li>alto consumo de energia</li><li>baixa confiabilidade</li><li>Exemplo:</li><li>ENIAC</li></ul>
+<h3>Segunda Geração (1956–1963)</h3>
+<p>Características:</p>
+<ul><li>substituição das válvulas por transistores</li><li>computadores menores</li><li>maior confiabilidade</li><li>menor consumo de energia</li></ul>
+<h3>Terceira Geração (1964–1971)</h3>
+<p>Características:</p>
+<ul><li>uso de circuitos integrados</li><li>aumento da capacidade de processamento</li><li>surgimento de sistemas operacionais mais sofisticados</li></ul>
+<h3>Quarta Geração (1971–Presente)</h3>
+<p>Características:</p>
+<ul><li>surgimento do microprocessador</li><li>popularização dos computadores pessoais (PCs)</li></ul>
+<p>Empresas importantes:</p>
+<ul><li>Intel</li><li>IBM</li><li>Apple</li></ul>
+<h3>Quinta Geração (Atual)</h3>
+<p>Características:</p>
+<ul><li>inteligência artificial</li><li>computação em nuvem</li><li>processamento paralelo</li><li>computação quântica (em desenvolvimento)</li></ul>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>A evolução dos computadores segue esta sequência tecnológica:</p></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>Algumas provas perguntam:</p><p>"Em qual geração surgiram os microprocessadores?"</p><p><strong>Resposta correta:</strong></p><p>➡ Quarta geração</p></div>
+<div class="box-dica"><strong>🧠 Memorize:</strong><ul><li>Para lembrar da evolução:</li><li>VTCMI</li><li>Válvulas</li><li>Transistores</li></ul><p>Circuitos integrados</p><p>Microprocessadores</p><p>Inteligência artificial</p></div>
+<h2>Dados vs Informação</h2>
+<p>Uma distinção muito importante em informática é a diferença entre dados e informação.</p>
+<h3>Dados</h3>
+<p>Dados são valores brutos, ainda sem interpretação.</p>
+<p>Exemplo:</p>
+<ul><li>324528</li></ul>
+<p>Esses números isolados não possuem significado.</p>
+<h3>Informação</h3>
+<p>Informação é o resultado do processamento de dados, possuindo significado.</p>
+<p>Exemplo:</p>
+<p>A média de idade da turma é 32 anos.</p>
+<p>Agora os dados foram interpretados e transformados em informação.</p>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>Algumas questões trocam propositalmente os conceitos.</p><p>Dados não possuem significado isolado.</p><p>Somente após processamento se tornam informação.</p></div>
+<h2>Arquitetura de Von Neumann</h2>
+<p>A Arquitetura de Von Neumann é o modelo clássico de organização dos computadores modernos.</p>
+<p>Foi proposta pelo matemático John Von Neumann em 1945.</p>
+<p>Esse modelo define a estrutura básica de funcionamento de um computador.</p>
+<h3>Componentes da Arquitetura</h3>
+<p>A arquitetura de Von Neumann possui quatro componentes principais:</p>
+<ul><li>Unidade de Controle (UC)</li></ul>
+<p>Responsável por coordenar a execução das instruções.</p>
+<h3>Unidade Lógica e Aritmética (ULA)</h3>
+<p>Responsável por executar operações matemáticas e lógicas.</p>
+<p>Exemplos:</p>
+<ul><li>soma</li><li>subtração</li><li>comparações</li><li>Memória</li><li>Armazena:</li><li>dados</li><li>instruções</li></ul>
+<h3>Dispositivos de Entrada e Saída</h3>
+<p>Permitem interação com o usuário.</p>
+<p>Entrada:</p>
+<ul><li>teclado</li><li>mouse</li><li>scanner</li><li>Saída:</li><li>monitor</li><li>impressora</li></ul>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Arquitetura de Von Neumann:</p></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>A banca costuma confundir CPU com ULA.</p><p>A CPU é composta por:</p><p>ULA</p><p>Unidade de Controle</p></div>
+<div class="box-dica"><strong>🧠 Memorize:</strong><p>Fórmula rápida:</p><p>CPU = UC + ULA</p></div>
+<h2>Modelo de Funcionamento do Computador</h2>
+<p>O funcionamento do computador segue um ciclo chamado:</p>
+<ul><li>Ciclo de Instrução</li></ul>
+<p>Esse ciclo possui três etapas principais:</p>
+<ul><li>Busca (Fetch)</li></ul>
+<h3>Decodificação (Decode)</h3>
+<h3>Execução (Execute)</h3>
+<h3>Busca (Fetch)</h3>
+<p>O processador busca a instrução na memória.</p>
+<h3>Decodificação (Decode)</h3>
+<p>A instrução é interpretada.</p>
+<h3>Execução (Execute)</h3>
+<p>A instrução é executada pela ULA.</p>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Ciclo de instrução:</p></div>
+<div class="box-dica"><strong>🧠 Memorize:</strong><ul><li>FDE</li><li>Fetch</li><li>Decode</li><li>Execute</li></ul></div>
+<h2>Conclusão do Capítulo</h2>
+<p>A introdução à informática estabelece a base para todos os outros temas do estudo.</p>
+<p>Os pontos mais cobrados em concursos são:</p>
+<ul><li>evolução dos computadores</li><li>diferença entre dados e informação</li><li>arquitetura de Von Neumann</li><li>ciclo de instrução</li></ul>
+<p>Dominar esses conceitos facilita a compreensão de hardware, software e redes.</p>
+<section class="quiz-section" data-capitulo="1">
+<div class="quiz-header">
+<span class="chapter-badge">Desafio rápido</span>
+<h2>Teste seu entendimento</h2>
+<p>Responda às questões abaixo e descubra na hora se a sua escolha está correta.</p>
+</div>
+<article class="quiz-card" data-explicacao="A quarta geração é marcada pelo surgimento do microprocessador." data-resposta="Microprocessadores">
+<p class="quiz-pergunta">1. Qual tecnologia caracteriza a quarta geração dos computadores?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap1-q1-27289">
+<input id="cap1-q1-27289" name="cap1-q1" type="radio" value="Válvulas eletrônicas"/>
+<span>Válvulas eletrônicas</span>
+</label>
+
+<label class="quiz-opcao" for="cap1-q1-97865">
+<input id="cap1-q1-97865" name="cap1-q1" type="radio" value="Transistores"/>
+<span>Transistores</span>
+</label>
+
+<label class="quiz-opcao" for="cap1-q1-65875">
+<input id="cap1-q1-65875" name="cap1-q1" type="radio" value="Microprocessadores"/>
+<span>Microprocessadores</span>
+</label>
+
+<label class="quiz-opcao" for="cap1-q1-25755">
+<input id="cap1-q1-25755" name="cap1-q1" type="radio" value="Inteligência artificial"/>
+<span>Inteligência artificial</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article><article class="quiz-card" data-explicacao="Dados brutos ganham significado quando são processados e interpretados." data-resposta="Processamento e interpretação">
+<p class="quiz-pergunta">2. Na informática, o que transforma dados em informação?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap1-q2-12030">
+<input id="cap1-q2-12030" name="cap1-q2" type="radio" value="Armazenamento em disco"/>
+<span>Armazenamento em disco</span>
+</label>
+
+<label class="quiz-opcao" for="cap1-q2-73971">
+<input id="cap1-q2-73971" name="cap1-q2" type="radio" value="Processamento e interpretação"/>
+<span>Processamento e interpretação</span>
+</label>
+
+<label class="quiz-opcao" for="cap1-q2-62398">
+<input id="cap1-q2-62398" name="cap1-q2" type="radio" value="Uso de periféricos"/>
+<span>Uso de periféricos</span>
+</label>
+
+<label class="quiz-opcao" for="cap1-q2-77218">
+<input id="cap1-q2-77218" name="cap1-q2" type="radio" value="Criptografia"/>
+<span>Criptografia</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article><article class="quiz-card" data-explicacao="A CPU reúne a Unidade de Controle (UC) e a Unidade Lógica e Aritmética (ULA)." data-resposta="Unidade de Controle e ULA">
+<p class="quiz-pergunta">3. A CPU é formada principalmente por quais componentes?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap1-q3-31111">
+<input id="cap1-q3-31111" name="cap1-q3" type="radio" value="Memória RAM e SSD"/>
+<span>Memória RAM e SSD</span>
+</label>
+
+<label class="quiz-opcao" for="cap1-q3-56833">
+<input id="cap1-q3-56833" name="cap1-q3" type="radio" value="Teclado e monitor"/>
+<span>Teclado e monitor</span>
+</label>
+
+<label class="quiz-opcao" for="cap1-q3-96907">
+<input id="cap1-q3-96907" name="cap1-q3" type="radio" value="Unidade de Controle e ULA"/>
+<span>Unidade de Controle e ULA</span>
+</label>
+
+<label class="quiz-opcao" for="cap1-q3-53841">
+<input id="cap1-q3-53841" name="cap1-q3" type="radio" value="Windows e BIOS"/>
+<span>Windows e BIOS</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article></section><div class="chapter-navigation">
+<a class="btn-secondary" href="index.html">← Voltar ao início</a>
+<a class="btn-primary" href="capitulo2.html">Próximo capítulo →</a>
+</div>
+</article>
+<footer class="page-footer">
+<p>Plataforma do e-book • Informática para Concursos</p>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

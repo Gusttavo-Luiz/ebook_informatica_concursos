@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Capítulo 3 — Internet e Navegadores</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="chapter-page" data-pagina="capitulo3">
+<div class="background-animation"></div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="reading-container">
+<div class="chapter-header">
+<a class="back-home" href="index.html">← Voltar para a página inicial</a>
+<div class="chapter-tools">
+<button class="audio-button" id="botaoNarrar" type="button">🔊 Ouvir capítulo</button>
+<button class="audio-button" id="botaoPausarNarracao" type="button">⏸ Pausar narração</button>
+<button class="btn-primary" id="botaoConcluirCapitulo" type="button">
+          Marcar capítulo como concluído
+        </button>
+</div>
+</div>
+<article class="reading-card">
+<span class="chapter-badge">Capítulo 3</span>
+<h1>CAPÍTULO 3 — INTERNET E NAVEGADORES</h1>
+<div class="chapter-meta">
+<span class="chapter-status" id="statusLeitura">Status: leitura em andamento.</span>
+<span class="chapter-status" id="statusNarracao">Narração pronta para uso.</span>
+</div><section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Leitura rápida de rede</h2><div class="figure-grid four"><div><span class="figure-label">Nome</span><strong>www.site.com</strong></div><div><span class="figure-label">DNS</span><strong>Traduz</strong></div><div><span class="figure-label">IP</span><strong>Identifica</strong></div><div><span class="figure-label">Navegador</span><strong>Exibe</strong></div></div></section>
+<h2>Conceito de Internet</h2>
+<p class="chapter-intro">A Internet é uma rede mundial de computadores interconectados que utilizam o conjunto de protocolos TCP/IP para comunicação.</p>
+<p>Ela permite a troca de informações entre dispositivos localizados em qualquer parte do mundo.</p>
+<p>Entre os principais serviços da internet estão:</p>
+<ul><li>navegação em páginas web</li><li>correio eletrônico (e-mail)</li><li>transferência de arquivos</li><li>comunicação em tempo real</li><li>computação em nuvem</li></ul>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Internet é baseada no protocolo:</p><p>➡ TCP/IP</p><p>Esse conjunto de protocolos permite a comunicação entre computadores em redes diferentes.</p></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>Algumas provas afirmam:</p><p>"HTTP é o protocolo responsável por identificar computadores na internet."</p><p>❌ Errado</p><p>Quem identifica computadores é o IP (Internet Protocol).</p></div>
+<h2>Modelo OSI</h2>
+<p>O Modelo OSI (Open Systems Interconnection) é um modelo conceitual utilizado para entender o funcionamento das redes de computadores.</p>
+<p>Ele divide a comunicação em 7 camadas.</p>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><ul><li>Camadas do modelo OSI:</li><li>Física</li><li>Enlace</li><li>Rede</li><li>Transporte</li><li>Sessão</li><li>Apresentação</li><li>Aplicação</li></ul></div>
+<div class="box-dica"><strong>🧠 Memorize:</strong><ul><li>Uma forma clássica de memorizar:</li><li>FERTSAA</li><li>Física</li><li>Enlace</li><li>Rede</li><li>Transporte</li><li>Sessão</li><li>Apresentação</li><li>Aplicação</li></ul></div>
+<h2>Modelo TCP/IP</h2>
+<p>Na prática, a internet utiliza o modelo TCP/IP, que possui menos camadas.</p>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Protocolos importantes do modelo TCP/IP:</p></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>UDP não garante entrega dos pacotes.</p><p>Ele é utilizado quando velocidade é mais importante que confiabilidade.</p><ul><li>Exemplo:</li><li>streaming</li><li>jogos online</li></ul></div>
+<h2>Endereçamento IP</h2>
+<p>Cada dispositivo conectado à rede possui um endereço IP.</p>
+<p>Esse endereço identifica o dispositivo na rede.</p>
+<h3>IPv4</h3>
+<p>Formato:</p>
+<ul><li>192.168.0.1</li><li>Características:</li><li>32 bits</li><li>cerca de 4 bilhões de endereços</li><li>IPv6</li><li>Formato:</li></ul>
+<h3>2001:0db8:85a3:0000:0000:8a2e:0370:7334</h3>
+<p>Características:</p>
+<ul><li>128 bits</li><li>número muito maior de endereços</li></ul>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>Algumas questões afirmam:</p><p>"IPv6 foi criado para substituir o TCP."</p><p><strong>❌ Errado.</strong></p><p>IPv6 substitui IPv4, não TCP.</p></div>
+<h2>DNS (Domain Name System)</h2>
+<p>O DNS é o sistema responsável por traduzir nomes de domínio em endereços IP.</p>
+<p>Exemplo:</p>
+<ul><li>www.google.com → 142.250.190.78</li></ul>
+<p>Sem DNS, seria necessário acessar os sites digitando o IP.</p>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><ul><li>DNS significa:</li><li>Domain Name System</li><li>Função:</li><li>traduz nome de domínio em IP</li></ul></div>
+<h2>Protocolos da Internet</h2>
+<p>A internet utiliza diversos protocolos.</p>
+<h3>HTTP</h3>
+<p>Significa:</p>
+<ul><li>HyperText Transfer Protocol</li><li>Utilizado para:</li><li>acessar páginas web</li><li>HTTPS</li></ul>
+<p>Versão segura do HTTP.</p>
+<p>Utiliza criptografia SSL/TLS.</p>
+<h3>FTP</h3>
+<p>Utilizado para:</p>
+<ul><li>transferência de arquivos</li><li>SSH</li><li>Utilizado para:</li><li>acesso remoto seguro a servidores</li></ul>
+<h3>Protocolos de Email</h3>
+<h3>POP3 vs IMAP</h3>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><ul><li>A banca costuma trocar:</li><li>SMTP</li><li>POP3</li><li>Memorização:</li><li>📤 SMTP envia</li><li>📥 POP3 recebe</li></ul></div>
+<h2>Navegadores (Browsers)</h2>
+<p>Os navegadores são programas utilizados para acessar páginas da web.</p>
+<p>Principais navegadores:</p>
+<ul><li>Google Chrome</li><li>Microsoft Edge</li><li>Mozilla Firefox</li><li>Safari</li></ul>
+<h3>Funcionalidades dos Navegadores</h3>
+<p>Entre as funcionalidades estão:</p>
+<ul><li>navegação por abas</li><li>histórico de navegação</li><li>favoritos</li><li>extensões</li></ul>
+<h3>Mecanismos de Busca</h3>
+<p>Motores de busca permitem encontrar informações na internet.</p>
+<p>Exemplos:</p>
+<ul><li>Google</li><li>Bing</li><li>DuckDuckGo</li></ul>
+<div class="box-resumo"><strong>📦 Resumo estratégico:</strong><p>Navegador ≠ mecanismo de busca.</p></div>
+<div class="box-prova"><strong>⚠️ Pegadinha de banca:</strong><p>Pergunta comum:</p><p>"Google é um navegador."</p><p><strong>❌ Errado.</strong></p><p>Google é mecanismo de busca.</p><p>O navegador é Chrome.</p></div>
+<h2>Conclusão do Capítulo</h2>
+<p>Os temas mais cobrados em concursos são:</p>
+<ul><li>modelo OSI</li><li>modelo TCP/IP</li><li>protocolos de internet</li><li>DNS</li></ul>
+<h3>IPv4 vs IPv6</h3>
+<p>navegadores</p>
+<p>Dominar esses conceitos é essencial para resolver questões de informática.</p>
+<section class="quiz-section" data-capitulo="3">
+<div class="quiz-header">
+<span class="chapter-badge">Desafio rápido</span>
+<h2>Teste seu entendimento</h2>
+<p>Responda às questões abaixo e descubra na hora se a sua escolha está correta.</p>
+</div>
+<article class="quiz-card" data-explicacao="O IP identifica os dispositivos; o DNS apenas traduz nomes para endereços IP." data-resposta="IP">
+<p class="quiz-pergunta">1. Qual protocolo identifica dispositivos na rede?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap3-q1-63638">
+<input id="cap3-q1-63638" name="cap3-q1" type="radio" value="HTTP"/>
+<span>HTTP</span>
+</label>
+
+<label class="quiz-opcao" for="cap3-q1-11775">
+<input id="cap3-q1-11775" name="cap3-q1" type="radio" value="IP"/>
+<span>IP</span>
+</label>
+
+<label class="quiz-opcao" for="cap3-q1-99047">
+<input id="cap3-q1-99047" name="cap3-q1" type="radio" value="FTP"/>
+<span>FTP</span>
+</label>
+
+<label class="quiz-opcao" for="cap3-q1-4958">
+<input id="cap3-q1-4958" name="cap3-q1" type="radio" value="DNS"/>
+<span>DNS</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article><article class="quiz-card" data-explicacao="UDP não garante entrega, mas é rápido e útil em streaming e jogos online." data-resposta="UDP">
+<p class="quiz-pergunta">2. Qual protocolo é mais usado quando a velocidade é mais importante que a confiabilidade?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap3-q2-82605">
+<input id="cap3-q2-82605" name="cap3-q2" type="radio" value="TCP"/>
+<span>TCP</span>
+</label>
+
+<label class="quiz-opcao" for="cap3-q2-28940">
+<input id="cap3-q2-28940" name="cap3-q2" type="radio" value="UDP"/>
+<span>UDP</span>
+</label>
+
+<label class="quiz-opcao" for="cap3-q2-12742">
+<input id="cap3-q2-12742" name="cap3-q2" type="radio" value="IMAP"/>
+<span>IMAP</span>
+</label>
+
+<label class="quiz-opcao" for="cap3-q2-8399">
+<input id="cap3-q2-8399" name="cap3-q2" type="radio" value="SSH"/>
+<span>SSH</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article><article class="quiz-card" data-explicacao="Navegador é o programa de acesso; mecanismo de busca é o serviço de pesquisa." data-resposta="Chrome é navegador; Google é mecanismo de busca">
+<p class="quiz-pergunta">3. Qual alternativa mostra corretamente navegador e mecanismo de busca?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap3-q3-80569">
+<input id="cap3-q3-80569" name="cap3-q3" type="radio" value="Google é navegador; Chrome é busca"/>
+<span>Google é navegador; Chrome é busca</span>
+</label>
+
+<label class="quiz-opcao" for="cap3-q3-53202">
+<input id="cap3-q3-53202" name="cap3-q3" type="radio" value="Chrome é navegador; Google é mecanismo de busca"/>
+<span>Chrome é navegador; Google é mecanismo de busca</span>
+</label>
+
+<label class="quiz-opcao" for="cap3-q3-40518">
+<input id="cap3-q3-40518" name="cap3-q3" type="radio" value="Firefox é mecanismo de busca; Bing é navegador"/>
+<span>Firefox é mecanismo de busca; Bing é navegador</span>
+</label>
+
+<label class="quiz-opcao" for="cap3-q3-60937">
+<input id="cap3-q3-60937" name="cap3-q3" type="radio" value="Edge é protocolo; Google é navegador"/>
+<span>Edge é protocolo; Google é navegador</span>
+</label>
+</div>
+<div class="quiz-acoes">
+<button class="btn-primary quiz-validar" type="button">Responder</button>
+<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
+</div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article></section><div class="chapter-navigation">
+<a class="btn-secondary" href="capitulo2.html">← Capítulo anterior</a>
+<a class="btn-primary" href="capitulo4.html">Próximo capítulo →</a>
+</div>
+</article>
+<footer class="page-footer">
+<p>Plataforma do e-book • Informática para Concursos</p>
+</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
