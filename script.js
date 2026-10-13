@@ -124,15 +124,15 @@ function iniciarNarracao() {
 
   const atualizarBotaoPausa = () => {
     if (window.speechSynthesis.paused) {
-      botaoPausarNarracao.textContent = "▶️ Continuar narração";
+      botaoPausarNarracao.textContent = "Continuar narração";
     } else {
-      botaoPausarNarracao.textContent = "⏸ Pausar narração";
+      botaoPausarNarracao.textContent = "Pausar narração";
     }
   };
 
   const finalizarEstadoDaNarracao = (mensagem) => {
     narracaoIniciada = false;
-    botaoPausarNarracao.textContent = "⏸ Pausar narração";
+    botaoPausarNarracao.textContent = "Pausar narração";
 
     if (statusNarracao) {
       statusNarracao.textContent = mensagem;
@@ -305,11 +305,11 @@ function iniciarQuizDosCapitulos() {
 
       if (acertou) {
         quiz.classList.add("quiz-correto");
-        feedback.textContent = `✅ Correto. ${explicacao}`;
+        feedback.textContent = `Correto. ${explicacao}`;
         feedback.className = "quiz-feedback quiz-feedback-correto";
       } else {
         quiz.classList.add("quiz-incorreto");
-        feedback.textContent = `❌ Incorreto. Resposta certa: ${respostaCorreta}. ${explicacao}`;
+        feedback.textContent = `Incorreto. Resposta certa: ${respostaCorreta}. ${explicacao}`;
         feedback.className = "quiz-feedback quiz-feedback-incorreto";
       }
     });
