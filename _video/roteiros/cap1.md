@@ -2,9 +2,11 @@
 
 > Arquivo gerado por `ferramentas/exportar-roteiro.cjs` a partir de `roteiros/cap1.js`. Edite o `.js` e gere este arquivo de novo.
 
+**Duração:** 14:39 · **Cenas:** 24
+
 ## Abertura
 
-### Cena 1 · `abertura`
+### Cena 1 · `abertura` (0:05–0:47)
 
 **Visual:** Bit grande à esquerda acena para o público. À direita surgem o rótulo “Capítulo 1” e o título “Introdução à Informática”. Em seguida, um roteiro de 5 tópicos aparece item por item, cada um na frase que o anuncia. Na última frase, Bit dá um pulinho.
 
@@ -20,7 +22,7 @@
 
 ## O que é informática
 
-### Cena 2 · `conceito`
+### Cena 2 · `conceito` (0:47–1:22)
 
 **Visual:** Título “Informática”. A definição aparece escrita. Depois, as palavras INFORMAÇÃO + AUTOMÁTICA entram pelos lados; as partes “AÇÃO” e “AUTOM” ficam apagadas e surge “= INFORMÁTICA” em destaque. Por fim, diagrama de três blocos com ícones — Entrada (teclado) → Processamento (engrenagem) → Saída (monitor) — com setas desenhadas e etiquetas do exemplo do boletim: “Notas: 7, 8 e 9”, “Calcula a média”, “Média: 8”.
 
@@ -33,7 +35,7 @@
 - E todo computador segue a mesma lógica: ele recebe dados na entrada, processa esses dados e entrega informação na saída.
 - Pense no boletim da escola: as notas entram, o computador calcula a média, e o resultado aparece na tela.
 
-### Cena 3 · `sistema`
+### Cena 3 · `sistema` (1:22–2:01)
 
 **Visual:** Quatro cartões entram um por frase: Hardware (chip), Software (janela de programa), Peopleware (pessoas) e Firmware (chip com código). No fim, faixa inferior com a síntese “Hardware: você toca · Software: você executa · Peopleware: quem usa”.
 
@@ -48,7 +50,7 @@
 
 ## Dados e informação
 
-### Cena 4 · `dados`
+### Cena 4 · `dados` (2:01–2:41)
 
 **Visual:** Três cartões ligados por setas: Dado (número 32 grande), Informação (“A média de idade da turma é 32 anos”, com 32 anos marcado) e Conhecimento (lâmpada + decisão). Quadro âmbar “Pegadinha de banca” no rodapé.
 
@@ -62,7 +64,7 @@
 
 ## Unidades e numeração
 
-### Cena 5 · `bits`
+### Cena 5 · `bits` (2:41–3:17)
 
 **Visual:** Dois blocos 1 (aceso, cor do capítulo) e 0 (apagado) com “ligado e desligado”; definição de bit. Fileira de 8 bits 01000001 aparece dígito a dígito, com chave embaixo: “8 bits = 1 byte → a letra A”. Depois, escada crescente Byte → KB → MB → GB → TB → PB, com “×1024” entre os degraus. Cartão final: HD de “1 TB” aparece com ≈ 931 GB.
 
@@ -74,7 +76,7 @@
 - A partir daí, cada degrau multiplica por mil e vinte e quatro: kilobyte, megabyte, gigabyte, terabyte e petabyte.
 - Uma curiosidade: os fabricantes de discos contam de mil em mil. Por isso, um HD de um terabyte aparece com cerca de novecentos e trinta e um gigabytes no computador.
 
-### Cena 6 · `mbps`
+### Cena 6 · `mbps` (3:17–3:43)
 
 **Visual:** Cartões lado a lado: Mbps (ícone de download, velocidade, b minúsculo) e MB (ícone de documento, tamanho, B maiúsculo). Conta grande “100 Mbps ÷ 8 = 12,5 MB/s”, com o resultado contando de 0 até 12,5.
 
@@ -85,7 +87,7 @@
 - Já o tamanho dos arquivos é medido em bytes, os megabytes, com B maiúsculo.
 - Como um byte tem oito bits, basta dividir por oito: uma conexão de cem megabits por segundo baixa, no máximo, cerca de doze vírgula cinco megabytes por segundo.
 
-### Cena 7 · `bases`
+### Cena 7 · `bases` (3:43–4:09)
 
 **Visual:** Tabela Sistema / Base / Dígitos / Exemplo, uma linha por frase (binário, decimal, hexadecimal). Faixa final: “1010 (binário) = 10 (decimal) = A (hexadecimal) → o mesmo valor”.
 
@@ -97,7 +99,7 @@
 - E o hexadecimal tem base dezesseis: usa de zero a nove e as letras de A até F.
 - Repare: um, zero, um, zero em binário, dez em decimal e A em hexadecimal representam o mesmo valor: dez.
 
-### Cena 8 · `conversao`
+### Cena 8 · `conversao` (4:09–4:38)
 
 **Visual:** Sem o Bit. À esquerda, pesos 8 4 2 1 surgem da direita para a esquerda; abaixo, os dígitos 1 0 1 1; os dígitos 1 acendem na cor do capítulo e aparece “8 + 0 + 2 + 1 = 11”. À direita, divisões sucessivas de 13 por 2 com os restos; seta subindo ao lado dos restos e o resultado “13 = 1101”.
 
@@ -110,7 +112,7 @@
 - O caminho inverso também é simples: divida o número por dois várias vezes e leia os restos de baixo para cima.
 - Treze, por exemplo, vira um, um, zero, um.
 
-### Cena 9 · `hexa`
+### Cena 9 · `hexa` (4:38–5:09)
 
 **Visual:** Linha “16 = 2⁴ → cada dígito hexadecimal = 4 bits”. Os grupos 1010 e 1111 surgem, recebem “= 10” e “= 15” e viram A e F; aparece “→ AF”. Linha do octal: 110 | 101 → 65. Quadro verde “Memorize”.
 
@@ -124,7 +126,7 @@
 
 ## Representação de dados
 
-### Cena 10 · `caracteres`
+### Cena 10 · `caracteres` (5:09–5:44)
 
 **Visual:** Três cartões: ASCII (Aa, 7 bits, 128 caracteres), Unicode (globo, todos os idiomas e emojis) e UTF-8 (código, padrão da web). Exemplo de erro de codificação: “✗ informÃ¡tica → ✓ informática”.
 
@@ -135,7 +137,7 @@
 - O Unicode abrange praticamente todos os idiomas do mundo, além de símbolos e emojis. E o UTF-8 é a forma de gravar o Unicode mais usada na web.
 - Quando um texto aparece com símbolos estranhos no lugar dos acentos, o problema é de codificação: o arquivo foi gravado em um padrão e aberto em outro.
 
-### Cena 11 · `imagens`
+### Cena 11 · `imagens` (5:44–6:20)
 
 **Visual:** Grade de pixels 8 × 8 formando um rosto, pixel a pixel; legenda da resolução 1920 × 1080. Três círculos RGB sobrepostos e “24 bits por pixel ≈ 16,7 milhões de cores”. Depois, dois cartões: Matricial (círculo serrilhado em pixels; JPG, PNG, GIF, BMP) e Vetorial (círculo liso; SVG, AI, EPS).
 
@@ -146,7 +148,7 @@
 - A imagem matricial, ou bitmap, é feita de pixels e perde qualidade quando ampliada. É o caso do JPG e do PNG.
 - Já a imagem vetorial é descrita por formas matemáticas e pode ser ampliada sem perder qualidade, como o SVG.
 
-### Cena 12 · `compressao`
+### Cena 12 · `compressao` (6:20–6:47)
 
 **Visual:** Dois cartões: Com perda (ícone de imagem, tom âmbar; JPG, MP3, MP4) e Sem perda (ícone de pacote, tom verde; PNG, ZIP, RAR, FLAC). Faixa final “Documento em ZIP → volta idêntico”.
 
@@ -159,7 +161,7 @@
 
 ## Evolução dos computadores
 
-### Cena 13 · `geracoes`
+### Cena 13 · `geracoes` (6:47–7:36)
 
 **Visual:** Linha do tempo horizontal desenhada da esquerda para a direita. Cinco marcos entram um por frase, com ícone e período: válvula (1ª, 1940–1956), transistor (2ª, 1956–1963), circuito integrado (3ª, 1964–1971), microprocessador (4ª, 1971–atual) e IA (5ª, atual). Faixa “ENIAC (1946) · Intel 4004 (1971)”.
 
@@ -172,7 +174,7 @@
 - Na quarta geração surgiu o microprocessador, com o Intel quatro mil e quatro, de mil novecentos e setenta e um. E os computadores pessoais se popularizaram.
 - A quinta geração, a atual, é marcada pela inteligência artificial e pelo processamento paralelo.
 
-### Cena 14 · `vtcmi`
+### Cena 14 · `vtcmi` (7:36–7:57)
 
 **Visual:** Letras grandes V T C M I surgem uma a uma, cada uma com a palavra embaixo. Quadro âmbar: microprocessador = 4ª geração; circuitos integrados = 3ª.
 
@@ -181,7 +183,7 @@
 - Para memorizar a sequência, use a sigla VTCMI: válvulas, transistores, circuitos integrados, microprocessadores e inteligência artificial.
 - E cuidado com a pegadinha: os microprocessadores surgiram na quarta geração. A terceira é a dos circuitos integrados, e as bancas adoram trocar as duas.
 
-### Cena 15 · `classificacao`
+### Cena 15 · `classificacao` (7:57–8:37)
 
 **Visual:** Linha “Quanto ao sinal”: cartões Analógico (onda), Digital (sinal em degraus) e Híbrido (setas). Linha “Quanto ao porte”: Supercomputador, Mainframe, Servidor, Computador pessoal e Móveis e embarcados, cada um no momento em que é citado.
 
@@ -194,7 +196,7 @@
 
 ## Software e linguagens
 
-### Cena 16 · `software`
+### Cena 16 · `software` (8:37–9:11)
 
 **Visual:** Quatro cartões, um por frase: Básico (engrenagem), Aplicativo (janela), Utilitário (ferramenta) e Programação (código), com exemplos.
 
@@ -206,7 +208,7 @@
 - O utilitário cuida da manutenção e do apoio ao sistema, como os antivírus e os compactadores.
 - E as ferramentas de programação, como compiladores e interpretadores, servem para criar novos programas.
 
-### Cena 17 · `licencas`
+### Cena 17 · `licencas` (9:11–10:07)
 
 **Visual:** Coluna esquerda: Proprietário (cadeado), Freeware (presente) e Shareware (relógio). Centro: Software livre (estrela) com as quatro liberdades surgindo uma a uma. Direita: Código aberto e Domínio público. Na última frase tudo sai e entra o quadro âmbar “Software livre não significa gratuito”.
 
@@ -219,7 +221,7 @@
 - Existem ainda o código aberto, em que o código-fonte é disponibilizado, e o domínio público, sem direitos autorais reservados.
 - E a pegadinha mais famosa: software livre não significa software gratuito. A liberdade está no uso, no estudo, na modificação e na distribuição. Um software livre pode até ser vendido.
 
-### Cena 18 · `linguagens`
+### Cena 18 · `linguagens` (10:07–10:55)
 
 **Visual:** Pilha de três níveis que sobe: linguagem de máquina (10110000 01100001), Assembly (MOV AL, 61h) e alto nível (print("Olá")), com seta “mais próximo do humano”. Depois, cartões Compilador (livro: traduz tudo e gera executável) e Interpretador (balões de tradução: linha por linha). Faixa “Java: compilado para bytecode → executado pela JVM”.
 
@@ -235,7 +237,7 @@
 
 ## Como o computador funciona
 
-### Cena 19 · `von-neumann`
+### Cena 19 · `von-neumann` (10:55–11:41)
 
 **Visual:** Sem o Bit. Bloco Memória (“dados + instruções”) à direita; faixa “Programa armazenado”. Área tracejada da CPU com três cartões entrando um por frase: Unidade de Controle, ULA e Registradores. Por fim, Entrada e saída e os barramentos desenhados ligando a CPU à memória e à E/S.
 
@@ -249,7 +251,7 @@
 - E os registradores são pequenas memórias internas, as mais rápidas do computador.
 - Completam o modelo a memória principal, os dispositivos de entrada e saída, e os barramentos, que são as vias que ligam tudo.
 
-### Cena 20 · `harvard`
+### Cena 20 · `harvard` (11:41–12:10)
 
 **Visual:** Dois cartões: Von Neumann (um único caminho CPU–Memória, em âmbar, “gargalo”) e Harvard (dois caminhos verdes: instruções e dados). Quadro verde “Memorize: CPU = UC + ULA (+ registradores)”.
 
@@ -259,7 +261,7 @@
 - A arquitetura Harvard resolve isso com memórias e caminhos separados para instruções e para dados. Ela é comum em microcontroladores.
 - E atenção: CPU e ULA não são sinônimos. A ULA é só uma parte da CPU. Memorize: CPU é igual a unidade de controle mais ULA, mais os registradores.
 
-### Cena 21 · `ciclo`
+### Cena 21 · `ciclo` (12:10–12:49)
 
 **Visual:** Anel pontilhado com três etapas — Busca, Decodificação, Execução — que acendem na cor do capítulo na frase correspondente, enquanto um ponto âmbar percorre o anel continuamente. Cartão “Contador de programa (PC)”. No fim, a sigla FDE em destaque.
 
@@ -273,7 +275,7 @@
 
 ## Tecnologias atuais
 
-### Cena 22 · `atuais`
+### Cena 22 · `atuais` (12:49–13:34)
 
 **Visual:** Quatro cartões: Inteligência artificial, Internet das Coisas, Big Data e Computação em nuvem. Sob o Big Data, cinco etiquetas surgem em sequência: Volume, Velocidade, Variedade, Veracidade, Valor.
 
@@ -287,7 +289,7 @@
 
 ## Revisão
 
-### Cena 23 · `revisao`
+### Cena 23 · `revisao` (13:34–14:23)
 
 **Visual:** Sete cartões de revisão com ícone de verificação, um por frase: Sistema, Dados, Unidades, Numeração, Gerações, Software e CPU.
 
@@ -302,7 +304,7 @@
 - Software livre não é sinônimo de gratuito. O compilador gera um executável; o interpretador traduz linha por linha.
 - E a CPU reúne unidade de controle, ULA e registradores, executando o ciclo de busca, decodificação e execução.
 
-### Cena 24 · `encerramento`
+### Cena 24 · `encerramento` (14:23–14:36)
 
 **Visual:** Bit grande à esquerda. Cartão “Pratique agora: 15 questões” e cartão “Próximo vídeo: Capítulo 2 — Sistemas Operacionais” na cor do capítulo 2. Bit acena na despedida.
 
