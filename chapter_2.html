@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
@@ -18,9 +17,7 @@
 <div class="chapter-tools">
 <button class="audio-button" id="botaoNarrar" type="button">Ouvir capítulo</button>
 <button class="audio-button" id="botaoPausarNarracao" type="button">Pausar narração</button>
-<button class="btn-primary" id="botaoConcluirCapitulo" type="button">
-          Marcar capítulo como concluído
-        </button>
+<button class="btn-primary" id="botaoConcluirCapitulo" type="button">Marcar capítulo como concluído</button>
 </div>
 </div>
 <article class="reading-card">
@@ -29,194 +26,332 @@
 <div class="chapter-meta">
 <span class="chapter-status" id="statusLeitura">Status: leitura em andamento.</span>
 <span class="chapter-status" id="statusNarracao">Narração pronta para uso.</span>
-</div><section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Camada central do computador</h2><div class="figure-grid three"><div><span class="figure-label">Usuário</span><strong>Interação</strong></div><div><span class="figure-label">Sistema Operacional</span><strong>Gerencia recursos</strong></div><div><span class="figure-label">Hardware</span><strong>Executa fisicamente</strong></div></div></section>
-<h2>Conceito de Sistema Operacional</h2>
-<p class="chapter-intro">O Sistema Operacional (SO) é o software responsável por gerenciar todos os recursos do computador e permitir a interação entre:</p>
-<ul><li>hardware</li><li>softwares aplicativos</li><li>usuário</li></ul>
-<p>Sem um sistema operacional, o computador não conseguiria executar programas.</p>
+</div>
+<section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Camada central do computador</h2><div class="figure-grid three"><div><span class="figure-label">Usuário</span><strong>Interação</strong></div><div><span class="figure-label">Sistema operacional</span><strong>Gerencia recursos</strong></div><div><span class="figure-label">Hardware</span><strong>Executa fisicamente</strong></div></div></section>
+
+<h2>Conceito de sistema operacional</h2>
+<p class="chapter-intro">O sistema operacional (SO) é o software básico que gerencia os recursos do computador e serve de intermediário entre o hardware, os aplicativos e o usuário.</p>
+<p>Sem um sistema operacional, cada programa precisaria saber controlar diretamente o processador, a memória, o disco e cada periférico. O SO esconde essa complexidade e oferece uma base comum para todos os aplicativos.</p>
 <p>Exemplos de sistemas operacionais:</p>
-<ul><li>Windows 10 / Windows 11</li></ul>
-<h3>Linux (Ubuntu, Debian, Fedora)</h3>
-<p>macOS</p>
-<h3>Principais funções do Sistema Operacional</h3>
-<p>O sistema operacional possui várias responsabilidades fundamentais.</p>
-<h3>Gerenciamento de Processos</h3>
-<p>Controla a execução dos programas.</p>
-<p>Exemplo:</p>
-<ul><li>abrir navegador</li><li>executar editor de texto</li><li>executar planilhas</li></ul>
-<h3>Gerenciamento de Memória</h3>
-<p>Controla o uso da memória RAM pelos programas.</p>
-<p>Isso evita que um programa utilize toda a memória do sistema.</p>
-<h3>Gerenciamento de Arquivos</h3>
-<p>Organiza dados em:</p>
-<ul><li>arquivos</li><li>pastas</li><li>diretórios</li></ul>
-<h3>Controle de Dispositivos</h3>
-<p>Gerencia periféricos como:</p>
-<ul><li>teclado</li><li>mouse</li><li>impressora</li><li>monitor</li></ul>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>Funções principais do Sistema Operacional:</p></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><ul><li>Muitas provas afirmam:</li><li>"O sistema operacional é um hardware."</li><li>❌ Errado</li></ul><p>O sistema operacional é um software de sistema.</p></div>
-<div class="box-dica"><strong>Memorize</strong><p>Tipos de software:</p></div>
+<ul>
+<li><strong>Computadores:</strong> Windows 10 e 11, macOS, distribuições Linux (Ubuntu, Debian, Fedora, Linux Mint).</li>
+<li><strong>Dispositivos móveis:</strong> Android (baseado no kernel Linux) e iOS.</li>
+<li><strong>Servidores:</strong> Windows Server e distribuições Linux como Red Hat Enterprise Linux e Debian.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O sistema operacional é um hardware.” Errado: ele é um <strong>software básico</strong> (de sistema). Também é errado dizer que o SO é um aplicativo.</p></div>
+
+<h2>Funções do sistema operacional</h2>
+<table class="comparison-table">
+<thead><tr><th>Função</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Gerência de processos</td><td>decide qual programa usa o processador e por quanto tempo</td></tr>
+<tr><td>Gerência de memória</td><td>distribui a RAM entre os programas e impede que um invada a área do outro</td></tr>
+<tr><td>Gerência de arquivos</td><td>organiza dados em arquivos e pastas (diretórios) no disco</td></tr>
+<tr><td>Gerência de dispositivos (E/S)</td><td>controla periféricos por meio de drivers</td></tr>
+<tr><td>Segurança e usuários</td><td>contas, senhas, permissões de acesso</td></tr>
+<tr><td>Interface com o usuário</td><td>interface gráfica (GUI) ou linha de comando (CLI)</td></tr>
+</tbody>
+</table>
+<h3>Conceitos ligados aos processos</h3>
+<ul>
+<li><strong>Processo:</strong> um programa em execução.</li>
+<li><strong>Multitarefa:</strong> vários programas executando “ao mesmo tempo”. O SO alterna o processador entre eles tão rápido que parece simultâneo.</li>
+<li><strong>Multitarefa preemptiva:</strong> o SO pode interromper um programa para dar a vez a outro. É o modelo dos sistemas atuais.</li>
+<li><strong>Multiusuário:</strong> várias contas de usuário com arquivos e permissões separados.</li>
+<li><strong>Memória virtual:</strong> quando a RAM acaba, o SO usa parte do disco como extensão da memória (arquivo de paginação no Windows, área de swap no Linux). Funciona, mas é bem mais lento.</li>
+<li><strong>Driver:</strong> software que permite ao SO controlar um dispositivo específico, como uma impressora.</li>
+</ul>
+<div class="box-resumo"><strong>Resumo estratégico</strong><p>O SO gerencia quatro grandes recursos: processador (processos), memória, arquivos e dispositivos de entrada e saída.</p></div>
+
 <h2>Kernel</h2>
-<p>O Kernel é o núcleo do sistema operacional.</p>
-<p>Ele é responsável por realizar a comunicação direta com o hardware.</p>
-<p>Principais funções do Kernel:</p>
-<ul><li>controle de processos</li><li>gerenciamento de memória</li><li>controle de dispositivos</li><li>gerenciamento de interrupções</li></ul>
-<h3>Tipos de Kernel</h3>
-<h3>Kernel Monolítico</h3>
-<p>Todos os serviços do sistema estão integrados no núcleo.</p>
-<p>Exemplo:</p>
-<ul><li>Linux</li><li>Microkernel</li></ul>
-<p>O núcleo possui apenas funções essenciais.</p>
-<p>Outros serviços são executados separadamente.</p>
-<p>Exemplo:</p>
-<ul><li>Minix</li></ul>
-<div class="box-resumo"><strong>Resumo estratégico</strong></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><ul><li>A banca costuma afirmar:</li><li>"O kernel é responsável pela interface gráfica."</li><li>❌ Errado</li></ul><p>A interface gráfica pertence ao ambiente gráfico, não ao kernel.</p></div>
-<h2>Sistemas de Arquivos</h2>
-<p>Os sistemas de arquivos definem como os dados são armazenados no disco.</p>
-<h3>NTFS</h3>
-<p>Sistema de arquivos padrão do Windows.</p>
-<p>Características:</p>
-<ul><li>suporte a permissões</li><li>criptografia</li><li>compressão</li><li>journaling</li><li>FAT32</li></ul>
-<p>Sistema de arquivos antigo.</p>
-<p>Características:</p>
-<ul><li>compatível com vários sistemas</li><li>limite de arquivos de 4 GB</li><li>EXT4</li></ul>
-<p>Sistema de arquivos utilizado no Linux.</p>
-<p>Características:</p>
-<ul><li>journaling</li><li>maior desempenho</li><li>melhor gerenciamento de arquivos grandes</li></ul>
-<h3>Comparação entre Sistemas de Arquivos</h3>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>Pergunta comum:</p><p>Qual sistema de arquivos é utilizado pelo Linux?</p><p><strong>Resposta correta:</strong></p><p>➡ EXT4</p></div>
+<p>O <strong>kernel</strong> (núcleo) é a parte central do sistema operacional. Ele roda com privilégio máximo e se comunica diretamente com o hardware, cuidando do controle de processos, da memória, dos dispositivos e das interrupções.</p>
+<table class="comparison-table">
+<thead><tr><th>Tipo de kernel</th><th>Característica</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Monolítico</td><td>quase todos os serviços rodam dentro do núcleo; é rápido, mas uma falha pode derrubar o sistema</td><td>Linux</td></tr>
+<tr><td>Microkernel</td><td>o núcleo tem só o essencial; os demais serviços rodam separados; é mais modular e estável</td><td>Minix</td></tr>
+<tr><td>Híbrido</td><td>mistura as duas abordagens</td><td>Windows (NT) e macOS (XNU)</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O kernel é responsável pela interface gráfica.” Errado: a interface gráfica é um programa que roda sobre o kernel. Também é comum a banca afirmar que “Linux” é o sistema completo; tecnicamente, Linux é o kernel, e o sistema completo é uma <strong>distribuição</strong>.</p></div>
+
+<h2>Interface gráfica e linha de comando</h2>
+<ul>
+<li><strong>GUI (Graphical User Interface):</strong> janelas, ícones, menus e botões. Exemplos no Linux: GNOME, KDE Plasma, XFCE e Cinnamon.</li>
+<li><strong>CLI (Command Line Interface):</strong> o usuário digita comandos em um interpretador, o <strong>shell</strong>. Exemplos: Bash (Linux), Prompt de Comando e PowerShell (Windows).</li>
+</ul>
+
+<h2>Sistemas de arquivos</h2>
+<p>O sistema de arquivos define como os dados são organizados, nomeados e protegidos no disco.</p>
+<table class="comparison-table">
+<thead><tr><th>Sistema</th><th>Uso típico</th><th>Características</th></tr></thead>
+<tbody>
+<tr><td>NTFS</td><td>padrão do Windows</td><td>permissões, criptografia, compressão, cotas e journaling</td></tr>
+<tr><td>FAT32</td><td>pen drives e cartões antigos</td><td>compatível com quase tudo, mas limita cada arquivo a 4 GB</td></tr>
+<tr><td>exFAT</td><td>pen drives e cartões de memória atuais</td><td>compatível com Windows e macOS, sem o limite de 4 GB por arquivo</td></tr>
+<tr><td>ext4</td><td>padrão em muitas distribuições Linux</td><td>journaling, bom desempenho e suporte a arquivos grandes</td></tr>
+<tr><td>APFS</td><td>macOS e iOS</td><td>otimizado para SSD, com criptografia nativa</td></tr>
+</tbody>
+</table>
+<p><strong>Journaling</strong> é um registro das alterações pendentes: se o computador desligar no meio de uma gravação, o sistema consegue recuperar a consistência do disco.</p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Um arquivo de vídeo de 5 GB não pode ser copiado para um pen drive formatado em <strong>FAT32</strong>, mesmo que haja espaço livre. A solução é formatar em exFAT ou NTFS.</p></div>
+
+<h2>Windows</h2>
+<h3>Componentes mais cobrados</h3>
+<ul>
+<li><strong>Explorador de Arquivos:</strong> gerencia pastas e arquivos. Atalho: <span class="inline-code">Windows + E</span>.</li>
+<li><strong>Área de Trabalho, Barra de Tarefas e Menu Iniciar.</strong></li>
+<li><strong>Configurações e Painel de Controle:</strong> ajustes do sistema, contas, rede e aplicativos.</li>
+<li><strong>Gerenciador de Tarefas:</strong> mostra processos, desempenho e programas que iniciam com o Windows. Atalho: <span class="inline-code">Ctrl + Shift + Esc</span>.</li>
+<li><strong>Lixeira:</strong> guarda temporariamente os arquivos excluídos do disco local, permitindo restaurá-los.</li>
+</ul>
+<h3>Lixeira</h3>
+<ul>
+<li><span class="inline-code">Delete</span> envia o arquivo para a Lixeira.</li>
+<li><span class="inline-code">Shift + Delete</span> exclui permanentemente, sem passar pela Lixeira.</li>
+<li>Arquivos apagados de <strong>pen drives, cartões de memória e pastas de rede</strong> não vão para a Lixeira: são excluídos direto.</li>
+<li>Arquivos maiores que o espaço reservado para a Lixeira também são excluídos permanentemente (o Windows avisa antes).</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“Todo arquivo excluído no Windows pode ser recuperado pela Lixeira.” Errado: exclusões com Shift + Delete e as feitas em unidades removíveis ou de rede não passam por ela.</p></div>
+<h3>Atalhos do Windows</h3>
+<table class="comparison-table">
+<thead><tr><th>Atalho</th><th>Ação</th></tr></thead>
+<tbody>
+<tr><td>Windows + E</td><td>abre o Explorador de Arquivos</td></tr>
+<tr><td>Windows + D</td><td>mostra/oculta a área de trabalho</td></tr>
+<tr><td>Windows + L</td><td>bloqueia o computador</td></tr>
+<tr><td>Windows + R</td><td>abre a janela Executar</td></tr>
+<tr><td>Windows + I</td><td>abre as Configurações</td></tr>
+<tr><td>Windows + V</td><td>histórico da área de transferência</td></tr>
+<tr><td>Windows + Shift + S</td><td>captura de parte da tela</td></tr>
+<tr><td>Alt + Tab</td><td>alterna entre janelas abertas</td></tr>
+<tr><td>Alt + F4</td><td>fecha a janela ou o programa ativo</td></tr>
+<tr><td>Ctrl + Shift + Esc</td><td>abre o Gerenciador de Tarefas</td></tr>
+<tr><td>F2</td><td>renomeia o item selecionado</td></tr>
+<tr><td>Ctrl + C / Ctrl + X / Ctrl + V</td><td>copiar / recortar / colar</td></tr>
+<tr><td>Ctrl + Z</td><td>desfazer</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>Os atalhos com a tecla Windows usam a inicial em inglês: <strong>E</strong>xplorer, <strong>D</strong>esktop, <strong>L</strong>ock, <strong>R</strong>un, <strong>I</strong> de settings.</p></div>
+<h3>Extensões de arquivo</h3>
+<p>A extensão indica o tipo do arquivo e qual programa o abre: <span class="inline-code">.exe</span> (executável), <span class="inline-code">.txt</span> (texto simples), <span class="inline-code">.docx</span> (Word), <span class="inline-code">.xlsx</span> (Excel), <span class="inline-code">.pdf</span>, <span class="inline-code">.jpg</span> e <span class="inline-code">.png</span> (imagens), <span class="inline-code">.mp3</span> (áudio), <span class="inline-code">.mp4</span> (vídeo), <span class="inline-code">.zip</span> (compactado).</p>
+
+<h2>Linux</h2>
+<p>O Linux é um kernel de código aberto criado por Linus Torvalds em 1991 e distribuído sob a licença <strong>GPL</strong>. Ele é combinado com ferramentas do projeto GNU e outros programas para formar as <strong>distribuições</strong> (Ubuntu, Debian, Fedora, Mint, Red Hat).</p>
+<ul>
+<li>É <strong>multiusuário</strong> e <strong>multitarefa</strong>.</li>
+<li>Diferencia letras maiúsculas de minúsculas: <span class="inline-code">Relatorio.txt</span> e <span class="inline-code">relatorio.txt</span> são arquivos diferentes.</li>
+<li>O superusuário (administrador) se chama <strong>root</strong>. O comando <span class="inline-code">sudo</span> executa um comando com privilégios de administrador.</li>
+<li>Domina o mercado de servidores e é a base do Android.</li>
+</ul>
+<h3>Estrutura de diretórios</h3>
+<p>Tudo parte de um único diretório raiz, representado por <span class="inline-code">/</span>. Não existem letras de unidade como C: ou D:.</p>
+<table class="comparison-table">
+<thead><tr><th>Diretório</th><th>Conteúdo</th></tr></thead>
+<tbody>
+<tr><td>/</td><td>raiz de todo o sistema</td></tr>
+<tr><td>/home</td><td>pastas pessoais dos usuários (ex.: /home/maria)</td></tr>
+<tr><td>/root</td><td>pasta pessoal do superusuário</td></tr>
+<tr><td>/etc</td><td>arquivos de configuração do sistema</td></tr>
+<tr><td>/bin e /sbin</td><td>comandos essenciais e comandos de administração</td></tr>
+<tr><td>/usr</td><td>programas e bibliotecas instalados</td></tr>
+<tr><td>/var</td><td>dados variáveis, como logs</td></tr>
+<tr><td>/tmp</td><td>arquivos temporários</td></tr>
+<tr><td>/dev</td><td>arquivos que representam dispositivos</td></tr>
+<tr><td>/boot</td><td>arquivos de inicialização e o kernel</td></tr>
+<tr><td>/media e /mnt</td><td>pontos de montagem de pen drives e outras unidades</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Não confunda <strong>/</strong> (raiz do sistema) com <strong>/root</strong> (pasta pessoal do administrador).</p></div>
+<h3>Comandos básicos</h3>
+<table class="comparison-table">
+<thead><tr><th>Comando</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td>pwd</td><td>mostra o diretório atual</td></tr>
+<tr><td>ls</td><td>lista arquivos e pastas (ls -l mostra detalhes e permissões)</td></tr>
+<tr><td>cd</td><td>muda de diretório</td></tr>
+<tr><td>mkdir</td><td>cria diretório</td></tr>
+<tr><td>cp</td><td>copia arquivos</td></tr>
+<tr><td>mv</td><td>move ou renomeia arquivos</td></tr>
+<tr><td>rm</td><td>remove arquivos (rm -r remove diretórios)</td></tr>
+<tr><td>cat</td><td>exibe o conteúdo de um arquivo</td></tr>
+<tr><td>chmod</td><td>altera permissões</td></tr>
+<tr><td>chown</td><td>altera o dono do arquivo</td></tr>
+<tr><td>sudo</td><td>executa um comando como administrador</td></tr>
+<tr><td>ps / kill</td><td>lista processos / encerra um processo</td></tr>
+<tr><td>man</td><td>abre o manual de um comando</td></tr>
+</tbody>
+</table>
+
 <h2>Permissões no Linux</h2>
-<p>O Linux possui um sistema de permissões baseado em três tipos de acesso.</p>
-<p>Essas permissões são aplicadas para:</p>
-<ul><li>usuário</li><li>grupo</li><li>outros</li><li>Comando chmod</li></ul>
-<p>O comando chmod altera permissões de arquivos.</p>
-<p>Exemplo:</p>
-<ul><li>chmod 755 arquivo</li><li>Significado:</li></ul>
-<h3>7 = leitura + escrita + execução</h3>
-<h3>5 = leitura + execução</h3>
-<div class="box-dica"><strong>Memorize</strong><p>Valores das permissões:</p><p>Exemplo:</p><p>7 = 4 + 2 + 1</p></div>
-<h2>Comparação: Windows vs Linux</h2>
-<p>Nos concursos, é comum aparecer comparação entre sistemas operacionais.</p>
-<h3>Windows 10 / 11</h3>
-<p>Características:</p>
-<ul><li>interface gráfica amigável</li><li>grande compatibilidade de softwares</li><li>sistema proprietário (Microsoft)</li></ul>
-<h3>Linux (Ubuntu / Debian)</h3>
-<p>Características:</p>
-<ul><li>código aberto</li><li>altamente seguro</li><li>amplamente utilizado em servidores</li></ul>
-<h3>Comparação Windows vs Linux</h3>
-<div class="box-resumo"><strong>Resumo estratégico</strong><ul><li>Windows:</li><li>sistema proprietário</li><li>desenvolvido pela Microsoft</li><li>Linux:</li><li>sistema open source</li><li>utilizado em servidores</li></ul></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>A banca costuma afirmar:</p><p>"Linux é gratuito porque não possui licença."</p><p><strong>❌ Errado.</strong></p><p>Linux possui licença GPL (software livre).</p></div>
-<h2>Interface Gráfica (GUI)</h2>
-<p>A interface gráfica permite interação visual com o computador.</p>
-<p>Elementos principais:</p>
-<ul><li>janelas</li><li>ícones</li><li>menus</li><li>botões</li></ul>
-<h3>Exemplos de interfaces gráficas no Linux</h3>
-<h3>GNOME</h3>
-<h3>KDE</h3>
-<h3>XFCE</h3>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>GUI significa:</p><p>Graphical User Interface</p></div>
-<h2>Conclusão do Capítulo</h2>
-<p>O estudo de sistemas operacionais é essencial para concursos.</p>
-<p>Os pontos mais cobrados são:</p>
-<ul><li>conceito de sistema operacional</li><li>kernel</li><li>sistemas de arquivos</li><li>permissões Linux</li><li>comparação Windows vs Linux</li></ul>
+<p>Cada arquivo tem três tipos de permissão, aplicados a três grupos de pessoas.</p>
+<table class="comparison-table">
+<thead><tr><th>Permissão</th><th>Letra</th><th>Valor</th></tr></thead>
+<tbody>
+<tr><td>Leitura (read)</td><td>r</td><td>4</td></tr>
+<tr><td>Escrita (write)</td><td>w</td><td>2</td></tr>
+<tr><td>Execução (execute)</td><td>x</td><td>1</td></tr>
+</tbody>
+</table>
+<p>As permissões são definidas, nesta ordem, para o <strong>dono</strong> (usuário), o <strong>grupo</strong> e os <strong>outros</strong>. Somando os valores, cada grupo recebe um dígito de 0 a 7.</p>
+<div class="pseudocode-card">
+<h3>Exemplo — chmod 754 relatorio.sh</h3>
+<pre>dono   = 7 = 4 + 2 + 1 = rwx  (ler, escrever e executar)
+grupo  = 5 = 4 + 0 + 1 = r-x  (ler e executar)
+outros = 4 = 4 + 0 + 0 = r--  (apenas ler)
+
+ls -l mostra:  -rwxr-xr--  relatorio.sh</pre>
+</div>
+<div class="box-dica"><strong>Memorize</strong><p>r = 4, w = 2, x = 1. Os valores mais comuns: 7 (rwx), 6 (rw-), 5 (r-x), 4 (r--) e 0 (---). A ordem dos dígitos é sempre dono, grupo, outros.</p></div>
+
+<h2>Comparação: Windows x Linux</h2>
+<table class="comparison-table">
+<thead><tr><th>Aspecto</th><th>Windows</th><th>Linux</th></tr></thead>
+<tbody>
+<tr><td>Licença</td><td>proprietária (Microsoft)</td><td>software livre (GPL)</td></tr>
+<tr><td>Código-fonte</td><td>fechado</td><td>aberto</td></tr>
+<tr><td>Kernel</td><td>híbrido (Windows NT)</td><td>monolítico</td></tr>
+<tr><td>Sistema de arquivos padrão</td><td>NTFS</td><td>ext4 (na maioria das distribuições)</td></tr>
+<tr><td>Organização das unidades</td><td>letras (C:, D:)</td><td>árvore única a partir de /</td></tr>
+<tr><td>Maiúsculas e minúsculas</td><td>não diferencia em nomes de arquivos</td><td>diferencia</td></tr>
+<tr><td>Administrador</td><td>conta de Administrador</td><td>root</td></tr>
+<tr><td>Uso mais comum</td><td>computadores pessoais e empresas</td><td>servidores, supercomputadores, Android</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O Linux é gratuito porque não possui licença.” Errado: o Linux possui licença, a <strong>GPL</strong>, que garante as liberdades do software livre.</p></div>
+
+<h2>Conclusão do capítulo</h2>
+<p>Os pontos de sistemas operacionais mais cobrados são:</p>
+<ul>
+<li>conceito e funções do sistema operacional;</li>
+<li>kernel e seus tipos;</li>
+<li>sistemas de arquivos (NTFS, FAT32, exFAT, ext4);</li>
+<li>Lixeira e atalhos do Windows;</li>
+<li>diretórios, comandos e permissões do Linux;</li>
+<li>comparação entre Windows e Linux.</li>
+</ul>
 <section class="quiz-section" data-capitulo="2">
 <div class="quiz-header">
-<span class="chapter-badge">Desafio rápido</span>
+<span class="chapter-badge">Questões do capítulo</span>
 <h2>Teste seu entendimento</h2>
-<p>Responda às questões abaixo e descubra na hora se a sua escolha está correta.</p>
+<p>São 10 questões no estilo das bancas. Responda cada uma e veja na hora a correção comentada.</p>
 </div>
-<article class="quiz-card" data-explicacao="O sistema operacional é um software de sistema responsável por gerenciar recursos." data-resposta="Software de sistema">
+<article class="quiz-card" data-explicacao="O sistema operacional é software básico (de sistema): gerencia o hardware e serve de base para os aplicativos." data-resposta="software básico">
 <p class="quiz-pergunta">1. O sistema operacional é classificado como:</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap2-q1-69801">
-<input id="cap2-q1-69801" name="cap2-q1" type="radio" value="Hardware principal"/>
-<span>Hardware principal</span>
-</label>
-
-<label class="quiz-opcao" for="cap2-q1-94269">
-<input id="cap2-q1-94269" name="cap2-q1" type="radio" value="Software de sistema"/>
-<span>Software de sistema</span>
-</label>
-
-<label class="quiz-opcao" for="cap2-q1-36677">
-<input id="cap2-q1-36677" name="cap2-q1" type="radio" value="Software aplicativo"/>
-<span>Software aplicativo</span>
-</label>
-
-<label class="quiz-opcao" for="cap2-q1-79919">
-<input id="cap2-q1-79919" name="cap2-q1" type="radio" value="Periférico de entrada"/>
-<span>Periférico de entrada</span>
-</label>
+<label class="quiz-opcao" for="cap2-q1-o1"><input id="cap2-q1-o1" name="cap2-q1" type="radio" value="software básico"/><span>software básico</span></label>
+<label class="quiz-opcao" for="cap2-q1-o2"><input id="cap2-q1-o2" name="cap2-q1" type="radio" value="software aplicativo"/><span>software aplicativo</span></label>
+<label class="quiz-opcao" for="cap2-q1-o3"><input id="cap2-q1-o3" name="cap2-q1" type="radio" value="periférico de saída"/><span>periférico de saída</span></label>
+<label class="quiz-opcao" for="cap2-q1-o4"><input id="cap2-q1-o4" name="cap2-q1" type="radio" value="hardware de entrada"/><span>hardware de entrada</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article><article class="quiz-card" data-explicacao="EXT4 é um sistema de arquivos amplamente utilizado em distribuições Linux." data-resposta="EXT4">
-<p class="quiz-pergunta">2. Qual sistema de arquivos é típico do Linux?</p>
+</article>
+<article class="quiz-card" data-explicacao="O ext4 é o padrão na maioria das distribuições Linux. NTFS é do Windows e APFS é da Apple." data-resposta="ext4">
+<p class="quiz-pergunta">2. Qual sistema de arquivos é o padrão em muitas distribuições Linux?</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap2-q2-45037">
-<input id="cap2-q2-45037" name="cap2-q2" type="radio" value="NTFS"/>
-<span>NTFS</span>
-</label>
-
-<label class="quiz-opcao" for="cap2-q2-78890">
-<input id="cap2-q2-78890" name="cap2-q2" type="radio" value="FAT32"/>
-<span>FAT32</span>
-</label>
-
-<label class="quiz-opcao" for="cap2-q2-28632">
-<input id="cap2-q2-28632" name="cap2-q2" type="radio" value="EXT4"/>
-<span>EXT4</span>
-</label>
-
-<label class="quiz-opcao" for="cap2-q2-33502">
-<input id="cap2-q2-33502" name="cap2-q2" type="radio" value="exFAT"/>
-<span>exFAT</span>
-</label>
+<label class="quiz-opcao" for="cap2-q2-o1"><input id="cap2-q2-o1" name="cap2-q2" type="radio" value="NTFS"/><span>NTFS</span></label>
+<label class="quiz-opcao" for="cap2-q2-o2"><input id="cap2-q2-o2" name="cap2-q2" type="radio" value="FAT32"/><span>FAT32</span></label>
+<label class="quiz-opcao" for="cap2-q2-o3"><input id="cap2-q2-o3" name="cap2-q2" type="radio" value="ext4"/><span>ext4</span></label>
+<label class="quiz-opcao" for="cap2-q2-o4"><input id="cap2-q2-o4" name="cap2-q2" type="radio" value="APFS"/><span>APFS</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article><article class="quiz-card" data-explicacao="O kernel é o núcleo do sistema operacional e lida diretamente com o hardware." data-resposta="Fazer a comunicação direta com o hardware">
+</article>
+<article class="quiz-card" data-explicacao="O kernel é o núcleo do SO: controla processos, memória, dispositivos e interrupções. A interface gráfica roda sobre ele." data-resposta="comunicar-se diretamente com o hardware e gerenciar recursos">
 <p class="quiz-pergunta">3. O kernel é responsável principalmente por:</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap2-q3-97427">
-<input id="cap2-q3-97427" name="cap2-q3" type="radio" value="Criar planilhas"/>
-<span>Criar planilhas</span>
-</label>
-
-<label class="quiz-opcao" for="cap2-q3-36834">
-<input id="cap2-q3-36834" name="cap2-q3" type="radio" value="Editar textos"/>
-<span>Editar textos</span>
-</label>
-
-<label class="quiz-opcao" for="cap2-q3-43808">
-<input id="cap2-q3-43808" name="cap2-q3" type="radio" value="Fazer a comunicação direta com o hardware"/>
-<span>Fazer a comunicação direta com o hardware</span>
-</label>
-
-<label class="quiz-opcao" for="cap2-q3-61339">
-<input id="cap2-q3-61339" name="cap2-q3" type="radio" value="Substituir a interface gráfica"/>
-<span>Substituir a interface gráfica</span>
-</label>
+<label class="quiz-opcao" for="cap2-q3-o1"><input id="cap2-q3-o1" name="cap2-q3" type="radio" value="navegar na internet"/><span>navegar na internet</span></label>
+<label class="quiz-opcao" for="cap2-q3-o2"><input id="cap2-q3-o2" name="cap2-q3" type="radio" value="exibir a interface gráfica"/><span>exibir a interface gráfica</span></label>
+<label class="quiz-opcao" for="cap2-q3-o3"><input id="cap2-q3-o3" name="cap2-q3" type="radio" value="criar apresentações e planilhas"/><span>criar apresentações e planilhas</span></label>
+<label class="quiz-opcao" for="cap2-q3-o4"><input id="cap2-q3-o4" name="cap2-q3" type="radio" value="comunicar-se diretamente com o hardware e gerenciar recursos"/><span>comunicar-se diretamente com o hardware e gerenciar recursos</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article></section><div class="chapter-navigation">
+</article>
+<article class="quiz-card" data-explicacao="O FAT32 limita cada arquivo a 4 GB. Formatar em exFAT ou NTFS resolve." data-resposta="FAT32">
+<p class="quiz-pergunta">4. Um usuário tenta copiar um vídeo de 6 GB para um pen drive com 32 GB livres, mas o Windows não permite. A causa mais provável é que o pen drive está formatado em:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap2-q4-o1"><input id="cap2-q4-o1" name="cap2-q4" type="radio" value="ext4"/><span>ext4</span></label>
+<label class="quiz-opcao" for="cap2-q4-o2"><input id="cap2-q4-o2" name="cap2-q4" type="radio" value="FAT32"/><span>FAT32</span></label>
+<label class="quiz-opcao" for="cap2-q4-o3"><input id="cap2-q4-o3" name="cap2-q4" type="radio" value="NTFS"/><span>NTFS</span></label>
+<label class="quiz-opcao" for="cap2-q4-o4"><input id="cap2-q4-o4" name="cap2-q4" type="radio" value="exFAT"/><span>exFAT</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="Arquivos de unidades removíveis e de rede não vão para a Lixeira." data-resposta="é excluído permanentemente, sem passar pela Lixeira">
+<p class="quiz-pergunta">5. No Windows, um arquivo excluído de um pen drive com a tecla Delete:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap2-q5-o1"><input id="cap2-q5-o1" name="cap2-q5" type="radio" value="vai para a Lixeira do computador"/><span>vai para a Lixeira do computador</span></label>
+<label class="quiz-opcao" for="cap2-q5-o2"><input id="cap2-q5-o2" name="cap2-q5" type="radio" value="vai para uma lixeira dentro do pen drive"/><span>vai para uma lixeira dentro do pen drive</span></label>
+<label class="quiz-opcao" for="cap2-q5-o3"><input id="cap2-q5-o3" name="cap2-q5" type="radio" value="é excluído permanentemente, sem passar pela Lixeira"/><span>é excluído permanentemente, sem passar pela Lixeira</span></label>
+<label class="quiz-opcao" for="cap2-q5-o4"><input id="cap2-q5-o4" name="cap2-q5" type="radio" value="é movido para a pasta Documentos"/><span>é movido para a pasta Documentos</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="Ctrl + Shift + Esc abre o Gerenciador de Tarefas. Windows + E abre o Explorador, Alt + F4 fecha a janela e Windows + L bloqueia." data-resposta="Ctrl + Shift + Esc">
+<p class="quiz-pergunta">6. Qual atalho abre diretamente o Gerenciador de Tarefas do Windows?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap2-q6-o1"><input id="cap2-q6-o1" name="cap2-q6" type="radio" value="Ctrl + Shift + Esc"/><span>Ctrl + Shift + Esc</span></label>
+<label class="quiz-opcao" for="cap2-q6-o2"><input id="cap2-q6-o2" name="cap2-q6" type="radio" value="Windows + L"/><span>Windows + L</span></label>
+<label class="quiz-opcao" for="cap2-q6-o3"><input id="cap2-q6-o3" name="cap2-q6" type="radio" value="Windows + E"/><span>Windows + E</span></label>
+<label class="quiz-opcao" for="cap2-q6-o4"><input id="cap2-q6-o4" name="cap2-q6" type="radio" value="Alt + F4"/><span>Alt + F4</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="/etc concentra as configurações. /home tem as pastas dos usuários, /tmp os temporários e /root é a pasta pessoal do administrador." data-resposta="/etc">
+<p class="quiz-pergunta">7. No Linux, o diretório que guarda os arquivos de configuração do sistema é:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap2-q7-o1"><input id="cap2-q7-o1" name="cap2-q7" type="radio" value="/root"/><span>/root</span></label>
+<label class="quiz-opcao" for="cap2-q7-o2"><input id="cap2-q7-o2" name="cap2-q7" type="radio" value="/home"/><span>/home</span></label>
+<label class="quiz-opcao" for="cap2-q7-o3"><input id="cap2-q7-o3" name="cap2-q7" type="radio" value="/tmp"/><span>/tmp</span></label>
+<label class="quiz-opcao" for="cap2-q7-o4"><input id="cap2-q7-o4" name="cap2-q7" type="radio" value="/etc"/><span>/etc</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="Os dígitos são dono, grupo e outros. O grupo recebeu 4, que corresponde apenas a leitura (r)." data-resposta="somente leitura">
+<p class="quiz-pergunta">8. Após o comando chmod 640 arquivo.txt, o grupo do arquivo terá permissão de:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap2-q8-o1"><input id="cap2-q8-o1" name="cap2-q8" type="radio" value="leitura e escrita"/><span>leitura e escrita</span></label>
+<label class="quiz-opcao" for="cap2-q8-o2"><input id="cap2-q8-o2" name="cap2-q8" type="radio" value="somente leitura"/><span>somente leitura</span></label>
+<label class="quiz-opcao" for="cap2-q8-o3"><input id="cap2-q8-o3" name="cap2-q8" type="radio" value="leitura, escrita e execução"/><span>leitura, escrita e execução</span></label>
+<label class="quiz-opcao" for="cap2-q8-o4"><input id="cap2-q8-o4" name="cap2-q8" type="radio" value="nenhuma permissão"/><span>nenhuma permissão</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="O Linux é case-sensitive: letras maiúsculas e minúsculas geram nomes diferentes." data-resposta="Certo">
+<p class="quiz-pergunta">9. Julgue o item: “No Linux, os arquivos Relatorio.txt e relatorio.txt podem existir na mesma pasta, pois o sistema diferencia maiúsculas de minúsculas”.</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap2-q9-o1"><input id="cap2-q9-o1" name="cap2-q9" type="radio" value="Certo"/><span>Certo</span></label>
+<label class="quiz-opcao" for="cap2-q9-o2"><input id="cap2-q9-o2" name="cap2-q9" type="radio" value="Errado"/><span>Errado</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="A memória virtual (arquivo de paginação no Windows, swap no Linux) usa o disco como extensão da RAM, com desempenho bem menor." data-resposta="memória virtual">
+<p class="quiz-pergunta">10. Quando a memória RAM se esgota, o sistema operacional pode usar uma área do disco como extensão da memória. Esse recurso é chamado de:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap2-q10-o1"><input id="cap2-q10-o1" name="cap2-q10" type="radio" value="memória cache"/><span>memória cache</span></label>
+<label class="quiz-opcao" for="cap2-q10-o2"><input id="cap2-q10-o2" name="cap2-q10" type="radio" value="memória ROM"/><span>memória ROM</span></label>
+<label class="quiz-opcao" for="cap2-q10-o3"><input id="cap2-q10-o3" name="cap2-q10" type="radio" value="memória virtual"/><span>memória virtual</span></label>
+<label class="quiz-opcao" for="cap2-q10-o4"><input id="cap2-q10-o4" name="cap2-q10" type="radio" value="journaling"/><span>journaling</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+</section>
+<div class="chapter-navigation">
 <a class="btn-secondary" href="chapter_1.html">← Capítulo anterior</a>
 <a class="btn-primary" href="chapter_3.html">Próximo capítulo →</a>
 </div>
 </article>
 <footer class="page-footer">
-<p>Plataforma do e-book • Informática para Concursos</p>
+<p>Informática para Concursos · E-book</p>
 </footer>
 </div>
 <script src="script.js"></script>
