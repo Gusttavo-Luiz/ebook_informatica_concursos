@@ -1284,28 +1284,3 @@ body[data-pagina="capitulo8"]::after {
     margin-bottom: 0.9rem;
   }
 }
-
-
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-.modal-overlay.active { display:flex; }
-.modal {
-  background:#090217;
-  padding:30px;
-  border-radius:20px;
-  max-width:500px;
-  width:90%;
-  box-shadow:0 0 25px rgba(176,38,255,0.3);
-  border:1px solid rgba(176,38,255,0.2);
-  text-align:center;
-}
-.modal p { color:#c4b5fd; }
-.modal-actions { display:flex; gap:10px; justify-content:center; }
-.modal-close { position:absolute; top:15px; right:20px; cursor:pointer; }
