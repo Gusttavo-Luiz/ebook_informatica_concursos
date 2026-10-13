@@ -1,0 +1,116 @@
+<section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Ecossistema da nuvem</h2><div class="figure-grid four"><div><span class="figure-label">Celular</span><strong>Acessa</strong></div><div><span class="figure-label">Notebook</span><strong>Sincroniza</strong></div><div><span class="figure-label">Nuvem</span><strong>Armazena</strong></div><div><span class="figure-label">Equipe</span><strong>Colabora</strong></div></div></section>
+
+<h2>Conceito de computação em nuvem</h2>
+<p class="chapter-intro">A computação em nuvem (cloud computing) é o fornecimento de recursos computacionais — armazenamento, processamento, bancos de dados e aplicativos — pela internet, sob demanda.</p>
+<p>Em vez de guardar arquivos apenas no computador local ou manter servidores próprios, o usuário utiliza a infraestrutura de <strong>datacenters</strong> de provedores especializados e acessa tudo de qualquer lugar com conexão à internet.</p>
+<p>Exemplos: Google Drive, Microsoft OneDrive, Apple iCloud e Dropbox (armazenamento); Gmail e Microsoft 365 (aplicativos); Amazon Web Services (AWS), Microsoft Azure e Google Cloud (infraestrutura para empresas).</p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“Os arquivos da nuvem ficam armazenados no navegador.” Errado: eles ficam em <strong>servidores remotos</strong> nos datacenters do provedor. O navegador é só uma das formas de acesso.</p></div>
+
+<h2>Características essenciais</h2>
+<p>A definição mais usada, do NIST (instituto de padrões dos Estados Unidos), aponta cinco características:</p>
+<table class="comparison-table">
+<thead><tr><th>Característica</th><th>Significado</th></tr></thead>
+<tbody>
+<tr><td>Autoatendimento sob demanda</td><td>o cliente contrata e ajusta recursos sozinho, sem falar com atendentes</td></tr>
+<tr><td>Amplo acesso pela rede</td><td>acesso pela internet a partir de computadores, celulares e tablets</td></tr>
+<tr><td>Agrupamento de recursos</td><td>o provedor compartilha a mesma infraestrutura entre vários clientes</td></tr>
+<tr><td>Elasticidade rápida</td><td>os recursos aumentam ou diminuem rapidamente conforme a necessidade</td></tr>
+<tr><td>Serviço medido</td><td>o uso é monitorado e cobrado conforme o consumo (pague pelo que usar)</td></tr>
+</tbody>
+</table>
+<div class="box-resumo"><strong>Resumo estratégico</strong><p><strong>Escalabilidade/elasticidade</strong> é a palavra-chave mais cobrada: a nuvem cresce e diminui conforme a demanda, e o cliente paga apenas pelo que consome.</p></div>
+
+<h2>Vantagens e desvantagens</h2>
+<table class="comparison-table">
+<thead><tr><th>Vantagens</th><th>Desvantagens</th></tr></thead>
+<tbody>
+<tr><td>acesso de qualquer lugar e dispositivo</td><td>depende de conexão com a internet</td></tr>
+<tr><td>não exige comprar e manter servidores</td><td>custos recorrentes de assinatura</td></tr>
+<tr><td>escalabilidade conforme a demanda</td><td>dados ficam sob a guarda de terceiros (privacidade)</td></tr>
+<tr><td>compartilhamento e colaboração em tempo real</td><td>dificuldade de migrar de um provedor para outro (dependência)</td></tr>
+<tr><td>atualizações e manutenção feitas pelo provedor</td><td>indisponibilidade se o provedor tiver falhas</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>Nuvem = acesso de qualquer lugar + escalabilidade + pagamento conforme o uso. O principal ponto fraco é a dependência da internet.</p></div>
+
+<h2>Modelos de serviço</h2>
+<h3>IaaS — Infraestrutura como Serviço</h3>
+<p>O provedor oferece a infraestrutura: servidores virtuais, armazenamento e rede. O cliente instala e gerencia o sistema operacional e os aplicativos. Exemplos: Amazon EC2, máquinas virtuais do Microsoft Azure, Google Compute Engine.</p>
+<h3>PaaS — Plataforma como Serviço</h3>
+<p>O provedor oferece uma plataforma pronta para desenvolver e hospedar aplicações, incluindo sistema operacional, ambiente de execução e banco de dados. O cliente cuida apenas do próprio código e dos dados. Exemplos: Google App Engine, Azure App Service, Heroku.</p>
+<h3>SaaS — Software como Serviço</h3>
+<p>O usuário utiliza um aplicativo pronto pela internet, normalmente pelo navegador, sem instalar nem manter nada. Exemplos: Gmail, Google Docs, Microsoft 365 na web, Dropbox.</p>
+<table class="comparison-table">
+<thead><tr><th>Quem gerencia</th><th>IaaS</th><th>PaaS</th><th>SaaS</th></tr></thead>
+<tbody>
+<tr><td>Aplicação e dados</td><td>cliente</td><td>cliente</td><td>provedor (o cliente só usa)</td></tr>
+<tr><td>Ambiente de execução e sistema operacional</td><td>cliente</td><td>provedor</td><td>provedor</td></tr>
+<tr><td>Servidores, armazenamento e rede</td><td>provedor</td><td>provedor</td><td>provedor</td></tr>
+<tr><td>Público típico</td><td>equipes de infraestrutura</td><td>desenvolvedores</td><td>usuário final</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“Em qual modelo o usuário acessa o aplicativo pronto, sem instalar software?” Resposta: <strong>SaaS</strong>. Se a questão fala em “máquinas virtuais”, é IaaS; se fala em “ambiente para desenvolver aplicações”, é PaaS.</p></div>
+<div class="box-dica"><strong>Memorize</strong><p>De baixo para cima: <strong>I</strong>nfraestrutura → <strong>P</strong>lataforma → <strong>S</strong>oftware. Quanto mais alto, menos o cliente precisa gerenciar.</p></div>
+
+<h2>Modelos de implantação</h2>
+<table class="comparison-table">
+<thead><tr><th>Modelo</th><th>Característica</th></tr></thead>
+<tbody>
+<tr><td>Nuvem pública</td><td>infraestrutura de um provedor compartilhada por vários clientes pela internet (AWS, Azure, Google Cloud)</td></tr>
+<tr><td>Nuvem privada</td><td>infraestrutura de uso exclusivo de uma organização, no próprio local ou em um provedor</td></tr>
+<tr><td>Nuvem híbrida</td><td>combina nuvem pública e privada, com dados e aplicações transitando entre elas</td></tr>
+<tr><td>Nuvem comunitária</td><td>compartilhada por organizações com interesses em comum, como órgãos de um mesmo governo</td></tr>
+</tbody>
+</table>
+
+<h2>Sincronização e backup</h2>
+<p>A <strong>sincronização</strong> mantém a mesma versão dos arquivos em todos os dispositivos: o que é alterado no computador aparece no celular, e vice-versa.</p>
+<p>O <strong>backup</strong> é uma cópia de segurança, guardada separadamente, para recuperar os dados em caso de perda.</p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Sincronização <strong>não é</strong> backup. Se um arquivo for apagado ou corrompido (por exemplo, por um ransomware) em um dispositivo, a sincronização replica o problema para os outros. Muitos serviços oferecem lixeira e histórico de versões por um tempo limitado, mas isso não substitui um backup.</p></div>
+<p>Outro recurso comum é o <strong>arquivo sob demanda</strong> (Arquivos Sob Demanda no OneDrive, streaming no Google Drive para computador): o arquivo aparece na pasta do computador, mas só é baixado quando o usuário o abre, economizando espaço em disco.</p>
+
+<h2>Compartilhamento e colaboração</h2>
+<p>Os serviços de nuvem permitem compartilhar arquivos e pastas com níveis diferentes de permissão:</p>
+<ul>
+<li><strong>Leitor (visualizador):</strong> apenas vê o conteúdo.</li>
+<li><strong>Comentarista:</strong> vê e comenta, sem editar.</li>
+<li><strong>Editor:</strong> pode alterar o conteúdo.</li>
+</ul>
+<p>O compartilhamento pode ser feito com pessoas específicas (por e-mail) ou por <strong>link</strong>. Um link configurado como “qualquer pessoa com o link” permite o acesso a quem recebê-lo, mesmo sem ser convidado.</p>
+<p>Ferramentas como Google Docs, Planilhas e Apresentações, e as versões web do Word, Excel e PowerPoint, permitem a <strong>edição simultânea</strong> (coautoria) e guardam o <strong>histórico de versões</strong>, que permite ver e restaurar estados anteriores do documento.</p>
+
+<h2>Principais serviços de armazenamento</h2>
+<table class="comparison-table">
+<thead><tr><th>Serviço</th><th>Empresa</th><th>Espaço gratuito*</th><th>Destaques</th></tr></thead>
+<tbody>
+<tr><td>Google Drive</td><td>Google</td><td>15 GB, divididos com Gmail e Google Fotos</td><td>integrado a Docs, Planilhas e Apresentações</td></tr>
+<tr><td>OneDrive</td><td>Microsoft</td><td>5 GB</td><td>integrado ao Windows e ao Microsoft 365</td></tr>
+<tr><td>iCloud</td><td>Apple</td><td>5 GB</td><td>backup e sincronização de iPhone, iPad e Mac</td></tr>
+<tr><td>Dropbox</td><td>Dropbox</td><td>2 GB</td><td>sincronização multiplataforma</td></tr>
+</tbody>
+</table>
+<p><em>*Valores dos planos gratuitos podem mudar. Todos oferecem aplicativos para computador e celular, além do acesso pelo navegador.</em></p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O Google Drive funciona apenas no navegador.” Errado: ele tem aplicativos para computador e celular, que sincronizam os arquivos.</p></div>
+
+<h2>Segurança na nuvem</h2>
+<p>A segurança na nuvem é <strong>compartilhada</strong>: o provedor protege a infraestrutura e o usuário é responsável por suas contas, senhas e pelas permissões que concede.</p>
+<ul>
+<li>ativar a <strong>autenticação em dois fatores</strong>;</li>
+<li>usar senhas fortes e diferentes para cada serviço;</li>
+<li>revisar com quem os arquivos estão compartilhados e evitar links públicos para documentos sensíveis;</li>
+<li>preferir serviços com <strong>criptografia</strong> dos dados em trânsito e armazenados;</li>
+<li>manter um backup independente dos dados importantes.</li>
+</ul>
+<p>No Brasil, o tratamento de dados pessoais, inclusive na nuvem, deve respeitar a <strong>LGPD</strong> (Lei Geral de Proteção de Dados, Lei nº 13.709/2018).</p>
+<div class="box-resumo"><strong>Resumo estratégico</strong><p>Principais medidas: autenticação em dois fatores, criptografia, controle de acesso e backup independente.</p></div>
+
+<h2>Conclusão do capítulo</h2>
+<p>Os tópicos de computação em nuvem mais cobrados são:</p>
+<ul>
+<li>conceito e características (elasticidade, pagamento conforme o uso);</li>
+<li>modelos de serviço IaaS, PaaS e SaaS;</li>
+<li>nuvem pública, privada, híbrida e comunitária;</li>
+<li>diferença entre sincronização e backup;</li>
+<li>compartilhamento, colaboração e principais serviços;</li>
+<li>cuidados de segurança.</li>
+</ul>

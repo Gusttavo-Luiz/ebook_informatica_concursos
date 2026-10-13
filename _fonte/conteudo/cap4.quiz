@@ -1,0 +1,69 @@
+? Qual é o alinhamento de parágrafo padrão de um documento novo no Word?
+- Justificado
+* À esquerda
+- Centralizado
+- À direita
+= O alinhamento padrão é à esquerda. Justificado precisa ser aplicado pelo usuário.
+
+? No Microsoft Word em português, o atalho Ctrl + N aplica:
+* negrito
+- novo documento
+- numeração
+- nova página
+= No Word PT-BR, Ctrl + N é negrito. Novo documento é Ctrl + O. No LibreOffice Writer, Ctrl + N cria um novo documento.
+
+? No LibreOffice Writer, o atalho para salvar o documento é:
+- Ctrl + B
+* Ctrl + S
+- Ctrl + G
+- F12
+= O Writer usa atalhos baseados no inglês: Ctrl + S (save) salva. No Word PT-BR, salvar é Ctrl + B.
+
+? No Excel, a célula A1 contém 2, B1 contém 3 e C1 contém 4. Qual o resultado de =A1+B1*C1?
+- 20
+* 14
+- 9
+- 24
+= A multiplicação é resolvida antes da soma: 3 × 4 = 12; 12 + 2 = 14.
+
+? A fórmula =A1*$B$1 está na célula C1 e é copiada para C2. Como ela ficará?
+- =A1*$B$1
+* =A2*$B$1
+- =A2*$B$2
+- =B1*$B$1
+= A1 é relativa e se ajusta (desce uma linha para A2). $B$1 é absoluta e não muda.
+
+? As células A1 a A4 contêm, respectivamente, 10, 6, vazia e 8. Qual o resultado de =MÉDIA(A1:A4)?
+- 6
+* 8
+- 24
+- 6,5
+= A função MÉDIA ignora células vazias: (10 + 6 + 8) ÷ 3 = 8.
+
+? Qual função do Excel conta quantas células de um intervalo atendem a um critério, como a palavra "Aprovado"?
+- SOMASE
+* CONT.SE
+- CONT.NÚM
+- PROCV
+= CONT.SE(intervalo;critério) conta as células que atendem ao critério. SOMASE soma valores, CONT.NÚM conta números.
+
+? No PROCV, o valor procurado deve estar localizado:
+* na primeira coluna da tabela pesquisada
+- na última coluna da tabela pesquisada
+- em qualquer coluna, desde que ordenada
+- na primeira linha da tabela pesquisada
+= O PROCV sempre busca na primeira coluna do intervalo e retorna o valor de outra coluna da mesma linha.
+
+? No Excel, o erro #DIV/0! indica que:
+- o nome de uma função foi digitado errado
+- uma célula referenciada foi excluída
+* a fórmula tentou dividir por zero ou por uma célula vazia
+- a coluna é estreita demais
+= #DIV/0! é divisão por zero. #NOME? indica função escrita errado, #REF! referência excluída e ##### coluna estreita.
+
+? No PowerPoint, o efeito aplicado na passagem de um slide para o próximo é chamado de:
+- animação
+* transição
+- layout
+- slide mestre
+= Transição atua entre slides. Animação atua sobre os objetos dentro de um slide.

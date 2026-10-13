@@ -1,0 +1,203 @@
+<section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Camada central do computador</h2><div class="figure-grid three"><div><span class="figure-label">Usuário</span><strong>Interação</strong></div><div><span class="figure-label">Sistema operacional</span><strong>Gerencia recursos</strong></div><div><span class="figure-label">Hardware</span><strong>Executa fisicamente</strong></div></div></section>
+
+<h2>Conceito de sistema operacional</h2>
+<p class="chapter-intro">O sistema operacional (SO) é o software básico que gerencia os recursos do computador e serve de intermediário entre o hardware, os aplicativos e o usuário.</p>
+<p>Sem um sistema operacional, cada programa precisaria saber controlar diretamente o processador, a memória, o disco e cada periférico. O SO esconde essa complexidade e oferece uma base comum para todos os aplicativos.</p>
+<p>Exemplos de sistemas operacionais:</p>
+<ul>
+<li><strong>Computadores:</strong> Windows 10 e 11, macOS, distribuições Linux (Ubuntu, Debian, Fedora, Linux Mint).</li>
+<li><strong>Dispositivos móveis:</strong> Android (baseado no kernel Linux) e iOS.</li>
+<li><strong>Servidores:</strong> Windows Server e distribuições Linux como Red Hat Enterprise Linux e Debian.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O sistema operacional é um hardware.” Errado: ele é um <strong>software básico</strong> (de sistema). Também é errado dizer que o SO é um aplicativo.</p></div>
+
+<h2>Funções do sistema operacional</h2>
+<table class="comparison-table">
+<thead><tr><th>Função</th><th>O que faz</th></tr></thead>
+<tbody>
+<tr><td>Gerência de processos</td><td>decide qual programa usa o processador e por quanto tempo</td></tr>
+<tr><td>Gerência de memória</td><td>distribui a RAM entre os programas e impede que um invada a área do outro</td></tr>
+<tr><td>Gerência de arquivos</td><td>organiza dados em arquivos e pastas (diretórios) no disco</td></tr>
+<tr><td>Gerência de dispositivos (E/S)</td><td>controla periféricos por meio de drivers</td></tr>
+<tr><td>Segurança e usuários</td><td>contas, senhas, permissões de acesso</td></tr>
+<tr><td>Interface com o usuário</td><td>interface gráfica (GUI) ou linha de comando (CLI)</td></tr>
+</tbody>
+</table>
+<h3>Conceitos ligados aos processos</h3>
+<ul>
+<li><strong>Processo:</strong> um programa em execução.</li>
+<li><strong>Multitarefa:</strong> vários programas executando “ao mesmo tempo”. O SO alterna o processador entre eles tão rápido que parece simultâneo.</li>
+<li><strong>Multitarefa preemptiva:</strong> o SO pode interromper um programa para dar a vez a outro. É o modelo dos sistemas atuais.</li>
+<li><strong>Multiusuário:</strong> várias contas de usuário com arquivos e permissões separados.</li>
+<li><strong>Memória virtual:</strong> quando a RAM acaba, o SO usa parte do disco como extensão da memória (arquivo de paginação no Windows, área de swap no Linux). Funciona, mas é bem mais lento.</li>
+<li><strong>Driver:</strong> software que permite ao SO controlar um dispositivo específico, como uma impressora.</li>
+</ul>
+<div class="box-resumo"><strong>Resumo estratégico</strong><p>O SO gerencia quatro grandes recursos: processador (processos), memória, arquivos e dispositivos de entrada e saída.</p></div>
+
+<h2>Kernel</h2>
+<p>O <strong>kernel</strong> (núcleo) é a parte central do sistema operacional. Ele roda com privilégio máximo e se comunica diretamente com o hardware, cuidando do controle de processos, da memória, dos dispositivos e das interrupções.</p>
+<table class="comparison-table">
+<thead><tr><th>Tipo de kernel</th><th>Característica</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Monolítico</td><td>quase todos os serviços rodam dentro do núcleo; é rápido, mas uma falha pode derrubar o sistema</td><td>Linux</td></tr>
+<tr><td>Microkernel</td><td>o núcleo tem só o essencial; os demais serviços rodam separados; é mais modular e estável</td><td>Minix</td></tr>
+<tr><td>Híbrido</td><td>mistura as duas abordagens</td><td>Windows (NT) e macOS (XNU)</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O kernel é responsável pela interface gráfica.” Errado: a interface gráfica é um programa que roda sobre o kernel. Também é comum a banca afirmar que “Linux” é o sistema completo; tecnicamente, Linux é o kernel, e o sistema completo é uma <strong>distribuição</strong>.</p></div>
+
+<h2>Interface gráfica e linha de comando</h2>
+<ul>
+<li><strong>GUI (Graphical User Interface):</strong> janelas, ícones, menus e botões. Exemplos no Linux: GNOME, KDE Plasma, XFCE e Cinnamon.</li>
+<li><strong>CLI (Command Line Interface):</strong> o usuário digita comandos em um interpretador, o <strong>shell</strong>. Exemplos: Bash (Linux), Prompt de Comando e PowerShell (Windows).</li>
+</ul>
+
+<h2>Sistemas de arquivos</h2>
+<p>O sistema de arquivos define como os dados são organizados, nomeados e protegidos no disco.</p>
+<table class="comparison-table">
+<thead><tr><th>Sistema</th><th>Uso típico</th><th>Características</th></tr></thead>
+<tbody>
+<tr><td>NTFS</td><td>padrão do Windows</td><td>permissões, criptografia, compressão, cotas e journaling</td></tr>
+<tr><td>FAT32</td><td>pen drives e cartões antigos</td><td>compatível com quase tudo, mas limita cada arquivo a 4 GB</td></tr>
+<tr><td>exFAT</td><td>pen drives e cartões de memória atuais</td><td>compatível com Windows e macOS, sem o limite de 4 GB por arquivo</td></tr>
+<tr><td>ext4</td><td>padrão em muitas distribuições Linux</td><td>journaling, bom desempenho e suporte a arquivos grandes</td></tr>
+<tr><td>APFS</td><td>macOS e iOS</td><td>otimizado para SSD, com criptografia nativa</td></tr>
+</tbody>
+</table>
+<p><strong>Journaling</strong> é um registro das alterações pendentes: se o computador desligar no meio de uma gravação, o sistema consegue recuperar a consistência do disco.</p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Um arquivo de vídeo de 5 GB não pode ser copiado para um pen drive formatado em <strong>FAT32</strong>, mesmo que haja espaço livre. A solução é formatar em exFAT ou NTFS.</p></div>
+
+<h2>Windows</h2>
+<h3>Componentes mais cobrados</h3>
+<ul>
+<li><strong>Explorador de Arquivos:</strong> gerencia pastas e arquivos. Atalho: <span class="inline-code">Windows + E</span>.</li>
+<li><strong>Área de Trabalho, Barra de Tarefas e Menu Iniciar.</strong></li>
+<li><strong>Configurações e Painel de Controle:</strong> ajustes do sistema, contas, rede e aplicativos.</li>
+<li><strong>Gerenciador de Tarefas:</strong> mostra processos, desempenho e programas que iniciam com o Windows. Atalho: <span class="inline-code">Ctrl + Shift + Esc</span>.</li>
+<li><strong>Lixeira:</strong> guarda temporariamente os arquivos excluídos do disco local, permitindo restaurá-los.</li>
+</ul>
+<h3>Lixeira</h3>
+<ul>
+<li><span class="inline-code">Delete</span> envia o arquivo para a Lixeira.</li>
+<li><span class="inline-code">Shift + Delete</span> exclui permanentemente, sem passar pela Lixeira.</li>
+<li>Arquivos apagados de <strong>pen drives, cartões de memória e pastas de rede</strong> não vão para a Lixeira: são excluídos direto.</li>
+<li>Arquivos maiores que o espaço reservado para a Lixeira também são excluídos permanentemente (o Windows avisa antes).</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“Todo arquivo excluído no Windows pode ser recuperado pela Lixeira.” Errado: exclusões com Shift + Delete e as feitas em unidades removíveis ou de rede não passam por ela.</p></div>
+<h3>Atalhos do Windows</h3>
+<table class="comparison-table">
+<thead><tr><th>Atalho</th><th>Ação</th></tr></thead>
+<tbody>
+<tr><td>Windows + E</td><td>abre o Explorador de Arquivos</td></tr>
+<tr><td>Windows + D</td><td>mostra/oculta a área de trabalho</td></tr>
+<tr><td>Windows + L</td><td>bloqueia o computador</td></tr>
+<tr><td>Windows + R</td><td>abre a janela Executar</td></tr>
+<tr><td>Windows + I</td><td>abre as Configurações</td></tr>
+<tr><td>Windows + V</td><td>histórico da área de transferência</td></tr>
+<tr><td>Windows + Shift + S</td><td>captura de parte da tela</td></tr>
+<tr><td>Alt + Tab</td><td>alterna entre janelas abertas</td></tr>
+<tr><td>Alt + F4</td><td>fecha a janela ou o programa ativo</td></tr>
+<tr><td>Ctrl + Shift + Esc</td><td>abre o Gerenciador de Tarefas</td></tr>
+<tr><td>F2</td><td>renomeia o item selecionado</td></tr>
+<tr><td>Ctrl + C / Ctrl + X / Ctrl + V</td><td>copiar / recortar / colar</td></tr>
+<tr><td>Ctrl + Z</td><td>desfazer</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>Os atalhos com a tecla Windows usam a inicial em inglês: <strong>E</strong>xplorer, <strong>D</strong>esktop, <strong>L</strong>ock, <strong>R</strong>un, <strong>I</strong> de settings.</p></div>
+<h3>Extensões de arquivo</h3>
+<p>A extensão indica o tipo do arquivo e qual programa o abre: <span class="inline-code">.exe</span> (executável), <span class="inline-code">.txt</span> (texto simples), <span class="inline-code">.docx</span> (Word), <span class="inline-code">.xlsx</span> (Excel), <span class="inline-code">.pdf</span>, <span class="inline-code">.jpg</span> e <span class="inline-code">.png</span> (imagens), <span class="inline-code">.mp3</span> (áudio), <span class="inline-code">.mp4</span> (vídeo), <span class="inline-code">.zip</span> (compactado).</p>
+
+<h2>Linux</h2>
+<p>O Linux é um kernel de código aberto criado por Linus Torvalds em 1991 e distribuído sob a licença <strong>GPL</strong>. Ele é combinado com ferramentas do projeto GNU e outros programas para formar as <strong>distribuições</strong> (Ubuntu, Debian, Fedora, Mint, Red Hat).</p>
+<ul>
+<li>É <strong>multiusuário</strong> e <strong>multitarefa</strong>.</li>
+<li>Diferencia letras maiúsculas de minúsculas: <span class="inline-code">Relatorio.txt</span> e <span class="inline-code">relatorio.txt</span> são arquivos diferentes.</li>
+<li>O superusuário (administrador) se chama <strong>root</strong>. O comando <span class="inline-code">sudo</span> executa um comando com privilégios de administrador.</li>
+<li>Domina o mercado de servidores e é a base do Android.</li>
+</ul>
+<h3>Estrutura de diretórios</h3>
+<p>Tudo parte de um único diretório raiz, representado por <span class="inline-code">/</span>. Não existem letras de unidade como C: ou D:.</p>
+<table class="comparison-table">
+<thead><tr><th>Diretório</th><th>Conteúdo</th></tr></thead>
+<tbody>
+<tr><td>/</td><td>raiz de todo o sistema</td></tr>
+<tr><td>/home</td><td>pastas pessoais dos usuários (ex.: /home/maria)</td></tr>
+<tr><td>/root</td><td>pasta pessoal do superusuário</td></tr>
+<tr><td>/etc</td><td>arquivos de configuração do sistema</td></tr>
+<tr><td>/bin e /sbin</td><td>comandos essenciais e comandos de administração</td></tr>
+<tr><td>/usr</td><td>programas e bibliotecas instalados</td></tr>
+<tr><td>/var</td><td>dados variáveis, como logs</td></tr>
+<tr><td>/tmp</td><td>arquivos temporários</td></tr>
+<tr><td>/dev</td><td>arquivos que representam dispositivos</td></tr>
+<tr><td>/boot</td><td>arquivos de inicialização e o kernel</td></tr>
+<tr><td>/media e /mnt</td><td>pontos de montagem de pen drives e outras unidades</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Não confunda <strong>/</strong> (raiz do sistema) com <strong>/root</strong> (pasta pessoal do administrador).</p></div>
+<h3>Comandos básicos</h3>
+<table class="comparison-table">
+<thead><tr><th>Comando</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td>pwd</td><td>mostra o diretório atual</td></tr>
+<tr><td>ls</td><td>lista arquivos e pastas (ls -l mostra detalhes e permissões)</td></tr>
+<tr><td>cd</td><td>muda de diretório</td></tr>
+<tr><td>mkdir</td><td>cria diretório</td></tr>
+<tr><td>cp</td><td>copia arquivos</td></tr>
+<tr><td>mv</td><td>move ou renomeia arquivos</td></tr>
+<tr><td>rm</td><td>remove arquivos (rm -r remove diretórios)</td></tr>
+<tr><td>cat</td><td>exibe o conteúdo de um arquivo</td></tr>
+<tr><td>chmod</td><td>altera permissões</td></tr>
+<tr><td>chown</td><td>altera o dono do arquivo</td></tr>
+<tr><td>sudo</td><td>executa um comando como administrador</td></tr>
+<tr><td>ps / kill</td><td>lista processos / encerra um processo</td></tr>
+<tr><td>man</td><td>abre o manual de um comando</td></tr>
+</tbody>
+</table>
+
+<h2>Permissões no Linux</h2>
+<p>Cada arquivo tem três tipos de permissão, aplicados a três grupos de pessoas.</p>
+<table class="comparison-table">
+<thead><tr><th>Permissão</th><th>Letra</th><th>Valor</th></tr></thead>
+<tbody>
+<tr><td>Leitura (read)</td><td>r</td><td>4</td></tr>
+<tr><td>Escrita (write)</td><td>w</td><td>2</td></tr>
+<tr><td>Execução (execute)</td><td>x</td><td>1</td></tr>
+</tbody>
+</table>
+<p>As permissões são definidas, nesta ordem, para o <strong>dono</strong> (usuário), o <strong>grupo</strong> e os <strong>outros</strong>. Somando os valores, cada grupo recebe um dígito de 0 a 7.</p>
+<div class="pseudocode-card">
+<h3>Exemplo — chmod 754 relatorio.sh</h3>
+<pre>dono   = 7 = 4 + 2 + 1 = rwx  (ler, escrever e executar)
+grupo  = 5 = 4 + 0 + 1 = r-x  (ler e executar)
+outros = 4 = 4 + 0 + 0 = r--  (apenas ler)
+
+ls -l mostra:  -rwxr-xr--  relatorio.sh</pre>
+</div>
+<div class="box-dica"><strong>Memorize</strong><p>r = 4, w = 2, x = 1. Os valores mais comuns: 7 (rwx), 6 (rw-), 5 (r-x), 4 (r--) e 0 (---). A ordem dos dígitos é sempre dono, grupo, outros.</p></div>
+
+<h2>Comparação: Windows x Linux</h2>
+<table class="comparison-table">
+<thead><tr><th>Aspecto</th><th>Windows</th><th>Linux</th></tr></thead>
+<tbody>
+<tr><td>Licença</td><td>proprietária (Microsoft)</td><td>software livre (GPL)</td></tr>
+<tr><td>Código-fonte</td><td>fechado</td><td>aberto</td></tr>
+<tr><td>Kernel</td><td>híbrido (Windows NT)</td><td>monolítico</td></tr>
+<tr><td>Sistema de arquivos padrão</td><td>NTFS</td><td>ext4 (na maioria das distribuições)</td></tr>
+<tr><td>Organização das unidades</td><td>letras (C:, D:)</td><td>árvore única a partir de /</td></tr>
+<tr><td>Maiúsculas e minúsculas</td><td>não diferencia em nomes de arquivos</td><td>diferencia</td></tr>
+<tr><td>Administrador</td><td>conta de Administrador</td><td>root</td></tr>
+<tr><td>Uso mais comum</td><td>computadores pessoais e empresas</td><td>servidores, supercomputadores, Android</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O Linux é gratuito porque não possui licença.” Errado: o Linux possui licença, a <strong>GPL</strong>, que garante as liberdades do software livre.</p></div>
+
+<h2>Conclusão do capítulo</h2>
+<p>Os pontos de sistemas operacionais mais cobrados são:</p>
+<ul>
+<li>conceito e funções do sistema operacional;</li>
+<li>kernel e seus tipos;</li>
+<li>sistemas de arquivos (NTFS, FAT32, exFAT, ext4);</li>
+<li>Lixeira e atalhos do Windows;</li>
+<li>diretórios, comandos e permissões do Linux;</li>
+<li>comparação entre Windows e Linux.</li>
+</ul>

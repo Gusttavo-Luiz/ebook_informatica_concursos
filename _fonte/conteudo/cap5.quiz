@@ -1,0 +1,67 @@
+? Qual componente executa as instruções dos programas e realiza os cálculos?
+- Memória RAM
+* Processador (CPU)
+- Placa de rede
+- Fonte de alimentação
+= A CPU busca, decodifica e executa as instruções, com a ULA realizando os cálculos.
+
+? Qual memória perde todo o seu conteúdo quando o computador é desligado?
+* RAM
+- ROM
+- SSD
+- HD
+= A RAM é volátil. ROM, SSD e HD são não voláteis.
+
+? Qual alternativa apresenta apenas dispositivos de entrada?
+- Monitor e impressora
+* Teclado, mouse e scanner
+- Caixa de som e projetor
+- Monitor e teclado
+= Teclado, mouse e scanner enviam dados para o computador. Monitor, impressora, caixa de som e projetor são de saída.
+
+? Uma tela touchscreen é classificada como periférico de:
+- apenas entrada
+- apenas saída
+* entrada e saída
+- armazenamento
+= Ela exibe imagens (saída) e recebe o toque do usuário (entrada).
+
+? Assinale a ordem correta das memórias, da mais rápida para a mais lenta:
+- RAM, cache, HD, SSD
+* cache, RAM, SSD, HD
+- SSD, RAM, cache, HD
+- HD, SSD, RAM, cache
+= Quanto mais próxima do processador, mais rápida: registradores, cache, RAM, SSD e, por último, HD.
+
+? Julgue o item: “O SSD armazena dados em discos magnéticos giratórios, o que o torna mais rápido que o HD”.
+- Certo
+* Errado
+= O SSD usa memória flash, sem partes móveis. Discos magnéticos giratórios são a tecnologia do HD.
+
+? O teste automático que o firmware da placa-mãe executa no hardware ao ligar o computador é chamado de:
+- Boot remoto
+* POST
+- Plug and Play
+- Journaling
+= POST (Power-On Self-Test) verifica processador, memória e outros componentes antes de carregar o sistema.
+
+? Um processador de 3 GHz realiza aproximadamente:
+- 3 milhões de ciclos por segundo
+* 3 bilhões de ciclos por segundo
+- 3 mil ciclos por segundo
+- 3 trilhões de ciclos por segundo
+= Giga = bilhão. 3 GHz equivalem a 3 bilhões de ciclos por segundo.
+
+? Um órgão precisa imprimir formulários em várias vias, usando papel carbonado. O tipo de impressora indicado é:
+- jato de tinta
+- laser
+* matricial
+- térmica
+= A matricial é a única de impacto: as agulhas pressionam a fita e o carbono reproduz a impressão nas demais vias.
+
+? Qual memória, presente no processador, armazena os dados e instruções usados com mais frequência para evitar o acesso à RAM?
+- ROM
+* Cache
+- Memória virtual
+- Flash
+= A cache (L1, L2, L3) é uma memória SRAM muito rápida que reduz a espera do processador pela RAM.

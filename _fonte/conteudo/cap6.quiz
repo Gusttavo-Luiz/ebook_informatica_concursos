@@ -1,0 +1,67 @@
+? A computação em nuvem permite principalmente:
+- usar o computador sem energia elétrica
+* acessar dados e recursos computacionais pela internet
+- substituir o processador do computador
+- eliminar a necessidade de qualquer conexão
+= A nuvem fornece armazenamento, processamento e aplicativos pela internet, sob demanda.
+
+? Qual serviço abaixo é um exemplo de armazenamento em nuvem?
+- Microsoft Paint
+* Microsoft OneDrive
+- Bloco de Notas
+- Gerenciador de Tarefas
+= OneDrive é o serviço de armazenamento em nuvem da Microsoft. Os demais são programas locais do Windows.
+
+? Uma empresa contrata máquinas virtuais em um provedor e instala nelas o sistema operacional e os programas que desejar. Esse modelo de serviço é o:
+* IaaS
+- PaaS
+- SaaS
+- DaaS
+= Na IaaS o provedor fornece a infraestrutura (servidores virtuais, rede, armazenamento) e o cliente gerencia o sistema operacional e os aplicativos.
+
+? O uso do Gmail pelo navegador, sem instalar nenhum programa, é um exemplo de:
+- IaaS
+- PaaS
+* SaaS
+- nuvem privada
+= SaaS é o software pronto oferecido pela internet ao usuário final.
+
+? A capacidade de aumentar ou reduzir rapidamente os recursos contratados conforme a demanda é chamada de:
+- redundância
+* elasticidade
+- sincronização
+- virtualização local
+= Elasticidade (ou escalabilidade rápida) é uma das características essenciais da computação em nuvem.
+
+? Julgue o item: “Como os arquivos ficam sincronizados com a nuvem, a sincronização dispensa a realização de backup”.
+- Certo
+* Errado
+= A sincronização replica também exclusões e arquivos corrompidos. O backup é uma cópia independente para recuperação.
+
+? Uma infraestrutura de nuvem de uso exclusivo de um único órgão público é classificada como nuvem:
+- pública
+* privada
+- comunitária
+- híbrida
+= Nuvem privada é dedicada a uma única organização. A comunitária é compartilhada por organizações com interesses comuns.
+
+? Ao compartilhar um documento no Google Drive com a permissão de “Leitor”, a pessoa convidada poderá:
+* apenas visualizar o documento
+- editar o documento livremente
+- excluir o documento da conta do dono
+- transferir a propriedade do arquivo
+= O leitor apenas visualiza. Comentarista pode comentar e editor pode alterar o conteúdo.
+
+? Uma boa prática de segurança em serviços de nuvem é:
+- usar a mesma senha em todos os serviços
+* ativar a autenticação em dois fatores
+- compartilhar todos os arquivos com “qualquer pessoa com o link”
+- desativar a criptografia para ganhar velocidade
+= A autenticação em dois fatores impede o acesso mesmo que a senha seja descoberta.
+
+? A lei brasileira que regula o tratamento de dados pessoais, inclusive quando armazenados em serviços de nuvem, é a:
+- Lei de Acesso à Informação
+* LGPD (Lei nº 13.709/2018)
+- Lei Carolina Dieckmann
+- Marco Civil da Internet
+= A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) regula o tratamento de dados pessoais no Brasil.
