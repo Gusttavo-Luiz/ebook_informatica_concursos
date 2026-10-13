@@ -27,7 +27,6 @@
 <span class="chapter-status" id="statusLeitura">Status: leitura em andamento.</span>
 <span class="chapter-status" id="statusNarracao">Narração pronta para uso.</span>
 </div>
-
 <section class="figure-card">
   <h2 class="figure-title">Figura ilustrativa — Estrutura base de um algoritmo</h2>
   <div class="figure-grid four">
@@ -127,10 +126,56 @@ aprovado &lt;- VERDADEIRO</pre>
 <h2>Operadores</h2>
 <p>Os operadores permitem calcular, comparar e montar expressões lógicas.</p>
 <ul>
-  <li><strong>Aritméticos:</strong> +, -, *, /</li>
-  <li><strong>Relacionais:</strong> =, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;=</li>
-  <li><strong>Lógicos:</strong> E, OU, NÃO</li>
+  <li><strong>Aritméticos:</strong> + (soma), - (subtração), * (multiplicação), / (divisão), DIV (quociente inteiro) e MOD (resto da divisão inteira).</li>
+  <li><strong>Relacionais:</strong> = (igual), &lt;&gt; (diferente), &gt;, &lt;, &gt;=, &lt;=. O resultado é sempre VERDADEIRO ou FALSO.</li>
+  <li><strong>Lógicos:</strong> E, OU, NÃO. Combinam ou invertem condições.</li>
 </ul>
+
+<h3>DIV e MOD</h3>
+<p>Na divisão inteira, DIV devolve o quociente e MOD devolve o resto.</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — 17 dividido por 5</h3>
+  <pre>17 DIV 5  →  3     (5 cabe 3 vezes em 17)
+17 MOD 5  →  2     (sobram 2)
+
+Uso clássico: um número é par quando  numero MOD 2 = 0</pre>
+</div>
+
+<h3>Tabela-verdade</h3>
+<p>Os operadores lógicos seguem regras fixas. Considere duas condições, A e B:</p>
+<table class="comparison-table">
+  <thead>
+    <tr><th>A</th><th>B</th><th>A E B</th><th>A OU B</th><th>NÃO A</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>V</td><td>V</td><td>V</td><td>V</td><td>F</td></tr>
+    <tr><td>V</td><td>F</td><td>F</td><td>V</td><td>F</td></tr>
+    <tr><td>F</td><td>V</td><td>F</td><td>V</td><td>V</td></tr>
+    <tr><td>F</td><td>F</td><td>F</td><td>F</td><td>V</td></tr>
+  </tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p><strong>E</strong> só é verdadeiro se <strong>tudo</strong> for verdadeiro. <strong>OU</strong> só é falso se <strong>tudo</strong> for falso. <strong>NÃO</strong> inverte o valor.</p></div>
+
+<h3>Ordem de precedência</h3>
+<p>Quando uma expressão mistura vários operadores, a ordem de avaliação mais adotada é:</p>
+<ol>
+  <li>parênteses;</li>
+  <li>operadores aritméticos (primeiro *, /, DIV e MOD; depois + e -);</li>
+  <li>operadores relacionais (=, &lt;&gt;, &gt;, &lt;, &gt;=, &lt;=);</li>
+  <li>NÃO;</li>
+  <li>E;</li>
+  <li>OU.</li>
+</ol>
+<div class="pseudocode-card">
+  <h3>Exemplo — avaliando uma expressão com x = 4 e y = 10</h3>
+  <pre>(x + 2 * 3 &gt; y) OU (y MOD 3 = 1)
+
+x + 2 * 3   →  4 + 6 = 10      → 10 &gt; 10   → FALSO
+y MOD 3     →  10 MOD 3 = 1    → 1 = 1     → VERDADEIRO
+
+FALSO OU VERDADEIRO  →  VERDADEIRO</pre>
+</div>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>10 &gt; 10 é <strong>falso</strong>; só 10 &gt;= 10 seria verdadeiro. As bancas adoram montar a condição no limite exato para testar essa diferença.</p></div>
 
 <h2>Estruturas sequenciais</h2>
 <p>Na estrutura sequencial, as instruções são executadas uma após a outra, na ordem em que aparecem.</p>
@@ -235,6 +280,30 @@ FIM</pre>
 FIM</pre>
 </div>
 
+<div class="pseudocode-card">
+  <h3>Exemplo com REPITA — Pedir uma senha até acertar</h3>
+  <pre>INÍCIO
+    REPITA
+        ESCREVA "Digite a senha:"
+        LEIA senha
+    ATÉ senha = "1234"
+
+    ESCREVA "Acesso liberado."
+FIM</pre>
+</div>
+
+<table class="comparison-table">
+  <thead>
+    <tr><th>Estrutura</th><th>Quando testa a condição</th><th>Uso típico</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>PARA</td><td>número de repetições definido antes de começar</td><td>percorrer de 1 até N, tabuadas, vetores</td></tr>
+    <tr><td>ENQUANTO</td><td>no <strong>início</strong>: se a condição já for falsa, o bloco pode não executar nenhuma vez</td><td>repetir enquanto algo for verdade</td></tr>
+    <tr><td>REPITA...ATÉ</td><td>no <strong>final</strong>: o bloco executa <strong>pelo menos uma vez</strong> e para quando a condição fica verdadeira</td><td>menus, validação de entrada</td></tr>
+  </tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>O ENQUANTO continua <strong>enquanto</strong> a condição é verdadeira; o REPITA continua <strong>até</strong> a condição se tornar verdadeira. E só o REPITA garante pelo menos uma execução.</p></div>
+
 <section class="figure-card">
   <h2 class="figure-title">Figura ilustrativa — Lógica da repetição</h2>
   <div class="figure-grid three">
@@ -280,6 +349,71 @@ FIM</pre>
   </tbody>
 </table>
 
+<p>Em provas, o teste de mesa é a melhor forma de resolver questões com laços. Veja um exemplo:</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — O que será escrito?</h3>
+  <pre>x &lt;- 1
+ENQUANTO x &lt; 20 FAÇA
+    x &lt;- x * 2
+    ESCREVA x
+FIMENQUANTO</pre>
+</div>
+<table class="comparison-table">
+  <thead>
+    <tr><th>Volta</th><th>x antes</th><th>x &lt; 20?</th><th>x depois</th><th>Escreve</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>1</td><td>sim</td><td>2</td><td>2</td></tr>
+    <tr><td>2</td><td>2</td><td>sim</td><td>4</td><td>4</td></tr>
+    <tr><td>3</td><td>4</td><td>sim</td><td>8</td><td>8</td></tr>
+    <tr><td>4</td><td>8</td><td>sim</td><td>16</td><td>16</td></tr>
+    <tr><td>5</td><td>16</td><td>sim</td><td>32</td><td>32</td></tr>
+    <tr><td>—</td><td>32</td><td>não</td><td>—</td><td>encerra</td></tr>
+  </tbody>
+</table>
+<p>Saída: <strong>2, 4, 8, 16, 32</strong>. Repare que o 32 é escrito, porque o teste só acontece no início da volta seguinte.</p>
+
+<h2>Vetores</h2>
+<p>Um vetor (array) é uma variável que guarda <strong>vários valores do mesmo tipo</strong>, acessados por um índice. Em vez de criar nota1, nota2, nota3…, cria-se um vetor notas com várias posições.</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — Ler 5 notas e mostrar as acima da média</h3>
+  <pre>INÍCIO
+    soma &lt;- 0
+    PARA i DE 1 ATÉ 5 FAÇA
+        LEIA notas[i]
+        soma &lt;- soma + notas[i]
+    FIMPARA
+
+    media &lt;- soma / 5
+
+    PARA i DE 1 ATÉ 5 FAÇA
+        SE notas[i] &gt; media ENTÃO
+            ESCREVA notas[i]
+        FIMSE
+    FIMPARA
+FIM</pre>
+</div>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Em pseudocódigo, o primeiro índice costuma ser 1. Em muitas linguagens de programação (C, Java, Python, JavaScript), o primeiro índice é <strong>0</strong>: um vetor de 5 posições vai de 0 a 4. Leia o enunciado com atenção.</p></div>
+
+<h2>Funções e procedimentos</h2>
+<p>Para não repetir o mesmo trecho várias vezes, o algoritmo pode ser dividido em <strong>sub-rotinas</strong> (modularização):</p>
+<ul>
+  <li><strong>Função:</strong> recebe parâmetros e <strong>retorna um valor</strong>. Exemplo: calcular a média de duas notas.</li>
+  <li><strong>Procedimento:</strong> executa uma tarefa, mas <strong>não retorna valor</strong>. Exemplo: exibir um cabeçalho na tela.</li>
+</ul>
+<div class="pseudocode-card">
+  <h3>Exemplo — Função que calcula a média</h3>
+  <pre>FUNÇÃO media(a, b)
+    RETORNE (a + b) / 2
+FIMFUNÇÃO
+
+INÍCIO
+    resultado &lt;- media(6, 9)
+    ESCREVA resultado        // escreve 7.5
+FIM</pre>
+</div>
+<p>Variáveis criadas dentro de uma sub-rotina são <strong>locais</strong> (existem só ali dentro); as declaradas no programa principal e visíveis em todo o algoritmo são <strong>globais</strong>.</p>
+
 <h2>Exemplo completo</h2>
 <p>Agora, um algoritmo mais completo, usando entrada, processamento, condição e saída.</p>
 <div class="pseudocode-card">
@@ -321,59 +455,136 @@ FIM</pre>
 
 <h2>Conclusão do capítulo</h2>
 <p>Lógica de programação é o alicerce de qualquer carreira em desenvolvimento. Quando você aprende a pensar de forma estruturada, qualquer linguagem passa a ser apenas uma forma diferente de escrever a mesma solução.</p>
+<p>Os pontos mais cobrados em concursos são:</p>
+<ul>
+  <li>características de um algoritmo;</li>
+  <li>operadores, tabela-verdade e precedência;</li>
+  <li>DIV e MOD;</li>
+  <li>diferenças entre PARA, ENQUANTO e REPITA;</li>
+  <li>teste de mesa com laços e condições;</li>
+  <li>vetores, funções e procedimentos.</li>
+</ul>
 <p>Por isso, dominar algoritmo, pseudocódigo, variáveis, condições e repetições é um passo decisivo para evoluir em programação de verdade.</p>
-
 <section class="quiz-section" data-capitulo="8">
 <div class="quiz-header">
-<span class="chapter-badge">Desafio rápido</span>
+<span class="chapter-badge">Questões do capítulo</span>
 <h2>Teste seu entendimento</h2>
-<p>Responda às questões abaixo e descubra na hora se a sua escolha está correta.</p>
+<p>São 10 questões no estilo das bancas. Responda cada uma e veja na hora a correção comentada.</p>
 </div>
-
-<article class="quiz-card" data-explicacao="Algoritmo é uma sequência lógica, finita e ordenada de passos para resolver um problema." data-resposta="Uma sequência finita de passos para resolver um problema">
+<article class="quiz-card" data-explicacao="Algoritmo é uma sequência finita, ordenada e sem ambiguidades de passos que resolve um problema, independentemente da linguagem." data-resposta="Uma sequência finita, ordenada e lógica de passos para resolver um problema">
 <p class="quiz-pergunta">1. O que melhor define um algoritmo?</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap8-q1-a"><input id="cap8-q1-a" name="cap8-q1" type="radio" value="Uma sequência finita de passos para resolver um problema"/><span>Uma sequência finita de passos para resolver um problema</span></label>
-<label class="quiz-opcao" for="cap8-q1-b"><input id="cap8-q1-b" name="cap8-q1" type="radio" value="Um antivírus do sistema"/><span>Um antivírus do sistema</span></label>
-<label class="quiz-opcao" for="cap8-q1-c"><input id="cap8-q1-c" name="cap8-q1" type="radio" value="Uma memória do computador"/><span>Uma memória do computador</span></label>
-<label class="quiz-opcao" for="cap8-q1-d"><input id="cap8-q1-d" name="cap8-q1" type="radio" value="Um tipo de navegador"/><span>Um tipo de navegador</span></label>
+<label class="quiz-opcao" for="cap8-q1-o1"><input id="cap8-q1-o1" name="cap8-q1" type="radio" value="Um tipo de hardware de processamento"/><span>Um tipo de hardware de processamento</span></label>
+<label class="quiz-opcao" for="cap8-q1-o2"><input id="cap8-q1-o2" name="cap8-q1" type="radio" value="Um programa que só funciona em Python"/><span>Um programa que só funciona em Python</span></label>
+<label class="quiz-opcao" for="cap8-q1-o3"><input id="cap8-q1-o3" name="cap8-q1" type="radio" value="Uma sequência finita, ordenada e lógica de passos para resolver um problema"/><span>Uma sequência finita, ordenada e lógica de passos para resolver um problema</span></label>
+<label class="quiz-opcao" for="cap8-q1-o4"><input id="cap8-q1-o4" name="cap8-q1" type="radio" value="Um conjunto de comandos aleatórios"/><span>Um conjunto de comandos aleatórios</span></label>
 </div>
 <div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
 </article>
-
-<article class="quiz-card" data-explicacao="A estrutura condicional permite que o programa escolha caminhos diferentes com base em um teste lógico." data-resposta="Tomar decisões com base em condições">
-<p class="quiz-pergunta">2. Para que serve a estrutura condicional?</p>
+<article class="quiz-card" data-explicacao="A estrutura condicional escolhe qual bloco executar conforme o resultado de um teste lógico." data-resposta="Tomar decisões com base em um teste lógico">
+<p class="quiz-pergunta">2. Para que serve a estrutura condicional (SE...ENTÃO...SENÃO)?</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap8-q2-a"><input id="cap8-q2-a" name="cap8-q2" type="radio" value="Armazenar arquivos"/><span>Armazenar arquivos</span></label>
-<label class="quiz-opcao" for="cap8-q2-b"><input id="cap8-q2-b" name="cap8-q2" type="radio" value="Tomar decisões com base em condições"/><span>Tomar decisões com base em condições</span></label>
-<label class="quiz-opcao" for="cap8-q2-c"><input id="cap8-q2-c" name="cap8-q2" type="radio" value="Trocar memória RAM"/><span>Trocar memória RAM</span></label>
-<label class="quiz-opcao" for="cap8-q2-d"><input id="cap8-q2-d" name="cap8-q2" type="radio" value="Desligar o computador"/><span>Desligar o computador</span></label>
+<label class="quiz-opcao" for="cap8-q2-o1"><input id="cap8-q2-o1" name="cap8-q2" type="radio" value="Declarar variáveis"/><span>Declarar variáveis</span></label>
+<label class="quiz-opcao" for="cap8-q2-o2"><input id="cap8-q2-o2" name="cap8-q2" type="radio" value="Encerrar o programa imediatamente"/><span>Encerrar o programa imediatamente</span></label>
+<label class="quiz-opcao" for="cap8-q2-o3"><input id="cap8-q2-o3" name="cap8-q2" type="radio" value="Repetir o mesmo bloco várias vezes"/><span>Repetir o mesmo bloco várias vezes</span></label>
+<label class="quiz-opcao" for="cap8-q2-o4"><input id="cap8-q2-o4" name="cap8-q2" type="radio" value="Tomar decisões com base em um teste lógico"/><span>Tomar decisões com base em um teste lógico</span></label>
 </div>
 <div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
 </article>
-
-<article class="quiz-card" data-explicacao="Sem atualizar a variável de controle, a condição pode continuar verdadeira para sempre." data-resposta="Laço infinito">
-<p class="quiz-pergunta">3. O que pode acontecer se um contador não for atualizado dentro de um laço?</p>
+<article class="quiz-card" data-explicacao="Se a condição nunca muda, ela permanece verdadeira e o laço não termina." data-resposta="O programa pode entrar em repetição infinita">
+<p class="quiz-pergunta">3. O que pode acontecer se a variável de controle de um laço ENQUANTO nunca for atualizada?</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap8-q3-a"><input id="cap8-q3-a" name="cap8-q3" type="radio" value="O programa melhora sozinho"/><span>O programa melhora sozinho</span></label>
-<label class="quiz-opcao" for="cap8-q3-b"><input id="cap8-q3-b" name="cap8-q3" type="radio" value="Laço infinito"/><span>Laço infinito</span></label>
-<label class="quiz-opcao" for="cap8-q3-c"><input id="cap8-q3-c" name="cap8-q3" type="radio" value="A variável vira texto"/><span>A variável vira texto</span></label>
-<label class="quiz-opcao" for="cap8-q3-d"><input id="cap8-q3-d" name="cap8-q3" type="radio" value="Nada acontece"/><span>Nada acontece</span></label>
+<label class="quiz-opcao" for="cap8-q3-o1"><input id="cap8-q3-o1" name="cap8-q3" type="radio" value="O programa termina mais rápido"/><span>O programa termina mais rápido</span></label>
+<label class="quiz-opcao" for="cap8-q3-o2"><input id="cap8-q3-o2" name="cap8-q3" type="radio" value="O programa pode entrar em repetição infinita"/><span>O programa pode entrar em repetição infinita</span></label>
+<label class="quiz-opcao" for="cap8-q3-o3"><input id="cap8-q3-o3" name="cap8-q3" type="radio" value="O valor é atualizado automaticamente"/><span>O valor é atualizado automaticamente</span></label>
+<label class="quiz-opcao" for="cap8-q3-o4"><input id="cap8-q3-o4" name="cap8-q3" type="radio" value="O laço é ignorado pelo computador"/><span>O laço é ignorado pelo computador</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="23 dividido por 4 dá quociente 5 (23 DIV 4) e resto 3. MOD devolve o resto." data-resposta="3">
+<p class="quiz-pergunta">4. Qual é o resultado de 23 MOD 4?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap8-q4-o1"><input id="cap8-q4-o1" name="cap8-q4" type="radio" value="3"/><span>3</span></label>
+<label class="quiz-opcao" for="cap8-q4-o2"><input id="cap8-q4-o2" name="cap8-q4" type="radio" value="5,75"/><span>5,75</span></label>
+<label class="quiz-opcao" for="cap8-q4-o3"><input id="cap8-q4-o3" name="cap8-q4" type="radio" value="4"/><span>4</span></label>
+<label class="quiz-opcao" for="cap8-q4-o4"><input id="cap8-q4-o4" name="cap8-q4" type="radio" value="5"/><span>5</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="A E B é falso (B é falso). NÃO B é verdadeiro. Falso OU verdadeiro resulta em verdadeiro." data-resposta="Verdadeiro">
+<p class="quiz-pergunta">5. Sendo A verdadeiro e B falso, qual é o valor de (A E B) OU (NÃO B)?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap8-q5-o1"><input id="cap8-q5-o1" name="cap8-q5" type="radio" value="Verdadeiro"/><span>Verdadeiro</span></label>
+<label class="quiz-opcao" for="cap8-q5-o2"><input id="cap8-q5-o2" name="cap8-q5" type="radio" value="Falso"/><span>Falso</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="O REPITA testa a condição só depois de executar o bloco. O ENQUANTO testa antes e pode não executar nenhuma vez." data-resposta="REPITA...ATÉ">
+<p class="quiz-pergunta">6. Qual estrutura de repetição garante que o bloco seja executado pelo menos uma vez, pois testa a condição no final?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap8-q6-o1"><input id="cap8-q6-o1" name="cap8-q6" type="radio" value="PARA"/><span>PARA</span></label>
+<label class="quiz-opcao" for="cap8-q6-o2"><input id="cap8-q6-o2" name="cap8-q6" type="radio" value="ENQUANTO"/><span>ENQUANTO</span></label>
+<label class="quiz-opcao" for="cap8-q6-o3"><input id="cap8-q6-o3" name="cap8-q6" type="radio" value="REPITA...ATÉ"/><span>REPITA...ATÉ</span></label>
+<label class="quiz-opcao" for="cap8-q6-o4"><input id="cap8-q6-o4" name="cap8-q6" type="radio" value="SE...ENTÃO"/><span>SE...ENTÃO</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="Volta 1: x = 3 &lt; 10 → x = 6, escreve 6. Volta 2: 6 &lt; 10 → 9. Volta 3: 9 &lt; 10 → 12, escreve 12. Depois 12 &lt; 10 é falso e o laço termina." data-resposta="6, 9, 12">
+<p class="quiz-pergunta">7. Considere o trecho: x &lt;- 3; ENQUANTO x &lt; 10 FAÇA x &lt;- x + 3; ESCREVA x; FIMENQUANTO. O que será escrito?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap8-q7-o1"><input id="cap8-q7-o1" name="cap8-q7" type="radio" value="3, 6, 9, 12"/><span>3, 6, 9, 12</span></label>
+<label class="quiz-opcao" for="cap8-q7-o2"><input id="cap8-q7-o2" name="cap8-q7" type="radio" value="3, 6, 9"/><span>3, 6, 9</span></label>
+<label class="quiz-opcao" for="cap8-q7-o3"><input id="cap8-q7-o3" name="cap8-q7" type="radio" value="6, 9"/><span>6, 9</span></label>
+<label class="quiz-opcao" for="cap8-q7-o4"><input id="cap8-q7-o4" name="cap8-q7" type="radio" value="6, 9, 12"/><span>6, 9, 12</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="O acumulador soma valores variáveis. O contador normalmente aumenta de 1 em 1." data-resposta="acumulador">
+<p class="quiz-pergunta">8. Em um algoritmo, a variável que soma valores a cada volta do laço (como soma &lt;- soma + nota) é chamada de:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap8-q8-o1"><input id="cap8-q8-o1" name="cap8-q8" type="radio" value="acumulador"/><span>acumulador</span></label>
+<label class="quiz-opcao" for="cap8-q8-o2"><input id="cap8-q8-o2" name="cap8-q8" type="radio" value="constante"/><span>constante</span></label>
+<label class="quiz-opcao" for="cap8-q8-o3"><input id="cap8-q8-o3" name="cap8-q8" type="radio" value="vetor"/><span>vetor</span></label>
+<label class="quiz-opcao" for="cap8-q8-o4"><input id="cap8-q8-o4" name="cap8-q8" type="radio" value="contador"/><span>contador</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="A função retorna um valor; o procedimento executa uma tarefa sem retorno." data-resposta="Certo">
+<p class="quiz-pergunta">9. Julgue o item: “Uma função difere de um procedimento por retornar um valor a quem a chamou”.</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap8-q9-o1"><input id="cap8-q9-o1" name="cap8-q9" type="radio" value="Certo"/><span>Certo</span></label>
+<label class="quiz-opcao" for="cap8-q9-o2"><input id="cap8-q9-o2" name="cap8-q9" type="radio" value="Errado"/><span>Errado</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="x &gt; y é falso (5 não é maior que 5). x + y = 10 e 10 &gt;= 10 é verdadeiro. Falso OU verdadeiro resulta em verdadeiro." data-resposta="Verdadeiro, porque x + y é igual a 10">
+<p class="quiz-pergunta">10. Com x = 5 e y = 5, a expressão (x &gt; y) OU (x + y &gt;= 10) resulta em:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap8-q10-o1"><input id="cap8-q10-o1" name="cap8-q10" type="radio" value="Falso, porque x não é maior que y"/><span>Falso, porque x não é maior que y</span></label>
+<label class="quiz-opcao" for="cap8-q10-o2"><input id="cap8-q10-o2" name="cap8-q10" type="radio" value="Verdadeiro, porque x + y é igual a 10"/><span>Verdadeiro, porque x + y é igual a 10</span></label>
+<label class="quiz-opcao" for="cap8-q10-o3"><input id="cap8-q10-o3" name="cap8-q10" type="radio" value="Falso, porque as duas condições são falsas"/><span>Falso, porque as duas condições são falsas</span></label>
+<label class="quiz-opcao" for="cap8-q10-o4"><input id="cap8-q10-o4" name="cap8-q10" type="radio" value="Erro, porque x e y são iguais"/><span>Erro, porque x e y são iguais</span></label>
 </div>
 <div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
 </article>
 </section>
-
 <div class="chapter-navigation">
 <a class="btn-secondary" href="chapter_7.html">← Capítulo anterior</a>
 <a class="btn-primary" href="index.html">Voltar ao início →</a>
 </div>
 </article>
 <footer class="page-footer">
-<p>Plataforma do e-book • Informática para Concursos</p>
+<p>Informática para Concursos · E-book</p>
 </footer>
 </div>
 <script src="script.js"></script>

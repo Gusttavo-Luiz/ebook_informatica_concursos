@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
@@ -18,9 +17,7 @@
 <div class="chapter-tools">
 <button class="audio-button" id="botaoNarrar" type="button">Ouvir capítulo</button>
 <button class="audio-button" id="botaoPausarNarracao" type="button">Pausar narração</button>
-<button class="btn-primary" id="botaoConcluirCapitulo" type="button">
-          Marcar capítulo como concluído
-        </button>
+<button class="btn-primary" id="botaoConcluirCapitulo" type="button">Marcar capítulo como concluído</button>
 </div>
 </div>
 <article class="reading-card">
@@ -29,194 +26,298 @@
 <div class="chapter-meta">
 <span class="chapter-status" id="statusLeitura">Status: leitura em andamento.</span>
 <span class="chapter-status" id="statusNarracao">Narração pronta para uso.</span>
-</div><section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Componentes principais</h2><div class="figure-grid four"><div><span class="figure-label">CPU</span><strong>Processa</strong></div><div><span class="figure-label">RAM</span><strong>Memória temporária</strong></div><div><span class="figure-label">SSD/HD</span><strong>Armazena</strong></div><div><span class="figure-label">Placa-mãe</span><strong>Conecta tudo</strong></div></div></section>
-<h2>Conceito de Hardware</h2>
-<p class="chapter-intro">Hardware é o conjunto de componentes físicos que compõem um computador.</p>
-<p>São os dispositivos que podem ser vistos e tocados.</p>
-<p>Exemplos de hardware:</p>
-<ul><li>processador (CPU)</li><li>memória RAM</li><li>placa-mãe</li><li>disco rígido (HD)</li><li>unidade de estado sólido (SSD)</li><li>teclado</li><li>monitor</li></ul>
-<p>Esses componentes trabalham juntos para permitir o funcionamento do sistema computacional.</p>
-<div class="box-resumo"><strong>Resumo estratégico</strong><ul><li>Hardware = parte física do computador</li><li>Exemplos:</li><li>CPU</li><li>RAM</li><li>HD</li><li>SSD</li><li>placa-mãe</li></ul></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>A banca pode afirmar:</p><p>"Windows é um hardware."</p><p><strong>❌ Errado.</strong></p><p>Windows é software.</p></div>
-<h2>CPU (Processador)</h2>
-<p>A CPU (Central Processing Unit) é considerada o cérebro do computador.</p>
-<p>Ela é responsável por executar instruções e processar dados.</p>
-<p>O processador realiza milhões ou bilhões de operações por segundo.</p>
-<h3>Componentes da CPU</h3>
-<p>A CPU possui dois componentes principais.</p>
-<h3>Unidade de Controle (UC)</h3>
-<p>Responsável por coordenar a execução das instruções.</p>
-<h3>Unidade Lógica e Aritmética (ULA)</h3>
-<p>Responsável por executar operações:</p>
-<ul><li>matemáticas</li><li>lógicas</li></ul>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>CPU é formada por:</p></div>
-<div class="box-dica"><strong>Memorize</strong><p>CPU = UC + ULA</p></div>
-<h2>Ciclo de Processamento</h2>
-<p>O funcionamento do processador ocorre através de um ciclo chamado:</p>
-<ul><li>Ciclo de Instrução</li></ul>
-<p>Esse ciclo possui três etapas principais.</p>
-<h3>1️⃣ Fetch (Busca)</h3>
-<p>O processador busca a instrução na memória.</p>
-<h3>2️⃣ Decode (Decodificação)</h3>
-<p>A instrução é interpretada.</p>
-<h3>3️⃣ Execute (Execução)</h3>
-<p>A instrução é executada.</p>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>Ciclo do processador:</p><p>Fetch → Decode → Execute</p></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>Algumas questões afirmam que o ciclo possui apenas duas etapas.</p><p><strong>❌ Errado.</strong></p><p>O ciclo possui três etapas.</p></div>
-<h2>Memória Cache</h2>
-<p>A memória Cache é uma memória extremamente rápida utilizada para armazenar dados frequentemente acessados pelo processador.</p>
-<p>Ela serve para reduzir o tempo de acesso à memória RAM.</p>
-<h3>Níveis de Cache</h3>
-<p>Existem três níveis principais.</p>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>Velocidade das memórias:</p><p>Cache &gt; RAM &gt; SSD &gt; HD</p></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>A banca pode afirmar:</p><p>"Cache é mais lenta que RAM."</p><p><strong>❌ Errado.</strong></p><p>Cache é mais rápida que RAM.</p></div>
+</div>
+<section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Componentes principais</h2><div class="figure-grid four"><div><span class="figure-label">CPU</span><strong>Processa</strong></div><div><span class="figure-label">RAM</span><strong>Memória temporária</strong></div><div><span class="figure-label">SSD/HD</span><strong>Armazena</strong></div><div><span class="figure-label">Placa-mãe</span><strong>Conecta tudo</strong></div></div></section>
+
+<h2>Conceito de hardware</h2>
+<p class="chapter-intro">Hardware é o conjunto de componentes físicos do computador: tudo aquilo que pode ser visto e tocado.</p>
+<p>Exemplos: processador, memória RAM, placa-mãe, HD, SSD, placa de vídeo, fonte de alimentação, teclado, mouse e monitor. Esses componentes só funcionam juntos graças ao software, que diz ao hardware o que fazer.</p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O Windows é um hardware.” Errado: Windows é software. E o <strong>firmware</strong> (como a BIOS) é software gravado em um chip, não hardware.</p></div>
+
+<h2>Processador (CPU)</h2>
+<p>A CPU (Central Processing Unit) executa as instruções dos programas e processa os dados. Ela é formada pela <strong>Unidade de Controle</strong>, pela <strong>Unidade Lógica e Aritmética</strong> e pelos <strong>registradores</strong> (veja o Capítulo 1). Os principais fabricantes de processadores para computadores são Intel e AMD; celulares usam principalmente processadores com arquitetura ARM.</p>
+<h3>Características que definem o desempenho</h3>
+<ul>
+<li><strong>Clock (frequência):</strong> quantos ciclos o processador executa por segundo, medido em hertz. Um processador de 3,5 GHz realiza 3,5 bilhões de ciclos por segundo.</li>
+<li><strong>Núcleos (cores):</strong> cada núcleo funciona como um processador independente. Um processador com 8 núcleos executa várias tarefas em paralelo.</li>
+<li><strong>Threads:</strong> fluxos de execução. Tecnologias como Hyper-Threading permitem que cada núcleo trabalhe com duas threads.</li>
+<li><strong>Memória cache:</strong> quanto maior e mais rápida, menos o processador espera pela RAM.</li>
+<li><strong>Arquitetura de 32 ou 64 bits:</strong> sistemas de 32 bits enxergam no máximo cerca de 4 GB de RAM; os de 64 bits superam esse limite.</li>
+</ul>
+<p>A <strong>GPU</strong> (unidade de processamento gráfico, na placa de vídeo) é especializada em processar imagens e cálculos em paralelo. Ela pode ser <strong>integrada</strong> ao processador ou <strong>dedicada</strong>, em uma placa separada com memória própria.</p>
+<div class="box-resumo"><strong>Resumo estratégico</strong><p>Clock alto não é tudo: número de núcleos, cache e arquitetura também determinam o desempenho. O ciclo de instrução segue sempre busca → decodificação → execução.</p></div>
+
+<h2>Hierarquia de memória</h2>
+<p>Os computadores usam vários tipos de memória, organizados em uma hierarquia: quanto mais próxima do processador, mais rápida, menor e mais cara por gigabyte.</p>
+<table class="comparison-table">
+<thead><tr><th>Memória</th><th>Velocidade</th><th>Capacidade típica</th><th>Volátil?</th></tr></thead>
+<tbody>
+<tr><td>Registradores</td><td>a mais rápida</td><td>bytes</td><td>sim</td></tr>
+<tr><td>Cache (L1, L2, L3)</td><td>muito alta</td><td>KB a dezenas de MB</td><td>sim</td></tr>
+<tr><td>RAM</td><td>alta</td><td>8 a 64 GB</td><td>sim</td></tr>
+<tr><td>SSD</td><td>média</td><td>256 GB a alguns TB</td><td>não</td></tr>
+<tr><td>HD</td><td>baixa</td><td>1 a vários TB</td><td>não</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>Do mais rápido para o mais lento: <strong>registradores → cache → RAM → SSD → HD</strong>. A capacidade cresce no sentido inverso.</p></div>
+
+<h2>Memória cache</h2>
+<p>A cache é uma memória extremamente rápida, feita de <strong>SRAM</strong>, que guarda os dados e as instruções que o processador mais usa. Ela evita que a CPU fique esperando a RAM, que é bem mais lenta.</p>
+<ul>
+<li><strong>L1:</strong> a menor e mais rápida, dentro de cada núcleo.</li>
+<li><strong>L2:</strong> maior e um pouco mais lenta.</li>
+<li><strong>L3:</strong> a maior, normalmente compartilhada entre os núcleos.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“A cache é mais lenta que a RAM.” Errado: a cache é mais rápida, porém bem menor.</p></div>
+
 <h2>Memória RAM</h2>
-<p>A RAM (Random Access Memory) é a memória utilizada para armazenar dados temporários enquanto os programas estão em execução.</p>
-<p>Características:</p>
-<ul><li>memória volátil</li><li>alta velocidade</li><li>dados são apagados ao desligar o computador</li></ul>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>RAM = memória temporária</p></div>
+<p>A RAM (Random Access Memory, memória de acesso aleatório) é a <strong>memória principal</strong>: guarda o sistema operacional, os programas abertos e os dados em uso.</p>
+<ul>
+<li>É <strong>volátil</strong>: perde todo o conteúdo quando o computador é desligado.</li>
+<li>Permite leitura e escrita.</li>
+<li>É feita de <strong>DRAM</strong> (RAM dinâmica). As gerações atuais são DDR4 e DDR5.</li>
+<li>Pouca RAM obriga o sistema a usar a memória virtual no disco, deixando o computador lento.</li>
+</ul>
+<div class="box-resumo"><strong>Resumo estratégico</strong><p>RAM = memória principal, temporária e volátil. Mais RAM permite manter mais programas abertos sem perder desempenho.</p></div>
+
 <h2>Memória ROM</h2>
-<p>A ROM (Read Only Memory) é uma memória não volátil.</p>
-<p>Ela armazena informações permanentes do sistema.</p>
-<p>Exemplo:</p>
-<ul><li>firmware</li><li>BIOS</li></ul>
-<h3>RAM vs ROM</h3>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>RAM não é permanente.</p><p>Ela perde os dados quando o computador é desligado.</p></div>
-<h2>Dispositivos de Armazenamento</h2>
-<p>Os dispositivos de armazenamento são utilizados para guardar dados permanentemente.</p>
-<p>Os principais são:</p>
-<ul><li>HD (HDD)</li><li>SSD</li></ul>
-<h2>HD (Hard Disk)</h2>
-<p>O HD utiliza discos magnéticos para armazenar dados.</p>
-<p>Características:</p>
-<ul><li>partes mecânicas</li><li>menor velocidade</li><li>maior capacidade</li><li>menor custo</li></ul>
-<h2>SSD (Solid State Drive)</h2>
-<p>O SSD utiliza memória flash para armazenar dados.</p>
-<p>Características:</p>
-<ul><li>maior velocidade</li><li>sem partes mecânicas</li><li>menor tempo de acesso</li></ul>
+<p>A ROM (Read Only Memory, memória somente de leitura) é <strong>não volátil</strong>: mantém os dados sem energia. Guarda o firmware que inicia o computador.</p>
+<table class="comparison-table">
+<thead><tr><th>Tipo</th><th>Característica</th></tr></thead>
+<tbody>
+<tr><td>ROM (máscara)</td><td>gravada na fábrica, não pode ser alterada</td></tr>
+<tr><td>PROM</td><td>pode ser gravada uma única vez pelo usuário</td></tr>
+<tr><td>EPROM</td><td>apagável com luz ultravioleta e regravável</td></tr>
+<tr><td>EEPROM</td><td>apagável eletricamente e regravável</td></tr>
+<tr><td>Flash</td><td>tipo de EEPROM rápida, regravada em blocos; usada no chip da BIOS, em pen drives e SSDs</td></tr>
+</tbody>
+</table>
+<h3>BIOS, UEFI e POST</h3>
+<ul>
+<li><strong>BIOS/UEFI:</strong> firmware da placa-mãe que inicializa o hardware e carrega o sistema operacional. A UEFI é a substituta moderna da BIOS, com interface gráfica, suporte a discos maiores e inicialização segura (Secure Boot).</li>
+<li><strong>POST (Power-On Self-Test):</strong> teste automático que a BIOS/UEFI faz no hardware ao ligar o computador.</li>
+<li>As configurações da BIOS ficam em uma pequena memória mantida por uma <strong>bateria</strong> na placa-mãe (memória CMOS).</li>
+</ul>
+<table class="comparison-table">
+<thead><tr><th>Característica</th><th>RAM</th><th>ROM</th></tr></thead>
+<tbody>
+<tr><td>Volatilidade</td><td>volátil</td><td>não volátil</td></tr>
+<tr><td>Uso</td><td>programas e dados em uso</td><td>firmware de inicialização</td></tr>
+<tr><td>Escrita</td><td>leitura e escrita livres</td><td>somente leitura no uso normal</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“A RAM mantém os dados após o desligamento.” Errado: a RAM é volátil. Quem mantém os dados é a ROM e os dispositivos de armazenamento (memória secundária).</p></div>
+
+<h2>Armazenamento (memória secundária)</h2>
+<p>Os dispositivos de armazenamento guardam dados de forma <strong>permanente</strong> (não volátil), mesmo com o computador desligado.</p>
+<table class="comparison-table">
+<thead><tr><th>Característica</th><th>HD (HDD)</th><th>SSD</th></tr></thead>
+<tbody>
+<tr><td>Tecnologia</td><td>discos magnéticos giratórios e cabeça de leitura</td><td>memória flash, sem partes móveis</td></tr>
+<tr><td>Velocidade</td><td>menor</td><td>muito maior</td></tr>
+<tr><td>Resistência a impactos</td><td>menor (tem partes mecânicas)</td><td>maior</td></tr>
+<tr><td>Ruído e consumo</td><td>maiores</td><td>silencioso e econômico</td></tr>
+<tr><td>Custo por GB</td><td>menor</td><td>maior</td></tr>
+</tbody>
+</table>
 <h3>Tipos de SSD</h3>
-<h3>SSD SATA</h3>
-<p>Utiliza interface SATA.</p>
-<p>Velocidade média:</p>
-<ul><li>até 600 MB/s</li><li>SSD NVMe</li></ul>
-<p>Utiliza interface PCIe.</p>
-<p>Velocidade muito maior.</p>
-<p>Pode ultrapassar:</p>
-<ul><li>3000 MB/s</li></ul>
-<h3>SSD vs HD</h3>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>Algumas provas afirmam:</p><p>"SSD é um disco magnético."</p><p><strong>❌ Errado.</strong></p><p>SSD usa memória flash.</p></div>
-<div class="box-dica"><strong>Memorize</strong><p>Armazenamento do mais rápido para o mais lento:</p><p>Cache → RAM → SSD → HD</p></div>
+<ul>
+<li><strong>SSD SATA:</strong> usa a mesma interface dos HDs, limitada a cerca de 600 MB/s.</li>
+<li><strong>SSD NVMe:</strong> conecta-se via PCIe (normalmente no formato M.2) e passa facilmente de 3.000 MB/s.</li>
+</ul>
+<h3>Outras mídias</h3>
+<table class="comparison-table">
+<thead><tr><th>Mídia</th><th>Tecnologia</th><th>Capacidade típica</th></tr></thead>
+<tbody>
+<tr><td>Pen drive e cartão de memória (SD)</td><td>memória flash</td><td>de 8 GB a 1 TB</td></tr>
+<tr><td>CD</td><td>óptica (laser)</td><td>cerca de 700 MB</td></tr>
+<tr><td>DVD</td><td>óptica (laser)</td><td>4,7 GB (camada simples)</td></tr>
+<tr><td>Blu-ray</td><td>óptica (laser azul-violeta)</td><td>25 GB por camada</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O SSD é um disco magnético.” Errado: o SSD usa memória flash. O disco magnético é o HD.</p></div>
+
 <h2>Placa-mãe</h2>
-<p>A placa-mãe é o componente responsável por conectar todos os dispositivos do computador.</p>
-<p>Ela permite a comunicação entre:</p>
-<ul><li>CPU</li><li>memória</li><li>dispositivos de armazenamento</li><li>periféricos</li></ul>
-<h3>Componentes importantes da placa-mãe</h3>
-<p>chipset</p>
-<p>slots de memória</p>
-<p>conectores SATA</p>
-<p>slots PCIe</p>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>Placa-mãe = central de conexão do computador</p></div>
-<h2>Conclusão do Capítulo</h2>
-<p>Os temas de hardware mais cobrados em concursos são:</p>
-<ul><li>CPU e ciclo de instrução</li><li>memória RAM e ROM</li><li>memória cache</li><li>diferença entre SSD e HD</li><li>placa-mãe</li></ul>
-<p>Esses conceitos são fundamentais para compreender o funcionamento de um computador.</p>
+<p>A placa-mãe é a placa de circuito principal: conecta processador, memória, armazenamento e periféricos e permite a comunicação entre eles.</p>
+<ul>
+<li><strong>Soquete:</strong> encaixe do processador.</li>
+<li><strong>Chipset:</strong> conjunto de chips que controla a comunicação entre os componentes.</li>
+<li><strong>Slots de memória:</strong> encaixes dos pentes de RAM.</li>
+<li><strong>Slots PCIe:</strong> placas de expansão, como placa de vídeo dedicada.</li>
+<li><strong>Conectores SATA e M.2:</strong> discos HD e SSD.</li>
+<li><strong>Barramentos:</strong> as vias de comunicação entre os componentes.</li>
+</ul>
+<p>A <strong>fonte de alimentação</strong> converte a corrente alternada da tomada em corrente contínua para os componentes.</p>
+
+<h2>Periféricos</h2>
+<p>Periféricos são os dispositivos que se conectam ao computador para trocar informações com o usuário ou com outros equipamentos.</p>
+<table class="comparison-table">
+<thead><tr><th>Categoria</th><th>Função</th><th>Exemplos</th></tr></thead>
+<tbody>
+<tr><td>Entrada</td><td>enviam dados para o computador</td><td>teclado, mouse, scanner, microfone, webcam, leitor biométrico, leitor de código de barras</td></tr>
+<tr><td>Saída</td><td>recebem dados do computador e os apresentam</td><td>monitor, impressora, caixa de som, fone de ouvido, projetor</td></tr>
+<tr><td>Entrada e saída (híbridos)</td><td>fazem as duas coisas</td><td>tela touchscreen, impressora multifuncional, modem, placa de rede, pen drive, headset com microfone</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>A tela sensível ao toque é periférico de <strong>entrada e saída</strong>: exibe a imagem (saída) e recebe o toque (entrada). O mesmo vale para a multifuncional, que imprime (saída) e digitaliza (entrada).</p></div>
+<h3>Conexões</h3>
+<table class="comparison-table">
+<thead><tr><th>Conexão</th><th>Uso</th></tr></thead>
+<tbody>
+<tr><td>USB</td><td>padrão universal para periféricos. USB 2.0 chega a 480 Mbps; USB 3.x a 5, 10 ou 20 Gbps. O USB-C é o conector reversível</td></tr>
+<tr><td>HDMI</td><td>vídeo e áudio digitais para monitores e TVs</td></tr>
+<tr><td>DisplayPort</td><td>vídeo digital, comum em monitores</td></tr>
+<tr><td>VGA</td><td>vídeo analógico (padrão antigo)</td></tr>
+<tr><td>RJ-45</td><td>cabo de rede Ethernet</td></tr>
+<tr><td>Bluetooth</td><td>conexão sem fio de curto alcance para mouse, teclado e fones</td></tr>
+</tbody>
+</table>
+<p><strong>Plug and Play</strong> é a capacidade do sistema de reconhecer e configurar um dispositivo automaticamente ao conectá-lo.</p>
+<h3>Impressoras</h3>
+<table class="comparison-table">
+<thead><tr><th>Tipo</th><th>Como imprime</th><th>Destaque</th></tr></thead>
+<tbody>
+<tr><td>Matricial</td><td>agulhas batem em uma fita com tinta (impacto)</td><td>imprime formulários em várias vias com carbono</td></tr>
+<tr><td>Jato de tinta</td><td>gotas de tinta líquida</td><td>boa para fotos coloridas e baixo custo inicial</td></tr>
+<tr><td>Laser</td><td>toner (pó) fixado por calor</td><td>rápida e com baixo custo por página</td></tr>
+<tr><td>Térmica</td><td>calor sobre papel especial</td><td>cupons fiscais e etiquetas</td></tr>
+<tr><td>3D</td><td>deposita material camada por camada</td><td>cria objetos físicos</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>Impressora que usa <strong>toner</strong> é a laser; a que imprime em <strong>várias vias com carbono</strong> é a matricial, a única de impacto.</p></div>
+
+<h2>Conclusão do capítulo</h2>
+<p>Os temas de hardware mais cobrados são:</p>
+<ul>
+<li>CPU: clock, núcleos e cache;</li>
+<li>hierarquia de memória e volatilidade;</li>
+<li>RAM x ROM, BIOS/UEFI e POST;</li>
+<li>HD x SSD e mídias de armazenamento;</li>
+<li>periféricos de entrada, saída e híbridos;</li>
+<li>conexões e tipos de impressora.</li>
+</ul>
 <section class="quiz-section" data-capitulo="5">
 <div class="quiz-header">
-<span class="chapter-badge">Desafio rápido</span>
+<span class="chapter-badge">Questões do capítulo</span>
 <h2>Teste seu entendimento</h2>
-<p>Responda às questões abaixo e descubra na hora se a sua escolha está correta.</p>
+<p>São 10 questões no estilo das bancas. Responda cada uma e veja na hora a correção comentada.</p>
 </div>
-<article class="quiz-card" data-explicacao="A CPU é o cérebro do computador e executa instruções e operações." data-resposta="Processador (CPU)">
-<p class="quiz-pergunta">1. Qual componente executa instruções e cálculos no computador?</p>
+<article class="quiz-card" data-explicacao="A CPU busca, decodifica e executa as instruções, com a ULA realizando os cálculos." data-resposta="Processador (CPU)">
+<p class="quiz-pergunta">1. Qual componente executa as instruções dos programas e realiza os cálculos?</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap5-q1-46588">
-<input id="cap5-q1-46588" name="cap5-q1" type="radio" value="Mouse"/>
-<span>Mouse</span>
-</label>
-
-<label class="quiz-opcao" for="cap5-q1-71932">
-<input id="cap5-q1-71932" name="cap5-q1" type="radio" value="Processador (CPU)"/>
-<span>Processador (CPU)</span>
-</label>
-
-<label class="quiz-opcao" for="cap5-q1-72538">
-<input id="cap5-q1-72538" name="cap5-q1" type="radio" value="Monitor"/>
-<span>Monitor</span>
-</label>
-
-<label class="quiz-opcao" for="cap5-q1-94339">
-<input id="cap5-q1-94339" name="cap5-q1" type="radio" value="Gabinete"/>
-<span>Gabinete</span>
-</label>
+<label class="quiz-opcao" for="cap5-q1-o1"><input id="cap5-q1-o1" name="cap5-q1" type="radio" value="Memória RAM"/><span>Memória RAM</span></label>
+<label class="quiz-opcao" for="cap5-q1-o2"><input id="cap5-q1-o2" name="cap5-q1" type="radio" value="Processador (CPU)"/><span>Processador (CPU)</span></label>
+<label class="quiz-opcao" for="cap5-q1-o3"><input id="cap5-q1-o3" name="cap5-q1" type="radio" value="Placa de rede"/><span>Placa de rede</span></label>
+<label class="quiz-opcao" for="cap5-q1-o4"><input id="cap5-q1-o4" name="cap5-q1" type="radio" value="Fonte de alimentação"/><span>Fonte de alimentação</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article><article class="quiz-card" data-explicacao="A RAM é volátil e perde seu conteúdo sem energia." data-resposta="Memória RAM">
-<p class="quiz-pergunta">2. Qual memória perde os dados quando o computador é desligado?</p>
+</article>
+<article class="quiz-card" data-explicacao="A RAM é volátil. ROM, SSD e HD são não voláteis." data-resposta="RAM">
+<p class="quiz-pergunta">2. Qual memória perde todo o seu conteúdo quando o computador é desligado?</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap5-q2-90275">
-<input id="cap5-q2-90275" name="cap5-q2" type="radio" value="SSD"/>
-<span>SSD</span>
-</label>
-
-<label class="quiz-opcao" for="cap5-q2-58309">
-<input id="cap5-q2-58309" name="cap5-q2" type="radio" value="HD"/>
-<span>HD</span>
-</label>
-
-<label class="quiz-opcao" for="cap5-q2-35614">
-<input id="cap5-q2-35614" name="cap5-q2" type="radio" value="Memória ROM"/>
-<span>Memória ROM</span>
-</label>
-
-<label class="quiz-opcao" for="cap5-q2-64528">
-<input id="cap5-q2-64528" name="cap5-q2" type="radio" value="Memória RAM"/>
-<span>Memória RAM</span>
-</label>
+<label class="quiz-opcao" for="cap5-q2-o1"><input id="cap5-q2-o1" name="cap5-q2" type="radio" value="RAM"/><span>RAM</span></label>
+<label class="quiz-opcao" for="cap5-q2-o2"><input id="cap5-q2-o2" name="cap5-q2" type="radio" value="ROM"/><span>ROM</span></label>
+<label class="quiz-opcao" for="cap5-q2-o3"><input id="cap5-q2-o3" name="cap5-q2" type="radio" value="SSD"/><span>SSD</span></label>
+<label class="quiz-opcao" for="cap5-q2-o4"><input id="cap5-q2-o4" name="cap5-q2" type="radio" value="HD"/><span>HD</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article><article class="quiz-card" data-explicacao="Teclado envia dados ao computador, portanto é periférico de entrada." data-resposta="Teclado">
-<p class="quiz-pergunta">3. Qual alternativa descreve melhor um dispositivo de entrada?</p>
+</article>
+<article class="quiz-card" data-explicacao="Teclado, mouse e scanner enviam dados para o computador. Monitor, impressora, caixa de som e projetor são de saída." data-resposta="Teclado, mouse e scanner">
+<p class="quiz-pergunta">3. Qual alternativa apresenta apenas dispositivos de entrada?</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap5-q3-72538">
-<input id="cap5-q3-72538" name="cap5-q3" type="radio" value="Monitor"/>
-<span>Monitor</span>
-</label>
-
-<label class="quiz-opcao" for="cap5-q3-74130">
-<input id="cap5-q3-74130" name="cap5-q3" type="radio" value="Impressora"/>
-<span>Impressora</span>
-</label>
-
-<label class="quiz-opcao" for="cap5-q3-52084">
-<input id="cap5-q3-52084" name="cap5-q3" type="radio" value="Teclado"/>
-<span>Teclado</span>
-</label>
-
-<label class="quiz-opcao" for="cap5-q3-62177">
-<input id="cap5-q3-62177" name="cap5-q3" type="radio" value="Caixa de som"/>
-<span>Caixa de som</span>
-</label>
+<label class="quiz-opcao" for="cap5-q3-o1"><input id="cap5-q3-o1" name="cap5-q3" type="radio" value="Monitor e teclado"/><span>Monitor e teclado</span></label>
+<label class="quiz-opcao" for="cap5-q3-o2"><input id="cap5-q3-o2" name="cap5-q3" type="radio" value="Monitor e impressora"/><span>Monitor e impressora</span></label>
+<label class="quiz-opcao" for="cap5-q3-o3"><input id="cap5-q3-o3" name="cap5-q3" type="radio" value="Teclado, mouse e scanner"/><span>Teclado, mouse e scanner</span></label>
+<label class="quiz-opcao" for="cap5-q3-o4"><input id="cap5-q3-o4" name="cap5-q3" type="radio" value="Caixa de som e projetor"/><span>Caixa de som e projetor</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article></section><div class="chapter-navigation">
+</article>
+<article class="quiz-card" data-explicacao="Ela exibe imagens (saída) e recebe o toque do usuário (entrada)." data-resposta="entrada e saída">
+<p class="quiz-pergunta">4. Uma tela touchscreen é classificada como periférico de:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap5-q4-o1"><input id="cap5-q4-o1" name="cap5-q4" type="radio" value="armazenamento"/><span>armazenamento</span></label>
+<label class="quiz-opcao" for="cap5-q4-o2"><input id="cap5-q4-o2" name="cap5-q4" type="radio" value="apenas entrada"/><span>apenas entrada</span></label>
+<label class="quiz-opcao" for="cap5-q4-o3"><input id="cap5-q4-o3" name="cap5-q4" type="radio" value="apenas saída"/><span>apenas saída</span></label>
+<label class="quiz-opcao" for="cap5-q4-o4"><input id="cap5-q4-o4" name="cap5-q4" type="radio" value="entrada e saída"/><span>entrada e saída</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="Quanto mais próxima do processador, mais rápida: registradores, cache, RAM, SSD e, por último, HD." data-resposta="cache, RAM, SSD, HD">
+<p class="quiz-pergunta">5. Assinale a ordem correta das memórias, da mais rápida para a mais lenta:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap5-q5-o1"><input id="cap5-q5-o1" name="cap5-q5" type="radio" value="RAM, cache, HD, SSD"/><span>RAM, cache, HD, SSD</span></label>
+<label class="quiz-opcao" for="cap5-q5-o2"><input id="cap5-q5-o2" name="cap5-q5" type="radio" value="cache, RAM, SSD, HD"/><span>cache, RAM, SSD, HD</span></label>
+<label class="quiz-opcao" for="cap5-q5-o3"><input id="cap5-q5-o3" name="cap5-q5" type="radio" value="SSD, RAM, cache, HD"/><span>SSD, RAM, cache, HD</span></label>
+<label class="quiz-opcao" for="cap5-q5-o4"><input id="cap5-q5-o4" name="cap5-q5" type="radio" value="HD, SSD, RAM, cache"/><span>HD, SSD, RAM, cache</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="O SSD usa memória flash, sem partes móveis. Discos magnéticos giratórios são a tecnologia do HD." data-resposta="Errado">
+<p class="quiz-pergunta">6. Julgue o item: “O SSD armazena dados em discos magnéticos giratórios, o que o torna mais rápido que o HD”.</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap5-q6-o1"><input id="cap5-q6-o1" name="cap5-q6" type="radio" value="Certo"/><span>Certo</span></label>
+<label class="quiz-opcao" for="cap5-q6-o2"><input id="cap5-q6-o2" name="cap5-q6" type="radio" value="Errado"/><span>Errado</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="POST (Power-On Self-Test) verifica processador, memória e outros componentes antes de carregar o sistema." data-resposta="POST">
+<p class="quiz-pergunta">7. O teste automático que o firmware da placa-mãe executa no hardware ao ligar o computador é chamado de:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap5-q7-o1"><input id="cap5-q7-o1" name="cap5-q7" type="radio" value="Journaling"/><span>Journaling</span></label>
+<label class="quiz-opcao" for="cap5-q7-o2"><input id="cap5-q7-o2" name="cap5-q7" type="radio" value="Boot remoto"/><span>Boot remoto</span></label>
+<label class="quiz-opcao" for="cap5-q7-o3"><input id="cap5-q7-o3" name="cap5-q7" type="radio" value="POST"/><span>POST</span></label>
+<label class="quiz-opcao" for="cap5-q7-o4"><input id="cap5-q7-o4" name="cap5-q7" type="radio" value="Plug and Play"/><span>Plug and Play</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="Giga = bilhão. 3 GHz equivalem a 3 bilhões de ciclos por segundo." data-resposta="3 bilhões de ciclos por segundo">
+<p class="quiz-pergunta">8. Um processador de 3 GHz realiza aproximadamente:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap5-q8-o1"><input id="cap5-q8-o1" name="cap5-q8" type="radio" value="3 mil ciclos por segundo"/><span>3 mil ciclos por segundo</span></label>
+<label class="quiz-opcao" for="cap5-q8-o2"><input id="cap5-q8-o2" name="cap5-q8" type="radio" value="3 trilhões de ciclos por segundo"/><span>3 trilhões de ciclos por segundo</span></label>
+<label class="quiz-opcao" for="cap5-q8-o3"><input id="cap5-q8-o3" name="cap5-q8" type="radio" value="3 milhões de ciclos por segundo"/><span>3 milhões de ciclos por segundo</span></label>
+<label class="quiz-opcao" for="cap5-q8-o4"><input id="cap5-q8-o4" name="cap5-q8" type="radio" value="3 bilhões de ciclos por segundo"/><span>3 bilhões de ciclos por segundo</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="A matricial é a única de impacto: as agulhas pressionam a fita e o carbono reproduz a impressão nas demais vias." data-resposta="matricial">
+<p class="quiz-pergunta">9. Um órgão precisa imprimir formulários em várias vias, usando papel carbonado. O tipo de impressora indicado é:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap5-q9-o1"><input id="cap5-q9-o1" name="cap5-q9" type="radio" value="matricial"/><span>matricial</span></label>
+<label class="quiz-opcao" for="cap5-q9-o2"><input id="cap5-q9-o2" name="cap5-q9" type="radio" value="térmica"/><span>térmica</span></label>
+<label class="quiz-opcao" for="cap5-q9-o3"><input id="cap5-q9-o3" name="cap5-q9" type="radio" value="jato de tinta"/><span>jato de tinta</span></label>
+<label class="quiz-opcao" for="cap5-q9-o4"><input id="cap5-q9-o4" name="cap5-q9" type="radio" value="laser"/><span>laser</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="A cache (L1, L2, L3) é uma memória SRAM muito rápida que reduz a espera do processador pela RAM." data-resposta="Cache">
+<p class="quiz-pergunta">10. Qual memória, presente no processador, armazena os dados e instruções usados com mais frequência para evitar o acesso à RAM?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap5-q10-o1"><input id="cap5-q10-o1" name="cap5-q10" type="radio" value="Memória virtual"/><span>Memória virtual</span></label>
+<label class="quiz-opcao" for="cap5-q10-o2"><input id="cap5-q10-o2" name="cap5-q10" type="radio" value="Flash"/><span>Flash</span></label>
+<label class="quiz-opcao" for="cap5-q10-o3"><input id="cap5-q10-o3" name="cap5-q10" type="radio" value="ROM"/><span>ROM</span></label>
+<label class="quiz-opcao" for="cap5-q10-o4"><input id="cap5-q10-o4" name="cap5-q10" type="radio" value="Cache"/><span>Cache</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+</section>
+<div class="chapter-navigation">
 <a class="btn-secondary" href="chapter_4.html">← Capítulo anterior</a>
 <a class="btn-primary" href="chapter_6.html">Próximo capítulo →</a>
 </div>
 </article>
 <footer class="page-footer">
-<p>Plataforma do e-book • Informática para Concursos</p>
+<p>Informática para Concursos · E-book</p>
 </footer>
 </div>
 <script src="script.js"></script>

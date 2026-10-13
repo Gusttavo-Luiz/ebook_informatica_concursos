@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
@@ -18,9 +17,7 @@
 <div class="chapter-tools">
 <button class="audio-button" id="botaoNarrar" type="button">Ouvir capítulo</button>
 <button class="audio-button" id="botaoPausarNarracao" type="button">Pausar narração</button>
-<button class="btn-primary" id="botaoConcluirCapitulo" type="button">
-          Marcar capítulo como concluído
-        </button>
+<button class="btn-primary" id="botaoConcluirCapitulo" type="button">Marcar capítulo como concluído</button>
 </div>
 </div>
 <article class="reading-card">
@@ -29,183 +26,285 @@
 <div class="chapter-meta">
 <span class="chapter-status" id="statusLeitura">Status: leitura em andamento.</span>
 <span class="chapter-status" id="statusNarracao">Narração pronta para uso.</span>
-</div><section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Tríade da segurança</h2><div class="figure-grid three"><div><span class="figure-label">C</span><strong>Confidencialidade</strong></div><div><span class="figure-label">I</span><strong>Integridade</strong></div><div><span class="figure-label">D</span><strong>Disponibilidade</strong></div></div></section>
-<h2>Conceito de Segurança da Informação</h2>
-<p class="chapter-intro">A Segurança da Informação é o conjunto de práticas, políticas e tecnologias utilizadas para proteger informações contra:</p>
-<ul><li>acesso não autorizado</li><li>alteração indevida</li><li>destruição de dados</li><li>indisponibilidade de sistemas</li></ul>
-<p>O objetivo é garantir que as informações permaneçam seguras e confiáveis.</p>
-<div class="box-resumo"><strong>Resumo estratégico</strong><ul><li>Segurança da Informação protege dados contra:</li><li>acesso indevido</li><li>alteração indevida</li><li>perda de disponibilidade</li></ul></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>A banca pode afirmar:</p><p>"Segurança da informação protege apenas dados digitais."</p><p><strong>❌ Errado.</strong></p><p>Ela protege qualquer tipo de informação, inclusive documentos físicos.</p></div>
-<h2>Princípios da Segurança da Informação</h2>
-<p>Os princípios da segurança da informação são conhecidos como modelo CIA.</p>
-<p>CIA significa:</p>
-<ul><li>Confidencialidade</li><li>Integridade</li><li>Disponibilidade</li><li>Confidencialidade</li></ul>
-<p>Garante que apenas usuários autorizados tenham acesso às informações.</p>
-<p>Exemplo:</p>
-<ul><li>senhas</li><li>criptografia</li><li>controle de acesso</li><li>Integridade</li></ul>
-<p>Garante que os dados não sejam alterados indevidamente.</p>
-<p>Exemplo:</p>
-<ul><li>assinatura digital</li><li>hash</li><li>Disponibilidade</li></ul>
-<p>Garante que os sistemas e dados estejam acessíveis quando necessários.</p>
-<p>Exemplo:</p>
-<ul><li>redundância de servidores</li><li>backup</li></ul>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>Modelo clássico:</p><p>CIA</p></div>
-<div class="box-dica"><strong>Memorize</strong><ul><li>CIA</li><li>Confidencialidade</li><li>Integridade</li></ul><p>Acesso (disponibilidade)</p></div>
-<h2>Princípios Estendidos da Segurança</h2>
-<p>Além do modelo CIA, existem princípios adicionais.</p>
-<h3>Autenticidade</h3>
-<p>Garante que a identidade do usuário seja verdadeira.</p>
-<p>Exemplo:</p>
-<ul><li>login e senha</li><li>autenticação em dois fatores</li><li>Não Repúdio</li></ul>
-<p>Impede que um usuário negue uma ação realizada.</p>
-<p>Exemplo:</p>
-<ul><li>assinatura digital</li></ul>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>Modelo expandido de segurança:</p></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>Algumas provas afirmam:</p><p>"Autenticidade faz parte do modelo clássico CIA."</p><p><strong>❌ Errado.</strong></p><p>O modelo clássico possui apenas três princípios.</p></div>
-<h2>Tipos de Malware</h2>
-<p>Malware é qualquer software malicioso criado para prejudicar sistemas ou roubar informações.</p>
-<p>A palavra malware vem de:</p>
-<ul><li>Malicious Software</li><li>Vírus</li></ul>
-<p>Programa que se replica infectando outros arquivos.</p>
-<p>Pode causar:</p>
-<ul><li>corrupção de dados</li><li>danos ao sistema</li><li>Worm</li></ul>
-<p>Programa que se espalha automaticamente pela rede.</p>
-<p>Não precisa infectar arquivos.</p>
-<h3>Trojan (Cavalo de Troia)</h3>
-<p>Programa malicioso que se disfarça de software legítimo.</p>
-<p>Exemplo:</p>
-<ul><li>aplicativos falsos</li><li>downloads maliciosos</li><li>Ransomware</li></ul>
-<p>Malware que sequestra arquivos do usuário.</p>
-<p>O criminoso exige pagamento para liberar os dados.</p>
-<h3>Spyware</h3>
-<p>Software que espiona atividades do usuário.</p>
-<p>Pode coletar:</p>
-<ul><li>senhas</li><li>dados pessoais</li><li>hábitos de navegação</li><li>Rootkit</li></ul>
-<p>Malware que esconde sua presença no sistema.</p>
-<p>Ele permite que invasores tenham acesso remoto ao computador.</p>
-<div class="box-resumo"><strong>Resumo estratégico</strong><ul><li>Principais tipos de malware:</li><li>vírus</li><li>worm</li><li>trojan</li><li>ransomware</li><li>spyware</li><li>rootkit</li></ul></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>A banca costuma confundir:</p><p>Phishing ≠ Malware</p><p>Phishing é engenharia social, não um software.</p></div>
-<h2>Ferramentas de Proteção</h2>
-<p>Para proteger sistemas contra ataques, existem diversas ferramentas.</p>
-<h3>Antivírus</h3>
-<p>Software responsável por detectar e remover malwares.</p>
-<p>Exemplos:</p>
-<ul><li>Windows Defender</li><li>Kaspersky</li><li>Avast</li><li>Firewall</li></ul>
-<p>Sistema que controla o tráfego de rede.</p>
-<p>Ele permite ou bloqueia conexões de acordo com regras de segurança.</p>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>Firewall:</p><p>➡ controla tráfego de rede</p><p>IDS (Intrusion Detection System)</p><p>Sistema de detecção de intrusão.</p><p>Ele monitora atividades suspeitas na rede.</p><p>Backup</p><p>Cópia de segurança dos dados.</p><p>Permite recuperar informações em caso de perda ou ataque.</p></div>
-<h3>Ferramentas de Segurança</h3>
-<div class="box-dica"><strong>Memorize</strong><ul><li>Proteção básica de sistemas:</li><li>AFIB</li><li>Antivírus</li><li>Firewall</li><li>IDS</li><li>Backup</li></ul></div>
-<h2>Engenharia Social</h2>
-<p>A engenharia social consiste em manipular pessoas para obter informações sensíveis.</p>
-<p>Exemplos:</p>
-<ul><li>phishing</li><li>e-mails falsos</li><li>páginas falsas</li><li>Phishing</li></ul>
-<p>Golpe que tenta roubar informações do usuário.</p>
-<p>Normalmente utiliza:</p>
-<ul><li>e-mails falsos</li><li>páginas falsas de banco</li></ul>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>Phishing não invade sistemas.</p><p>Ele engana o usuário para que ele forneça informações.</p></div>
-<h2>Conclusão do Capítulo</h2>
-<p>Segurança da informação é um tema extremamente relevante em concursos.</p>
-<p>Os tópicos mais cobrados são:</p>
-<ul><li>modelo CIA</li><li>tipos de malware</li><li>ferramentas de proteção</li><li>engenharia social</li></ul>
-<p>Dominar esses conceitos é essencial para resolver questões de informática.</p>
+</div>
+<section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Tríade da segurança</h2><div class="figure-grid three"><div><span class="figure-label">C</span><strong>Confidencialidade</strong></div><div><span class="figure-label">I</span><strong>Integridade</strong></div><div><span class="figure-label">D</span><strong>Disponibilidade</strong></div></div></section>
+
+<h2>Conceito de segurança da informação</h2>
+<p class="chapter-intro">Segurança da informação é o conjunto de práticas, políticas e tecnologias que protegem a informação contra acesso não autorizado, alteração indevida, destruição e indisponibilidade.</p>
+<p>Ela protege a informação em <strong>qualquer formato</strong>: arquivos digitais, documentos em papel e até conversas.</p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“Segurança da informação protege apenas dados digitais.” Errado: protege qualquer informação, inclusive documentos físicos. A proteção específica dos meios digitais costuma ser chamada de segurança cibernética.</p></div>
+
+<h2>Princípios da segurança</h2>
+<h3>Tríade CID (ou CIA, em inglês)</h3>
+<table class="comparison-table">
+<thead><tr><th>Princípio</th><th>Garante que…</th><th>Mecanismos</th></tr></thead>
+<tbody>
+<tr><td>Confidencialidade</td><td>só pessoas autorizadas acessam a informação</td><td>senhas, criptografia, controle de acesso</td></tr>
+<tr><td>Integridade</td><td>a informação não foi alterada indevidamente</td><td>hash, assinatura digital</td></tr>
+<tr><td>Disponibilidade</td><td>a informação está acessível quando necessária</td><td>backup, redundância, nobreak, proteção contra DDoS</td></tr>
+</tbody>
+</table>
+<h3>Princípios complementares</h3>
+<ul>
+<li><strong>Autenticidade:</strong> garante que a origem e a identidade são verdadeiras (quem diz ser é quem realmente é). Mecanismos: login com senha, biometria, certificado digital.</li>
+<li><strong>Não repúdio (irretratabilidade):</strong> impede que o autor negue ter realizado uma ação, como assinar um documento. Mecanismo: assinatura digital.</li>
+</ul>
+<div class="box-dica"><strong>Memorize</strong><p><strong>CIDA</strong>: Confidencialidade, Integridade, Disponibilidade e Autenticidade — mais o não repúdio. A tríade clássica tem só as três primeiras.</p></div>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“Autenticidade faz parte da tríade clássica CID.” Errado: a tríade tem apenas Confidencialidade, Integridade e Disponibilidade. Autenticidade e não repúdio são princípios complementares.</p></div>
+
+<h2>Ameaça, vulnerabilidade e risco</h2>
+<ul>
+<li><strong>Vulnerabilidade:</strong> fraqueza que pode ser explorada. Exemplo: sistema desatualizado, senha fraca.</li>
+<li><strong>Ameaça:</strong> agente ou evento que pode explorar uma vulnerabilidade. Exemplo: um invasor, um malware, um incêndio.</li>
+<li><strong>Risco:</strong> probabilidade de uma ameaça explorar uma vulnerabilidade e o impacto que isso causaria.</li>
+<li><strong>Incidente:</strong> evento que efetivamente compromete a segurança.</li>
+</ul>
+
+<h2>Malware</h2>
+<p>Malware (malicious software) é qualquer programa criado para causar danos, roubar dados ou obter controle indevido de um sistema.</p>
+<table class="comparison-table">
+<thead><tr><th>Tipo</th><th>Como age</th></tr></thead>
+<tbody>
+<tr><td>Vírus</td><td>se anexa a arquivos ou programas e depende da <strong>execução</strong> do arquivo infectado para agir e se propagar</td></tr>
+<tr><td>Worm</td><td>se propaga <strong>sozinho</strong> pela rede, explorando falhas, sem precisar infectar arquivos nem da ação do usuário; consome recursos e congestiona a rede</td></tr>
+<tr><td>Cavalo de Troia (trojan)</td><td>se disfarça de programa legítimo (jogo, cartão virtual, “atualização”) e executa ações maliciosas escondidas</td></tr>
+<tr><td>Ransomware</td><td>criptografa os arquivos (ou bloqueia o sistema) e exige resgate, normalmente em criptomoeda</td></tr>
+<tr><td>Spyware</td><td>espiona e coleta informações do usuário sem consentimento</td></tr>
+<tr><td>Keylogger</td><td>spyware que registra as teclas digitadas, como senhas</td></tr>
+<tr><td>Screenlogger</td><td>spyware que captura imagens da tela e a posição dos cliques</td></tr>
+<tr><td>Adware</td><td>exibe propagandas indesejadas</td></tr>
+<tr><td>Backdoor</td><td>abre uma “porta dos fundos” para o invasor voltar a acessar o sistema</td></tr>
+<tr><td>Rootkit</td><td>conjunto de técnicas para esconder a presença do invasor e de outros malwares no sistema</td></tr>
+<tr><td>Bot e botnet</td><td>o bot permite controlar o computador remotamente; uma botnet é uma rede de computadores infectados (“zumbis”), usada por exemplo em ataques DDoS</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>A diferença mais cobrada: o <strong>vírus</strong> precisa de um hospedeiro e da execução do arquivo; o <strong>worm</strong> se replica sozinho pela rede. E o cavalo de Troia, em geral, <strong>não</strong> se replica.</p></div>
+
+<h2>Golpes e ataques</h2>
+<table class="comparison-table">
+<thead><tr><th>Ataque</th><th>Descrição</th></tr></thead>
+<tbody>
+<tr><td>Engenharia social</td><td>manipula pessoas, explorando confiança, medo ou urgência, para obter informações ou acessos</td></tr>
+<tr><td>Phishing</td><td>mensagem falsa (e-mail, SMS, rede social) que imita uma instituição para roubar dados ou induzir o usuário a clicar</td></tr>
+<tr><td>Spear phishing</td><td>phishing direcionado a uma pessoa ou empresa específica, com informações personalizadas</td></tr>
+<tr><td>Smishing e vishing</td><td>phishing por SMS e por ligação telefônica (voz)</td></tr>
+<tr><td>Pharming</td><td>altera a resolução de nomes (DNS) para levar o usuário a um site falso mesmo quando ele digita o endereço correto</td></tr>
+<tr><td>DoS e DDoS</td><td>sobrecarregam um serviço com requisições para torná-lo indisponível; no DDoS o ataque vem de muitas máquinas ao mesmo tempo</td></tr>
+<tr><td>Força bruta</td><td>testa inúmeras combinações de senha até acertar</td></tr>
+<tr><td>Man-in-the-middle</td><td>o atacante se coloca entre duas partes para interceptar ou alterar a comunicação</td></tr>
+<tr><td>Spoofing</td><td>falsifica a origem, como o remetente de um e-mail ou um endereço IP</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Phishing <strong>não é malware</strong>: é um golpe de engenharia social que engana o usuário. Já o <strong>pharming</strong> é mais perigoso, porque o usuário cai no site falso mesmo digitando o endereço certo. E o DDoS ataca a <strong>disponibilidade</strong>.</p></div>
+
+<h2>Criptografia</h2>
+<p>A criptografia transforma a informação legível em um código ilegível, que só pode ser revertido por quem tem a chave correta. Ela protege principalmente a <strong>confidencialidade</strong>.</p>
+<table class="comparison-table">
+<thead><tr><th>Característica</th><th>Simétrica</th><th>Assimétrica</th></tr></thead>
+<tbody>
+<tr><td>Chaves</td><td>uma única chave secreta para cifrar e decifrar</td><td>par de chaves: pública (divulgada) e privada (secreta)</td></tr>
+<tr><td>Velocidade</td><td>mais rápida</td><td>mais lenta</td></tr>
+<tr><td>Desafio</td><td>compartilhar a chave com segurança</td><td>proteger a chave privada</td></tr>
+<tr><td>Exemplos</td><td>AES, 3DES</td><td>RSA, ECC</td></tr>
+</tbody>
+</table>
+<h3>Como as chaves assimétricas são usadas</h3>
+<ul>
+<li><strong>Para enviar uma mensagem sigilosa:</strong> cifra-se com a chave <strong>pública do destinatário</strong>; só a chave privada dele consegue decifrar.</li>
+<li><strong>Para assinar digitalmente:</strong> o remetente usa a <strong>própria chave privada</strong>; qualquer pessoa confere a assinatura com a chave pública dele.</li>
+</ul>
+<h3>Hash</h3>
+<p>A função hash gera um “resumo” de tamanho fixo a partir de qualquer conteúdo. Qualquer alteração no conteúdo, por menor que seja, gera um hash completamente diferente. Por isso ela é usada para verificar a <strong>integridade</strong>. Exemplo: SHA-256. O MD5 e o SHA-1 são considerados inseguros.</p>
+<h3>Assinatura e certificado digital</h3>
+<ul>
+<li><strong>Assinatura digital:</strong> combina o hash do documento com a chave privada do autor. Garante <strong>autenticidade, integridade e não repúdio</strong>, mas <strong>não</strong> garante confidencialidade.</li>
+<li><strong>Certificado digital:</strong> documento eletrônico emitido por uma <strong>Autoridade Certificadora (AC)</strong> que vincula uma chave pública à identidade de uma pessoa, empresa ou site. No Brasil, a cadeia oficial é a <strong>ICP-Brasil</strong>.</li>
+<li>O <strong>HTTPS</strong> usa certificados digitais e o protocolo TLS para criptografar a conexão com o site.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“A assinatura digital garante o sigilo do documento.” Errado: ela garante autenticidade, integridade e não repúdio. Para sigilo, é preciso criptografar o documento.</p></div>
+<div class="box-dica"><strong>Memorize</strong><p>Sigilo → chave <strong>pública do destinatário</strong>. Assinatura → chave <strong>privada do remetente</strong>.</p></div>
+
+<h2>Autenticação</h2>
+<p>A autenticação confirma a identidade de quem acessa um sistema. Ela se baseia em três fatores:</p>
+<ul>
+<li><strong>Algo que você sabe:</strong> senha, PIN, resposta secreta.</li>
+<li><strong>Algo que você tem:</strong> celular com código, token, cartão, certificado digital em mídia.</li>
+<li><strong>Algo que você é:</strong> biometria (impressão digital, rosto, íris).</li>
+</ul>
+<p>A <strong>autenticação em dois fatores (2FA)</strong> ou multifator combina fatores de <strong>tipos diferentes</strong>. Senha + código no celular é 2FA; duas senhas não são.</p>
+<p>Boas práticas para senhas: usar senhas longas (frases-senha), não reutilizar a mesma senha em vários serviços e usar um gerenciador de senhas.</p>
+
+<h2>Ferramentas de proteção</h2>
+<table class="comparison-table">
+<thead><tr><th>Ferramenta</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td>Antivírus (antimalware)</td><td>detecta, bloqueia e remove malwares, por assinaturas e análise de comportamento. Ex.: Microsoft Defender</td></tr>
+<tr><td>Firewall</td><td>controla o tráfego de rede, permitindo ou bloqueando conexões de acordo com regras</td></tr>
+<tr><td>IDS</td><td>sistema de detecção de intrusão: monitora a rede e <strong>alerta</strong> sobre atividades suspeitas</td></tr>
+<tr><td>IPS</td><td>sistema de prevenção de intrusão: detecta e <strong>bloqueia</strong> automaticamente</td></tr>
+<tr><td>VPN</td><td>cria um “túnel” criptografado pela internet, permitindo acesso seguro à rede da organização</td></tr>
+<tr><td>Antispam</td><td>filtra mensagens indesejadas e suspeitas</td></tr>
+<tr><td>Proxy</td><td>intermediário entre os usuários e a internet, que pode filtrar sites e registrar acessos</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O firewall remove vírus do computador.” Errado: o firewall filtra o tráfego de rede; quem remove malware é o antivírus. Um não substitui o outro.</p></div>
+
+<h2>Backup</h2>
+<p>Backup é a cópia de segurança dos dados, que permite recuperá-los em caso de falha, exclusão acidental ou ataque, como um ransomware.</p>
+<table class="comparison-table">
+<thead><tr><th>Tipo</th><th>O que copia</th><th>Para restaurar</th></tr></thead>
+<tbody>
+<tr><td>Completo (full)</td><td>todos os dados selecionados</td><td>apenas o último backup completo</td></tr>
+<tr><td>Incremental</td><td>só o que mudou desde o <strong>último backup de qualquer tipo</strong></td><td>o último completo + <strong>todos</strong> os incrementais seguintes</td></tr>
+<tr><td>Diferencial</td><td>tudo o que mudou desde o <strong>último backup completo</strong></td><td>o último completo + <strong>apenas o último</strong> diferencial</td></tr>
+</tbody>
+</table>
+<p>O incremental é o mais rápido de fazer e ocupa menos espaço, mas é o mais trabalhoso de restaurar. O diferencial cresce a cada dia, mas restaura com só duas cópias.</p>
+<div class="box-dica"><strong>Memorize</strong><p>Regra <strong>3-2-1</strong>: 3 cópias dos dados, em 2 mídias diferentes, sendo 1 fora do local (por exemplo, na nuvem). E teste a restauração de tempos em tempos.</p></div>
+
+<h2>Boas práticas</h2>
+<ul>
+<li>manter sistema operacional, navegador e aplicativos atualizados;</li>
+<li>desconfiar de mensagens com urgência, prêmios ou ameaças, e não clicar em links suspeitos;</li>
+<li>conferir o endereço do site antes de digitar senhas;</li>
+<li>baixar programas apenas de fontes oficiais;</li>
+<li>usar antivírus, firewall e autenticação em dois fatores;</li>
+<li>bloquear o computador ao se ausentar (Windows + L);</li>
+<li>fazer backups regulares e testar a restauração.</li>
+</ul>
+
+<h2>Conclusão do capítulo</h2>
+<p>Os tópicos de segurança mais cobrados são:</p>
+<ul>
+<li>tríade CID, autenticidade e não repúdio;</li>
+<li>diferenças entre vírus, worm, trojan, ransomware e spyware;</li>
+<li>phishing, pharming, engenharia social e DDoS;</li>
+<li>criptografia simétrica x assimétrica, hash, assinatura e certificado digital;</li>
+<li>firewall x antivírus, IDS x IPS, VPN;</li>
+<li>tipos de backup.</li>
+</ul>
 <section class="quiz-section" data-capitulo="7">
 <div class="quiz-header">
-<span class="chapter-badge">Desafio rápido</span>
+<span class="chapter-badge">Questões do capítulo</span>
 <h2>Teste seu entendimento</h2>
-<p>Responda às questões abaixo e descubra na hora se a sua escolha está correta.</p>
+<p>São 10 questões no estilo das bancas. Responda cada uma e veja na hora a correção comentada.</p>
 </div>
-<article class="quiz-card" data-explicacao="A tríade CIA é a base da segurança da informação." data-resposta="Confidencialidade, Integridade e Disponibilidade">
-<p class="quiz-pergunta">1. A tríade clássica da segurança da informação é:</p>
+<article class="quiz-card" data-explicacao="A tríade CID (CIA em inglês) é confidencialidade, integridade e disponibilidade." data-resposta="confidencialidade, integridade e disponibilidade">
+<p class="quiz-pergunta">1. A tríade clássica da segurança da informação é formada por:</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap7-q1-90042">
-<input id="cap7-q1-90042" name="cap7-q1" type="radio" value="Velocidade, Memória e Processamento"/>
-<span>Velocidade, Memória e Processamento</span>
-</label>
-
-<label class="quiz-opcao" for="cap7-q1-10774">
-<input id="cap7-q1-10774" name="cap7-q1" type="radio" value="Confidencialidade, Integridade e Disponibilidade"/>
-<span>Confidencialidade, Integridade e Disponibilidade</span>
-</label>
-
-<label class="quiz-opcao" for="cap7-q1-28169">
-<input id="cap7-q1-28169" name="cap7-q1" type="radio" value="Entrada, Saída e Armazenamento"/>
-<span>Entrada, Saída e Armazenamento</span>
-</label>
-
-<label class="quiz-opcao" for="cap7-q1-3916">
-<input id="cap7-q1-3916" name="cap7-q1" type="radio" value="Software, Hardware e Rede"/>
-<span>Software, Hardware e Rede</span>
-</label>
+<label class="quiz-opcao" for="cap7-q1-o1"><input id="cap7-q1-o1" name="cap7-q1" type="radio" value="autenticidade, legalidade e privacidade"/><span>autenticidade, legalidade e privacidade</span></label>
+<label class="quiz-opcao" for="cap7-q1-o2"><input id="cap7-q1-o2" name="cap7-q1" type="radio" value="confidencialidade, integridade e disponibilidade"/><span>confidencialidade, integridade e disponibilidade</span></label>
+<label class="quiz-opcao" for="cap7-q1-o3"><input id="cap7-q1-o3" name="cap7-q1" type="radio" value="criptografia, backup e firewall"/><span>criptografia, backup e firewall</span></label>
+<label class="quiz-opcao" for="cap7-q1-o4"><input id="cap7-q1-o4" name="cap7-q1" type="radio" value="usuário, senha e token"/><span>usuário, senha e token</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article><article class="quiz-card" data-explicacao="Phishing usa engano para roubar dados, senhas ou informações financeiras." data-resposta="Enganar o usuário para obter dados sensíveis">
+</article>
+<article class="quiz-card" data-explicacao="Phishing é um golpe de engenharia social, normalmente por mensagens falsas que imitam instituições conhecidas." data-resposta="enganar o usuário para obter dados ou induzi-lo a uma ação">
 <p class="quiz-pergunta">2. Phishing é uma tentativa de:</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap7-q2-14373">
-<input id="cap7-q2-14373" name="cap7-q2" type="radio" value="Aumentar a velocidade da rede"/>
-<span>Aumentar a velocidade da rede</span>
-</label>
-
-<label class="quiz-opcao" for="cap7-q2-13047">
-<input id="cap7-q2-13047" name="cap7-q2" type="radio" value="Atualizar o antivírus automaticamente"/>
-<span>Atualizar o antivírus automaticamente</span>
-</label>
-
-<label class="quiz-opcao" for="cap7-q2-78986">
-<input id="cap7-q2-78986" name="cap7-q2" type="radio" value="Enganar o usuário para obter dados sensíveis"/>
-<span>Enganar o usuário para obter dados sensíveis</span>
-</label>
-
-<label class="quiz-opcao" for="cap7-q2-83609">
-<input id="cap7-q2-83609" name="cap7-q2" type="radio" value="Organizar arquivos em pastas"/>
-<span>Organizar arquivos em pastas</span>
-</label>
+<label class="quiz-opcao" for="cap7-q2-o1"><input id="cap7-q2-o1" name="cap7-q2" type="radio" value="atualizar automaticamente o antivírus"/><span>atualizar automaticamente o antivírus</span></label>
+<label class="quiz-opcao" for="cap7-q2-o2"><input id="cap7-q2-o2" name="cap7-q2" type="radio" value="aumentar a velocidade da conexão"/><span>aumentar a velocidade da conexão</span></label>
+<label class="quiz-opcao" for="cap7-q2-o3"><input id="cap7-q2-o3" name="cap7-q2" type="radio" value="enganar o usuário para obter dados ou induzi-lo a uma ação"/><span>enganar o usuário para obter dados ou induzi-lo a uma ação</span></label>
+<label class="quiz-opcao" for="cap7-q2-o4"><input id="cap7-q2-o4" name="cap7-q2" type="radio" value="organizar arquivos em pastas"/><span>organizar arquivos em pastas</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article><article class="quiz-card" data-explicacao="Atualizações corrigem falhas e aumentam a proteção do sistema." data-resposta="Manter sistemas atualizados">
-<p class="quiz-pergunta">3. Qual alternativa representa uma boa prática de segurança?</p>
+</article>
+<article class="quiz-card" data-explicacao="O worm se replica sozinho pela rede. O vírus depende de um arquivo hospedeiro e de sua execução." data-resposta="worm">
+<p class="quiz-pergunta">3. Um programa malicioso que se propaga automaticamente pela rede, explorando falhas, sem precisar infectar arquivos nem da ação do usuário, é um:</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap7-q3-88891">
-<input id="cap7-q3-88891" name="cap7-q3" type="radio" value="Clicar em qualquer link recebido"/>
-<span>Clicar em qualquer link recebido</span>
-</label>
-
-<label class="quiz-opcao" for="cap7-q3-96095">
-<input id="cap7-q3-96095" name="cap7-q3" type="radio" value="Usar a mesma senha em tudo"/>
-<span>Usar a mesma senha em tudo</span>
-</label>
-
-<label class="quiz-opcao" for="cap7-q3-56338">
-<input id="cap7-q3-56338" name="cap7-q3" type="radio" value="Manter sistemas atualizados"/>
-<span>Manter sistemas atualizados</span>
-</label>
-
-<label class="quiz-opcao" for="cap7-q3-51605">
-<input id="cap7-q3-51605" name="cap7-q3" type="radio" value="Desativar o antivírus"/>
-<span>Desativar o antivírus</span>
-</label>
+<label class="quiz-opcao" for="cap7-q3-o1"><input id="cap7-q3-o1" name="cap7-q3" type="radio" value="worm"/><span>worm</span></label>
+<label class="quiz-opcao" for="cap7-q3-o2"><input id="cap7-q3-o2" name="cap7-q3" type="radio" value="adware"/><span>adware</span></label>
+<label class="quiz-opcao" for="cap7-q3-o3"><input id="cap7-q3-o3" name="cap7-q3" type="radio" value="keylogger"/><span>keylogger</span></label>
+<label class="quiz-opcao" for="cap7-q3-o4"><input id="cap7-q3-o4" name="cap7-q3" type="radio" value="vírus"/><span>vírus</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article></section><div class="chapter-navigation">
+</article>
+<article class="quiz-card" data-explicacao="Ransomware sequestra os dados por criptografia e cobra resgate. Um backup atualizado e isolado é a principal defesa." data-resposta="ransomware">
+<p class="quiz-pergunta">4. Um malware criptografou os arquivos de um órgão e exigiu pagamento em criptomoeda para liberá-los. Trata-se de:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap7-q4-o1"><input id="cap7-q4-o1" name="cap7-q4" type="radio" value="adware"/><span>adware</span></label>
+<label class="quiz-opcao" for="cap7-q4-o2"><input id="cap7-q4-o2" name="cap7-q4" type="radio" value="spyware"/><span>spyware</span></label>
+<label class="quiz-opcao" for="cap7-q4-o3"><input id="cap7-q4-o3" name="cap7-q4" type="radio" value="rootkit"/><span>rootkit</span></label>
+<label class="quiz-opcao" for="cap7-q4-o4"><input id="cap7-q4-o4" name="cap7-q4" type="radio" value="ransomware"/><span>ransomware</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="DDoS tira o serviço do ar, atacando a disponibilidade." data-resposta="disponibilidade">
+<p class="quiz-pergunta">5. Um ataque que sobrecarrega um site com requisições vindas de milhares de computadores, tornando-o indisponível, afeta principalmente o princípio da:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap7-q5-o1"><input id="cap7-q5-o1" name="cap7-q5" type="radio" value="confidencialidade"/><span>confidencialidade</span></label>
+<label class="quiz-opcao" for="cap7-q5-o2"><input id="cap7-q5-o2" name="cap7-q5" type="radio" value="integridade"/><span>integridade</span></label>
+<label class="quiz-opcao" for="cap7-q5-o3"><input id="cap7-q5-o3" name="cap7-q5" type="radio" value="disponibilidade"/><span>disponibilidade</span></label>
+<label class="quiz-opcao" for="cap7-q5-o4"><input id="cap7-q5-o4" name="cap7-q5" type="radio" value="autenticidade"/><span>autenticidade</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="O que é cifrado com a chave pública do destinatário só pode ser decifrado pela chave privada dele, que só ele possui." data-resposta="a chave pública do destinatário">
+<p class="quiz-pergunta">6. Para enviar uma mensagem que só o destinatário consiga ler, usando criptografia assimétrica, o remetente deve cifrá-la com:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap7-q6-o1"><input id="cap7-q6-o1" name="cap7-q6" type="radio" value="a chave privada do destinatário"/><span>a chave privada do destinatário</span></label>
+<label class="quiz-opcao" for="cap7-q6-o2"><input id="cap7-q6-o2" name="cap7-q6" type="radio" value="a sua própria chave privada"/><span>a sua própria chave privada</span></label>
+<label class="quiz-opcao" for="cap7-q6-o3"><input id="cap7-q6-o3" name="cap7-q6" type="radio" value="a sua própria chave pública"/><span>a sua própria chave pública</span></label>
+<label class="quiz-opcao" for="cap7-q6-o4"><input id="cap7-q6-o4" name="cap7-q6" type="radio" value="a chave pública do destinatário"/><span>a chave pública do destinatário</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="A assinatura comprova autoria e que o documento não foi alterado. Para manter o conteúdo em sigilo, é preciso criptografá-lo." data-resposta="Certo">
+<p class="quiz-pergunta">7. Julgue o item: “A assinatura digital garante a autenticidade, a integridade e o não repúdio de um documento, mas não garante, por si só, a sua confidencialidade”.</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap7-q7-o1"><input id="cap7-q7-o1" name="cap7-q7" type="radio" value="Certo"/><span>Certo</span></label>
+<label class="quiz-opcao" for="cap7-q7-o2"><input id="cap7-q7-o2" name="cap7-q7" type="radio" value="Errado"/><span>Errado</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="O firewall filtra o tráfego. O antivírus é que detecta e remove malwares." data-resposta="Firewall">
+<p class="quiz-pergunta">8. Qual ferramenta controla o tráfego de rede, permitindo ou bloqueando conexões de acordo com regras definidas?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap7-q8-o1"><input id="cap7-q8-o1" name="cap7-q8" type="radio" value="Antivírus"/><span>Antivírus</span></label>
+<label class="quiz-opcao" for="cap7-q8-o2"><input id="cap7-q8-o2" name="cap7-q8" type="radio" value="Firewall"/><span>Firewall</span></label>
+<label class="quiz-opcao" for="cap7-q8-o3"><input id="cap7-q8-o3" name="cap7-q8" type="radio" value="Backup"/><span>Backup</span></label>
+<label class="quiz-opcao" for="cap7-q8-o4"><input id="cap7-q8-o4" name="cap7-q8" type="radio" value="Hash"/><span>Hash</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="Combina algo que o usuário sabe (senha) com algo que ele tem (celular), dois fatores de tipos diferentes." data-resposta="autenticação em dois fatores">
+<p class="quiz-pergunta">9. Um usuário digita a senha e, em seguida, um código recebido no celular. Esse procedimento é um exemplo de:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap7-q9-o1"><input id="cap7-q9-o1" name="cap7-q9" type="radio" value="autenticação em dois fatores"/><span>autenticação em dois fatores</span></label>
+<label class="quiz-opcao" for="cap7-q9-o2"><input id="cap7-q9-o2" name="cap7-q9" type="radio" value="backup incremental"/><span>backup incremental</span></label>
+<label class="quiz-opcao" for="cap7-q9-o3"><input id="cap7-q9-o3" name="cap7-q9" type="radio" value="engenharia social"/><span>engenharia social</span></label>
+<label class="quiz-opcao" for="cap7-q9-o4"><input id="cap7-q9-o4" name="cap7-q9" type="radio" value="criptografia simétrica"/><span>criptografia simétrica</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="O diferencial acumula tudo o que mudou desde o último completo, então bastam o completo e o último diferencial (quinta-feira)." data-resposta="o completo de domingo e o diferencial de quinta-feira">
+<p class="quiz-pergunta">10. Uma empresa faz backup completo no domingo e backups diferenciais de segunda a sábado. Os arquivos se perderam na sexta-feira. Para restaurar, são necessários:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap7-q10-o1"><input id="cap7-q10-o1" name="cap7-q10" type="radio" value="apenas o backup de quinta-feira"/><span>apenas o backup de quinta-feira</span></label>
+<label class="quiz-opcao" for="cap7-q10-o2"><input id="cap7-q10-o2" name="cap7-q10" type="radio" value="o completo de domingo e todos os diferenciais de segunda a quinta"/><span>o completo de domingo e todos os diferenciais de segunda a quinta</span></label>
+<label class="quiz-opcao" for="cap7-q10-o3"><input id="cap7-q10-o3" name="cap7-q10" type="radio" value="o completo de domingo e o diferencial de quinta-feira"/><span>o completo de domingo e o diferencial de quinta-feira</span></label>
+<label class="quiz-opcao" for="cap7-q10-o4"><input id="cap7-q10-o4" name="cap7-q10" type="radio" value="apenas o completo de domingo"/><span>apenas o completo de domingo</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+</section>
+<div class="chapter-navigation">
 <a class="btn-secondary" href="chapter_6.html">← Capítulo anterior</a>
 <a class="btn-primary" href="chapter_8.html">Próximo capítulo →</a>
 </div>
 </article>
 <footer class="page-footer">
-<p>Plataforma do e-book • Informática para Concursos</p>
+<p>Informática para Concursos · E-book</p>
 </footer>
 </div>
 <script src="script.js"></script>

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
@@ -18,9 +17,7 @@
 <div class="chapter-tools">
 <button class="audio-button" id="botaoNarrar" type="button">Ouvir capítulo</button>
 <button class="audio-button" id="botaoPausarNarracao" type="button">Pausar narração</button>
-<button class="btn-primary" id="botaoConcluirCapitulo" type="button">
-          Marcar capítulo como concluído
-        </button>
+<button class="btn-primary" id="botaoConcluirCapitulo" type="button">Marcar capítulo como concluído</button>
 </div>
 </div>
 <article class="reading-card">
@@ -29,169 +26,337 @@
 <div class="chapter-meta">
 <span class="chapter-status" id="statusLeitura">Status: leitura em andamento.</span>
 <span class="chapter-status" id="statusNarracao">Narração pronta para uso.</span>
-</div><section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Leitura rápida de rede</h2><div class="figure-grid four"><div><span class="figure-label">Nome</span><strong>www.site.com</strong></div><div><span class="figure-label">DNS</span><strong>Traduz</strong></div><div><span class="figure-label">IP</span><strong>Identifica</strong></div><div><span class="figure-label">Navegador</span><strong>Exibe</strong></div></div></section>
-<h2>Conceito de Internet</h2>
-<p class="chapter-intro">A Internet é uma rede mundial de computadores interconectados que utilizam o conjunto de protocolos TCP/IP para comunicação.</p>
-<p>Ela permite a troca de informações entre dispositivos localizados em qualquer parte do mundo.</p>
-<p>Entre os principais serviços da internet estão:</p>
-<ul><li>navegação em páginas web</li><li>correio eletrônico (e-mail)</li><li>transferência de arquivos</li><li>comunicação em tempo real</li><li>computação em nuvem</li></ul>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>Internet é baseada no protocolo:</p><p>➡ TCP/IP</p><p>Esse conjunto de protocolos permite a comunicação entre computadores em redes diferentes.</p></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>Algumas provas afirmam:</p><p>"HTTP é o protocolo responsável por identificar computadores na internet."</p><p>❌ Errado</p><p>Quem identifica computadores é o IP (Internet Protocol).</p></div>
+</div>
+<section class="figure-card"><h2 class="figure-title">Figura ilustrativa — O que acontece ao digitar um endereço</h2><div class="figure-grid three"><div><span class="figure-label">Nome</span><strong>www.site.gov.br</strong></div><div><span class="figure-label">DNS</span><strong>Traduz para IP</strong></div><div><span class="figure-label">Navegador</span><strong>Exibe a página</strong></div></div></section>
+
+<h2>Redes de computadores</h2>
+<p class="chapter-intro">Uma rede de computadores é um conjunto de dispositivos interligados que compartilham dados e recursos, como arquivos, impressoras e acesso à internet.</p>
+<h3>Classificação por abrangência</h3>
+<table class="comparison-table">
+<thead><tr><th>Tipo</th><th>Alcance</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>PAN (Personal Area Network)</td><td>poucos metros, ao redor de uma pessoa</td><td>celular conectado a um fone Bluetooth</td></tr>
+<tr><td>LAN (Local Area Network)</td><td>um prédio, escritório ou residência</td><td>rede de uma repartição pública</td></tr>
+<tr><td>MAN (Metropolitan Area Network)</td><td>uma cidade ou região metropolitana</td><td>rede que liga as unidades de uma prefeitura</td></tr>
+<tr><td>WAN (Wide Area Network)</td><td>países e continentes</td><td>a própria internet</td></tr>
+</tbody>
+</table>
+<p>Uma LAN sem fio é chamada de <strong>WLAN</strong>, normalmente usando Wi-Fi.</p>
+<h3>Internet, intranet e extranet</h3>
+<ul>
+<li><strong>Internet:</strong> rede mundial e pública, baseada no conjunto de protocolos TCP/IP.</li>
+<li><strong>Intranet:</strong> rede privada de uma organização que usa as <strong>mesmas tecnologias da internet</strong> (TCP/IP, HTTP, navegador), mas com acesso restrito aos colaboradores.</li>
+<li><strong>Extranet:</strong> parte da intranet liberada para usuários externos autorizados, como fornecedores e parceiros.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“A intranet não utiliza os protocolos da internet.” Errado: a intranet usa exatamente as mesmas tecnologias (TCP/IP, HTTP, navegadores). O que muda é o acesso, que é restrito. Também é possível acessar a intranet de fora, por exemplo via VPN.</p></div>
+
+<h2>Topologias de rede</h2>
+<table class="comparison-table">
+<thead><tr><th>Topologia</th><th>Como funciona</th><th>Ponto de atenção</th></tr></thead>
+<tbody>
+<tr><td>Barramento</td><td>todos ligados a um único cabo</td><td>uma falha no cabo derruba a rede</td></tr>
+<tr><td>Anel</td><td>cada dispositivo ligado ao próximo, fechando um círculo</td><td>os dados passam por vários nós</td></tr>
+<tr><td>Estrela</td><td>todos ligados a um equipamento central (switch)</td><td>é a mais usada; se o equipamento central falhar, a rede para</td></tr>
+<tr><td>Malha</td><td>vários caminhos interligando os dispositivos</td><td>alta tolerância a falhas e custo maior</td></tr>
+</tbody>
+</table>
+
+<h2>Equipamentos de rede</h2>
+<table class="comparison-table">
+<thead><tr><th>Equipamento</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td>Placa de rede (NIC)</td><td>conecta o computador à rede; cada uma tem um endereço físico único, o MAC</td></tr>
+<tr><td>Hub</td><td>repete os dados para todas as portas (equipamento antigo)</td></tr>
+<tr><td>Switch</td><td>envia os dados apenas para a porta do destinatário, usando o endereço MAC</td></tr>
+<tr><td>Roteador</td><td>interliga redes diferentes e escolhe o caminho dos pacotes usando o endereço IP</td></tr>
+<tr><td>Modem</td><td>converte o sinal da operadora (fibra, cabo, telefone) para a rede do usuário</td></tr>
+<tr><td>Ponto de acesso (access point)</td><td>cria a rede sem fio Wi-Fi</td></tr>
+</tbody>
+</table>
+<p>Padrões de conexão mais citados: <strong>Ethernet</strong> (rede cabeada, IEEE 802.3, cabo com conector RJ-45), <strong>Wi-Fi</strong> (rede sem fio, IEEE 802.11) e <strong>Bluetooth</strong> (curto alcance).</p>
+<div class="box-dica"><strong>Memorize</strong><p>Hub espalha para todos; switch entrega para quem deve receber dentro da rede local; roteador liga redes diferentes, como a sua casa e a internet.</p></div>
+
 <h2>Modelo OSI</h2>
-<p>O Modelo OSI (Open Systems Interconnection) é um modelo conceitual utilizado para entender o funcionamento das redes de computadores.</p>
-<p>Ele divide a comunicação em 7 camadas.</p>
-<div class="box-resumo"><strong>Resumo estratégico</strong><ul><li>Camadas do modelo OSI:</li><li>Física</li><li>Enlace</li><li>Rede</li><li>Transporte</li><li>Sessão</li><li>Apresentação</li><li>Aplicação</li></ul></div>
-<div class="box-dica"><strong>Memorize</strong><ul><li>Uma forma clássica de memorizar:</li><li>FERTSAA</li><li>Física</li><li>Enlace</li><li>Rede</li><li>Transporte</li><li>Sessão</li><li>Apresentação</li><li>Aplicação</li></ul></div>
+<p>O modelo OSI (Open Systems Interconnection), da ISO, é um modelo de referência que divide a comunicação em <strong>7 camadas</strong>. Ele é teórico: serve para estudar e organizar as funções da rede.</p>
+<table class="comparison-table">
+<thead><tr><th>Nº</th><th>Camada</th><th>Função</th><th>Exemplos</th></tr></thead>
+<tbody>
+<tr><td>7</td><td>Aplicação</td><td>serviços usados pelos programas</td><td>HTTP, SMTP, FTP, DNS</td></tr>
+<tr><td>6</td><td>Apresentação</td><td>formato, compressão e criptografia dos dados</td><td>codificação de caracteres, TLS</td></tr>
+<tr><td>5</td><td>Sessão</td><td>abre, mantém e encerra a comunicação</td><td>controle de diálogo</td></tr>
+<tr><td>4</td><td>Transporte</td><td>entrega fim a fim, segmentação e controle de erros</td><td>TCP, UDP</td></tr>
+<tr><td>3</td><td>Rede</td><td>endereçamento lógico e roteamento</td><td>IP, roteador</td></tr>
+<tr><td>2</td><td>Enlace</td><td>comunicação entre dispositivos vizinhos, endereço MAC</td><td>Ethernet, switch</td></tr>
+<tr><td>1</td><td>Física</td><td>transmissão dos bits pelo meio físico</td><td>cabos, conectores, sinais, hub</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>Da camada 1 para a 7: <strong>F</strong>ísica, <strong>E</strong>nlace, <strong>R</strong>ede, <strong>T</strong>ransporte, <strong>S</strong>essão, <strong>A</strong>presentação, <strong>A</strong>plicação — “<strong>FERTSAA</strong>”.</p></div>
+
 <h2>Modelo TCP/IP</h2>
-<p>Na prática, a internet utiliza o modelo TCP/IP, que possui menos camadas.</p>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>Protocolos importantes do modelo TCP/IP:</p></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>UDP não garante entrega dos pacotes.</p><p>Ele é utilizado quando velocidade é mais importante que confiabilidade.</p><ul><li>Exemplo:</li><li>streaming</li><li>jogos online</li></ul></div>
+<p>Na prática, a internet funciona com o modelo TCP/IP, que agrupa as funções em <strong>4 camadas</strong>.</p>
+<table class="comparison-table">
+<thead><tr><th>Camada TCP/IP</th><th>Equivale no OSI a</th><th>Protocolos</th></tr></thead>
+<tbody>
+<tr><td>Aplicação</td><td>Aplicação, Apresentação e Sessão</td><td>HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, SSH</td></tr>
+<tr><td>Transporte</td><td>Transporte</td><td>TCP, UDP</td></tr>
+<tr><td>Internet (rede)</td><td>Rede</td><td>IP, ICMP</td></tr>
+<tr><td>Acesso à rede (interface de rede)</td><td>Enlace e Física</td><td>Ethernet, Wi-Fi</td></tr>
+</tbody>
+</table>
+<h3>TCP x UDP</h3>
+<table class="comparison-table">
+<thead><tr><th>Característica</th><th>TCP</th><th>UDP</th></tr></thead>
+<tbody>
+<tr><td>Conexão</td><td>orientado à conexão (estabelece a conexão antes de enviar)</td><td>sem conexão</td></tr>
+<tr><td>Confiabilidade</td><td>garante a entrega e a ordem dos pacotes, reenviando os perdidos</td><td>não garante entrega nem ordem</td></tr>
+<tr><td>Velocidade</td><td>mais lento</td><td>mais rápido, com menos sobrecarga</td></tr>
+<tr><td>Uso típico</td><td>páginas web, e-mail, transferência de arquivos</td><td>streaming ao vivo, jogos online, chamadas de voz, DNS</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O UDP garante a entrega dos pacotes.” Errado: quem garante é o TCP. O UDP é usado quando a velocidade importa mais do que a confiabilidade.</p></div>
+
 <h2>Endereçamento IP</h2>
-<p>Cada dispositivo conectado à rede possui um endereço IP.</p>
-<p>Esse endereço identifica o dispositivo na rede.</p>
-<h3>IPv4</h3>
-<p>Formato:</p>
-<ul><li>192.168.0.1</li><li>Características:</li><li>32 bits</li><li>cerca de 4 bilhões de endereços</li><li>IPv6</li><li>Formato:</li></ul>
-<h3>2001:0db8:85a3:0000:0000:8a2e:0370:7334</h3>
-<p>Características:</p>
-<ul><li>128 bits</li><li>número muito maior de endereços</li></ul>
-<div class="box-resumo"><strong>Resumo estratégico</strong></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>Algumas questões afirmam:</p><p>"IPv6 foi criado para substituir o TCP."</p><p><strong>❌ Errado.</strong></p><p>IPv6 substitui IPv4, não TCP.</p></div>
-<h2>DNS (Domain Name System)</h2>
-<p>O DNS é o sistema responsável por traduzir nomes de domínio em endereços IP.</p>
-<p>Exemplo:</p>
-<ul><li>www.google.com → 142.250.190.78</li></ul>
-<p>Sem DNS, seria necessário acessar os sites digitando o IP.</p>
-<div class="box-resumo"><strong>Resumo estratégico</strong><ul><li>DNS significa:</li><li>Domain Name System</li><li>Função:</li><li>traduz nome de domínio em IP</li></ul></div>
-<h2>Protocolos da Internet</h2>
-<p>A internet utiliza diversos protocolos.</p>
-<h3>HTTP</h3>
-<p>Significa:</p>
-<ul><li>HyperText Transfer Protocol</li><li>Utilizado para:</li><li>acessar páginas web</li><li>HTTPS</li></ul>
-<p>Versão segura do HTTP.</p>
-<p>Utiliza criptografia SSL/TLS.</p>
-<h3>FTP</h3>
-<p>Utilizado para:</p>
-<ul><li>transferência de arquivos</li><li>SSH</li><li>Utilizado para:</li><li>acesso remoto seguro a servidores</li></ul>
-<h3>Protocolos de Email</h3>
-<h3>POP3 vs IMAP</h3>
-<div class="box-prova"><strong>Pegadinha de banca</strong><ul><li>A banca costuma trocar:</li><li>SMTP</li><li>POP3</li><li>Memorização:</li><li>📤 SMTP envia</li><li>📥 POP3 recebe</li></ul></div>
-<h2>Navegadores (Browsers)</h2>
-<p>Os navegadores são programas utilizados para acessar páginas da web.</p>
-<p>Principais navegadores:</p>
-<ul><li>Google Chrome</li><li>Microsoft Edge</li><li>Mozilla Firefox</li><li>Safari</li></ul>
-<h3>Funcionalidades dos Navegadores</h3>
-<p>Entre as funcionalidades estão:</p>
-<ul><li>navegação por abas</li><li>histórico de navegação</li><li>favoritos</li><li>extensões</li></ul>
-<h3>Mecanismos de Busca</h3>
-<p>Motores de busca permitem encontrar informações na internet.</p>
-<p>Exemplos:</p>
-<ul><li>Google</li><li>Bing</li><li>DuckDuckGo</li></ul>
-<div class="box-resumo"><strong>Resumo estratégico</strong><p>Navegador ≠ mecanismo de busca.</p></div>
-<div class="box-prova"><strong>Pegadinha de banca</strong><p>Pergunta comum:</p><p>"Google é um navegador."</p><p><strong>❌ Errado.</strong></p><p>Google é mecanismo de busca.</p><p>O navegador é Chrome.</p></div>
-<h2>Conclusão do Capítulo</h2>
-<p>Os temas mais cobrados em concursos são:</p>
-<ul><li>modelo OSI</li><li>modelo TCP/IP</li><li>protocolos de internet</li><li>DNS</li></ul>
-<h3>IPv4 vs IPv6</h3>
-<p>navegadores</p>
-<p>Dominar esses conceitos é essencial para resolver questões de informática.</p>
+<p>Cada dispositivo conectado a uma rede TCP/IP recebe um <strong>endereço IP</strong>, que o identifica e permite que os pacotes cheguem ao destino.</p>
+<table class="comparison-table">
+<thead><tr><th>Característica</th><th>IPv4</th><th>IPv6</th></tr></thead>
+<tbody>
+<tr><td>Tamanho</td><td>32 bits</td><td>128 bits</td></tr>
+<tr><td>Formato</td><td>4 números decimais de 0 a 255, separados por pontos</td><td>8 grupos hexadecimais separados por dois-pontos</td></tr>
+<tr><td>Exemplo</td><td>192.168.0.1</td><td>2001:0db8:85a3:0000:0000:8a2e:0370:7334</td></tr>
+<tr><td>Quantidade de endereços</td><td>cerca de 4,3 bilhões (esgotados)</td><td>praticamente ilimitada</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>IP público:</strong> visível na internet, fornecido pelo provedor.</li>
+<li><strong>IP privado:</strong> usado dentro de redes locais e não roteado na internet. Faixas: 10.x.x.x, 172.16.x.x a 172.31.x.x e 192.168.x.x.</li>
+<li><strong>NAT:</strong> recurso do roteador que permite que vários dispositivos com IP privado compartilhem um único IP público.</li>
+<li><strong>DHCP:</strong> protocolo que distribui endereços IP automaticamente para os dispositivos da rede.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O IPv6 foi criado para substituir o TCP.” Errado: o IPv6 substitui o <strong>IPv4</strong>. Outra armadilha: o número 256 não pode aparecer em um IPv4, porque cada parte vai de 0 a 255.</p></div>
+
+<h2>DNS e URL</h2>
+<p>O <strong>DNS (Domain Name System)</strong> traduz nomes de domínio, fáceis de lembrar, em endereços IP. Sem ele, seria preciso digitar o IP de cada site.</p>
+<p>O endereço completo de um recurso na web é a <strong>URL</strong>. Veja suas partes:</p>
+<div class="pseudocode-card">
+<h3>Anatomia de uma URL</h3>
+<pre>https://www.gov.br/receitafederal/pt-br
+
+https://         → protocolo
+www.gov.br       → nome do domínio (resolvido pelo DNS)
+.br              → domínio de primeiro nível do Brasil
+/receitafederal/pt-br → caminho até a página</pre>
+</div>
+<p>Alguns domínios brasileiros: <span class="inline-code">.gov.br</span> (governo), <span class="inline-code">.edu.br</span> (ensino), <span class="inline-code">.com.br</span> (comercial), <span class="inline-code">.org.br</span> (organizações sem fins lucrativos), <span class="inline-code">.jus.br</span> (Judiciário).</p>
+
+<h2>Protocolos da camada de aplicação</h2>
+<table class="comparison-table">
+<thead><tr><th>Protocolo</th><th>Função</th><th>Porta padrão</th></tr></thead>
+<tbody>
+<tr><td>HTTP</td><td>transferência de páginas web, sem criptografia</td><td>80</td></tr>
+<tr><td>HTTPS</td><td>HTTP com criptografia TLS (o cadeado do navegador)</td><td>443</td></tr>
+<tr><td>FTP</td><td>transferência de arquivos</td><td>20 e 21</td></tr>
+<tr><td>SSH</td><td>acesso remoto seguro, com criptografia</td><td>22</td></tr>
+<tr><td>Telnet</td><td>acesso remoto sem criptografia (inseguro)</td><td>23</td></tr>
+<tr><td>SMTP</td><td>envio de e-mails</td><td>25 (e 587 para envio autenticado)</td></tr>
+<tr><td>POP3</td><td>recebimento de e-mails, baixando-os para o dispositivo</td><td>110 (995 com criptografia)</td></tr>
+<tr><td>IMAP</td><td>acesso a e-mails mantidos e sincronizados no servidor</td><td>143 (993 com criptografia)</td></tr>
+<tr><td>DNS</td><td>tradução de nomes em IPs</td><td>53</td></tr>
+<tr><td>DHCP</td><td>atribuição automática de IP</td><td>67 e 68</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>SMTP = <strong>S</strong>ua <strong>M</strong>ensagem <strong>T</strong>á <strong>P</strong>artindo (envio). POP3 e IMAP servem para receber.</p></div>
+
+<h2>Correio eletrônico</h2>
+<h3>POP3 x IMAP</h3>
+<ul>
+<li><strong>POP3:</strong> baixa as mensagens para o dispositivo e, na configuração padrão, as remove do servidor. É útil para guardar e-mails só em um computador.</li>
+<li><strong>IMAP:</strong> as mensagens ficam no servidor e o estado delas (lida, apagada, pasta) é sincronizado. É o ideal para quem acessa o mesmo e-mail pelo celular e pelo computador.</li>
+</ul>
+<h3>Campos da mensagem</h3>
+<ul>
+<li><strong>Para:</strong> destinatários principais.</li>
+<li><strong>Cc (com cópia):</strong> destinatários em cópia. Todos veem quem foi copiado.</li>
+<li><strong>Cco (com cópia oculta):</strong> destinatários ocultos. Os demais destinatários não veem quem recebeu em Cco.</li>
+</ul>
+<p>O e-mail pode ser lido por um <strong>webmail</strong> (no navegador, como o Gmail na web) ou por um <strong>cliente de e-mail</strong> instalado, como Outlook e Thunderbird.</p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>A banca troca os papéis: SMTP <strong>envia</strong>; POP3 e IMAP <strong>recebem</strong>. E quem está em Cco vê os destinatários dos campos Para e Cc, mas ninguém vê quem está em Cco.</p></div>
+
+<h2>Navegadores</h2>
+<p>Navegadores (browsers) são programas para acessar páginas da web: Google Chrome, Microsoft Edge, Mozilla Firefox e Safari.</p>
+<h3>Recursos mais cobrados</h3>
+<ul>
+<li><strong>Histórico:</strong> registro das páginas visitadas.</li>
+<li><strong>Favoritos:</strong> páginas salvas para acesso rápido.</li>
+<li><strong>Cookies:</strong> pequenos arquivos que os sites gravam no navegador para lembrar login, preferências e itens do carrinho. Também podem ser usados para rastrear o usuário.</li>
+<li><strong>Cache:</strong> cópias de partes das páginas guardadas localmente para carregar mais rápido.</li>
+<li><strong>Extensões:</strong> complementos que adicionam funções ao navegador.</li>
+<li><strong>Navegação anônima/privativa</strong> (anônima no Chrome, InPrivate no Edge, privativa no Firefox): ao fechar a janela, o navegador apaga histórico, cookies e dados de formulários daquela sessão.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“A navegação anônima torna o usuário invisível na internet.” Errado: o provedor de internet, a rede da empresa e os sites visitados continuam podendo identificar o acesso. Os downloads e os favoritos criados também permanecem salvos.</p></div>
+<h3>Atalhos dos navegadores</h3>
+<table class="comparison-table">
+<thead><tr><th>Atalho</th><th>Ação</th></tr></thead>
+<tbody>
+<tr><td>Ctrl + T</td><td>nova aba</td></tr>
+<tr><td>Ctrl + W</td><td>fecha a aba atual</td></tr>
+<tr><td>Ctrl + Shift + T</td><td>reabre a última aba fechada</td></tr>
+<tr><td>Ctrl + Shift + N</td><td>janela anônima no Chrome e InPrivate no Edge</td></tr>
+<tr><td>Ctrl + Shift + P</td><td>janela privativa no Firefox</td></tr>
+<tr><td>Ctrl + H</td><td>histórico</td></tr>
+<tr><td>Ctrl + J</td><td>downloads</td></tr>
+<tr><td>Ctrl + D</td><td>adiciona a página aos favoritos</td></tr>
+<tr><td>Ctrl + F</td><td>localiza texto na página</td></tr>
+<tr><td>F5</td><td>recarrega a página</td></tr>
+</tbody>
+</table>
+<div class="box-resumo"><strong>Resumo estratégico</strong><p>O cadeado e o HTTPS indicam que a conexão é criptografada, não que o site é confiável. Sites de phishing também podem usar HTTPS.</p></div>
+
+<h2>Mecanismos de busca</h2>
+<p>Mecanismos de busca (Google, Bing, DuckDuckGo) indexam páginas da web e permitem encontrá-las por palavras-chave. Navegador e buscador são coisas diferentes: o Chrome é um navegador, o Google é um buscador.</p>
+<table class="comparison-table">
+<thead><tr><th>Operador</th><th>Efeito</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>"aspas"</td><td>busca a frase exata</td><td>"concurso público"</td></tr>
+<tr><td>- (menos)</td><td>exclui um termo</td><td>jaguar -carro</td></tr>
+<tr><td>site:</td><td>busca apenas em um site ou domínio</td><td>edital site:gov.br</td></tr>
+<tr><td>filetype:</td><td>busca um tipo de arquivo</td><td>edital filetype:pdf</td></tr>
+<tr><td>OR</td><td>um termo ou outro</td><td>Cebraspe OR FGV</td></tr>
+<tr><td>* (asterisco)</td><td>curinga para palavras desconhecidas</td><td>"o * da informação"</td></tr>
+<tr><td>intitle:</td><td>termo no título da página</td><td>intitle:concurso</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O Google é um navegador.” Errado: Google é mecanismo de busca; o navegador da empresa é o Chrome.</p></div>
+
+<h2>Conclusão do capítulo</h2>
+<p>Os temas de redes e internet mais cobrados são:</p>
+<ul>
+<li>tipos de rede, intranet e extranet;</li>
+<li>equipamentos (switch x roteador);</li>
+<li>modelos OSI e TCP/IP, TCP x UDP;</li>
+<li>IPv4 x IPv6, DNS e DHCP;</li>
+<li>protocolos e portas, principalmente os de e-mail;</li>
+<li>recursos dos navegadores e operadores de busca.</li>
+</ul>
 <section class="quiz-section" data-capitulo="3">
 <div class="quiz-header">
-<span class="chapter-badge">Desafio rápido</span>
+<span class="chapter-badge">Questões do capítulo</span>
 <h2>Teste seu entendimento</h2>
-<p>Responda às questões abaixo e descubra na hora se a sua escolha está correta.</p>
+<p>São 10 questões no estilo das bancas. Responda cada uma e veja na hora a correção comentada.</p>
 </div>
-<article class="quiz-card" data-explicacao="O IP identifica os dispositivos; o DNS apenas traduz nomes para endereços IP." data-resposta="IP">
-<p class="quiz-pergunta">1. Qual protocolo identifica dispositivos na rede?</p>
+<article class="quiz-card" data-explicacao="O IP (Internet Protocol) atribui endereços aos dispositivos e permite rotear os pacotes até o destino." data-resposta="IP">
+<p class="quiz-pergunta">1. Qual protocolo identifica e endereça os dispositivos em uma rede TCP/IP?</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap3-q1-63638">
-<input id="cap3-q1-63638" name="cap3-q1" type="radio" value="HTTP"/>
-<span>HTTP</span>
-</label>
-
-<label class="quiz-opcao" for="cap3-q1-11775">
-<input id="cap3-q1-11775" name="cap3-q1" type="radio" value="IP"/>
-<span>IP</span>
-</label>
-
-<label class="quiz-opcao" for="cap3-q1-99047">
-<input id="cap3-q1-99047" name="cap3-q1" type="radio" value="FTP"/>
-<span>FTP</span>
-</label>
-
-<label class="quiz-opcao" for="cap3-q1-4958">
-<input id="cap3-q1-4958" name="cap3-q1" type="radio" value="DNS"/>
-<span>DNS</span>
-</label>
+<label class="quiz-opcao" for="cap3-q1-o1"><input id="cap3-q1-o1" name="cap3-q1" type="radio" value="IP"/><span>IP</span></label>
+<label class="quiz-opcao" for="cap3-q1-o2"><input id="cap3-q1-o2" name="cap3-q1" type="radio" value="SMTP"/><span>SMTP</span></label>
+<label class="quiz-opcao" for="cap3-q1-o3"><input id="cap3-q1-o3" name="cap3-q1" type="radio" value="FTP"/><span>FTP</span></label>
+<label class="quiz-opcao" for="cap3-q1-o4"><input id="cap3-q1-o4" name="cap3-q1" type="radio" value="HTTP"/><span>HTTP</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article><article class="quiz-card" data-explicacao="UDP não garante entrega, mas é rápido e útil em streaming e jogos online." data-resposta="UDP">
-<p class="quiz-pergunta">2. Qual protocolo é mais usado quando a velocidade é mais importante que a confiabilidade?</p>
+</article>
+<article class="quiz-card" data-explicacao="O UDP não estabelece conexão nem reenvia pacotes perdidos, o que o torna mais rápido. O TCP garante a entrega." data-resposta="UDP">
+<p class="quiz-pergunta">2. Qual protocolo de transporte é preferido quando a velocidade é mais importante que a confiabilidade, como em chamadas de vídeo ao vivo?</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap3-q2-82605">
-<input id="cap3-q2-82605" name="cap3-q2" type="radio" value="TCP"/>
-<span>TCP</span>
-</label>
-
-<label class="quiz-opcao" for="cap3-q2-28940">
-<input id="cap3-q2-28940" name="cap3-q2" type="radio" value="UDP"/>
-<span>UDP</span>
-</label>
-
-<label class="quiz-opcao" for="cap3-q2-12742">
-<input id="cap3-q2-12742" name="cap3-q2" type="radio" value="IMAP"/>
-<span>IMAP</span>
-</label>
-
-<label class="quiz-opcao" for="cap3-q2-8399">
-<input id="cap3-q2-8399" name="cap3-q2" type="radio" value="SSH"/>
-<span>SSH</span>
-</label>
+<label class="quiz-opcao" for="cap3-q2-o1"><input id="cap3-q2-o1" name="cap3-q2" type="radio" value="HTTPS"/><span>HTTPS</span></label>
+<label class="quiz-opcao" for="cap3-q2-o2"><input id="cap3-q2-o2" name="cap3-q2" type="radio" value="IMAP"/><span>IMAP</span></label>
+<label class="quiz-opcao" for="cap3-q2-o3"><input id="cap3-q2-o3" name="cap3-q2" type="radio" value="TCP"/><span>TCP</span></label>
+<label class="quiz-opcao" for="cap3-q2-o4"><input id="cap3-q2-o4" name="cap3-q2" type="radio" value="UDP"/><span>UDP</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article><article class="quiz-card" data-explicacao="Navegador é o programa de acesso; mecanismo de busca é o serviço de pesquisa." data-resposta="Chrome é navegador; Google é mecanismo de busca">
-<p class="quiz-pergunta">3. Qual alternativa mostra corretamente navegador e mecanismo de busca?</p>
+</article>
+<article class="quiz-card" data-explicacao="Intranet usa TCP/IP, HTTP e navegadores, mas é restrita à organização. Extranet libera parte dela para parceiros externos." data-resposta="intranet">
+<p class="quiz-pergunta">3. Uma rede privada de uma empresa, que utiliza as mesmas tecnologias da internet mas com acesso restrito aos funcionários, é chamada de:</p>
 <div class="quiz-opcoes">
-<label class="quiz-opcao" for="cap3-q3-80569">
-<input id="cap3-q3-80569" name="cap3-q3" type="radio" value="Google é navegador; Chrome é busca"/>
-<span>Google é navegador; Chrome é busca</span>
-</label>
-
-<label class="quiz-opcao" for="cap3-q3-53202">
-<input id="cap3-q3-53202" name="cap3-q3" type="radio" value="Chrome é navegador; Google é mecanismo de busca"/>
-<span>Chrome é navegador; Google é mecanismo de busca</span>
-</label>
-
-<label class="quiz-opcao" for="cap3-q3-40518">
-<input id="cap3-q3-40518" name="cap3-q3" type="radio" value="Firefox é mecanismo de busca; Bing é navegador"/>
-<span>Firefox é mecanismo de busca; Bing é navegador</span>
-</label>
-
-<label class="quiz-opcao" for="cap3-q3-60937">
-<input id="cap3-q3-60937" name="cap3-q3" type="radio" value="Edge é protocolo; Google é navegador"/>
-<span>Edge é protocolo; Google é navegador</span>
-</label>
+<label class="quiz-opcao" for="cap3-q3-o1"><input id="cap3-q3-o1" name="cap3-q3" type="radio" value="extranet"/><span>extranet</span></label>
+<label class="quiz-opcao" for="cap3-q3-o2"><input id="cap3-q3-o2" name="cap3-q3" type="radio" value="intranet"/><span>intranet</span></label>
+<label class="quiz-opcao" for="cap3-q3-o3"><input id="cap3-q3-o3" name="cap3-q3" type="radio" value="WAN pública"/><span>WAN pública</span></label>
+<label class="quiz-opcao" for="cap3-q3-o4"><input id="cap3-q3-o4" name="cap3-q3" type="radio" value="internet"/><span>internet</span></label>
 </div>
-<div class="quiz-acoes">
-<button class="btn-primary quiz-validar" type="button">Responder</button>
-<button class="btn-secondary quiz-limpar" type="button">Limpar</button>
-</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
 <p aria-live="polite" class="quiz-feedback"></p>
-</article></section><div class="chapter-navigation">
+</article>
+<article class="quiz-card" data-explicacao="O roteador opera na camada de rede e encaminha pacotes entre redes diferentes. O switch atua dentro da rede local, usando o endereço MAC." data-resposta="Roteador">
+<p class="quiz-pergunta">4. Qual equipamento interliga redes diferentes e escolhe o caminho dos pacotes com base no endereço IP?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap3-q4-o1"><input id="cap3-q4-o1" name="cap3-q4" type="radio" value="Hub"/><span>Hub</span></label>
+<label class="quiz-opcao" for="cap3-q4-o2"><input id="cap3-q4-o2" name="cap3-q4" type="radio" value="Switch"/><span>Switch</span></label>
+<label class="quiz-opcao" for="cap3-q4-o3"><input id="cap3-q4-o3" name="cap3-q4" type="radio" value="Roteador"/><span>Roteador</span></label>
+<label class="quiz-opcao" for="cap3-q4-o4"><input id="cap3-q4-o4" name="cap3-q4" type="radio" value="Placa de som"/><span>Placa de som</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="TCP e UDP são protocolos da camada de transporte (camada 4), responsáveis pela entrega fim a fim." data-resposta="Transporte">
+<p class="quiz-pergunta">5. No modelo OSI, em qual camada atuam os protocolos TCP e UDP?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap3-q5-o1"><input id="cap3-q5-o1" name="cap3-q5" type="radio" value="Aplicação"/><span>Aplicação</span></label>
+<label class="quiz-opcao" for="cap3-q5-o2"><input id="cap3-q5-o2" name="cap3-q5" type="radio" value="Rede"/><span>Rede</span></label>
+<label class="quiz-opcao" for="cap3-q5-o3"><input id="cap3-q5-o3" name="cap3-q5" type="radio" value="Transporte"/><span>Transporte</span></label>
+<label class="quiz-opcao" for="cap3-q5-o4"><input id="cap3-q5-o4" name="cap3-q5" type="radio" value="Enlace"/><span>Enlace</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="O IPv6 tem 128 bits, escritos em 8 grupos hexadecimais. O IPv4 tem 32 bits." data-resposta="128 bits">
+<p class="quiz-pergunta">6. Qual é o tamanho de um endereço IPv6?</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap3-q6-o1"><input id="cap3-q6-o1" name="cap3-q6" type="radio" value="64 bits"/><span>64 bits</span></label>
+<label class="quiz-opcao" for="cap3-q6-o2"><input id="cap3-q6-o2" name="cap3-q6" type="radio" value="128 bits"/><span>128 bits</span></label>
+<label class="quiz-opcao" for="cap3-q6-o3"><input id="cap3-q6-o3" name="cap3-q6" type="radio" value="256 bits"/><span>256 bits</span></label>
+<label class="quiz-opcao" for="cap3-q6-o4"><input id="cap3-q6-o4" name="cap3-q6" type="radio" value="32 bits"/><span>32 bits</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="O DHCP distribui IPs automaticamente. O DNS traduz nomes de domínio em IPs." data-resposta="DHCP">
+<p class="quiz-pergunta">7. O protocolo responsável por atribuir automaticamente endereços IP aos dispositivos de uma rede é o:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap3-q7-o1"><input id="cap3-q7-o1" name="cap3-q7" type="radio" value="DHCP"/><span>DHCP</span></label>
+<label class="quiz-opcao" for="cap3-q7-o2"><input id="cap3-q7-o2" name="cap3-q7" type="radio" value="FTP"/><span>FTP</span></label>
+<label class="quiz-opcao" for="cap3-q7-o3"><input id="cap3-q7-o3" name="cap3-q7" type="radio" value="SSH"/><span>SSH</span></label>
+<label class="quiz-opcao" for="cap3-q7-o4"><input id="cap3-q7-o4" name="cap3-q7" type="radio" value="DNS"/><span>DNS</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="O IMAP mantém as mensagens no servidor e sincroniza o estado entre dispositivos. O POP3 baixa as mensagens, e o SMTP serve para enviar." data-resposta="IMAP">
+<p class="quiz-pergunta">8. Um analista de um órgão público deseja ler seus e-mails no celular e no computador, mantendo as mensagens e as pastas sincronizadas no servidor. O protocolo mais adequado é o:</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap3-q8-o1"><input id="cap3-q8-o1" name="cap3-q8" type="radio" value="HTTP"/><span>HTTP</span></label>
+<label class="quiz-opcao" for="cap3-q8-o2"><input id="cap3-q8-o2" name="cap3-q8" type="radio" value="SMTP"/><span>SMTP</span></label>
+<label class="quiz-opcao" for="cap3-q8-o3"><input id="cap3-q8-o3" name="cap3-q8" type="radio" value="POP3"/><span>POP3</span></label>
+<label class="quiz-opcao" for="cap3-q8-o4"><input id="cap3-q8-o4" name="cap3-q8" type="radio" value="IMAP"/><span>IMAP</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="Cco é a cópia oculta: ninguém vê quem recebeu em Cco." data-resposta="Certo">
+<p class="quiz-pergunta">9. Julgue o item: “Ao enviar um e-mail, os destinatários colocados no campo Cco não são visíveis para os demais destinatários”.</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap3-q9-o1"><input id="cap3-q9-o1" name="cap3-q9" type="radio" value="Certo"/><span>Certo</span></label>
+<label class="quiz-opcao" for="cap3-q9-o2"><input id="cap3-q9-o2" name="cap3-q9" type="radio" value="Errado"/><span>Errado</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+<article class="quiz-card" data-explicacao="A navegação anônima apenas não guarda histórico, cookies e dados da sessão no computador. Provedor, rede e sites continuam podendo identificar o acesso." data-resposta="Errado">
+<p class="quiz-pergunta">10. Julgue o item: “A navegação anônima do Chrome impede que o provedor de internet identifique os sites acessados”.</p>
+<div class="quiz-opcoes">
+<label class="quiz-opcao" for="cap3-q10-o1"><input id="cap3-q10-o1" name="cap3-q10" type="radio" value="Certo"/><span>Certo</span></label>
+<label class="quiz-opcao" for="cap3-q10-o2"><input id="cap3-q10-o2" name="cap3-q10" type="radio" value="Errado"/><span>Errado</span></label>
+</div>
+<div class="quiz-acoes"><button class="btn-primary quiz-validar" type="button">Responder</button><button class="btn-secondary quiz-limpar" type="button">Limpar</button></div>
+<p aria-live="polite" class="quiz-feedback"></p>
+</article>
+</section>
+<div class="chapter-navigation">
 <a class="btn-secondary" href="chapter_2.html">← Capítulo anterior</a>
 <a class="btn-primary" href="chapter_4.html">Próximo capítulo →</a>
 </div>
 </article>
 <footer class="page-footer">
-<p>Plataforma do e-book • Informática para Concursos</p>
+<p>Informática para Concursos · E-book</p>
 </footer>
 </div>
 <script src="script.js"></script>
