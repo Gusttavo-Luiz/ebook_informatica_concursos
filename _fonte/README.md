@@ -90,3 +90,19 @@ alternativas. Para o sorteio variar bastante, mantenha pelo menos 5
 questões por capítulo no banco; quanto mais questões, mais variado fica
 o simulado. A quantidade por capítulo e o tempo de prova ficam no início
 do `simulado.js` (`QUESTOES_POR_CAPITULO` e `DURACAO_SEGUNDOS`).
+
+## Progresso do aluno
+
+A página `progresso.html` lê o que fica guardado no navegador do aluno
+(`localStorage`), sem servidor nem login. Por isso o progresso vale só
+para aquele navegador e dispositivo. As chaves usadas são:
+
+| Chave | Gravada por | Conteúdo |
+|---|---|---|
+| `capitulo-concluido-capituloN` | botão “Marcar capítulo como concluído” | `"true"` ou `"false"` |
+| `capitulo-visitado-capituloN` | abrir o capítulo | data do último acesso |
+| `quiz-resultado-capituloN` | responder às questões do capítulo | acerto ou erro da última resposta de cada questão |
+| `simulado-ultimo-resultado` | finalizar o simulado | nota da última tentativa |
+| `simulado-historico` | finalizar o simulado | últimas 10 tentativas, com acertos por capítulo |
+
+O botão “Apagar meu progresso” remove todas essas chaves.

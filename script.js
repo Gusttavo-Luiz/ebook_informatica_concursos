@@ -5,7 +5,43 @@ document.addEventListener("DOMContentLoaded", () => {
   iniciarControleDeLeitura();
   iniciarQuizDosCapitulos();
   validarLinksDosCapitulos();
+  marcarCapitulosConcluidos();
 });
+
+// Armazenamento local: as leituras e gravações ficam protegidas porque o
+// navegador pode bloquear o acesso (janela anônima, dados bloqueados).
+function lerArmazenamento(chave) {
+  try {
+    return localStorage.getItem(chave);
+  } catch (erro) {
+    return null;
+  }
+}
+
+function lerArmazenamentoJSON(chave, padrao) {
+  try {
+    const valor = JSON.parse(lerArmazenamento(chave));
+    return valor === null ? padrao : valor;
+  } catch (erro) {
+    return padrao;
+  }
+}
+
+function gravarArmazenamento(chave, valor) {
+  try {
+    localStorage.setItem(chave, valor);
+  } catch (erro) {
+    // Sem acesso ao armazenamento: o progresso só não fica salvo.
+  }
+}
+
+function removerArmazenamento(chave) {
+  try {
+    localStorage.removeItem(chave);
+  } catch (erro) {
+    // Sem acesso ao armazenamento: não há o que apagar.
+  }
+}
 
 function iniciarBarraDeProgresso() {
   const barra = document.getElementById("progressBar");
@@ -239,9 +275,10 @@ function iniciarControleDeLeitura() {
   }
 
   const chave = `capitulo-concluido-${nomeDaPagina}`;
+  gravarArmazenamento(`capitulo-visitado-${nomeDaPagina}`, new Date().toISOString());
 
   const atualizarStatus = () => {
-    const concluido = localStorage.getItem(chave) === "true";
+    const concluido = lerArmazenamento(chave) === "true";
 
     if (concluido) {
       statusLeitura.textContent = "Status: capítulo concluído.";
@@ -256,7 +293,7 @@ function iniciarControleDeLeitura() {
 
   botaoConcluir.addEventListener("click", () => {
     const estaConcluido = botaoConcluir.dataset.concluido === "true";
-    localStorage.setItem(chave, String(!estaConcluido));
+    gravarArmazenamento(chave, String(!estaConcluido));
     atualizarStatus();
   });
 
@@ -275,8 +312,19 @@ function validarLinksDosCapitulos() {
 
 
 function iniciarQuizDosCapitulos() {
-  const quizzes = document.querySelectorAll(".quiz-card");
+  const quizzes = document.querySelectorAll(".quiz-card[data-resposta]");
   if (!quizzes.length) return;
+
+  const chaveResultados = `quiz-resultado-${document.body.dataset.pagina}`;
+  const registrarResultado = (indice, acertou) => {
+    const resultados = lerArmazenamentoJSON(chaveResultados, {});
+    const respostas = resultados.respostas || {};
+    respostas[indice] = acertou;
+    gravarArmazenamento(
+      chaveResultados,
+      JSON.stringify({ total: quizzes.length, respostas, data: new Date().toISOString() })
+    );
+  };
 
   quizzes.forEach((quiz, indice) => {
     const botaoValidar = quiz.querySelector(".quiz-validar");
@@ -302,6 +350,7 @@ function iniciarQuizDosCapitulos() {
       }
 
       const acertou = selecionada.value === respostaCorreta;
+      registrarResultado(indice, acertou);
 
       if (acertou) {
         quiz.classList.add("quiz-correto");
@@ -322,5 +371,18 @@ function iniciarQuizDosCapitulos() {
       feedback.textContent = "";
       feedback.className = "quiz-feedback";
     });
+  });
+}
+
+function marcarCapitulosConcluidos() {
+  document.querySelectorAll(".chapter-card[data-link]").forEach((card) => {
+    const numero = card.dataset.link.match(/chapter_(\d+)\.html/);
+    if (!numero || lerArmazenamento(`capitulo-concluido-capitulo${numero[1]}`) !== "true") return;
+
+    const selo = document.createElement("span");
+    selo.className = "chapter-concluido";
+    selo.textContent = "Concluído";
+    card.querySelector(".chapter-number").after(selo);
+    card.classList.add("chapter-card-concluido");
   });
 }

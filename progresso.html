@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meu progresso | Informática para Concursos</title>
+<meta content="Acompanhe os capítulos concluídos, as questões acertadas e o histórico do simulado no e-book Informática para Concursos." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body data-pagina="progresso">
+<div aria-hidden="true" class="progress-bar" id="progressBar"></div>
+<header class="site-header">
+<nav aria-label="Navegação principal" class="navbar container">
+<a aria-label="Informática para Concursos: página inicial" class="logo" href="index.html"><span aria-hidden="true" class="logo-mark">IC</span><span class="logo-nome">Informática <span>para Concursos</span></span></a>
+<div class="navbar-actions">
+<a class="nav-link" href="simulado.html">Simulado</a>
+<a aria-current="page" class="nav-link" href="progresso.html">Progresso</a>
+<a class="nav-button" href="index.html#capitulos">Capítulos</a>
+</div>
+</nav>
+</header>
+
+<main class="container progresso-page">
+<span class="tag">Meu progresso</span>
+<h1>Acompanhe seus estudos</h1>
+<p class="simulado-lead">Veja os capítulos que você já concluiu, como foi nas questões e a evolução no simulado. O progresso fica salvo neste navegador, neste dispositivo.</p>
+
+<div class="progresso-resumo">
+<article class="progresso-indicador">
+<span class="progresso-indicador-rotulo">Capítulos concluídos</span>
+<strong id="resumoCapitulos">0 de 8</strong>
+<div aria-hidden="true" class="resultado-barra"><span id="barraCapitulos"></span></div>
+<small id="resumoCapitulosDetalhe"></small>
+</article>
+<article class="progresso-indicador">
+<span class="progresso-indicador-rotulo">Questões dos capítulos</span>
+<strong id="resumoQuestoes">0 de 80</strong>
+<div aria-hidden="true" class="resultado-barra"><span id="barraQuestoes"></span></div>
+<small id="resumoQuestoesDetalhe"></small>
+</article>
+<article class="progresso-indicador">
+<span class="progresso-indicador-rotulo">Simulado final</span>
+<strong id="resumoSimulado">—</strong>
+<div aria-hidden="true" class="resultado-barra"><span id="barraSimulado"></span></div>
+<small id="resumoSimuladoDetalhe"></small>
+</article>
+</div>
+
+<div class="simulado-chamada progresso-proximo">
+<div>
+<span class="section-tag">Próximo passo</span>
+<h2 id="proximoTitulo">Comece pelo Capítulo 1</h2>
+<p id="proximoTexto"></p>
+</div>
+<a class="cta-button" href="chapter_1.html" id="proximoLink">Começar</a>
+</div>
+
+<section class="progresso-secao">
+<h2>Capítulos</h2>
+<div class="progresso-capitulos" id="listaCapitulos"></div>
+</section>
+
+<section class="progresso-secao">
+<h2>Histórico do simulado</h2>
+<div id="historicoSimulado"></div>
+</section>
+
+<section class="progresso-secao progresso-apagar">
+<h2>Apagar progresso</h2>
+<p>Remove deste navegador os capítulos concluídos, as respostas das questões e o histórico do simulado. Não é possível desfazer.</p>
+<button class="btn-secondary" id="botaoApagarProgresso" type="button">Apagar meu progresso</button>
+</section>
+</main>
+<footer class="page-footer">
+<p>Informática para Concursos · E-book</p>
+</footer>
+<script src="script.js"></script>
+<script src="simulado-dados.js"></script>
+<script src="progresso.js"></script>
+</body>
+</html>
