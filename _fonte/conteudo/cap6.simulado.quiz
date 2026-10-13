@@ -1,0 +1,32 @@
+? Um provedor oferece um ambiente pronto, com sistema operacional, banco de dados e ambiente de execução, onde desenvolvedores apenas publicam o código de suas aplicações. Esse modelo é o:
+- IaaS
+* PaaS
+- SaaS
+- nuvem comunitária
+= No PaaS o provedor cuida da plataforma; o cliente cuida apenas da aplicação e dos dados.
+
+? A característica da nuvem em que o uso dos recursos é monitorado e cobrado conforme o consumo é chamada de:
+- elasticidade rápida
+- amplo acesso pela rede
+* serviço medido
+- autoatendimento sob demanda
+= Serviço medido é o modelo “pague pelo que usar”, com o consumo monitorado pelo provedor.
+
+? Uma nuvem híbrida é aquela que:
+* combina recursos de nuvem pública e de nuvem privada
+- é usada exclusivamente por uma única organização
+- só pode ser acessada sem internet
+- é compartilhada por organizações com interesses comuns
+= A nuvem híbrida combina pública e privada. A privada é exclusiva de uma organização e a comunitária é compartilhada por organizações afins.
+
+? Qual é o serviço de armazenamento em nuvem da Apple?
+- OneDrive
+- Google Drive
+- Dropbox
+* iCloud
+= iCloud é o serviço da Apple, integrado a iPhone, iPad e Mac.
+
+? Julgue o item: “Se um arquivo sincronizado com a nuvem for excluído no computador, essa exclusão pode ser replicada para a nuvem e para os demais dispositivos sincronizados”.
+* Certo
+- Errado
+= A sincronização replica as alterações, inclusive exclusões. Por isso ela não substitui o backup.

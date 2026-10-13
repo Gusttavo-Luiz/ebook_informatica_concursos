@@ -13,8 +13,13 @@ Formato do .quiz (questões separadas por uma linha em branco):
 Uso, a partir da raiz do repositório:
     python3 _fonte/gerar_capitulos.py        (gera os 8 capítulos)
     python3 _fonte/gerar_capitulos.py 3 5    (gera só os capítulos 3 e 5)
+
+O banco do simulado (simulado-dados.js) é sempre gerado de novo, com as
+questões de todos os capítulos (capN.quiz) e as exclusivas do simulado
+(capN.simulado.quiz).
 """
 import html
+import json
 import pathlib
 import random
 import re
@@ -80,8 +85,9 @@ TAIL = """<div class="chapter-navigation">
 """
 
 
-def ler_quiz(n):
-    texto = (ROOT / "conteudo" / f"cap{n}.quiz").read_text(encoding="utf-8").strip()
+def ler_quiz(n, arquivo="quiz"):
+    """Lê conteudo/capN.quiz (questões do capítulo) ou capN.simulado.quiz."""
+    texto = (ROOT / "conteudo" / f"cap{n}.{arquivo}").read_text(encoding="utf-8").strip()
     questoes = []
     for bloco in re.split(r"\n\s*\n", texto):
         q = {"pergunta": None, "opcoes": [], "correta": None, "explicacao": ""}
@@ -104,7 +110,8 @@ def ler_quiz(n):
         if len(set(q["opcoes"])) != len(q["opcoes"]):
             sys.exit(f"cap{n}: alternativas repetidas em: {q['pergunta']}")
         questoes.append(q)
-    distribuir_corretas(n, questoes)
+    if arquivo == "quiz":
+        distribuir_corretas(n, questoes)
     return questoes
 
 
@@ -174,7 +181,7 @@ def gerar(n):
         else f'<a class="btn-secondary" href="chapter_{n - 1}.html">← Capítulo anterior</a>'
     )
     proximo = (
-        '<a class="btn-primary" href="index.html">Voltar ao início →</a>'
+        '<a class="btn-primary" href="simulado.html">Fazer o simulado final →</a>'
         if n == 8
         else f'<a class="btn-primary" href="chapter_{n + 1}.html">Próximo capítulo →</a>'
     )
@@ -188,6 +195,30 @@ def gerar(n):
     print(f"chapter_{n}.html: {len(questoes)} questões")
 
 
+def gerar_banco_simulado():
+    """Gera simulado-dados.js com as questões dos capítulos e as exclusivas do simulado."""
+    banco = []
+    for n in TITULOS:
+        for arquivo in ("quiz", "simulado.quiz"):
+            for q in ler_quiz(n, arquivo):
+                banco.append({
+                    "capitulo": n,
+                    "pergunta": q["pergunta"],
+                    "opcoes": q["opcoes"],
+                    "correta": q["opcoes"].index(q["correta"]),
+                    "explicacao": q["explicacao"],
+                })
+    capitulos = {str(n): titulo for n, titulo in TITULOS.items()}
+    js = (
+        "// Arquivo gerado por _fonte/gerar_capitulos.py. Não edite à mão.\n"
+        f"window.CAPITULOS_SIMULADO = {json.dumps(capitulos, ensure_ascii=False)};\n"
+        f"window.BANCO_SIMULADO = {json.dumps(banco, ensure_ascii=False, indent=1)};\n"
+    )
+    (REPO / "simulado-dados.js").write_text(js, encoding="utf-8")
+    print(f"simulado-dados.js: {len(banco)} questões no banco")
+
+
 if __name__ == "__main__":
     for arg in sys.argv[1:] or [str(i) for i in TITULOS]:
         gerar(int(arg))
+    gerar_banco_simulado()

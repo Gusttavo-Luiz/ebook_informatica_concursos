@@ -1,0 +1,34 @@
+? No Windows, o atalho Windows + L serve para:
+- abrir o Explorador de Arquivos
+* bloquear o computador
+- minimizar todas as janelas
+- abrir as Configurações
+= Windows + L (de lock) bloqueia a sessão. Windows + E abre o Explorador e Windows + D mostra a área de trabalho.
+
+? No Linux, qual comando lista os arquivos e pastas do diretório atual?
+- cd
+- pwd
+* ls
+- mkdir
+= ls lista o conteúdo do diretório. cd muda de diretório, pwd mostra o diretório atual e mkdir cria diretórios.
+
+? Ao executar ls -l, um arquivo aparece com as permissões -rw-r--r--. O dono desse arquivo pode:
+- apenas ler
+* ler e escrever
+- ler, escrever e executar
+- apenas executar
+= Os três primeiros caracteres após o tipo (rw-) são do dono: leitura e escrita, sem execução. Grupo e outros têm apenas leitura (r--).
+
+? O kernel do Windows (família NT) é classificado como:
+- monolítico
+- microkernel
+* híbrido
+- exokernel
+= O Windows NT e o macOS (XNU) usam kernel híbrido. O Linux é monolítico e o Minix é microkernel.
+
+? No Windows, selecionar um arquivo do disco local e pressionar Shift + Delete:
+- envia o arquivo para a Lixeira
+- copia o arquivo para a área de transferência
+* exclui o arquivo permanentemente, sem passar pela Lixeira
+- renomeia o arquivo
+= Shift + Delete exclui direto, sem passar pela Lixeira. Delete sozinho envia para a Lixeira.

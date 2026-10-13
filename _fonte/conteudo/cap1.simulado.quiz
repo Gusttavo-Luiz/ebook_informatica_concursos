@@ -1,0 +1,32 @@
+? Qual sistema de numeração utiliza os dígitos de 0 a 9 e as letras de A a F?
+- Binário
+- Octal
+- Decimal
+* Hexadecimal
+= O hexadecimal tem base 16: dígitos de 0 a 9 e letras de A (10) a F (15).
+
+? O número decimal 6 é representado, em binário, por:
+- 101
+* 110
+- 111
+- 011
+= 6 ÷ 2 = 3 resto 0; 3 ÷ 2 = 1 resto 1; 1 ÷ 2 = 0 resto 1. Lendo os restos de baixo para cima: 110.
+
+? Julgue o item: “Na convenção adotada em informática, 1 KB equivale a 1.024 bytes”.
+* Certo
+- Errado
+= Cada unidade multiplica a anterior por 1.024 (2 elevado a 10). Fabricantes de discos usam 1.000, mas a convenção cobrada em provas é 1.024.
+
+? As pessoas que utilizam, operam e desenvolvem os sistemas computacionais formam o:
+- hardware
+- firmware
+* peopleware
+- software
+= Peopleware é o componente humano do sistema computacional.
+
+? Qual componente da CPU coordena a busca, a interpretação e a execução das instruções?
+* Unidade de Controle
+- Unidade Lógica e Aritmética
+- Memória RAM
+- Barramento de dados
+= A Unidade de Controle coordena o ciclo de instrução. A ULA executa as operações matemáticas e lógicas.

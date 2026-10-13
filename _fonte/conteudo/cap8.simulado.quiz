@@ -1,0 +1,30 @@
+? Qual é o resultado de 10 DIV 3?
+- 1
+* 3
+- 3,33
+- 30
+= DIV devolve o quociente inteiro: 3 cabe 3 vezes em 10. O resto (10 MOD 3) seria 1.
+
+? Qual o valor da expressão NÃO (VERDADEIRO E FALSO)?
+* Verdadeiro
+- Falso
+= VERDADEIRO E FALSO resulta em falso; NÃO falso resulta em verdadeiro.
+
+? Considere: soma <- 0; PARA i DE 1 ATÉ 4 FAÇA soma <- soma + i; FIMPARA; ESCREVA soma. O valor escrito será:
+- 4
+- 6
+* 10
+- 15
+= O laço soma 1 + 2 + 3 + 4 = 10.
+
+? Julgue o item: “A estrutura ENQUANTO executa o bloco de instruções pelo menos uma vez, mesmo que a condição seja falsa desde o início”.
+- Certo
+* Errado
+= O ENQUANTO testa a condição antes de executar o bloco; se for falsa no início, o bloco não roda. Quem garante uma execução é o REPITA.
+
+? Um vetor é uma estrutura que:
+- armazena um único valor lógico
+* armazena vários valores do mesmo tipo, acessados por um índice
+- repete um bloco de instruções
+- retorna um valor a quem a chamou
+= O vetor (array) agrupa vários valores do mesmo tipo em posições numeradas.

@@ -1,0 +1,34 @@
+? No Microsoft Word em português, o atalho Ctrl + T:
+- cria uma nova tabela
+* seleciona todo o texto do documento
+- abre um novo documento
+- aplica o estilo Título
+= No Word PT-BR, Ctrl + T seleciona tudo. No LibreOffice Writer, selecionar tudo é Ctrl + A.
+
+? No Excel, A1 contém 2, A2 contém 5 e A3 contém 4. Qual o resultado de =SOMA(A1;A3)?
+- 11
+* 6
+- 7
+- 9
+= O ponto e vírgula indica apenas as células citadas: A1 + A3 = 2 + 4 = 6. =SOMA(A1:A3) somaria o intervalo inteiro (11).
+
+? No Excel, o erro #NOME? normalmente indica que:
+- a fórmula dividiu um valor por zero
+* o nome de uma função foi digitado errado
+- a célula referenciada foi excluída
+- a coluna é estreita demais para o valor
+= #NOME? aparece quando o Excel não reconhece um nome, como uma função escrita errado ou um texto sem aspas.
+
+? Qual é a extensão padrão de uma planilha salva no LibreOffice Calc?
+- .xlsx
+- .odt
+* .ods
+- .odp
+= No padrão ODF: .odt é texto (Writer), .ods é planilha (Calc) e .odp é apresentação (Impress).
+
+? No Excel, qual o resultado da fórmula =2^3+1?
+- 7
+* 9
+- 16
+- 27
+= A potência é resolvida antes da soma: 2^3 = 8; 8 + 1 = 9.

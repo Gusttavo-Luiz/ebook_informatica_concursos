@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Simulado final | Informática para Concursos</title>
+<meta content="Simulado final de Informática para Concursos: 40 questões sorteadas de todos os capítulos, com tempo de prova, nota e correção comentada." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body data-pagina="simulado">
+<div aria-hidden="true" class="progress-bar" id="progressBar"></div>
+<header class="site-header">
+<nav aria-label="Navegação principal" class="navbar container">
+<a class="logo" href="index.html"><span class="logo-mark">IC</span>Informática <span>para Concursos</span></a>
+<div class="navbar-actions">
+<a aria-current="page" class="nav-link" href="simulado.html">Simulado</a>
+<a class="nav-button" href="index.html#capitulos">Capítulos</a>
+</div>
+</nav>
+</header>
+
+<main class="container simulado-page">
+
+<section class="simulado-inicio" id="telaInicio">
+<span class="tag">Simulado final</span>
+<h1>Simulado de Informática para Concursos</h1>
+<p class="simulado-lead">Teste o que você aprendeu nos oito capítulos em condições parecidas com as de uma prova: tempo limitado e correção só no final.</p>
+<dl class="hero-stats">
+<div><dt>40</dt><dd>questões</dd></div>
+<div><dt>60 min</dt><dd>de duração</dd></div>
+<div><dt>8</dt><dd>capítulos, 5 questões de cada</dd></div>
+</dl>
+<div class="simulado-regras">
+<h2>Como funciona</h2>
+<ul>
+<li>As questões são sorteadas de um banco com <strong id="totalBanco">120</strong> questões, então cada tentativa é diferente.</li>
+<li>Você não vê se acertou enquanto responde. A correção comentada aparece quando você finaliza.</li>
+<li>Quando o tempo acabar, o simulado é finalizado automaticamente com as respostas marcadas até ali.</li>
+<li>No resultado, você vê a nota, o desempenho em cada capítulo e quais conteúdos revisar.</li>
+</ul>
+</div>
+<p class="simulado-ultimo" hidden id="ultimoResultado"></p>
+<div class="hero-actions">
+<button class="cta-button" id="botaoIniciar" type="button">Iniciar simulado</button>
+<a class="btn-secondary" href="index.html#capitulos">Revisar os capítulos antes</a>
+</div>
+</section>
+
+<section class="simulado-prova" hidden id="telaProva">
+<div class="simulado-barra">
+<div class="simulado-barra-info">
+<span id="contadorRespondidas">0 de 40 respondidas</span>
+<div aria-hidden="true" class="simulado-barra-progresso"><span id="barraRespondidas"></span></div>
+</div>
+<span aria-label="Tempo restante" class="simulado-tempo" id="tempoRestante" role="timer">60:00</span>
+<button class="btn-primary" id="botaoFinalizarTopo" type="button">Finalizar</button>
+</div>
+<div class="simulado-questoes" id="listaQuestoes"></div>
+<div class="simulado-rodape-prova">
+<p id="avisoEmBranco"></p>
+<button class="cta-button" id="botaoFinalizar" type="button">Finalizar e ver resultado</button>
+</div>
+</section>
+
+<section class="simulado-resultado" hidden id="telaResultado">
+<span class="tag">Resultado do simulado</span>
+<div class="resultado-placar">
+<div class="resultado-nota">
+<strong id="resultadoAcertos">0/40</strong>
+<span id="resultadoPercentual">0% de acertos</span>
+</div>
+<div class="resultado-texto">
+<h1 id="resultadoTitulo">Resultado</h1>
+<p id="resultadoMensagem"></p>
+<p class="resultado-detalhes" id="resultadoDetalhes"></p>
+</div>
+</div>
+
+<h2>Desempenho por capítulo</h2>
+<table class="comparison-table resultado-capitulos">
+<thead><tr><th>Capítulo</th><th>Acertos</th><th>Desempenho</th></tr></thead>
+<tbody id="tabelaCapitulos"></tbody>
+</table>
+<div class="box-dica" hidden id="recomendacao"><strong>O que revisar</strong><p id="recomendacaoTexto"></p></div>
+
+<div class="revisao-cabecalho">
+<h2>Correção comentada</h2>
+<div aria-label="Filtrar questões" class="revisao-filtros" role="group">
+<button aria-pressed="true" class="filtro-botao" data-filtro="todas" type="button">Todas</button>
+<button aria-pressed="false" class="filtro-botao" data-filtro="erradas" type="button">Erradas</button>
+<button aria-pressed="false" class="filtro-botao" data-filtro="branco" type="button">Em branco</button>
+</div>
+</div>
+<div class="simulado-questoes" id="listaRevisao"></div>
+<p class="revisao-vazia" hidden id="revisaoVazia">Nenhuma questão nesta categoria.</p>
+
+<div class="hero-actions resultado-acoes">
+<button class="cta-button" id="botaoRefazer" type="button">Fazer novo simulado</button>
+<a class="btn-secondary" href="index.html">Voltar ao início</a>
+</div>
+</section>
+
+</main>
+<footer class="page-footer">
+<p>Informática para Concursos · E-book</p>
+</footer>
+<script src="script.js"></script>
+<script src="simulado-dados.js"></script>
+<script src="simulado.js"></script>
+</body>
+</html>
