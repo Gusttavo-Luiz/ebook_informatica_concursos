@@ -90,21 +90,26 @@ async function completo() {
     "-map", "0:v", "-map", "1:a", "-map", "2:s",
     "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-tune", "animation", "-pix_fmt", "yuv420p",
     "-c:a", "copy", "-c:s", "mov_text", "-metadata:s:s:0", "language=por",
-    "-movflags", "+faststart", "-shortest", video,
+    "-movflags", "+faststart", "-t", agenda.duracao.toFixed(3), video,
   ], { stdio: ["pipe", "inherit", "inherit"] });
+  ff.stdin.on("error", () => {});
+  const fimFF = new Promise((r) => ff.on("close", r));
+  let ffAberto = true;
+  fimFF.then(() => { ffAberto = false; });
 
   const inicio = Date.now();
   for (let q = 0; q < total; q++) {
     await pagina.evaluate((t) => irPara(t), q / agenda.fps);
     const img = await pagina.screenshot({ type: "jpeg", quality: 92 });
-    if (!ff.stdin.write(img)) await new Promise((r) => ff.stdin.once("drain", r));
+    if (!ffAberto) throw new Error(`ffmpeg encerrou antes do quadro ${q}`);
+    if (!ff.stdin.write(img)) await Promise.race([new Promise((r) => ff.stdin.once("drain", r)), fimFF]);
     if (q % 300 === 0) {
       const seg = (Date.now() - inicio) / 1000;
       console.log(`quadro ${q}/${total} · ${(q / Math.max(seg, 1)).toFixed(1)} q/s`);
     }
   }
   ff.stdin.end();
-  await new Promise((r) => ff.on("close", r));
+  await fimFF;
   if (erros.length) console.log("Erros na página:", erros);
   await navegador.close();
   console.log(`Vídeo pronto: ${video} (${(agenda.duracao / 60).toFixed(1)} min)`);
