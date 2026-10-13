@@ -63,3 +63,38 @@
 - Falso, porque as duas condições são falsas
 - Erro, porque x e y são iguais
 = x > y é falso (5 não é maior que 5). x + y = 10 e 10 >= 10 é verdadeiro. Falso OU verdadeiro resulta em verdadeiro.
+
+? Em um fluxograma, o símbolo que representa uma decisão (teste lógico) é o:
+- retângulo
+* losango
+- paralelogramo
+- oval
+= O losango representa a decisão. Retângulo é processo, paralelogramo é entrada/saída e oval é início/fim.
+
+? Considere a função recursiva fatorial(n), que retorna 1 se n <= 1 e, caso contrário, n * fatorial(n - 1). Qual o valor de fatorial(4)?
+- 4
+- 10
+- 16
+* 24
+= 4 × 3 × 2 × 1 = 24. A chamada fatorial(1) é o caso base e encerra a recursão.
+
+? Na passagem de parâmetro por referência:
+- a sub-rotina recebe uma cópia, e a variável original não é alterada
+* alterações feitas dentro da sub-rotina modificam a variável original
+- a sub-rotina não pode alterar o parâmetro
+- o parâmetro sempre é uma constante
+= Por referência, a sub-rotina trabalha com a própria variável. Por valor, ela recebe uma cópia.
+
+? Para trocar os valores das variáveis a e b, a sequência correta é:
+* aux <- a; a <- b; b <- aux
+- a <- b; b <- a
+- aux <- a; b <- aux; a <- b
+- b <- a; a <- b; aux <- a
+= É preciso guardar o valor de a em aux antes de sobrescrevê-lo. Em a <- b; b <- a, o valor original de a se perde.
+
+? Em Python, o comando for i in range(1, 5): percorre os valores:
+- 1, 2, 3, 4, 5
+* 1, 2, 3, 4
+- 0, 1, 2, 3, 4
+- 1 e 5
+= O range inclui o início e exclui o fim: range(1, 5) gera 1, 2, 3 e 4.

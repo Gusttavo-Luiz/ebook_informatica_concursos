@@ -33,6 +33,18 @@
 </table>
 <div class="box-dica"><strong>Memorize</strong><p>Nuvem = acesso de qualquer lugar + escalabilidade + pagamento conforme o uso. O principal ponto fraco é a dependência da internet.</p></div>
 
+<h2>Virtualização: a base da nuvem</h2>
+<p>Os datacenters dividem cada servidor físico em várias <strong>máquinas virtuais</strong>, criadas e controladas por um <strong>hypervisor</strong>. É isso que permite entregar recursos sob demanda a muitos clientes ao mesmo tempo.</p>
+<table class="comparison-table">
+<thead><tr><th>Característica</th><th>Máquina virtual</th><th>Contêiner</th></tr></thead>
+<tbody>
+<tr><td>O que contém</td><td>um sistema operacional completo</td><td>apenas a aplicação e suas dependências, compartilhando o kernel do sistema hospedeiro</td></tr>
+<tr><td>Tamanho e início</td><td>maior, leva mais tempo para iniciar</td><td>leve, inicia em segundos</td></tr>
+<tr><td>Isolamento</td><td>mais forte</td><td>mais leve</td></tr>
+<tr><td>Exemplos</td><td>VMware, Hyper-V, KVM, VirtualBox</td><td>Docker, gerenciado em larga escala pelo Kubernetes</td></tr>
+</tbody>
+</table>
+
 <h2>Modelos de serviço</h2>
 <h3>IaaS — Infraestrutura como Serviço</h3>
 <p>O provedor oferece a infraestrutura: servidores virtuais, armazenamento e rede. O cliente instala e gerencia o sistema operacional e os aplicativos. Exemplos: Amazon EC2, máquinas virtuais do Microsoft Azure, Google Compute Engine.</p>
@@ -52,6 +64,13 @@
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>“Em qual modelo o usuário acessa o aplicativo pronto, sem instalar software?” Resposta: <strong>SaaS</strong>. Se a questão fala em “máquinas virtuais”, é IaaS; se fala em “ambiente para desenvolver aplicações”, é PaaS.</p></div>
 <div class="box-dica"><strong>Memorize</strong><p>De baixo para cima: <strong>I</strong>nfraestrutura → <strong>P</strong>lataforma → <strong>S</strong>oftware. Quanto mais alto, menos o cliente precisa gerenciar.</p></div>
 
+<h3>Outros modelos “como serviço”</h3>
+<ul>
+<li><strong>FaaS (Function as a Service) ou serverless:</strong> o cliente envia apenas funções de código, executadas quando um evento acontece; não gerencia servidores e paga só pelo tempo de execução. Exemplos: AWS Lambda, Azure Functions.</li>
+<li><strong>DaaS (Desktop as a Service):</strong> área de trabalho virtual acessada pela internet.</li>
+<li><strong>XaaS (tudo como serviço):</strong> termo geral para qualquer recurso de TI oferecido como serviço.</li>
+</ul>
+
 <h2>Modelos de implantação</h2>
 <table class="comparison-table">
 <thead><tr><th>Modelo</th><th>Característica</th></tr></thead>
@@ -62,6 +81,22 @@
 <tr><td>Nuvem comunitária</td><td>compartilhada por organizações com interesses em comum, como órgãos de um mesmo governo</td></tr>
 </tbody>
 </table>
+
+<h2>Custos e acordos de serviço</h2>
+<ul>
+<li><strong>CAPEX x OPEX:</strong> manter servidores próprios exige investimento inicial em equipamentos (CAPEX, despesa de capital). Na nuvem, paga-se conforme o uso, como despesa operacional (OPEX).</li>
+<li><strong>SLA (Service Level Agreement):</strong> acordo de nível de serviço, que define a disponibilidade garantida pelo provedor e as compensações em caso de descumprimento.</li>
+</ul>
+<table class="comparison-table">
+<thead><tr><th>Disponibilidade no SLA</th><th>Tempo máximo fora do ar por ano</th></tr></thead>
+<tbody>
+<tr><td>99%</td><td>cerca de 3,65 dias</td></tr>
+<tr><td>99,9%</td><td>cerca de 8,76 horas</td></tr>
+<tr><td>99,99%</td><td>cerca de 52,6 minutos</td></tr>
+</tbody>
+</table>
+<h3>Computação de borda (edge computing)</h3>
+<p>Processa os dados <strong>perto de onde são gerados</strong> (no próprio dispositivo, em um sensor ou em um servidor local), em vez de enviar tudo para um datacenter distante. Reduz a latência e o tráfego, o que é importante em IoT, veículos autônomos e indústria.</p>
 
 <h2>Sincronização e backup</h2>
 <p>A <strong>sincronização</strong> mantém a mesma versão dos arquivos em todos os dispositivos: o que é alterado no computador aparece no celular, e vice-versa.</p>
@@ -78,6 +113,20 @@
 </ul>
 <p>O compartilhamento pode ser feito com pessoas específicas (por e-mail) ou por <strong>link</strong>. Um link configurado como “qualquer pessoa com o link” permite o acesso a quem recebê-lo, mesmo sem ser convidado.</p>
 <p>Ferramentas como Google Docs, Planilhas e Apresentações, e as versões web do Word, Excel e PowerPoint, permitem a <strong>edição simultânea</strong> (coautoria) e guardam o <strong>histórico de versões</strong>, que permite ver e restaurar estados anteriores do documento.</p>
+
+<h3>Microsoft 365 x Google Workspace</h3>
+<table class="comparison-table">
+<thead><tr><th>Finalidade</th><th>Microsoft 365</th><th>Google Workspace</th></tr></thead>
+<tbody>
+<tr><td>Texto</td><td>Word</td><td>Documentos Google</td></tr>
+<tr><td>Planilhas</td><td>Excel</td><td>Planilhas Google</td></tr>
+<tr><td>Apresentações</td><td>PowerPoint</td><td>Apresentações Google</td></tr>
+<tr><td>E-mail e agenda</td><td>Outlook</td><td>Gmail e Agenda</td></tr>
+<tr><td>Reuniões e chat</td><td>Teams</td><td>Meet e Chat</td></tr>
+<tr><td>Armazenamento</td><td>OneDrive e SharePoint</td><td>Google Drive</td></tr>
+</tbody>
+</table>
+<p>Nos dois, é possível comentar, <strong>sugerir alterações</strong> (modo de sugestão / controlar alterações) e trabalhar <strong>offline</strong>, com sincronização quando a conexão volta.</p>
 
 <h2>Principais serviços de armazenamento</h2>
 <table class="comparison-table">
@@ -112,5 +161,7 @@
 <li>nuvem pública, privada, híbrida e comunitária;</li>
 <li>diferença entre sincronização e backup;</li>
 <li>compartilhamento, colaboração e principais serviços;</li>
+<li>virtualização, máquinas virtuais e contêineres;</li>
+<li>serverless, CAPEX x OPEX, SLA e edge computing;</li>
 <li>cuidados de segurança.</li>
 </ul>

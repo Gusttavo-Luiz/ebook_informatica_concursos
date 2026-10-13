@@ -47,6 +47,41 @@
 <p>Padrões de conexão mais citados: <strong>Ethernet</strong> (rede cabeada, IEEE 802.3, cabo com conector RJ-45), <strong>Wi-Fi</strong> (rede sem fio, IEEE 802.11) e <strong>Bluetooth</strong> (curto alcance).</p>
 <div class="box-dica"><strong>Memorize</strong><p>Hub espalha para todos; switch entrega para quem deve receber dentro da rede local; roteador liga redes diferentes, como a sua casa e a internet.</p></div>
 
+<h2>Meios de transmissão e acesso</h2>
+<table class="comparison-table">
+<thead><tr><th>Meio</th><th>Como transmite</th><th>Características</th></tr></thead>
+<tbody>
+<tr><td>Par trançado (UTP)</td><td>sinais elétricos em pares de fios trançados, com conector RJ-45</td><td>o mais usado em redes locais; até cerca de 100 metros por cabo (categorias 5e, 6, 6A)</td></tr>
+<tr><td>Fibra óptica</td><td>pulsos de luz</td><td>altíssima velocidade, longas distâncias e imune a interferência eletromagnética; monomodo (longas distâncias) e multimodo (distâncias menores)</td></tr>
+<tr><td>Cabo coaxial</td><td>sinais elétricos em um condutor central blindado</td><td>usado em TV a cabo e internet por cabo</td></tr>
+<tr><td>Sem fio</td><td>ondas de rádio</td><td>Wi-Fi, Bluetooth, redes móveis (4G, 5G) e satélite</td></tr>
+</tbody>
+</table>
+<h3>Wi-Fi</h3>
+<ul>
+<li><strong>Padrões:</strong> Wi-Fi 4 (802.11n), Wi-Fi 5 (802.11ac), Wi-Fi 6 (802.11ax). Cada geração é mais rápida e eficiente.</li>
+<li><strong>Frequências:</strong> a de 2,4 GHz tem maior alcance e atravessa melhor paredes, mas sofre mais interferência; a de 5 GHz é mais rápida, porém tem menor alcance.</li>
+<li><strong>Segurança:</strong> WEP é obsoleto e inseguro; use WPA2 ou, de preferência, WPA3, com senha forte.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Esconder o nome da rede (SSID) não é medida de segurança eficaz: a rede continua detectável. O que protege é a criptografia WPA2/WPA3 com senha forte.</p></div>
+<h3>Formas de acesso à internet</h3>
+<ul>
+<li><strong>ADSL:</strong> usa a linha telefônica; tecnologia antiga e mais lenta.</li>
+<li><strong>Cabo:</strong> usa a rede de TV a cabo.</li>
+<li><strong>Fibra óptica (FTTH):</strong> fibra até a residência; hoje é a mais comum nas cidades.</li>
+<li><strong>Rede móvel (4G e 5G):</strong> pelo celular ou modem móvel.</li>
+<li><strong>Satélite:</strong> atende locais remotos.</li>
+</ul>
+<h3>Modos de transmissão</h3>
+<table class="comparison-table">
+<thead><tr><th>Modo</th><th>Funcionamento</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Simplex</td><td>só em um sentido</td><td>transmissão de rádio e TV</td></tr>
+<tr><td>Half-duplex</td><td>nos dois sentidos, mas um de cada vez</td><td>rádio comunicador (walkie-talkie)</td></tr>
+<tr><td>Full-duplex</td><td>nos dois sentidos ao mesmo tempo</td><td>ligação telefônica</td></tr>
+</tbody>
+</table>
+
 <h2>Modelo OSI</h2>
 <p>O modelo OSI (Open Systems Interconnection), da ISO, é um modelo de referência que divide a comunicação em <strong>7 camadas</strong>. Ele é teórico: serve para estudar e organizar as funções da rede.</p>
 <table class="comparison-table">
@@ -105,6 +140,33 @@
 </ul>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>“O IPv6 foi criado para substituir o TCP.” Errado: o IPv6 substitui o <strong>IPv4</strong>. Outra armadilha: o número 256 não pode aparecer em um IPv4, porque cada parte vai de 0 a 255.</p></div>
 
+<h3>Máscara de sub-rede e gateway</h3>
+<ul>
+<li><strong>Máscara de sub-rede:</strong> indica qual parte do IP identifica a rede e qual identifica o dispositivo. A máscara <span class="inline-code">255.255.255.0</span> (ou <span class="inline-code">/24</span>) indica que os três primeiros números são da rede.</li>
+<li><strong>Gateway padrão:</strong> endereço do roteador que leva o tráfego para fora da rede local, normalmente para a internet.</li>
+<li><strong>Loopback (localhost):</strong> o endereço <span class="inline-code">127.0.0.1</span> representa o próprio computador.</li>
+</ul>
+<table class="comparison-table">
+<thead><tr><th>Classe (IPv4)</th><th>Primeiro número</th><th>Máscara padrão</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>1 a 126</td><td>255.0.0.0 (/8)</td></tr>
+<tr><td>B</td><td>128 a 191</td><td>255.255.0.0 (/16)</td></tr>
+<tr><td>C</td><td>192 a 223</td><td>255.255.255.0 (/24)</td></tr>
+</tbody>
+</table>
+<p>As classes D (224 a 239, multicast) e E (240 a 255, experimental) não são usadas para endereçar computadores. Hoje as redes usam máscaras flexíveis (CIDR), mas as classes continuam aparecendo em provas.</p>
+<h3>Comandos de diagnóstico</h3>
+<table class="comparison-table">
+<thead><tr><th>Comando</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td>ping</td><td>testa se um endereço responde e mede o tempo de resposta (usa o protocolo ICMP)</td></tr>
+<tr><td>ipconfig (Windows) / ip addr (Linux)</td><td>mostra IP, máscara e gateway do computador</td></tr>
+<tr><td>tracert (Windows) / traceroute (Linux)</td><td>mostra o caminho (os roteadores) até o destino</td></tr>
+<tr><td>nslookup</td><td>consulta o DNS para descobrir o IP de um nome</td></tr>
+<tr><td>netstat</td><td>lista as conexões de rede ativas</td></tr>
+</tbody>
+</table>
+
 <h2>DNS e URL</h2>
 <p>O <strong>DNS (Domain Name System)</strong> traduz nomes de domínio, fáceis de lembrar, em endereços IP. Sem ele, seria preciso digitar o IP de cada site.</p>
 <p>O endereço completo de um recurso na web é a <strong>URL</strong>. Veja suas partes:</p>
@@ -152,6 +214,17 @@ www.gov.br       → nome do domínio (resolvido pelo DNS)
 <p>O e-mail pode ser lido por um <strong>webmail</strong> (no navegador, como o Gmail na web) ou por um <strong>cliente de e-mail</strong> instalado, como Outlook e Thunderbird.</p>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>A banca troca os papéis: SMTP <strong>envia</strong>; POP3 e IMAP <strong>recebem</strong>. E quem está em Cco vê os destinatários dos campos Para e Cc, mas ninguém vê quem está em Cco.</p></div>
 
+<h2>Web e outros serviços</h2>
+<p>A <strong>World Wide Web (WWW)</strong> é o sistema de páginas ligadas por hiperlinks, acessadas por navegadores via HTTP/HTTPS. Ela é <strong>um dos serviços</strong> da internet, ao lado do e-mail, da transferência de arquivos e de outros.</p>
+<ul>
+<li><strong>HTML:</strong> linguagem de marcação que estrutura as páginas web. O CSS cuida da aparência e o JavaScript, da interatividade.</li>
+<li><strong>Web 2.0:</strong> fase em que os usuários passaram a produzir conteúdo e interagir (redes sociais, blogs, wikis).</li>
+<li><strong>Surface web:</strong> parte indexada pelos buscadores. <strong>Deep web:</strong> conteúdo não indexado, como e-mails, bancos de dados e áreas protegidas por login. <strong>Dark web:</strong> pequena parte da deep web acessível só com ferramentas específicas, como o Tor.</li>
+<li><strong>VoIP:</strong> voz sobre IP — chamadas de voz pela internet.</li>
+<li><strong>P2P (ponto a ponto):</strong> os computadores trocam arquivos diretamente entre si, sem um servidor central, como no BitTorrent.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“Internet e World Wide Web são sinônimos.” Errado: a internet é a rede física e lógica mundial; a web é um serviço que funciona sobre ela.</p></div>
+
 <h2>Navegadores</h2>
 <p>Navegadores (browsers) são programas para acessar páginas da web: Google Chrome, Microsoft Edge, Mozilla Firefox e Safari.</p>
 <h3>Recursos mais cobrados</h3>
@@ -182,6 +255,16 @@ www.gov.br       → nome do domínio (resolvido pelo DNS)
 </table>
 <div class="box-resumo"><strong>Resumo estratégico</strong><p>O cadeado e o HTTPS indicam que a conexão é criptografada, não que o site é confiável. Sites de phishing também podem usar HTTPS.</p></div>
 
+<h3>Privacidade e segurança no navegador</h3>
+<ul>
+<li><strong>Limpar dados de navegação</strong> (<span class="inline-code">Ctrl + Shift + Delete</span>): apaga histórico, cookies, cache e senhas salvas.</li>
+<li><strong>Bloqueador de pop-ups:</strong> impede que janelas surjam sem o usuário pedir.</li>
+<li><strong>Gerenciador de senhas:</strong> guarda e preenche senhas, e pode sugerir senhas fortes.</li>
+<li><strong>Sincronização:</strong> ao entrar com uma conta (Google, Microsoft, Firefox), favoritos, histórico e senhas ficam disponíveis em outros dispositivos.</li>
+<li><strong>Aviso “Não seguro”:</strong> indica página sem HTTPS; não digite senhas nem dados pessoais nela.</li>
+<li><strong>Cookies de terceiros:</strong> criados por domínios diferentes do site visitado, geralmente para publicidade e rastreamento; podem ser bloqueados nas configurações.</li>
+</ul>
+
 <h2>Mecanismos de busca</h2>
 <p>Mecanismos de busca (Google, Bing, DuckDuckGo) indexam páginas da web e permitem encontrá-las por palavras-chave. Navegador e buscador são coisas diferentes: o Chrome é um navegador, o Google é um buscador.</p>
 <table class="comparison-table">
@@ -206,5 +289,8 @@ www.gov.br       → nome do domínio (resolvido pelo DNS)
 <li>modelos OSI e TCP/IP, TCP x UDP;</li>
 <li>IPv4 x IPv6, DNS e DHCP;</li>
 <li>protocolos e portas, principalmente os de e-mail;</li>
+<li>meios de transmissão, Wi-Fi e modos simplex, half e full-duplex;</li>
+<li>máscara, gateway, classes de IP e comandos como ping;</li>
+<li>internet x web, deep web e dark web;</li>
 <li>recursos dos navegadores e operadores de busca.</li>
 </ul>

@@ -65,3 +65,38 @@
 - Lei Carolina Dieckmann
 - Marco Civil da Internet
 = A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) regula o tratamento de dados pessoais no Brasil.
+
+? O software que cria e gerencia máquinas virtuais em um servidor físico é chamado de:
+- kernel
+* hypervisor
+- navegador
+- firewall
+= O hypervisor divide o hardware entre várias máquinas virtuais. É a base da infraestrutura de nuvem.
+
+? No modelo em que o cliente envia apenas funções de código, executadas sob demanda, sem gerenciar servidores e pagando só pelo tempo de execução, temos:
+- IaaS
+- DaaS
+* FaaS (serverless)
+- nuvem privada
+= FaaS, ou serverless, executa funções a partir de eventos. Exemplos: AWS Lambda e Azure Functions.
+
+? Ao migrar os servidores próprios para a nuvem, a organização tende a substituir:
+* investimentos iniciais em equipamentos (CAPEX) por despesas operacionais conforme o uso (OPEX)
+- despesas operacionais (OPEX) por investimentos em equipamentos (CAPEX)
+- o SLA por um contrato de compra de servidores
+- a internet por uma rede local
+= Na nuvem não é preciso comprar servidores: paga-se pelo consumo, como despesa operacional.
+
+? Um SLA com disponibilidade de 99,9% admite que o serviço fique fora do ar, por ano, aproximadamente:
+- 52 minutos
+* 8,76 horas
+- 3,65 dias
+- 36 dias
+= 0,1% de 8.760 horas (um ano) = 8,76 horas.
+
+? A ferramenta de planilhas do Google Workspace, equivalente ao Excel, é o:
+- Google Docs
+* Planilhas Google (Sheets)
+- Google Meet
+- Google Keep
+= Planilhas Google é o equivalente ao Excel; Documentos Google equivale ao Word.

@@ -18,6 +18,16 @@
 <p>A <strong>GPU</strong> (unidade de processamento gráfico, na placa de vídeo) é especializada em processar imagens e cálculos em paralelo. Ela pode ser <strong>integrada</strong> ao processador ou <strong>dedicada</strong>, em uma placa separada com memória própria.</p>
 <div class="box-resumo"><strong>Resumo estratégico</strong><p>Clock alto não é tudo: número de núcleos, cache e arquitetura também determinam o desempenho. O ciclo de instrução segue sempre busca → decodificação → execução.</p></div>
 
+<h3>RISC x CISC</h3>
+<table class="comparison-table">
+<thead><tr><th>Arquitetura</th><th>Característica</th><th>Onde aparece</th></tr></thead>
+<tbody>
+<tr><td>CISC</td><td>conjunto grande de instruções complexas</td><td>processadores x86 da Intel e da AMD (desktops e notebooks)</td></tr>
+<tr><td>RISC</td><td>conjunto reduzido de instruções simples e rápidas, com menor consumo de energia</td><td>processadores ARM (celulares, tablets e computadores Apple com chip M)</td></tr>
+</tbody>
+</table>
+<p>Em celulares, o processador fica dentro de um <strong>SoC</strong> (System on a Chip): um único chip que reúne CPU, GPU, controlador de memória e outros componentes.</p>
+
 <h2>Hierarquia de memória</h2>
 <p>Os computadores usam vários tipos de memória, organizados em uma hierarquia: quanto mais próxima do processador, mais rápida, menor e mais cara por gigabyte.</p>
 <table class="comparison-table">
@@ -108,6 +118,25 @@
 </table>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>“O SSD é um disco magnético.” Errado: o SSD usa memória flash. O disco magnético é o HD.</p></div>
 
+<h3>RAID</h3>
+<p>RAID combina vários discos para ganhar desempenho, segurança contra falhas ou as duas coisas.</p>
+<table class="comparison-table">
+<thead><tr><th>Nível</th><th>Como funciona</th><th>Ponto principal</th></tr></thead>
+<tbody>
+<tr><td>RAID 0 (striping)</td><td>divide os dados entre os discos</td><td>mais desempenho, <strong>sem</strong> redundância: se um disco falhar, perde tudo</td></tr>
+<tr><td>RAID 1 (espelhamento)</td><td>grava os mesmos dados em dois discos</td><td>se um disco falhar, o outro mantém os dados</td></tr>
+<tr><td>RAID 5</td><td>distribui dados e paridade em 3 ou mais discos</td><td>suporta a falha de um disco</td></tr>
+<tr><td>RAID 10 (1+0)</td><td>combina espelhamento e divisão</td><td>desempenho e redundância, com custo maior</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>RAID <strong>não substitui backup</strong>: se um arquivo for apagado ou criptografado por um ransomware, a mudança é replicada em todos os discos.</p></div>
+<h3>Particionamento e formatação</h3>
+<ul>
+<li><strong>Partição:</strong> divisão lógica de um disco; cada partição pode ter seu próprio sistema de arquivos (ex.: C: e D: no mesmo disco).</li>
+<li><strong>MBR x GPT:</strong> esquemas de particionamento. O MBR (antigo) aceita discos de até 2 TB e 4 partições primárias; o GPT (usado com UEFI) aceita discos muito maiores e muitas partições.</li>
+<li><strong>Formatação:</strong> prepara a partição com um sistema de arquivos (NTFS, exFAT, ext4). A formatação rápida não apaga os dados de forma segura; eles ainda podem ser recuperados com ferramentas específicas.</li>
+</ul>
+
 <h2>Placa-mãe</h2>
 <p>A placa-mãe é a placa de circuito principal: conecta processador, memória, armazenamento e periféricos e permite a comunicação entre eles.</p>
 <ul>
@@ -120,6 +149,18 @@
 </ul>
 <p>A <strong>fonte de alimentação</strong> converte a corrente alternada da tomada em corrente contínua para os componentes.</p>
 
+<h2>Energia</h2>
+<table class="comparison-table">
+<thead><tr><th>Equipamento</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td>Fonte de alimentação</td><td>converte a corrente alternada da tomada em corrente contínua para os componentes; a potência é medida em watts (W)</td></tr>
+<tr><td>Filtro de linha</td><td>protege contra picos e ruídos na rede elétrica e oferece várias tomadas</td></tr>
+<tr><td>Estabilizador</td><td>corrige variações de tensão (subtensão e sobretensão)</td></tr>
+<tr><td>Nobreak (UPS)</td><td>tem bateria: mantém o equipamento ligado por um tempo durante a falta de energia, permitindo salvar o trabalho e desligar com segurança</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>Só o <strong>nobreak</strong> mantém o computador funcionando quando a energia cai, porque tem bateria.</p></div>
+
 <h2>Periféricos</h2>
 <p>Periféricos são os dispositivos que se conectam ao computador para trocar informações com o usuário ou com outros equipamentos.</p>
 <table class="comparison-table">
@@ -131,6 +172,22 @@
 </tbody>
 </table>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>A tela sensível ao toque é periférico de <strong>entrada e saída</strong>: exibe a imagem (saída) e recebe o toque (entrada). O mesmo vale para a multifuncional, que imprime (saída) e digitaliza (entrada).</p></div>
+<h3>Monitores</h3>
+<ul>
+<li><strong>LCD com iluminação LED:</strong> o tipo mais comum; os cristais líquidos filtram a luz de LEDs posicionados atrás da tela.</li>
+<li><strong>OLED:</strong> cada pixel emite a própria luz, com pretos perfeitos e alto contraste.</li>
+<li><strong>Tamanho:</strong> medido em polegadas, na <strong>diagonal</strong> da tela.</li>
+<li><strong>Resolução:</strong> HD (1280 × 720), Full HD (1920 × 1080), QHD (2560 × 1440), 4K UHD (3840 × 2160).</li>
+<li><strong>Taxa de atualização:</strong> quantas vezes por segundo a imagem é redesenhada, em hertz (60 Hz, 144 Hz).</li>
+</ul>
+<h3>Outros periféricos</h3>
+<ul>
+<li><strong>Teclado ABNT2:</strong> padrão brasileiro, com a tecla Ç e acentos em posições próprias.</li>
+<li><strong>Scanner com OCR:</strong> o OCR (reconhecimento óptico de caracteres) transforma a imagem de um texto digitalizado em texto editável.</li>
+<li><strong>Mesa digitalizadora:</strong> entrada por caneta, usada em desenho e assinatura.</li>
+<li><strong>Leitor biométrico:</strong> lê impressões digitais, rosto ou íris para identificar o usuário.</li>
+</ul>
+
 <h3>Conexões</h3>
 <table class="comparison-table">
 <thead><tr><th>Conexão</th><th>Uso</th></tr></thead>
@@ -165,5 +222,8 @@
 <li>RAM x ROM, BIOS/UEFI e POST;</li>
 <li>HD x SSD e mídias de armazenamento;</li>
 <li>periféricos de entrada, saída e híbridos;</li>
+<li>RISC x CISC, RAID e particionamento;</li>
+<li>fonte, estabilizador e nobreak;</li>
+<li>monitores, resoluções e OCR;</li>
 <li>conexões e tipos de impressora.</li>
 </ul>
