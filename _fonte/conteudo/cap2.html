@@ -34,6 +34,29 @@
 </ul>
 <div class="box-resumo"><strong>Resumo estratégico</strong><p>O SO gerencia quatro grandes recursos: processador (processos), memória, arquivos e dispositivos de entrada e saída.</p></div>
 
+<h2>Estados e escalonamento de processos</h2>
+<p>Durante a execução, cada processo passa por diferentes estados, controlados pelo sistema operacional:</p>
+<div class="flow-steps">
+<div class="flow-step"><div class="flow-step-number">1</div><div><strong>Novo (criação)</strong><p>O processo está sendo criado e carregado na memória.</p></div></div>
+<div class="flow-step"><div class="flow-step-number">2</div><div><strong>Pronto</strong><p>Está na fila, esperando a vez de usar o processador.</p></div></div>
+<div class="flow-step"><div class="flow-step-number">3</div><div><strong>Executando</strong><p>Está usando o processador neste momento.</p></div></div>
+<div class="flow-step"><div class="flow-step-number">4</div><div><strong>Bloqueado (espera)</strong><p>Aguarda um evento externo, como a leitura do disco ou a digitação do usuário. Quando o evento acontece, volta para “pronto”.</p></div></div>
+<div class="flow-step"><div class="flow-step-number">5</div><div><strong>Terminado</strong><p>Encerrou a execução e seus recursos são liberados.</p></div></div>
+</div>
+<h3>Escalonamento</h3>
+<p>O <strong>escalonador</strong> é a parte do SO que decide qual processo pronto vai usar o processador.</p>
+<table class="comparison-table">
+<thead><tr><th>Algoritmo</th><th>Como escolhe</th></tr></thead>
+<tbody>
+<tr><td>FIFO (FCFS)</td><td>por ordem de chegada: o primeiro a chegar é o primeiro a ser atendido</td></tr>
+<tr><td>SJF</td><td>o processo mais curto primeiro</td></tr>
+<tr><td>Round Robin (circular)</td><td>cada processo usa a CPU por uma fatia de tempo fixa (<em>quantum</em>) e volta para o fim da fila</td></tr>
+<tr><td>Por prioridade</td><td>o processo de maior prioridade é executado primeiro</td></tr>
+</tbody>
+</table>
+<p><strong>Deadlock</strong> (impasse) é a situação em que dois ou mais processos ficam esperando indefinidamente, cada um por um recurso que está preso com o outro.</p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Um processo que espera uma operação de entrada e saída fica <strong>bloqueado</strong>, e não “pronto”. Pronto é quem só aguarda a vez de usar o processador.</p></div>
+
 <h2>Kernel</h2>
 <p>O <strong>kernel</strong> (núcleo) é a parte central do sistema operacional. Ele roda com privilégio máximo e se comunica diretamente com o hardware, cuidando do controle de processos, da memória, dos dispositivos e das interrupções.</p>
 <table class="comparison-table">
@@ -45,6 +68,21 @@
 </tbody>
 </table>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>“O kernel é responsável pela interface gráfica.” Errado: a interface gráfica é um programa que roda sobre o kernel. Também é comum a banca afirmar que “Linux” é o sistema completo; tecnicamente, Linux é o kernel, e o sistema completo é uma <strong>distribuição</strong>.</p></div>
+
+<h2>Inicialização do sistema (boot)</h2>
+<div class="flow-steps">
+<div class="flow-step"><div class="flow-step-number">1</div><div><strong>POST</strong><p>O firmware da placa-mãe testa o hardware ao ligar o computador.</p></div></div>
+<div class="flow-step"><div class="flow-step-number">2</div><div><strong>BIOS/UEFI</strong><p>Localiza o dispositivo de inicialização (SSD, HD, pen drive).</p></div></div>
+<div class="flow-step"><div class="flow-step-number">3</div><div><strong>Gerenciador de boot</strong><p>Carrega o sistema escolhido: Gerenciador de Inicialização do Windows ou GRUB no Linux. Com <strong>dual boot</strong>, ele permite escolher entre dois sistemas instalados.</p></div></div>
+<div class="flow-step"><div class="flow-step-number">4</div><div><strong>Kernel e serviços</strong><p>O kernel é carregado na memória e inicia os serviços do sistema (no Linux, normalmente pelo systemd).</p></div></div>
+<div class="flow-step"><div class="flow-step-number">5</div><div><strong>Login</strong><p>O usuário se identifica e a sessão é aberta.</p></div></div>
+</div>
+<h3>Virtualização</h3>
+<p>A virtualização permite executar vários sistemas operacionais, as <strong>máquinas virtuais</strong>, em um mesmo computador físico. Quem cria e controla as máquinas virtuais é o <strong>hypervisor</strong>:</p>
+<ul>
+<li><strong>Tipo 1 (nativo ou bare metal):</strong> roda direto sobre o hardware. Exemplos: VMware ESXi, Microsoft Hyper-V, KVM.</li>
+<li><strong>Tipo 2 (hospedado):</strong> roda como um programa sobre um sistema operacional. Exemplos: VirtualBox, VMware Workstation.</li>
+</ul>
 
 <h2>Interface gráfica e linha de comando</h2>
 <ul>
@@ -104,6 +142,28 @@
 </tbody>
 </table>
 <div class="box-dica"><strong>Memorize</strong><p>Os atalhos com a tecla Windows usam a inicial em inglês: <strong>E</strong>xplorer, <strong>D</strong>esktop, <strong>L</strong>ock, <strong>R</strong>un, <strong>I</strong> de settings.</p></div>
+<h3>Caminhos de arquivos</h3>
+<p>No Windows, o caminho começa pela letra da unidade e usa a barra invertida (<span class="inline-code">\</span>): <span class="inline-code">C:\Users\Maria\Documentos\relatorio.docx</span>.</p>
+<ul>
+<li><strong>Caminho absoluto:</strong> completo, desde a unidade.</li>
+<li><strong>Caminho relativo:</strong> a partir da pasta atual. Ex.: <span class="inline-code">..\Imagens</span> (o <span class="inline-code">..</span> indica a pasta acima).</li>
+<li>Nomes de arquivo no Windows não podem conter os caracteres <span class="inline-code">\ / : * ? " &lt; &gt; |</span>.</li>
+<li>Um <strong>atalho</strong> (.lnk) apenas aponta para o arquivo original: apagar o atalho não apaga o arquivo.</li>
+</ul>
+<h3>Contas e segurança no Windows</h3>
+<ul>
+<li><strong>Conta de administrador:</strong> instala programas e altera configurações do sistema. <strong>Conta padrão:</strong> uso do dia a dia, com permissões limitadas.</li>
+<li><strong>Controle de Conta de Usuário (UAC):</strong> pede confirmação antes de uma ação que exige privilégios de administrador.</li>
+<li><strong>Windows Update:</strong> instala atualizações e correções de segurança.</li>
+<li><strong>Segurança do Windows (Microsoft Defender):</strong> antivírus e firewall integrados.</li>
+<li><strong>BitLocker:</strong> criptografa unidades inteiras (disponível nas edições Pro e superiores).</li>
+<li><strong>Restauração do Sistema:</strong> volta as configurações do sistema a um ponto de restauração anterior, sem apagar documentos pessoais.</li>
+<li><strong>Histórico de Arquivos:</strong> faz cópias de segurança periódicas das pastas do usuário.</li>
+<li><strong>Arquivos ocultos:</strong> não aparecem no Explorador, a menos que a opção “Itens ocultos” esteja marcada na guia Exibir.</li>
+<li><strong>Pastas compactadas:</strong> o Windows cria e abre arquivos .zip sem programas adicionais.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>A Restauração do Sistema <strong>não</strong> é backup de documentos: ela desfaz alterações em programas, drivers e configurações. Para proteger arquivos pessoais, use backup (como o Histórico de Arquivos ou a nuvem).</p></div>
+
 <h3>Extensões de arquivo</h3>
 <p>A extensão indica o tipo do arquivo e qual programa o abre: <span class="inline-code">.exe</span> (executável), <span class="inline-code">.txt</span> (texto simples), <span class="inline-code">.docx</span> (Word), <span class="inline-code">.xlsx</span> (Excel), <span class="inline-code">.pdf</span>, <span class="inline-code">.jpg</span> e <span class="inline-code">.png</span> (imagens), <span class="inline-code">.mp3</span> (áudio), <span class="inline-code">.mp4</span> (vídeo), <span class="inline-code">.zip</span> (compactado).</p>
 
@@ -154,6 +214,37 @@
 </tbody>
 </table>
 
+<h3>Mais comandos</h3>
+<table class="comparison-table">
+<thead><tr><th>Comando</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td>touch</td><td>cria um arquivo vazio (ou atualiza a data de modificação)</td></tr>
+<tr><td>find</td><td>procura arquivos pelo nome e outros critérios</td></tr>
+<tr><td>grep</td><td>procura um texto dentro de arquivos</td></tr>
+<tr><td>tar</td><td>agrupa e compacta arquivos (ex.: tar -czf backup.tar.gz pasta)</td></tr>
+<tr><td>nano / vi</td><td>editores de texto no terminal</td></tr>
+<tr><td>apt / dnf</td><td>instalam e atualizam programas (apt no Debian e Ubuntu; dnf no Fedora)</td></tr>
+<tr><td>df / du</td><td>espaço livre nos discos / espaço ocupado por pastas</td></tr>
+<tr><td>top</td><td>mostra os processos e o uso de CPU e memória em tempo real</td></tr>
+<tr><td>ip addr</td><td>mostra os endereços de rede (o antigo ifconfig também é cobrado)</td></tr>
+<tr><td>passwd</td><td>altera a senha do usuário</td></tr>
+<tr><td>whoami</td><td>mostra o nome do usuário atual</td></tr>
+</tbody>
+</table>
+<h3>Caminhos e redirecionamento no terminal</h3>
+<ul>
+<li><span class="inline-code">~</span> representa a pasta pessoal do usuário (ex.: /home/maria).</li>
+<li><span class="inline-code">.</span> é o diretório atual e <span class="inline-code">..</span> é o diretório acima.</li>
+<li>Caminho absoluto começa com <span class="inline-code">/</span>; relativo parte do diretório atual.</li>
+<li>Arquivos cujo nome começa com ponto (como <span class="inline-code">.bashrc</span>) são <strong>ocultos</strong>; aparecem com <span class="inline-code">ls -a</span>.</li>
+</ul>
+<div class="pseudocode-card">
+<h3>Exemplo — redirecionamento e pipe</h3>
+<pre>ls -l &gt; lista.txt        # grava a saída em lista.txt, substituindo o conteúdo
+ls -l &gt;&gt; lista.txt       # acrescenta a saída ao final de lista.txt
+cat lista.txt | grep pdf # o | (pipe) envia a saída de um comando para o próximo</pre>
+</div>
+
 <h2>Permissões no Linux</h2>
 <p>Cada arquivo tem três tipos de permissão, aplicados a três grupos de pessoas.</p>
 <table class="comparison-table">
@@ -174,6 +265,16 @@ outros = 4 = 4 + 0 + 0 = r--  (apenas ler)
 ls -l mostra:  -rwxr-xr--  relatorio.sh</pre>
 </div>
 <div class="box-dica"><strong>Memorize</strong><p>r = 4, w = 2, x = 1. Os valores mais comuns: 7 (rwx), 6 (rw-), 5 (r-x), 4 (r--) e 0 (---). A ordem dos dígitos é sempre dono, grupo, outros.</p></div>
+
+<h3>Modo simbólico do chmod</h3>
+<p>Além dos números, o chmod aceita letras: <strong>u</strong> (dono), <strong>g</strong> (grupo), <strong>o</strong> (outros) e <strong>a</strong> (todos), com <strong>+</strong> (adiciona), <strong>-</strong> (remove) ou <strong>=</strong> (define exatamente).</p>
+<div class="pseudocode-card">
+<h3>Exemplos</h3>
+<pre>chmod u+x script.sh    # dá permissão de execução ao dono
+chmod g-w dados.txt    # retira a escrita do grupo
+chmod o=r dados.txt    # outros passam a ter só leitura
+chown maria dados.txt  # muda o dono do arquivo para maria</pre>
+</div>
 
 <h2>Comparação: Windows x Linux</h2>
 <table class="comparison-table">
@@ -199,5 +300,8 @@ ls -l mostra:  -rwxr-xr--  relatorio.sh</pre>
 <li>sistemas de arquivos (NTFS, FAT32, exFAT, ext4);</li>
 <li>Lixeira e atalhos do Windows;</li>
 <li>diretórios, comandos e permissões do Linux;</li>
+<li>estados de processo, escalonamento e boot;</li>
+<li>contas, UAC, BitLocker e Restauração do Sistema;</li>
+<li>caminhos, redirecionamento e chmod simbólico no Linux;</li>
 <li>comparação entre Windows e Linux.</li>
 </ul>

@@ -38,6 +38,25 @@
 <li><strong>Pincel de Formatação:</strong> copia a formatação de um trecho e aplica em outro.</li>
 </ul>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>“O alinhamento padrão do Word é justificado.” Errado: o padrão é <strong>à esquerda</strong>. Documentos oficiais costumam usar justificado, mas isso precisa ser aplicado.</p></div>
+<h3>Mais recursos do Word</h3>
+<table class="comparison-table">
+<thead><tr><th>Recurso</th><th>Para que serve</th></tr></thead>
+<tbody>
+<tr><td>Tabelas</td><td>organizar dados em linhas e colunas; é possível mesclar e dividir células</td></tr>
+<tr><td>Marcadores e numeração</td><td>listas com símbolos ou números automáticos</td></tr>
+<tr><td>Recuos</td><td>recuo de primeira linha (só a primeira linha do parágrafo) e recuo deslocado (todas menos a primeira)</td></tr>
+<tr><td>Espaçamento entre linhas</td><td>simples (1,0), 1,5 linha, duplo (2,0) e espaçamento antes/depois do parágrafo</td></tr>
+<tr><td>Colunas</td><td>divide o texto em colunas, como em jornais</td></tr>
+<tr><td>Nota de rodapé x nota de fim</td><td>a nota de rodapé aparece no pé da mesma página; a nota de fim aparece no final do documento (ou da seção)</td></tr>
+<tr><td>Legendas e índice de ilustrações</td><td>numeram figuras e tabelas e geram uma lista delas automaticamente</td></tr>
+<tr><td>AutoCorreção</td><td>corrige erros comuns de digitação enquanto você escreve</td></tr>
+<tr><td>Proteger documento</td><td>exige senha para abrir ou restringe a edição</td></tr>
+<tr><td>Salvar como PDF</td><td>gera um PDF pelo próprio Word (Arquivo &gt; Salvar como ou Exportar)</td></tr>
+</tbody>
+</table>
+<p><strong>Modos de exibição do Word:</strong> Modo de Leitura, Layout de Impressão (o padrão, mostra a página como será impressa), Layout da Web, Estrutura de Tópicos e Rascunho.</p>
+<div class="box-dica"><strong>Memorize</strong><p>Rodapé = pé da <strong>página</strong>. Fim = final do <strong>documento</strong>.</p></div>
+
 <h3>Atalhos: Word em português x LibreOffice Writer</h3>
 <p>Este é um dos assuntos favoritos das bancas, porque os atalhos do Word em português são diferentes dos atalhos do LibreOffice.</p>
 <table class="comparison-table">
@@ -149,6 +168,64 @@ $B$1 nunca muda, porque coluna e linha estão travadas.</pre>
 </div>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>As funções MÉDIA, SOMA e CONT.NÚM <strong>ignoram</strong> células vazias e com texto. Por isso, a média de 4, 8, 3 e uma célula vazia é 5, e não 3,75.</p></div>
 
+<h3>Mais funções</h3>
+<table class="comparison-table">
+<thead><tr><th>Função</th><th>O que faz</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>SOMASES</td><td>soma com vários critérios; o intervalo a somar vem primeiro</td><td>=SOMASES(C2:C9;A2:A9;"Norte";B2:B9;"&gt;100")</td></tr>
+<tr><td>CONT.SES</td><td>conta com vários critérios</td><td>=CONT.SES(A2:A9;"Norte";B2:B9;"&gt;100")</td></tr>
+<tr><td>MÉDIASE</td><td>média dos valores que atendem a um critério</td><td>=MÉDIASE(A2:A9;"Norte";C2:C9)</td></tr>
+<tr><td>SEERRO</td><td>mostra um valor alternativo se a fórmula der erro</td><td>=SEERRO(A1/B1;0)</td></tr>
+<tr><td>PROCH</td><td>como o PROCV, mas procura na primeira <strong>linha</strong> e retorna de outra linha</td><td>=PROCH(A1;B5:M7;3;FALSO)</td></tr>
+<tr><td>ÍNDICE e CORRESP</td><td>CORRESP acha a posição de um valor; ÍNDICE retorna o valor dessa posição</td><td>=ÍNDICE(B2:B9;CORRESP("Ana";A2:A9;0))</td></tr>
+<tr><td>ESQUERDA / DIREITA</td><td>primeiros / últimos caracteres de um texto</td><td>=ESQUERDA("Concurso";3) → Con</td></tr>
+<tr><td>EXT.TEXTO</td><td>caracteres do meio, a partir de uma posição</td><td>=EXT.TEXTO("Concurso";4;3) → cur</td></tr>
+<tr><td>MAIÚSCULA / MINÚSCULA</td><td>converte o texto</td><td>=MAIÚSCULA("prova") → PROVA</td></tr>
+<tr><td>INT</td><td>arredonda para baixo até o inteiro</td><td>=INT(7,8) → 7</td></tr>
+<tr><td>TRUNCAR</td><td>corta as casas decimais, sem arredondar</td><td>=TRUNCAR(7,8) → 7</td></tr>
+<tr><td>MOD</td><td>resto da divisão</td><td>=MOD(10;3) → 1</td></tr>
+<tr><td>MAIOR / MENOR</td><td>k-ésimo maior / menor valor</td><td>=MAIOR(A1:A10;2) → segundo maior</td></tr>
+<tr><td>DIA / MÊS / ANO</td><td>extraem partes de uma data</td><td>=ANO(HOJE())</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>INT e TRUNCAR só diferem com números negativos: =INT(-7,8) resulta em <strong>-8</strong> (arredonda para baixo), enquanto =TRUNCAR(-7,8) resulta em <strong>-7</strong> (apenas corta). Outra armadilha: no SOMASE o intervalo a somar é o último argumento; no SOMASES, é o primeiro.</p></div>
+<h3>Referência a outras planilhas e arquivos</h3>
+<table class="comparison-table">
+<thead><tr><th>Referência</th><th>Excel</th><th>LibreOffice Calc</th></tr></thead>
+<tbody>
+<tr><td>Outra planilha</td><td>=Vendas!A1</td><td>=Vendas.A1 ou =$Vendas.A1</td></tr>
+<tr><td>Nome com espaço</td><td>='Vendas 2026'!A1</td><td>='Vendas 2026'.A1</td></tr>
+<tr><td>Outro arquivo</td><td>=[Orcamento.xlsx]Plan1!A1</td><td>='file:///caminho/Orcamento.ods'#$Plan1.A1</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>Excel separa planilha e célula com <strong>exclamação</strong> (!); Calc, com <strong>ponto</strong> (.).</p></div>
+<h3>Atalhos do Excel</h3>
+<table class="comparison-table">
+<thead><tr><th>Atalho</th><th>Ação</th></tr></thead>
+<tbody>
+<tr><td>F2</td><td>edita a célula selecionada</td></tr>
+<tr><td>F4</td><td>alterna os tipos de referência ($) ao editar uma fórmula</td></tr>
+<tr><td>Alt + =</td><td>AutoSoma</td></tr>
+<tr><td>Ctrl + ;</td><td>insere a data atual</td></tr>
+<tr><td>Ctrl + 1</td><td>abre Formatar Células</td></tr>
+<tr><td>Ctrl + Home</td><td>vai para a célula A1</td></tr>
+<tr><td>Ctrl + setas</td><td>vai até o fim de um bloco de dados</td></tr>
+<tr><td>Ctrl + Page Down / Page Up</td><td>próxima / anterior planilha</td></tr>
+<tr><td>Shift + F11</td><td>insere uma nova planilha</td></tr>
+<tr><td>F11</td><td>cria um gráfico em uma planilha separada</td></tr>
+</tbody>
+</table>
+<h3>Qual gráfico usar</h3>
+<table class="comparison-table">
+<thead><tr><th>Gráfico</th><th>Indicado para</th></tr></thead>
+<tbody>
+<tr><td>Colunas / barras</td><td>comparar valores entre categorias</td></tr>
+<tr><td>Linhas</td><td>mostrar a evolução ao longo do tempo</td></tr>
+<tr><td>Pizza</td><td>mostrar as partes de um todo (uma única série)</td></tr>
+<tr><td>Dispersão</td><td>relação entre duas variáveis numéricas</td></tr>
+</tbody>
+</table>
+
 <h3>Mensagens de erro</h3>
 <table class="comparison-table">
 <thead><tr><th>Erro</th><th>Causa</th></tr></thead>
@@ -171,6 +248,14 @@ $B$1 nunca muda, porque coluna e linha estão travadas.</pre>
 <li><strong>Tabela dinâmica:</strong> resume e cruza grandes volumes de dados.</li>
 </ul>
 
+<h3>Organização e proteção dos dados</h3>
+<ul>
+<li><strong>Congelar Painéis</strong> (guia Exibir): mantém linhas ou colunas de títulos visíveis ao rolar a planilha.</li>
+<li><strong>Validação de Dados</strong> (guia Dados): restringe o que pode ser digitado, como uma lista suspensa ou apenas datas.</li>
+<li><strong>Proteger Planilha</strong> (guia Revisão): impede alterações em células bloqueadas; <strong>Proteger Pasta de Trabalho</strong> impede incluir, excluir ou renomear planilhas.</li>
+<li><strong>Remover Duplicatas</strong> e <strong>Texto para Colunas</strong> (guia Dados): limpam e separam dados importados.</li>
+</ul>
+
 <h2>Microsoft PowerPoint</h2>
 <p>O PowerPoint cria apresentações compostas por <strong>slides</strong>, que podem conter textos, imagens, gráficos, áudio e vídeo.</p>
 <h3>Modos de exibição</h3>
@@ -190,6 +275,16 @@ $B$1 nunca muda, porque coluna e linha estão travadas.</pre>
 <li><strong>Animações:</strong> efeitos aplicados aos <strong>objetos dentro do slide</strong> (entrada, ênfase, saída e trajetórias).</li>
 </ul>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>Transição e animação são coisas diferentes: transição acontece <strong>entre slides</strong>; animação acontece <strong>nos elementos de um slide</strong>.</p></div>
+<h3>Mais recursos</h3>
+<ul>
+<li><strong>Modo de Exibição do Apresentador:</strong> em dois monitores, o público vê o slide e o apresentador vê também as anotações, o próximo slide e o tempo.</li>
+<li><strong>Anotações:</strong> texto de apoio do apresentador, que não aparece para o público.</li>
+<li><strong>Testar Intervalos:</strong> grava quanto tempo cada slide fica na tela, para a apresentação avançar sozinha.</li>
+<li><strong>Ocultar slide:</strong> mantém o slide no arquivo, mas ele não aparece na apresentação.</li>
+<li><strong>Seções:</strong> agrupam slides para organizar apresentações grandes.</li>
+<li><strong>Formatos:</strong> .pptx (apresentação editável), .ppsx (abre direto no modo de apresentação), .potx (modelo). Também é possível exportar para PDF e vídeo (MP4).</li>
+</ul>
+
 <h3>Atalhos da apresentação</h3>
 <table class="comparison-table">
 <thead><tr><th>Atalho</th><th>Ação</th></tr></thead>
@@ -210,6 +305,9 @@ $B$1 nunca muda, porque coluna e linha estão travadas.</pre>
 <li>funções SOMA, MÉDIA, CONT.SE, SOMASE, SE e PROCV;</li>
 <li>mensagens de erro do Excel;</li>
 <li>diferença entre transição e animação no PowerPoint;</li>
+<li>funções com vários critérios, SEERRO, ÍNDICE/CORRESP e funções de texto;</li>
+<li>referência a outras planilhas (! no Excel e . no Calc);</li>
+<li>recursos do Word (notas, recuos, modos de exibição) e do PowerPoint (.ppsx, modo do apresentador);</li>
 <li>formatos de arquivo do Office e do LibreOffice.</li>
 </ul>
 <p>Entre esses, o Excel é o assunto mais cobrado: vale a pena resolver as fórmulas no papel até ficar natural.</p>

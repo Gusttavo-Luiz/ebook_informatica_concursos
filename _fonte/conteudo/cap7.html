@@ -31,6 +31,25 @@
 <li><strong>Incidente:</strong> evento que efetivamente compromete a segurança.</li>
 </ul>
 
+<h2>Políticas, normas e classificação da informação</h2>
+<ul>
+<li><strong>Segurança física:</strong> protege instalações e equipamentos (controle de acesso a salas, câmeras, nobreak, proteção contra incêndio).</li>
+<li><strong>Segurança lógica:</strong> protege sistemas e dados (senhas, permissões, criptografia, firewall, antivírus).</li>
+<li><strong>Política de Segurança da Informação (PSI):</strong> documento aprovado pela direção que define regras, responsabilidades e penalidades sobre o uso da informação na organização.</li>
+<li><strong>ABNT NBR ISO/IEC 27001:</strong> define os requisitos de um Sistema de Gestão de Segurança da Informação (SGSI); a organização pode ser <strong>certificada</strong> por ela.</li>
+<li><strong>ABNT NBR ISO/IEC 27002:</strong> código de boas práticas, com orientações para implementar os controles de segurança.</li>
+</ul>
+<h3>Graus de sigilo na Lei de Acesso à Informação</h3>
+<p>A Lei nº 12.527/2011 (LAI) estabelece que a regra é a <strong>publicidade</strong> das informações públicas, e o sigilo é exceção. As informações classificadas têm prazos máximos de restrição de acesso:</p>
+<table class="comparison-table">
+<thead><tr><th>Grau de sigilo</th><th>Prazo máximo</th></tr></thead>
+<tbody>
+<tr><td>Ultrassecreta</td><td>25 anos</td></tr>
+<tr><td>Secreta</td><td>15 anos</td></tr>
+<tr><td>Reservada</td><td>5 anos</td></tr>
+</tbody>
+</table>
+
 <h2>Malware</h2>
 <p>Malware (malicious software) é qualquer programa criado para causar danos, roubar dados ou obter controle indevido de um sistema.</p>
 <table class="comparison-table">
@@ -68,6 +87,21 @@
 </table>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>Phishing <strong>não é malware</strong>: é um golpe de engenharia social que engana o usuário. Já o <strong>pharming</strong> é mais perigoso, porque o usuário cai no site falso mesmo digitando o endereço certo. E o DDoS ataca a <strong>disponibilidade</strong>.</p></div>
 
+<h3>Outros ataques cobrados</h3>
+<table class="comparison-table">
+<thead><tr><th>Ataque</th><th>Descrição</th></tr></thead>
+<tbody>
+<tr><td>Zero-day (dia zero)</td><td>explora uma falha ainda desconhecida pelo fabricante, para a qual não existe correção</td></tr>
+<tr><td>Sniffing</td><td>captura e analisa o tráfego da rede para obter dados, como senhas enviadas sem criptografia</td></tr>
+<tr><td>SQL injection</td><td>insere comandos de banco de dados em campos de formulário para acessar ou alterar dados</td></tr>
+<tr><td>Cross-site scripting (XSS)</td><td>injeta scripts maliciosos em páginas vistas por outros usuários</td></tr>
+<tr><td>Defacement</td><td>altera a página inicial de um site, “pichando” seu conteúdo</td></tr>
+<tr><td>Hoax</td><td>boato ou mensagem falsa espalhada em massa, como correntes</td></tr>
+<tr><td>Cryptojacking</td><td>usa o computador da vítima, sem permissão, para minerar criptomoedas</td></tr>
+<tr><td>Golpe do falso suporte</td><td>o criminoso se passa por técnico ou atendente e convence a vítima a instalar um programa de acesso remoto ou informar códigos</td></tr>
+</tbody>
+</table>
+
 <h2>Criptografia</h2>
 <p>A criptografia transforma a informação legível em um código ilegível, que só pode ser revertido por quem tem a chave correta. Ela protege principalmente a <strong>confidencialidade</strong>.</p>
 <table class="comparison-table">
@@ -95,6 +129,16 @@
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>“A assinatura digital garante o sigilo do documento.” Errado: ela garante autenticidade, integridade e não repúdio. Para sigilo, é preciso criptografar o documento.</p></div>
 <div class="box-dica"><strong>Memorize</strong><p>Sigilo → chave <strong>pública do destinatário</strong>. Assinatura → chave <strong>privada do remetente</strong>.</p></div>
 
+<h3>Tipos de certificado digital (ICP-Brasil)</h3>
+<table class="comparison-table">
+<thead><tr><th>Tipo</th><th>Onde fica a chave privada</th><th>Característica</th></tr></thead>
+<tbody>
+<tr><td>A1</td><td>em um arquivo instalado no computador ou celular</td><td>prático, mas exige cuidado com cópias do arquivo</td></tr>
+<tr><td>A3</td><td>em um token USB ou cartão inteligente (smart card)</td><td>a chave privada não sai do dispositivo, o que aumenta a segurança</td></tr>
+</tbody>
+</table>
+<p>O certificado de pessoa física é chamado de <strong>e-CPF</strong> e o de empresa, de <strong>e-CNPJ</strong>. Ele é usado para assinar documentos com validade jurídica, acessar sistemas do governo e emitir notas fiscais.</p>
+
 <h2>Autenticação</h2>
 <p>A autenticação confirma a identidade de quem acessa um sistema. Ela se baseia em três fatores:</p>
 <ul>
@@ -120,6 +164,19 @@
 </table>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>“O firewall remove vírus do computador.” Errado: o firewall filtra o tráfego de rede; quem remove malware é o antivírus. Um não substitui o outro.</p></div>
 
+<h3>Como o antivírus detecta ameaças</h3>
+<ul>
+<li><strong>Por assinatura:</strong> compara os arquivos com uma base de “impressões digitais” de malwares conhecidos; por isso a base precisa estar atualizada.</li>
+<li><strong>Heurística e comportamento:</strong> identifica ações suspeitas (como criptografar muitos arquivos de uma vez), detectando também ameaças novas.</li>
+<li><strong>Sandbox:</strong> executa o arquivo suspeito em um ambiente isolado para observar o que ele faz.</li>
+<li><strong>Quarentena:</strong> isola o arquivo suspeito, impedindo que seja executado, sem apagá-lo de imediato.</li>
+</ul>
+<h3>DMZ e honeypot</h3>
+<ul>
+<li><strong>DMZ (zona desmilitarizada):</strong> segmento de rede separado, entre a internet e a rede interna, onde ficam os servidores acessados de fora (site, e-mail). Se um deles for invadido, a rede interna continua protegida.</li>
+<li><strong>Honeypot:</strong> sistema-isca, propositalmente vulnerável, que atrai atacantes para estudar seu comportamento e desviá-los dos sistemas reais.</li>
+</ul>
+
 <h2>Backup</h2>
 <p>Backup é a cópia de segurança dos dados, que permite recuperá-los em caso de falha, exclusão acidental ou ataque, como um ransomware.</p>
 <table class="comparison-table">
@@ -132,6 +189,28 @@
 </table>
 <p>O incremental é o mais rápido de fazer e ocupa menos espaço, mas é o mais trabalhoso de restaurar. O diferencial cresce a cada dia, mas restaura com só duas cópias.</p>
 <div class="box-dica"><strong>Memorize</strong><p>Regra <strong>3-2-1</strong>: 3 cópias dos dados, em 2 mídias diferentes, sendo 1 fora do local (por exemplo, na nuvem). E teste a restauração de tempos em tempos.</p></div>
+
+<h2>LGPD — Lei Geral de Proteção de Dados</h2>
+<p>A Lei nº 13.709/2018 regula o tratamento de dados pessoais por pessoas e organizações, públicas e privadas, nos meios digitais e físicos.</p>
+<table class="comparison-table">
+<thead><tr><th>Conceito</th><th>Significado</th></tr></thead>
+<tbody>
+<tr><td>Dado pessoal</td><td>informação relacionada a pessoa natural identificada ou identificável (nome, CPF, endereço, IP)</td></tr>
+<tr><td>Dado pessoal sensível</td><td>origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização religiosa, filosófica ou política, dados de saúde ou vida sexual, dados genéticos ou biométricos</td></tr>
+<tr><td>Dado anonimizado</td><td>dado que não permite mais identificar o titular</td></tr>
+<tr><td>Titular</td><td>a pessoa a quem os dados se referem</td></tr>
+<tr><td>Controlador</td><td>quem toma as decisões sobre o tratamento dos dados</td></tr>
+<tr><td>Operador</td><td>quem realiza o tratamento em nome do controlador</td></tr>
+<tr><td>Encarregado (DPO)</td><td>canal de comunicação entre o controlador, os titulares e a ANPD</td></tr>
+<tr><td>ANPD</td><td>Autoridade Nacional de Proteção de Dados, que fiscaliza e aplica sanções</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Bases legais:</strong> o tratamento só é permitido em hipóteses previstas na lei. O <strong>consentimento</strong> é apenas uma delas; outras são o cumprimento de obrigação legal, a execução de políticas públicas e a execução de contrato.</li>
+<li><strong>Direitos do titular:</strong> confirmar se seus dados são tratados, acessá-los, corrigi-los, pedir anonimização, bloqueio ou eliminação de dados desnecessários, portabilidade e revogação do consentimento.</li>
+<li><strong>Sanções:</strong> vão de advertência a multa de até 2% do faturamento, limitada a R$ 50 milhões por infração.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“A LGPD só se aplica a dados em meio digital.” Errado: ela vale também para dados em papel. E “todo tratamento de dados exige consentimento” também é errado: o consentimento é só uma das bases legais.</p></div>
 
 <h2>Boas práticas</h2>
 <ul>
@@ -152,5 +231,7 @@
 <li>phishing, pharming, engenharia social e DDoS;</li>
 <li>criptografia simétrica x assimétrica, hash, assinatura e certificado digital;</li>
 <li>firewall x antivírus, IDS x IPS, VPN;</li>
-<li>tipos de backup.</li>
+<li>tipos de backup;</li>
+<li>ISO 27001/27002, graus de sigilo da LAI e LGPD;</li>
+<li>certificados A1 e A3, DMZ e formas de detecção do antivírus.</li>
 </ul>

@@ -1,6 +1,6 @@
 // Arquivo gerado por _fonte/gerar_capitulos.py. Não edite à mão.
 window.CAPITULOS_SIMULADO = {"1": "Introdução à Informática", "2": "Sistemas Operacionais", "3": "Internet e Navegadores", "4": "Pacote Office", "5": "Hardware", "6": "Armazenamento em Nuvem", "7": "Segurança da Informação", "8": "Lógica de Programação"};
-window.QUESTOES_NOS_CAPITULOS = {"1": 10, "2": 10, "3": 10, "4": 10, "5": 10, "6": 10, "7": 10, "8": 10};
+window.QUESTOES_NOS_CAPITULOS = {"1": 15, "2": 15, "3": 15, "4": 15, "5": 15, "6": 15, "7": 15, "8": 15};
 window.BANCO_SIMULADO = [
  {
   "capitulo": 1,
@@ -117,6 +117,64 @@ window.BANCO_SIMULADO = [
   ],
   "correta": 0,
   "explicacao": "Firmware é o software gravado em um chip do próprio hardware. A BIOS/UEFI é o exemplo mais cobrado."
+ },
+ {
+  "capitulo": 1,
+  "pergunta": "O padrão ASCII original utiliza 7 bits por caractere. Quantos caracteres diferentes ele consegue representar?",
+  "opcoes": [
+   "128",
+   "256",
+   "1.024",
+   "64"
+  ],
+  "correta": 0,
+  "explicacao": "Com 7 bits há 2 elevado a 7 = 128 combinações. O ASCII estendido, com 8 bits, chega a 256."
+ },
+ {
+  "capitulo": 1,
+  "pergunta": "O número hexadecimal 2F corresponde, em decimal, a:",
+  "opcoes": [
+   "32",
+   "47",
+   "215",
+   "29"
+  ],
+  "correta": 1,
+  "explicacao": "2 × 16 + F (15) = 32 + 15 = 47."
+ },
+ {
+  "capitulo": 1,
+  "pergunta": "O programa que traduz todo o código-fonte de uma vez, antes da execução, gerando um arquivo executável, é o:",
+  "opcoes": [
+   "sistema operacional",
+   "editor de texto",
+   "compilador",
+   "interpretador"
+  ],
+  "correta": 2,
+  "explicacao": "O compilador gera o executável antes. O interpretador traduz e executa linha a linha durante a execução."
+ },
+ {
+  "capitulo": 1,
+  "pergunta": "Julgue o item: “O formato PNG utiliza compressão sem perda, enquanto o JPG utiliza compressão com perda”.",
+  "opcoes": [
+   "Certo",
+   "Errado"
+  ],
+  "correta": 0,
+  "explicacao": "PNG preserva exatamente a imagem original; JPG descarta detalhes para reduzir o tamanho."
+ },
+ {
+  "capitulo": 1,
+  "pergunta": "Uma imagem que usa 24 bits por pixel (8 bits para cada cor do RGB) consegue representar aproximadamente:",
+  "opcoes": [
+   "4 bilhões de cores",
+   "256 cores",
+   "65 mil cores",
+   "16,7 milhões de cores"
+  ],
+  "correta": 3,
+  "explicacao": "2 elevado a 24 ≈ 16,7 milhões de combinações de cor."
  },
  {
   "capitulo": 1,
@@ -296,6 +354,66 @@ window.BANCO_SIMULADO = [
  },
  {
   "capitulo": 2,
+  "pergunta": "Um processo que está aguardando a conclusão de uma leitura no disco encontra-se no estado:",
+  "opcoes": [
+   "executando",
+   "bloqueado (espera)",
+   "terminado",
+   "pronto"
+  ],
+  "correta": 1,
+  "explicacao": "Quem aguarda um evento de entrada e saída fica bloqueado. Pronto é quem só espera a vez de usar o processador."
+ },
+ {
+  "capitulo": 2,
+  "pergunta": "O algoritmo de escalonamento em que cada processo usa o processador por uma fatia fixa de tempo (quantum) e depois volta ao fim da fila é o:",
+  "opcoes": [
+   "por prioridade",
+   "FIFO",
+   "SJF",
+   "Round Robin"
+  ],
+  "correta": 3,
+  "explicacao": "O Round Robin (circular) distribui o processador em fatias de tempo iguais, em rodízio."
+ },
+ {
+  "capitulo": 2,
+  "pergunta": "No terminal do Linux, o comando ls -l > lista.txt:",
+  "opcoes": [
+   "grava a listagem no arquivo lista.txt, substituindo o conteúdo anterior",
+   "acrescenta a listagem ao final de lista.txt",
+   "apaga o arquivo lista.txt",
+   "lista apenas os arquivos de texto"
+  ],
+  "correta": 0,
+  "explicacao": "O sinal > redireciona a saída para o arquivo, sobrescrevendo. Para acrescentar ao final, usa-se >>."
+ },
+ {
+  "capitulo": 2,
+  "pergunta": "O recurso do Windows que criptografa unidades de disco inteiras é o:",
+  "opcoes": [
+   "Windows Update",
+   "Histórico de Arquivos",
+   "BitLocker",
+   "Restauração do Sistema"
+  ],
+  "correta": 2,
+  "explicacao": "O BitLocker criptografa a unidade; sem a chave, os dados ficam ilegíveis mesmo se o disco for removido."
+ },
+ {
+  "capitulo": 2,
+  "pergunta": "No Linux, o comando chmod u+x script.sh:",
+  "opcoes": [
+   "adiciona a permissão de execução para o dono do arquivo",
+   "remove a permissão de execução de todos",
+   "muda o dono do arquivo",
+   "dá permissão total para todos os usuários"
+  ],
+  "correta": 0,
+  "explicacao": "u é o dono (user), + adiciona e x é a permissão de execução."
+ },
+ {
+  "capitulo": 2,
   "pergunta": "No Windows, o atalho Windows + L serve para:",
   "opcoes": [
    "abrir o Explorador de Arquivos",
@@ -469,6 +587,64 @@ window.BANCO_SIMULADO = [
   ],
   "correta": 1,
   "explicacao": "A navegação anônima apenas não guarda histórico, cookies e dados da sessão no computador. Provedor, rede e sites continuam podendo identificar o acesso."
+ },
+ {
+  "capitulo": 3,
+  "pergunta": "Qual meio de transmissão utiliza pulsos de luz e é imune a interferências eletromagnéticas?",
+  "opcoes": [
+   "Cabo coaxial",
+   "Fibra óptica",
+   "Bluetooth",
+   "Par trançado"
+  ],
+  "correta": 1,
+  "explicacao": "A fibra óptica transmite luz, alcança longas distâncias com alta velocidade e não sofre interferência eletromagnética."
+ },
+ {
+  "capitulo": 3,
+  "pergunta": "Em uma ligação telefônica, as duas pessoas podem falar e ouvir ao mesmo tempo. Esse modo de transmissão é chamado de:",
+  "opcoes": [
+   "simplex",
+   "half-duplex",
+   "full-duplex",
+   "multicast"
+  ],
+  "correta": 2,
+  "explicacao": "Full-duplex transmite nos dois sentidos simultaneamente. Half-duplex alterna os sentidos e simplex só tem um sentido."
+ },
+ {
+  "capitulo": 3,
+  "pergunta": "O endereço IP 127.0.0.1 representa:",
+  "opcoes": [
+   "um endereço público da internet",
+   "o roteador da rede",
+   "o servidor DNS do provedor",
+   "o próprio computador (loopback)"
+  ],
+  "correta": 3,
+  "explicacao": "127.0.0.1 é o endereço de loopback, também chamado de localhost."
+ },
+ {
+  "capitulo": 3,
+  "pergunta": "Qual comando testa se um computador na rede responde, medindo o tempo de resposta?",
+  "opcoes": [
+   "ping",
+   "nslookup",
+   "ipconfig",
+   "netstat"
+  ],
+  "correta": 0,
+  "explicacao": "O ping envia pacotes ICMP e mede se o destino responde e em quanto tempo."
+ },
+ {
+  "capitulo": 3,
+  "pergunta": "Julgue o item: “Internet e World Wide Web são sinônimos, pois toda a internet é formada por páginas web”.",
+  "opcoes": [
+   "Certo",
+   "Errado"
+  ],
+  "correta": 1,
+  "explicacao": "A web é um dos serviços da internet. E-mail, transferência de arquivos e VoIP também usam a internet sem serem a web."
  },
  {
   "capitulo": 3,
@@ -650,6 +826,66 @@ window.BANCO_SIMULADO = [
  },
  {
   "capitulo": 4,
+  "pergunta": "No Excel, qual o resultado de =EXT.TEXTO(\"Informática\";3;4)?",
+  "opcoes": [
+   "Info",
+   "form",
+   "orma",
+   "ática"
+  ],
+  "correta": 1,
+  "explicacao": "EXT.TEXTO pega 4 caracteres a partir da 3ª posição: I(1) n(2) f(3) o(4) r(5) m(6) → \"form\"."
+ },
+ {
+  "capitulo": 4,
+  "pergunta": "No Excel, qual o resultado de =INT(-4,3)?",
+  "opcoes": [
+   "-5",
+   "4",
+   "-4,3",
+   "-4"
+  ],
+  "correta": 0,
+  "explicacao": "INT arredonda para baixo até o inteiro. Para números negativos, “para baixo” é -5. TRUNCAR(-4,3) resultaria em -4."
+ },
+ {
+  "capitulo": 4,
+  "pergunta": "No Microsoft Excel, a fórmula que soma a célula A1 da planilha chamada Vendas é:",
+  "opcoes": [
+   "=Vendas!A1",
+   "=Vendas.A1",
+   "=Vendas:A1",
+   "=[Vendas]A1"
+  ],
+  "correta": 0,
+  "explicacao": "O Excel separa planilha e célula com exclamação. No LibreOffice Calc, o separador é o ponto (=Vendas.A1)."
+ },
+ {
+  "capitulo": 4,
+  "pergunta": "Para mostrar a evolução do faturamento mês a mês ao longo de um ano, o gráfico mais adequado é o de:",
+  "opcoes": [
+   "radar",
+   "pizza",
+   "linhas",
+   "dispersão"
+  ],
+  "correta": 2,
+  "explicacao": "Gráficos de linhas são os mais indicados para mostrar tendência ao longo do tempo."
+ },
+ {
+  "capitulo": 4,
+  "pergunta": "No PowerPoint, o formato de arquivo que abre diretamente no modo de apresentação de slides é o:",
+  "opcoes": [
+   ".potx",
+   ".docx",
+   ".pptx",
+   ".ppsx"
+  ],
+  "correta": 3,
+  "explicacao": "O .ppsx (PowerPoint Show) abre já em tela cheia. O .pptx abre para edição e o .potx é um modelo."
+ },
+ {
+  "capitulo": 4,
   "pergunta": "No Microsoft Word em português, o atalho Ctrl + T:",
   "opcoes": [
    "cria uma nova tabela",
@@ -825,6 +1061,66 @@ window.BANCO_SIMULADO = [
   ],
   "correta": 3,
   "explicacao": "A cache (L1, L2, L3) é uma memória SRAM muito rápida que reduz a espera do processador pela RAM."
+ },
+ {
+  "capitulo": 5,
+  "pergunta": "O nível de RAID que grava os mesmos dados em dois discos (espelhamento), mantendo-os disponíveis se um disco falhar, é o:",
+  "opcoes": [
+   "JBOD",
+   "RAID 0",
+   "RAID 1",
+   "RAID 5"
+  ],
+  "correta": 2,
+  "explicacao": "RAID 1 é o espelhamento. RAID 0 divide os dados e não oferece redundância."
+ },
+ {
+  "capitulo": 5,
+  "pergunta": "O equipamento que mantém o computador ligado por algum tempo durante uma queda de energia, graças a uma bateria, é o:",
+  "opcoes": [
+   "filtro de linha",
+   "nobreak",
+   "fonte de alimentação",
+   "estabilizador"
+  ],
+  "correta": 1,
+  "explicacao": "O nobreak (UPS) tem bateria. O estabilizador corrige a tensão, mas não mantém o equipamento ligado sem energia."
+ },
+ {
+  "capitulo": 5,
+  "pergunta": "Os processadores usados na maioria dos smartphones seguem a arquitetura:",
+  "opcoes": [
+   "RISC, da família ARM",
+   "Harvard pura, sem memória",
+   "de 8 bits",
+   "CISC, da família x86"
+  ],
+  "correta": 0,
+  "explicacao": "Os celulares usam processadores ARM, de arquitetura RISC, mais econômicos em energia."
+ },
+ {
+  "capitulo": 5,
+  "pergunta": "Um monitor Full HD tem resolução de:",
+  "opcoes": [
+   "2560 × 1440 pixels",
+   "3840 × 2160 pixels",
+   "1280 × 720 pixels",
+   "1920 × 1080 pixels"
+  ],
+  "correta": 3,
+  "explicacao": "Full HD é 1920 × 1080. HD é 1280 × 720 e 4K UHD é 3840 × 2160."
+ },
+ {
+  "capitulo": 5,
+  "pergunta": "A tecnologia que converte a imagem de um documento digitalizado em texto editável é o:",
+  "opcoes": [
+   "POST",
+   "PDF",
+   "OCR",
+   "RAID"
+  ],
+  "correta": 2,
+  "explicacao": "OCR (reconhecimento óptico de caracteres) identifica as letras na imagem e as transforma em texto."
  },
  {
   "capitulo": 5,
@@ -1004,6 +1300,66 @@ window.BANCO_SIMULADO = [
  },
  {
   "capitulo": 6,
+  "pergunta": "O software que cria e gerencia máquinas virtuais em um servidor físico é chamado de:",
+  "opcoes": [
+   "hypervisor",
+   "navegador",
+   "firewall",
+   "kernel"
+  ],
+  "correta": 0,
+  "explicacao": "O hypervisor divide o hardware entre várias máquinas virtuais. É a base da infraestrutura de nuvem."
+ },
+ {
+  "capitulo": 6,
+  "pergunta": "No modelo em que o cliente envia apenas funções de código, executadas sob demanda, sem gerenciar servidores e pagando só pelo tempo de execução, temos:",
+  "opcoes": [
+   "DaaS",
+   "FaaS (serverless)",
+   "nuvem privada",
+   "IaaS"
+  ],
+  "correta": 1,
+  "explicacao": "FaaS, ou serverless, executa funções a partir de eventos. Exemplos: AWS Lambda e Azure Functions."
+ },
+ {
+  "capitulo": 6,
+  "pergunta": "Ao migrar os servidores próprios para a nuvem, a organização tende a substituir:",
+  "opcoes": [
+   "o SLA por um contrato de compra de servidores",
+   "a internet por uma rede local",
+   "investimentos iniciais em equipamentos (CAPEX) por despesas operacionais conforme o uso (OPEX)",
+   "despesas operacionais (OPEX) por investimentos em equipamentos (CAPEX)"
+  ],
+  "correta": 2,
+  "explicacao": "Na nuvem não é preciso comprar servidores: paga-se pelo consumo, como despesa operacional."
+ },
+ {
+  "capitulo": 6,
+  "pergunta": "Um SLA com disponibilidade de 99,9% admite que o serviço fique fora do ar, por ano, aproximadamente:",
+  "opcoes": [
+   "8,76 horas",
+   "3,65 dias",
+   "36 dias",
+   "52 minutos"
+  ],
+  "correta": 0,
+  "explicacao": "0,1% de 8.760 horas (um ano) = 8,76 horas."
+ },
+ {
+  "capitulo": 6,
+  "pergunta": "A ferramenta de planilhas do Google Workspace, equivalente ao Excel, é o:",
+  "opcoes": [
+   "Google Meet",
+   "Google Keep",
+   "Google Docs",
+   "Planilhas Google (Sheets)"
+  ],
+  "correta": 3,
+  "explicacao": "Planilhas Google é o equivalente ao Excel; Documentos Google equivale ao Word."
+ },
+ {
+  "capitulo": 6,
   "pergunta": "Um provedor oferece um ambiente pronto, com sistema operacional, banco de dados e ambiente de execução, onde desenvolvedores apenas publicam o código de suas aplicações. Esse modelo é o:",
   "opcoes": [
    "IaaS",
@@ -1180,6 +1536,66 @@ window.BANCO_SIMULADO = [
  },
  {
   "capitulo": 7,
+  "pergunta": "Pela Lei de Acesso à Informação (Lei nº 12.527/2011), o prazo máximo de restrição de acesso a uma informação classificada como ultrassecreta é de:",
+  "opcoes": [
+   "25 anos",
+   "50 anos",
+   "5 anos",
+   "15 anos"
+  ],
+  "correta": 0,
+  "explicacao": "Ultrassecreta: 25 anos; secreta: 15 anos; reservada: 5 anos."
+ },
+ {
+  "capitulo": 7,
+  "pergunta": "Segundo a LGPD, é exemplo de dado pessoal sensível:",
+  "opcoes": [
+   "o e-mail profissional",
+   "o endereço residencial",
+   "o número do telefone",
+   "a convicção religiosa"
+  ],
+  "correta": 3,
+  "explicacao": "Convicção religiosa, origem racial, opinião política, saúde, vida sexual e dados genéticos ou biométricos são dados sensíveis."
+ },
+ {
+  "capitulo": 7,
+  "pergunta": "Na LGPD, a quem competem as decisões referentes ao tratamento de dados pessoais?",
+  "opcoes": [
+   "Ao encarregado",
+   "Ao controlador",
+   "Ao operador",
+   "Ao titular"
+  ],
+  "correta": 1,
+  "explicacao": "O controlador decide; o operador executa o tratamento em nome dele; o encarregado faz a comunicação com titulares e ANPD."
+ },
+ {
+  "capitulo": 7,
+  "pergunta": "O ataque que explora uma vulnerabilidade ainda desconhecida pelo fabricante, para a qual não existe correção disponível, é chamado de:",
+  "opcoes": [
+   "sniffing",
+   "defacement",
+   "hoax",
+   "zero-day"
+  ],
+  "correta": 3,
+  "explicacao": "Zero-day (dia zero) indica que o fabricante teve “zero dias” para corrigir a falha."
+ },
+ {
+  "capitulo": 7,
+  "pergunta": "O certificado digital cuja chave privada fica armazenada em token USB ou cartão inteligente, sem sair do dispositivo, é do tipo:",
+  "opcoes": [
+   "A3",
+   "SSL",
+   "e-mail",
+   "A1"
+  ],
+  "correta": 0,
+  "explicacao": "No A3 a chave fica no token ou cartão. No A1 ela fica em um arquivo instalado no computador."
+ },
+ {
+  "capitulo": 7,
   "pergunta": "O tipo de spyware que registra as teclas digitadas pelo usuário, permitindo capturar senhas, é o:",
   "opcoes": [
    "adware",
@@ -1351,6 +1767,66 @@ window.BANCO_SIMULADO = [
   ],
   "correta": 1,
   "explicacao": "x > y é falso (5 não é maior que 5). x + y = 10 e 10 >= 10 é verdadeiro. Falso OU verdadeiro resulta em verdadeiro."
+ },
+ {
+  "capitulo": 8,
+  "pergunta": "Em um fluxograma, o símbolo que representa uma decisão (teste lógico) é o:",
+  "opcoes": [
+   "oval",
+   "retângulo",
+   "losango",
+   "paralelogramo"
+  ],
+  "correta": 2,
+  "explicacao": "O losango representa a decisão. Retângulo é processo, paralelogramo é entrada/saída e oval é início/fim."
+ },
+ {
+  "capitulo": 8,
+  "pergunta": "Considere a função recursiva fatorial(n), que retorna 1 se n <= 1 e, caso contrário, n * fatorial(n - 1). Qual o valor de fatorial(4)?",
+  "opcoes": [
+   "24",
+   "4",
+   "10",
+   "16"
+  ],
+  "correta": 0,
+  "explicacao": "4 × 3 × 2 × 1 = 24. A chamada fatorial(1) é o caso base e encerra a recursão."
+ },
+ {
+  "capitulo": 8,
+  "pergunta": "Na passagem de parâmetro por referência:",
+  "opcoes": [
+   "a sub-rotina não pode alterar o parâmetro",
+   "o parâmetro sempre é uma constante",
+   "a sub-rotina recebe uma cópia, e a variável original não é alterada",
+   "alterações feitas dentro da sub-rotina modificam a variável original"
+  ],
+  "correta": 3,
+  "explicacao": "Por referência, a sub-rotina trabalha com a própria variável. Por valor, ela recebe uma cópia."
+ },
+ {
+  "capitulo": 8,
+  "pergunta": "Para trocar os valores das variáveis a e b, a sequência correta é:",
+  "opcoes": [
+   "b <- a; a <- b; aux <- a",
+   "aux <- a; a <- b; b <- aux",
+   "a <- b; b <- a",
+   "aux <- a; b <- aux; a <- b"
+  ],
+  "correta": 1,
+  "explicacao": "É preciso guardar o valor de a em aux antes de sobrescrevê-lo. Em a <- b; b <- a, o valor original de a se perde."
+ },
+ {
+  "capitulo": 8,
+  "pergunta": "Em Python, o comando for i in range(1, 5): percorre os valores:",
+  "opcoes": [
+   "1 e 5",
+   "1, 2, 3, 4, 5",
+   "1, 2, 3, 4",
+   "0, 1, 2, 3, 4"
+  ],
+  "correta": 2,
+  "explicacao": "O range inclui o início e exclui o fim: range(1, 5) gera 1, 2, 3 e 4."
  },
  {
   "capitulo": 8,

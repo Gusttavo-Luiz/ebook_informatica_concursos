@@ -65,3 +65,38 @@
 - Memória virtual
 - Flash
 = A cache (L1, L2, L3) é uma memória SRAM muito rápida que reduz a espera do processador pela RAM.
+
+? O nível de RAID que grava os mesmos dados em dois discos (espelhamento), mantendo-os disponíveis se um disco falhar, é o:
+- RAID 0
+* RAID 1
+- RAID 5
+- JBOD
+= RAID 1 é o espelhamento. RAID 0 divide os dados e não oferece redundância.
+
+? O equipamento que mantém o computador ligado por algum tempo durante uma queda de energia, graças a uma bateria, é o:
+- estabilizador
+- filtro de linha
+* nobreak
+- fonte de alimentação
+= O nobreak (UPS) tem bateria. O estabilizador corrige a tensão, mas não mantém o equipamento ligado sem energia.
+
+? Os processadores usados na maioria dos smartphones seguem a arquitetura:
+- CISC, da família x86
+* RISC, da família ARM
+- Harvard pura, sem memória
+- de 8 bits
+= Os celulares usam processadores ARM, de arquitetura RISC, mais econômicos em energia.
+
+? Um monitor Full HD tem resolução de:
+- 1280 × 720 pixels
+* 1920 × 1080 pixels
+- 2560 × 1440 pixels
+- 3840 × 2160 pixels
+= Full HD é 1920 × 1080. HD é 1280 × 720 e 4K UHD é 3840 × 2160.
+
+? A tecnologia que converte a imagem de um documento digitalizado em texto editável é o:
+- PDF
+* OCR
+- RAID
+- POST
+= OCR (reconhecimento óptico de caracteres) identifica as letras na imagem e as transforma em texto.

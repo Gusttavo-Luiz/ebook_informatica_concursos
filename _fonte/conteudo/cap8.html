@@ -77,6 +77,23 @@ FIM</pre>
   </div>
 </section>
 
+<h2>Fluxogramas</h2>
+<p>O fluxograma representa o algoritmo com símbolos gráficos ligados por setas. É muito cobrado em provas, principalmente o significado de cada símbolo.</p>
+<table class="comparison-table">
+  <thead>
+    <tr><th>Símbolo</th><th>Formato</th><th>Significado</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Terminal</td><td>oval (elipse)</td><td>início ou fim do algoritmo</td></tr>
+    <tr><td>Processo</td><td>retângulo</td><td>cálculo ou atribuição (ex.: soma ← a + b)</td></tr>
+    <tr><td>Decisão</td><td>losango</td><td>teste lógico, com saídas “sim” e “não”</td></tr>
+    <tr><td>Entrada/saída</td><td>paralelogramo</td><td>leitura ou exibição de dados</td></tr>
+    <tr><td>Conector</td><td>círculo</td><td>liga partes do fluxograma</td></tr>
+    <tr><td>Linha de fluxo</td><td>seta</td><td>indica a ordem de execução</td></tr>
+  </tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>Decisão é o <strong>losango</strong>: é nele que o fluxo se divide em dois caminhos.</p></div>
+
 <h2>Variáveis e tipos de dados</h2>
 <p>Variáveis são espaços de memória que armazenam valores que podem ser usados e alterados durante a execução do programa.</p>
 <ul>
@@ -93,6 +110,14 @@ nome &lt;- "Gustavo"
 nota &lt;- 8.5
 aprovado &lt;- VERDADEIRO</pre>
 </div>
+
+<h3>Regras para nomes de variáveis e constantes</h3>
+<ul>
+  <li>o nome deve começar com uma letra (ou sublinhado) e não pode ter espaços: use <span class="inline-code">nota_final</span> ou <span class="inline-code">notaFinal</span>;</li>
+  <li>não pode ser uma palavra reservada da linguagem (como SE, ENQUANTO, if, while);</li>
+  <li>em muitas linguagens, maiúsculas e minúsculas fazem diferença: <span class="inline-code">Nota</span> e <span class="inline-code">nota</span> são variáveis diferentes;</li>
+  <li><strong>constante</strong> é um valor que não muda durante a execução, como <span class="inline-code">PI ← 3.14</span>.</li>
+</ul>
 
 <h2>Operadores</h2>
 <p>Os operadores permitem calcular, comparar e montar expressões lógicas.</p>
@@ -222,6 +247,25 @@ FIM</pre>
     FIMSE
 FIM</pre>
 </div>
+
+<h2>Escolha (CASO)</h2>
+<p>Quando uma mesma variável é comparada com vários valores fixos, a estrutura <strong>ESCOLHA</strong> deixa o algoritmo mais limpo do que vários SE encadeados.</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — Nome do dia da semana</h3>
+  <pre>INÍCIO
+    LEIA dia
+
+    ESCOLHA dia
+        CASO 1
+            ESCREVA "Domingo"
+        CASO 7
+            ESCREVA "Sábado"
+        OUTROCASO
+            ESCREVA "Dia útil"
+    FIMESCOLHA
+FIM</pre>
+</div>
+<p>O bloco <strong>OUTROCASO</strong> é executado quando nenhum dos casos anteriores corresponde ao valor.</p>
 
 <h2>Estruturas de repetição</h2>
 <p>As repetições servem para executar um bloco de instruções várias vezes, evitando escrever a mesma lógica manualmente.</p>
@@ -366,6 +410,23 @@ FIM</pre>
 </div>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>Em pseudocódigo, o primeiro índice costuma ser 1. Em muitas linguagens de programação (C, Java, Python, JavaScript), o primeiro índice é <strong>0</strong>: um vetor de 5 posições vai de 0 a 4. Leia o enunciado com atenção.</p></div>
 
+<h2>Matrizes</h2>
+<p>Uma matriz é um vetor com <strong>duas dimensões</strong> (linhas e colunas), acessada por dois índices. O total de elementos é linhas × colunas.</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — Notas de 3 alunos em 2 provas</h3>
+  <pre>INÍCIO
+    // notas[3, 2]: 3 linhas (alunos) x 2 colunas (provas) = 6 notas
+    PARA i DE 1 ATÉ 3 FAÇA
+        PARA j DE 1 ATÉ 2 FAÇA
+            LEIA notas[i, j]
+        FIMPARA
+    FIMPARA
+
+    ESCREVA "Nota do aluno 2 na prova 1: ", notas[2, 1]
+FIM</pre>
+</div>
+<p>Repare no <strong>laço aninhado</strong>: para cada valor de i, o laço interno percorre todos os valores de j. No total, o LEIA é executado 3 × 2 = 6 vezes.</p>
+
 <h2>Funções e procedimentos</h2>
 <p>Para não repetir o mesmo trecho várias vezes, o algoritmo pode ser dividido em <strong>sub-rotinas</strong> (modularização):</p>
 <ul>
@@ -384,6 +445,30 @@ INÍCIO
 FIM</pre>
 </div>
 <p>Variáveis criadas dentro de uma sub-rotina são <strong>locais</strong> (existem só ali dentro); as declaradas no programa principal e visíveis em todo o algoritmo são <strong>globais</strong>.</p>
+
+<h3>Passagem de parâmetros</h3>
+<ul>
+  <li><strong>Por valor:</strong> a sub-rotina recebe uma <strong>cópia</strong> do valor; alterações feitas dentro dela não afetam a variável original.</li>
+  <li><strong>Por referência:</strong> a sub-rotina recebe acesso à <strong>própria variável</strong>; alterações feitas dentro dela mudam a variável original.</li>
+</ul>
+
+<h2>Recursividade</h2>
+<p>Uma função é <strong>recursiva</strong> quando chama a si mesma. Ela precisa de um <strong>caso base</strong>, que encerra as chamadas; sem ele, a recursão nunca termina.</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — Fatorial</h3>
+  <pre>FUNÇÃO fatorial(n)
+    SE n &lt;= 1 ENTÃO
+        RETORNE 1                  // caso base
+    SENÃO
+        RETORNE n * fatorial(n - 1)
+    FIMSE
+FIMFUNÇÃO
+
+fatorial(4) = 4 * fatorial(3)
+            = 4 * 3 * fatorial(2)
+            = 4 * 3 * 2 * fatorial(1)
+            = 4 * 3 * 2 * 1 = 24</pre>
+</div>
 
 <h2>Exemplo completo</h2>
 <p>Agora, um algoritmo mais completo, usando entrada, processamento, condição e saída.</p>
@@ -413,6 +498,58 @@ FIM</pre>
 
 <div class="box-resumo"><strong>Resumo estratégico</strong><p>Programar bem é saber identificar entradas, processamentos, decisões, repetições e saídas com clareza.</p></div>
 
+<h2>Algoritmos clássicos</h2>
+<div class="pseudocode-card">
+  <h3>Trocar os valores de duas variáveis</h3>
+  <pre>aux &lt;- a      // guarda o valor de a
+a &lt;- b        // a recebe o valor de b
+b &lt;- aux      // b recebe o valor antigo de a</pre>
+</div>
+<p>Sem a variável auxiliar, o valor de <span class="inline-code">a</span> seria perdido na segunda linha.</p>
+<div class="pseudocode-card">
+  <h3>Encontrar o maior de 10 números</h3>
+  <pre>LEIA numero
+maior &lt;- numero
+PARA i DE 2 ATÉ 10 FAÇA
+    LEIA numero
+    SE numero &gt; maior ENTÃO
+        maior &lt;- numero
+    FIMSE
+FIMPARA
+ESCREVA "Maior valor: ", maior</pre>
+</div>
+<h3>Busca sequencial</h3>
+<p>Percorre o vetor do início ao fim, comparando cada elemento com o valor procurado, até encontrá-lo ou chegar ao final. É simples, mas em um vetor de N elementos pode precisar de até N comparações.</p>
+<h3>Ordenação bolha (bubble sort)</h3>
+<p>Compara elementos vizinhos e troca os dois de lugar quando estão fora de ordem, repetindo as passadas até não haver mais trocas. A cada passada, o maior valor “sobe” para o final.</p>
+<div class="pseudocode-card">
+  <h3>Exemplo — ordenando [5, 3, 8, 1]</h3>
+  <pre>Passada 1: [3, 5, 8, 1] → [3, 5, 8, 1] → [3, 5, 1, 8]
+Passada 2: [3, 5, 1, 8] → [3, 1, 5, 8]
+Passada 3: [1, 3, 5, 8]   ordenado</pre>
+</div>
+
+<h2>Do pseudocódigo para o Python</h2>
+<p>A lógica é a mesma em qualquer linguagem; muda apenas a forma de escrever. Veja a equivalência com o Python, uma das linguagens mais usadas para começar a programar:</p>
+<table class="comparison-table">
+  <thead>
+    <tr><th>Pseudocódigo</th><th>Python</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>LEIA idade</td><td>idade = int(input())</td></tr>
+    <tr><td>ESCREVA "Olá"</td><td>print("Olá")</td></tr>
+    <tr><td>x &lt;- 10 (atribuição)</td><td>x = 10</td></tr>
+    <tr><td>x = 10 (comparação)</td><td>x == 10</td></tr>
+    <tr><td>x &lt;&gt; 10</td><td>x != 10</td></tr>
+    <tr><td>SE ... ENTÃO ... SENÃO</td><td>if ... : ... else:</td></tr>
+    <tr><td>ENQUANTO ... FAÇA</td><td>while ... :</td></tr>
+    <tr><td>PARA i DE 1 ATÉ 10 FAÇA</td><td>for i in range(1, 11):</td></tr>
+    <tr><td>E / OU / NÃO</td><td>and / or / not</td></tr>
+    <tr><td>MOD / DIV</td><td>% / //</td></tr>
+  </tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Em Python, <span class="inline-code">range(1, 11)</span> vai de 1 até <strong>10</strong>: o último número nunca é incluído. Em Python, a indentação (o recuo) define os blocos, no lugar de FIMSE ou FIMPARA.</p></div>
+
 <h2>Erros comuns de iniciantes</h2>
 <ul>
   <li>não entender o problema antes de tentar resolver;</li>
@@ -433,6 +570,8 @@ FIM</pre>
   <li>DIV e MOD;</li>
   <li>diferenças entre PARA, ENQUANTO e REPITA;</li>
   <li>teste de mesa com laços e condições;</li>
-  <li>vetores, funções e procedimentos.</li>
+  <li>vetores, matrizes, funções e procedimentos;</li>
+  <li>fluxogramas, ESCOLHA/CASO e recursividade;</li>
+  <li>algoritmos clássicos e a tradução para uma linguagem real.</li>
 </ul>
 <p>Por isso, dominar algoritmo, pseudocódigo, variáveis, condições e repetições é um passo decisivo para evoluir em programação de verdade.</p>

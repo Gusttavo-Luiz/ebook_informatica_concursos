@@ -65,3 +65,38 @@
 * memória virtual
 - journaling
 = A memória virtual (arquivo de paginação no Windows, swap no Linux) usa o disco como extensão da RAM, com desempenho bem menor.
+
+? Um processo que está aguardando a conclusão de uma leitura no disco encontra-se no estado:
+- pronto
+- executando
+* bloqueado (espera)
+- terminado
+= Quem aguarda um evento de entrada e saída fica bloqueado. Pronto é quem só espera a vez de usar o processador.
+
+? O algoritmo de escalonamento em que cada processo usa o processador por uma fatia fixa de tempo (quantum) e depois volta ao fim da fila é o:
+- FIFO
+- SJF
+* Round Robin
+- por prioridade
+= O Round Robin (circular) distribui o processador em fatias de tempo iguais, em rodízio.
+
+? No terminal do Linux, o comando ls -l > lista.txt:
+* grava a listagem no arquivo lista.txt, substituindo o conteúdo anterior
+- acrescenta a listagem ao final de lista.txt
+- apaga o arquivo lista.txt
+- lista apenas os arquivos de texto
+= O sinal > redireciona a saída para o arquivo, sobrescrevendo. Para acrescentar ao final, usa-se >>.
+
+? O recurso do Windows que criptografa unidades de disco inteiras é o:
+- Windows Update
+- Histórico de Arquivos
+* BitLocker
+- Restauração do Sistema
+= O BitLocker criptografa a unidade; sem a chave, os dados ficam ilegíveis mesmo se o disco for removido.
+
+? No Linux, o comando chmod u+x script.sh:
+* adiciona a permissão de execução para o dono do arquivo
+- remove a permissão de execução de todos
+- muda o dono do arquivo
+- dá permissão total para todos os usuários
+= u é o dono (user), + adiciona e x é a permissão de execução.

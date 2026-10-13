@@ -63,3 +63,36 @@
 * Certo
 - Errado
 = Firmware é o software gravado em um chip do próprio hardware. A BIOS/UEFI é o exemplo mais cobrado.
+
+? O padrão ASCII original utiliza 7 bits por caractere. Quantos caracteres diferentes ele consegue representar?
+- 64
+* 128
+- 256
+- 1.024
+= Com 7 bits há 2 elevado a 7 = 128 combinações. O ASCII estendido, com 8 bits, chega a 256.
+
+? O número hexadecimal 2F corresponde, em decimal, a:
+- 29
+- 32
+* 47
+- 215
+= 2 × 16 + F (15) = 32 + 15 = 47.
+
+? O programa que traduz todo o código-fonte de uma vez, antes da execução, gerando um arquivo executável, é o:
+* compilador
+- interpretador
+- sistema operacional
+- editor de texto
+= O compilador gera o executável antes. O interpretador traduz e executa linha a linha durante a execução.
+
+? Julgue o item: “O formato PNG utiliza compressão sem perda, enquanto o JPG utiliza compressão com perda”.
+* Certo
+- Errado
+= PNG preserva exatamente a imagem original; JPG descarta detalhes para reduzir o tamanho.
+
+? Uma imagem que usa 24 bits por pixel (8 bits para cada cor do RGB) consegue representar aproximadamente:
+- 256 cores
+- 65 mil cores
+* 16,7 milhões de cores
+- 4 bilhões de cores
+= 2 elevado a 24 ≈ 16,7 milhões de combinações de cor.

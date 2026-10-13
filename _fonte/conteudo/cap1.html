@@ -63,6 +63,49 @@
 <p>Divida o número por 2 sucessivamente e leia os restos de baixo para cima. Exemplo: 13 ÷ 2 = 6 resto 1; 6 ÷ 2 = 3 resto 0; 3 ÷ 2 = 1 resto 1; 1 ÷ 2 = 0 resto 1. Lendo de baixo para cima: <strong>1101</strong>.</p>
 <div class="box-dica"><strong>Memorize</strong><p>No hexadecimal, A = 10, B = 11, C = 12, D = 13, E = 14 e F = 15. Cada dígito hexadecimal corresponde a exatamente 4 bits, por isso ele é usado para escrever endereços de memória, cores (#FFFFFF) e endereços IPv6.</p></div>
 
+<h3>Binário, hexadecimal e octal</h3>
+<p>Como 16 = 2<sup>4</sup>, cada dígito hexadecimal corresponde a exatamente <strong>4 bits</strong>. Para converter, basta separar o número binário em grupos de 4, da direita para a esquerda. No sistema <strong>octal</strong> (base 8, dígitos de 0 a 7), os grupos são de 3 bits.</p>
+<div class="pseudocode-card">
+<h3>Exemplo — 10101111 em hexadecimal e 110101 em octal</h3>
+<pre>Hexadecimal:  1010 | 1111
+                10 |   15
+                 A |    F      → AF
+
+Octal:         110 | 101
+                 6 |   5       → 65</pre>
+</div>
+<div class="box-dica"><strong>Memorize</strong><p>Hexadecimal → grupos de <strong>4</strong> bits. Octal → grupos de <strong>3</strong> bits. Para ir de hexadecimal para decimal, multiplique cada dígito pela potência de 16: 2F = 2×16 + 15 = 47.</p></div>
+
+<h2>Representação de dados</h2>
+<p>Tudo o que o computador armazena — textos, imagens, sons e vídeos — é convertido em sequências de bits.</p>
+<h3>Textos: tabelas de caracteres</h3>
+<table class="comparison-table">
+<thead><tr><th>Padrão</th><th>Tamanho</th><th>Característica</th></tr></thead>
+<tbody>
+<tr><td>ASCII</td><td>7 bits (128 caracteres)</td><td>letras sem acento, números, pontuação e caracteres de controle</td></tr>
+<tr><td>ASCII estendido</td><td>8 bits (256 caracteres)</td><td>acrescenta acentos e símbolos, mas varia conforme o idioma</td></tr>
+<tr><td>Unicode</td><td>um código para cada caractere</td><td>abrange praticamente todos os idiomas do mundo, além de símbolos e emojis</td></tr>
+<tr><td>UTF-8</td><td>de 1 a 4 bytes por caractere</td><td>forma de gravar o Unicode; é o padrão da web e compatível com o ASCII</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Quando um texto aparece com caracteres estranhos no lugar dos acentos (como “informÃ¡tica”), o problema é de <strong>codificação</strong>: o arquivo foi gravado em um padrão (UTF-8) e aberto em outro.</p></div>
+<h3>Imagens</h3>
+<ul>
+<li><strong>Pixel:</strong> o menor ponto de uma imagem digital. A <strong>resolução</strong> é a quantidade de pixels (ex.: 1920 × 1080).</li>
+<li><strong>RGB:</strong> cada pixel combina vermelho, verde e azul. Com 8 bits para cada cor (24 bits por pixel), são representadas cerca de <strong>16,7 milhões</strong> de cores.</li>
+<li><strong>Imagem matricial (bitmap):</strong> formada por pixels; perde qualidade ao ser ampliada. Formatos: JPG, PNG, GIF, BMP.</li>
+<li><strong>Imagem vetorial:</strong> formada por formas descritas matematicamente; pode ser ampliada sem perder qualidade. Formatos: SVG, AI, EPS.</li>
+</ul>
+<h3>Compressão de arquivos</h3>
+<table class="comparison-table">
+<thead><tr><th>Tipo</th><th>Como funciona</th><th>Exemplos</th></tr></thead>
+<tbody>
+<tr><td>Com perda (lossy)</td><td>descarta detalhes pouco perceptíveis; o arquivo fica bem menor, mas o original não pode ser recuperado</td><td>JPG, MP3, MP4</td></tr>
+<tr><td>Sem perda (lossless)</td><td>reduz o tamanho e permite recuperar exatamente o original</td><td>PNG, ZIP, RAR, FLAC</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Um documento de texto compactado em ZIP volta exatamente igual ao ser descompactado: a compressão do ZIP é <strong>sem perda</strong>. Já salvar várias vezes uma foto em JPG vai degradando a imagem.</p></div>
+
 <h2>Evolução dos computadores</h2>
 <p>A evolução costuma ser dividida em cinco gerações, definidas pela tecnologia usada para processar dados. As datas variam um pouco conforme o autor; o que a banca cobra é a tecnologia de cada geração.</p>
 <table class="comparison-table">
@@ -116,6 +159,24 @@
 </ul>
 <div class="box-prova"><strong>Pegadinha de banca</strong><p>Software livre <strong>não</strong> significa software gratuito. A liberdade se refere ao uso, estudo, modificação e distribuição do código. Um software livre pode ser vendido, e um freeware pode ter código fechado.</p></div>
 
+<h2>Linguagens de programação e tradutores</h2>
+<p>O processador só entende <strong>linguagem de máquina</strong> (instruções em binário). As pessoas escrevem programas em linguagens mais próximas da linguagem humana, que precisam ser traduzidas.</p>
+<ul>
+<li><strong>Linguagem de máquina:</strong> instruções binárias executadas diretamente pela CPU.</li>
+<li><strong>Linguagem de montagem (Assembly):</strong> usa abreviações (como MOV e ADD) para as instruções de máquina; é de <strong>baixo nível</strong>.</li>
+<li><strong>Linguagens de alto nível:</strong> mais próximas da linguagem humana e independentes do processador. Exemplos: Python, Java, C, JavaScript.</li>
+</ul>
+<table class="comparison-table">
+<thead><tr><th>Tradutor</th><th>Como funciona</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Compilador</td><td>traduz todo o código-fonte de uma vez e gera um programa executável</td><td>C, C++</td></tr>
+<tr><td>Interpretador</td><td>traduz e executa o código linha a linha, a cada execução</td><td>Python, JavaScript</td></tr>
+<tr><td>Montador (assembler)</td><td>traduz Assembly para linguagem de máquina</td><td>Assembly</td></tr>
+</tbody>
+</table>
+<p>Algumas linguagens combinam as duas abordagens: o Java é compilado para um código intermediário (<em>bytecode</em>), que é executado pela máquina virtual Java (JVM) em qualquer sistema operacional.</p>
+<div class="box-resumo"><strong>Resumo estratégico</strong><p>Programa compilado: tradução feita antes, execução mais rápida, gera executável. Programa interpretado: tradução durante a execução, mais flexível e portável.</p></div>
+
 <h2>Arquitetura de Von Neumann</h2>
 <p>A Arquitetura de Von Neumann, proposta por John von Neumann em 1945, é o modelo clássico de organização dos computadores modernos. Sua ideia central é o <strong>programa armazenado</strong>: instruções e dados ficam guardados na mesma memória.</p>
 <h3>Componentes</h3>
@@ -147,6 +208,14 @@
 <div class="box-resumo"><strong>Resumo estratégico</strong><p>Ciclo de instrução: busca → decodificação → execução, repetido continuamente. Alguns autores separam uma quarta etapa de armazenamento do resultado.</p></div>
 <div class="box-dica"><strong>Memorize</strong><p><strong>FDE</strong>: Fetch, Decode, Execute.</p></div>
 
+<h2>Tecnologias atuais</h2>
+<ul>
+<li><strong>Inteligência artificial (IA):</strong> sistemas que executam tarefas que exigiriam inteligência humana, como reconhecer imagens e linguagem. O <strong>aprendizado de máquina</strong> permite que o sistema aprenda padrões a partir de dados, e a <strong>IA generativa</strong> cria textos, imagens e códigos.</li>
+<li><strong>Internet das Coisas (IoT):</strong> objetos do dia a dia conectados à internet, como sensores, câmeras, lâmpadas e relógios inteligentes.</li>
+<li><strong>Big Data:</strong> volumes enormes de dados, gerados em alta velocidade e em formatos variados, que exigem ferramentas especiais de análise. É comum caracterizá-lo pelos “Vs”: volume, velocidade, variedade, veracidade e valor.</li>
+<li><strong>Computação em nuvem:</strong> uso de recursos computacionais pela internet (veja o Capítulo 6).</li>
+</ul>
+
 <h2>Conclusão do capítulo</h2>
 <p>A introdução à informática estabelece a base para todos os outros temas. Os pontos mais cobrados são:</p>
 <ul>
@@ -155,6 +224,9 @@
 <li>unidades de medida e conversão entre bases;</li>
 <li>gerações dos computadores;</li>
 <li>tipos e licenças de software;</li>
+<li>conversão entre binário, decimal, hexadecimal e octal;</li>
+<li>codificação de caracteres (ASCII, Unicode) e compressão com e sem perda;</li>
+<li>compilador x interpretador;</li>
 <li>arquitetura de Von Neumann e ciclo de instrução.</li>
 </ul>
 <p>Dominar esses conceitos facilita a compreensão de hardware, sistemas operacionais e redes nos próximos capítulos.</p>

@@ -63,3 +63,36 @@
 - Certo
 * Errado
 = A navegação anônima apenas não guarda histórico, cookies e dados da sessão no computador. Provedor, rede e sites continuam podendo identificar o acesso.
+
+? Qual meio de transmissão utiliza pulsos de luz e é imune a interferências eletromagnéticas?
+- Par trançado
+- Cabo coaxial
+* Fibra óptica
+- Bluetooth
+= A fibra óptica transmite luz, alcança longas distâncias com alta velocidade e não sofre interferência eletromagnética.
+
+? Em uma ligação telefônica, as duas pessoas podem falar e ouvir ao mesmo tempo. Esse modo de transmissão é chamado de:
+- simplex
+- half-duplex
+* full-duplex
+- multicast
+= Full-duplex transmite nos dois sentidos simultaneamente. Half-duplex alterna os sentidos e simplex só tem um sentido.
+
+? O endereço IP 127.0.0.1 representa:
+- o roteador da rede
+- o servidor DNS do provedor
+* o próprio computador (loopback)
+- um endereço público da internet
+= 127.0.0.1 é o endereço de loopback, também chamado de localhost.
+
+? Qual comando testa se um computador na rede responde, medindo o tempo de resposta?
+* ping
+- nslookup
+- ipconfig
+- netstat
+= O ping envia pacotes ICMP e mede se o destino responde e em quanto tempo.
+
+? Julgue o item: “Internet e World Wide Web são sinônimos, pois toda a internet é formada por páginas web”.
+- Certo
+* Errado
+= A web é um dos serviços da internet. E-mail, transferência de arquivos e VoIP também usam a internet sem serem a web.

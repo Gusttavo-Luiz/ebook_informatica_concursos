@@ -67,3 +67,38 @@
 - layout
 - slide mestre
 = Transição atua entre slides. Animação atua sobre os objetos dentro de um slide.
+
+? No Excel, qual o resultado de =EXT.TEXTO("Informática";3;4)?
+- Info
+* form
+- orma
+- ática
+= EXT.TEXTO pega 4 caracteres a partir da 3ª posição: I(1) n(2) f(3) o(4) r(5) m(6) → "form".
+
+? No Excel, qual o resultado de =INT(-4,3)?
+- -4
+* -5
+- 4
+- -4,3
+= INT arredonda para baixo até o inteiro. Para números negativos, “para baixo” é -5. TRUNCAR(-4,3) resultaria em -4.
+
+? No Microsoft Excel, a fórmula que soma a célula A1 da planilha chamada Vendas é:
+* =Vendas!A1
+- =Vendas.A1
+- =Vendas:A1
+- =[Vendas]A1
+= O Excel separa planilha e célula com exclamação. No LibreOffice Calc, o separador é o ponto (=Vendas.A1).
+
+? Para mostrar a evolução do faturamento mês a mês ao longo de um ano, o gráfico mais adequado é o de:
+- pizza
+* linhas
+- dispersão
+- radar
+= Gráficos de linhas são os mais indicados para mostrar tendência ao longo do tempo.
+
+? No PowerPoint, o formato de arquivo que abre diretamente no modo de apresentação de slides é o:
+- .pptx
+* .ppsx
+- .potx
+- .docx
+= O .ppsx (PowerPoint Show) abre já em tela cheia. O .pptx abre para edição e o .potx é um modelo.

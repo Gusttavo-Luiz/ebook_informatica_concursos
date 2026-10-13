@@ -65,3 +65,38 @@
 * o completo de domingo e o diferencial de quinta-feira
 - apenas o completo de domingo
 = O diferencial acumula tudo o que mudou desde o último completo, então bastam o completo e o último diferencial (quinta-feira).
+
+? Pela Lei de Acesso à Informação (Lei nº 12.527/2011), o prazo máximo de restrição de acesso a uma informação classificada como ultrassecreta é de:
+- 5 anos
+- 15 anos
+* 25 anos
+- 50 anos
+= Ultrassecreta: 25 anos; secreta: 15 anos; reservada: 5 anos.
+
+? Segundo a LGPD, é exemplo de dado pessoal sensível:
+- o endereço residencial
+- o número do telefone
+* a convicção religiosa
+- o e-mail profissional
+= Convicção religiosa, origem racial, opinião política, saúde, vida sexual e dados genéticos ou biométricos são dados sensíveis.
+
+? Na LGPD, a quem competem as decisões referentes ao tratamento de dados pessoais?
+* Ao controlador
+- Ao operador
+- Ao titular
+- Ao encarregado
+= O controlador decide; o operador executa o tratamento em nome dele; o encarregado faz a comunicação com titulares e ANPD.
+
+? O ataque que explora uma vulnerabilidade ainda desconhecida pelo fabricante, para a qual não existe correção disponível, é chamado de:
+- defacement
+- hoax
+* zero-day
+- sniffing
+= Zero-day (dia zero) indica que o fabricante teve “zero dias” para corrigir a falha.
+
+? O certificado digital cuja chave privada fica armazenada em token USB ou cartão inteligente, sem sair do dispositivo, é do tipo:
+- A1
+* A3
+- SSL
+- e-mail
+= No A3 a chave fica no token ou cartão. No A1 ela fica em um arquivo instalado no computador.
