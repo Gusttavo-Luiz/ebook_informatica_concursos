@@ -4,11 +4,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Informática para Concursos | E-book</title>
-<meta content="E-book de Informática para Concursos: oito capítulos com teoria organizada, resumos, pegadinhas de banca e questões com correção imediata." name="description"/>
+<meta content="E-book de Informática para Concursos: oito capítulos com teoria organizada, resumos, pegadinhas de banca, 120 questões comentadas e simulado final." name="description"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/>
+<meta content="light dark" name="color-scheme"/>
+<script>try{var tema=localStorage.getItem("tema")}catch(e){}document.documentElement.dataset.tema=tema||(matchMedia("(prefers-color-scheme: dark)").matches?"escuro":"claro");</script>
 </head>
 <body data-pagina="inicio">
 <div aria-hidden="true" class="progress-bar" id="progressBar"></div>
@@ -16,126 +18,187 @@
 <nav aria-label="Navegação principal" class="navbar container">
 <a aria-label="Informática para Concursos: página inicial" class="logo" href="index.html"><span aria-hidden="true" class="logo-mark">IC</span><span class="logo-nome">Informática <span>para Concursos</span></span></a>
 <div class="navbar-actions">
-<a class="nav-link nav-link-secundario" href="#visao-geral">Como funciona</a>
+<a class="nav-link nav-link-secundario" href="#como-estudar">Como estudar</a>
 <a class="nav-link" href="simulado.html">Simulado</a>
 <a class="nav-link" href="progresso.html">Progresso</a>
+<button aria-label="Alternar entre tema claro e escuro" class="tema-botao" id="botaoTema" type="button"><svg aria-hidden="true" class="icone-lua" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg aria-hidden="true" class="icone-sol" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
 <a class="nav-button" href="#capitulos">Capítulos</a>
 </div>
 </nav>
 </header>
+
 <section class="hero">
-<div class="hero-content container">
+<div class="container hero-grade">
+<div class="hero-texto">
 <span class="tag">E-book · Informática para Concursos</span>
 <h1>Informática para concursos, do básico ao que mais cai nas provas</h1>
-<p>Oito capítulos com teoria organizada, resumos, alertas sobre pegadinhas de banca e 120 questões com correção comentada. Estude no seu ritmo, pelo computador ou pelo celular.</p>
+<p>Oito capítulos com teoria organizada, resumos, alertas sobre pegadinhas de banca e 120 questões com correção comentada. No final, um simulado com tempo de prova para medir o que você aprendeu.</p>
 <div class="hero-actions">
-<a class="cta-button" href="chapter_1.html">Começar pelo Capítulo 1</a>
+<a class="cta-button" href="chapter_1.html" id="chamadaPrincipal">Começar pelo Capítulo 1</a>
 <a class="btn-secondary" href="#capitulos">Ver todos os capítulos</a>
 </div>
 <dl class="hero-stats">
 <div><dt>8</dt><dd>capítulos</dd></div>
 <div><dt>120</dt><dd>questões comentadas</dd></div>
-<div><dt>Áudio</dt><dd>narração dos capítulos</dd></div>
+<div><dt>40</dt><dd>questões no simulado</dd></div>
 </dl>
 </div>
+<aside aria-label="Sua trilha de estudos" class="hero-painel">
+<div class="painel-cabecalho">
+<h2>Sua trilha de estudos</h2>
+<strong id="painelResumo">0 de 8 concluídos</strong>
+</div>
+<div aria-hidden="true" class="resultado-barra"><span id="painelBarra"></span></div>
+<ol class="painel-lista" id="painelLista">
+<li class="cor-1" data-capitulo="1"><a href="chapter_1.html"><span class="painel-ponto">1</span><span class="painel-titulo">Introdução à Informática</span></a></li>
+<li class="cor-2" data-capitulo="2"><a href="chapter_2.html"><span class="painel-ponto">2</span><span class="painel-titulo">Sistemas Operacionais</span></a></li>
+<li class="cor-3" data-capitulo="3"><a href="chapter_3.html"><span class="painel-ponto">3</span><span class="painel-titulo">Internet e Navegadores</span></a></li>
+<li class="cor-4" data-capitulo="4"><a href="chapter_4.html"><span class="painel-ponto">4</span><span class="painel-titulo">Pacote Office</span></a></li>
+<li class="cor-5" data-capitulo="5"><a href="chapter_5.html"><span class="painel-ponto">5</span><span class="painel-titulo">Hardware</span></a></li>
+<li class="cor-6" data-capitulo="6"><a href="chapter_6.html"><span class="painel-ponto">6</span><span class="painel-titulo">Armazenamento em Nuvem</span></a></li>
+<li class="cor-7" data-capitulo="7"><a href="chapter_7.html"><span class="painel-ponto">7</span><span class="painel-titulo">Segurança da Informação</span></a></li>
+<li class="cor-8" data-capitulo="8"><a href="chapter_8.html"><span class="painel-ponto">8</span><span class="painel-titulo">Lógica de Programação</span></a></li>
+</ol>
+<a class="btn-primary" href="chapter_1.html" id="painelBotao">Começar pelo Capítulo 1</a>
+</aside>
+</div>
 </section>
+
 <main class="container">
-<section class="info-section" id="visao-geral">
+<section class="secao" id="como-estudar">
 <div class="section-header">
-<span class="section-tag">Como funciona</span>
-<h2>Um material pensado para estudo de verdade</h2>
-<p>Cada capítulo tem página própria, com leitura confortável, quadros de revisão e um bloco de questões no final para fixar o conteúdo.</p>
+<span class="section-tag">Como estudar</span>
+<h2>Quatro passos para estudar com método</h2>
+<p>O material foi organizado para você aprender, praticar e medir sua evolução em um só lugar.</p>
 </div>
-<div class="highlights-grid">
-<article class="highlight-card">
-<h3>Teoria organizada</h3>
-<p>Conceitos apresentados em ordem lógica e linguagem direta, com tipografia pensada para leituras longas em qualquer tela.</p>
+<div class="passos-grid">
+<article class="passo-card cor-1">
+<div class="passo-icone"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></svg></div>
+<span>Passo 1</span>
+<h3>Leia o capítulo</h3>
+<p>Teoria em ordem lógica, com tabelas, exemplos e quadros de revisão. Se preferir, ouça o capítulo em áudio.</p>
 </article>
-<article class="highlight-card">
-<h3>Resumos e pegadinhas</h3>
-<p>Quadros de resumo, alertas sobre as pegadinhas mais comuns das bancas e dicas de memorização ao longo do texto.</p>
+<article class="passo-card cor-4">
+<div class="passo-icone"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+<span>Passo 2</span>
+<h3>Pratique as questões</h3>
+<p>Cada capítulo termina com 15 questões no estilo das bancas, com explicação logo após responder.</p>
 </article>
-<article class="highlight-card">
-<h3>Questões com correção</h3>
-<p>Cada capítulo termina com 15 questões no estilo das bancas, de múltipla escolha e certo ou errado, com a explicação da resposta logo após você responder.</p>
+<article class="passo-card cor-5">
+<div class="passo-icone"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M9 2h6"/></svg></div>
+<span>Passo 3</span>
+<h3>Faça o simulado</h3>
+<p>40 questões sorteadas de todos os capítulos, 60 minutos e correção comentada só no final.</p>
 </article>
-<article class="highlight-card">
-<h3>Narração e progresso</h3>
-<p>Ouça o capítulo em áudio, acompanhe a barra de leitura e marque os capítulos que já concluiu.</p>
+<article class="passo-card cor-8">
+<div class="passo-icone"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+<span>Passo 4</span>
+<h3>Acompanhe o progresso</h3>
+<p>Veja os capítulos concluídos, seus acertos e a evolução no simulado, e saiba o que revisar.</p>
 </article>
 </div>
 </section>
-<section class="chapters-section" id="capitulos">
+
+<section class="secao" id="recursos">
+<div class="section-header">
+<span class="section-tag">Dentro dos capítulos</span>
+<h2>Quadros que destacam o que mais importa</h2>
+<p>Ao longo do texto, três tipos de quadro ajudam a revisar rápido antes da prova.</p>
+</div>
+<div class="recursos-grid">
+<div class="box-resumo"><strong>Resumo estratégico</strong><p>A síntese do assunto em poucas linhas, para revisar sem reler o capítulo inteiro.</p></div>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>As armadilhas mais comuns das provas, como trocar conceitos parecidos ou inverter uma regra.</p></div>
+<div class="box-dica"><strong>Memorize</strong><p>Siglas e associações para guardar listas, ordens e valores que costumam ser cobrados.</p></div>
+</div>
+</section>
+
+<section class="secao" id="capitulos">
 <div class="section-header">
 <span class="section-tag">Conteúdo do e-book</span>
 <h2>Capítulos</h2>
 <p>Selecione um capítulo para ver um resumo do que será estudado antes de começar.</p>
 </div>
 <div class="chapters-grid">
-<article aria-label="Abrir prévia do capítulo 1" class="chapter-card" data-link="chapter_1.html" data-preview="Neste capítulo, você forma a base da disciplina: hardware, software, peopleware e firmware; dado x informação; bits, bytes e conversão entre binário, decimal e hexadecimal; as cinco gerações dos computadores; tipos e licenças de software; arquitetura de Von Neumann x Harvard e ciclo de instrução." data-title="Capítulo 1 — Introdução à Informática" role="button" tabindex="0">
+<article aria-label="Abrir prévia do capítulo 1" class="chapter-card cor-1" data-link="chapter_1.html" data-preview="Neste capítulo, você forma a base da disciplina: hardware, software, peopleware e firmware; dado x informação; bits, bytes e conversão entre binário, decimal e hexadecimal; as cinco gerações dos computadores; tipos e licenças de software; arquitetura de Von Neumann x Harvard e ciclo de instrução." data-title="Capítulo 1 — Introdução à Informática" role="button" tabindex="0">
 <span class="chapter-number">Capítulo 01</span>
 <h3>Introdução à Informática</h3>
 <p>Conceitos básicos, unidades de medida, sistemas de numeração, gerações dos computadores, tipos e licenças de software e arquitetura de Von Neumann.</p>
-<span class="chapter-link">Ver prévia</span>
+<div class="chapter-rodape"><span>15 questões</span><span class="chapter-link">Ver prévia</span></div>
 </article>
-<article aria-label="Abrir prévia do capítulo 2" class="chapter-card" data-link="chapter_2.html" data-preview="Aqui você entende o papel do sistema operacional: gerência de processos e memória, memória virtual, tipos de kernel, NTFS, FAT32, exFAT e ext4, Lixeira e atalhos do Windows, estrutura de diretórios, comandos básicos e permissões (chmod) do Linux, e a comparação entre Windows e Linux." data-title="Capítulo 2 — Sistemas Operacionais" role="button" tabindex="0">
+<article aria-label="Abrir prévia do capítulo 2" class="chapter-card cor-2" data-link="chapter_2.html" data-preview="Aqui você entende o papel do sistema operacional: gerência de processos e memória, memória virtual, tipos de kernel, NTFS, FAT32, exFAT e ext4, Lixeira e atalhos do Windows, estrutura de diretórios, comandos básicos e permissões (chmod) do Linux, e a comparação entre Windows e Linux." data-title="Capítulo 2 — Sistemas Operacionais" role="button" tabindex="0">
 <span class="chapter-number">Capítulo 02</span>
 <h3>Sistemas Operacionais</h3>
 <p>Funções do SO, kernel, sistemas de arquivos, Lixeira e atalhos do Windows, diretórios, comandos e permissões do Linux.</p>
-<span class="chapter-link">Ver prévia</span>
+<div class="chapter-rodape"><span>15 questões</span><span class="chapter-link">Ver prévia</span></div>
 </article>
-<article aria-label="Abrir prévia do capítulo 3" class="chapter-card" data-link="chapter_3.html" data-preview="Este capítulo cobre redes e internet com foco em concursos: LAN, MAN e WAN, intranet e extranet, topologias, switch x roteador, modelos OSI e TCP/IP, TCP x UDP, IPv4 x IPv6, DNS e DHCP, protocolos com suas portas, POP3 x IMAP, Cc e Cco, recursos dos navegadores e operadores de busca." data-title="Capítulo 3 — Internet e Navegadores" role="button" tabindex="0">
+<article aria-label="Abrir prévia do capítulo 3" class="chapter-card cor-3" data-link="chapter_3.html" data-preview="Este capítulo cobre redes e internet com foco em concursos: LAN, MAN e WAN, intranet e extranet, topologias, switch x roteador, modelos OSI e TCP/IP, TCP x UDP, IPv4 x IPv6, DNS e DHCP, protocolos com suas portas, POP3 x IMAP, Cc e Cco, recursos dos navegadores e operadores de busca." data-title="Capítulo 3 — Internet e Navegadores" role="button" tabindex="0">
 <span class="chapter-number">Capítulo 03</span>
 <h3>Internet e Navegadores</h3>
 <p>Tipos de rede, intranet, equipamentos, modelos OSI e TCP/IP, IP, DNS, protocolos e portas, e-mail e navegadores.</p>
-<span class="chapter-link">Ver prévia</span>
+<div class="chapter-rodape"><span>15 questões</span><span class="chapter-link">Ver prévia</span></div>
 </article>
-<article aria-label="Abrir prévia do capítulo 4" class="chapter-card" data-link="chapter_4.html" data-preview="Você revisa os aplicativos mais cobrados: guias e recursos do Word, atalhos do Word em português comparados aos do LibreOffice Writer, operadores, precedência, referências relativas e absolutas, funções (SOMA, MÉDIA, CONT.SE, SOMASE, SE, PROCV) e erros do Excel, e os recursos do PowerPoint." data-title="Capítulo 4 — Pacote Office" role="button" tabindex="0">
+<article aria-label="Abrir prévia do capítulo 4" class="chapter-card cor-4" data-link="chapter_4.html" data-preview="Você revisa os aplicativos mais cobrados: guias e recursos do Word, atalhos do Word em português comparados aos do LibreOffice Writer, operadores, precedência, referências relativas e absolutas, funções (SOMA, MÉDIA, CONT.SE, SOMASE, SE, PROCV) e erros do Excel, e os recursos do PowerPoint." data-title="Capítulo 4 — Pacote Office" role="button" tabindex="0">
 <span class="chapter-number">Capítulo 04</span>
 <h3>Pacote Office</h3>
 <p>Word e Writer com atalhos comparados, Excel com fórmulas, referências e funções, PowerPoint e formatos de arquivo.</p>
-<span class="chapter-link">Ver prévia</span>
+<div class="chapter-rodape"><span>15 questões</span><span class="chapter-link">Ver prévia</span></div>
 </article>
-<article aria-label="Abrir prévia do capítulo 5" class="chapter-card" data-link="chapter_5.html" data-preview="Neste capítulo, o foco está no hardware: clock, núcleos e cache do processador, hierarquia de memória, RAM x ROM, BIOS/UEFI e POST, HD x SSD e mídias ópticas, placa-mãe, periféricos de entrada, saída e híbridos, conexões (USB, HDMI) e tipos de impressora." data-title="Capítulo 5 — Hardware" role="button" tabindex="0">
+<article aria-label="Abrir prévia do capítulo 5" class="chapter-card cor-5" data-link="chapter_5.html" data-preview="Neste capítulo, o foco está no hardware: clock, núcleos e cache do processador, hierarquia de memória, RAM x ROM, BIOS/UEFI e POST, HD x SSD e mídias ópticas, placa-mãe, periféricos de entrada, saída e híbridos, conexões (USB, HDMI) e tipos de impressora." data-title="Capítulo 5 — Hardware" role="button" tabindex="0">
 <span class="chapter-number">Capítulo 05</span>
 <h3>Hardware</h3>
 <p>CPU, hierarquia de memória, RAM x ROM, BIOS/UEFI, HD x SSD, periféricos, conexões e impressoras.</p>
-<span class="chapter-link">Ver prévia</span>
+<div class="chapter-rodape"><span>15 questões</span><span class="chapter-link">Ver prévia</span></div>
 </article>
-<article aria-label="Abrir prévia do capítulo 6" class="chapter-card" data-link="chapter_6.html" data-preview="Aqui você aprende computação em nuvem de forma completa: características essenciais, vantagens e desvantagens, modelos IaaS, PaaS e SaaS, nuvem pública, privada, híbrida e comunitária, sincronização x backup, compartilhamento e colaboração, principais serviços e cuidados de segurança." data-title="Capítulo 6 — Armazenamento em Nuvem" role="button" tabindex="0">
+<article aria-label="Abrir prévia do capítulo 6" class="chapter-card cor-6" data-link="chapter_6.html" data-preview="Aqui você aprende computação em nuvem de forma completa: características essenciais, vantagens e desvantagens, modelos IaaS, PaaS e SaaS, nuvem pública, privada, híbrida e comunitária, sincronização x backup, compartilhamento e colaboração, principais serviços e cuidados de segurança." data-title="Capítulo 6 — Armazenamento em Nuvem" role="button" tabindex="0">
 <span class="chapter-number">Capítulo 06</span>
 <h3>Armazenamento em Nuvem</h3>
 <p>Características da nuvem, IaaS, PaaS e SaaS, nuvem pública e privada, sincronização x backup e segurança.</p>
-<span class="chapter-link">Ver prévia</span>
+<div class="chapter-rodape"><span>15 questões</span><span class="chapter-link">Ver prévia</span></div>
 </article>
-<article aria-label="Abrir prévia do capítulo 7" class="chapter-card" data-link="chapter_7.html" data-preview="Este capítulo trabalha segurança da informação em profundidade: tríade CID, autenticidade e não repúdio, tipos de malware, phishing, pharming e DDoS, criptografia simétrica e assimétrica, hash, assinatura e certificado digital, autenticação em dois fatores, firewall, IDS, VPN e tipos de backup." data-title="Capítulo 7 — Segurança da Informação" role="button" tabindex="0">
+<article aria-label="Abrir prévia do capítulo 7" class="chapter-card cor-7" data-link="chapter_7.html" data-preview="Este capítulo trabalha segurança da informação em profundidade: tríade CID, autenticidade e não repúdio, tipos de malware, phishing, pharming e DDoS, criptografia simétrica e assimétrica, hash, assinatura e certificado digital, autenticação em dois fatores, firewall, IDS, VPN e tipos de backup." data-title="Capítulo 7 — Segurança da Informação" role="button" tabindex="0">
 <span class="chapter-number">Capítulo 07</span>
 <h3>Segurança da Informação</h3>
 <p>Princípios da segurança, malwares, golpes e ataques, criptografia, assinatura e certificado digital, firewall e backup.</p>
-<span class="chapter-link">Ver prévia</span>
+<div class="chapter-rodape"><span>15 questões</span><span class="chapter-link">Ver prévia</span></div>
 </article>
-<article aria-label="Abrir prévia do capítulo 8" class="chapter-card" data-link="chapter_8.html" data-preview="Neste capítulo, você aprende a pensar como programador: algoritmo, pseudocódigo, variáveis, operadores, DIV e MOD, tabela-verdade e precedência, estruturas condicionais, PARA, ENQUANTO e REPITA, teste de mesa, vetores, funções e procedimentos." data-title="Capítulo 8 — Lógica de Programação" role="button" tabindex="0">
+<article aria-label="Abrir prévia do capítulo 8" class="chapter-card cor-8" data-link="chapter_8.html" data-preview="Neste capítulo, você aprende a pensar como programador: algoritmo, pseudocódigo, variáveis, operadores, DIV e MOD, tabela-verdade e precedência, estruturas condicionais, PARA, ENQUANTO e REPITA, teste de mesa, vetores, funções e procedimentos." data-title="Capítulo 8 — Lógica de Programação" role="button" tabindex="0">
 <span class="chapter-number">Capítulo 08</span>
 <h3>Lógica de Programação</h3>
 <p>Algoritmos, operadores e tabela-verdade, condições, repetições, teste de mesa, vetores e funções.</p>
-<span class="chapter-link">Ver prévia</span>
+<div class="chapter-rodape"><span>15 questões</span><span class="chapter-link">Ver prévia</span></div>
 </article>
 </div>
 </section>
-<section class="simulado-secao" id="simulado">
-<div class="simulado-chamada">
-<div>
+
+<section class="secao secao-final" id="simulado">
+<div class="chamadas-grid">
+<article class="chamada-card cor-5">
 <span class="section-tag">Simulado final</span>
 <h2>Teste seus conhecimentos em condições de prova</h2>
-<p>40 questões sorteadas de todos os capítulos, 60 minutos de prova e correção comentada no final, com o seu desempenho em cada assunto.</p>
-</div>
+<p>40 questões sorteadas de um banco de 160, 60 minutos de prova e correção comentada no final, com o seu desempenho em cada assunto.</p>
 <a class="cta-button" href="simulado.html">Fazer o simulado</a>
+</article>
+<article class="chamada-card cor-2">
+<span class="section-tag">Meu progresso</span>
+<h2>Saiba exatamente onde você está</h2>
+<p>Capítulos concluídos, questões acertadas, histórico do simulado e o próximo passo sugerido, tudo salvo neste navegador.</p>
+<a class="cta-button" href="progresso.html">Ver meu progresso</a>
+</article>
 </div>
 </section>
 </main>
-<footer class="page-footer">
+
+<footer class="site-footer">
+<div class="container">
 <p>Informática para Concursos · E-book</p>
+<nav aria-label="Rodapé">
+<a href="#capitulos">Capítulos</a>
+<a href="simulado.html">Simulado</a>
+<a href="progresso.html">Meu progresso</a>
+</nav>
+</div>
 </footer>
+
 <div aria-hidden="true" class="modal-overlay" id="modalOverlay">
 <div aria-describedby="modalPreview" aria-labelledby="modalTitle" aria-modal="true" class="modal-box" role="dialog">
 <button aria-label="Fechar" class="modal-close" id="modalClose" type="button">×</button>

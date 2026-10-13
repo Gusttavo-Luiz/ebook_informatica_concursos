@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   iniciarQuizDosCapitulos();
   validarLinksDosCapitulos();
   marcarCapitulosConcluidos();
+  iniciarAlternanciaDeTema();
+  iniciarPainelInicial();
 });
 
 // Armazenamento local: as leituras e gravações ficam protegidas porque o
@@ -372,6 +374,70 @@ function iniciarQuizDosCapitulos() {
       feedback.className = "quiz-feedback";
     });
   });
+}
+
+function iniciarAlternanciaDeTema() {
+  const botao = document.getElementById("botaoTema");
+  if (!botao) return;
+
+  const raiz = document.documentElement;
+  const atualizarRotulo = () => {
+    const escuro = raiz.dataset.tema === "escuro";
+    botao.setAttribute("aria-label", escuro ? "Ativar tema claro" : "Ativar tema escuro");
+    botao.title = escuro ? "Tema claro" : "Tema escuro";
+  };
+
+  botao.addEventListener("click", () => {
+    raiz.dataset.tema = raiz.dataset.tema === "escuro" ? "claro" : "escuro";
+    gravarArmazenamento("tema", raiz.dataset.tema);
+    atualizarRotulo();
+  });
+
+  atualizarRotulo();
+}
+
+function iniciarPainelInicial() {
+  const lista = document.getElementById("painelLista");
+  if (!lista) return;
+
+  const capitulos = Array.from(lista.querySelectorAll("li[data-capitulo]")).map((item) => ({
+    item,
+    numero: item.dataset.capitulo,
+    titulo: item.querySelector(".painel-titulo").textContent,
+    concluido: lerArmazenamento(`capitulo-concluido-capitulo${item.dataset.capitulo}`) === "true",
+    iniciado: Boolean(lerArmazenamento(`capitulo-visitado-capitulo${item.dataset.capitulo}`)),
+  }));
+
+  capitulos.forEach(({ item, concluido }) => {
+    if (!concluido) return;
+    item.classList.add("concluido");
+    const status = document.createElement("span");
+    status.className = "painel-status";
+    status.textContent = "Concluído";
+    item.querySelector("a").appendChild(status);
+  });
+
+  const concluidos = capitulos.filter((capitulo) => capitulo.concluido).length;
+  document.getElementById("painelResumo").textContent = `${concluidos} de ${capitulos.length} concluídos`;
+  document.getElementById("painelBarra").style.width = `${Math.round((concluidos / capitulos.length) * 100)}%`;
+
+  const pendente = capitulos.find((capitulo) => !capitulo.concluido);
+  const botao = document.getElementById("painelBotao");
+  const chamada = document.getElementById("chamadaPrincipal");
+  if (!pendente) {
+    botao.href = "simulado.html";
+    botao.textContent = "Todos concluídos: fazer o simulado";
+    return;
+  }
+  if (concluidos > 0 || pendente.iniciado) {
+    const texto = `Continuar: Capítulo ${pendente.numero}`;
+    botao.href = `chapter_${pendente.numero}.html`;
+    botao.textContent = `${texto} — ${pendente.titulo}`;
+    if (chamada) {
+      chamada.href = botao.href;
+      chamada.textContent = texto;
+    }
+  }
 }
 
 function marcarCapitulosConcluidos() {
