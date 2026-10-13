@@ -1,0 +1,32 @@
+? Qual é a porta padrão do protocolo HTTPS?
+- 21
+- 80
+- 110
+* 443
+= HTTPS usa a porta 443. HTTP usa 80, FTP usa 21 e POP3 usa 110.
+
+? Uma rede que interliga as unidades de uma prefeitura espalhadas pela cidade é classificada como:
+- PAN
+- LAN
+* MAN
+- WLAN
+= A MAN (Metropolitan Area Network) abrange uma cidade ou região metropolitana.
+
+? No Google, qual recurso faz a busca retornar somente páginas com a frase exata digitada?
+* Colocar a frase entre aspas
+- Colocar um sinal de menos antes da frase
+- Usar o operador filetype:
+- Digitar a frase em letras maiúsculas
+= As aspas buscam a frase exata. O sinal de menos exclui termos e filetype: busca tipos de arquivo.
+
+? Julgue o item: “Em uma rede local, o switch encaminha os dados apenas para a porta em que está o dispositivo de destino, diferentemente do hub, que os repete para todas as portas”.
+* Certo
+- Errado
+= O switch usa o endereço MAC para entregar os dados só ao destinatário. O hub repete para todas as portas.
+
+? Qual protocolo é utilizado para o envio de mensagens de correio eletrônico?
+- POP3
+- IMAP
+* SMTP
+- DHCP
+= SMTP envia as mensagens. POP3 e IMAP servem para recebê-las.

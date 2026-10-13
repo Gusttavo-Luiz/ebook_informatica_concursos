@@ -13,7 +13,8 @@ A pasta começa com `_` para o GitHub Pages não publicá-la no site.
 |---|---|
 | `gerar_capitulos.py` | script que monta as páginas |
 | `conteudo/capN.html` | corpo do capítulo N |
-| `conteudo/capN.quiz` | questões do capítulo N |
+| `conteudo/capN.quiz` | questões do capítulo N (aparecem na página do capítulo e no simulado) |
+| `conteudo/capN.simulado.quiz` | questões exclusivas do simulado, do capítulo N |
 
 O cabeçalho, os botões de narração, o bloco de questões, a navegação
 anterior/próximo e o rodapé são iguais em todos os capítulos e ficam no
@@ -27,6 +28,10 @@ Requer Python 3, sem bibliotecas extras. Na raiz do repositório:
 python3 _fonte/gerar_capitulos.py        # gera os 8 capítulos
 python3 _fonte/gerar_capitulos.py 4      # gera só o capítulo 4
 ```
+
+O script também gera sempre o `simulado-dados.js`, o banco de questões do
+simulado final, juntando as questões de todos os `capN.quiz` e
+`capN.simulado.quiz`.
 
 Depois, confira a página no navegador e faça o commit dos arquivos de
 `_fonte/` junto com os `chapter_N.html` gerados.
@@ -50,7 +55,7 @@ Depois, confira a página no navegador e faça o commit dos arquivos de
 
 Dentro de `<pre>` e do texto, escreva `<` como `&lt;` e `>` como `&gt;`.
 
-## Como escrever as questões (`capN.quiz`)
+## Como escrever as questões (`capN.quiz` e `capN.simulado.quiz`)
 
 Cada questão tem um enunciado (`?`), as alternativas (`-` para errada,
 `*` para a correta, exatamente uma) e a explicação (`=`). Separe as
@@ -76,3 +81,12 @@ questões com uma linha em branco:
 - O script para com uma mensagem de erro se uma questão não tiver
   enunciado, explicação ou exatamente uma alternativa correta, ou se
   tiver alternativas repetidas.
+
+## Simulado final
+
+A página `simulado.html` sorteia, a cada tentativa, 5 questões de cada
+capítulo do banco (40 no total) e embaralha a ordem das questões e das
+alternativas. Para o sorteio variar bastante, mantenha pelo menos 5
+questões por capítulo no banco; quanto mais questões, mais variado fica
+o simulado. A quantidade por capítulo e o tempo de prova ficam no início
+do `simulado.js` (`QUESTOES_POR_CAPITULO` e `DURACAO_SEGUNDOS`).

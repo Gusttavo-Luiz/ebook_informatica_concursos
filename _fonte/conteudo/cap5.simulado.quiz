@@ -1,0 +1,32 @@
+? Qual memória é não volátil e armazena o firmware que inicia o computador?
+- RAM
+- Cache
+* ROM
+- Registrador
+= A ROM mantém os dados sem energia e guarda o firmware de inicialização (BIOS/UEFI).
+
+? Uma impressora que utiliza toner, fixado no papel por calor, é do tipo:
+- matricial
+- jato de tinta
+* laser
+- térmica
+= A impressora laser usa toner (pó). A jato de tinta usa tinta líquida e a matricial usa fita.
+
+? Qual conexão transmite vídeo e áudio digitais em um único cabo, para monitores e TVs?
+* HDMI
+- VGA
+- RJ-45
+- SATA
+= O HDMI transmite vídeo e áudio digitais. VGA é vídeo analógico, RJ-45 é rede e SATA conecta discos.
+
+? Julgue o item: “A memória cache é mais rápida que a memória RAM, porém tem capacidade bem menor”.
+* Certo
+- Errado
+= A cache (SRAM) fica junto ao processador: é mais rápida e menor que a RAM.
+
+? Qual componente conecta processador, memória, armazenamento e periféricos, permitindo a comunicação entre eles?
+- Fonte de alimentação
+* Placa-mãe
+- Placa de vídeo
+- Disco rígido
+= A placa-mãe é a placa principal: tem o soquete do processador, os slots de memória, os conectores de disco e os barramentos.

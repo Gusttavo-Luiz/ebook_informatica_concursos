@@ -1,0 +1,32 @@
+? O tipo de spyware que registra as teclas digitadas pelo usuário, permitindo capturar senhas, é o:
+- adware
+- worm
+* keylogger
+- rootkit
+= O keylogger registra o que é digitado no teclado. O screenlogger captura imagens da tela.
+
+? O golpe que altera a resolução de nomes (DNS) para levar o usuário a um site falso, mesmo quando ele digita o endereço correto, é o:
+- phishing
+* pharming
+- spam
+- DDoS
+= O pharming envenena a resolução de nomes. No phishing, o usuário é induzido a clicar em um link falso.
+
+? A função hash é utilizada principalmente para verificar a:
+- disponibilidade
+* integridade
+- confidencialidade
+- velocidade da conexão
+= Qualquer alteração no conteúdo gera um hash diferente, o que permite detectar modificações.
+
+? Julgue o item: “O firewall é a ferramenta responsável por detectar e remover vírus dos arquivos do computador”.
+- Certo
+* Errado
+= O firewall filtra o tráfego de rede. Detectar e remover malware é função do antivírus.
+
+? O tipo de backup que copia apenas os arquivos alterados desde o último backup, seja ele completo ou não, é o:
+- completo
+* incremental
+- diferencial
+- espelhado
+= O incremental copia o que mudou desde o último backup de qualquer tipo. O diferencial copia o que mudou desde o último completo.
