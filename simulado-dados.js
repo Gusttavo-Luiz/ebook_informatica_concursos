@@ -1,5 +1,6 @@
 // Arquivo gerado por _fonte/gerar_capitulos.py. Não edite à mão.
 window.CAPITULOS_SIMULADO = {"1": "Introdução à Informática", "2": "Sistemas Operacionais", "3": "Internet e Navegadores", "4": "Pacote Office", "5": "Hardware", "6": "Armazenamento em Nuvem", "7": "Segurança da Informação", "8": "Lógica de Programação"};
+window.QUESTOES_NOS_CAPITULOS = {"1": 10, "2": 10, "3": 10, "4": 10, "5": 10, "6": 10, "7": 10, "8": 10};
 window.BANCO_SIMULADO = [
  {
   "capitulo": 1,

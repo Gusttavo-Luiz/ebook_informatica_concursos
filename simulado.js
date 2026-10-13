@@ -2,6 +2,8 @@ const QUESTOES_POR_CAPITULO = 5;
 const DURACAO_SEGUNDOS = 60 * 60;
 const AVISO_TEMPO_SEGUNDOS = 5 * 60;
 const CHAVE_ULTIMO_RESULTADO = "simulado-ultimo-resultado";
+const CHAVE_HISTORICO = "simulado-historico";
+const LIMITE_HISTORICO = 10;
 
 const estadoSimulado = {
   questoes: [],
@@ -222,7 +224,7 @@ function mostrarResultado(tempoEsgotado) {
   montarRecomendacao(capitulosFracos);
   montarRevisao();
   filtrarRevisao("todas");
-  salvarUltimoResultado(acertos, total);
+  salvarUltimoResultado(acertos, total, segundosUsados);
   mostrarUltimoResultado();
   mostrarTela("telaResultado");
 }
@@ -379,25 +381,26 @@ function filtrarRevisao(filtro) {
   document.getElementById("revisaoVazia").hidden = visiveis > 0;
 }
 
-function salvarUltimoResultado(acertos, total) {
-  try {
-    localStorage.setItem(
-      CHAVE_ULTIMO_RESULTADO,
-      JSON.stringify({ acertos, total, data: new Date().toISOString() })
-    );
-  } catch (erro) {
-    // Sem acesso ao armazenamento do navegador: o resultado só não fica salvo.
-  }
+function salvarUltimoResultado(acertos, total, segundosUsados) {
+  const porCapitulo = {};
+  estadoSimulado.questoes.forEach((questao, indice) => {
+    const capitulo = porCapitulo[questao.capitulo] || { acertos: 0, total: 0 };
+    capitulo.total++;
+    if (estadoSimulado.respostas[indice] === questao.correta) capitulo.acertos++;
+    porCapitulo[questao.capitulo] = capitulo;
+  });
+
+  const resultado = { acertos, total, segundos: segundosUsados, porCapitulo, data: new Date().toISOString() };
+  const historico = lerArmazenamentoJSON(CHAVE_HISTORICO, []);
+  historico.unshift(resultado);
+
+  gravarArmazenamento(CHAVE_ULTIMO_RESULTADO, JSON.stringify(resultado));
+  gravarArmazenamento(CHAVE_HISTORICO, JSON.stringify(historico.slice(0, LIMITE_HISTORICO)));
 }
 
 function mostrarUltimoResultado() {
   const paragrafo = document.getElementById("ultimoResultado");
-  let ultimo = null;
-  try {
-    ultimo = JSON.parse(localStorage.getItem(CHAVE_ULTIMO_RESULTADO));
-  } catch (erro) {
-    ultimo = null;
-  }
+  const ultimo = lerArmazenamentoJSON(CHAVE_ULTIMO_RESULTADO, null);
 
   if (!ultimo || typeof ultimo.acertos !== "number") {
     paragrafo.hidden = true;

@@ -54,7 +54,10 @@ HEAD = """<!DOCTYPE html>
 <div class="progress-bar" id="progressBar"></div>
 <div class="reading-container">
 <div class="chapter-header">
-<a class="back-home" href="index.html">← Voltar para a página inicial</a>
+<div class="chapter-links">
+<a class="back-home" href="index.html">← Página inicial</a>
+<a class="back-home" href="progresso.html">Meu progresso</a>
+</div>
 <div class="chapter-tools">
 <button class="audio-button" id="botaoNarrar" type="button">Ouvir capítulo</button>
 <button class="audio-button" id="botaoPausarNarracao" type="button">Pausar narração</button>
@@ -198,7 +201,9 @@ def gerar(n):
 def gerar_banco_simulado():
     """Gera simulado-dados.js com as questões dos capítulos e as exclusivas do simulado."""
     banco = []
+    questoes_nos_capitulos = {}
     for n in TITULOS:
+        questoes_nos_capitulos[str(n)] = len(ler_quiz(n))
         for arquivo in ("quiz", "simulado.quiz"):
             for q in ler_quiz(n, arquivo):
                 banco.append({
@@ -212,6 +217,7 @@ def gerar_banco_simulado():
     js = (
         "// Arquivo gerado por _fonte/gerar_capitulos.py. Não edite à mão.\n"
         f"window.CAPITULOS_SIMULADO = {json.dumps(capitulos, ensure_ascii=False)};\n"
+        f"window.QUESTOES_NOS_CAPITULOS = {json.dumps(questoes_nos_capitulos)};\n"
         f"window.BANCO_SIMULADO = {json.dumps(banco, ensure_ascii=False, indent=1)};\n"
     )
     (REPO / "simulado-dados.js").write_text(js, encoding="utf-8")
