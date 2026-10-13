@@ -1,0 +1,156 @@
+<section class="figure-card"><h2 class="figure-title">Figura ilustrativa — Tríade da segurança</h2><div class="figure-grid three"><div><span class="figure-label">C</span><strong>Confidencialidade</strong></div><div><span class="figure-label">I</span><strong>Integridade</strong></div><div><span class="figure-label">D</span><strong>Disponibilidade</strong></div></div></section>
+
+<h2>Conceito de segurança da informação</h2>
+<p class="chapter-intro">Segurança da informação é o conjunto de práticas, políticas e tecnologias que protegem a informação contra acesso não autorizado, alteração indevida, destruição e indisponibilidade.</p>
+<p>Ela protege a informação em <strong>qualquer formato</strong>: arquivos digitais, documentos em papel e até conversas.</p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“Segurança da informação protege apenas dados digitais.” Errado: protege qualquer informação, inclusive documentos físicos. A proteção específica dos meios digitais costuma ser chamada de segurança cibernética.</p></div>
+
+<h2>Princípios da segurança</h2>
+<h3>Tríade CID (ou CIA, em inglês)</h3>
+<table class="comparison-table">
+<thead><tr><th>Princípio</th><th>Garante que…</th><th>Mecanismos</th></tr></thead>
+<tbody>
+<tr><td>Confidencialidade</td><td>só pessoas autorizadas acessam a informação</td><td>senhas, criptografia, controle de acesso</td></tr>
+<tr><td>Integridade</td><td>a informação não foi alterada indevidamente</td><td>hash, assinatura digital</td></tr>
+<tr><td>Disponibilidade</td><td>a informação está acessível quando necessária</td><td>backup, redundância, nobreak, proteção contra DDoS</td></tr>
+</tbody>
+</table>
+<h3>Princípios complementares</h3>
+<ul>
+<li><strong>Autenticidade:</strong> garante que a origem e a identidade são verdadeiras (quem diz ser é quem realmente é). Mecanismos: login com senha, biometria, certificado digital.</li>
+<li><strong>Não repúdio (irretratabilidade):</strong> impede que o autor negue ter realizado uma ação, como assinar um documento. Mecanismo: assinatura digital.</li>
+</ul>
+<div class="box-dica"><strong>Memorize</strong><p><strong>CIDA</strong>: Confidencialidade, Integridade, Disponibilidade e Autenticidade — mais o não repúdio. A tríade clássica tem só as três primeiras.</p></div>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“Autenticidade faz parte da tríade clássica CID.” Errado: a tríade tem apenas Confidencialidade, Integridade e Disponibilidade. Autenticidade e não repúdio são princípios complementares.</p></div>
+
+<h2>Ameaça, vulnerabilidade e risco</h2>
+<ul>
+<li><strong>Vulnerabilidade:</strong> fraqueza que pode ser explorada. Exemplo: sistema desatualizado, senha fraca.</li>
+<li><strong>Ameaça:</strong> agente ou evento que pode explorar uma vulnerabilidade. Exemplo: um invasor, um malware, um incêndio.</li>
+<li><strong>Risco:</strong> probabilidade de uma ameaça explorar uma vulnerabilidade e o impacto que isso causaria.</li>
+<li><strong>Incidente:</strong> evento que efetivamente compromete a segurança.</li>
+</ul>
+
+<h2>Malware</h2>
+<p>Malware (malicious software) é qualquer programa criado para causar danos, roubar dados ou obter controle indevido de um sistema.</p>
+<table class="comparison-table">
+<thead><tr><th>Tipo</th><th>Como age</th></tr></thead>
+<tbody>
+<tr><td>Vírus</td><td>se anexa a arquivos ou programas e depende da <strong>execução</strong> do arquivo infectado para agir e se propagar</td></tr>
+<tr><td>Worm</td><td>se propaga <strong>sozinho</strong> pela rede, explorando falhas, sem precisar infectar arquivos nem da ação do usuário; consome recursos e congestiona a rede</td></tr>
+<tr><td>Cavalo de Troia (trojan)</td><td>se disfarça de programa legítimo (jogo, cartão virtual, “atualização”) e executa ações maliciosas escondidas</td></tr>
+<tr><td>Ransomware</td><td>criptografa os arquivos (ou bloqueia o sistema) e exige resgate, normalmente em criptomoeda</td></tr>
+<tr><td>Spyware</td><td>espiona e coleta informações do usuário sem consentimento</td></tr>
+<tr><td>Keylogger</td><td>spyware que registra as teclas digitadas, como senhas</td></tr>
+<tr><td>Screenlogger</td><td>spyware que captura imagens da tela e a posição dos cliques</td></tr>
+<tr><td>Adware</td><td>exibe propagandas indesejadas</td></tr>
+<tr><td>Backdoor</td><td>abre uma “porta dos fundos” para o invasor voltar a acessar o sistema</td></tr>
+<tr><td>Rootkit</td><td>conjunto de técnicas para esconder a presença do invasor e de outros malwares no sistema</td></tr>
+<tr><td>Bot e botnet</td><td>o bot permite controlar o computador remotamente; uma botnet é uma rede de computadores infectados (“zumbis”), usada por exemplo em ataques DDoS</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>A diferença mais cobrada: o <strong>vírus</strong> precisa de um hospedeiro e da execução do arquivo; o <strong>worm</strong> se replica sozinho pela rede. E o cavalo de Troia, em geral, <strong>não</strong> se replica.</p></div>
+
+<h2>Golpes e ataques</h2>
+<table class="comparison-table">
+<thead><tr><th>Ataque</th><th>Descrição</th></tr></thead>
+<tbody>
+<tr><td>Engenharia social</td><td>manipula pessoas, explorando confiança, medo ou urgência, para obter informações ou acessos</td></tr>
+<tr><td>Phishing</td><td>mensagem falsa (e-mail, SMS, rede social) que imita uma instituição para roubar dados ou induzir o usuário a clicar</td></tr>
+<tr><td>Spear phishing</td><td>phishing direcionado a uma pessoa ou empresa específica, com informações personalizadas</td></tr>
+<tr><td>Smishing e vishing</td><td>phishing por SMS e por ligação telefônica (voz)</td></tr>
+<tr><td>Pharming</td><td>altera a resolução de nomes (DNS) para levar o usuário a um site falso mesmo quando ele digita o endereço correto</td></tr>
+<tr><td>DoS e DDoS</td><td>sobrecarregam um serviço com requisições para torná-lo indisponível; no DDoS o ataque vem de muitas máquinas ao mesmo tempo</td></tr>
+<tr><td>Força bruta</td><td>testa inúmeras combinações de senha até acertar</td></tr>
+<tr><td>Man-in-the-middle</td><td>o atacante se coloca entre duas partes para interceptar ou alterar a comunicação</td></tr>
+<tr><td>Spoofing</td><td>falsifica a origem, como o remetente de um e-mail ou um endereço IP</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>Phishing <strong>não é malware</strong>: é um golpe de engenharia social que engana o usuário. Já o <strong>pharming</strong> é mais perigoso, porque o usuário cai no site falso mesmo digitando o endereço certo. E o DDoS ataca a <strong>disponibilidade</strong>.</p></div>
+
+<h2>Criptografia</h2>
+<p>A criptografia transforma a informação legível em um código ilegível, que só pode ser revertido por quem tem a chave correta. Ela protege principalmente a <strong>confidencialidade</strong>.</p>
+<table class="comparison-table">
+<thead><tr><th>Característica</th><th>Simétrica</th><th>Assimétrica</th></tr></thead>
+<tbody>
+<tr><td>Chaves</td><td>uma única chave secreta para cifrar e decifrar</td><td>par de chaves: pública (divulgada) e privada (secreta)</td></tr>
+<tr><td>Velocidade</td><td>mais rápida</td><td>mais lenta</td></tr>
+<tr><td>Desafio</td><td>compartilhar a chave com segurança</td><td>proteger a chave privada</td></tr>
+<tr><td>Exemplos</td><td>AES, 3DES</td><td>RSA, ECC</td></tr>
+</tbody>
+</table>
+<h3>Como as chaves assimétricas são usadas</h3>
+<ul>
+<li><strong>Para enviar uma mensagem sigilosa:</strong> cifra-se com a chave <strong>pública do destinatário</strong>; só a chave privada dele consegue decifrar.</li>
+<li><strong>Para assinar digitalmente:</strong> o remetente usa a <strong>própria chave privada</strong>; qualquer pessoa confere a assinatura com a chave pública dele.</li>
+</ul>
+<h3>Hash</h3>
+<p>A função hash gera um “resumo” de tamanho fixo a partir de qualquer conteúdo. Qualquer alteração no conteúdo, por menor que seja, gera um hash completamente diferente. Por isso ela é usada para verificar a <strong>integridade</strong>. Exemplo: SHA-256. O MD5 e o SHA-1 são considerados inseguros.</p>
+<h3>Assinatura e certificado digital</h3>
+<ul>
+<li><strong>Assinatura digital:</strong> combina o hash do documento com a chave privada do autor. Garante <strong>autenticidade, integridade e não repúdio</strong>, mas <strong>não</strong> garante confidencialidade.</li>
+<li><strong>Certificado digital:</strong> documento eletrônico emitido por uma <strong>Autoridade Certificadora (AC)</strong> que vincula uma chave pública à identidade de uma pessoa, empresa ou site. No Brasil, a cadeia oficial é a <strong>ICP-Brasil</strong>.</li>
+<li>O <strong>HTTPS</strong> usa certificados digitais e o protocolo TLS para criptografar a conexão com o site.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“A assinatura digital garante o sigilo do documento.” Errado: ela garante autenticidade, integridade e não repúdio. Para sigilo, é preciso criptografar o documento.</p></div>
+<div class="box-dica"><strong>Memorize</strong><p>Sigilo → chave <strong>pública do destinatário</strong>. Assinatura → chave <strong>privada do remetente</strong>.</p></div>
+
+<h2>Autenticação</h2>
+<p>A autenticação confirma a identidade de quem acessa um sistema. Ela se baseia em três fatores:</p>
+<ul>
+<li><strong>Algo que você sabe:</strong> senha, PIN, resposta secreta.</li>
+<li><strong>Algo que você tem:</strong> celular com código, token, cartão, certificado digital em mídia.</li>
+<li><strong>Algo que você é:</strong> biometria (impressão digital, rosto, íris).</li>
+</ul>
+<p>A <strong>autenticação em dois fatores (2FA)</strong> ou multifator combina fatores de <strong>tipos diferentes</strong>. Senha + código no celular é 2FA; duas senhas não são.</p>
+<p>Boas práticas para senhas: usar senhas longas (frases-senha), não reutilizar a mesma senha em vários serviços e usar um gerenciador de senhas.</p>
+
+<h2>Ferramentas de proteção</h2>
+<table class="comparison-table">
+<thead><tr><th>Ferramenta</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td>Antivírus (antimalware)</td><td>detecta, bloqueia e remove malwares, por assinaturas e análise de comportamento. Ex.: Microsoft Defender</td></tr>
+<tr><td>Firewall</td><td>controla o tráfego de rede, permitindo ou bloqueando conexões de acordo com regras</td></tr>
+<tr><td>IDS</td><td>sistema de detecção de intrusão: monitora a rede e <strong>alerta</strong> sobre atividades suspeitas</td></tr>
+<tr><td>IPS</td><td>sistema de prevenção de intrusão: detecta e <strong>bloqueia</strong> automaticamente</td></tr>
+<tr><td>VPN</td><td>cria um “túnel” criptografado pela internet, permitindo acesso seguro à rede da organização</td></tr>
+<tr><td>Antispam</td><td>filtra mensagens indesejadas e suspeitas</td></tr>
+<tr><td>Proxy</td><td>intermediário entre os usuários e a internet, que pode filtrar sites e registrar acessos</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O firewall remove vírus do computador.” Errado: o firewall filtra o tráfego de rede; quem remove malware é o antivírus. Um não substitui o outro.</p></div>
+
+<h2>Backup</h2>
+<p>Backup é a cópia de segurança dos dados, que permite recuperá-los em caso de falha, exclusão acidental ou ataque, como um ransomware.</p>
+<table class="comparison-table">
+<thead><tr><th>Tipo</th><th>O que copia</th><th>Para restaurar</th></tr></thead>
+<tbody>
+<tr><td>Completo (full)</td><td>todos os dados selecionados</td><td>apenas o último backup completo</td></tr>
+<tr><td>Incremental</td><td>só o que mudou desde o <strong>último backup de qualquer tipo</strong></td><td>o último completo + <strong>todos</strong> os incrementais seguintes</td></tr>
+<tr><td>Diferencial</td><td>tudo o que mudou desde o <strong>último backup completo</strong></td><td>o último completo + <strong>apenas o último</strong> diferencial</td></tr>
+</tbody>
+</table>
+<p>O incremental é o mais rápido de fazer e ocupa menos espaço, mas é o mais trabalhoso de restaurar. O diferencial cresce a cada dia, mas restaura com só duas cópias.</p>
+<div class="box-dica"><strong>Memorize</strong><p>Regra <strong>3-2-1</strong>: 3 cópias dos dados, em 2 mídias diferentes, sendo 1 fora do local (por exemplo, na nuvem). E teste a restauração de tempos em tempos.</p></div>
+
+<h2>Boas práticas</h2>
+<ul>
+<li>manter sistema operacional, navegador e aplicativos atualizados;</li>
+<li>desconfiar de mensagens com urgência, prêmios ou ameaças, e não clicar em links suspeitos;</li>
+<li>conferir o endereço do site antes de digitar senhas;</li>
+<li>baixar programas apenas de fontes oficiais;</li>
+<li>usar antivírus, firewall e autenticação em dois fatores;</li>
+<li>bloquear o computador ao se ausentar (Windows + L);</li>
+<li>fazer backups regulares e testar a restauração.</li>
+</ul>
+
+<h2>Conclusão do capítulo</h2>
+<p>Os tópicos de segurança mais cobrados são:</p>
+<ul>
+<li>tríade CID, autenticidade e não repúdio;</li>
+<li>diferenças entre vírus, worm, trojan, ransomware e spyware;</li>
+<li>phishing, pharming, engenharia social e DDoS;</li>
+<li>criptografia simétrica x assimétrica, hash, assinatura e certificado digital;</li>
+<li>firewall x antivírus, IDS x IPS, VPN;</li>
+<li>tipos de backup.</li>
+</ul>

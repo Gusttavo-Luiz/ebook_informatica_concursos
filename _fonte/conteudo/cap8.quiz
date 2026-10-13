@@ -1,0 +1,65 @@
+? O que melhor define um algoritmo?
+- Um programa que só funciona em Python
+* Uma sequência finita, ordenada e lógica de passos para resolver um problema
+- Um conjunto de comandos aleatórios
+- Um tipo de hardware de processamento
+= Algoritmo é uma sequência finita, ordenada e sem ambiguidades de passos que resolve um problema, independentemente da linguagem.
+
+? Para que serve a estrutura condicional (SE...ENTÃO...SENÃO)?
+- Repetir o mesmo bloco várias vezes
+* Tomar decisões com base em um teste lógico
+- Declarar variáveis
+- Encerrar o programa imediatamente
+= A estrutura condicional escolhe qual bloco executar conforme o resultado de um teste lógico.
+
+? O que pode acontecer se a variável de controle de um laço ENQUANTO nunca for atualizada?
+- O programa termina mais rápido
+* O programa pode entrar em repetição infinita
+- O valor é atualizado automaticamente
+- O laço é ignorado pelo computador
+= Se a condição nunca muda, ela permanece verdadeira e o laço não termina.
+
+? Qual é o resultado de 23 MOD 4?
+- 5
+* 3
+- 5,75
+- 4
+= 23 dividido por 4 dá quociente 5 (23 DIV 4) e resto 3. MOD devolve o resto.
+
+? Sendo A verdadeiro e B falso, qual é o valor de (A E B) OU (NÃO B)?
+* Verdadeiro
+- Falso
+= A E B é falso (B é falso). NÃO B é verdadeiro. Falso OU verdadeiro resulta em verdadeiro.
+
+? Qual estrutura de repetição garante que o bloco seja executado pelo menos uma vez, pois testa a condição no final?
+- PARA
+- ENQUANTO
+* REPITA...ATÉ
+- SE...ENTÃO
+= O REPITA testa a condição só depois de executar o bloco. O ENQUANTO testa antes e pode não executar nenhuma vez.
+
+? Considere o trecho: x <- 3; ENQUANTO x < 10 FAÇA x <- x + 3; ESCREVA x; FIMENQUANTO. O que será escrito?
+- 3, 6, 9
+- 6, 9
+* 6, 9, 12
+- 3, 6, 9, 12
+= Volta 1: x = 3 < 10 → x = 6, escreve 6. Volta 2: 6 < 10 → 9. Volta 3: 9 < 10 → 12, escreve 12. Depois 12 < 10 é falso e o laço termina.
+
+? Em um algoritmo, a variável que soma valores a cada volta do laço (como soma <- soma + nota) é chamada de:
+- contador
+* acumulador
+- constante
+- vetor
+= O acumulador soma valores variáveis. O contador normalmente aumenta de 1 em 1.
+
+? Julgue o item: “Uma função difere de um procedimento por retornar um valor a quem a chamou”.
+* Certo
+- Errado
+= A função retorna um valor; o procedimento executa uma tarefa sem retorno.
+
+? Com x = 5 e y = 5, a expressão (x > y) OU (x + y >= 10) resulta em:
+- Falso, porque x não é maior que y
+* Verdadeiro, porque x + y é igual a 10
+- Falso, porque as duas condições são falsas
+- Erro, porque x e y são iguais
+= x > y é falso (5 não é maior que 5). x + y = 10 e 10 >= 10 é verdadeiro. Falso OU verdadeiro resulta em verdadeiro.

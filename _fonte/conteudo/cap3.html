@@ -1,0 +1,210 @@
+<section class="figure-card"><h2 class="figure-title">Figura ilustrativa — O que acontece ao digitar um endereço</h2><div class="figure-grid three"><div><span class="figure-label">Nome</span><strong>www.site.gov.br</strong></div><div><span class="figure-label">DNS</span><strong>Traduz para IP</strong></div><div><span class="figure-label">Navegador</span><strong>Exibe a página</strong></div></div></section>
+
+<h2>Redes de computadores</h2>
+<p class="chapter-intro">Uma rede de computadores é um conjunto de dispositivos interligados que compartilham dados e recursos, como arquivos, impressoras e acesso à internet.</p>
+<h3>Classificação por abrangência</h3>
+<table class="comparison-table">
+<thead><tr><th>Tipo</th><th>Alcance</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>PAN (Personal Area Network)</td><td>poucos metros, ao redor de uma pessoa</td><td>celular conectado a um fone Bluetooth</td></tr>
+<tr><td>LAN (Local Area Network)</td><td>um prédio, escritório ou residência</td><td>rede de uma repartição pública</td></tr>
+<tr><td>MAN (Metropolitan Area Network)</td><td>uma cidade ou região metropolitana</td><td>rede que liga as unidades de uma prefeitura</td></tr>
+<tr><td>WAN (Wide Area Network)</td><td>países e continentes</td><td>a própria internet</td></tr>
+</tbody>
+</table>
+<p>Uma LAN sem fio é chamada de <strong>WLAN</strong>, normalmente usando Wi-Fi.</p>
+<h3>Internet, intranet e extranet</h3>
+<ul>
+<li><strong>Internet:</strong> rede mundial e pública, baseada no conjunto de protocolos TCP/IP.</li>
+<li><strong>Intranet:</strong> rede privada de uma organização que usa as <strong>mesmas tecnologias da internet</strong> (TCP/IP, HTTP, navegador), mas com acesso restrito aos colaboradores.</li>
+<li><strong>Extranet:</strong> parte da intranet liberada para usuários externos autorizados, como fornecedores e parceiros.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“A intranet não utiliza os protocolos da internet.” Errado: a intranet usa exatamente as mesmas tecnologias (TCP/IP, HTTP, navegadores). O que muda é o acesso, que é restrito. Também é possível acessar a intranet de fora, por exemplo via VPN.</p></div>
+
+<h2>Topologias de rede</h2>
+<table class="comparison-table">
+<thead><tr><th>Topologia</th><th>Como funciona</th><th>Ponto de atenção</th></tr></thead>
+<tbody>
+<tr><td>Barramento</td><td>todos ligados a um único cabo</td><td>uma falha no cabo derruba a rede</td></tr>
+<tr><td>Anel</td><td>cada dispositivo ligado ao próximo, fechando um círculo</td><td>os dados passam por vários nós</td></tr>
+<tr><td>Estrela</td><td>todos ligados a um equipamento central (switch)</td><td>é a mais usada; se o equipamento central falhar, a rede para</td></tr>
+<tr><td>Malha</td><td>vários caminhos interligando os dispositivos</td><td>alta tolerância a falhas e custo maior</td></tr>
+</tbody>
+</table>
+
+<h2>Equipamentos de rede</h2>
+<table class="comparison-table">
+<thead><tr><th>Equipamento</th><th>Função</th></tr></thead>
+<tbody>
+<tr><td>Placa de rede (NIC)</td><td>conecta o computador à rede; cada uma tem um endereço físico único, o MAC</td></tr>
+<tr><td>Hub</td><td>repete os dados para todas as portas (equipamento antigo)</td></tr>
+<tr><td>Switch</td><td>envia os dados apenas para a porta do destinatário, usando o endereço MAC</td></tr>
+<tr><td>Roteador</td><td>interliga redes diferentes e escolhe o caminho dos pacotes usando o endereço IP</td></tr>
+<tr><td>Modem</td><td>converte o sinal da operadora (fibra, cabo, telefone) para a rede do usuário</td></tr>
+<tr><td>Ponto de acesso (access point)</td><td>cria a rede sem fio Wi-Fi</td></tr>
+</tbody>
+</table>
+<p>Padrões de conexão mais citados: <strong>Ethernet</strong> (rede cabeada, IEEE 802.3, cabo com conector RJ-45), <strong>Wi-Fi</strong> (rede sem fio, IEEE 802.11) e <strong>Bluetooth</strong> (curto alcance).</p>
+<div class="box-dica"><strong>Memorize</strong><p>Hub espalha para todos; switch entrega para quem deve receber dentro da rede local; roteador liga redes diferentes, como a sua casa e a internet.</p></div>
+
+<h2>Modelo OSI</h2>
+<p>O modelo OSI (Open Systems Interconnection), da ISO, é um modelo de referência que divide a comunicação em <strong>7 camadas</strong>. Ele é teórico: serve para estudar e organizar as funções da rede.</p>
+<table class="comparison-table">
+<thead><tr><th>Nº</th><th>Camada</th><th>Função</th><th>Exemplos</th></tr></thead>
+<tbody>
+<tr><td>7</td><td>Aplicação</td><td>serviços usados pelos programas</td><td>HTTP, SMTP, FTP, DNS</td></tr>
+<tr><td>6</td><td>Apresentação</td><td>formato, compressão e criptografia dos dados</td><td>codificação de caracteres, TLS</td></tr>
+<tr><td>5</td><td>Sessão</td><td>abre, mantém e encerra a comunicação</td><td>controle de diálogo</td></tr>
+<tr><td>4</td><td>Transporte</td><td>entrega fim a fim, segmentação e controle de erros</td><td>TCP, UDP</td></tr>
+<tr><td>3</td><td>Rede</td><td>endereçamento lógico e roteamento</td><td>IP, roteador</td></tr>
+<tr><td>2</td><td>Enlace</td><td>comunicação entre dispositivos vizinhos, endereço MAC</td><td>Ethernet, switch</td></tr>
+<tr><td>1</td><td>Física</td><td>transmissão dos bits pelo meio físico</td><td>cabos, conectores, sinais, hub</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>Da camada 1 para a 7: <strong>F</strong>ísica, <strong>E</strong>nlace, <strong>R</strong>ede, <strong>T</strong>ransporte, <strong>S</strong>essão, <strong>A</strong>presentação, <strong>A</strong>plicação — “<strong>FERTSAA</strong>”.</p></div>
+
+<h2>Modelo TCP/IP</h2>
+<p>Na prática, a internet funciona com o modelo TCP/IP, que agrupa as funções em <strong>4 camadas</strong>.</p>
+<table class="comparison-table">
+<thead><tr><th>Camada TCP/IP</th><th>Equivale no OSI a</th><th>Protocolos</th></tr></thead>
+<tbody>
+<tr><td>Aplicação</td><td>Aplicação, Apresentação e Sessão</td><td>HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, SSH</td></tr>
+<tr><td>Transporte</td><td>Transporte</td><td>TCP, UDP</td></tr>
+<tr><td>Internet (rede)</td><td>Rede</td><td>IP, ICMP</td></tr>
+<tr><td>Acesso à rede (interface de rede)</td><td>Enlace e Física</td><td>Ethernet, Wi-Fi</td></tr>
+</tbody>
+</table>
+<h3>TCP x UDP</h3>
+<table class="comparison-table">
+<thead><tr><th>Característica</th><th>TCP</th><th>UDP</th></tr></thead>
+<tbody>
+<tr><td>Conexão</td><td>orientado à conexão (estabelece a conexão antes de enviar)</td><td>sem conexão</td></tr>
+<tr><td>Confiabilidade</td><td>garante a entrega e a ordem dos pacotes, reenviando os perdidos</td><td>não garante entrega nem ordem</td></tr>
+<tr><td>Velocidade</td><td>mais lento</td><td>mais rápido, com menos sobrecarga</td></tr>
+<tr><td>Uso típico</td><td>páginas web, e-mail, transferência de arquivos</td><td>streaming ao vivo, jogos online, chamadas de voz, DNS</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O UDP garante a entrega dos pacotes.” Errado: quem garante é o TCP. O UDP é usado quando a velocidade importa mais do que a confiabilidade.</p></div>
+
+<h2>Endereçamento IP</h2>
+<p>Cada dispositivo conectado a uma rede TCP/IP recebe um <strong>endereço IP</strong>, que o identifica e permite que os pacotes cheguem ao destino.</p>
+<table class="comparison-table">
+<thead><tr><th>Característica</th><th>IPv4</th><th>IPv6</th></tr></thead>
+<tbody>
+<tr><td>Tamanho</td><td>32 bits</td><td>128 bits</td></tr>
+<tr><td>Formato</td><td>4 números decimais de 0 a 255, separados por pontos</td><td>8 grupos hexadecimais separados por dois-pontos</td></tr>
+<tr><td>Exemplo</td><td>192.168.0.1</td><td>2001:0db8:85a3:0000:0000:8a2e:0370:7334</td></tr>
+<tr><td>Quantidade de endereços</td><td>cerca de 4,3 bilhões (esgotados)</td><td>praticamente ilimitada</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>IP público:</strong> visível na internet, fornecido pelo provedor.</li>
+<li><strong>IP privado:</strong> usado dentro de redes locais e não roteado na internet. Faixas: 10.x.x.x, 172.16.x.x a 172.31.x.x e 192.168.x.x.</li>
+<li><strong>NAT:</strong> recurso do roteador que permite que vários dispositivos com IP privado compartilhem um único IP público.</li>
+<li><strong>DHCP:</strong> protocolo que distribui endereços IP automaticamente para os dispositivos da rede.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O IPv6 foi criado para substituir o TCP.” Errado: o IPv6 substitui o <strong>IPv4</strong>. Outra armadilha: o número 256 não pode aparecer em um IPv4, porque cada parte vai de 0 a 255.</p></div>
+
+<h2>DNS e URL</h2>
+<p>O <strong>DNS (Domain Name System)</strong> traduz nomes de domínio, fáceis de lembrar, em endereços IP. Sem ele, seria preciso digitar o IP de cada site.</p>
+<p>O endereço completo de um recurso na web é a <strong>URL</strong>. Veja suas partes:</p>
+<div class="pseudocode-card">
+<h3>Anatomia de uma URL</h3>
+<pre>https://www.gov.br/receitafederal/pt-br
+
+https://         → protocolo
+www.gov.br       → nome do domínio (resolvido pelo DNS)
+.br              → domínio de primeiro nível do Brasil
+/receitafederal/pt-br → caminho até a página</pre>
+</div>
+<p>Alguns domínios brasileiros: <span class="inline-code">.gov.br</span> (governo), <span class="inline-code">.edu.br</span> (ensino), <span class="inline-code">.com.br</span> (comercial), <span class="inline-code">.org.br</span> (organizações sem fins lucrativos), <span class="inline-code">.jus.br</span> (Judiciário).</p>
+
+<h2>Protocolos da camada de aplicação</h2>
+<table class="comparison-table">
+<thead><tr><th>Protocolo</th><th>Função</th><th>Porta padrão</th></tr></thead>
+<tbody>
+<tr><td>HTTP</td><td>transferência de páginas web, sem criptografia</td><td>80</td></tr>
+<tr><td>HTTPS</td><td>HTTP com criptografia TLS (o cadeado do navegador)</td><td>443</td></tr>
+<tr><td>FTP</td><td>transferência de arquivos</td><td>20 e 21</td></tr>
+<tr><td>SSH</td><td>acesso remoto seguro, com criptografia</td><td>22</td></tr>
+<tr><td>Telnet</td><td>acesso remoto sem criptografia (inseguro)</td><td>23</td></tr>
+<tr><td>SMTP</td><td>envio de e-mails</td><td>25 (e 587 para envio autenticado)</td></tr>
+<tr><td>POP3</td><td>recebimento de e-mails, baixando-os para o dispositivo</td><td>110 (995 com criptografia)</td></tr>
+<tr><td>IMAP</td><td>acesso a e-mails mantidos e sincronizados no servidor</td><td>143 (993 com criptografia)</td></tr>
+<tr><td>DNS</td><td>tradução de nomes em IPs</td><td>53</td></tr>
+<tr><td>DHCP</td><td>atribuição automática de IP</td><td>67 e 68</td></tr>
+</tbody>
+</table>
+<div class="box-dica"><strong>Memorize</strong><p>SMTP = <strong>S</strong>ua <strong>M</strong>ensagem <strong>T</strong>á <strong>P</strong>artindo (envio). POP3 e IMAP servem para receber.</p></div>
+
+<h2>Correio eletrônico</h2>
+<h3>POP3 x IMAP</h3>
+<ul>
+<li><strong>POP3:</strong> baixa as mensagens para o dispositivo e, na configuração padrão, as remove do servidor. É útil para guardar e-mails só em um computador.</li>
+<li><strong>IMAP:</strong> as mensagens ficam no servidor e o estado delas (lida, apagada, pasta) é sincronizado. É o ideal para quem acessa o mesmo e-mail pelo celular e pelo computador.</li>
+</ul>
+<h3>Campos da mensagem</h3>
+<ul>
+<li><strong>Para:</strong> destinatários principais.</li>
+<li><strong>Cc (com cópia):</strong> destinatários em cópia. Todos veem quem foi copiado.</li>
+<li><strong>Cco (com cópia oculta):</strong> destinatários ocultos. Os demais destinatários não veem quem recebeu em Cco.</li>
+</ul>
+<p>O e-mail pode ser lido por um <strong>webmail</strong> (no navegador, como o Gmail na web) ou por um <strong>cliente de e-mail</strong> instalado, como Outlook e Thunderbird.</p>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>A banca troca os papéis: SMTP <strong>envia</strong>; POP3 e IMAP <strong>recebem</strong>. E quem está em Cco vê os destinatários dos campos Para e Cc, mas ninguém vê quem está em Cco.</p></div>
+
+<h2>Navegadores</h2>
+<p>Navegadores (browsers) são programas para acessar páginas da web: Google Chrome, Microsoft Edge, Mozilla Firefox e Safari.</p>
+<h3>Recursos mais cobrados</h3>
+<ul>
+<li><strong>Histórico:</strong> registro das páginas visitadas.</li>
+<li><strong>Favoritos:</strong> páginas salvas para acesso rápido.</li>
+<li><strong>Cookies:</strong> pequenos arquivos que os sites gravam no navegador para lembrar login, preferências e itens do carrinho. Também podem ser usados para rastrear o usuário.</li>
+<li><strong>Cache:</strong> cópias de partes das páginas guardadas localmente para carregar mais rápido.</li>
+<li><strong>Extensões:</strong> complementos que adicionam funções ao navegador.</li>
+<li><strong>Navegação anônima/privativa</strong> (anônima no Chrome, InPrivate no Edge, privativa no Firefox): ao fechar a janela, o navegador apaga histórico, cookies e dados de formulários daquela sessão.</li>
+</ul>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“A navegação anônima torna o usuário invisível na internet.” Errado: o provedor de internet, a rede da empresa e os sites visitados continuam podendo identificar o acesso. Os downloads e os favoritos criados também permanecem salvos.</p></div>
+<h3>Atalhos dos navegadores</h3>
+<table class="comparison-table">
+<thead><tr><th>Atalho</th><th>Ação</th></tr></thead>
+<tbody>
+<tr><td>Ctrl + T</td><td>nova aba</td></tr>
+<tr><td>Ctrl + W</td><td>fecha a aba atual</td></tr>
+<tr><td>Ctrl + Shift + T</td><td>reabre a última aba fechada</td></tr>
+<tr><td>Ctrl + Shift + N</td><td>janela anônima no Chrome e InPrivate no Edge</td></tr>
+<tr><td>Ctrl + Shift + P</td><td>janela privativa no Firefox</td></tr>
+<tr><td>Ctrl + H</td><td>histórico</td></tr>
+<tr><td>Ctrl + J</td><td>downloads</td></tr>
+<tr><td>Ctrl + D</td><td>adiciona a página aos favoritos</td></tr>
+<tr><td>Ctrl + F</td><td>localiza texto na página</td></tr>
+<tr><td>F5</td><td>recarrega a página</td></tr>
+</tbody>
+</table>
+<div class="box-resumo"><strong>Resumo estratégico</strong><p>O cadeado e o HTTPS indicam que a conexão é criptografada, não que o site é confiável. Sites de phishing também podem usar HTTPS.</p></div>
+
+<h2>Mecanismos de busca</h2>
+<p>Mecanismos de busca (Google, Bing, DuckDuckGo) indexam páginas da web e permitem encontrá-las por palavras-chave. Navegador e buscador são coisas diferentes: o Chrome é um navegador, o Google é um buscador.</p>
+<table class="comparison-table">
+<thead><tr><th>Operador</th><th>Efeito</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>"aspas"</td><td>busca a frase exata</td><td>"concurso público"</td></tr>
+<tr><td>- (menos)</td><td>exclui um termo</td><td>jaguar -carro</td></tr>
+<tr><td>site:</td><td>busca apenas em um site ou domínio</td><td>edital site:gov.br</td></tr>
+<tr><td>filetype:</td><td>busca um tipo de arquivo</td><td>edital filetype:pdf</td></tr>
+<tr><td>OR</td><td>um termo ou outro</td><td>Cebraspe OR FGV</td></tr>
+<tr><td>* (asterisco)</td><td>curinga para palavras desconhecidas</td><td>"o * da informação"</td></tr>
+<tr><td>intitle:</td><td>termo no título da página</td><td>intitle:concurso</td></tr>
+</tbody>
+</table>
+<div class="box-prova"><strong>Pegadinha de banca</strong><p>“O Google é um navegador.” Errado: Google é mecanismo de busca; o navegador da empresa é o Chrome.</p></div>
+
+<h2>Conclusão do capítulo</h2>
+<p>Os temas de redes e internet mais cobrados são:</p>
+<ul>
+<li>tipos de rede, intranet e extranet;</li>
+<li>equipamentos (switch x roteador);</li>
+<li>modelos OSI e TCP/IP, TCP x UDP;</li>
+<li>IPv4 x IPv6, DNS e DHCP;</li>
+<li>protocolos e portas, principalmente os de e-mail;</li>
+<li>recursos dos navegadores e operadores de busca.</li>
+</ul>

@@ -1,0 +1,67 @@
+? A tríade clássica da segurança da informação é formada por:
+- autenticidade, legalidade e privacidade
+* confidencialidade, integridade e disponibilidade
+- criptografia, backup e firewall
+- usuário, senha e token
+= A tríade CID (CIA em inglês) é confidencialidade, integridade e disponibilidade.
+
+? Phishing é uma tentativa de:
+- aumentar a velocidade da conexão
+* enganar o usuário para obter dados ou induzi-lo a uma ação
+- organizar arquivos em pastas
+- atualizar automaticamente o antivírus
+= Phishing é um golpe de engenharia social, normalmente por mensagens falsas que imitam instituições conhecidas.
+
+? Um programa malicioso que se propaga automaticamente pela rede, explorando falhas, sem precisar infectar arquivos nem da ação do usuário, é um:
+- vírus
+* worm
+- adware
+- keylogger
+= O worm se replica sozinho pela rede. O vírus depende de um arquivo hospedeiro e de sua execução.
+
+? Um malware criptografou os arquivos de um órgão e exigiu pagamento em criptomoeda para liberá-los. Trata-se de:
+- spyware
+- rootkit
+* ransomware
+- adware
+= Ransomware sequestra os dados por criptografia e cobra resgate. Um backup atualizado e isolado é a principal defesa.
+
+? Um ataque que sobrecarrega um site com requisições vindas de milhares de computadores, tornando-o indisponível, afeta principalmente o princípio da:
+- confidencialidade
+- integridade
+* disponibilidade
+- autenticidade
+= DDoS tira o serviço do ar, atacando a disponibilidade.
+
+? Para enviar uma mensagem que só o destinatário consiga ler, usando criptografia assimétrica, o remetente deve cifrá-la com:
+- a sua própria chave privada
+- a sua própria chave pública
+* a chave pública do destinatário
+- a chave privada do destinatário
+= O que é cifrado com a chave pública do destinatário só pode ser decifrado pela chave privada dele, que só ele possui.
+
+? Julgue o item: “A assinatura digital garante a autenticidade, a integridade e o não repúdio de um documento, mas não garante, por si só, a sua confidencialidade”.
+* Certo
+- Errado
+= A assinatura comprova autoria e que o documento não foi alterado. Para manter o conteúdo em sigilo, é preciso criptografá-lo.
+
+? Qual ferramenta controla o tráfego de rede, permitindo ou bloqueando conexões de acordo com regras definidas?
+- Antivírus
+* Firewall
+- Backup
+- Hash
+= O firewall filtra o tráfego. O antivírus é que detecta e remove malwares.
+
+? Um usuário digita a senha e, em seguida, um código recebido no celular. Esse procedimento é um exemplo de:
+- criptografia simétrica
+* autenticação em dois fatores
+- backup incremental
+- engenharia social
+= Combina algo que o usuário sabe (senha) com algo que ele tem (celular), dois fatores de tipos diferentes.
+
+? Uma empresa faz backup completo no domingo e backups diferenciais de segunda a sábado. Os arquivos se perderam na sexta-feira. Para restaurar, são necessários:
+- apenas o backup de quinta-feira
+- o completo de domingo e todos os diferenciais de segunda a quinta
+* o completo de domingo e o diferencial de quinta-feira
+- apenas o completo de domingo
+= O diferencial acumula tudo o que mudou desde o último completo, então bastam o completo e o último diferencial (quinta-feira).

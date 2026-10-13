@@ -1,0 +1,65 @@
+? Qual protocolo identifica e endereça os dispositivos em uma rede TCP/IP?
+- HTTP
+* IP
+- SMTP
+- FTP
+= O IP (Internet Protocol) atribui endereços aos dispositivos e permite rotear os pacotes até o destino.
+
+? Qual protocolo de transporte é preferido quando a velocidade é mais importante que a confiabilidade, como em chamadas de vídeo ao vivo?
+- TCP
+* UDP
+- HTTPS
+- IMAP
+= O UDP não estabelece conexão nem reenvia pacotes perdidos, o que o torna mais rápido. O TCP garante a entrega.
+
+? Uma rede privada de uma empresa, que utiliza as mesmas tecnologias da internet mas com acesso restrito aos funcionários, é chamada de:
+- extranet
+* intranet
+- WAN pública
+- internet
+= Intranet usa TCP/IP, HTTP e navegadores, mas é restrita à organização. Extranet libera parte dela para parceiros externos.
+
+? Qual equipamento interliga redes diferentes e escolhe o caminho dos pacotes com base no endereço IP?
+- Hub
+- Switch
+* Roteador
+- Placa de som
+= O roteador opera na camada de rede e encaminha pacotes entre redes diferentes. O switch atua dentro da rede local, usando o endereço MAC.
+
+? No modelo OSI, em qual camada atuam os protocolos TCP e UDP?
+- Rede
+* Transporte
+- Enlace
+- Aplicação
+= TCP e UDP são protocolos da camada de transporte (camada 4), responsáveis pela entrega fim a fim.
+
+? Qual é o tamanho de um endereço IPv6?
+- 32 bits
+- 64 bits
+* 128 bits
+- 256 bits
+= O IPv6 tem 128 bits, escritos em 8 grupos hexadecimais. O IPv4 tem 32 bits.
+
+? O protocolo responsável por atribuir automaticamente endereços IP aos dispositivos de uma rede é o:
+- DNS
+* DHCP
+- FTP
+- SSH
+= O DHCP distribui IPs automaticamente. O DNS traduz nomes de domínio em IPs.
+
+? Um analista de um órgão público deseja ler seus e-mails no celular e no computador, mantendo as mensagens e as pastas sincronizadas no servidor. O protocolo mais adequado é o:
+- SMTP
+- POP3
+* IMAP
+- HTTP
+= O IMAP mantém as mensagens no servidor e sincroniza o estado entre dispositivos. O POP3 baixa as mensagens, e o SMTP serve para enviar.
+
+? Julgue o item: “Ao enviar um e-mail, os destinatários colocados no campo Cco não são visíveis para os demais destinatários”.
+* Certo
+- Errado
+= Cco é a cópia oculta: ninguém vê quem recebeu em Cco.
+
+? Julgue o item: “A navegação anônima do Chrome impede que o provedor de internet identifique os sites acessados”.
+- Certo
+* Errado
+= A navegação anônima apenas não guarda histórico, cookies e dados da sessão no computador. Provedor, rede e sites continuam podendo identificar o acesso.

@@ -1,0 +1,67 @@
+? O sistema operacional é classificado como:
+- hardware de entrada
+* software básico
+- software aplicativo
+- periférico de saída
+= O sistema operacional é software básico (de sistema): gerencia o hardware e serve de base para os aplicativos.
+
+? Qual sistema de arquivos é o padrão em muitas distribuições Linux?
+- NTFS
+- FAT32
+* ext4
+- APFS
+= O ext4 é o padrão na maioria das distribuições Linux. NTFS é do Windows e APFS é da Apple.
+
+? O kernel é responsável principalmente por:
+- criar apresentações e planilhas
+* comunicar-se diretamente com o hardware e gerenciar recursos
+- navegar na internet
+- exibir a interface gráfica
+= O kernel é o núcleo do SO: controla processos, memória, dispositivos e interrupções. A interface gráfica roda sobre ele.
+
+? Um usuário tenta copiar um vídeo de 6 GB para um pen drive com 32 GB livres, mas o Windows não permite. A causa mais provável é que o pen drive está formatado em:
+* FAT32
+- NTFS
+- exFAT
+- ext4
+= O FAT32 limita cada arquivo a 4 GB. Formatar em exFAT ou NTFS resolve.
+
+? No Windows, um arquivo excluído de um pen drive com a tecla Delete:
+- vai para a Lixeira do computador
+- vai para uma lixeira dentro do pen drive
+* é excluído permanentemente, sem passar pela Lixeira
+- é movido para a pasta Documentos
+= Arquivos de unidades removíveis e de rede não vão para a Lixeira.
+
+? Qual atalho abre diretamente o Gerenciador de Tarefas do Windows?
+- Windows + E
+- Alt + F4
+* Ctrl + Shift + Esc
+- Windows + L
+= Ctrl + Shift + Esc abre o Gerenciador de Tarefas. Windows + E abre o Explorador, Alt + F4 fecha a janela e Windows + L bloqueia.
+
+? No Linux, o diretório que guarda os arquivos de configuração do sistema é:
+- /home
+- /tmp
+* /etc
+- /root
+= /etc concentra as configurações. /home tem as pastas dos usuários, /tmp os temporários e /root é a pasta pessoal do administrador.
+
+? Após o comando chmod 640 arquivo.txt, o grupo do arquivo terá permissão de:
+- leitura e escrita
+* somente leitura
+- leitura, escrita e execução
+- nenhuma permissão
+= Os dígitos são dono, grupo e outros. O grupo recebeu 4, que corresponde apenas a leitura (r).
+
+? Julgue o item: “No Linux, os arquivos Relatorio.txt e relatorio.txt podem existir na mesma pasta, pois o sistema diferencia maiúsculas de minúsculas”.
+* Certo
+- Errado
+= O Linux é case-sensitive: letras maiúsculas e minúsculas geram nomes diferentes.
+
+? Quando a memória RAM se esgota, o sistema operacional pode usar uma área do disco como extensão da memória. Esse recurso é chamado de:
+- memória cache
+- memória ROM
+* memória virtual
+- journaling
+= A memória virtual (arquivo de paginação no Windows, swap no Linux) usa o disco como extensão da RAM, com desempenho bem menor.

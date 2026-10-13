@@ -1,0 +1,65 @@
+? Qual tecnologia caracteriza a quarta geração dos computadores?
+- Válvulas eletrônicas
+- Transistores
+- Circuitos integrados
+* Microprocessadores
+= A quarta geração começa com o microprocessador (Intel 4004, 1971). Os circuitos integrados marcam a terceira geração.
+
+? Na informática, o que transforma dados em informação?
+- Armazenamento em disco
+* Processamento e contextualização
+- Uso de periféricos
+- Criptografia
+= Dados brutos só ganham significado quando são processados e colocados em contexto.
+
+? A CPU é formada principalmente por quais componentes?
+- Memória RAM e SSD
+- Teclado e monitor
+* Unidade de Controle, ULA e registradores
+- Sistema operacional e BIOS
+= A CPU reúne a Unidade de Controle, a Unidade Lógica e Aritmética e os registradores.
+
+? Quantos bits formam 1 byte?
+- 4
+* 8
+- 16
+- 1.024
+= 1 byte = 8 bits. Quatro bits formam um nibble.
+
+? Uma conexão de internet de 80 Mbps consegue transferir, no máximo, aproximadamente:
+- 80 MB por segundo
+- 640 MB por segundo
+* 10 MB por segundo
+- 1 MB por segundo
+= Velocidade é medida em bits. Dividindo por 8 para obter bytes: 80 ÷ 8 = 10 MB por segundo.
+
+? O número binário 1101 corresponde, em decimal, a:
+- 11
+* 13
+- 15
+- 1.101
+= (1×8) + (1×4) + (0×2) + (1×1) = 8 + 4 + 0 + 1 = 13.
+
+? Julgue o item: “Todo software livre é necessariamente gratuito”.
+- Certo
+* Errado
+= Software livre garante liberdade de executar, estudar, modificar e redistribuir. Ele pode ser vendido; liberdade não é o mesmo que gratuidade.
+
+? O programa que é distribuído para teste, com tempo de uso ou recursos limitados, exigindo pagamento para continuar, é chamado de:
+- Freeware
+* Shareware
+- Software livre
+- Domínio público
+= Shareware é o modelo “experimente antes de comprar”. Freeware é gratuito sem limitação de tempo.
+
+? Na arquitetura de Von Neumann:
+* dados e instruções são armazenados na mesma memória
+- dados e instruções ficam em memórias fisicamente separadas
+- não existe Unidade de Controle
+- o processador não precisa acessar a memória
+= O princípio do programa armazenado coloca dados e instruções na mesma memória. Memórias separadas caracterizam a arquitetura Harvard.
+
+? Julgue o item: “A BIOS/UEFI da placa-mãe é um exemplo de firmware”.
+* Certo
+- Errado
+= Firmware é o software gravado em um chip do próprio hardware. A BIOS/UEFI é o exemplo mais cobrado.
