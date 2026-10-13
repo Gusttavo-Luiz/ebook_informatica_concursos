@@ -147,7 +147,7 @@ function montarListaCapitulos(capitulos, ultimoSimulado) {
   const nomesSituacao = { concluido: "Concluído", andamento: "Em andamento", "nao-iniciado": "Não iniciado" };
 
   capitulos.forEach((capitulo) => {
-    const card = criar("article", `progresso-capitulo progresso-${capitulo.situacao}`);
+    const card = criar("article", `progresso-capitulo progresso-${capitulo.situacao} cor-${capitulo.numero}`);
 
     const info = criar("div", "progresso-capitulo-info");
     const topo = criar("div", "progresso-capitulo-topo");

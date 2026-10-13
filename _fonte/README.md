@@ -55,6 +55,11 @@ Depois, confira a página no navegador e faça o commit dos arquivos de
 
 Dentro de `<pre>` e do texto, escreva `<` como `&lt;` e `>` como `&gt;`.
 
+Cada capítulo tem uma cor própria: o script coloca a classe `cor-N` na
+página, e as figuras, tabelas, passos numerados e o selo do capítulo usam
+essa cor automaticamente, nos temas claro e escuro. As cores ficam nas
+variáveis `--cap-1` a `--cap-8` do `style.css`.
+
 ## Como escrever as questões (`capN.quiz` e `capN.simulado.quiz`)
 
 Cada questão tem um enunciado (`?`), as alternativas (`-` para errada,
