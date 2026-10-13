@@ -126,15 +126,21 @@ def legendas(agenda):
         return f"{ms // 3600000:02d}:{ms // 60000 % 60:02d}:{ms // 1000 % 60:02d},{ms % 1000:03d}"
 
     def partes(texto, limite=84):
-        palavras, blocos, atual = texto.split(), [], ""
-        for p in palavras:
-            if len(atual) + len(p) + 1 > limite and atual:
-                blocos.append(atual)
-                atual = p
-            else:
-                atual = f"{atual} {p}".strip()
-        blocos.append(atual)
-        return blocos
+        """Divide a fala no menor número de blocos de até `limite` caracteres,
+        com tamanhos equilibrados (evita sobra de uma palavra só)."""
+        palavras = texto.split()
+        k = -(-len(texto) // limite)
+        comp = lambda i, j: len(" ".join(palavras[i:j]))
+        # melhor[j][b] = (maior bloco, cortes) para as j primeiras palavras em b blocos
+        melhor = {(0, 0): (0, [])}
+        for b in range(1, k + 1):
+            for j in range(1, len(palavras) + 1):
+                opcoes = [(max(melhor[(i, b - 1)][0], comp(i, j)), melhor[(i, b - 1)][1] + [j])
+                          for i in range(j) if (i, b - 1) in melhor]
+                if opcoes:
+                    melhor[(j, b)] = min(opcoes)
+        cortes = [0] + melhor[(len(palavras), k)][1]
+        return [" ".join(palavras[a:z]) for a, z in zip(cortes, cortes[1:])]
 
     n = 1
     for cena in agenda["cenas"]:
