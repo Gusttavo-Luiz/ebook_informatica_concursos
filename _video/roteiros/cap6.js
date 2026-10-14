@@ -62,10 +62,10 @@ serie.capitulo({
       falas: [
         "Olá! Eu sou o Bit. Que bom ter você de volta à série Informática para Concursos!",
         "Neste capítulo seis, o tema é o Armazenamento em Nuvem.",
-        "Você vai entender o que é a computação em nuvem, suas características, vantagens e desvantagens.",
-        "Vai conhecer a virtualização, que é a base da nuvem, e os modelos de serviço e de implantação.",
-        { texto: "Depois, vamos falar de custos, de acordos de serviço, de sincronização e de backup.", falar: "Depois, vamos falar de custos, de acordos de serviço, de sincronização e de bécâp." },
-        "E, para fechar, compartilhamento, colaboração e os cuidados de segurança na nuvem.",
+        "Você vai entender o que é a nuvem e quais são as suas características.",
+        "Vai conhecer a virtualização e os modelos da nuvem.",
+        { texto: "Depois, custos e acordos de serviço, sincronização e backup.", falar: "Depois, custos e acordos de serviço, sincronização e bécâp." },
+        "E, para fechar, compartilhamento e segurança.",
         "Vamos lá?",
       ],
       montar(c) {
@@ -77,7 +77,7 @@ serie.capitulo({
           "<b>Custos</b> e <b>acordos de serviço</b>",
           "<b>Sincronização</b> e <b>backup</b>",
           "<b>Compartilhamento</b> e <b>segurança</b>",
-        ], { left: 900, top: 520, width: 900 }, [c.t(2), c.t(3), c.t(4), c.t(4, 3.2), c.t(5)]);
+        ], { left: 900, top: 520, width: 900 }, [c.t(2), c.t(3), c.t(4), c.t(4, 2.5), c.t(5)]);
         c.bit.pular(c.t(6));
       },
     },
@@ -96,7 +96,7 @@ serie.capitulo({
       ],
       montar(c) {
         c.titulo("Conceito", "Computação em nuvem", { left: 140, top: 150 }, c.t(0), { medio: true });
-        const pil = c.entra(c.novo(`<div class="abs pilula" style="left:800px;top:214px">cloud computing</div>`), c.t(0, 3), "pop");
+        const pil = c.entra(c.novo(`<div class="abs pilula" style="left:900px;top:214px">cloud computing</div>`), c.t(0, 3), "pop");
         const def = c.texto("Fornecimento de <b>recursos computacionais</b> pela <b>internet</b>, <b>sob demanda</b>.", { left: 140, top: 330, width: 1400 }, c.t(0, 4.6));
         const recursos = [["pasta", "Armazenamento"], ["cpu", "Processamento"], ["dados", "Bancos de dados"], ["janela", "Aplicativos"]];
         const nos = recursos.map((r, i) => {
@@ -149,12 +149,12 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Segundo o NIST, o instituto de padrões dos Estados Unidos, a nuvem tem cinco características essenciais.",
-        "Autoatendimento sob demanda: o cliente contrata e ajusta os recursos sozinho, sem falar com atendentes.",
-        "Amplo acesso pela rede: tudo é acessado pela internet, a partir de computadores, celulares e tablets.",
+        "Autoatendimento sob demanda: o cliente contrata e ajusta recursos sozinho, sem atendentes.",
+        "Amplo acesso pela rede: acesso pela internet, de computadores, celulares e tablets.",
         "Agrupamento de recursos: o provedor compartilha a mesma infraestrutura entre vários clientes.",
         "Elasticidade rápida: os recursos aumentam ou diminuem rapidamente, conforme a necessidade.",
-        "E serviço medido: o uso é monitorado e cobrado conforme o consumo. Você paga pelo que usar.",
-        "A palavra-chave mais cobrada é escalabilidade, ou elasticidade: a nuvem cresce e diminui conforme a demanda, e você paga só pelo que consome.",
+        "E serviço medido: o uso é monitorado e cobrado conforme o consumo.",
+        "A palavra-chave mais cobrada é escalabilidade, ou elasticidade: a nuvem cresce e diminui com a demanda, e você paga só pelo que consome.",
       ],
       montar(c) {
         c.titulo("Características essenciais", "As cinco características", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -197,10 +197,10 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Vantagens da nuvem: você acessa de qualquer lugar e dispositivo, e não precisa comprar nem manter servidores.",
-        "Ela cresce conforme a demanda, permite colaboração em tempo real, e as atualizações e a manutenção ficam com o provedor.",
+        "Ela cresce conforme a demanda, permite colaboração em tempo real, e a manutenção e as atualizações ficam com o provedor.",
         "Já as desvantagens: ela depende de conexão com a internet, e tem custos recorrentes de assinatura.",
-        "Os dados ficam sob a guarda de terceiros, o que pesa na privacidade. É difícil migrar de um provedor para outro. E, se o provedor falhar, o serviço fica indisponível.",
-        "Memorize: nuvem é acesso de qualquer lugar, escalabilidade e pagamento conforme o uso. O principal ponto fraco é a dependência da internet.",
+        "Os dados ficam com terceiros, o que afeta a privacidade; é difícil migrar de provedor; e, se o provedor falhar, o serviço fica indisponível.",
+        "Memorize: nuvem é acesso de qualquer lugar, escalabilidade e pagamento pelo uso. O principal ponto fraco é a dependência da internet.",
       ],
       montar(c) {
         c.titulo("Prós e contras", "Vantagens e desvantagens", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -225,7 +225,7 @@ serie.capitulo({
           "Dados com terceiros (privacidade)",
           "Difícil migrar de provedor (dependência)",
           "Indisponível se o provedor falhar",
-        ], [c.t(2, 1.4), c.t(2, 4.4), c.t(3), c.t(3, 5), c.t(3, 7.6)]);
+        ], [c.t(2, 1.4), c.t(2, 4.4), c.t(3), c.t(3, 4), c.t(3, 6.2)]);
         const q = c.quadro("dica", "Nuvem = <b>qualquer lugar</b> + <b>escalabilidade</b> + <b>pague pelo uso</b>. Ponto fraco: <b>dependência da internet</b>.", { left: 140, top: 740, width: 1400 }, c.t(4));
         q.querySelector("p").style.fontSize = "36px";
       },
@@ -275,7 +275,7 @@ serie.capitulo({
         c.titulo("Comparação", "Máquina virtual × contêiner", { left: 140, top: 150 }, c.t(0), { medio: true });
         const rotulos = ["Contém", "Tamanho e início", "Isolamento", "Exemplos"];
         const cartao = (x, ic, titulo, valores, tCartao, tempos) => {
-          const e = c.novo(`<div class="cartao" style="left:${x}px;top:300px;width:690px;height:610px;padding:30px 36px">
+          const e = c.novo(`<div class="cartao" style="left:${x}px;top:300px;width:690px;height:615px;padding:30px 36px">
             <div style="display:flex;align-items:center;gap:20px">${icone(ic)}<h3 style="margin:0">${titulo}</h3></div>
             ${valores.map((v, i) => `<div class="prop" style="margin-top:16px;padding-top:14px;border-top:2px solid var(--borda)"><div class="rotulo" style="font-size:20px">${rotulos[i]}</div><p style="font-size:29px;color:var(--texto);margin-top:4px">${v}</p></div>`).join("")}</div>`);
           e.querySelector(".icone").style.cssText = "margin:0;width:72px;height:72px";
@@ -305,19 +305,19 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Agora, um dos assuntos mais cobrados: os modelos de serviço. Eles formam uma pilha de três camadas.",
-        { texto: "Na base, a IaaS, Infraestrutura como Serviço: o provedor oferece servidores virtuais, armazenamento e rede, e o cliente instala e gerencia o sistema operacional e os aplicativos.", falar: "Na base, a aiás, Infraestrutura como Serviço: o provedor oferece servidores virtuais, armazenamento e rede, e o cliente instala e gerencia o sistema operacional e os aplicativos." },
+        { texto: "Na base, a IaaS, Infraestrutura como Serviço: o provedor oferece servidores virtuais, armazenamento e rede; o cliente gerencia o sistema operacional e os aplicativos.", falar: "Na base, a aiás, Infraestrutura como Serviço: o provedor oferece servidores virtuais, armazenamento e rede; o cliente gerencia o sistema operacional e os aplicativos." },
         { texto: "Exemplos: Amazon EC2, as máquinas virtuais do Azure e o Google Compute Engine.", falar: "Exemplos: Amazon i cê dois, as máquinas virtuais do ájur e o gúgol compiút ênjin." },
         { texto: "No meio, a PaaS, Plataforma como Serviço: uma plataforma pronta para desenvolver e hospedar aplicações.", falar: "No meio, a pás, Plataforma como Serviço: uma plataforma pronta para desenvolver e hospedar aplicações." },
-        { texto: "Ela já inclui sistema operacional, ambiente de execução e banco de dados: o cliente cuida só do código e dos dados. É o caso do Google App Engine e do Heroku.", falar: "Ela já inclui sistema operacional, ambiente de execução e banco de dados: o cliente cuida só do código e dos dados. É o caso do gúgol ép ênjin e do erôku." },
-        { texto: "No topo, o SaaS, Software como Serviço: um aplicativo pronto, usado pela internet, normalmente no navegador, sem instalar nem manter nada. Como o Gmail e o Google Docs.", falar: "No topo, o sás, Software como Serviço: um aplicativo pronto, usado pela internet, normalmente no navegador, sem instalar nem manter nada. Como o gí mêiu e o Google Docs." },
-        "Memorize, de baixo para cima: Infraestrutura, Plataforma e Software. Quanto mais alto na pilha, menos o cliente precisa gerenciar.",
+        { texto: "Ela já inclui sistema operacional, ambiente de execução e banco de dados; o cliente cuida só do código e dos dados. Como o Google App Engine e o Heroku.", falar: "Ela já inclui sistema operacional, ambiente de execução e banco de dados; o cliente cuida só do código e dos dados. Como o gúgol ép ênjin e o erôku." },
+        { texto: "No topo, o SaaS, Software como Serviço: um aplicativo pronto, usado normalmente pelo navegador, sem instalar nem manter nada. Como o Gmail e o Google Docs.", falar: "No topo, o sás, Software como Serviço: um aplicativo pronto, usado normalmente pelo navegador, sem instalar nem manter nada. Como o gí mêiu e o Google Docs." },
+        "Memorize, de baixo para cima: Infraestrutura, Plataforma e Software. Quanto mais alto, menos o cliente precisa gerenciar.",
       ],
       montar(c) {
         c.titulo("Modelos de serviço", "IaaS, PaaS e SaaS", { left: 140, top: 150 }, c.t(0), { medio: true });
         const camadas = [
           { sigla: "IaaS", nome: "Infraestrutura como Serviço", desc: "servidores virtuais, armazenamento e rede", ex: "Amazon EC2 · VMs do Azure · Google Compute Engine", top: 620, fundo: "var(--cor)", texto: "#fff", sig: "#fff", t: c.t(1, 0.2), tEx: c.t(2) },
-          { sigla: "PaaS", nome: "Plataforma como Serviço", desc: "plataforma pronta para desenvolver e hospedar", ex: "Google App Engine · Azure App Service · Heroku", top: 475, fundo: "var(--cor-media)", texto: "var(--texto)", sig: "var(--serie)", t: c.t(3, 0.2), tEx: c.t(4, 7.4) },
-          { sigla: "SaaS", nome: "Software como Serviço", desc: "aplicativo pronto, sem instalar nada", ex: "Gmail · Google Docs · Microsoft 365 na web · Dropbox", top: 330, fundo: "#fff", texto: "var(--texto)", sig: "var(--cor)", t: c.t(5, 0.2), tEx: c.t(5, 8.4) },
+          { sigla: "PaaS", nome: "Plataforma como Serviço", desc: "plataforma pronta para desenvolver e hospedar", ex: "Google App Engine · Azure App Service · Heroku", top: 475, fundo: "var(--cor-media)", texto: "var(--texto)", sig: "var(--serie)", t: c.t(3, 0.2), tEx: c.t(4, 7.2) },
+          { sigla: "SaaS", nome: "Software como Serviço", desc: "aplicativo pronto, sem instalar nada", ex: "Gmail · Google Docs · Microsoft 365 na web · Dropbox", top: 330, fundo: "#fff", texto: "var(--texto)", sig: "var(--cor)", t: c.t(5, 0.2), tEx: c.t(5, 7.6) },
         ];
         camadas.forEach((k) => {
           const e = c.novo(`<div class="abs" style="left:140px;top:${k.top}px;width:1200px;height:130px;border-radius:24px;background:${k.fundo};color:${k.texto};box-shadow:var(--sombra);display:flex;align-items:center;gap:28px;padding:0 34px">
@@ -340,7 +340,7 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "A diferença entre os três está em quem gerencia cada parte.",
-        { texto: "Na IaaS, o provedor cuida dos servidores, do armazenamento e da rede; o resto fica com o cliente. É o modelo das equipes de infraestrutura.", falar: "Na aiás, o provedor cuida dos servidores, do armazenamento e da rede; o resto fica com o cliente. É o modelo das equipes de infraestrutura." },
+        { texto: "Na IaaS, o provedor cuida de servidores, armazenamento e rede; o resto é com o cliente. É o modelo das equipes de infraestrutura.", falar: "Na aiás, o provedor cuida de servidores, armazenamento e rede; o resto é com o cliente. É o modelo das equipes de infraestrutura." },
         { texto: "Na PaaS, o provedor assume também o sistema operacional e o ambiente de execução. É o modelo dos desenvolvedores.", falar: "Na pás, o provedor assume também o sistema operacional e o ambiente de execução. É o modelo dos desenvolvedores." },
         { texto: "No SaaS, o provedor gerencia tudo, e o cliente só usa. É o modelo do usuário final.", falar: "No sás, o provedor gerencia tudo, e o cliente só usa. É o modelo do usuário final." },
         { texto: "Na prova, procure as pistas: aplicativo pronto, sem instalar, é SaaS. Máquinas virtuais, é IaaS. E ambiente para desenvolver aplicações, é PaaS.", falar: "Na prova, procure as pistas: aplicativo pronto, sem instalar, é sás. Máquinas virtuais, é aiás. E ambiente para desenvolver aplicações, é pás." },
@@ -359,7 +359,7 @@ serie.capitulo({
         c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:735px">Público típico</div>`), c.t(0, 1.7), "esquerda");
         const xs = [600, 920, 1240];
         const modelos = [
-          ["IaaS", ["cliente", "cliente", "provedor"], "equipes de infraestrutura", 6.6],
+          ["IaaS", ["cliente", "cliente", "provedor"], "equipes de infraestrutura", 5.8],
           ["PaaS", ["cliente", "provedor", "provedor"], "desenvolvedores", 5.6],
           ["SaaS", ["provedor<br><small>(cliente só usa)</small>", "provedor", "provedor"], "usuário final", 3.6],
         ];
@@ -426,16 +426,16 @@ serie.capitulo({
       secao: "Modelos de implantação",
       bit: BIT_CANTO,
       falas: [
-        { texto: "Quanto à implantação, existem quatro modelos. Na nuvem pública, a infraestrutura de um provedor é compartilhada por vários clientes pela internet, como na AWS, no Azure e no Google Cloud.", falar: "Quanto à implantação, existem quatro modelos. Na nuvem pública, a infraestrutura de um provedor é compartilhada por vários clientes pela internet, como na a dáblio ésse, no ájur e no gúgol cláud." },
+        { texto: "São quatro modelos de implantação. Na nuvem pública, a infraestrutura de um provedor é compartilhada por vários clientes pela internet, como na AWS, no Azure e no Google Cloud.", falar: "São quatro modelos de implantação. Na nuvem pública, a infraestrutura de um provedor é compartilhada por vários clientes pela internet, como na a dáblio ésse, no ájur e no gúgol cláud." },
         "A nuvem privada é de uso exclusivo de uma organização, no próprio local ou em um provedor.",
         "A nuvem híbrida combina a pública e a privada, com dados e aplicações transitando entre elas.",
         "E a nuvem comunitária é compartilhada por organizações com interesses em comum, como órgãos de um mesmo governo.",
-        "Cuidado para não confundir: uma nuvem de uso exclusivo de um único órgão é privada. A comunitária reúne várias organizações.",
+        "Não confunda: nuvem de uso exclusivo de um único órgão é privada; a comunitária reúne várias organizações.",
       ],
       montar(c) {
         c.titulo("Modelos de implantação", "Pública, privada, híbrida, comunitária", { left: 140, top: 150 }, c.t(0), { medio: true });
         const tipos = [
-          ["nuvemPublica", "Pública", "Infraestrutura de um provedor <b>compartilhada</b> por vários clientes.<br><b>AWS · Azure · Google Cloud</b>", c.t(0, 3.4)],
+          ["nuvemPublica", "Pública", "Provedor <b>compartilhado</b> por vários clientes.<br><b>AWS · Azure · Google Cloud</b>", c.t(0, 2.4)],
           ["nuvemPrivada", "Privada", "Uso <b>exclusivo</b> de uma organização, no próprio local ou em um provedor.", c.t(1)],
           ["nuvemHibrida", "Híbrida", "<b>Combina</b> pública e privada; dados e aplicações transitam entre elas.", c.t(2)],
           ["nuvemComunitaria", "Comunitária", "Organizações com <b>interesses comuns</b>, como órgãos de um governo.", c.t(3)],
@@ -446,9 +446,9 @@ serie.capitulo({
           e.querySelector("p").style.fontSize = "28px";
           return e;
         });
-        c.destaque(cartoes[1], c.t(4, 4.6));
-        c.destaque(cartoes[3], c.t(4, 6.4));
-        c.chave("Uso exclusivo de 1 órgão → <em>privada</em> · vários órgãos → <em>comunitária</em>", c.t(4, 4));
+        c.destaque(cartoes[1], c.t(4, 3.8));
+        c.destaque(cartoes[3], c.t(4, 5.2));
+        c.chave("Uso exclusivo de 1 órgão → <em>privada</em> · vários órgãos → <em>comunitária</em>", c.t(4, 2.8));
       },
     },
 
@@ -459,9 +459,9 @@ serie.capitulo({
       secao: "Custos e acordos",
       bit: BIT_CANTO,
       falas: [
-        "Na nuvem, também muda a forma de pagar. Manter servidores próprios exige um investimento inicial em equipamentos: é o CAPEX, a despesa de capital.",
-        "Na nuvem, você paga conforme o uso, como despesa operacional: é o OPEX. Por isso, migrar para a nuvem troca CAPEX por OPEX.",
-        { texto: "Já o SLA, o acordo de nível de serviço, define a disponibilidade garantida pelo provedor e as compensações se ela não for cumprida.", falar: "Já o ésse éle á, o acordo de nível de serviço, define a disponibilidade garantida pelo provedor e as compensações se ela não for cumprida." },
+        "Manter servidores próprios exige um investimento inicial em equipamentos: é o CAPEX, a despesa de capital.",
+        "Na nuvem, você paga conforme o uso, como despesa operacional: é o OPEX. Migrar para a nuvem troca CAPEX por OPEX.",
+        { texto: "Já o SLA, acordo de nível de serviço, define a disponibilidade garantida pelo provedor e as compensações em caso de descumprimento.", falar: "Já o ésse éle á, acordo de nível de serviço, define a disponibilidade garantida pelo provedor e as compensações em caso de descumprimento." },
         { texto: "Com 99% de disponibilidade, o serviço pode ficar fora do ar cerca de 3,65 dias por ano.", falar: "Com noventa e nove por cento de disponibilidade, o serviço pode ficar fora do ar cerca de três vírgula sessenta e cinco dias por ano." },
         { texto: "Com 99,9%, cerca de 8,76 horas. E com 99,99%, cerca de 52,6 minutos.", falar: "Com noventa e nove vírgula nove por cento, cerca de oito vírgula setenta e seis horas. E com noventa e nove vírgula noventa e nove, cerca de cinquenta e dois vírgula seis minutos." },
       ],
@@ -477,12 +477,12 @@ serie.capitulo({
           <div style="display:flex;align-items:center;gap:20px">${icone("medidor")}<h3 style="margin:0">OPEX</h3></div>
           <p style="margin-top:12px">Despesa <b>operacional</b>: paga conforme o uso, mês a mês.</p>${barras([40, 55, 48, 70, 62, 90, 75, 58, 66, 80, 72, 60])}</div>`);
         [capex, opex].forEach((e) => { e.querySelector(".icone").style.cssText = "margin:0;width:72px;height:72px"; });
-        c.entra(capex, c.t(0, 4.4), "esquerda");
+        c.entra(capex, c.t(0, 0.3), "esquerda");
         c.entra(opex, c.t(1), "direita");
-        c.chave("Migrar para a nuvem: <em>CAPEX → OPEX</em>", c.t(1, 4.8), c.t(2) - 0.4);
+        c.chave("Migrar para a nuvem: <em>CAPEX → OPEX</em>", c.t(1, 4.4), c.t(2) - 0.4);
         [capex, opex].forEach((e) => c.sai(e, c.t(2) - 0.4));
 
-        c.cartao({ icone: "documento", titulo: "SLA", texto: "<i>Service Level Agreement</i>: acordo de nível de serviço.<br><br>Define a <b>disponibilidade garantida</b> e as <b>compensações</b> se ela não for cumprida." }, { left: 140, top: 300, width: 560, height: 470 }, c.t(2));
+        c.cartao({ icone: "documento", titulo: "SLA", texto: "<i>Service Level Agreement</i>: acordo de nível de serviço.<br>Define a <b>disponibilidade garantida</b> e as <b>compensações</b> se ela não for cumprida." }, { left: 140, top: 300, width: 560, height: 470 }, c.t(2));
         const linhas = [
           ["99%", 3.65, "dias", c.t(3, 0.2), c.t(3, 5.4), 2],
           ["99,9%", 8.76, "horas", c.t(4, 0.1), c.t(4, 2.8), 2],
@@ -490,8 +490,8 @@ serie.capitulo({
         ];
         linhas.forEach((l, i) => {
           const e = c.novo(`<div class="cartao" style="left:760px;top:${300 + i * 165}px;width:800px;height:140px;display:flex;align-items:center;gap:30px;padding:0 40px">
-            <span style="font:800 58px var(--mono);color:var(--cor);width:260px;flex-shrink:0">${l[0]}</span>
-            <div><div class="rotulo" style="font-size:20px;color:var(--texto-fraco)">fora do ar por ano, no máximo</div>
+            <span style="font:800 60px var(--sans);color:var(--cor);width:250px;flex-shrink:0">${l[0]}</span>
+            <div><div class="rotulo" style="font-size:20px;color:var(--texto-fraco)">máximo fora do ar por ano</div>
             <div style="font:800 48px var(--sans);margin-top:4px">≈ <span class="v">0</span> ${l[2]}</div></div></div>`);
           c.entra(e, l[3], "esquerda");
           c.contar(e.querySelector(".v"), 0, l[1], l[4], 1.2, (v) => v.toLocaleString("pt-BR", { minimumFractionDigits: l[5], maximumFractionDigits: l[5] }));
@@ -539,7 +539,7 @@ serie.capitulo({
         { texto: "Já o backup é uma cópia de segurança, guardada separadamente, para recuperar os dados em caso de perda.", falar: "Já o bécâp é uma cópia de segurança, guardada separadamente, para recuperar os dados em caso de perda." },
         { texto: "E aqui está a pegadinha: sincronização não é backup.", falar: "E aqui está a pegadinha: sincronização não é bécâp." },
         { texto: "Se um arquivo for apagado ou corrompido em um dispositivo, por exemplo por um ransomware, a sincronização replica o problema para os outros.", falar: "Se um arquivo for apagado ou corrompido em um dispositivo, por exemplo por um rânsomuér, a sincronização replica o problema para os outros." },
-        { texto: "Muitos serviços têm lixeira e histórico de versões por um tempo limitado. Mas isso não substitui um backup.", falar: "Muitos serviços têm lixeira e histórico de versões por um tempo limitado. Mas isso não substitui um bécâp." },
+        { texto: "Lixeira e histórico de versões, que muitos serviços oferecem por tempo limitado, não substituem um backup.", falar: "Lixeira e histórico de versões, que muitos serviços oferecem por tempo limitado, não substituem um bécâp." },
       ],
       montar(c) {
         c.titulo("Pegadinha clássica", "Sincronização × backup", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -602,10 +602,10 @@ serie.capitulo({
         const disco = c.novo(`<div class="cartao" style="left:1100px;top:300px;width:440px;height:220px">
           <h3 style="font-size:34px">Espaço em disco</h3>
           <div style="margin-top:24px;height:34px;border-radius:17px;background:var(--borda);overflow:hidden"><div class="uso" style="width:22%;height:100%;background:var(--cor)"></div></div>
-          <p style="margin-top:14px;font-size:26px"><b>economizado</b>: baixa só o que abre</p></div>`);
+          <p style="margin-top:14px;font-size:26px">baixa só o que você abre</p></div>`);
         c.entra(disco, c.t(0, 9), "direita");
         linhaIcone(c, "pasta", "OneDrive", "Arquivos Sob Demanda", { left: 1100, top: 550, width: 440, height: 110 }, c.t(1), "direita", { iw: 56, fs: 30, fp: 25, pad: "0 26px" });
-        linhaIcone(c, "pasta", "Google Drive", "streaming (app para computador)", { left: 1100, top: 680, width: 440, height: 110 }, c.t(1, 3.2), "direita", { iw: 56, fs: 30, fp: 25, pad: "0 26px" });
+        linhaIcone(c, "pasta", "Google Drive", "streaming", { left: 1100, top: 680, width: 440, height: 110 }, c.t(1, 3.2), "direita", { iw: 56, fs: 30, fp: 25, pad: "0 26px" });
       },
     },
 
@@ -650,7 +650,7 @@ serie.capitulo({
       secao: "Compartilhamento",
       bit: BIT_CANTO,
       falas: [
-        "A nuvem também facilita o trabalho em equipe: várias pessoas podem editar o mesmo documento ao mesmo tempo. É a edição simultânea, ou coautoria.",
+        "Na nuvem, várias pessoas podem editar o mesmo documento ao mesmo tempo: é a edição simultânea, ou coautoria.",
         { texto: "Isso vale para o Google Docs, as Planilhas e as Apresentações, e para as versões web do Word, do Excel e do PowerPoint.", falar: "Isso vale para o Google Docs, as Planilhas e as Apresentações, e para as versões uéb do uórd, do Excel e do PowerPoint." },
         "Essas ferramentas guardam o histórico de versões, que permite ver e restaurar estados anteriores do documento.",
         { texto: "E dá para comentar, sugerir alterações e trabalhar offline: quando a conexão volta, tudo é sincronizado.", falar: "E dá para comentar, sugerir alterações e trabalhar óflaine: quando a conexão volta, tudo é sincronizado." },
@@ -664,16 +664,16 @@ serie.capitulo({
             <span style="width:44px;height:44px;border-radius:50%;background:var(--certo);color:#fff;display:grid;place-items:center;font:800 24px var(--sans)">B</span></div>
           <div style="padding:26px 40px">${larg.map((w, i) => `<div class="ln l${i}" style="position:relative;width:${w}px;height:16px;border-radius:8px;background:var(--borda);margin:20px 0"></div>`).join("")}</div></div>`);
         doc.querySelector(".icone").style.cssText = "margin:0;width:44px;height:44px";
-        c.entra(doc, c.t(0, 2.4), "baixo");
+        c.entra(doc, c.t(0, 0.8), "baixo");
         const escrever = (linha, cor, rotulo, t) => {
           const l = doc.querySelector(`.l${linha}`);
           l.style.background = cor;
           l.insertAdjacentHTML("beforeend", `<span class="cur" style="position:absolute;right:-8px;top:-14px;width:5px;height:44px;background:${cor}"><b style="position:absolute;left:-2px;top:-30px;padding:2px 10px;border-radius:8px;background:${cor};color:#fff;font:800 18px var(--sans)">${rotulo}</b></span>`);
           c.tl.fromTo(l, { width: 0 }, { width: larg[linha], duration: 1.8, ease: "none", immediateRender: true }, t);
         };
-        escrever(1, "var(--cor)", "A", c.t(0, 3.4));
-        escrever(4, "var(--certo)", "B", c.t(0, 3.8));
-        c.entra(c.novo(`<div class="abs pilula" style="left:140px;top:790px">edição simultânea = coautoria</div>`), c.t(0, 7.2), "pop");
+        escrever(1, "var(--cor)", "A", c.t(0, 1.8));
+        escrever(4, "var(--certo)", "B", c.t(0, 2.2));
+        c.entra(c.novo(`<div class="abs pilula" style="left:140px;top:790px">edição simultânea = coautoria</div>`), c.t(0, 4.8), "pop");
         const apps = ["Google Docs", "Word na web", "Planilhas Google", "Excel na web", "Apresentações Google", "PowerPoint na web"];
         const tApps = [1.6, 5.4, 2.6, 6.4, 3.6, 7.2];
         apps.forEach((a, i) => {
@@ -731,11 +731,11 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Agora, os principais serviços de armazenamento e o espaço gratuito de cada um.",
-        { texto: "O Google Drive oferece 15 gigabytes, divididos com o Gmail e o Google Fotos. E é integrado ao Docs, às Planilhas e às Apresentações.", falar: "O Google Drive oferece quinze gigabytes, divididos com o gí mêiu e o Google Fotos. E é integrado ao Docs, às Planilhas e às Apresentações." },
+        { texto: "O Google Drive oferece 15 gigabytes, divididos com o Gmail e o Google Fotos, e é integrado ao Docs, às Planilhas e às Apresentações.", falar: "O Google Drive oferece quinze gigabytes, divididos com o gí mêiu e o Google Fotos, e é integrado ao Docs, às Planilhas e às Apresentações." },
         { texto: "O OneDrive, da Microsoft, oferece 5 gigabytes e é integrado ao Windows e ao Microsoft 365.", falar: "O uândráiv, da Microsoft, oferece cinco gigabytes e é integrado ao Windows e ao Microsoft 365." },
         { texto: "O iCloud, da Apple, também tem 5 gigabytes, e faz o backup e a sincronização do iPhone, do iPad e do Mac.", falar: "O ái cláud, da Apple, também tem cinco gigabytes, e faz o bécâp e a sincronização do ái fôun, do ái péd e do méc." },
         "E o Dropbox oferece dois gigabytes, com sincronização multiplataforma.",
-        "Esses valores podem mudar. E atenção: dizer que o Google Drive funciona apenas no navegador está errado. Todos têm aplicativos para computador e celular, que sincronizam os arquivos.",
+        "Esses valores podem mudar. E atenção: o Google Drive não funciona apenas no navegador. Todos têm aplicativos para computador e celular, que sincronizam os arquivos.",
       ],
       montar(c) {
         c.titulo("Principais serviços", "Espaço gratuito", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -767,17 +767,17 @@ serie.capitulo({
       secao: "Segurança na nuvem",
       bit: BIT_CANTO,
       falas: [
-        "Por fim, a segurança. Na nuvem, ela é compartilhada: o provedor protege a infraestrutura, e você cuida das suas contas, senhas e das permissões que concede.",
+        "Por fim, a segurança, que na nuvem é compartilhada: o provedor protege a infraestrutura, e você cuida das contas, senhas e permissões que concede.",
         "Então, ative a autenticação em dois fatores, e use senhas fortes e diferentes para cada serviço.",
         "Revise com quem os arquivos estão compartilhados, e evite links públicos para documentos sensíveis.",
         { texto: "Prefira serviços com criptografia dos dados em trânsito e armazenados, e mantenha um backup independente dos dados importantes.", falar: "Prefira serviços com criptografia dos dados em trânsito e armazenados, e mantenha um bécâp independente dos dados importantes." },
         { texto: "No Brasil, o tratamento de dados pessoais, inclusive na nuvem, deve respeitar a LGPD, a Lei Geral de Proteção de Dados: Lei nº 13.709, de 2018.", falar: "No Brasil, o tratamento de dados pessoais, inclusive na nuvem, deve respeitar a LGPD, a Lei Geral de Proteção de Dados: Lei número treze mil, setecentos e nove, de dois mil e dezoito." },
-        { texto: "Resumindo as principais medidas: autenticação em dois fatores, criptografia, controle de acesso e backup independente.", falar: "Resumindo as principais medidas: autenticação em dois fatores, criptografia, controle de acesso e bécâp independente." },
+        { texto: "Resumindo: autenticação em dois fatores, criptografia, controle de acesso e backup independente.", falar: "Resumindo: autenticação em dois fatores, criptografia, controle de acesso e bécâp independente." },
       ],
       montar(c) {
         c.titulo("Segurança na nuvem", "Responsabilidade compartilhada", { left: 140, top: 150 }, c.t(0), { medio: true });
-        const prov = linhaIcone(c, "servidor", "Provedor", "protege a infraestrutura", { left: 140, top: 300, width: 690, height: 150 }, c.t(0, 4.2), "esquerda", { iw: 80 });
-        const voce = linhaIcone(c, "pessoa", "Você", "contas, senhas e permissões que concede", { left: 870, top: 300, width: 690, height: 150 }, c.t(0, 6.6), "direita", { iw: 80 });
+        const prov = linhaIcone(c, "servidor", "Provedor", "protege a infraestrutura", { left: 140, top: 300, width: 690, height: 150 }, c.t(0, 3.9), "esquerda", { iw: 80 });
+        const voce = linhaIcone(c, "pessoa", "Você", "contas, senhas e permissões que concede", { left: 870, top: 300, width: 690, height: 150 }, c.t(0, 6.2), "direita", { iw: 80 });
         const praticas = [
           ["senha", "Autenticação em dois fatores", c.t(1, 0.8)],
           ["chave", "Senhas fortes e diferentes", c.t(1, 3.6)],
@@ -802,13 +802,13 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Hora de revisar o que você aprendeu.",
-        "Nuvem é o fornecimento de recursos computacionais pela internet, sob demanda. E os arquivos ficam em servidores remotos, não no navegador.",
-        "A característica mais cobrada é a elasticidade: a nuvem cresce e diminui conforme a demanda, e você paga pelo que usa.",
-        { texto: "A virtualização é a base: o hypervisor cria as máquinas virtuais. E os contêineres são mais leves.", falar: "A virtualização é a base: o ráipervaizor cria as máquinas virtuais. E os contêineres são mais leves." },
+        "Nuvem é o fornecimento de recursos pela internet, sob demanda, com os arquivos em servidores remotos.",
+        "A característica mais cobrada é a elasticidade: cresce e diminui com a demanda, e você paga pelo uso.",
+        { texto: "A virtualização é a base: o hypervisor cria as máquinas virtuais, e o contêiner é mais leve.", falar: "A virtualização é a base: o ráipervaizor cria as máquinas virtuais, e o contêiner é mais leve." },
         { texto: "IaaS entrega infraestrutura; PaaS, a plataforma para desenvolver; e SaaS, o aplicativo pronto.", falar: "aiás entrega infraestrutura; pás, a plataforma para desenvolver; e sás, o aplicativo pronto." },
-        { texto: "A nuvem pode ser pública, privada, híbrida ou comunitária. Nos custos, CAPEX vira OPEX, e o SLA garante a disponibilidade.", falar: "A nuvem pode ser pública, privada, híbrida ou comunitária. Nos custos, CAPEX vira OPEX, e o ésse éle á garante a disponibilidade." },
-        { texto: "Sincronização não é backup. E, no compartilhamento, o leitor só vê, o comentarista comenta e o editor altera.", falar: "Sincronização não é bécâp. E, no compartilhamento, o leitor só vê, o comentarista comenta e o editor altera." },
-        { texto: "Para se proteger: autenticação em dois fatores, criptografia, controle de acesso e backup independente.", falar: "Para se proteger: autenticação em dois fatores, criptografia, controle de acesso e bécâp independente." },
+        { texto: "A nuvem pode ser pública, privada, híbrida ou comunitária. CAPEX vira OPEX, e o SLA garante a disponibilidade.", falar: "A nuvem pode ser pública, privada, híbrida ou comunitária. CAPEX vira OPEX, e o ésse éle á garante a disponibilidade." },
+        { texto: "Sincronização não é backup. E o leitor só vê, o comentarista comenta e o editor altera.", falar: "Sincronização não é bécâp. E o leitor só vê, o comentarista comenta e o editor altera." },
+        { texto: "Para se proteger: dois fatores, criptografia, controle de acesso e backup independente.", falar: "Para se proteger: dois fatores, criptografia, controle de acesso e bécâp independente." },
       ],
       montar(c) {
         c.titulo("Revisão", "O que você aprendeu", { left: 140, top: 150 }, c.t(0), { medio: true });

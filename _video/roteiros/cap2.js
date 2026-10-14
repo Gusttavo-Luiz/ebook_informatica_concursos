@@ -166,9 +166,9 @@ serie.capitulo({
       secao: "Abertura",
       bit: BIT_GRANDE,
       falas: [
-        "Olá! Eu sou o Bit, e que bom ter você de volta à nossa série de videoaulas.",
+        "Olá! Eu sou o Bit. Que bom ter você de volta!",
         "Neste segundo capítulo, o tema são os Sistemas Operacionais.",
-        "Você vai entender o que é um sistema operacional, o que ele faz e como gerencia os processos.",
+        "Você vai ver o que é um sistema operacional, o que ele faz e como gerencia os processos.",
         "Vai conhecer o kernel, a inicialização do computador e os sistemas de arquivos.",
         "E vamos explorar o Windows e o Linux: Lixeira, atalhos, comandos e permissões.",
         "Vamos lá?",
@@ -196,8 +196,8 @@ serie.capitulo({
       secao: "O sistema operacional",
       bit: BIT_CANTO,
       falas: [
-        "Imagine o computador em três camadas. Em cima, o usuário, que interage. Embaixo, o hardware, que executa tudo fisicamente.",
-        "E, no meio, o sistema operacional, ou SO: o software básico que gerencia os recursos e serve de intermediário entre o hardware, os aplicativos e o usuário.",
+        "Pense em três camadas. Em cima, o usuário, que interage. Embaixo, o hardware, que executa tudo fisicamente.",
+        "No meio, o sistema operacional, ou SO: o software básico que gerencia os recursos e faz a ponte entre hardware, aplicativos e usuário.",
         "Sem ele, cada programa teria que controlar sozinho o processador, a memória, o disco e cada periférico.",
         "O SO esconde essa complexidade e oferece uma base comum para todos os aplicativos.",
       ],
@@ -227,7 +227,7 @@ serie.capitulo({
         "Nos computadores, temos o Windows 10 e 11, o macOS e as distribuições Linux, como Ubuntu, Debian, Fedora e Linux Mint.",
         "Nos dispositivos móveis, o Android, baseado no kernel Linux, e o iOS.",
         "E, nos servidores, o Windows Server e distribuições Linux como Red Hat Enterprise Linux e Debian.",
-        "Pegadinha: o sistema operacional não é um hardware. Ele é um software básico, ou de sistema. E também é errado dizer que ele é um aplicativo.",
+        "Pegadinha: o SO não é hardware, nem aplicativo. Ele é software básico, ou de sistema.",
       ],
       montar(c) {
         c.titulo("Exemplos", "Sistemas operacionais do dia a dia", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -251,11 +251,11 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "E o que o SO faz? A gerência de processos decide qual programa usa o processador, e por quanto tempo.",
-        "A gerência de memória distribui a RAM entre os programas e impede que um invada a área do outro.",
-        "A gerência de arquivos organiza os dados em arquivos e pastas, os diretórios, no disco.",
-        "A gerência de dispositivos controla os periféricos de entrada e saída, por meio dos drivers.",
-        "O SO também cuida da segurança, com contas, senhas e permissões, e oferece a interface: gráfica, a GUI, ou de linha de comando, a CLI.",
-        "Resumindo: o SO gerencia quatro grandes recursos: o processador, a memória, os arquivos e os dispositivos de entrada e saída.",
+        "A de memória distribui a RAM entre os programas e impede que um invada a área do outro.",
+        "A de arquivos organiza os dados em arquivos e pastas, os diretórios.",
+        "A de dispositivos controla os periféricos, por meio dos drivers.",
+        "Ele também cuida da segurança, com contas, senhas e permissões, e oferece a interface: gráfica, a GUI, ou de linha de comando, a CLI.",
+        "Resumindo: o SO gerencia quatro grandes recursos: processador, memória, arquivos e dispositivos de entrada e saída.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -280,13 +280,13 @@ serie.capitulo({
       secao: "Processos",
       bit: BIT_CANTO,
       falas: [
-        "Agora, alguns conceitos ligados aos processos. Processo é um programa em execução.",
-        "Multitarefa é ter vários programas executando ao mesmo tempo. Na verdade, o SO alterna o processador entre eles tão rápido que parece simultâneo.",
-        "Na multitarefa preemptiva, o modelo dos sistemas atuais, o SO pode interromper um programa para dar a vez a outro.",
-        "Multiusuário significa várias contas de usuário, com arquivos e permissões separados.",
-        "E quando a RAM acaba? O SO usa parte do disco como extensão da memória: é a memória virtual.",
+        "Agora, os processos. Processo é um programa em execução.",
+        "Multitarefa é ter vários programas executando juntos. O SO alterna o processador entre eles tão rápido que parece simultâneo.",
+        "Na multitarefa preemptiva, a dos sistemas atuais, o SO pode interromper um programa para dar a vez a outro.",
+        "Multiusuário são várias contas, com arquivos e permissões separados.",
+        "Quando a RAM acaba, o SO usa parte do disco como extensão da memória: é a memória virtual.",
         "No Windows, ela fica no arquivo de paginação; no Linux, na área de swap. Funciona, mas é bem mais lento.",
-        "Por fim, o driver é o software que permite ao SO controlar um dispositivo específico, como uma impressora.",
+        "E o driver é o software que permite ao SO controlar um dispositivo específico, como uma impressora.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -339,12 +339,12 @@ serie.capitulo({
       secao: "Processos",
       bit: BIT_CANTO,
       falas: [
-        "Cada processo passa por estados controlados pelo SO. Primeiro, ele é novo: está sendo criado e carregado na memória.",
+        "Todo processo passa por estados. Primeiro, ele é novo: está sendo criado e carregado na memória.",
         "Depois, fica pronto: está na fila, esperando a vez de usar o processador.",
         "Quando ganha o processador, passa a executando.",
-        "Se precisar esperar um evento externo, como a leitura do disco ou a digitação do usuário, fica bloqueado. Quando o evento acontece, volta para pronto.",
+        "Se esperar um evento externo, como a leitura do disco ou a digitação do usuário, fica bloqueado. Quando o evento acontece, volta para pronto.",
         "E, ao encerrar, fica terminado, e seus recursos são liberados.",
-        "Pegadinha clássica: quem espera uma operação de entrada e saída está bloqueado, e não pronto. Pronto é quem só aguarda a vez de usar o processador.",
+        "Pegadinha: quem espera entrada e saída está bloqueado, e não pronto. Pronto é quem só aguarda a vez do processador.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -375,11 +375,11 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Quem decide qual processo pronto vai usar o processador é o escalonador, uma parte do SO.",
-        "No FIFO, ou FCFS, vale a ordem de chegada: o primeiro a chegar é o primeiro atendido. No SJF, o processo mais curto vai primeiro.",
-        "No Round Robin, ou circular, cada processo usa a CPU por uma fatia de tempo fixa, o quantum, e volta para o fim da fila.",
-        "E, no escalonamento por prioridade, o processo de maior prioridade é executado primeiro.",
+        "No FIFO, ou FCFS, vale a ordem de chegada. No SJF, o processo mais curto vai primeiro.",
+        "No Round Robin, ou circular, cada processo usa a CPU por uma fatia fixa de tempo, o quantum, e volta para o fim da fila.",
+        "E, por prioridade, o de maior prioridade é executado primeiro.",
         "Cuidado também com o deadlock, o impasse.",
-        "Dois ou mais processos ficam esperando indefinidamente, cada um por um recurso que está preso com o outro.",
+        "Dois ou mais processos esperam indefinidamente, cada um por um recurso preso com o outro.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -422,12 +422,12 @@ serie.capitulo({
       secao: "Kernel e boot",
       bit: BIT_CANTO,
       falas: [
-        "Agora, o coração do sistema: o kernel, ou núcleo. Ele roda com privilégio máximo e se comunica diretamente com o hardware.",
+        "O kernel, ou núcleo, é a parte central do SO. Roda com privilégio máximo e fala diretamente com o hardware.",
         "O kernel controla os processos, a memória, os dispositivos e as interrupções.",
-        "Existem três tipos. No monolítico, quase todos os serviços rodam dentro do núcleo: é rápido, mas uma falha pode derrubar o sistema. É o caso do Linux.",
-        "No microkernel, o núcleo tem só o essencial, e os outros serviços rodam separados. É mais modular e estável, como o Minix.",
-        "E o híbrido mistura as duas abordagens: é o caso do Windows, com o NT, e do macOS, com o XNU.",
-        "Pegadinha: o kernel não é responsável pela interface gráfica. Ela é um programa que roda sobre o kernel.",
+        "No kernel monolítico, quase tudo roda dentro do núcleo: é rápido, mas uma falha pode derrubar o sistema. É o caso do Linux.",
+        "No microkernel, o núcleo tem só o essencial, e o resto roda separado: é mais modular e estável, como o Minix.",
+        "O híbrido mistura os dois: é o Windows, com o NT, e o macOS, com o XNU.",
+        "Pegadinha: o kernel não cuida da interface gráfica. Ela é um programa que roda sobre ele.",
         "E, tecnicamente, Linux é só o kernel. O sistema completo é uma distribuição.",
       ],
       montar(c) {
@@ -475,11 +475,11 @@ serie.capitulo({
       secao: "Kernel e boot",
       bit: BIT_CANTO,
       falas: [
-        "E o que acontece quando você liga o computador? É a inicialização, o boot. Primeiro vem o POST: o firmware da placa-mãe testa o hardware.",
+        "Ao ligar o computador, começa o boot. Primeiro vem o POST: o firmware da placa-mãe testa o hardware.",
         "Depois, a BIOS ou a UEFI localiza o dispositivo de inicialização: o SSD, o HD ou o pen drive.",
-        "Em seguida, o gerenciador de boot carrega o sistema escolhido: o Gerenciador de Inicialização do Windows, ou o GRUB, no Linux.",
-        "Com dual boot, é ele que permite escolher entre dois sistemas instalados.",
-        "Então o kernel é carregado na memória e inicia os serviços do sistema. No Linux, normalmente pelo systemd.",
+        "Em seguida, o gerenciador de boot carrega o sistema: o Gerenciador de Inicialização do Windows, ou o GRUB, no Linux.",
+        "No dual boot, é ele que deixa escolher entre dois sistemas instalados.",
+        "Então o kernel vai para a memória e inicia os serviços, no Linux normalmente pelo systemd.",
         "Por fim, o login: o usuário se identifica, e a sessão é aberta.",
       ],
       montar(c) {
@@ -514,7 +514,7 @@ serie.capitulo({
         "A virtualização permite executar vários sistemas operacionais, as máquinas virtuais, em um mesmo computador físico.",
         "Quem cria e controla as máquinas virtuais é o hypervisor.",
         "O tipo 1, nativo ou bare metal, roda direto sobre o hardware. Exemplos: VMware ESXi, Microsoft Hyper-V e KVM.",
-        "O tipo 2, hospedado, roda como um programa sobre um sistema operacional, como o VirtualBox e o VMware Workstation.",
+        "O tipo 2, hospedado, roda como programa sobre um sistema operacional, como o VirtualBox e o VMware Workstation.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -545,8 +545,8 @@ serie.capitulo({
       secao: "Interfaces e arquivos",
       bit: BIT_CANTO,
       falas: [
-        "O SO conversa com você de duas formas. Na GUI, a interface gráfica, você usa janelas, ícones, menus e botões.",
-        "No Linux, exemplos de interface gráfica são o GNOME, o KDE Plasma, o XFCE e o Cinnamon.",
+        "Na GUI, a interface gráfica, você usa janelas, ícones, menus e botões.",
+        "No Linux, exemplos são o GNOME, o KDE Plasma, o XFCE e o Cinnamon.",
         "Na CLI, a linha de comando, você digita comandos em um interpretador: o shell.",
         "Exemplos de shell são o Bash, no Linux, e o Prompt de Comando e o PowerShell, no Windows.",
       ],
@@ -586,9 +586,9 @@ serie.capitulo({
       falas: [
         "O sistema de arquivos define como os dados são organizados, nomeados e protegidos no disco.",
         "O NTFS é o padrão do Windows, com permissões, criptografia, compressão, cotas e journaling.",
-        "O FAT32 aparece em pen drives e cartões antigos. É compatível com quase tudo, mas limita cada arquivo a 4 gigabytes.",
+        "O FAT32, de pen drives e cartões antigos, é compatível com quase tudo, mas limita cada arquivo a 4 gigabytes.",
         "O exFAT, dos pen drives e cartões atuais, é compatível com Windows e macOS, sem esse limite.",
-        "O ext4 é o padrão em muitas distribuições Linux, com journaling, bom desempenho e suporte a arquivos grandes.",
+        "O ext4 é o padrão em muitas distribuições Linux: journaling, bom desempenho e arquivos grandes.",
         "E o APFS é o do macOS e do iOS: otimizado para SSD, com criptografia nativa.",
       ],
       montar(c) {
@@ -614,7 +614,7 @@ serie.capitulo({
       falas: [
         "E o que é journaling? É um registro das alterações pendentes.",
         "Se o computador desligar no meio de uma gravação, o sistema consegue recuperar a consistência do disco.",
-        "Agora, a pegadinha: um vídeo de 5 gigabytes não pode ser copiado para um pen drive em FAT32, mesmo que haja espaço livre.",
+        "Pegadinha: um vídeo de 5 gigabytes não pode ser copiado para um pen drive em FAT32, mesmo que haja espaço livre.",
         "A solução é formatar o pen drive em exFAT ou NTFS.",
       ],
       montar(c) {
@@ -651,9 +651,9 @@ serie.capitulo({
       falas: [
         { texto: "Agora, o Windows. O Explorador de Arquivos gerencia pastas e arquivos, e abre com Windows + E.", falar: "Agora, o Windows. O Explorador de Arquivos gerencia pastas e arquivos, e abre com Windows mais é." },
         "Temos também a Área de Trabalho, a Barra de Tarefas e o Menu Iniciar.",
-        "Nas Configurações e no Painel de Controle, você ajusta o sistema, as contas, a rede e os aplicativos.",
+        "Nas Configurações e no Painel de Controle, você ajusta sistema, contas, rede e aplicativos.",
         { texto: "O Gerenciador de Tarefas mostra os processos, o desempenho e os programas que iniciam com o Windows. O atalho é Ctrl + Shift + Esc.", falar: "O Gerenciador de Tarefas mostra os processos, o desempenho e os programas que iniciam com o Windows. O atalho é Ctrl, Shift, Esc." },
-        "E a Lixeira guarda temporariamente os arquivos excluídos do disco local, permitindo restaurá-los.",
+        "E a Lixeira guarda os arquivos excluídos do disco local, para que possam ser restaurados.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -677,9 +677,9 @@ serie.capitulo({
       falas: [
         "Atenção à Lixeira. A tecla Delete envia o arquivo para ela.",
         "Já Shift + Delete exclui permanentemente, sem passar pela Lixeira.",
-        "Arquivos apagados de pen drives, cartões de memória e pastas de rede também não vão para a Lixeira: são excluídos direto.",
-        "E arquivos maiores que o espaço reservado para a Lixeira também são excluídos permanentemente. O Windows avisa antes.",
-        "Por isso, é errado dizer que todo arquivo excluído no Windows pode ser recuperado pela Lixeira.",
+        "Arquivos de pen drives, cartões de memória e pastas de rede também não vão para a Lixeira: são excluídos direto.",
+        "Nem os maiores que o espaço reservado para a Lixeira: o Windows avisa e exclui permanentemente.",
+        "Então, é errado dizer que todo arquivo excluído pode ser recuperado pela Lixeira.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -815,11 +815,11 @@ serie.capitulo({
       secao: "Windows: arquivos e segurança",
       bit: BIT_CANTO,
       falas: [
-        "Nas contas do Windows, o administrador instala programas e altera configurações. A conta padrão é para o dia a dia, com permissões limitadas.",
-        "O Controle de Conta de Usuário, o UAC, pede confirmação antes de uma ação que exige privilégios de administrador.",
+        "A conta de administrador instala programas e altera configurações. A conta padrão é para o dia a dia, com permissões limitadas.",
+        "O Controle de Conta de Usuário, o UAC, pede confirmação antes de ações que exigem privilégios de administrador.",
         "O Windows Update instala atualizações e correções de segurança.",
         "A Segurança do Windows, com o Microsoft Defender, traz antivírus e firewall integrados.",
-        "E o BitLocker criptografa unidades inteiras. Ele está disponível nas edições Pro e superiores.",
+        "E o BitLocker criptografa unidades inteiras, nas edições Pro e superiores.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -844,9 +844,9 @@ serie.capitulo({
       falas: [
         "A Restauração do Sistema volta as configurações a um ponto de restauração anterior, sem apagar documentos pessoais.",
         "Já o Histórico de Arquivos faz cópias de segurança periódicas das pastas do usuário.",
-        "Arquivos ocultos só aparecem no Explorador com a opção Itens ocultos marcada, na guia Exibir. E o Windows cria e abre arquivos zip sem programas adicionais.",
-        "Pegadinha: a Restauração do Sistema não é backup de documentos. Ela desfaz alterações em programas, drivers e configurações.",
-        "Para proteger os arquivos pessoais, use backup, como o Histórico de Arquivos ou a nuvem.",
+        "Arquivos ocultos só aparecem com a opção Itens ocultos marcada, na guia Exibir. E o Windows abre e cria arquivos zip sem programas extras.",
+        "Pegadinha: a Restauração do Sistema não é backup de documentos. Ela desfaz mudanças em programas, drivers e configurações.",
+        "Para os arquivos pessoais, use backup, como o Histórico de Arquivos ou a nuvem.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -873,11 +873,11 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Agora, o Linux. Ele é um kernel de código aberto, criado por Linus Torvalds em 1991, sob a licença GPL.",
-        "O kernel é combinado com ferramentas do projeto GNU e outros programas para formar as distribuições, como Ubuntu, Debian, Fedora, Mint e Red Hat.",
-        "O Linux é multiusuário e multitarefa, domina o mercado de servidores e é a base do Android.",
+        "Com ferramentas do projeto GNU e outros programas, ele forma as distribuições, como Ubuntu, Debian, Fedora, Mint e Red Hat.",
+        "É multiusuário e multitarefa, domina os servidores e é a base do Android.",
         { texto: "E ele diferencia maiúsculas de minúsculas: Relatorio.txt, com R maiúsculo, e relatorio.txt, com r minúsculo, são arquivos diferentes.", falar: "E ele diferencia maiúsculas de minúsculas: relatório ponto tê xis tê, com érre maiúsculo, e relatório ponto tê xis tê, com érre minúsculo, são arquivos diferentes." },
-        "O superusuário, o administrador, se chama root.",
-        "E o comando sudo executa um comando com privilégios de administrador.",
+        "O administrador, o superusuário, se chama root.",
+        "E o sudo executa um comando com privilégios de administrador.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -1202,11 +1202,11 @@ serie.capitulo({
       secao: "Windows × Linux",
       bit: BIT_CANTO,
       falas: [
-        "Para fechar, Windows contra Linux. O Windows é proprietário, da Microsoft, com código fechado. O Linux é software livre, com licença GPL, e código aberto.",
-        "O kernel do Windows é híbrido, o NT; o do Linux é monolítico. O sistema de arquivos padrão é o NTFS no Windows, e o ext4 na maioria das distribuições Linux.",
-        "O Windows usa letras para as unidades, como C e D; o Linux, uma árvore única a partir da barra. E só o Linux diferencia maiúsculas de minúsculas nos nomes de arquivos.",
-        "O administrador é a conta de Administrador no Windows, e o root no Linux. O Windows é mais comum em computadores pessoais e empresas; o Linux, em servidores, supercomputadores e no Android.",
-        "Última pegadinha: dizer que o Linux é gratuito porque não possui licença está errado. Ele possui licença, sim: a GPL, que garante as liberdades do software livre.",
+        "Para fechar, Windows contra Linux. O Windows é proprietário, da Microsoft, e fechado. O Linux é software livre, com licença GPL, e aberto.",
+        "O kernel do Windows é híbrido; o do Linux, monolítico. O sistema de arquivos padrão é o NTFS no Windows e o ext4 no Linux.",
+        "O Windows usa letras nas unidades; o Linux, uma árvore a partir da barra. E só o Linux diferencia maiúsculas de minúsculas.",
+        "O administrador do Linux é o root. E o Windows é mais comum em computadores pessoais e empresas; o Linux, em servidores, supercomputadores e no Android.",
+        "Última pegadinha: o Linux não é gratuito por falta de licença. Ele tem licença, sim: a GPL, que garante as liberdades do software livre.",
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -1238,11 +1238,11 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Hora de revisar o que você aprendeu.",
-        "O sistema operacional é software básico e gerencia o processador, a memória, os arquivos e os dispositivos de entrada e saída.",
-        "Quem espera entrada e saída está bloqueado, e não pronto. E o Round Robin usa fatias de tempo, o quantum.",
-        "O kernel do Linux é monolítico, e o do Windows é híbrido. E Linux, tecnicamente, é só o kernel.",
+        "O SO é software básico e gerencia processador, memória, arquivos e dispositivos.",
+        "Quem espera entrada e saída está bloqueado. E o Round Robin usa o quantum.",
+        "O kernel do Linux é monolítico; o do Windows, híbrido. E Linux é só o kernel.",
         "O FAT32 limita cada arquivo a 4 gigabytes; o exFAT e o NTFS resolvem.",
-        "Shift + Delete, pen drives e pastas de rede não passam pela Lixeira. E os atalhos com a tecla Windows usam iniciais em inglês.",
+        "Shift + Delete, pen drives e rede não passam pela Lixeira. E os atalhos da tecla Windows usam iniciais em inglês.",
         { texto: "No Linux, / é a raiz, e /root é a pasta do administrador. O sinal de maior substitui, e dois sinais de maior acrescentam.", falar: "No Linux, a barra é a raiz, e barra root é a pasta do administrador. O sinal de maior substitui, e dois sinais de maior acrescentam." },
         { texto: "E, nas permissões, r vale 4, w vale 2 e x vale 1, sempre na ordem dono, grupo e outros.", falar: "E, nas permissões, érre vale quatro, dáblio vale dois e xis vale um, sempre na ordem dono, grupo e outros." },
       ],
