@@ -971,6 +971,65 @@ button {
   color: var(--text-muted);
 }
 
+/* Videoaula do capítulo */
+
+.videoaula {
+  margin: 0 0 2.25rem;
+  padding: 1.1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--radius-lg);
+  background: var(--cor-suave);
+}
+
+.videoaula-cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin: 0.15rem 0.2rem 0.9rem;
+}
+
+.videoaula-rotulo {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor);
+}
+
+.videoaula-titulo {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.videoaula-duracao {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.videoaula video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  background: #0e131a;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 600px) {
+  .videoaula {
+    margin-inline: -0.5rem;
+    padding: 0.75rem 0.6rem;
+  }
+}
+
 /* Quadros de destaque */
 
 .box-resumo,
