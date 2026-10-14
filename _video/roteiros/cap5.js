@@ -653,7 +653,7 @@ serie.capitulo({
         barra(460, "SSD NVMe", "via PCIe · formato M.2", 750, c.t(1), q(1, "e passa"), 3000, "+ ");
         c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:600px">Outras mídias</div>`), c.t(2), "fade");
         const midias = [
-          ["pendrive", "Pen drive / SD", "8 GB a 1 TB", "memória flash", q(2, "O pén")],
+          ["pendrive", "Pen drive / SD", "8 GB a 1 TB", "memória flash", q(2, "o pén")],
           ["disco", "CD", "≈ 700 MB", "óptica (laser)", q(3, "O CD guarda")],
           ["disco", "DVD", "4,7 GB", "óptica · camada simples", q(3, "e o DVD")],
           ["disco", "Blu-ray", "25 GB", "por camada · laser azul-violeta", c.t(4)],
