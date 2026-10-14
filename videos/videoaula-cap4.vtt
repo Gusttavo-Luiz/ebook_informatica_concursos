@@ -1,0 +1,1086 @@
+WEBVTT
+
+00:06.500 --> 00:09.228
+Olá! Eu sou o Bit. Que bom ter
+você de volta
+
+00:09.228 --> 00:11.956
+à nossa série de Informática
+para Concursos.
+
+00:12.336 --> 00:15.427
+Neste capítulo, vamos estudar o
+Pacote Office, um
+
+00:15.427 --> 00:18.455
+assunto que cai em praticamente
+todas as provas.
+
+00:18.835 --> 00:22.167
+Primeiro, você vai conhecer as
+suítes de escritório, o
+
+00:22.167 --> 00:26.054
+Microsoft Office e o LibreOffice, com
+seus formatos de arquivo.
+
+00:26.434 --> 00:29.561
+Depois, vamos ao Word: as guias,
+os recursos mais
+
+00:29.561 --> 00:33.070
+cobrados e a famosa comparação de
+atalhos com o Writer.
+
+00:33.450 --> 00:36.349
+Em seguida, o campeão das
+provas: o Excel, com
+
+00:36.349 --> 00:39.563
+fórmulas, referências, funções e
+mensagens de erro.
+
+00:39.943 --> 00:43.012
+E, para fechar, o PowerPoint:
+modos de exibição,
+
+00:43.012 --> 00:46.081
+transições, animações e atalhos
+da apresentação.
+
+00:46.461 --> 00:47.312
+Vamos lá?
+
+00:49.412 --> 00:53.336
+Uma suíte de escritório reúne
+aplicativos de produtividade
+
+00:53.336 --> 00:56.380
+para criar textos, planilhas e
+apresentações.
+
+00:56.760 --> 00:59.744
+As duas mais cobradas são o
+Microsoft Office, que é
+
+00:59.744 --> 01:02.787
+proprietário, e o LibreOffice, que
+é software livre.
+
+01:03.167 --> 01:06.386
+Para textos, o Office tem o
+Word, que salva em
+
+01:06.386 --> 01:10.094
+.docx. No LibreOffice, o editor é o
+Writer, com .odt.
+
+01:10.474 --> 01:15.500
+Para planilhas, temos o Excel, com
+.xlsx, e o Calc, com .ods.
+
+01:15.880 --> 01:21.143
+E, para apresentações, o PowerPoint, com
+.pptx, e o Impress, com .odp.
+
+01:22.843 --> 01:30.409
+As versões antigas do Office, até 2003, usavam
+.doc, .xls e .ppt, sem o x no final.
+
+01:30.789 --> 01:35.253
+O LibreOffice usa o padrão aberto ODF, o
+OpenDocument. E os dois
+
+01:35.253 --> 01:39.995
+pacotes abrem e salvam os formatos um do
+outro, e exportam para PDF.
+
+01:40.375 --> 01:44.396
+Memorize: nos formatos ODF, a letra do
+meio indica o tipo. T de
+
+01:44.396 --> 01:48.289
+texto, S de spreadsheet, que é
+planilha, e P de presentation.
+
+01:50.389 --> 01:53.820
+Agora, o Word: o editor de texto do
+Office, usado para
+
+01:53.820 --> 01:57.252
+ofícios, relatórios, memorandos e
+documentos em geral.
+
+01:57.632 --> 02:01.903
+Os comandos ficam na Faixa de Opções,
+organizada em guias. Na Página
+
+02:01.903 --> 02:06.614
+Inicial ficam a fonte, o parágrafo, os
+estilos, e o localizar e substituir.
+
+02:06.994 --> 02:11.165
+Na guia Inserir: tabelas, imagens, links,
+cabeçalho e rodapé, número
+
+02:11.165 --> 02:15.274
+de página e quebra de página. Em Design,
+os temas e a marca-d'água.
+
+02:15.654 --> 02:20.326
+Em Layout: margens, orientação, tamanho do
+papel, colunas e quebras de
+
+02:20.326 --> 02:25.198
+seção. Em Referências: sumário, notas de
+rodapé, citações e bibliografia.
+
+02:25.578 --> 02:28.931
+Correspondências cuida da mala
+direta, de envelopes e
+
+02:28.931 --> 02:32.664
+etiquetas. Revisão traz ortografia,
+comentários e controlar
+
+02:32.664 --> 02:36.524
+alterações. E Exibir, os modos de
+exibição, a régua e o zoom.
+
+02:38.224 --> 02:41.549
+Vamos aos recursos mais cobrados.
+O Word tem quatro
+
+02:41.549 --> 02:45.722
+alinhamentos: à esquerda, centralizado, à
+direita e justificado.
+
+02:46.102 --> 02:51.235
+E aqui mora uma pegadinha: o alinhamento padrão é
+à esquerda, e não justificado.
+
+02:51.235 --> 02:56.175
+Documentos oficiais costumam usar justificado,
+mas isso precisa ser aplicado.
+
+02:56.555 --> 03:01.002
+Os estilos são formatações prontas, como
+Título 1, Título 2 e Normal.
+
+03:01.002 --> 03:04.997
+Usando os estilos de título, o Word gera
+o sumário automático.
+
+03:05.377 --> 03:10.173
+A quebra de página força o texto a continuar
+na próxima página. Já a quebra
+
+03:10.173 --> 03:15.096
+de seção permite ter partes com orientação,
+margens ou cabeçalhos diferentes.
+
+03:15.476 --> 03:18.881
+O Controlar Alterações registra tudo o
+que foi incluído ou
+
+03:18.881 --> 03:22.520
+excluído, para que outra pessoa aceite
+ou rejeite as mudanças.
+
+03:22.900 --> 03:26.535
+A mala direta combina um
+documento-modelo com uma lista de
+
+03:26.535 --> 03:30.295
+dados para gerar várias cartas
+personalizadas. E o Pincel de
+
+03:30.295 --> 03:34.118
+Formatação copia a formatação de um
+trecho e aplica em outro.
+
+03:35.818 --> 03:39.626
+O Word tem ainda vários recursos de
+formatação. As tabelas
+
+03:39.626 --> 03:43.893
+organizam dados em linhas e colunas, e
+permitem mesclar e dividir
+
+03:43.893 --> 03:47.964
+células. Os marcadores e a numeração
+criam listas automáticas.
+
+03:48.344 --> 03:52.449
+Nos recuos, atenção: o recuo de primeira
+linha afasta só a primeira
+
+03:52.449 --> 03:56.861
+linha do parágrafo. Já o recuo deslocado
+afasta todas, menos a primeira.
+
+03:57.241 --> 04:01.228
+O espaçamento entre linhas pode ser
+simples, de 1,5 linha ou
+
+04:01.228 --> 04:05.216
+duplo, e ainda há o espaçamento antes e
+depois do parágrafo.
+
+04:05.596 --> 04:08.601
+E as colunas dividem o texto
+como em um jornal.
+
+04:10.301 --> 04:14.448
+Outra comparação clássica: a nota de
+rodapé aparece no pé da mesma
+
+04:14.448 --> 04:18.721
+página. Já a nota de fim aparece no final
+do documento, ou da seção.
+
+04:19.101 --> 04:23.083
+Memorize: rodapé é o pé da página. Fim é
+o final do documento.
+
+04:23.463 --> 04:28.158
+As legendas numeram figuras e tabelas e geram
+automaticamente o índice de
+
+04:28.158 --> 04:33.689
+ilustrações. E a AutoCorreção corrige erros comuns
+de digitação enquanto você escreve.
+
+04:34.069 --> 04:39.291
+Você também pode proteger o documento, exigindo
+senha para abrir ou restringindo a
+
+04:39.291 --> 04:44.450
+edição. E salvar como PDF pelo próprio Word, em
+Arquivo, Salvar como ou Exportar.
+
+04:44.830 --> 04:48.783
+Por fim, os modos de exibição do Word:
+Modo de Leitura, Layout de
+
+04:48.783 --> 04:53.283
+Impressão, que é o padrão, Layout da Web,
+Estrutura de Tópicos e Rascunho.
+
+04:55.383 --> 04:59.142
+Agora, um dos assuntos favoritos das
+bancas: os atalhos do Word
+
+04:59.142 --> 05:02.841
+em português são diferentes dos atalhos
+do LibreOffice Writer.
+
+05:03.221 --> 05:06.577
+Negrito: no Word, é Ctrl + N. No
+Writer, Ctrl + B.
+
+05:06.957 --> 05:09.601
+Itálico é igual nos dois: Ctrl + I. Já o
+
+05:09.601 --> 05:12.971
+sublinhado é Ctrl + S no Word e
+Ctrl + U no Writer.
+
+05:13.351 --> 05:17.067
+Para salvar, o Word usa Ctrl + B, e
+o Writer, Ctrl + S.
+
+05:17.447 --> 05:20.436
+Novo documento: Ctrl + O no Word
+e Ctrl + N no
+
+05:20.436 --> 05:23.879
+Writer. Abrir: Ctrl + A no Word e
+Ctrl + O no Writer.
+
+05:24.259 --> 05:27.350
+Selecionar tudo: Ctrl + T no
+Word e Ctrl + A no
+
+05:27.350 --> 05:30.440
+Writer. Já imprimir é igual:
+Ctrl + P nos dois.
+
+05:32.140 --> 05:37.657
+Nos alinhamentos, centralizar e justificar são
+iguais nos dois: Ctrl + E e Ctrl + J.
+
+05:38.037 --> 05:42.004
+Mas alinhar à esquerda é Ctrl + Q no
+Word e Ctrl + L no Writer.
+
+05:42.004 --> 05:45.719
+E alinhar à direita, Ctrl + G no Word
+e Ctrl + R no Writer.
+
+05:46.099 --> 05:49.557
+Localizar é Ctrl + L no Word e Ctrl
++ F no Writer. E
+
+05:49.557 --> 05:53.680
+localizar e substituir, Ctrl + U no Word
+e Ctrl + H no Writer.
+
+05:54.060 --> 05:58.298
+Quebra de página e ortografia são
+iguais: Ctrl + Enter e F7.
+
+05:58.298 --> 06:02.606
+Mas o Salvar como é F12 no Word e Ctrl
++ Shift + S no Writer.
+
+06:02.986 --> 06:07.543
+Memorize: no Word em português, os atalhos
+seguem a palavra em português.
+
+06:07.543 --> 06:11.787
+N de negrito, I de itálico, S de
+sublinhado, A de abrir e T de tudo.
+
+06:12.167 --> 06:15.035
+No LibreOffice, seguem o
+inglês: B de bold, U
+
+06:15.035 --> 06:17.967
+de underline, S de save, O de
+open e A de all.
+
+06:18.347 --> 06:22.316
+E a pegadinha: Ctrl + S sublinha no Word
+em português, mas salva
+
+06:22.316 --> 06:26.410
+no LibreOffice. Leia com atenção qual
+programa a questão menciona.
+
+06:28.510 --> 06:31.956
+Chegamos ao Excel, a planilha
+eletrônica do Office, usada
+
+06:31.956 --> 06:35.341
+para cálculos, controle de dados,
+relatórios e gráficos.
+
+06:35.721 --> 06:38.710
+O arquivo do Excel é a pasta de
+trabalho, que pode
+
+06:38.710 --> 06:41.639
+conter várias planilhas. Cada
+planilha é uma aba.
+
+06:42.019 --> 06:45.312
+A planilha é formada por colunas,
+identificadas por
+
+06:45.312 --> 06:48.412
+letras, e por linhas,
+identificadas por números.
+
+06:48.792 --> 06:52.325
+A célula é o encontro de uma coluna
+com uma linha, e é
+
+06:52.325 --> 06:55.924
+identificada pelo endereço, como B3:
+coluna B, linha 3.
+
+06:56.304 --> 06:59.835
+E um intervalo é um conjunto de
+células, como A1 até A10.
+
+07:00.215 --> 07:05.870
+Nas versões atuais, cada
+planilha tem 1.048.576
+
+07:05.870 --> 07:10.924
+linhas e 16.384 colunas, até a coluna XFD.
+
+07:12.624 --> 07:16.701
+Toda fórmula começa com o sinal de igual.
+E, na versão em português,
+
+07:16.701 --> 07:20.298
+os argumentos das funções são separados
+por ponto e vírgula.
+
+07:20.678 --> 07:23.611
+Os operadores aritméticos são o
+mais, o menos, o
+
+07:23.611 --> 07:26.605
+asterisco, que multiplica, e a
+barra, que divide.
+
+07:26.985 --> 07:32.138
+O acento circunflexo é a potência: 2
+elevado a 3 resulta em 8. E o
+
+07:32.138 --> 07:37.838
+símbolo de porcentagem calcula o percentual:
+200 vezes 10% resulta em 20.
+
+07:38.218 --> 07:43.176
+O e comercial junta textos, ou seja, concatena.
+E os operadores de comparação
+
+07:43.176 --> 07:47.619
+são: igual, diferente, maior, menor, maior
+ou igual e menor ou igual.
+
+07:49.319 --> 07:54.289
+Agora, dois operadores que valem ouro na prova: os
+dois-pontos e o ponto e vírgula.
+
+07:54.669 --> 07:59.272
+Os dois-pontos indicam um intervalo,
+como se dissessem
+
+07:59.272 --> 08:03.108
+“até”. =SOMA(A1:A5) soma A1,
+A2, A3, A4 e A5.
+
+08:03.488 --> 08:07.630
+Já o ponto e vírgula separa
+argumentos, como se dissesse
+
+08:07.630 --> 08:11.994
+“e”. =SOMA(A1;A5) soma só A1 e A5. São
+fórmulas diferentes!
+
+08:12.374 --> 08:17.000
+Também cai muito a ordem de precedência:
+primeiro os parênteses, depois a
+
+08:17.000 --> 08:21.817
+potência, em seguida multiplicação e divisão, e
+por último soma e subtração.
+
+08:22.197 --> 08:29.766
+Assim, =2+3*4 resulta em 14. Mas, com o 2+3
+entre parênteses, o resultado é 20.
+
+08:31.466 --> 08:35.615
+Quando você copia uma fórmula para outra
+célula, o Excel ajusta as
+
+08:35.615 --> 08:40.393
+referências automaticamente. E o cifrão trava a
+coluna, a linha, ou as duas.
+
+08:40.773 --> 08:44.984
+A referência relativa, como A1, muda
+coluna e linha ao ser copiada.
+
+08:45.364 --> 08:50.758
+A absoluta, $A$1, com cifrão antes da coluna e
+antes da linha, não muda nada.
+
+08:51.138 --> 08:55.506
+E as mistas travam só uma parte. Em $A1,
+a coluna está travada e
+
+08:55.506 --> 08:59.943
+só a linha muda. Em A$1, a linha está
+travada e só a coluna muda.
+
+09:00.323 --> 09:04.708
+Veja na prática: a célula C1 tem
+=A1+$B$1. Copiada
+
+09:04.708 --> 09:08.480
+para C2, ela desce uma linha,
+e A1 vira A2.
+
+09:08.860 --> 09:12.848
+Copiada para D1, anda uma coluna:
+A1 vira B1. E em
+
+09:12.848 --> 09:16.995
+D3, uma coluna e duas linhas: B3. O
+$B$1 nunca muda.
+
+09:17.375 --> 09:21.603
+Memorize: o cifrão trava o que vem logo
+depois dele. E, ao editar
+
+09:21.603 --> 09:25.570
+uma fórmula, a tecla F4 alterna entre
+os tipos de referência.
+
+09:27.670 --> 09:30.515
+Vamos às funções mais cobradas.
+SOMA soma os
+
+09:30.515 --> 09:33.359
+valores, e MÉDIA calcula a
+média aritmética.
+
+09:33.739 --> 09:36.897
+MÁXIMO e MÍNIMO retornam o maior
+e o menor valor.
+
+09:37.277 --> 09:41.870
+Para contar, existem três funções: CONT.NÚM
+conta as células com números,
+
+09:41.870 --> 09:46.966
+CONT.VALORES conta as células não vazias, e
+CONTAR.VAZIO conta as células vazias.
+
+09:47.346 --> 09:53.560
+ARRED arredonda para um número de casas
+decimais: ARRED de 7,456 com 2 casas
+
+09:53.560 --> 10:00.102
+resulta em 7,46. E HOJE e AGORA retornam a data
+atual, e a data e a hora atuais.
+
+10:01.802 --> 10:05.934
+Agora, as funções com critério. CONT.SE
+conta as células que atendem
+
+10:05.934 --> 10:09.640
+a um critério, como quantas vezes
+aparece a palavra Aprovado.
+
+10:10.020 --> 10:13.264
+SOMASE soma os valores que atendem
+a um critério. Por
+
+10:13.264 --> 10:16.752
+exemplo, somar os valores das linhas
+marcadas como Norte.
+
+10:17.132 --> 10:20.851
+A função SE faz um teste lógico com
+dois resultados: se
+
+10:20.851 --> 10:24.502
+A1 for maior ou igual a 7, Aprovado;
+senão, Reprovado.
+
+10:24.882 --> 10:29.524
+E as funções E e OU combinam condições.
+Neste exemplo, o resultado
+
+10:29.524 --> 10:34.026
+é Sim quando A1 é maior ou igual a 7 e B1
+é maior ou igual a 75.
+
+10:35.726 --> 10:40.251
+Uma das funções mais cobradas é o PROCV. Ele
+procura um valor na primeira
+
+10:40.251 --> 10:44.590
+coluna de uma tabela e retorna o valor de
+outra coluna da mesma linha.
+
+10:44.970 --> 10:49.590
+Em =PROCV(A2;F2:H50;3;FALSO), ele
+procura o conteúdo de
+
+10:49.590 --> 10:54.378
+A2 na coluna F e devolve o valor da
+terceira coluna, a H.
+
+10:54.758 --> 10:58.961
+Resumo estratégico: o quarto argumento
+FALSO exige correspondência
+
+10:58.961 --> 11:03.101
+exata; VERDADEIRO, ou omitido, aceita
+correspondência aproximada.
+
+11:03.101 --> 11:06.922
+E o valor procurado sempre precisa
+estar na primeira coluna.
+
+11:07.302 --> 11:11.736
+Já o PROCX é a versão moderna do
+PROCV, do Microsoft
+
+11:11.736 --> 11:15.914
+365 e do Excel 2021, e busca em
+qualquer direção.
+
+11:17.614 --> 11:21.605
+Agora, vamos resolver como na
+prova. A1 vale 4, A2
+
+11:21.605 --> 11:25.915
+vale 8, A3 vale 3, A4 está vazia e
+A5 contém um texto.
+
+11:26.295 --> 11:31.634
+A soma de A1 até A3 dá 15, e a média, 5. O
+máximo de A1 até A5 é 8.
+
+11:32.014 --> 11:35.754
+CONT.NÚM de A1 até A5 dá 3, porque só
+conta os números. Já
+
+11:35.754 --> 11:39.493
+CONT.VALORES dá 4, porque conta tudo o
+que não está vazio.
+
+11:39.873 --> 11:44.394
+O SE que testa se A2 é maior que 5
+resulta em Alto. E A1 mais
+
+11:44.394 --> 11:48.840
+A2 vezes A3 dá 28, porque a
+multiplicação vem antes da soma.
+
+11:49.220 --> 11:54.848
+Pegadinha: MÉDIA, SOMA e CONT.NÚM ignoram
+células vazias e com texto.
+
+11:54.848 --> 12:00.069
+Por isso, a média de 4, 8, 3 e uma célula
+vazia é 5, e não 3,75.
+
+12:01.769 --> 12:06.885
+Existem também as funções com vários critérios.
+SOMASES soma com vários critérios,
+
+12:06.885 --> 12:11.502
+e o intervalo a somar vem primeiro. E CONT.SES
+conta com vários critérios.
+
+12:11.882 --> 12:15.617
+MÉDIASE calcula a média dos valores que
+atendem a um critério.
+
+12:15.617 --> 12:19.351
+E SEERRO mostra um valor alternativo
+quando a fórmula dá erro.
+
+12:19.731 --> 12:22.446
+O PROCH funciona como o PROCV,
+mas procura na
+
+12:22.446 --> 12:25.343
+primeira linha e retorna o valor
+de outra linha.
+
+12:25.723 --> 12:29.135
+E a dupla ÍNDICE e CORRESP: CORRESP
+acha a posição de um
+
+12:29.135 --> 12:32.486
+valor, e ÍNDICE retorna o valor que
+está nessa posição.
+
+12:34.186 --> 12:38.368
+Agora, as funções de texto. ESQUERDA e
+DIREITA pegam os primeiros e
+
+12:38.368 --> 12:42.549
+os últimos caracteres: ESQUERDA de
+Concurso, com 3, resulta em Con.
+
+12:42.929 --> 12:47.384
+EXT.TEXTO pega caracteres do meio, a partir
+de uma posição: EXT.TEXTO
+
+12:47.384 --> 12:51.774
+de Concurso, a partir da 4ª letra, com 3
+caracteres, resulta em cur.
+
+12:52.154 --> 12:56.261
+MAIÚSCULA e MINÚSCULA convertem o texto.
+E CONCAT junta textos.
+
+12:56.641 --> 13:01.535
+Nos números, INT arredonda para baixo até o
+inteiro, e TRUNCAR corta as casas
+
+13:01.535 --> 13:06.175
+decimais, sem arredondar. MOD dá o resto da
+divisão: MOD de 10 por 3 é 1.
+
+13:06.555 --> 13:10.196
+MAIOR e MENOR retornam o k-ésimo
+maior ou menor
+
+13:10.196 --> 13:14.146
+valor. E DIA, MÊS e ANO extraem
+partes de uma data.
+
+13:14.526 --> 13:19.459
+Pegadinha: INT e TRUNCAR só
+diferem com números
+
+13:19.459 --> 13:25.126
+negativos. INT de -7,8 dá -8, e
+TRUNCAR de -7,8 dá -7.
+
+13:25.506 --> 13:28.443
+Outra armadilha: no SOMASE, o
+intervalo a somar
+
+13:28.443 --> 13:31.379
+é o último argumento; no
+SOMASES, é o primeiro.
+
+13:33.479 --> 13:38.351
+Para usar uma célula de outra planilha, o Excel
+separa o nome da planilha e a
+
+13:38.351 --> 13:43.286
+célula com um ponto de exclamação: =Vendas!A1.
+No Calc, o separador é o ponto.
+
+13:43.666 --> 13:47.931
+Se o nome tiver espaço, ele fica entre aspas
+simples. E também dá para
+
+13:47.931 --> 13:52.561
+apontar para outro arquivo: no Excel, o nome do
+arquivo vai entre colchetes.
+
+13:52.941 --> 13:55.929
+Memorize: Excel usa exclamação;
+Calc usa ponto.
+
+13:56.309 --> 14:00.572
+Agora, os atalhos do Excel. F2 edita a
+célula selecionada,
+
+14:00.572 --> 14:04.983
+F4 alterna os tipos de referência, e
+Alt + = faz a AutoSoma.
+
+14:05.363 --> 14:08.974
+Ctrl + ; insere a data atual, Ctrl
++ 1 abre Formatar
+
+14:08.974 --> 14:12.030
+Células, e Ctrl + Home vai para
+a célula A1.
+
+14:12.410 --> 14:16.451
+Ctrl com as setas vai até o fim de um
+bloco de dados. E Ctrl + Page
+
+14:16.451 --> 14:20.371
+Down ou Page Up passa para a próxima ou
+para a anterior planilha.
+
+14:20.751 --> 14:23.662
+Shift + F11 insere uma nova
+planilha, e F11
+
+14:23.662 --> 14:26.438
+cria um gráfico em uma planilha separada.
+
+14:28.138 --> 14:31.452
+Outra questão comum é saber qual
+gráfico usar. Os de
+
+14:31.452 --> 14:34.894
+colunas e de barras comparam valores
+entre categorias.
+
+14:35.274 --> 14:39.905
+O de linhas mostra a evolução ao longo do tempo,
+como o faturamento mês a mês.
+
+14:40.285 --> 14:44.132
+O de pizza mostra as partes de um todo,
+com uma única série. E
+
+14:44.132 --> 14:48.041
+o de dispersão mostra a relação entre
+duas variáveis numéricas.
+
+14:49.741 --> 14:53.101
+Agora, as mensagens de erro do
+Excel. A divisão por
+
+14:53.101 --> 14:56.460
+zero, ou por uma célula vazia,
+gera o erro #DIV/0!.
+
+14:56.840 --> 15:00.682
+#N/D indica valor não encontrado,
+muito comum no PROCV. E
+
+15:00.682 --> 15:04.995
+#NOME? indica nome de função escrito
+errado, ou texto sem aspas.
+
+15:05.375 --> 15:09.286
+#REF! aparece quando a fórmula faz
+referência a uma célula que foi
+
+15:09.286 --> 15:13.789
+excluída. E #VALOR! indica tipo de dado errado,
+como somar texto com número.
+
+15:14.169 --> 15:17.728
+#NÚM! indica um problema com número, como
+um valor grande demais.
+
+15:18.108 --> 15:21.509
+E atenção: as cerquilhas não são erro
+de fórmula. Elas só
+
+15:21.509 --> 15:25.089
+indicam que a coluna é estreita demais
+para mostrar o valor.
+
+15:26.789 --> 15:30.647
+Mais alguns recursos. A alça de
+preenchimento é o quadradinho
+
+15:30.647 --> 15:34.505
+no canto da célula: arrastada, ela
+copia fórmulas ou continua
+
+15:34.505 --> 15:37.984
+sequências, como 1, 2, 3, ou
+janeiro, fevereiro, março.
+
+15:38.364 --> 15:42.289
+Classificar e Filtrar ordena os dados ou
+mostra só as linhas que
+
+15:42.289 --> 15:46.337
+atendem a um critério. E a Formatação
+Condicional muda a aparência
+
+15:46.337 --> 15:50.323
+das células conforme o valor, como notas
+abaixo de 7 em vermelho.
+
+15:50.703 --> 15:54.472
+A tabela dinâmica resume e cruza
+grandes volumes de dados.
+
+15:54.852 --> 15:58.863
+Para organizar, Congelar Painéis, na guia
+Exibir, mantém os títulos
+
+15:58.863 --> 16:02.933
+visíveis ao rolar a planilha. E a Validação
+de Dados, na guia Dados,
+
+16:02.933 --> 16:07.423
+restringe o que pode ser digitado, como uma
+lista suspensa ou apenas datas.
+
+16:07.803 --> 16:12.556
+Na guia Revisão, Proteger Planilha impede
+alterações em células bloqueadas,
+
+16:12.556 --> 16:17.309
+e Proteger Pasta de Trabalho impede incluir,
+excluir ou renomear planilhas.
+
+16:17.689 --> 16:20.503
+E, na guia Dados, Remover
+Duplicatas e Texto
+
+16:20.503 --> 16:23.508
+para Colunas limpam e separam
+dados importados.
+
+16:25.608 --> 16:29.480
+Por fim, o PowerPoint. Ele cria
+apresentações compostas por
+
+16:29.480 --> 16:33.812
+slides, que podem conter textos, imagens,
+gráficos, áudio e vídeo.
+
+16:34.192 --> 16:39.447
+No modo Normal, você edita os slides, com as
+miniaturas à esquerda e as anotações
+
+16:39.447 --> 16:45.026
+abaixo. A Classificação de Slides mostra todos em
+miniatura, para reorganizar a ordem.
+
+16:45.406 --> 16:50.269
+O modo Anotações mostra a página com o slide e
+as anotações do apresentador.
+
+16:50.269 --> 16:54.812
+E o Modo de Exibição de Leitura apresenta
+dentro da janela do programa.
+
+16:55.192 --> 16:58.949
+E a Apresentação de Slides ocupa a tela
+cheia, para o público.
+
+17:00.649 --> 17:04.694
+Alguns recursos importantes. O Slide
+Mestre define o padrão
+
+17:04.694 --> 17:09.218
+visual, como fontes, cores e logotipo,
+aplicado a todos os slides.
+
+17:09.598 --> 17:14.181
+Os layouts são modelos de disposição dos
+elementos, como título e conteúdo
+
+17:14.181 --> 17:18.454
+ou duas colunas. E os temas são conjuntos
+de cores, fontes e efeitos.
+
+17:18.834 --> 17:22.703
+As transições são efeitos na passagem
+de um slide para outro.
+
+17:23.083 --> 17:26.874
+Já as animações são efeitos aplicados
+aos objetos dentro
+
+17:26.874 --> 17:30.664
+do slide: de entrada, de ênfase, de
+saída e trajetórias.
+
+17:31.044 --> 17:35.347
+Pegadinha clássica: transição e animação
+são coisas diferentes. A
+
+17:35.347 --> 17:40.047
+transição acontece entre slides; a animação,
+nos elementos de um slide.
+
+17:41.747 --> 17:46.263
+No Modo de Exibição do Apresentador, com
+dois monitores, o público vê o
+
+17:46.263 --> 17:50.970
+slide, e o apresentador vê também as
+anotações, o próximo slide e o tempo.
+
+17:51.350 --> 17:55.306
+As anotações são o texto de apoio do
+apresentador e não aparecem
+
+17:55.306 --> 17:58.768
+para o público. E o Testar Intervalos
+grava quanto tempo
+
+17:58.768 --> 18:02.539
+cada slide fica na tela, para a
+apresentação avançar sozinha.
+
+18:02.919 --> 18:08.145
+Ocultar slide mantém o slide no arquivo, mas
+ele não aparece na apresentação.
+
+18:08.145 --> 18:12.488
+E as seções agrupam slides para organizar
+apresentações grandes.
+
+18:12.868 --> 18:19.267
+Nos formatos, o .pptx é a apresentação editável,
+o .ppsx abre direto no modo de
+
+18:19.267 --> 18:26.313
+apresentação, e o .potx é um modelo. Também dá para
+exportar para PDF e para vídeo MP4.
+
+18:26.693 --> 18:30.427
+E os atalhos da apresentação: F5
+começa do primeiro
+
+18:30.427 --> 18:34.673
+slide, e Shift + F5, a partir do slide
+atual. Esc encerra.
+
+18:35.053 --> 18:38.410
+Durante a apresentação, a tecla B
+ou o ponto deixam a
+
+18:38.410 --> 18:42.083
+tela preta, e a tecla W ou a vírgula
+deixam a tela branca.
+
+18:44.183 --> 18:46.479
+Hora de revisar o que você aprendeu.
+
+18:46.859 --> 18:52.723
+Word salva em .docx, Excel em .xlsx e
+PowerPoint em .pptx.
+
+18:52.723 --> 18:58.485
+O LibreOffice usa o padrão aberto
+ODF: .odt, .ods e .odp.
+
+18:58.865 --> 19:02.574
+No Word, o alinhamento padrão é à
+esquerda. A nota de rodapé
+
+19:02.574 --> 19:06.221
+fica no pé da página; a nota de fim,
+no final do documento.
+
+19:06.601 --> 19:10.265
+Nos atalhos, o Word em português segue o
+português, e o Writer
+
+19:10.265 --> 19:13.811
+segue o inglês. Ctrl + S sublinha no
+Word e salva no Writer.
+
+19:14.191 --> 19:17.578
+Toda fórmula começa com igual.
+Dois-pontos é “até”, ponto
+
+19:17.578 --> 19:20.728
+e vírgula é “e”, e a multiplicação
+vem antes da soma.
+
+19:21.108 --> 19:26.406
+O cifrão trava o que vem logo depois dele, e o F4
+alterna os tipos de referência.
+
+19:26.786 --> 19:30.135
+MÉDIA, SOMA e CONT.NÚM ignoram
+células vazias e com
+
+19:30.135 --> 19:33.484
+texto. E o PROCV procura sempre na
+primeira coluna.
+
+19:33.864 --> 19:39.469
+Divisão por zero gera #DIV/0!, e as cerquilhas
+indicam apenas uma coluna estreita.
+
+19:39.849 --> 19:43.326
+E, no PowerPoint, a transição é
+entre slides, e a
+
+19:43.326 --> 19:47.512
+animação, nos objetos. O .ppsx abre
+direto na apresentação.
+
+19:49.212 --> 19:51.916
+Agora é a sua vez: faça as
+quinze questões do
+
+19:51.916 --> 19:54.860
+final do capítulo e confira a
+correção comentada.
+
+19:55.240 --> 19:57.988
+No próximo vídeo, vamos
+estudar o hardware:
+
+19:57.988 --> 20:00.673
+as peças que fazem o computador funcionar.
+
+20:01.053 --> 20:02.793
+Até lá, e bons estudos!

@@ -14,6 +14,7 @@ if (!cap) {
 const raiz = path.resolve(__dirname, "..");
 let roteiro;
 global.serie = { capitulo: (def) => { roteiro = def; } };
+global.ICONES = {}; // roteiros podem registrar ícones próprios
 require(path.join(raiz, "roteiros", `cap${cap}.js`));
 
 let agenda = null;
