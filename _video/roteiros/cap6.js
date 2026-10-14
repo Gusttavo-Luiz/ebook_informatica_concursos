@@ -7,7 +7,7 @@ const BIT_CANTO = { x: 1720, y: 1020, s: 0.58 };
 // ---------------------------------------------------------------- Ícones extras
 // Mesmo estilo plano dos ícones da série (viewBox 0 0 120 120).
 const NUVEM_D = "M34 92a24 24 0 0 1-2-48 30 30 0 0 1 58 6 21 21 0 0 1-2 42z";
-Object.assign(ICONES, {
+if (typeof ICONES !== "undefined") Object.assign(ICONES, {
   pasta: `<path class="c2" d="M8 30a8 8 0 0 1 8-8h28l10 12h50a8 8 0 0 1 8 8v6H8z"/><rect class="c1" x="8" y="42" width="104" height="62" rx="8"/>`,
   elo: `<circle class="cs" cx="60" cy="60" r="52"/><g transform="rotate(-45 60 60)"><rect class="s1" x="22" y="47" width="44" height="26" rx="13"/><rect class="s1" x="54" y="47" width="44" height="26" rx="13"/></g>`,
   olho: `<path class="c2" d="M6 60c14-24 32-36 54-36s40 12 54 36c-14 24-32 36-54 36S20 84 6 60z"/><circle class="cb" cx="60" cy="60" r="24"/><circle class="c1" cx="60" cy="60" r="13"/>`,

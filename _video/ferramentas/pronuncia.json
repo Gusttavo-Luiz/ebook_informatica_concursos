@@ -36,5 +36,21 @@
   "layout": "léiaut",
   "layouts": "léiauts",
   "Web": "uéb",
-  "web": "uéb"
+  "web": "uéb",
+  "backup": "bécâp",
+  "backups": "bécâps",
+  "OneDrive": "uândráiv",
+  "iCloud": "ái cláud",
+  "offline": "óflaine",
+  "online": "onláine",
+  "datacenter": "dáta cênter",
+  "datacenters": "dáta cênters",
+  "desktop": "désktóp",
+  "streaming": "istríming",
+  "ransomware": "rânsomuér",
+  "Google Drive": "gúgol dráiv",
+  "Google": "gúgol",
+  "Dropbox": "drópbóks",
+  "upload": "âplôud",
+  "download": "dáunlôud"
 }
