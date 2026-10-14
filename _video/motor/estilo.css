@@ -292,7 +292,7 @@ svg { overflow: visible; }
   position: absolute;
   left: 50%;
   bottom: 96px;
-  transform: translateX(-50%);
+  /* centralizada pelo GSAP (xPercent: -50 em motor.js); um translate aqui seria somado a ele */
   padding: 18px 40px;
   border-radius: 999px;
   background: var(--texto);

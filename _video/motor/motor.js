@@ -203,7 +203,7 @@ function contexto(cena, def, tl, palco) {
 
     chave(html, t, tFim) {
       const e = c.novo(`<div class="chave">${html}</div>`);
-      tl.fromTo(e, { autoAlpha: 0, y: 30, xPercent: -50 }, { autoAlpha: 1, y: 0, xPercent: -50, duration: 0.5, ease: "power3.out", immediateRender: true }, t);
+      tl.fromTo(e, { autoAlpha: 0, x: 0, y: 30, xPercent: -50 }, { autoAlpha: 1, x: 0, y: 0, xPercent: -50, duration: 0.5, ease: "power3.out", immediateRender: true }, t);
       if (tFim) tl.to(e, { autoAlpha: 0, duration: 0.3 }, tFim);
       return e;
     },

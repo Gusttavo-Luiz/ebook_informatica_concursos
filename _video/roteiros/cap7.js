@@ -432,7 +432,7 @@ serie.capitulo({
     },
     {
       id: "lai",
-      visual: "Rótulo “Lei nº 12.527/2011”. Dois cartões: Regra = publicidade (globo, verde) e Exceção = sigilo (cadeado). Em seguida, gráfico de barras dos prazos máximos: Ultrassecreta 25 anos, Secreta 15, Reservada 5 — cada barra cresce e o número conta na frase correspondente.",
+      visual: "Rótulo “Lei nº 12.527/2011”. Dois cartões: Regra = publicidade (globo, verde) e Exceção = sigilo (cadeado). Em seguida, gráfico de barras dos prazos máximos: Ultrassecreta 25 anos, Secreta 15, Reservada 5 — cada barra cresce e o número conta quando o grau é citado.",
       secao: "Riscos e normas",
       bit: BIT_CANTO,
       falas: [
@@ -567,7 +567,7 @@ serie.capitulo({
     },
     {
       id: "ataques",
-      visual: "Cinco cartões: Pharming (endereço certo → DNS alterado → site falso), DoS e DDoS (muitas máquinas → serviço fora do ar), Força bruta (chave e combinações), Man-in-the-middle (pessoa – atacante – pessoa) e Spoofing (máscara). Depois, quadro âmbar com três pegadinhas que entram uma por frase, e a tríade C-I-D com o D aceso.",
+      visual: "Cinco cartões: Pharming (endereço certo → DNS alterado → site falso), DoS e DDoS (muitas máquinas → serviço fora do ar), Força bruta (chave e combinações), Man-in-the-middle (pessoa – atacante – pessoa) e Spoofing (máscara). Depois, quadro âmbar com três pegadinhas, cada linha entrando quando é citada, e a tríade C-I-D com o D aceso.",
       secao: "Golpes e ataques",
       bit: BIT_CANTO,
       falas: [
@@ -879,7 +879,7 @@ serie.capitulo({
         c.entra(l1, c.t(3, 5.6), "esquerda");
         const l2 = c.novo(`<div class="abs" style="left:140px;top:790px;display:flex;align-items:center;gap:18px">${p("senha <small>(sabe)</small>")}${op("+")}${p("senha <small>(sabe)</small>")}${op("=")}<span class="pilula" style="font-size:30px;background:var(--errado);color:#fff">✗ não é 2FA</span></div>`);
         c.entra(l2, c.t(3, 8.2), "esquerda");
-        chave7(c, "Senhas: <em>longas (frases-senha)</em> · <em>sem reutilizar</em> · <em>gerenciador de senhas</em>", c.t(4, 1));
+        chave7(c, "Senhas: <em>frases-senha longas</em> · <em>sem repetir</em> · <em>gerenciador</em>", c.t(4, 1));
       },
     },
     {
