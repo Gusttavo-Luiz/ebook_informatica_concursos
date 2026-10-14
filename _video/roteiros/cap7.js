@@ -123,8 +123,8 @@ if (typeof ICONES !== "undefined") {
       <path d="M20 100L100 20" stroke="#fff" stroke-width="20" stroke-linecap="round"/><path class="s1" d="M20 100L100 20" style="stroke-width:10"/>`,
     porta: `<rect class="c2" x="22" y="8" width="76" height="104" rx="6"/>
       <path class="c1" d="M28 14l46 8v86l-46 4z"/><circle class="cb" cx="64" cy="66" r="5"/>`,
-    rede: `<path d="M60 60L20 24M60 60L100 24M60 60L20 96M60 60L100 96" stroke="var(--cor-media)" stroke-width="6" stroke-linecap="round"/>
-      ${[[20, 24], [100, 24], [20, 96], [100, 96]].map(([x, y]) => `<rect class="c2" x="${x - 15}" y="${y - 12}" width="30" height="24" rx="5"/>`).join("")}
+    rede: `<path d="M60 60L22 24M60 60L98 24M60 60L22 96M60 60L98 96" stroke="var(--cor)" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+      ${[[22, 24], [98, 24], [22, 96], [98, 96]].map(([x, y]) => `<rect class="c1" x="${x - 18}" y="${y - 14}" width="36" height="28" rx="6"/><rect class="cb" x="${x - 12}" y="${y - 8}" width="24" height="14" rx="3"/>`).join("")}
       <rect class="c1" x="40" y="44" width="40" height="32" rx="7"/><rect class="cb" x="47" y="51" width="26" height="15" rx="3"/>`,
     mascara: `<path class="c1" d="M6 46c18-8 36-6 54 6 18-12 36-14 54-6 2 24-8 40-28 40-12 0-20-8-26-16-6 8-14 16-26 16C14 86 4 70 6 46z"/>
       <ellipse class="cb" cx="34" cy="60" rx="12" ry="8"/><ellipse class="cb" cx="86" cy="60" rx="12" ry="8"/>`,
@@ -226,6 +226,15 @@ function cartaoV(c, o, estilo, t, tipo = "baixo") {
   return c.entra(e, t, tipo);
 }
 
+// Faixa inferior de palavra-chave, centralizada sem translate(-50%):
+// o c.chave do motor pode deslocar a faixa quando a largura dela é ímpar.
+function chave7(c, html, t, tFim) {
+  const e = c.novo(`<div class="chave" style="transform:none;left:0;right:0;width:fit-content;margin:0 auto">${html}</div>`);
+  c.tl.fromTo(e, { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out", immediateRender: true }, t);
+  if (tFim) c.tl.to(e, { autoAlpha: 0, duration: 0.3 }, tFim);
+  return e;
+}
+
 function pilula(c, html, estilo, t, cor, tipo = "pop") {
   const e = c.novo(`<div class="abs pilula">${html}</div>`, estilo);
   if (cor) { e.style.background = `color-mix(in srgb, ${cor} 12%, white)`; e.style.color = cor; }
@@ -325,9 +334,9 @@ serie.capitulo({
           ["Disponibilidade", "acessível <b>quando necessária</b>", "backup · redundância · nobreak · proteção contra DDoS"],
         ];
         cartoes.forEach((k, i) => {
-          const e = c.novo(`<div class="cartao" style="left:860px;top:${320 + i * 200}px;width:680px;height:180px;padding:24px 32px">
+          const e = c.novo(`<div class="cartao" style="left:860px;top:${315 + i * 200}px;width:680px;height:185px;padding:22px 32px">
             <h3 style="font-size:36px;margin:0">${k[0]}</h3><p style="font-size:28px;margin-top:4px">${k[1]}</p>
-            <div style="font:700 23px var(--sans);color:var(--cor);margin-top:10px">${k[2]}</div></div>`);
+            <div style="font:700 22px var(--sans);color:var(--cor);margin-top:8px;white-space:nowrap">${k[2]}</div></div>`);
           c.entra(e, c.t(i + 1), "direita");
           c.destaque(letras[i], c.t(i + 1, 0.3));
         });
@@ -390,11 +399,11 @@ serie.capitulo({
           ["raio", "Incidente", "Evento que <b>efetivamente compromete</b> a segurança.", "", "furto"],
         ];
         cartoes.forEach((k, i) => {
-          const e = c.novo(`<div class="cartao" style="left:${140 + i * 415}px;top:320px;width:385px;height:430px;padding:32px">
-            ${icone(k[0])}<h3 style="font-size:36px">${k[1]}</h3><p style="font-size:26px">${k[2]}</p>
-            ${k[3] ? `<p style="font-size:23px;margin-top:10px;color:var(--cor);font-weight:700">ex.: ${k[3]}</p>` : ""}
-            <div class="pilula anal" style="position:absolute;left:32px;bottom:28px;font-size:24px;background:var(--fundo);color:var(--texto)">casa: ${k[4]}</div></div>`);
-          e.querySelector(".icone").style.cssText = "width:76px;height:76px;margin-bottom:14px";
+          const e = c.novo(`<div class="cartao" style="left:${140 + i * 415}px;top:310px;width:385px;height:440px;padding:28px 30px">
+            ${icone(k[0])}<h3 style="font-size:34px">${k[1]}</h3><p style="font-size:25px;line-height:1.32">${k[2]}</p>
+            ${k[3] ? `<p style="font-size:22px;line-height:1.3;margin-top:8px;color:var(--cor);font-weight:700">ex.: ${k[3]}</p>` : ""}
+            <div class="pilula anal" style="position:absolute;left:30px;bottom:24px;font-size:24px;background:var(--fundo);color:var(--texto)">casa: ${k[4]}</div></div>`);
+          e.querySelector(".icone").style.cssText = "width:68px;height:68px;margin-bottom:10px";
           c.entra(e, c.t(i, i === 0 ? 0.4 : 0), "baixo");
           c.entra(e.querySelector(".anal"), c.t(4, [1.6, 3.4, 5.2, 7.2][i]), "pop");
         });
@@ -667,7 +676,7 @@ serie.capitulo({
         const emb = sai.querySelector(".emb");
         const alvo = "X7#QL!9P", orig = "CONCURSO", est = { p: 0 };
         c.tl.to(est, { p: 1, duration: 1.4, ease: "none", onUpdate: () => { const n = Math.floor(est.p * 8); emb.textContent = alvo.slice(0, n) + orig.slice(n); } }, c.t(0, 5.6));
-        const fx = c.chave("Criptografia protege a <em>confidencialidade</em>", c.t(1), c.t(2) - 0.4);
+        const fx = chave7(c, "Criptografia protege a <em>confidencialidade</em>", c.t(1), c.t(2) - 0.4);
         [ent, meio, sai, s1, s2].forEach((e) => c.sai(e, c.t(2) - 0.4));
         const pub = chaveSVG(VERDE, 70), priv = chaveSVG("var(--cor)", 70);
         const linha = (r, v) => `<div class="ln" style="margin-top:22px"><div class="rotulo" style="font-size:20px;color:var(--texto-fraco)">${r}</div><div style="font-size:30px;margin-top:4px;color:var(--texto)">${v}</div></div>`;
@@ -741,7 +750,7 @@ serie.capitulo({
       montar(c) {
         c.titulo("Função hash", "O “resumo” do conteúdo", { left: 140, top: 150 }, c.t(0), { medio: true });
         const linha = (y, texto, resumo, t, destaque) => {
-          const doc = c.novo(`<div class="cartao" style="left:140px;top:${y}px;width:460px;height:150px;display:flex;align-items:center;gap:20px;padding:24px">${icone("documento")}<div class="mono" style="font-size:38px;font-weight:700">${texto}</div></div>`);
+          const doc = c.novo(`<div class="cartao" style="left:140px;top:${y}px;width:460px;height:150px;display:flex;align-items:center;gap:20px;padding:24px">${icone("documento")}<div class="mono" style="font-size:31px;font-weight:700;white-space:nowrap">${texto}</div></div>`);
           doc.querySelector(".icone").style.cssText = "margin:0;width:70px;height:70px;flex-shrink:0";
           c.entra(doc, t, "esquerda");
           const maq = c.novo(`<div class="no" style="left:720px;top:${y}px;width:240px;height:150px;padding:16px">${icone("engrenagem")}<strong style="font-size:26px">função hash</strong></div>`);
@@ -758,7 +767,7 @@ serie.capitulo({
         linha(330, "Pagar R$ 100,00", "9f2c…a71b", c.t(0, 0.4));
         const d2 = linha(540, "Pagar R$ <span class=\"marca-texto\">9</span>00,00", "41d0…c3e9", c.t(1, 0.6), true);
         void d2;
-        c.chave("Hash → <em>integridade</em>", c.t(1, 6));
+        chave7(c, "Hash → <em>integridade</em>", c.t(1, 6));
         c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:750px">Exemplos</div>`), c.t(2), "fade");
         pilula(c, "✓ SHA-256", { left: 140, top: 790, fontSize: "32px" }, c.t(2, 0.8), VERDE);
         pilula(c, "✗ MD5", { left: 420, top: 790, fontSize: "32px" }, c.t(2, 2.6), VERMELHO);
@@ -870,7 +879,7 @@ serie.capitulo({
         c.entra(l1, c.t(3, 5.6), "esquerda");
         const l2 = c.novo(`<div class="abs" style="left:140px;top:790px;display:flex;align-items:center;gap:18px">${p("senha <small>(sabe)</small>")}${op("+")}${p("senha <small>(sabe)</small>")}${op("=")}<span class="pilula" style="font-size:30px;background:var(--errado);color:#fff">✗ não é 2FA</span></div>`);
         c.entra(l2, c.t(3, 8.2), "esquerda");
-        c.chave("Senhas: <em>longas (frases-senha)</em> · <em>sem reutilizar</em> · <em>gerenciador de senhas</em>", c.t(4, 1));
+        chave7(c, "Senhas: <em>longas (frases-senha)</em> · <em>sem reutilizar</em> · <em>gerenciador de senhas</em>", c.t(4, 1));
       },
     },
     {
@@ -960,8 +969,8 @@ serie.capitulo({
         c.entra(pin, c.t(0, 5.2), "fade");
         c.seta(410, 500, 470, 500, c.t(0, 4.4));
         const srv = [["Site", 520], ["E-mail", 770]].map(([n, x], i) => c.no({ icone: "servidor", titulo: n }, { left: x, top: 400, width: 210, height: 230 }, c.t(0, 7.6 + i * 1.0)));
-        const raio = c.novo(`<div class="abs" style="left:640px;top:330px;width:100px;height:100px">${icone("raio")}</div>`);
-        raio.querySelector(".icone").style.cssText = "width:100px;height:100px";
+        const raio = c.novo(`<div class="abs" style="left:665px;top:375px;width:90px;height:90px;z-index:3">${icone("raio")}</div>`);
+        raio.querySelector(".icone").style.cssText = "width:90px;height:90px";
         corLocal(raio, VERMELHO);
         c.entra(raio, c.t(1, 0.3), "pop");
         c.tl.to(srv[0], { backgroundColor: "color-mix(in srgb, #c2412f 14%, white)", duration: 0.4 }, c.t(1, 0.6));
@@ -1021,8 +1030,8 @@ serie.capitulo({
             grupo.push(b);
           });
         });
-        c.chave("Incremental: <em>rápido e pequeno</em>, mas restauração trabalhosa", c.t(4), c.t(4, 6.3));
-        c.chave("Diferencial: <em>cresce a cada dia</em>, restaura com 2 cópias", c.t(4, 6.6), c.t(5) - 0.4);
+        chave7(c, "Incremental: <em>rápido e pequeno</em>, mas restauração trabalhosa", c.t(4), c.t(4, 6.3));
+        chave7(c, "Diferencial: <em>cresce a cada dia</em>, restaura com 2 cópias", c.t(4, 6.6), c.t(5) - 0.4);
         grupo.forEach((e) => c.sai(e, c.t(5) - 0.4));
         [["3", "cópias dos dados", ["documento", "documento", "documento"]], ["2", "mídias diferentes", ["dados", "notebook"]], ["1", "fora do local", ["nuvem"]]].forEach((k, i) => {
           const e = c.novo(`<div class="cartao" style="left:${140 + i * 480}px;top:320px;width:440px;height:330px;padding:30px;text-align:center">
@@ -1088,7 +1097,7 @@ serie.capitulo({
           <path d="M840 545 V635" stroke="var(--cor-media)" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 18"/></svg>`);
         c.entra(linhas, c.t(2, 3), "fade");
         no({ icone: "escudo", titulo: "ANPD", texto: "<b>fiscaliza</b> e aplica sanções" }, 1140, 310, c.t(2, 2.4), AZUL);
-        c.chave("ANPD: <em>Autoridade Nacional de Proteção de Dados</em>", c.t(3));
+        chave7(c, "ANPD: <em>Autoridade Nacional de Proteção de Dados</em>", c.t(3));
       },
     },
     {

@@ -52,5 +52,15 @@
   "Google": "gúgol",
   "Dropbox": "drópbóks",
   "upload": "âplôud",
-  "download": "dáunlôud"
+  "download": "dáunlôud",
+  "Windows": "uindôus",
+  "macOS": "mác ó ésse",
+  "boot": "bút",
+  "firewall": "fáier uól",
+  "root": "rút",
+  "sudo": "súdo",
+  "GRUB": "grúbi",
+  "GNU": "guinú",
+  "CLI": "cê éle i",
+  "GUI": "gê u i"
 }

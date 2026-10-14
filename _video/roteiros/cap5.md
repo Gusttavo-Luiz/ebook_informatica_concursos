@@ -10,7 +10,7 @@
 
 **Narração:**
 
-- Olá! Eu sou o Bit. Que bom ter você de volta na nossa série de Informática para Concursos!
+- Olá! Eu sou o Bit. Que bom ter você de volta!
 - Neste capítulo, vamos abrir o gabinete e conhecer o hardware do computador.
 - Primeiro, o processador: o que define o seu desempenho e as arquiteturas RISC e CISC.
 - Em seguida, as memórias: a hierarquia, a cache, a RAM, a ROM e a BIOS.
@@ -29,8 +29,8 @@
 - Vamos começar pelo conceito. Hardware é o conjunto de componentes físicos do computador: tudo aquilo que pode ser visto e tocado.
 - Por exemplo: o processador, a memória RAM, a placa-mãe, o HD, o SSD, a placa de vídeo, a fonte de alimentação, o teclado, o mouse e o monitor.
 - Mas essas peças só funcionam juntas graças ao software, que diz ao hardware o que fazer.
-- Quatro delas formam o núcleo da máquina: a CPU processa, a RAM é a memória temporária, o SSD ou o HD armazena, e a placa-mãe conecta tudo.
-- Agora, a pegadinha: o Windows é hardware? Errado! O Windows é software. E o firmware, como a BIOS, é um software gravado em um chip, e não hardware.
+- Quatro delas são centrais: a CPU processa, a RAM é a memória temporária, o SSD ou o HD armazena, e a placa-mãe conecta tudo.
+- Pegadinha: o Windows é hardware? Errado, é software. E o firmware, como a BIOS, é software gravado em um chip, e não hardware.
 
 ## Processador
 
@@ -41,7 +41,7 @@
 **Narração:**
 
 - Agora, o cérebro do computador: o processador, ou CPU. Ele executa as instruções dos programas e processa os dados.
-- Como você viu no Capítulo 1, a CPU é formada pela unidade de controle, pela unidade lógica e aritmética e pelos registradores.
+- Como vimos no Capítulo 1, ela é formada pela unidade de controle, pela unidade lógica e aritmética e pelos registradores.
 - Os principais fabricantes de processadores para computadores são a Intel e a AMD.
 - Já os celulares usam principalmente processadores com arquitetura ARM.
 
@@ -51,9 +51,9 @@
 
 **Narração:**
 
-- E o que define o desempenho? Primeiro, o clock: a frequência, ou seja, quantos ciclos o processador executa por segundo. Ele é medido em hertz.
+- E o que define o desempenho? Primeiro, o clock: a frequência, ou seja, quantos ciclos o processador executa por segundo, medida em hertz.
 - Um processador de três vírgula cinco gigahertz realiza três vírgula cinco bilhões de ciclos por segundo.
-- Depois, os núcleos, ou cores. Cada núcleo funciona como um processador independente. Com oito núcleos, o processador executa várias tarefas em paralelo.
+- Depois, os núcleos, ou cores: cada um funciona como um processador independente. Com oito núcleos, várias tarefas rodam em paralelo.
 - E as threads, que são fluxos de execução. Com tecnologias como o Hyper-Threading, cada núcleo trabalha com duas threads.
 
 ### Cena 5 · `mais-desempenho`
@@ -63,10 +63,10 @@
 **Narração:**
 
 - A memória cache também conta: quanto maior e mais rápida, menos o processador espera pela RAM.
-- E tem a arquitetura: um sistema de trinta e dois bits enxerga, no máximo, cerca de quatro gigabytes de RAM. Os de sessenta e quatro bits superam esse limite.
-- Já a GPU, a unidade de processamento gráfico, fica na placa de vídeo. Ela é especializada em processar imagens e cálculos em paralelo.
+- E tem a arquitetura: um sistema de trinta e dois bits enxerga no máximo cerca de quatro gigabytes de RAM; os de sessenta e quatro bits superam esse limite.
+- Já a GPU, a unidade de processamento gráfico, fica na placa de vídeo e é especializada em imagens e cálculos em paralelo.
 - A GPU pode ser integrada ao processador, ou dedicada: em uma placa separada, com memória própria.
-- Resumo estratégico: clock alto não é tudo! Núcleos, cache e arquitetura também determinam o desempenho. E o ciclo de instrução segue sempre busca, decodificação e execução.
+- Resumindo: clock alto não é tudo! Núcleos, cache e arquitetura também contam. E o ciclo de instrução é sempre busca, decodificação e execução.
 
 ### Cena 6 · `risc-cisc`
 
@@ -77,7 +77,7 @@
 - Outro tema clássico: as arquiteturas CISC e RISC. A CISC tem um conjunto grande de instruções complexas.
 - Ela aparece nos processadores x86 da Intel e da AMD, usados em desktops e notebooks.
 - A RISC tem um conjunto reduzido de instruções simples e rápidas, com menor consumo de energia. É o caso dos processadores ARM, de celulares, tablets e dos computadores da Apple com chip M.
-- E, nos celulares, o processador fica dentro de um SoC, um System on a Chip: um único chip que reúne CPU, GPU, controlador de memória e outros componentes.
+- Nos celulares, o processador fica em um SoC, o System on a Chip: um único chip que reúne CPU, GPU, controlador de memória e outros componentes.
 
 ## Memórias
 
@@ -89,8 +89,7 @@
 
 - Agora, as memórias. Elas são organizadas em uma hierarquia: no topo, os registradores; depois, a cache, a RAM, o SSD e, na base, o HD.
 - A regra é: quanto mais perto do processador, mais rápida, menor e mais cara por gigabyte é a memória.
-- Os registradores guardam apenas bytes. A cache, de kilobytes a dezenas de megabytes. A RAM, de oito a sessenta e quatro gigabytes.
-- O SSD, de duzentos e cinquenta e seis gigabytes a alguns terabytes. E o HD, de um a vários terabytes.
+- Já a capacidade cresce para baixo: os registradores guardam só bytes, a RAM tem de oito a sessenta e quatro gigabytes, e o HD, de um a vários terabytes.
 - E repare: registradores, cache e RAM são voláteis. O SSD e o HD, não.
 - Memorize: do mais rápido para o mais lento, registradores, cache, RAM, SSD e HD. A capacidade cresce no sentido inverso.
 
@@ -100,8 +99,8 @@
 
 **Narração:**
 
-- Vamos olhar a cache de perto. Ela é uma memória extremamente rápida, feita de SRAM, que guarda os dados e as instruções que o processador mais usa.
-- Assim, a CPU não fica esperando a RAM, que é bem mais lenta. É como deixar na mesa o material que você mais usa, em vez de buscá-lo no armário toda hora.
+- Vamos olhar a cache de perto: uma memória extremamente rápida, feita de SRAM, que guarda os dados e as instruções que o processador mais usa.
+- Assim, a CPU não fica esperando a RAM, que é bem mais lenta. É como deixar na mesa o que você mais usa, em vez de buscar no armário.
 - A cache tem níveis. A L1 é a menor e a mais rápida, e fica dentro de cada núcleo.
 - A L2 é maior e um pouco mais lenta. E a L3 é a maior, normalmente compartilhada entre os núcleos.
 - Cuidado com a pegadinha: a cache é mais lenta que a RAM? Errado! A cache é mais rápida, porém bem menor.
@@ -117,7 +116,7 @@
 - A RAM é volátil: perde todo o conteúdo quando o computador é desligado. E permite leitura e escrita.
 - Ela é feita de DRAM, a RAM dinâmica. As gerações atuais são a DDR4 e a DDR5.
 - Se houver pouca RAM, o sistema passa a usar a memória virtual, no disco, e o computador fica lento.
-- Resumo estratégico: a RAM é a memória principal, temporária e volátil. Com mais RAM, você mantém mais programas abertos sem perder desempenho.
+- Resumindo: a RAM é a memória principal, temporária e volátil. Mais RAM permite manter mais programas abertos sem perder desempenho.
 
 ## ROM e BIOS
 
@@ -129,7 +128,7 @@
 
 - E a ROM? É a Read Only Memory: a memória somente de leitura.
 - Ela é não volátil: mantém os dados mesmo sem energia. E guarda o firmware que inicia o computador.
-- Existem vários tipos. A ROM de máscara é gravada na fábrica e não pode ser alterada. A PROM pode ser gravada uma única vez pelo usuário.
+- Há vários tipos. A ROM de máscara é gravada na fábrica e não pode ser alterada. A PROM pode ser gravada uma única vez pelo usuário.
 - A EPROM é apagável com luz ultravioleta e regravável. A EEPROM é apagável eletricamente, e também regravável.
 - E a memória flash é um tipo de EEPROM rápida, regravada em blocos. Ela é usada no chip da BIOS, em pen drives e em SSDs.
 
@@ -139,7 +138,7 @@
 
 **Narração:**
 
-- Esse firmware de inicialização é a BIOS, ou a sua substituta moderna, a UEFI. Ele fica na placa-mãe, inicializa o hardware e carrega o sistema operacional.
+- Esse firmware da placa-mãe é a BIOS, ou a sua substituta moderna, a UEFI. Ele inicializa o hardware e carrega o sistema operacional.
 - A UEFI trouxe interface gráfica, suporte a discos maiores e inicialização segura, o Secure Boot.
 - E, ao ligar o computador, a BIOS ou a UEFI faz o POST, o Power-On Self-Test: um teste automático do hardware.
 - As configurações da BIOS ficam em uma pequena memória, mantida por uma bateria na placa-mãe: a memória CMOS.
@@ -152,7 +151,7 @@
 
 - Vamos comparar. A RAM é volátil e guarda os programas e os dados em uso, com leitura e escrita livres.
 - A ROM é não volátil, guarda o firmware de inicialização e, no uso normal, é somente leitura.
-- Pegadinha: a RAM mantém os dados após o desligamento? Errado! A RAM é volátil. Quem mantém os dados é a ROM e os dispositivos de armazenamento, a memória secundária.
+- Pegadinha: a RAM mantém os dados após o desligamento? Errado! Quem mantém é a ROM e os dispositivos de armazenamento, a memória secundária.
 
 ## Armazenamento
 
@@ -162,9 +161,9 @@
 
 **Narração:**
 
-- Agora, o armazenamento, também chamado de memória secundária. Ele guarda os dados de forma permanente, não volátil, mesmo com o computador desligado.
-- Os mais conhecidos são o HD e o SSD. O HD usa discos magnéticos giratórios e uma cabeça de leitura. Já o SSD usa memória flash, sem partes móveis.
-- Por isso, o SSD é muito mais rápido e mais resistente a impactos, já que o HD tem partes mecânicas. E o SSD é silencioso e econômico.
+- Agora, o armazenamento, ou memória secundária. Ele guarda os dados de forma permanente, mesmo com o computador desligado.
+- O HD usa discos magnéticos giratórios e uma cabeça de leitura. Já o SSD usa memória flash, sem partes móveis.
+- Por isso, o SSD é muito mais rápido e mais resistente a impactos. E ainda é silencioso e econômico.
 - Já a vantagem do HD é o preço: o custo por gigabyte é menor.
 - Pegadinha: o SSD é um disco magnético? Errado! O SSD usa memória flash. O disco magnético é o HD.
 
@@ -174,9 +173,9 @@
 
 **Narração:**
 
-- Existem dois tipos principais de SSD. O SSD SATA usa a mesma interface dos HDs, e fica limitado a cerca de seiscentos megabytes por segundo.
+- Há dois tipos de SSD. O SSD SATA usa a mesma interface dos HDs e fica limitado a cerca de seiscentos megabytes por segundo.
 - Já o SSD NVMe se conecta pelo PCIe, normalmente no formato M.2, e passa facilmente de três mil megabytes por segundo.
-- E existem outras mídias. O pen drive e o cartão de memória SD também usam memória flash, e vão de oito gigabytes a um terabyte.
+- Outras mídias: o pen drive e o cartão de memória SD também usam memória flash, de oito gigabytes a um terabyte.
 - O CD, o DVD e o Blu-ray são mídias ópticas, lidas por laser. O CD guarda cerca de setecentos megabytes, e o DVD, quatro vírgula sete gigabytes em camada simples.
 - Já o Blu-ray usa um laser azul-violeta, e guarda vinte e cinco gigabytes por camada.
 
@@ -186,12 +185,12 @@
 
 **Narração:**
 
-- E o RAID? Ele combina vários discos para ganhar desempenho, segurança contra falhas, ou as duas coisas.
-- No RAID 0, o striping, os dados são divididos entre os discos. Ganha-se desempenho, mas não há redundância: se um disco falhar, perde-se tudo.
+- O RAID combina vários discos para ganhar desempenho, segurança contra falhas, ou os dois.
+- No RAID 0, o striping, os dados são divididos entre os discos: mais desempenho, mas sem redundância. Se um disco falhar, perde-se tudo.
 - No RAID 1, o espelhamento, os mesmos dados são gravados em dois discos. Se um disco falhar, o outro mantém os dados.
 - O RAID 5 distribui dados e paridade em três ou mais discos, e suporta a falha de um disco.
 - E o RAID 10 combina espelhamento e divisão: desempenho e redundância, mas com um custo maior.
-- Atenção: RAID não substitui o backup! Se um arquivo for apagado ou criptografado por um ransomware, a mudança é replicada em todos os discos.
+- Atenção: RAID não substitui backup! Se um arquivo for apagado ou criptografado por um ransomware, a mudança vai para todos os discos.
 
 ### Cena 16 · `particao`
 
@@ -199,12 +198,12 @@
 
 **Narração:**
 
-- E como um disco é organizado? Em partições: divisões lógicas do disco. Cada partição pode ter seu próprio sistema de arquivos, como as unidades C e D no mesmo disco.
+- E como um disco é organizado? Em partições: divisões lógicas, cada uma com seu próprio sistema de arquivos, como as unidades C e D no mesmo disco.
 - O MBR e o GPT são esquemas de particionamento.
 - O MBR, mais antigo, aceita discos de até dois terabytes e quatro partições primárias.
 - Já o GPT, usado com a UEFI, aceita discos muito maiores e muitas partições.
 - E a formatação prepara a partição com um sistema de arquivos, como o NTFS, o exFAT ou o ext4.
-- Mas cuidado: a formatação rápida não apaga os dados de forma segura. Eles ainda podem ser recuperados com ferramentas específicas.
+- Cuidado: a formatação rápida não apaga os dados com segurança; eles ainda podem ser recuperados com ferramentas específicas.
 
 ## Placa-mãe e energia
 
@@ -214,7 +213,7 @@
 
 **Narração:**
 
-- A placa-mãe é a placa de circuito principal. Ela conecta o processador, a memória, o armazenamento e os periféricos, e permite a comunicação entre eles.
+- A placa-mãe é a placa de circuito principal: ela conecta processador, memória, armazenamento e periféricos, e permite a comunicação entre eles.
 - Nela fica o soquete, o encaixe do processador. E o chipset: o conjunto de chips que controla a comunicação entre os componentes.
 - Os slots de memória recebem os pentes de RAM. E os slots PCIe recebem placas de expansão, como uma placa de vídeo dedicada.
 - Os conectores SATA e M.2 ligam os HDs e os SSDs.
@@ -226,11 +225,11 @@
 
 **Narração:**
 
-- E quem alimenta tudo isso? A fonte de alimentação converte a corrente alternada da tomada em corrente contínua para os componentes. A potência dela é medida em watts.
+- E quem alimenta tudo isso? A fonte de alimentação converte a corrente alternada da tomada em corrente contínua, e sua potência é medida em watts.
 - O filtro de linha protege contra picos e ruídos na rede elétrica, e oferece várias tomadas.
 - O estabilizador corrige as variações de tensão: a subtensão e a sobretensão.
-- E o nobreak, ou UPS, tem bateria: na falta de energia, ele mantém o equipamento ligado por um tempo, para você salvar o trabalho e desligar com segurança.
-- Memorize: só o nobreak mantém o computador funcionando quando a energia cai, porque ele tem bateria.
+- E o nobreak, ou UPS, tem bateria: na falta de energia, mantém o equipamento ligado por um tempo, para salvar o trabalho e desligar com segurança.
+- Memorize: só o nobreak mantém o computador funcionando quando a energia cai, porque tem bateria.
 
 ## Periféricos
 
@@ -240,11 +239,11 @@
 
 **Narração:**
 
-- Agora, os periféricos: os dispositivos que se conectam ao computador para trocar informações com o usuário ou com outros equipamentos.
+- Agora, os periféricos: dispositivos que trocam informações entre o computador e o usuário ou outros equipamentos.
 - Os de entrada enviam dados para o computador: teclado, mouse, scanner, microfone, webcam, leitor biométrico e leitor de código de barras.
 - Os de saída recebem dados do computador e os apresentam: monitor, impressora, caixa de som, fone de ouvido e projetor.
 - E os híbridos, de entrada e saída, fazem as duas coisas: tela touchscreen, impressora multifuncional, modem, placa de rede, pen drive e headset com microfone.
-- Pegadinha: a tela sensível ao toque é de entrada e saída. Ela exibe a imagem, que é saída, e recebe o toque, que é entrada. O mesmo vale para a multifuncional, que imprime e digitaliza.
+- Pegadinha: a tela sensível ao toque é de entrada e saída: exibe a imagem e recebe o toque. A multifuncional também: imprime e digitaliza.
 
 ### Cena 20 · `monitores`
 
@@ -252,11 +251,11 @@
 
 **Narração:**
 
-- Nos monitores, o tipo mais comum é o LCD com iluminação LED: os cristais líquidos filtram a luz de LEDs posicionados atrás da tela.
+- Nos monitores, o mais comum é o LCD com iluminação LED: os cristais líquidos filtram a luz de LEDs que ficam atrás da tela.
 - Já no OLED, cada pixel emite a própria luz, com pretos perfeitos e alto contraste.
-- O tamanho é medido em polegadas, na diagonal da tela. Nas resoluções, o HD tem mil duzentos e oitenta por setecentos e vinte pixels, e o Full HD, mil novecentos e vinte por mil e oitenta.
+- O tamanho é medido em polegadas, na diagonal. Nas resoluções, o HD tem mil duzentos e oitenta por setecentos e vinte; o Full HD, mil novecentos e vinte por mil e oitenta.
 - O QHD tem dois mil quinhentos e sessenta por mil quatrocentos e quarenta. E o 4K UHD, três mil oitocentos e quarenta por dois mil cento e sessenta.
-- E a taxa de atualização indica quantas vezes por segundo a imagem é redesenhada, em hertz: por exemplo, sessenta ou cento e quarenta e quatro hertz.
+- E a taxa de atualização é quantas vezes por segundo a imagem é redesenhada, em hertz: sessenta ou cento e quarenta e quatro, por exemplo.
 
 ### Cena 21 · `outros`
 
@@ -277,10 +276,10 @@
 
 **Narração:**
 
-- E como os periféricos se conectam? O USB é o padrão universal. O USB dois ponto zero chega a quatrocentos e oitenta megabits por segundo. O USB três chega a cinco, dez ou vinte gigabits por segundo. E o USB-C é o conector reversível.
-- Para vídeo, o HDMI leva vídeo e áudio digitais para monitores e TVs. O DisplayPort também é vídeo digital, comum em monitores. E o VGA é vídeo analógico, um padrão antigo.
-- O RJ-45 é o conector do cabo de rede Ethernet. E o Bluetooth é uma conexão sem fio, de curto alcance, para mouse, teclado e fones.
-- E o Plug and Play é a capacidade do sistema de reconhecer e configurar um dispositivo automaticamente, assim que ele é conectado.
+- E as conexões? O USB é o padrão universal: o USB dois ponto zero chega a quatrocentos e oitenta megabits por segundo, e o USB três, a cinco, dez ou vinte gigabits. O USB-C é o conector reversível.
+- Para vídeo, o HDMI leva vídeo e áudio digitais a monitores e TVs. O DisplayPort também é digital, comum em monitores. E o VGA é analógico, um padrão antigo.
+- O RJ-45 é o conector do cabo de rede Ethernet. E o Bluetooth é sem fio, de curto alcance, para mouse, teclado e fones.
+- E Plug and Play é a capacidade do sistema de reconhecer e configurar o dispositivo automaticamente ao conectá-lo.
 
 ### Cena 23 · `impressoras`
 
@@ -288,10 +287,10 @@
 
 **Narração:**
 
-- Por fim, as impressoras. A matricial usa agulhas que batem em uma fita com tinta: é uma impressora de impacto. Por isso, imprime formulários em várias vias com carbono.
+- Por fim, as impressoras. Na matricial, agulhas batem em uma fita com tinta: é de impacto. Por isso, imprime formulários em várias vias com carbono.
 - A jato de tinta solta gotas de tinta líquida. É boa para fotos coloridas e tem baixo custo inicial.
 - A laser usa toner, um pó fixado no papel por calor. É rápida e tem baixo custo por página.
-- A térmica imprime com calor sobre um papel especial, como em cupons fiscais e etiquetas. E a impressora 3D deposita material camada por camada, criando objetos físicos.
+- A térmica usa calor sobre papel especial, em cupons fiscais e etiquetas. E a impressora 3D deposita material camada por camada, criando objetos físicos.
 - Memorize: a impressora que usa toner é a laser. E a que imprime em várias vias com carbono é a matricial, a única de impacto.
 
 ## Revisão
@@ -302,15 +301,15 @@
 
 **Narração:**
 
-- Hora de revisar o que você aprendeu.
-- No processador, o desempenho depende do clock, dos núcleos e da cache. E três vírgula cinco gigahertz são três vírgula cinco bilhões de ciclos por segundo.
-- Na hierarquia, do mais rápido para o mais lento: registradores, cache, RAM, SSD e HD.
-- A RAM é volátil; a ROM, não. E, ao ligar o computador, a BIOS ou a UEFI faz o POST.
-- O HD é magnético; o SSD usa memória flash, sem partes móveis.
-- Celulares usam a arquitetura RISC, da família ARM. E o RAID 1 é o espelhamento, mas RAID não substitui o backup.
-- Na energia, só o nobreak tem bateria.
-- A tela touchscreen é de entrada e saída, e o OCR transforma a imagem em texto editável.
-- E nas impressoras: toner é laser; várias vias com carbono, matricial.
+- Hora de revisar!
+- Processador: clock, núcleos e cache definem o desempenho. E giga é bilhão: três vírgula cinco gigahertz são três vírgula cinco bilhões de ciclos por segundo.
+- Memórias, da mais rápida para a mais lenta: registradores, cache, RAM, SSD e HD.
+- A RAM é volátil; a ROM, não. E, ao ligar, a BIOS ou a UEFI faz o POST.
+- O HD é magnético; o SSD é flash, sem partes móveis.
+- Celular usa RISC, da família ARM. E o RAID 1 espelha, mas não substitui backup.
+- Só o nobreak tem bateria.
+- Touchscreen é entrada e saída, e o OCR transforma imagem em texto editável.
+- E toner é laser; várias vias com carbono, matricial.
 
 ### Cena 25 · `encerramento`
 

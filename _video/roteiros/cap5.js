@@ -1027,7 +1027,7 @@ serie.capitulo({
           ["CPU", "Clock, núcleos e cache · 3,5 GHz = 3,5 bilhões de ciclos/s"],
           ["Memórias", "Registradores → cache → RAM → SSD → HD"],
           ["RAM × ROM", "RAM volátil · ROM não volátil · POST ao ligar"],
-          ["Armazenamento", "HD magnético · SSD flash, sem partes móveis"],
+          ["HD × SSD", "HD magnético · SSD flash, sem partes móveis"],
           ["RISC e RAID", "Celular = RISC (ARM) · RAID 1 = espelho ≠ backup"],
           ["Energia", "Só o nobreak tem bateria"],
           ["Periféricos", "Touchscreen = entrada e saída · OCR → texto"],
