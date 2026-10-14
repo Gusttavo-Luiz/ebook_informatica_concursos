@@ -11,11 +11,11 @@
 **Narração:**
 
 - Olá! Eu sou o Bit. Que bom ter você de volta!
-- Neste capítulo, vamos estudar Internet e Navegadores, um dos temas mais cobrados nas provas.
-- Você vai conhecer os tipos de rede, as topologias e os equipamentos que ligam tudo.
-- Vai ver os meios de transmissão, o Wi-Fi e os modelos OSI e TCP/IP.
-- Depois, vamos entender os endereços IP, o DNS, os protocolos e o correio eletrônico.
-- E, para fechar, a web, os navegadores e os mecanismos de busca. Vamos lá?
+- Neste capítulo: Internet e Navegadores, um dos temas mais cobrados nas provas.
+- Você vai ver os tipos de rede, as topologias e os equipamentos.
+- Os meios de transmissão, o Wi-Fi e os modelos OSI e TCP/IP.
+- Os endereços IP, o DNS, os protocolos e o e-mail.
+- E, para fechar, a web, os navegadores e a busca. Vamos lá?
 
 ## Redes de computadores
 
@@ -26,10 +26,10 @@
 **Narração:**
 
 - Uma rede de computadores é um conjunto de dispositivos interligados que compartilham dados e recursos, como arquivos, impressoras e o acesso à internet.
-- Pela abrangência, a menor é a PAN, a rede pessoal: alcança poucos metros, como o celular ligado a um fone Bluetooth.
-- A LAN é a rede local, de um prédio, escritório ou residência, como a rede de uma repartição pública. Sem fio, ela se chama WLAN, normalmente com Wi-Fi.
-- A MAN é a rede metropolitana: cobre uma cidade, como a rede que liga as unidades de uma prefeitura.
-- E a WAN alcança países e continentes. O maior exemplo é a própria internet.
+- Pela abrangência, a menor é a PAN, a rede pessoal: poucos metros, como o celular ligado a um fone Bluetooth.
+- A LAN é a rede local, de um prédio, escritório ou casa, como a de uma repartição pública. Sem fio, ela se chama WLAN, normalmente com Wi-Fi.
+- A MAN é a rede metropolitana, de uma cidade, como a que liga as unidades de uma prefeitura.
+- E a WAN alcança países e continentes, como a própria internet.
 
 ### Cena 3 · `intranet`
 
@@ -38,9 +38,9 @@
 **Narração:**
 
 - A internet é a rede mundial e pública, baseada no conjunto de protocolos TCP/IP.
-- A intranet é a rede privada de uma organização. Ela usa as mesmas tecnologias da internet, como TCP/IP, HTTP e navegador, mas com acesso restrito aos colaboradores.
-- Já a extranet é a parte da intranet liberada para usuários externos autorizados, como fornecedores e parceiros.
-- Pegadinha: dizer que a intranet não usa os protocolos da internet está errado. O que muda é o acesso, que é restrito. E dá até para acessar a intranet de fora, por uma VPN.
+- A intranet é a rede privada de uma organização: usa as mesmas tecnologias da internet, mas com acesso restrito aos colaboradores.
+- A extranet é a parte da intranet liberada a usuários externos autorizados, como fornecedores e parceiros.
+- Pegadinha: a intranet usa, sim, os protocolos da internet, como TCP/IP e HTTP, e o navegador. O que muda é o acesso, que é restrito. E dá para acessá-la de fora, por uma VPN.
 
 ### Cena 4 · `topologias`
 
@@ -48,9 +48,9 @@
 
 **Narração:**
 
-- A topologia é o desenho das ligações da rede. No barramento, todos ficam ligados a um único cabo, e uma falha nesse cabo derruba a rede.
+- Na topologia em barramento, todos ficam ligados a um único cabo, e uma falha nesse cabo derruba a rede.
 - No anel, cada dispositivo se liga ao próximo, fechando um círculo, e os dados passam por vários nós.
-- Na estrela, todos se ligam a um equipamento central, o switch. É a mais usada, mas, se o equipamento central falhar, a rede para.
+- Na estrela, todos se ligam a um equipamento central, o switch. É a mais usada, mas, se o centro falhar, a rede para.
 - E na malha, vários caminhos interligam os dispositivos: alta tolerância a falhas, mas custo maior.
 
 ### Cena 5 · `equipamentos`
@@ -59,12 +59,12 @@
 
 **Narração:**
 
-- Agora, os equipamentos. A placa de rede conecta o computador à rede, e cada uma tem um endereço físico único: o endereço MAC.
-- O hub, um equipamento antigo, repete os dados para todas as portas. Já o switch envia os dados só para a porta do destinatário, usando o endereço MAC.
+- A placa de rede conecta o computador à rede e tem um endereço físico único: o endereço MAC.
+- O hub, equipamento antigo, repete os dados para todas as portas. Já o switch envia só para a porta do destinatário, usando o MAC.
 - O roteador interliga redes diferentes e escolhe o caminho dos pacotes usando o endereço IP.
-- O modem converte o sinal da operadora, de fibra, cabo ou telefone, para a rede do usuário. E o ponto de acesso cria a rede sem fio Wi-Fi.
-- Os padrões de conexão mais citados são a Ethernet, rede cabeada do padrão IEEE 802.3, com conector RJ-45; o Wi-Fi, rede sem fio do padrão 802.11; e o Bluetooth, de curto alcance.
-- Memorize: o hub espalha para todos; o switch entrega para quem deve receber, dentro da rede local; e o roteador liga redes diferentes, como a sua casa e a internet.
+- O modem converte o sinal da operadora, de fibra, cabo ou telefone, para a rede do usuário. E o ponto de acesso cria a rede Wi-Fi.
+- Padrões mais citados: Ethernet, a rede cabeada, IEEE 802.3, com conector RJ-45; Wi-Fi, a rede sem fio, 802.11; e Bluetooth, de curto alcance.
+- Memorize: hub espalha para todos; switch entrega a quem deve receber, na rede local; roteador liga redes diferentes, como a sua casa e a internet.
 
 ## Meios de transmissão
 
@@ -74,10 +74,10 @@
 
 **Narração:**
 
-- Os dados viajam por diferentes meios. O par trançado leva sinais elétricos em pares de fios trançados, com conector RJ-45. É o mais usado em redes locais, com até cerca de 100 metros por cabo.
+- O par trançado leva sinais elétricos em pares de fios trançados, com conector RJ-45. É o mais usado em redes locais, com até cerca de 100 metros por cabo.
 - A fibra óptica transmite pulsos de luz: tem altíssima velocidade, alcança longas distâncias e é imune a interferência eletromagnética.
 - Ela pode ser monomodo, para longas distâncias, ou multimodo, para distâncias menores.
-- O cabo coaxial tem um condutor central blindado e é usado na TV a cabo e na internet por cabo.
+- O cabo coaxial tem condutor central blindado e é usado na TV e na internet a cabo.
 - E os meios sem fio usam ondas de rádio: Wi-Fi, Bluetooth, redes móveis 4G e 5G, e satélite.
 
 ### Cena 7 · `wifi`
@@ -86,11 +86,11 @@
 
 **Narração:**
 
-- No Wi-Fi, os padrões mais citados são o Wi-Fi 4, ou 802.11n; o Wi-Fi 5, ou 802.11ac; e o Wi-Fi 6, ou 802.11ax. Cada geração é mais rápida e eficiente.
+- No Wi-Fi, os padrões são o Wi-Fi 4, ou 802.11n; o Wi-Fi 5, ou 802.11ac; e o Wi-Fi 6, ou 802.11ax. Cada geração é mais rápida e eficiente.
 - A frequência de 2,4 GHz tem maior alcance e atravessa melhor as paredes, mas sofre mais interferência.
 - A de 5 GHz é mais rápida, porém tem menor alcance.
-- Na segurança, o WEP é obsoleto e inseguro. Use o WPA2 ou, de preferência, o WPA3, com senha forte.
-- Pegadinha: esconder o nome da rede, o SSID, não é uma medida de segurança eficaz, porque a rede continua detectável. O que protege é a criptografia WPA2 ou WPA3 com senha forte.
+- Na segurança, o WEP é obsoleto e inseguro. Use WPA2 ou, melhor, WPA3, com senha forte.
+- Pegadinha: esconder o nome da rede, o SSID, não protege, porque a rede continua detectável. O que protege é WPA2 ou WPA3 com senha forte.
 
 ### Cena 8 · `acesso`
 
@@ -98,11 +98,11 @@
 
 **Narração:**
 
-- E como a internet chega até você? O ADSL usa a linha telefônica e é uma tecnologia antiga e mais lenta. A internet a cabo usa a rede de TV a cabo.
-- A fibra óptica até a residência, o FTTH, é hoje a mais comum nas cidades. Há ainda a rede móvel, 4G e 5G, e o satélite, que atende locais remotos.
-- Quanto ao sentido, a transmissão pode ser simplex: só em um sentido, como na transmissão de rádio e TV.
-- Half-duplex: nos dois sentidos, mas um de cada vez, como no rádio comunicador, o walkie-talkie.
-- Ou full-duplex: nos dois sentidos ao mesmo tempo, como em uma ligação telefônica.
+- Para chegar até você, o ADSL usa a linha telefônica: é antigo e mais lento. A internet a cabo usa a rede de TV a cabo.
+- A fibra até a residência, o FTTH, é hoje a mais comum nas cidades. Há ainda a rede móvel, 4G e 5G, e o satélite, para locais remotos.
+- Quanto ao sentido, no modo simplex a transmissão vai em um só sentido, como no rádio e na TV.
+- No half-duplex, vai nos dois sentidos, mas um de cada vez, como no rádio comunicador, o walkie-talkie.
+- E no full-duplex, nos dois sentidos ao mesmo tempo, como numa ligação telefônica.
 
 ## Modelos OSI e TCP/IP
 
@@ -112,14 +112,14 @@
 
 **Narração:**
 
-- Para organizar a comunicação em rede, existe o modelo OSI, da ISO. Ele é um modelo de referência teórico, que divide a comunicação em sete camadas.
-- Na base, a camada física transmite os bits pelo meio físico: cabos, conectores, sinais e o hub.
-- A de enlace cuida da comunicação entre dispositivos vizinhos, com o endereço MAC. É a camada da Ethernet e do switch.
-- A camada de rede faz o endereçamento lógico e o roteamento. É a camada do IP e do roteador.
-- A de transporte faz a entrega fim a fim, a segmentação e o controle de erros, com o TCP e o UDP.
-- A de sessão abre, mantém e encerra a comunicação. E a de apresentação cuida do formato, da compressão e da criptografia, como o TLS.
-- No topo, a camada de aplicação oferece os serviços usados pelos programas, como HTTP, SMTP, FTP e DNS.
-- Memorize, da camada 1 para a 7: física, enlace, rede, transporte, sessão, apresentação e aplicação. A sigla é FERTSAA.
+- O modelo OSI, da ISO, é um modelo de referência teórico que divide a comunicação em sete camadas.
+- Na base, a camada física transmite os bits pelo meio: cabos, conectores, sinais e o hub.
+- A de enlace liga dispositivos vizinhos, com o endereço MAC: é a camada da Ethernet e do switch.
+- A de rede faz o endereçamento lógico e o roteamento: é a camada do IP e do roteador.
+- A de transporte faz a entrega fim a fim, a segmentação e o controle de erros, com TCP e UDP.
+- A de sessão abre, mantém e encerra a comunicação. A de apresentação cuida do formato, da compressão e da criptografia, como o TLS.
+- No topo, a de aplicação oferece serviços aos programas, como HTTP, SMTP, FTP e DNS.
+- Memorize, da camada 1 para a 7: física, enlace, rede, transporte, sessão, apresentação e aplicação. FERTSAA.
 
 ### Cena 10 · `tcpip`
 
@@ -127,10 +127,10 @@
 
 **Narração:**
 
-- Na prática, a internet funciona com o modelo TCP/IP, que agrupa essas funções em apenas quatro camadas.
-- A camada de aplicação do TCP/IP reúne aplicação, apresentação e sessão do OSI. É onde ficam HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS e SSH.
-- A de transporte equivale à do OSI, com o TCP e o UDP. E a camada de internet equivale à de rede, com o IP e o ICMP.
-- Por fim, a camada de acesso à rede junta enlace e física, com a Ethernet e o Wi-Fi.
+- Na prática, a internet usa o modelo TCP/IP, com apenas quatro camadas.
+- A de aplicação reúne aplicação, apresentação e sessão do OSI. Nela estão HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS e SSH.
+- A de transporte equivale à do OSI, com TCP e UDP. A de internet equivale à de rede, com IP e ICMP.
+- E a de acesso à rede junta enlace e física, com Ethernet e Wi-Fi.
 
 ### Cena 11 · `tcp-udp`
 
@@ -138,11 +138,11 @@
 
 **Narração:**
 
-- Na camada de transporte, a comparação favorita das bancas: TCP contra UDP. O TCP é orientado à conexão: estabelece a conexão antes de enviar.
-- Ele garante a entrega e a ordem dos pacotes, reenviando os perdidos. Por isso, é mais lento, e é usado em páginas web, e-mail e transferência de arquivos.
+- TCP ou UDP? O TCP é orientado à conexão: estabelece a conexão antes de enviar.
+- Ele garante a entrega e a ordem dos pacotes, reenviando os perdidos. Por isso, é mais lento. É usado em páginas web, e-mail e arquivos.
 - O UDP é sem conexão e não garante entrega nem ordem. Em troca, é mais rápido, com menos sobrecarga.
-- Ele é usado no streaming ao vivo, nos jogos online, nas chamadas de voz e no DNS.
-- Pegadinha: o UDP não garante a entrega dos pacotes; quem garante é o TCP. O UDP é usado quando a velocidade importa mais do que a confiabilidade.
+- Ele aparece no streaming ao vivo, nos jogos online, nas chamadas de voz e no DNS.
+- Pegadinha: quem garante a entrega é o TCP, não o UDP. O UDP é usado quando a velocidade importa mais do que a confiabilidade.
 
 ## Endereçamento IP
 
@@ -152,10 +152,10 @@
 
 **Narração:**
 
-- Cada dispositivo conectado a uma rede TCP/IP recebe um endereço IP, que o identifica e permite que os pacotes cheguem ao destino.
+- Cada dispositivo numa rede TCP/IP recebe um endereço IP, que o identifica e permite que os pacotes cheguem ao destino.
 - O IPv4 tem 32 bits, escritos como quatro números decimais de 0 a 255, separados por pontos. Por exemplo: 192.168.0.1.
-- São cerca de 4,3 bilhões de endereços, e eles já se esgotaram.
-- O IPv6 tem 128 bits, escritos em oito grupos hexadecimais separados por dois-pontos. A quantidade de endereços é praticamente ilimitada.
+- São cerca de 4,3 bilhões de endereços, já esgotados.
+- O IPv6 tem 128 bits, em oito grupos hexadecimais separados por dois-pontos, e uma quantidade praticamente ilimitada de endereços.
 - Pegadinha: o IPv6 substitui o IPv4, e não o TCP. E o número 256 nunca aparece em um IPv4, porque cada parte vai de 0 a 255.
 
 ### Cena 13 · `ip-privado`
@@ -165,9 +165,9 @@
 **Narração:**
 
 - O IP público é visível na internet e é fornecido pelo provedor.
-- O IP privado é usado dentro das redes locais e não é roteado na internet. As faixas privadas começam com 10, de 172.16 a 172.31, e 192.168.
-- E como vários aparelhos usam a internet com um único IP público? Com o NAT, um recurso do roteador que permite que eles compartilhem esse IP.
-- E quem distribui os endereços IP automaticamente para os dispositivos da rede é o protocolo DHCP.
+- O IP privado é usado nas redes locais e não é roteado na internet. As faixas privadas são 10, 172.16 a 172.31, e 192.168.
+- Vários aparelhos compartilham um único IP público graças ao NAT, um recurso do roteador.
+- E quem distribui os IPs automaticamente na rede é o DHCP.
 
 ### Cena 14 · `mascara`
 
@@ -175,13 +175,13 @@
 
 **Narração:**
 
-- A máscara de sub-rede indica qual parte do IP identifica a rede e qual identifica o dispositivo. A máscara 255.255.255.0, ou /24, indica que os três primeiros números são da rede.
-- O gateway padrão é o endereço do roteador que leva o tráfego para fora da rede local, normalmente para a internet.
-- E o endereço 127.0.0.1, chamado de loopback ou localhost, representa o próprio computador.
-- As provas também cobram as classes do IPv4. Na classe A, o primeiro número vai de 1 a 126, com máscara padrão /8.
+- A máscara de sub-rede indica que parte do IP é a rede e que parte é o dispositivo. Na máscara 255.255.255.0, ou /24, os três primeiros números são da rede.
+- O gateway padrão é o roteador que leva o tráfego para fora da rede local, normalmente para a internet.
+- E o 127.0.0.1, o loopback ou localhost, é o próprio computador.
+- As classes do IPv4 também caem. Na classe A, o primeiro número vai de 1 a 126, com máscara padrão /8.
 - Na classe B, vai de 128 a 191, com /16. E na classe C, de 192 a 223, com /24.
-- As classes D, de 224 a 239, para multicast, e E, de 240 a 255, experimental, não são usadas para endereçar computadores.
-- Hoje as redes usam máscaras flexíveis, o CIDR, mas as classes continuam aparecendo em provas.
+- As classes D, de 224 a 239, multicast, e E, de 240 a 255, experimental, não endereçam computadores.
+- Hoje se usam máscaras flexíveis, o CIDR, mas as classes ainda caem em prova.
 
 ### Cena 15 · `comandos`
 
@@ -189,9 +189,9 @@
 
 **Narração:**
 
-- Para diagnosticar a rede, existem alguns comandos. O ping testa se um endereço responde e mede o tempo de resposta, usando o protocolo ICMP.
+- Para diagnosticar a rede, o ping testa se um endereço responde e mede o tempo de resposta, usando o ICMP.
 - O ipconfig, no Windows, ou ip addr, no Linux, mostra o IP, a máscara e o gateway do computador.
-- O tracert, no Windows, ou traceroute, no Linux, mostra o caminho, ou seja, os roteadores até o destino.
+- O tracert, no Windows, ou traceroute, no Linux, mostra o caminho: os roteadores até o destino.
 - O nslookup consulta o DNS para descobrir o IP de um nome. E o netstat lista as conexões de rede ativas.
 
 ## DNS e protocolos
@@ -202,9 +202,9 @@
 
 **Narração:**
 
-- Quando você digita o nome de um site, entra em ação o DNS, o sistema de nomes de domínio. Ele traduz nomes fáceis de lembrar em endereços IP.
-- Sem ele, seria preciso digitar o IP de cada site. Então: você digita o nome, o DNS traduz para o IP, e o navegador exibe a página.
-- O endereço completo de um recurso na web é a URL. Veja as partes deste exemplo.
+- Ao digitar o nome de um site, entra em ação o DNS, o sistema de nomes de domínio, que traduz nomes fáceis de lembrar em endereços IP.
+- Sem ele, seria preciso digitar o IP de cada site. Você digita o nome, o DNS traduz para o IP, e o navegador exibe a página.
+- O endereço completo de um recurso na web é a URL. Veja suas partes.
 - O https é o protocolo. O www.gov.br é o nome do domínio, resolvido pelo DNS. O ponto br é o domínio de primeiro nível do Brasil. E o resto é o caminho até a página.
 - Outros domínios brasileiros: gov.br, governo; edu.br, ensino; com.br, comercial; org.br, organizações sem fins lucrativos; e jus.br, Judiciário.
 
@@ -214,11 +214,11 @@
 
 **Narração:**
 
-- Cada protocolo de aplicação tem sua porta padrão. O HTTP transfere páginas web sem criptografia, na porta 80. O HTTPS é o HTTP com criptografia TLS, o cadeado do navegador, na porta 443.
-- O FTP transfere arquivos, nas portas 20 e 21. O SSH faz acesso remoto seguro, com criptografia, na porta 22. Já o Telnet faz acesso remoto sem criptografia, na porta 23, e é inseguro.
-- Para o e-mail, o SMTP envia mensagens, na porta 25, ou 587 para envio autenticado.
-- O POP3 recebe na porta 110, ou 995 com criptografia. E o IMAP, na porta 143, ou 993 com criptografia.
-- Fechando a lista: o DNS usa a porta 53, e o DHCP, as portas 67 e 68.
+- Cada protocolo tem uma porta padrão. O HTTP leva páginas web sem criptografia, na porta 80. O HTTPS é o HTTP com TLS, o cadeado, na porta 443.
+- O FTP transfere arquivos, nas portas 20 e 21. O SSH faz acesso remoto seguro, na porta 22. Já o Telnet, na 23, faz acesso remoto sem criptografia: é inseguro.
+- O SMTP envia e-mails, na porta 25, ou 587 para envio autenticado.
+- O POP3 recebe na porta 110, ou 995 com criptografia. O IMAP, na 143, ou 993 com criptografia.
+- E o DNS usa a porta 53, e o DHCP, as portas 67 e 68.
 - Memorize: SMTP é Sua Mensagem Tá Partindo, ou seja, envio. POP3 e IMAP servem para receber.
 
 ## Correio eletrônico
@@ -229,13 +229,13 @@
 
 **Narração:**
 
-- Para receber e-mails, existem dois protocolos. O POP3 baixa as mensagens para o dispositivo e, na configuração padrão, as remove do servidor. É útil para guardar os e-mails só em um computador.
-- No IMAP, as mensagens ficam no servidor, e o estado delas, como lida, apagada ou pasta, é sincronizado. É o ideal para quem usa o mesmo e-mail no celular e no computador.
-- Você pode ler o e-mail por um webmail, no navegador, como o Gmail na web, ou por um cliente de e-mail instalado, como o Outlook e o Thunderbird.
-- Ao escrever uma mensagem, o campo Para recebe os destinatários principais.
+- Para receber e-mails, há dois protocolos. O POP3 baixa as mensagens para o dispositivo e, por padrão, as remove do servidor. É útil para guardar tudo em um só computador.
+- No IMAP, as mensagens ficam no servidor, e o estado delas, como lida, apagada ou pasta, é sincronizado. Ideal para quem usa o e-mail no celular e no computador.
+- O e-mail pode ser lido por um webmail, no navegador, como o Gmail na web, ou por um cliente instalado, como o Outlook e o Thunderbird.
+- Ao escrever, o campo Para recebe os destinatários principais.
 - No Cc, com cópia, vão os destinatários em cópia, e todos veem quem foi copiado.
 - Já no Cco, com cópia oculta, os demais destinatários não veem quem recebeu.
-- Pegadinha: as bancas trocam os papéis. O SMTP envia; o POP3 e o IMAP recebem. E quem está em Cco vê os destinatários do Para e do Cc, mas ninguém vê quem está em Cco.
+- Pegadinha: SMTP envia; POP3 e IMAP recebem. E quem está em Cco vê os destinatários do Para e do Cc, mas ninguém vê quem está em Cco.
 
 ## Web e serviços
 
@@ -245,11 +245,11 @@
 
 **Narração:**
 
-- A World Wide Web, ou WWW, é o sistema de páginas ligadas por hiperlinks, acessadas pelos navegadores via HTTP ou HTTPS.
+- A World Wide Web, a WWW, é o sistema de páginas ligadas por hiperlinks, acessadas pelo navegador via HTTP ou HTTPS.
 - Ela é um dos serviços da internet, ao lado do e-mail, da transferência de arquivos e de outros.
 - As páginas são estruturadas em HTML, uma linguagem de marcação. O CSS cuida da aparência, e o JavaScript, da interatividade.
-- Na Web 2.0, os usuários passaram a produzir conteúdo e interagir, com redes sociais, blogs e wikis.
-- Pegadinha: internet e web não são sinônimos. A internet é a rede física e lógica mundial; a web é um serviço que funciona sobre ela.
+- Na Web 2.0, os usuários passaram a produzir conteúdo e interagir: redes sociais, blogs e wikis.
+- Pegadinha: internet e web não são sinônimos. A internet é a rede física e lógica mundial; a web é um serviço sobre ela.
 
 ### Cena 20 · `deep-web`
 
@@ -257,11 +257,11 @@
 
 **Narração:**
 
-- Pense na web como um iceberg. A surface web é a parte indexada pelos buscadores: a ponta que todo mundo vê.
+- Pense num iceberg. A surface web é a parte indexada pelos buscadores, a ponta que todos veem.
 - A deep web é o conteúdo não indexado, como e-mails, bancos de dados e áreas protegidas por login.
-- E a dark web é uma pequena parte da deep web, acessível só com ferramentas específicas, como o Tor.
-- A internet também oferece outros serviços. O VoIP, voz sobre IP, faz chamadas de voz pela internet.
-- E no P2P, ponto a ponto, os computadores trocam arquivos diretamente entre si, sem um servidor central, como no BitTorrent.
+- A dark web é uma pequena parte da deep web, acessível só com ferramentas específicas, como o Tor.
+- Outro serviço da internet é o VoIP, voz sobre IP: chamadas de voz pela internet.
+- E no P2P, ponto a ponto, os computadores trocam arquivos diretamente, sem servidor central, como no BitTorrent.
 
 ## Navegadores
 
@@ -271,12 +271,12 @@
 
 **Narração:**
 
-- Os navegadores, ou browsers, são os programas que acessam as páginas da web: Google Chrome, Microsoft Edge, Mozilla Firefox e Safari.
+- Navegadores, ou browsers, são os programas que acessam a web: Google Chrome, Microsoft Edge, Mozilla Firefox e Safari.
 - O histórico registra as páginas visitadas, e os favoritos guardam páginas para acesso rápido.
-- Os cookies são pequenos arquivos que os sites gravam no navegador para lembrar login, preferências e itens do carrinho. Também podem ser usados para rastrear o usuário.
-- O cache guarda cópias de partes das páginas no computador, para carregar mais rápido. E as extensões são complementos que adicionam funções.
-- Na navegação privativa, chamada de anônima no Chrome, InPrivate no Edge e privativa no Firefox, o navegador apaga, ao fechar a janela, o histórico, os cookies e os dados de formulários daquela sessão.
-- Pegadinha: ela não deixa você invisível. O provedor, a rede da empresa e os sites visitados continuam podendo identificar o acesso. E os downloads e favoritos criados continuam salvos.
+- Cookies são pequenos arquivos que os sites gravam no navegador para lembrar login, preferências e carrinho. Também podem rastrear o usuário.
+- O cache guarda cópias de partes das páginas no computador, para carregar mais rápido. E as extensões adicionam funções ao navegador.
+- A navegação privativa, anônima no Chrome, InPrivate no Edge e privativa no Firefox, apaga histórico, cookies e dados de formulários da sessão ao fechar a janela.
+- Pegadinha: ela não deixa você invisível. Provedor, rede da empresa e sites visitados ainda identificam o acesso. E downloads e favoritos criados continuam salvos.
 
 ### Cena 22 · `atalhos`
 
@@ -284,10 +284,10 @@
 
 **Narração:**
 
-- Agora, os atalhos. Ctrl + T abre uma nova aba, Ctrl + W fecha a aba atual, e Ctrl + Shift + T reabre a última aba fechada.
-- Ctrl + Shift + N abre a janela anônima no Chrome e a InPrivate no Edge. No Firefox, a janela privativa é Ctrl + Shift + P.
-- Ctrl + H abre o histórico, Ctrl + J mostra os downloads, e Ctrl + D adiciona a página aos favoritos.
-- Ctrl + F localiza um texto na página, e F5 recarrega a página.
+- Ctrl + T abre uma nova aba, Ctrl + W fecha a aba atual, e Ctrl + Shift + T reabre a última aba fechada.
+- Ctrl + Shift + N abre a janela anônima no Chrome e a InPrivate no Edge; no Firefox, a privativa é Ctrl + Shift + P.
+- Ctrl + H abre o histórico, Ctrl + J, os downloads, e Ctrl + D adiciona aos favoritos.
+- Ctrl + F localiza um texto na página, e F5 recarrega.
 
 ### Cena 23 · `privacidade`
 
@@ -295,12 +295,12 @@
 
 **Narração:**
 
-- Para a privacidade, Ctrl + Shift + Delete abre a limpeza dos dados de navegação, que apaga histórico, cookies, cache e senhas salvas.
-- O bloqueador de pop-ups impede que janelas surjam sem você pedir. E o gerenciador de senhas guarda e preenche senhas, e pode sugerir senhas fortes.
-- Com a sincronização, ao entrar com uma conta, seus favoritos, histórico e senhas ficam disponíveis em outros dispositivos.
-- Os cookies de terceiros são criados por domínios diferentes do site visitado, geralmente para publicidade e rastreamento, e podem ser bloqueados nas configurações.
-- O aviso Não seguro indica uma página sem HTTPS: nela, não digite senhas nem dados pessoais.
-- E atenção: o cadeado e o HTTPS indicam que a conexão é criptografada, não que o site é confiável. Sites de phishing também podem usar HTTPS.
+- Ctrl + Shift + Delete limpa os dados de navegação: histórico, cookies, cache e senhas salvas.
+- O bloqueador de pop-ups impede janelas que você não pediu. O gerenciador de senhas guarda, preenche e sugere senhas fortes.
+- Com a sincronização, ao entrar com uma conta, favoritos, histórico e senhas ficam disponíveis em outros dispositivos.
+- Cookies de terceiros vêm de domínios diferentes do site visitado, geralmente para publicidade e rastreamento, e podem ser bloqueados.
+- O aviso Não seguro indica página sem HTTPS: nela, não digite senhas nem dados pessoais.
+- Atenção: o cadeado e o HTTPS indicam conexão criptografada, não um site confiável. Sites de phishing também podem usar HTTPS.
 
 ## Mecanismos de busca
 
@@ -310,11 +310,11 @@
 
 **Narração:**
 
-- Os mecanismos de busca, como Google, Bing e DuckDuckGo, indexam páginas da web e permitem encontrá-las por palavras-chave.
-- Operadores refinam a pesquisa. As aspas buscam a frase exata, e o sinal de menos exclui um termo, como em jaguar, menos carro.
+- Mecanismos de busca, como Google, Bing e DuckDuckGo, indexam páginas da web e permitem encontrá-las por palavras-chave.
+- Operadores refinam a busca. As aspas buscam a frase exata, e o sinal de menos exclui um termo: jaguar, menos carro.
 - O operador site: busca só em um site ou domínio, e o filetype: busca um tipo de arquivo, como PDF.
 - O OR busca um termo ou outro, o asterisco é um curinga para palavras desconhecidas, e o intitle: procura o termo no título da página.
-- Pegadinha: o Google não é um navegador. Ele é um mecanismo de busca; o navegador da empresa é o Chrome. Navegador e buscador são coisas diferentes.
+- Pegadinha: o Google é um mecanismo de busca, não um navegador. O navegador da empresa é o Chrome. Navegador e buscador são coisas diferentes.
 
 ## Revisão
 
@@ -325,13 +325,13 @@
 **Narração:**
 
 - Hora de revisar o que você aprendeu.
-- Redes: PAN, LAN, MAN e WAN vão do alcance pessoal ao mundial, e a intranet usa as tecnologias da internet, com acesso restrito.
-- Equipamentos: o hub espalha, o switch entrega usando o MAC, e o roteador liga redes diferentes usando o IP.
-- Transmissão: a fibra óptica usa luz e é imune a interferência, e o full-duplex transmite nos dois sentidos ao mesmo tempo.
-- Modelos: o OSI tem sete camadas, e o TCP/IP, quatro. O TCP garante a entrega; o UDP é mais rápido.
-- Endereços: o IPv4 tem 32 bits, e o IPv6, 128. O DHCP distribui os IPs, o DNS traduz nomes, e 127.0.0.1 é o próprio computador.
-- Protocolos: o HTTPS usa a porta 443. O SMTP envia, o POP3 baixa, o IMAP sincroniza, e ninguém vê quem está em Cco.
-- E a web é um serviço da internet, a navegação anônima não deixa ninguém invisível, e o Google é buscador, não navegador.
+- PAN, LAN, MAN e WAN vão do pessoal ao mundial, e a intranet usa as tecnologias da internet, com acesso restrito.
+- Hub espalha, switch entrega pelo MAC, e roteador liga redes diferentes pelo IP.
+- A fibra usa luz e é imune a interferência; o full-duplex vai nos dois sentidos ao mesmo tempo.
+- O OSI tem sete camadas; o TCP/IP, quatro. O TCP garante a entrega; o UDP é mais rápido.
+- O IPv4 tem 32 bits; o IPv6, 128. O DHCP distribui os IPs, o DNS traduz nomes, e 127.0.0.1 é o próprio computador.
+- O HTTPS usa a porta 443. O SMTP envia, o POP3 baixa, o IMAP sincroniza, e ninguém vê quem está em Cco.
+- E a web é um serviço da internet, a navegação anônima não torna ninguém invisível, e o Google é buscador, não navegador.
 
 ### Cena 26 · `encerramento`
 

@@ -174,7 +174,7 @@ const PRONUNCIA = [
   ["Cco", "cê cê ó"],
   ["Cc", "cê cê"],
   ["CIDR", "sáider"],
-  ["FERTSAA", "éfe, ê, érre, tê, ésse, á, á"],
+  ["FERTSAA", "éfe, e, érre, tê, ésse, á, á"],
   ["Office", "ófis"],
 ];
 
@@ -233,11 +233,11 @@ const cenas = [
     bit: { x: 470, y: 990, s: 1.3 },
     falas: [
       "Olá! Eu sou o Bit. Que bom ter você de volta!",
-      "Neste capítulo, vamos estudar Internet e Navegadores, um dos temas mais cobrados nas provas.",
-      "Você vai conhecer os tipos de rede, as topologias e os equipamentos que ligam tudo.",
-      "Vai ver os meios de transmissão, o Wi-Fi e os modelos OSI e TCP/IP.",
-      "Depois, vamos entender os endereços IP, o DNS, os protocolos e o correio eletrônico.",
-      "E, para fechar, a web, os navegadores e os mecanismos de busca. Vamos lá?",
+      "Neste capítulo: Internet e Navegadores, um dos temas mais cobrados nas provas.",
+      "Você vai ver os tipos de rede, as topologias e os equipamentos.",
+      "Os meios de transmissão, o Wi-Fi e os modelos OSI e TCP/IP.",
+      "Os endereços IP, o DNS, os protocolos e o e-mail.",
+      "E, para fechar, a web, os navegadores e a busca. Vamos lá?",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -262,10 +262,10 @@ const cenas = [
     bit: BIT_CANTO,
     falas: [
       "Uma rede de computadores é um conjunto de dispositivos interligados que compartilham dados e recursos, como arquivos, impressoras e o acesso à internet.",
-      "Pela abrangência, a menor é a PAN, a rede pessoal: alcança poucos metros, como o celular ligado a um fone Bluetooth.",
-      "A LAN é a rede local, de um prédio, escritório ou residência, como a rede de uma repartição pública. Sem fio, ela se chama WLAN, normalmente com Wi-Fi.",
-      "A MAN é a rede metropolitana: cobre uma cidade, como a rede que liga as unidades de uma prefeitura.",
-      "E a WAN alcança países e continentes. O maior exemplo é a própria internet.",
+      "Pela abrangência, a menor é a PAN, a rede pessoal: poucos metros, como o celular ligado a um fone Bluetooth.",
+      "A LAN é a rede local, de um prédio, escritório ou casa, como a de uma repartição pública. Sem fio, ela se chama WLAN, normalmente com Wi-Fi.",
+      "A MAN é a rede metropolitana, de uma cidade, como a que liga as unidades de uma prefeitura.",
+      "E a WAN alcança países e continentes, como a própria internet.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -314,9 +314,9 @@ const cenas = [
     bit: BIT_CANTO,
     falas: [
       "A internet é a rede mundial e pública, baseada no conjunto de protocolos TCP/IP.",
-      "A intranet é a rede privada de uma organização. Ela usa as mesmas tecnologias da internet, como TCP/IP, HTTP e navegador, mas com acesso restrito aos colaboradores.",
-      "Já a extranet é a parte da intranet liberada para usuários externos autorizados, como fornecedores e parceiros.",
-      "Pegadinha: dizer que a intranet não usa os protocolos da internet está errado. O que muda é o acesso, que é restrito. E dá até para acessar a intranet de fora, por uma VPN.",
+      "A intranet é a rede privada de uma organização: usa as mesmas tecnologias da internet, mas com acesso restrito aos colaboradores.",
+      "A extranet é a parte da intranet liberada a usuários externos autorizados, como fornecedores e parceiros.",
+      "Pegadinha: a intranet usa, sim, os protocolos da internet, como TCP/IP e HTTP, e o navegador. O que muda é o acesso, que é restrito. E dá para acessá-la de fora, por uma VPN.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -342,9 +342,9 @@ const cenas = [
     secao: "Redes de computadores",
     bit: BIT_CANTO,
     falas: [
-      "A topologia é o desenho das ligações da rede. No barramento, todos ficam ligados a um único cabo, e uma falha nesse cabo derruba a rede.",
+      "Na topologia em barramento, todos ficam ligados a um único cabo, e uma falha nesse cabo derruba a rede.",
       "No anel, cada dispositivo se liga ao próximo, fechando um círculo, e os dados passam por vários nós.",
-      "Na estrela, todos se ligam a um equipamento central, o switch. É a mais usada, mas, se o equipamento central falhar, a rede para.",
+      "Na estrela, todos se ligam a um equipamento central, o switch. É a mais usada, mas, se o centro falhar, a rede para.",
       "E na malha, vários caminhos interligam os dispositivos: alta tolerância a falhas, mas custo maior.",
     ],
     montar(c) {
@@ -361,7 +361,7 @@ const cenas = [
         { linhas: pares.map(([a, b]) => `M${a[0]} ${a[1]}L${b[0]} ${b[1]}`), nos: p5 },
       ];
       const info = [
-        ["Barramento", "Todos em um <b>único cabo</b>. Falha no cabo derruba a rede.", em(0, "No barramento")],
+        ["Barramento", "Todos em um <b>único cabo</b>. Falha no cabo derruba a rede.", em(0, "barramento")],
         ["Anel", "Cada um ligado ao <b>próximo</b>. Dados passam por vários nós.", c.t(1)],
         ["Estrela", "Todos ligados a um <b>switch</b> central. Se ele falhar, a rede para.", c.t(2)],
         ["Malha", "<b>Vários caminhos</b>: alta tolerância a falhas, custo maior.", c.t(3)],
@@ -390,12 +390,12 @@ const cenas = [
     secao: "Redes de computadores",
     bit: BIT_CANTO,
     falas: [
-      "Agora, os equipamentos. A placa de rede conecta o computador à rede, e cada uma tem um endereço físico único: o endereço MAC.",
-      "O hub, um equipamento antigo, repete os dados para todas as portas. Já o switch envia os dados só para a porta do destinatário, usando o endereço MAC.",
+      "A placa de rede conecta o computador à rede e tem um endereço físico único: o endereço MAC.",
+      "O hub, equipamento antigo, repete os dados para todas as portas. Já o switch envia só para a porta do destinatário, usando o MAC.",
       "O roteador interliga redes diferentes e escolhe o caminho dos pacotes usando o endereço IP.",
-      "O modem converte o sinal da operadora, de fibra, cabo ou telefone, para a rede do usuário. E o ponto de acesso cria a rede sem fio Wi-Fi.",
-      "Os padrões de conexão mais citados são a Ethernet, rede cabeada do padrão IEEE 802.3, com conector RJ-45; o Wi-Fi, rede sem fio do padrão 802.11; e o Bluetooth, de curto alcance.",
-      "Memorize: o hub espalha para todos; o switch entrega para quem deve receber, dentro da rede local; e o roteador liga redes diferentes, como a sua casa e a internet.",
+      "O modem converte o sinal da operadora, de fibra, cabo ou telefone, para a rede do usuário. E o ponto de acesso cria a rede Wi-Fi.",
+      "Padrões mais citados: Ethernet, a rede cabeada, IEEE 802.3, com conector RJ-45; Wi-Fi, a rede sem fio, 802.11; e Bluetooth, de curto alcance.",
+      "Memorize: hub espalha para todos; switch entrega a quem deve receber, na rede local; roteador liga redes diferentes, como a sua casa e a internet.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -410,9 +410,9 @@ const cenas = [
       ];
       eq.forEach((k, i) => cartaoLado(c, k[0], k[1], k[2], { left: 140 + (i % 3) * 470, top: 300 + Math.floor(i / 3) * 205, width: 450, height: 190 }, k[3], { h3: 28, p: 22 }));
       const padroes = [
-        ["cabo", "Ethernet", "cabeada · IEEE 802.3 · RJ-45", em(4, "a Ethernet")],
-        ["wifi", "Wi-Fi", "sem fio · IEEE 802.11", em(4, "o Wi-Fi")],
-        ["celular", "Bluetooth", "curto alcance", em(4, "e o Bluetooth")],
+        ["cabo", "Ethernet", "cabeada · IEEE 802.3 · RJ-45", em(4, "Ethernet")],
+        ["wifi", "Wi-Fi", "sem fio · IEEE 802.11", em(4, "Wi-Fi, a rede")],
+        ["celular", "Bluetooth", "curto alcance", em(4, "e Bluetooth")],
       ].map((k, i) => cartaoLado(c, k[0], k[1], k[2], { left: 140 + i * 470, top: 730, width: 450, height: 130 }, k[3], { icone: 64, h3: 28, p: 22, padding: "18px 24px" }));
       padroes.forEach((e) => c.sai(e, c.t(5) - 0.4));
       c.quadro("dica", "<b>Hub</b> espalha para todos · <b>switch</b> entrega a quem deve receber, na rede local · <b>roteador</b> liga redes diferentes (casa ↔ internet).", { left: 140, top: 725, width: 1400 }, c.t(5)).querySelector("p").style.fontSize = "34px";
@@ -426,26 +426,26 @@ const cenas = [
     secao: "Meios de transmissão",
     bit: BIT_CANTO,
     falas: [
-      "Os dados viajam por diferentes meios. O par trançado leva sinais elétricos em pares de fios trançados, com conector RJ-45. É o mais usado em redes locais, com até cerca de 100 metros por cabo.",
+      "O par trançado leva sinais elétricos em pares de fios trançados, com conector RJ-45. É o mais usado em redes locais, com até cerca de 100 metros por cabo.",
       "A fibra óptica transmite pulsos de luz: tem altíssima velocidade, alcança longas distâncias e é imune a interferência eletromagnética.",
       "Ela pode ser monomodo, para longas distâncias, ou multimodo, para distâncias menores.",
-      "O cabo coaxial tem um condutor central blindado e é usado na TV a cabo e na internet por cabo.",
+      "O cabo coaxial tem condutor central blindado e é usado na TV e na internet a cabo.",
       "E os meios sem fio usam ondas de rádio: Wi-Fi, Bluetooth, redes móveis 4G e 5G, e satélite.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
       c.titulo("Meios de transmissão", "Por onde os dados viajam", TITULO, c.t(0), { medio: true });
       const meios = [
-        ["cabo", "Par trançado (UTP)", "Sinais <b>elétricos</b> em fios trançados · RJ-45 · o <b>mais usado</b> em redes locais · até cerca de <b>100 m</b>", em(0, "O par trançado")],
+        ["cabo", "Par trançado (UTP)", "Sinais <b>elétricos</b> em fios trançados · RJ-45 · o <b>mais usado</b> em redes locais · até cerca de <b>100&nbsp;m</b>", em(0, "O par trançado")],
         ["fibra", "Fibra óptica", "Pulsos de <b>luz</b> · altíssima velocidade · longas distâncias · <b>imune</b> a interferência eletromagnética", c.t(1)],
         ["coaxial", "Cabo coaxial", "Condutor central <b>blindado</b> · TV a cabo e internet por cabo", c.t(3)],
         ["wifi", "Sem fio", "Ondas de <b>rádio</b> · Wi-Fi, Bluetooth, 4G e 5G, satélite", c.t(4)],
       ];
       meios.forEach((k, i) => {
-        const e = c.cartao({ icone: k[0], titulo: k[1], texto: k[2] }, { left: 140 + i * 415, top: 300, width: 385, height: 440, padding: "30px" }, k[3]);
+        const e = c.cartao({ icone: k[0], titulo: k[1], texto: k[2] }, { left: 140 + i * 415, top: 300, width: 385, height: 430, padding: "30px" }, k[3]);
         e.querySelector("h3").style.fontSize = "30px";
-        e.querySelector("p").style.fontSize = "24px";
-        e.querySelector(".icone").style.cssText = "width:84px;height:84px;margin-bottom:16px";
+        e.querySelector("p").style.fontSize = "26px";
+        e.querySelector(".icone").style.cssText = "width:96px;height:96px;margin-bottom:16px";
       });
       pilula(c, "<b>monomodo</b> → longas distâncias", { left: 555, top: 766, fontSize: "26px" }, em(2, "monomodo"), "baixo");
       pilula(c, "<b>multimodo</b> → distâncias menores", { left: 555, top: 836, fontSize: "26px" }, em(2, "multimodo"), "baixo");
@@ -457,11 +457,11 @@ const cenas = [
     secao: "Meios de transmissão",
     bit: BIT_CANTO,
     falas: [
-      "No Wi-Fi, os padrões mais citados são o Wi-Fi 4, ou 802.11n; o Wi-Fi 5, ou 802.11ac; e o Wi-Fi 6, ou 802.11ax. Cada geração é mais rápida e eficiente.",
+      "No Wi-Fi, os padrões são o Wi-Fi 4, ou 802.11n; o Wi-Fi 5, ou 802.11ac; e o Wi-Fi 6, ou 802.11ax. Cada geração é mais rápida e eficiente.",
       "A frequência de 2,4 GHz tem maior alcance e atravessa melhor as paredes, mas sofre mais interferência.",
       "A de 5 GHz é mais rápida, porém tem menor alcance.",
-      "Na segurança, o WEP é obsoleto e inseguro. Use o WPA2 ou, de preferência, o WPA3, com senha forte.",
-      "Pegadinha: esconder o nome da rede, o SSID, não é uma medida de segurança eficaz, porque a rede continua detectável. O que protege é a criptografia WPA2 ou WPA3 com senha forte.",
+      "Na segurança, o WEP é obsoleto e inseguro. Use WPA2 ou, melhor, WPA3, com senha forte.",
+      "Pegadinha: esconder o nome da rede, o SSID, não protege, porque a rede continua detectável. O que protege é WPA2 ou WPA3 com senha forte.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -469,7 +469,7 @@ const cenas = [
       const rot = (txt, x, t) => c.entra(c.novo(`<div class="abs rotulo" style="left:${x}px;top:300px">${txt}</div>`), t, "fade");
       rot("Padrões", 140, c.t(0, 0.5));
       [["Wi-Fi 4", "802.11n", 150, "Wi-Fi 4"], ["Wi-Fi 5", "802.11ac", 220, "o Wi-Fi 5"], ["Wi-Fi 6", "802.11ax", 290, "o Wi-Fi 6"]].forEach((b, i) => {
-        const e = c.novo(`<div class="abs" style="left:${140 + i * 150}px;top:${690 - b[2]}px;width:135px;height:${b[2]}px;border-radius:18px 18px 6px 6px;background:color-mix(in srgb, var(--cor) ${45 + i * 27}%, white);color:#fff;text-align:center;padding-top:16px">
+        const e = c.novo(`<div class="abs" style="left:${140 + i * 150}px;top:${690 - b[2]}px;width:135px;height:${b[2]}px;border-radius:18px 18px 6px 6px;background:color-mix(in srgb, var(--cor) ${45 + i * 27}%, white);color:${i === 0 ? "var(--serie)" : "#fff"};text-align:center;padding-top:16px">
           <div style="font:800 26px var(--sans)">${b[0]}</div><div style="font:600 20px var(--mono);margin-top:4px">${b[1]}</div></div>`);
         c.entra(e, em(0, b[3]), "baixo");
       });
@@ -487,7 +487,7 @@ const cenas = [
       freq(530, "5 GHz", "<b>mais rápida</b> · <b>menor alcance</b>", 130, c.t(2));
 
       rot("Segurança", 1190, c.t(3));
-      [["✗", "WEP", "obsoleto e inseguro", "#c2412f", c.t(3, 0.3)], ["✓", "WPA2", "seguro, com senha forte", "#2f8a5b", em(3, "Use o WPA2")], ["★", "WPA3", "o preferível", "#2f8a5b", em(3, "o WPA3")]].forEach((s, i) => {
+      [["✗", "WEP", "obsoleto e inseguro", "#c2412f", c.t(3, 0.3)], ["✓", "WPA2", "seguro, com senha forte", "#2f8a5b", em(3, "Use WPA2")], ["★", "WPA3", "o preferível", "#2f8a5b", em(3, "WPA3")]].forEach((s, i) => {
         const e = c.novo(`<div class="cartao" style="left:1190px;top:${345 + i * 120}px;width:350px;height:105px;padding:16px 24px;display:flex;gap:18px;align-items:center;border-left:10px solid ${s[3]}">
           <div style="font:800 40px var(--sans);color:${s[3]};width:34px">${s[0]}</div><div><h3 style="margin:0;font-size:30px">${s[1]}</h3><p style="font-size:21px">${s[2]}</p></div></div>`);
         c.entra(e, s[4], "esquerda");
@@ -501,26 +501,27 @@ const cenas = [
     secao: "Meios de transmissão",
     bit: BIT_CANTO,
     falas: [
-      "E como a internet chega até você? O ADSL usa a linha telefônica e é uma tecnologia antiga e mais lenta. A internet a cabo usa a rede de TV a cabo.",
-      "A fibra óptica até a residência, o FTTH, é hoje a mais comum nas cidades. Há ainda a rede móvel, 4G e 5G, e o satélite, que atende locais remotos.",
-      "Quanto ao sentido, a transmissão pode ser simplex: só em um sentido, como na transmissão de rádio e TV.",
-      "Half-duplex: nos dois sentidos, mas um de cada vez, como no rádio comunicador, o walkie-talkie.",
-      "Ou full-duplex: nos dois sentidos ao mesmo tempo, como em uma ligação telefônica.",
+      "Para chegar até você, o ADSL usa a linha telefônica: é antigo e mais lento. A internet a cabo usa a rede de TV a cabo.",
+      "A fibra até a residência, o FTTH, é hoje a mais comum nas cidades. Há ainda a rede móvel, 4G e 5G, e o satélite, para locais remotos.",
+      "Quanto ao sentido, no modo simplex a transmissão vai em um só sentido, como no rádio e na TV.",
+      "No half-duplex, vai nos dois sentidos, mas um de cada vez, como no rádio comunicador, o walkie-talkie.",
+      "E no full-duplex, nos dois sentidos ao mesmo tempo, como numa ligação telefônica.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
       const t1 = c.titulo("Meios de transmissão", "Formas de acesso à internet", TITULO, c.t(0), { medio: true });
       const acessos = [
-        ["telefone", "ADSL", "linha telefônica · antiga e lenta", em(0, "O ADSL")],
+        ["telefone", "ADSL", "linha telefônica · antiga e lenta", em(0, "o ADSL")],
         ["coaxial", "Cabo", "rede de TV a cabo", em(0, "A internet a cabo")],
         ["fibra", "Fibra (FTTH)", "a mais comum nas cidades", c.t(1)],
         ["celular", "Rede móvel", "4G e 5G", em(1, "a rede móvel")],
         ["satelite", "Satélite", "locais remotos", em(1, "e o satélite")],
       ];
       const nos = acessos.map((k, i) => {
-        const e = c.no({ icone: k[0], titulo: k[1], texto: k[2] }, { left: 140 + i * 280, top: 340, width: 265, height: 330, padding: "20px" }, k[3]);
+        const e = c.no({ icone: k[0], titulo: k[1], texto: k[2] }, { left: 140 + i * 280, top: 330, width: 265, height: 390, padding: "20px" }, k[3]);
         e.querySelector("strong").style.fontSize = "32px";
-        e.querySelector("span").style.fontSize = "24px";
+        e.querySelector("span").style.fontSize = "25px";
+        e.querySelector(".icone").style.cssText = "width:130px;height:130px;margin-bottom:18px";
         return e;
       });
       c.tl.set(nos[2], { outline: `6px solid ${ROXO}` }, em(1, "é hoje"));
@@ -561,14 +562,14 @@ const cenas = [
     secao: "Modelos OSI e TCP/IP",
     bit: BIT_CANTO,
     falas: [
-      "Para organizar a comunicação em rede, existe o modelo OSI, da ISO. Ele é um modelo de referência teórico, que divide a comunicação em sete camadas.",
-      "Na base, a camada física transmite os bits pelo meio físico: cabos, conectores, sinais e o hub.",
-      "A de enlace cuida da comunicação entre dispositivos vizinhos, com o endereço MAC. É a camada da Ethernet e do switch.",
-      "A camada de rede faz o endereçamento lógico e o roteamento. É a camada do IP e do roteador.",
-      "A de transporte faz a entrega fim a fim, a segmentação e o controle de erros, com o TCP e o UDP.",
-      "A de sessão abre, mantém e encerra a comunicação. E a de apresentação cuida do formato, da compressão e da criptografia, como o TLS.",
-      "No topo, a camada de aplicação oferece os serviços usados pelos programas, como HTTP, SMTP, FTP e DNS.",
-      "Memorize, da camada 1 para a 7: física, enlace, rede, transporte, sessão, apresentação e aplicação. A sigla é FERTSAA.",
+      "O modelo OSI, da ISO, é um modelo de referência teórico que divide a comunicação em sete camadas.",
+      "Na base, a camada física transmite os bits pelo meio: cabos, conectores, sinais e o hub.",
+      "A de enlace liga dispositivos vizinhos, com o endereço MAC: é a camada da Ethernet e do switch.",
+      "A de rede faz o endereçamento lógico e o roteamento: é a camada do IP e do roteador.",
+      "A de transporte faz a entrega fim a fim, a segmentação e o controle de erros, com TCP e UDP.",
+      "A de sessão abre, mantém e encerra a comunicação. A de apresentação cuida do formato, da compressão e da criptografia, como o TLS.",
+      "No topo, a de aplicação oferece serviços aos programas, como HTTP, SMTP, FTP e DNS.",
+      "Memorize, da camada 1 para a 7: física, enlace, rede, transporte, sessão, apresentação e aplicação. FERTSAA.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -584,7 +585,7 @@ const cenas = [
         [3, "Rede", "endereçamento lógico e roteamento", "IP, roteador", c.t(3)],
         [4, "Transporte", "entrega fim a fim · controle de erros", "TCP, UDP", c.t(4)],
         [5, "Sessão", "abre, mantém e encerra", "controle de diálogo", c.t(5)],
-        [6, "Apresentação", "formato, compressão, criptografia", "TLS", em(5, "E a de apresentação")],
+        [6, "Apresentação", "formato, compressão, criptografia", "TLS", em(5, "A de apresentação")],
         [7, "Aplicação", "serviços usados pelos programas", "HTTP, SMTP, FTP, DNS", c.t(6)],
       ];
       camadas.forEach(([n, nome, fn, ex, t]) => {
@@ -606,27 +607,27 @@ const cenas = [
     secao: "Modelos OSI e TCP/IP",
     bit: BIT_CANTO,
     falas: [
-      "Na prática, a internet funciona com o modelo TCP/IP, que agrupa essas funções em apenas quatro camadas.",
-      "A camada de aplicação do TCP/IP reúne aplicação, apresentação e sessão do OSI. É onde ficam HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS e SSH.",
-      "A de transporte equivale à do OSI, com o TCP e o UDP. E a camada de internet equivale à de rede, com o IP e o ICMP.",
-      "Por fim, a camada de acesso à rede junta enlace e física, com a Ethernet e o Wi-Fi.",
+      "Na prática, a internet usa o modelo TCP/IP, com apenas quatro camadas.",
+      "A de aplicação reúne aplicação, apresentação e sessão do OSI. Nela estão HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS e SSH.",
+      "A de transporte equivale à do OSI, com TCP e UDP. A de internet equivale à de rede, com IP e ICMP.",
+      "E a de acesso à rede junta enlace e física, com Ethernet e Wi-Fi.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
       c.titulo("Modelo TCP/IP", "Quatro camadas na prática", TITULO, c.t(0), { medio: true });
-      const Y0 = 340, P = 78;
-      c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:290px">OSI · 7 camadas</div>`), c.t(0, 0.4), "fade");
+      const Y0 = 362, P = 78;
+      c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:308px">OSI · 7 camadas</div>`), c.t(0, 0.4), "fade");
       ["Aplicação", "Apresentação", "Sessão", "Transporte", "Rede", "Enlace", "Física"].forEach((n, i) => {
         const e = c.novo(`<div class="abs" style="left:140px;top:${Y0 + i * P}px;width:440px;height:70px;border-radius:16px;background:var(--cor-suave);display:flex;align-items:center;gap:16px;padding:0 22px;font:700 27px var(--sans)">
           <span style="color:var(--cor);width:24px">${7 - i}</span>${n}</div>`);
         c.entra(e, c.t(0, 0.6 + i * 0.12), "esquerda");
       });
-      c.entra(c.novo(`<div class="abs rotulo" style="left:780px;top:290px">TCP/IP · 4 camadas</div>`), em(0, "quatro camadas"), "fade");
+      c.entra(c.novo(`<div class="abs rotulo" style="left:780px;top:308px">TCP/IP · 4 camadas</div>`), em(0, "quatro camadas"), "fade");
       const pil = (l) => l.map((p) => `<span class="pilula" style="font-size:21px;padding:4px 14px;background:#fff">${p}</span>`).join("");
       const tcp = [
         { nome: "Aplicação", eq: "= Aplicação + Apresentação + Sessão", prot: ["HTTP", "HTTPS", "FTP", "SMTP", "POP3", "IMAP", "DNS", "SSH"], de: 0, ate: 2, t: c.t(1) },
         { nome: "Transporte", eq: "= Transporte", prot: ["TCP", "UDP"], de: 3, ate: 3, t: c.t(2) },
-        { nome: "Internet", eq: "= Rede", prot: ["IP", "ICMP"], de: 4, ate: 4, t: em(2, "E a camada de internet") },
+        { nome: "Internet", eq: "= Rede", prot: ["IP", "ICMP"], de: 4, ate: 4, t: em(2, "A de internet") },
         { nome: "Acesso à rede", eq: "= Enlace + Física", prot: ["Ethernet", "Wi-Fi"], de: 5, ate: 6, t: c.t(3) },
       ];
       tcp.forEach((k) => {
@@ -649,11 +650,11 @@ const cenas = [
     secao: "Modelos OSI e TCP/IP",
     bit: BIT_CANTO,
     falas: [
-      "Na camada de transporte, a comparação favorita das bancas: TCP contra UDP. O TCP é orientado à conexão: estabelece a conexão antes de enviar.",
-      "Ele garante a entrega e a ordem dos pacotes, reenviando os perdidos. Por isso, é mais lento, e é usado em páginas web, e-mail e transferência de arquivos.",
+      "TCP ou UDP? O TCP é orientado à conexão: estabelece a conexão antes de enviar.",
+      "Ele garante a entrega e a ordem dos pacotes, reenviando os perdidos. Por isso, é mais lento. É usado em páginas web, e-mail e arquivos.",
       "O UDP é sem conexão e não garante entrega nem ordem. Em troca, é mais rápido, com menos sobrecarga.",
-      "Ele é usado no streaming ao vivo, nos jogos online, nas chamadas de voz e no DNS.",
-      "Pegadinha: o UDP não garante a entrega dos pacotes; quem garante é o TCP. O UDP é usado quando a velocidade importa mais do que a confiabilidade.",
+      "Ele aparece no streaming ao vivo, nos jogos online, nas chamadas de voz e no DNS.",
+      "Pegadinha: quem garante a entrega é o TCP, não o UDP. O UDP é usado quando a velocidade importa mais do que a confiabilidade.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -673,7 +674,7 @@ const cenas = [
       c.entra(tcp, c.t(0, 0.3), "esquerda");
       c.entra(udp, em(0, "UDP"), "direita");
       const [ti, ui] = [tcp, udp].map((e) => [...e.querySelectorAll(".it")]);
-      [em(0, "orientado"), c.t(1), em(1, "é mais lento"), em(1, "é usado")].forEach((t, i) => c.entra(ti[i], t, "esquerda"));
+      [em(0, "orientado"), c.t(1), em(1, "é mais lento"), em(1, "É usado")].forEach((t, i) => c.entra(ti[i], t, "esquerda"));
       [c.t(2), em(2, "não garante"), em(2, "Em troca"), c.t(3)].forEach((t, i) => c.entra(ui[i], t, "esquerda"));
       tcp.querySelectorAll(".pac").forEach((p, i) => c.entra(p, c.t(1, 0.3 + i * 0.35), "esquerda"));
       c.entra(tcp.querySelector(".fim"), c.t(1, 1.9), "pop");
@@ -690,10 +691,10 @@ const cenas = [
     secao: "Endereçamento IP",
     bit: BIT_CANTO,
     falas: [
-      "Cada dispositivo conectado a uma rede TCP/IP recebe um endereço IP, que o identifica e permite que os pacotes cheguem ao destino.",
+      "Cada dispositivo numa rede TCP/IP recebe um endereço IP, que o identifica e permite que os pacotes cheguem ao destino.",
       "O IPv4 tem 32 bits, escritos como quatro números decimais de 0 a 255, separados por pontos. Por exemplo: 192.168.0.1.",
-      "São cerca de 4,3 bilhões de endereços, e eles já se esgotaram.",
-      "O IPv6 tem 128 bits, escritos em oito grupos hexadecimais separados por dois-pontos. A quantidade de endereços é praticamente ilimitada.",
+      "São cerca de 4,3 bilhões de endereços, já esgotados.",
+      "O IPv6 tem 128 bits, em oito grupos hexadecimais separados por dois-pontos, e uma quantidade praticamente ilimitada de endereços.",
       "Pegadinha: o IPv6 substitui o IPv4, e não o TCP. E o número 256 nunca aparece em um IPv4, porque cada parte vai de 0 a 255.",
     ],
     montar(c) {
@@ -703,7 +704,7 @@ const cenas = [
       const pc = c.no({ icone: "notebook", titulo: "Dispositivo" }, { left: 1240, top: 360, width: 300, height: 280 }, em(0, "recebe"));
       const tag = pilula(c, "endereço IP", { left: 1290, top: 660 }, em(0, "um endereço IP"));
       const env = icn(c, "envelope", 900, 450, 100, em(0, "permite"));
-      c.tl.to(env, { x: 260, duration: 1.2, ease: "power2.inOut" }, em(0, "permite", 0.5));
+      c.tl.to(env, { x: 230, duration: 1.2, ease: "power2.inOut" }, em(0, "permite", 0.5));
       [txt, pc, tag, env].forEach((e) => c.sai(e, c.t(1) - 0.4));
 
       const v4 = c.novo(`<div class="cartao" style="left:140px;top:300px;width:680px;height:420px;padding:34px 40px">
@@ -721,7 +722,7 @@ const cenas = [
         <p style="font-size:26px;margin-top:8px">8 grupos <b>hexadecimais</b>, separados por dois-pontos</p>
         <div class="qtd" style="margin-top:12px;font-size:30px;font-weight:700;color:var(--certo)">praticamente ilimitados</div></div>`);
       c.entra(v6, c.t(3), "direita");
-      c.entra(v6.querySelector(".qtd"), em(3, "A quantidade"), "baixo");
+      c.entra(v6.querySelector(".qtd"), em(3, "e uma quantidade"), "baixo");
       c.quadro("prova", "O IPv6 substitui o <b>IPv4</b> — não o TCP. E <b>256</b> não existe em IPv4: cada parte vai de <b>0 a 255</b>.", { left: 140, top: 760, width: 1420 }, c.t(4)).querySelector("p").style.fontSize = "34px";
     },
   },
@@ -732,9 +733,9 @@ const cenas = [
     bit: BIT_CANTO,
     falas: [
       "O IP público é visível na internet e é fornecido pelo provedor.",
-      "O IP privado é usado dentro das redes locais e não é roteado na internet. As faixas privadas começam com 10, de 172.16 a 172.31, e 192.168.",
-      "E como vários aparelhos usam a internet com um único IP público? Com o NAT, um recurso do roteador que permite que eles compartilhem esse IP.",
-      "E quem distribui os endereços IP automaticamente para os dispositivos da rede é o protocolo DHCP.",
+      "O IP privado é usado nas redes locais e não é roteado na internet. As faixas privadas são 10, 172.16 a 172.31, e 192.168.",
+      "Vários aparelhos compartilham um único IP público graças ao NAT, um recurso do roteador.",
+      "E quem distribui os IPs automaticamente na rede é o DHCP.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -759,9 +760,9 @@ const cenas = [
 
       const nat = c.novo(`<svg class="abs" style="left:0;top:0;width:1920px;height:1080px" viewBox="0 0 1920 1080">
         ${[435, 540, 645].map((y) => `<path d="M712 ${y}C790 ${y} 790 595 856 595" stroke="var(--cor)" stroke-width="6" fill="none" stroke-linecap="round"/>`).join("")}</svg>`);
-      nat.querySelectorAll("path").forEach((p, i) => c.desenhar(p, em(2, "Com o NAT", i * 0.25)));
-      pilula(c, "NAT", { left: 880, top: 400, background: "var(--cor)", color: "#fff" }, em(2, "Com o NAT"));
-      c.chave("Vários IPs privados → <em>um único IP público</em>", em(2, "Com o NAT", 0.5), c.t(3) - 0.2);
+      nat.querySelectorAll("path").forEach((p, i) => c.desenhar(p, em(2, "graças ao NAT", i * 0.25)));
+      pilula(c, "NAT", { left: 880, top: 400, background: "var(--cor)", color: "#fff" }, em(2, "graças ao NAT"));
+      c.chave("Vários IPs privados → <em>um único IP público</em>", em(2, "graças ao NAT", 0.5), c.t(3) - 0.2);
       pilula(c, "DHCP", { left: 1010, top: 400, background: "var(--serie)", color: "#fff" }, c.t(3, 0.5));
       linhas.forEach((e, i) => c.destaque(e.querySelector(".ipd"), c.t(3, 1.6 + i * 0.4)));
       c.chave("DHCP: <em>distribui IPs automaticamente</em>", c.t(3, 0.8));
@@ -774,13 +775,13 @@ const cenas = [
     secao: "Endereçamento IP",
     bit: BIT_CANTO,
     falas: [
-      "A máscara de sub-rede indica qual parte do IP identifica a rede e qual identifica o dispositivo. A máscara 255.255.255.0, ou /24, indica que os três primeiros números são da rede.",
-      "O gateway padrão é o endereço do roteador que leva o tráfego para fora da rede local, normalmente para a internet.",
-      "E o endereço 127.0.0.1, chamado de loopback ou localhost, representa o próprio computador.",
-      "As provas também cobram as classes do IPv4. Na classe A, o primeiro número vai de 1 a 126, com máscara padrão /8.",
+      "A máscara de sub-rede indica que parte do IP é a rede e que parte é o dispositivo. Na máscara 255.255.255.0, ou /24, os três primeiros números são da rede.",
+      "O gateway padrão é o roteador que leva o tráfego para fora da rede local, normalmente para a internet.",
+      "E o 127.0.0.1, o loopback ou localhost, é o próprio computador.",
+      "As classes do IPv4 também caem. Na classe A, o primeiro número vai de 1 a 126, com máscara padrão /8.",
       "Na classe B, vai de 128 a 191, com /16. E na classe C, de 192 a 223, com /24.",
-      "As classes D, de 224 a 239, para multicast, e E, de 240 a 255, experimental, não são usadas para endereçar computadores.",
-      "Hoje as redes usam máscaras flexíveis, o CIDR, mas as classes continuam aparecendo em provas.",
+      "As classes D, de 224 a 239, multicast, e E, de 240 a 255, experimental, não endereçam computadores.",
+      "Hoje se usam máscaras flexíveis, o CIDR, mas as classes ainda caem em prova.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -794,14 +795,14 @@ const cenas = [
         });
       };
       const ip = linha("IP", ["192", "168", "0", "1"], 330, c.t(0, 0.6));
-      const masc = linha("Máscara", ["255", "255", "255", "0"], 450, em(0, "A máscara 255"));
-      [...ip, ...masc].forEach((e, j) => c.tl.to(e, { backgroundColor: j % 4 < 3 ? "#e7e6fb" : "#fdf3e1", duration: 0.4 }, em(0, "indica que os três")));
+      const masc = linha("Máscara", ["255", "255", "255", "0"], 450, em(0, "Na máscara 255"));
+      [...ip, ...masc].forEach((e, j) => c.tl.to(e, { backgroundColor: j % 4 < 3 ? "#e7e6fb" : "#fdf3e1", duration: 0.4 }, em(0, "os três primeiros")));
       grupoA.push(pilula(c, "/24", { left: 1100, top: 470, fontSize: "40px" }, em(0, "ou /24")));
       const chave1 = c.novo(`<div class="abs" style="left:330px;top:556px;width:550px;height:24px;border:6px solid var(--cor);border-top:none;border-radius:0 0 16px 16px"></div>`);
       const chave2 = c.novo(`<div class="abs" style="left:900px;top:556px;width:170px;height:24px;border:6px solid var(--prova);border-top:none;border-radius:0 0 16px 16px"></div>`);
       const r1 = c.novo(`<div class="abs" style="left:330px;top:590px;width:550px;text-align:center;font:700 30px var(--sans);color:var(--cor)">rede</div>`);
       const r2 = c.novo(`<div class="abs" style="left:860px;top:590px;width:250px;text-align:center;font:700 30px var(--sans);color:var(--prova)">dispositivo</div>`);
-      [chave1, chave2, r1, r2].forEach((e) => { c.entra(e, em(0, "indica que os três"), "fade"); grupoA.push(e); });
+      [chave1, chave2, r1, r2].forEach((e) => { c.entra(e, em(0, "os três primeiros"), "fade"); grupoA.push(e); });
       grupoA.push(cartaoLado(c, "roteador", "Gateway padrão", "Roteador que leva o tráfego <b>para fora</b> da rede local.", { left: 140, top: 680, width: 680, height: 160 }, c.t(1)));
       grupoA.push(cartaoLado(c, "notebook", "127.0.0.1 · loopback", "Também chamado de <b>localhost</b>: o próprio computador.", { left: 880, top: 680, width: 660, height: 160 }, c.t(2)));
       grupoA.forEach((e) => c.sai(e, c.t(3) - 0.4));
@@ -815,7 +816,7 @@ const cenas = [
       tab.style.fontSize = "36px";
       cartaoLado(c, "alerta", "Classe D", "224 a 239 · <b>multicast</b>", { left: 140, top: 680, width: 560, height: 140 }, c.t(5), { icone: 64 });
       cartaoLado(c, "alerta", "Classe E", "240 a 255 · <b>experimental</b>", { left: 740, top: 680, width: 560, height: 140 }, em(5, "e E"), { icone: 64 });
-      c.chave("D e E: <em>não endereçam computadores</em>", em(5, "não são usadas"), c.t(6) - 0.2);
+      c.chave("D e E: <em>não endereçam computadores</em>", em(5, "não endereçam"), c.t(6) - 0.2);
       c.chave("Hoje: máscaras flexíveis (<em>CIDR</em>) · as classes ainda caem em prova", c.t(6, 0.2));
     },
   },
@@ -825,9 +826,9 @@ const cenas = [
     secao: "Endereçamento IP",
     bit: BIT_CANTO,
     falas: [
-      "Para diagnosticar a rede, existem alguns comandos. O ping testa se um endereço responde e mede o tempo de resposta, usando o protocolo ICMP.",
+      "Para diagnosticar a rede, o ping testa se um endereço responde e mede o tempo de resposta, usando o ICMP.",
       "O ipconfig, no Windows, ou ip addr, no Linux, mostra o IP, a máscara e o gateway do computador.",
-      "O tracert, no Windows, ou traceroute, no Linux, mostra o caminho, ou seja, os roteadores até o destino.",
+      "O tracert, no Windows, ou traceroute, no Linux, mostra o caminho: os roteadores até o destino.",
       "O nslookup consulta o DNS para descobrir o IP de um nome. E o netstat lista as conexões de rede ativas.",
     ],
     montar(c) {
@@ -840,7 +841,7 @@ const cenas = [
       const sep = "<span style=\"color:#7a8496\"> / </span>";
       const cinza = (t) => `<span style="color:#7a8496">${t}</span>`;
       const cmds = [
-        ["ping", "testa se responde e mede o tempo · usa <b>ICMP</b>", em(0, "O ping")],
+        ["ping", "testa se responde e mede o tempo · usa <b>ICMP</b>", em(0, "o ping")],
         [`ipconfig${sep}ip addr`, `${cinza("Windows / Linux ·")} mostra IP, máscara e gateway`, c.t(1)],
         [`tracert${sep}traceroute`, `${cinza("Windows / Linux ·")} o caminho (roteadores) até o destino`, c.t(2)],
         ["nslookup", "consulta o <b>DNS</b>: nome → IP", c.t(3)],
@@ -862,29 +863,29 @@ const cenas = [
     secao: "DNS e protocolos",
     bit: BIT_CANTO,
     falas: [
-      "Quando você digita o nome de um site, entra em ação o DNS, o sistema de nomes de domínio. Ele traduz nomes fáceis de lembrar em endereços IP.",
-      "Sem ele, seria preciso digitar o IP de cada site. Então: você digita o nome, o DNS traduz para o IP, e o navegador exibe a página.",
-      "O endereço completo de um recurso na web é a URL. Veja as partes deste exemplo.",
+      "Ao digitar o nome de um site, entra em ação o DNS, o sistema de nomes de domínio, que traduz nomes fáceis de lembrar em endereços IP.",
+      "Sem ele, seria preciso digitar o IP de cada site. Você digita o nome, o DNS traduz para o IP, e o navegador exibe a página.",
+      "O endereço completo de um recurso na web é a URL. Veja suas partes.",
       "O https é o protocolo. O www.gov.br é o nome do domínio, resolvido pelo DNS. O ponto br é o domínio de primeiro nível do Brasil. E o resto é o caminho até a página.",
       "Outros domínios brasileiros: gov.br, governo; edu.br, ensino; com.br, comercial; org.br, organizações sem fins lucrativos; e jus.br, Judiciário.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
       const t1 = c.titulo("DNS", "Do nome ao endereço IP", TITULO, c.t(0), { medio: true });
-      const n1 = c.no({ icone: "navegador", titulo: "Nome", texto: "www.site.gov.br" }, { left: 140, top: 380, width: 380, height: 300 }, c.t(0, 0.6));
-      const n2 = c.no({ icone: "servidor", titulo: "DNS", texto: "traduz para IP" }, { left: 700, top: 380, width: 380, height: 300 }, em(0, "entra em ação"));
-      const s1 = c.seta(530, 530, 690, 530, em(0, "entra em ação", 0.4));
-      const n3 = c.no({ icone: "janela", titulo: "Navegador", texto: "exibe a página" }, { left: 1260, top: 380, width: 300, height: 300 }, em(1, "e o navegador"));
-      const s2 = c.seta(1090, 530, 1250, 530, em(1, "e o navegador", -0.3));
-      const k = c.chave("nome fácil de lembrar → <em>endereço IP</em>", em(0, "Ele traduz"), c.t(1) - 0.2);
-      c.destaque(n1, em(1, "você digita"));
+      const n1 = c.no({ icone: "navegador", titulo: "Nome", texto: "www.site.gov.br" }, { left: 140, top: 380, width: 360, height: 300 }, c.t(0, 0.6));
+      const n2 = c.no({ icone: "servidor", titulo: "DNS", texto: "traduz para IP" }, { left: 660, top: 380, width: 360, height: 300 }, em(0, "entra em ação"));
+      const s1 = c.seta(512, 530, 648, 530, em(0, "entra em ação", 0.4));
+      const n3 = c.no({ icone: "janela", titulo: "Navegador", texto: "exibe a página" }, { left: 1180, top: 380, width: 360, height: 300 }, em(1, "e o navegador"));
+      const s2 = c.seta(1032, 530, 1168, 530, em(1, "e o navegador", -0.3));
+      const k = c.chave("nome fácil de lembrar → <em>endereço IP</em>", em(0, "que traduz"), c.t(1) - 0.2);
+      c.destaque(n1, em(1, "Você digita"));
       c.destaque(n2, em(1, "o DNS traduz"));
-      [t1, n1, n2, n3, s1, s2, k].forEach((e) => c.sai(e, c.t(2) - 0.4));
+      [t1, n1, n2, n3, s1, s2].forEach((e) => c.sai(e, c.t(2) - 0.4));
 
       c.titulo("URL", "Anatomia de um endereço", TITULO, c.t(2), { medio: true });
-      const seg = (cls, cor, txt, rot, topo = 92) => `<span class="${cls}" style="position:relative">${txt}<span class="sub" style="position:absolute;left:2px;right:2px;bottom:-12px;height:8px;border-radius:4px;background:${cor}"></span><span class="lab" style="position:absolute;left:0;top:${topo}px;white-space:nowrap;font:700 26px var(--sans);color:${cor}">${rot}</span></span>`;
+      const seg = (cls, cor, txt, rot, topo = 92) => `<span class="${cls}" style="position:relative">${txt}<span class="sub" style="position:absolute;left:2px;right:2px;bottom:-12px;height:8px;border-radius:4px;background:${cor}"></span><span class="lab" style="position:absolute;left:0;top:${topo}px;white-space:nowrap;font:700 30px var(--sans);color:${cor}">${rot}</span></span>`;
       const url = c.novo(`<div class="abs" style="left:140px;top:350px;padding:24px 40px;background:#fff;border-radius:999px;box-shadow:var(--sombra);font:700 50px var(--mono);white-space:nowrap">
-        ${seg("s1", "#c27c0e", "https://", "protocolo")}${seg("s2", ROXO, "www.gov" + seg("s3", "#2f8a5b", ".br", "domínio de 1º nível do Brasil", 140), "domínio (DNS)")}${seg("s4", "#4a5568", "/receitafederal/pt-br", "caminho até a página")}</div>`);
+        ${seg("s1", "#c27c0e", "https://", "protocolo")}${seg("s2", ROXO, "www.gov" + seg("s3", "#2f8a5b", ".br", "domínio de 1º nível do Brasil", 146), "domínio (DNS)")}${seg("s4", "#4a5568", "/receitafederal/pt-br", "caminho até a página")}</div>`);
       c.entra(url, c.t(2, 0.5), "zoom");
       [["s1", "O https"], ["s2", "O www.gov.br"], ["s3", "O ponto br"], ["s4", "E o resto"]].forEach(([cls, tr]) => {
         const s = url.querySelector(`.${cls}`);
@@ -906,11 +907,11 @@ const cenas = [
     secao: "DNS e protocolos",
     bit: BIT_CANTO,
     falas: [
-      "Cada protocolo de aplicação tem sua porta padrão. O HTTP transfere páginas web sem criptografia, na porta 80. O HTTPS é o HTTP com criptografia TLS, o cadeado do navegador, na porta 443.",
-      "O FTP transfere arquivos, nas portas 20 e 21. O SSH faz acesso remoto seguro, com criptografia, na porta 22. Já o Telnet faz acesso remoto sem criptografia, na porta 23, e é inseguro.",
-      "Para o e-mail, o SMTP envia mensagens, na porta 25, ou 587 para envio autenticado.",
-      "O POP3 recebe na porta 110, ou 995 com criptografia. E o IMAP, na porta 143, ou 993 com criptografia.",
-      "Fechando a lista: o DNS usa a porta 53, e o DHCP, as portas 67 e 68.",
+      "Cada protocolo tem uma porta padrão. O HTTP leva páginas web sem criptografia, na porta 80. O HTTPS é o HTTP com TLS, o cadeado, na porta 443.",
+      "O FTP transfere arquivos, nas portas 20 e 21. O SSH faz acesso remoto seguro, na porta 22. Já o Telnet, na 23, faz acesso remoto sem criptografia: é inseguro.",
+      "O SMTP envia e-mails, na porta 25, ou 587 para envio autenticado.",
+      "O POP3 recebe na porta 110, ou 995 com criptografia. O IMAP, na 143, ou 993 com criptografia.",
+      "E o DNS usa a porta 53, e o DHCP, as portas 67 e 68.",
       "Memorize: SMTP é Sua Mensagem Tá Partindo, ou seja, envio. POP3 e IMAP servem para receber.",
     ],
     montar(c) {
@@ -924,7 +925,7 @@ const cenas = [
         ["Telnet", "23", "acesso remoto inseguro", em(1, "Já o Telnet"), "#c2412f"],
         ["SMTP", "25 · 587", "envio · 587 autenticado", c.t(2)],
         ["POP3", "110 · 995", "recebe · 995 com criptografia", c.t(3)],
-        ["IMAP", "143 · 993", "recebe · 993 com criptografia", em(3, "E o IMAP")],
+        ["IMAP", "143 · 993", "recebe · 993 com criptografia", em(3, "O IMAP")],
         ["DNS", "53", "nomes → IPs", em(4, "o DNS")],
         ["DHCP", "67 · 68", "IP automático", em(4, "e o DHCP")],
       ];
@@ -948,13 +949,13 @@ const cenas = [
     secao: "Correio eletrônico",
     bit: BIT_CANTO,
     falas: [
-      "Para receber e-mails, existem dois protocolos. O POP3 baixa as mensagens para o dispositivo e, na configuração padrão, as remove do servidor. É útil para guardar os e-mails só em um computador.",
-      "No IMAP, as mensagens ficam no servidor, e o estado delas, como lida, apagada ou pasta, é sincronizado. É o ideal para quem usa o mesmo e-mail no celular e no computador.",
-      "Você pode ler o e-mail por um webmail, no navegador, como o Gmail na web, ou por um cliente de e-mail instalado, como o Outlook e o Thunderbird.",
-      "Ao escrever uma mensagem, o campo Para recebe os destinatários principais.",
+      "Para receber e-mails, há dois protocolos. O POP3 baixa as mensagens para o dispositivo e, por padrão, as remove do servidor. É útil para guardar tudo em um só computador.",
+      "No IMAP, as mensagens ficam no servidor, e o estado delas, como lida, apagada ou pasta, é sincronizado. Ideal para quem usa o e-mail no celular e no computador.",
+      "O e-mail pode ser lido por um webmail, no navegador, como o Gmail na web, ou por um cliente instalado, como o Outlook e o Thunderbird.",
+      "Ao escrever, o campo Para recebe os destinatários principais.",
       "No Cc, com cópia, vão os destinatários em cópia, e todos veem quem foi copiado.",
       "Já no Cco, com cópia oculta, os demais destinatários não veem quem recebeu.",
-      "Pegadinha: as bancas trocam os papéis. O SMTP envia; o POP3 e o IMAP recebem. E quem está em Cco vê os destinatários do Para e do Cc, mas ninguém vê quem está em Cco.",
+      "Pegadinha: SMTP envia; POP3 e IMAP recebem. E quem está em Cco vê os destinatários do Para e do Cc, mas ninguém vê quem está em Cco.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -1013,11 +1014,11 @@ const cenas = [
     secao: "Web e serviços",
     bit: BIT_CANTO,
     falas: [
-      "A World Wide Web, ou WWW, é o sistema de páginas ligadas por hiperlinks, acessadas pelos navegadores via HTTP ou HTTPS.",
+      "A World Wide Web, a WWW, é o sistema de páginas ligadas por hiperlinks, acessadas pelo navegador via HTTP ou HTTPS.",
       "Ela é um dos serviços da internet, ao lado do e-mail, da transferência de arquivos e de outros.",
       "As páginas são estruturadas em HTML, uma linguagem de marcação. O CSS cuida da aparência, e o JavaScript, da interatividade.",
-      "Na Web 2.0, os usuários passaram a produzir conteúdo e interagir, com redes sociais, blogs e wikis.",
-      "Pegadinha: internet e web não são sinônimos. A internet é a rede física e lógica mundial; a web é um serviço que funciona sobre ela.",
+      "Na Web 2.0, os usuários passaram a produzir conteúdo e interagir: redes sociais, blogs e wikis.",
+      "Pegadinha: internet e web não são sinônimos. A internet é a rede física e lógica mundial; a web é um serviço sobre ela.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -1052,11 +1053,11 @@ const cenas = [
     secao: "Web e serviços",
     bit: BIT_CANTO,
     falas: [
-      "Pense na web como um iceberg. A surface web é a parte indexada pelos buscadores: a ponta que todo mundo vê.",
+      "Pense num iceberg. A surface web é a parte indexada pelos buscadores, a ponta que todos veem.",
       "A deep web é o conteúdo não indexado, como e-mails, bancos de dados e áreas protegidas por login.",
-      "E a dark web é uma pequena parte da deep web, acessível só com ferramentas específicas, como o Tor.",
-      "A internet também oferece outros serviços. O VoIP, voz sobre IP, faz chamadas de voz pela internet.",
-      "E no P2P, ponto a ponto, os computadores trocam arquivos diretamente entre si, sem um servidor central, como no BitTorrent.",
+      "A dark web é uma pequena parte da deep web, acessível só com ferramentas específicas, como o Tor.",
+      "Outro serviço da internet é o VoIP, voz sobre IP: chamadas de voz pela internet.",
+      "E no P2P, ponto a ponto, os computadores trocam arquivos diretamente, sem servidor central, como no BitTorrent.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
@@ -1108,17 +1109,17 @@ const cenas = [
     secao: "Navegadores",
     bit: BIT_CANTO,
     falas: [
-      "Os navegadores, ou browsers, são os programas que acessam as páginas da web: Google Chrome, Microsoft Edge, Mozilla Firefox e Safari.",
+      "Navegadores, ou browsers, são os programas que acessam a web: Google Chrome, Microsoft Edge, Mozilla Firefox e Safari.",
       "O histórico registra as páginas visitadas, e os favoritos guardam páginas para acesso rápido.",
-      "Os cookies são pequenos arquivos que os sites gravam no navegador para lembrar login, preferências e itens do carrinho. Também podem ser usados para rastrear o usuário.",
-      "O cache guarda cópias de partes das páginas no computador, para carregar mais rápido. E as extensões são complementos que adicionam funções.",
-      "Na navegação privativa, chamada de anônima no Chrome, InPrivate no Edge e privativa no Firefox, o navegador apaga, ao fechar a janela, o histórico, os cookies e os dados de formulários daquela sessão.",
-      "Pegadinha: ela não deixa você invisível. O provedor, a rede da empresa e os sites visitados continuam podendo identificar o acesso. E os downloads e favoritos criados continuam salvos.",
+      "Cookies são pequenos arquivos que os sites gravam no navegador para lembrar login, preferências e carrinho. Também podem rastrear o usuário.",
+      "O cache guarda cópias de partes das páginas no computador, para carregar mais rápido. E as extensões adicionam funções ao navegador.",
+      "A navegação privativa, anônima no Chrome, InPrivate no Edge e privativa no Firefox, apaga histórico, cookies e dados de formulários da sessão ao fechar a janela.",
+      "Pegadinha: ela não deixa você invisível. Provedor, rede da empresa e sites visitados ainda identificam o acesso. E downloads e favoritos criados continuam salvos.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
       const A = [c.titulo("Navegadores", "Recursos mais cobrados", TITULO, c.t(0), { medio: true })];
-      [["Google Chrome", 140], ["Microsoft Edge", 470], ["Mozilla Firefox", 790], ["Safari", 1120]].forEach(([n, x]) => {
+      [["Google Chrome", 140], ["Microsoft Edge", 450], ["Mozilla Firefox", 755], ["Safari", 1050]].forEach(([n, x]) => {
         A.push(pilula(c, n, { left: x, top: 305 }, em(0, n)));
       });
       const rec = [
@@ -1129,9 +1130,9 @@ const cenas = [
         ["peca", "Extensões", "complementos que <b>adicionam funções</b>", em(3, "E as extensões")],
       ];
       rec.forEach((k, i) => {
-        const e = c.cartao({ icone: k[0], titulo: k[1], texto: k[2] }, { left: 140 + i * 285, top: 400, width: 265, height: 340, padding: "28px 26px" }, k[3]);
+        const e = c.cartao({ icone: k[0], titulo: k[1], texto: k[2] }, { left: 140 + i * 285, top: 395, width: 265, height: 340, padding: "28px 24px" }, k[3]);
         e.querySelector("h3").style.fontSize = "32px";
-        e.querySelector("p").style.fontSize = "23px";
+        e.querySelector("p").style.fontSize = "25px";
         e.querySelector(".icone").style.cssText = "width:80px;height:80px;margin-bottom:16px";
         A.push(e);
       });
@@ -1148,9 +1149,9 @@ const cenas = [
       const apaga = c.novo(`<div class="abs" style="left:140px;top:660px;width:760px;display:flex;flex-wrap:wrap;gap:14px;align-items:center">
         <span style="font:700 26px var(--sans);color:var(--texto);width:100%">Ao fechar a janela, apaga:</span>
         ${["histórico", "cookies", "dados de formulários"].map((t) => `<span class="pilula" style="text-decoration:line-through;text-decoration-thickness:3px">${t}</span>`).join("")}</div>`);
-      c.entra(apaga, em(4, "o navegador apaga"), "baixo");
+      c.entra(apaga, em(4, "apaga histórico"), "baixo");
       c.quadro("prova", "A navegação privativa <b>não</b> deixa você invisível. <b>Downloads</b> e <b>favoritos</b> criados continuam salvos.", { left: 960, top: 300, width: 590, padding: "30px 36px" }, c.t(5)).querySelector("p").style.fontSize = "30px";
-      [["Provedor", "O provedor"], ["Rede da empresa", "a rede da empresa"], ["Sites", "e os sites"]].forEach(([n, tr], i) => {
+      [["Provedor", "Provedor"], ["Rede da empresa", "rede da empresa"], ["Sites", "e sites"]].forEach(([n, tr], i) => {
         const e = c.novo(`<div class="no" style="left:${960 + i * 200}px;top:640px;width:185px;height:170px;padding:16px">${icone("olho")}<strong style="font-size:24px">${n}</strong></div>`);
         e.querySelector(".icone").style.cssText = "width:70px;height:70px;margin-bottom:8px";
         c.entra(e, em(5, tr), "pop");
@@ -1163,15 +1164,15 @@ const cenas = [
     secao: "Navegadores",
     bit: BIT_CANTO,
     falas: [
-      "Agora, os atalhos. Ctrl + T abre uma nova aba, Ctrl + W fecha a aba atual, e Ctrl + Shift + T reabre a última aba fechada.",
-      "Ctrl + Shift + N abre a janela anônima no Chrome e a InPrivate no Edge. No Firefox, a janela privativa é Ctrl + Shift + P.",
-      "Ctrl + H abre o histórico, Ctrl + J mostra os downloads, e Ctrl + D adiciona a página aos favoritos.",
-      "Ctrl + F localiza um texto na página, e F5 recarrega a página.",
+      "Ctrl + T abre uma nova aba, Ctrl + W fecha a aba atual, e Ctrl + Shift + T reabre a última aba fechada.",
+      "Ctrl + Shift + N abre a janela anônima no Chrome e a InPrivate no Edge; no Firefox, a privativa é Ctrl + Shift + P.",
+      "Ctrl + H abre o histórico, Ctrl + J, os downloads, e Ctrl + D adiciona aos favoritos.",
+      "Ctrl + F localiza um texto na página, e F5 recarrega.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
       c.titulo("Navegadores", "Atalhos de teclado", TITULO, c.t(0), { medio: true });
-      const tecla = (k) => `<span style="display:inline-block;padding:5px 11px;border-radius:10px;background:var(--fundo);border:2px solid var(--borda);border-bottom-width:5px;font:700 23px var(--mono);color:var(--texto)">${k}</span>`;
+      const tecla = (k) => `<span style="display:inline-block;padding:5px 9px;border-radius:10px;background:var(--fundo);border:2px solid var(--borda);border-bottom-width:5px;font:700 26px var(--mono);color:var(--texto)">${k}</span>`;
       const at = [
         [["Ctrl", "T"], "nova aba", em(0, "Ctrl + T")],
         [["Ctrl", "W"], "fecha a aba atual", em(0, "Ctrl + W")],
@@ -1187,7 +1188,7 @@ const cenas = [
       at.forEach((k, i) => {
         const e = c.novo(`<div class="cartao" style="left:${140 + (i % 4) * 350}px;top:${300 + Math.floor(i / 4) * 200}px;width:330px;height:180px;padding:24px 24px">
           <div style="display:flex;gap:7px;align-items:center">${k[0].map(tecla).join("<span style=\"color:var(--texto-fraco);font-weight:700\">+</span>")}</div>
-          <p style="font-size:25px;line-height:1.3;margin-top:16px;color:var(--texto);font-weight:600">${k[1]}</p></div>`);
+          <p style="font-size:28px;line-height:1.3;margin-top:18px;color:var(--texto);font-weight:600">${k[1]}</p></div>`);
         c.entra(e, k[2], "pop");
       });
     },
@@ -1198,20 +1199,20 @@ const cenas = [
     secao: "Navegadores",
     bit: BIT_CANTO,
     falas: [
-      "Para a privacidade, Ctrl + Shift + Delete abre a limpeza dos dados de navegação, que apaga histórico, cookies, cache e senhas salvas.",
-      "O bloqueador de pop-ups impede que janelas surjam sem você pedir. E o gerenciador de senhas guarda e preenche senhas, e pode sugerir senhas fortes.",
-      "Com a sincronização, ao entrar com uma conta, seus favoritos, histórico e senhas ficam disponíveis em outros dispositivos.",
-      "Os cookies de terceiros são criados por domínios diferentes do site visitado, geralmente para publicidade e rastreamento, e podem ser bloqueados nas configurações.",
-      "O aviso Não seguro indica uma página sem HTTPS: nela, não digite senhas nem dados pessoais.",
-      "E atenção: o cadeado e o HTTPS indicam que a conexão é criptografada, não que o site é confiável. Sites de phishing também podem usar HTTPS.",
+      "Ctrl + Shift + Delete limpa os dados de navegação: histórico, cookies, cache e senhas salvas.",
+      "O bloqueador de pop-ups impede janelas que você não pediu. O gerenciador de senhas guarda, preenche e sugere senhas fortes.",
+      "Com a sincronização, ao entrar com uma conta, favoritos, histórico e senhas ficam disponíveis em outros dispositivos.",
+      "Cookies de terceiros vêm de domínios diferentes do site visitado, geralmente para publicidade e rastreamento, e podem ser bloqueados.",
+      "O aviso Não seguro indica página sem HTTPS: nela, não digite senhas nem dados pessoais.",
+      "Atenção: o cadeado e o HTTPS indicam conexão criptografada, não um site confiável. Sites de phishing também podem usar HTTPS.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
       c.titulo("Navegadores", "Privacidade e segurança", TITULO, c.t(0), { medio: true });
       const itens = [
-        ["lixeira", "Limpar dados", "<b>Ctrl+Shift+Delete</b>: histórico, cookies, cache e senhas", em(0, "Ctrl + Shift")],
+        ["lixeira", "Limpar dados", "<b>Ctrl+Shift+Delete</b>: histórico, cookies, cache e senhas", c.t(0)],
         ["bloqueio", "Bloqueador de pop-ups", "impede janelas sem você pedir", c.t(1)],
-        ["senha", "Gerenciador de senhas", "guarda, preenche e sugere senhas fortes", em(1, "E o gerenciador")],
+        ["senha", "Gerenciador de senhas", "guarda, preenche e sugere senhas fortes", em(1, "O gerenciador")],
         ["setas", "Sincronização", "favoritos, histórico e senhas em outros dispositivos", c.t(2)],
         ["cookie", "Cookies de terceiros", "outros domínios · publicidade e rastreamento · bloqueáveis", c.t(3)],
         ["alerta", "Aviso “Não seguro”", "página sem HTTPS: não digite senhas", c.t(4), "#c27c0e"],
@@ -1228,15 +1229,16 @@ const cenas = [
     secao: "Mecanismos de busca",
     bit: BIT_CANTO,
     falas: [
-      "Os mecanismos de busca, como Google, Bing e DuckDuckGo, indexam páginas da web e permitem encontrá-las por palavras-chave.",
-      "Operadores refinam a pesquisa. As aspas buscam a frase exata, e o sinal de menos exclui um termo, como em jaguar, menos carro.",
+      "Mecanismos de busca, como Google, Bing e DuckDuckGo, indexam páginas da web e permitem encontrá-las por palavras-chave.",
+      "Operadores refinam a busca. As aspas buscam a frase exata, e o sinal de menos exclui um termo: jaguar, menos carro.",
       "O operador site: busca só em um site ou domínio, e o filetype: busca um tipo de arquivo, como PDF.",
       "O OR busca um termo ou outro, o asterisco é um curinga para palavras desconhecidas, e o intitle: procura o termo no título da página.",
-      "Pegadinha: o Google não é um navegador. Ele é um mecanismo de busca; o navegador da empresa é o Chrome. Navegador e buscador são coisas diferentes.",
+      "Pegadinha: o Google é um mecanismo de busca, não um navegador. O navegador da empresa é o Chrome. Navegador e buscador são coisas diferentes.",
     ],
     montar(c) {
       const em = (i, s, d) => emTrecho(c, this.falas, i, s, d);
-      const A = [c.titulo("Mecanismos de busca", "Buscadores e operadores", TITULO, c.t(0), { medio: true })];
+      c.titulo("Mecanismos de busca", "Buscadores e operadores", TITULO, c.t(0), { medio: true });
+      const A = [];
       const barra = c.novo(`<div class="abs" style="left:140px;top:330px;width:1100px;height:110px;border-radius:999px;background:#fff;box-shadow:var(--sombra);display:flex;align-items:center;gap:26px;padding:0 40px">
         ${icone("lupa")}<span style="font-size:40px;color:var(--texto)">concurso público</span></div>`);
       barra.querySelector(".icone").style.cssText = "width:60px;height:60px;margin:0";
@@ -1274,24 +1276,24 @@ const cenas = [
     bit: BIT_CANTO,
     falas: [
       "Hora de revisar o que você aprendeu.",
-      "Redes: PAN, LAN, MAN e WAN vão do alcance pessoal ao mundial, e a intranet usa as tecnologias da internet, com acesso restrito.",
-      "Equipamentos: o hub espalha, o switch entrega usando o MAC, e o roteador liga redes diferentes usando o IP.",
-      "Transmissão: a fibra óptica usa luz e é imune a interferência, e o full-duplex transmite nos dois sentidos ao mesmo tempo.",
-      "Modelos: o OSI tem sete camadas, e o TCP/IP, quatro. O TCP garante a entrega; o UDP é mais rápido.",
-      "Endereços: o IPv4 tem 32 bits, e o IPv6, 128. O DHCP distribui os IPs, o DNS traduz nomes, e 127.0.0.1 é o próprio computador.",
-      "Protocolos: o HTTPS usa a porta 443. O SMTP envia, o POP3 baixa, o IMAP sincroniza, e ninguém vê quem está em Cco.",
-      "E a web é um serviço da internet, a navegação anônima não deixa ninguém invisível, e o Google é buscador, não navegador.",
+      "PAN, LAN, MAN e WAN vão do pessoal ao mundial, e a intranet usa as tecnologias da internet, com acesso restrito.",
+      "Hub espalha, switch entrega pelo MAC, e roteador liga redes diferentes pelo IP.",
+      "A fibra usa luz e é imune a interferência; o full-duplex vai nos dois sentidos ao mesmo tempo.",
+      "O OSI tem sete camadas; o TCP/IP, quatro. O TCP garante a entrega; o UDP é mais rápido.",
+      "O IPv4 tem 32 bits; o IPv6, 128. O DHCP distribui os IPs, o DNS traduz nomes, e 127.0.0.1 é o próprio computador.",
+      "O HTTPS usa a porta 443. O SMTP envia, o POP3 baixa, o IMAP sincroniza, e ninguém vê quem está em Cco.",
+      "E a web é um serviço da internet, a navegação anônima não torna ninguém invisível, e o Google é buscador, não navegador.",
     ],
     montar(c) {
       c.titulo("Revisão", "O que você aprendeu", TITULO, c.t(0), { medio: true });
       const cartoes = [
         ["Redes", "PAN · LAN · MAN · WAN<br>Intranet: acesso restrito"],
         ["Equipamentos", "Hub espalha · switch usa MAC · roteador usa IP"],
-        ["Transmissão", "Fibra = luz, sem interferência · full-duplex"],
-        ["Modelos", "OSI: 7 camadas · TCP/IP: 4<br>TCP confiável · UDP rápido"],
+        ["Transmissão", "Fibra = luz, sem interferência<br>Full-duplex: ao mesmo tempo"],
+        ["Modelos", "OSI 7 camadas · TCP/IP 4<br>TCP confiável<br>UDP rápido"],
         ["Endereços", "IPv4 32 bits · IPv6 128<br>DHCP · DNS · 127.0.0.1"],
         ["Protocolos", "HTTPS 443 · SMTP envia<br>POP3 baixa · IMAP sincroniza"],
-        ["Web e navegadores", "Web ⊂ internet · anônima ≠ invisível · Google = buscador"],
+        ["Na web", "Web ⊂ internet<br>anônima ≠ invisível<br>Google = buscador"],
       ];
       cartoes.forEach((k, i) => {
         const col = i % 4, lin = Math.floor(i / 4);
