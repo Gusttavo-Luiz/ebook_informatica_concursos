@@ -114,6 +114,14 @@ function cartaoLado(c, o, estilo, t, tipo = "baixo") {
   return c.entra(e, t, tipo);
 }
 
+// Faixa de palavra-chave no rodapé, centralizada sem depender do transform do CSS.
+function faixa(c, html, t, tFim) {
+  const e = c.novo(`<div class="chave" style="left:0;right:0;margin:0 auto;width:max-content;transform:none">${html}</div>`);
+  c.tl.fromTo(e, { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out", immediateRender: true }, t);
+  if (tFim) c.tl.to(e, { autoAlpha: 0, duration: 0.3 }, tFim);
+  return e;
+}
+
 const FMT1 = (v) => v.toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
 serie.capitulo({
@@ -129,7 +137,7 @@ serie.capitulo({
       secao: "Abertura",
       bit: BIT_GRANDE,
       falas: [
-        "Olá! Eu sou o Bit. Que bom ter você de volta na nossa série de Informática para Concursos!",
+        "Olá! Eu sou o Bit. Que bom ter você de volta!",
         "Neste capítulo, vamos abrir o gabinete e conhecer o hardware do computador.",
         { texto: "Primeiro, o processador: o que define o seu desempenho e as arquiteturas RISC e CISC.", falar: "Primeiro, o processador: o que define o seu desempenho e as arquiteturas rísc e císc." },
         { texto: "Em seguida, as memórias: a hierarquia, a cache, a RAM, a ROM e a BIOS.", falar: "Em seguida, as memórias: a hierarquia, a quêch, a RAM, a ROM e a BIOS." },
@@ -163,7 +171,7 @@ serie.capitulo({
         { texto: "Por exemplo: o processador, a memória RAM, a placa-mãe, o HD, o SSD, a placa de vídeo, a fonte de alimentação, o teclado, o mouse e o monitor.", falar: "Por exemplo: o processador, a memória RAM, a placa-mãe, o HD, o SSD, a placa de vídeo, a fonte de alimentação, o teclado, o máus e o monitor." },
         "Mas essas peças só funcionam juntas graças ao software, que diz ao hardware o que fazer.",
         "Quatro delas formam o núcleo da máquina: a CPU processa, a RAM é a memória temporária, o SSD ou o HD armazena, e a placa-mãe conecta tudo.",
-        { texto: "Agora, a pegadinha: o Windows é hardware? Errado! O Windows é software. E o firmware, como a BIOS, é um software gravado em um chip, e não hardware.", falar: "Agora, a pegadinha: o uíndous é hardware? Errado! O uíndous é software. E o firmware, como a BIOS, é um software gravado em um chip, e não hardware." },
+        { texto: "Pegadinha: o Windows é hardware? Errado, é software. E o firmware, como a BIOS, é software gravado em um chip, e não hardware.", falar: "Pegadinha: o uíndous é hardware? Errado, é software. E o firmware, como a BIOS, é software gravado em um chip, e não hardware." },
       ],
       montar(c) {
         const q = quando(c, this);
@@ -179,7 +187,7 @@ serie.capitulo({
             ${ic(p[0], 84, "margin-bottom:12px")}<strong style="font-size:27px">${p[1]}</strong></div>`);
           return c.entra(e, q(1, p[2], -0.1), "pop");
         });
-        c.chave("O <em>software</em> diz ao hardware o que fazer", c.t(2, 0.3), c.t(3) - 0.3);
+        faixa(c, "O <em>software</em> diz ao hardware o que fazer", c.t(2, 0.3), c.t(3) - 0.3);
         [def, ...tiles].forEach((e) => c.sai(e, c.t(3) - 0.4));
         [
           [{ icone: "cpu", titulo: "CPU", texto: "processa" }, "a CPU"],
@@ -199,7 +207,7 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Agora, o cérebro do computador: o processador, ou CPU. Ele executa as instruções dos programas e processa os dados.",
-        "Como você viu no Capítulo 1, a CPU é formada pela unidade de controle, pela unidade lógica e aritmética e pelos registradores.",
+        "Como vimos no Capítulo 1, ela é formada pela unidade de controle, pela unidade lógica e aritmética e pelos registradores.",
         "Os principais fabricantes de processadores para computadores são a Intel e a AMD.",
         "Já os celulares usam principalmente processadores com arquitetura ARM.",
       ],
@@ -210,10 +218,8 @@ serie.capitulo({
         c.entra(chip, q(0, "o processador"), "pop");
         c.texto("Executa as <b>instruções</b> dos programas<br>e <b>processa</b> os dados.", { left: 640, top: 330, width: 900 }, q(0, "Ele executa"));
         const partes = [["Unidade de Controle", "unidade de controle"], ["ULA", "unidade lógica"], ["Registradores", "registradores"]];
-        partes.forEach((p, i) => {
-          const e = c.novo(`<div class="abs pilula" style="left:${[640, 1010, 1180][i]}px;top:480px">${p[0]}</div>`);
-          c.entra(e, q(1, p[1], -0.1), "pop");
-        });
+        const linhaPartes = c.novo(`<div class="abs" style="left:640px;top:480px;display:flex;gap:16px">${partes.map((p) => `<span class="pilula">${p[0]}</span>`).join("")}</div>`);
+        [...linhaPartes.children].forEach((e, i) => c.entra(e, q(1, partes[i][1], -0.1), "pop"));
         cartaoLado(c, { icone: "notebook", titulo: "Computadores", texto: "<b>Intel</b> · <b>AMD</b>" }, { left: 640, top: 590, width: 430 }, c.t(2));
         cartaoLado(c, { icone: "celular", titulo: "Celulares", texto: "arquitetura <b>ARM</b>" }, { left: 1110, top: 590, width: 430 }, c.t(3));
       },
@@ -224,9 +230,9 @@ serie.capitulo({
       secao: "Processador",
       bit: BIT_CANTO,
       falas: [
-        { texto: "E o que define o desempenho? Primeiro, o clock: a frequência, ou seja, quantos ciclos o processador executa por segundo. Ele é medido em hertz.", falar: "E o que define o desempenho? Primeiro, o clóc: a frequência, ou seja, quantos ciclos o processador executa por segundo. Ele é medido em hertz." },
+        { texto: "E o que define o desempenho? Primeiro, o clock: a frequência, ou seja, quantos ciclos o processador executa por segundo, medida em hertz.", falar: "E o que define o desempenho? Primeiro, o clóc: a frequência, ou seja, quantos ciclos o processador executa por segundo, medida em hertz." },
         "Um processador de três vírgula cinco gigahertz realiza três vírgula cinco bilhões de ciclos por segundo.",
-        { texto: "Depois, os núcleos, ou cores. Cada núcleo funciona como um processador independente. Com oito núcleos, o processador executa várias tarefas em paralelo.", falar: "Depois, os núcleos, ou córs. Cada núcleo funciona como um processador independente. Com oito núcleos, o processador executa várias tarefas em paralelo." },
+        { texto: "Depois, os núcleos, ou cores: cada um funciona como um processador independente. Com oito núcleos, várias tarefas rodam em paralelo.", falar: "Depois, os núcleos, ou córs: cada um funciona como um processador independente. Com oito núcleos, várias tarefas rodam em paralelo." },
         { texto: "E as threads, que são fluxos de execução. Com tecnologias como o Hyper-Threading, cada núcleo trabalha com duas threads.", falar: "E as tréds, que são fluxos de execução. Com tecnologias como o ráiper tréding, cada núcleo trabalha com duas tréds." },
       ],
       montar(c) {
@@ -272,10 +278,10 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         { texto: "A memória cache também conta: quanto maior e mais rápida, menos o processador espera pela RAM.", falar: "A memória quêch também conta: quanto maior e mais rápida, menos o processador espera pela RAM." },
-        "E tem a arquitetura: um sistema de trinta e dois bits enxerga, no máximo, cerca de quatro gigabytes de RAM. Os de sessenta e quatro bits superam esse limite.",
-        { texto: "Já a GPU, a unidade de processamento gráfico, fica na placa de vídeo. Ela é especializada em processar imagens e cálculos em paralelo.", falar: "Já a gê pê u, a unidade de processamento gráfico, fica na placa de vídeo. Ela é especializada em processar imagens e cálculos em paralelo." },
+        "E tem a arquitetura: um sistema de trinta e dois bits enxerga no máximo cerca de quatro gigabytes de RAM; os de sessenta e quatro bits superam esse limite.",
+        { texto: "Já a GPU, a unidade de processamento gráfico, fica na placa de vídeo e é especializada em imagens e cálculos em paralelo.", falar: "Já a gê pê u, a unidade de processamento gráfico, fica na placa de vídeo e é especializada em imagens e cálculos em paralelo." },
         { texto: "A GPU pode ser integrada ao processador, ou dedicada: em uma placa separada, com memória própria.", falar: "A gê pê u pode ser integrada ao processador, ou dedicada: em uma placa separada, com memória própria." },
-        { texto: "Resumo estratégico: clock alto não é tudo! Núcleos, cache e arquitetura também determinam o desempenho. E o ciclo de instrução segue sempre busca, decodificação e execução.", falar: "Resumo estratégico: clóc alto não é tudo! Núcleos, quêch e arquitetura também determinam o desempenho. E o ciclo de instrução segue sempre busca, decodificação e execução." },
+        { texto: "Resumindo: clock alto não é tudo! Núcleos, cache e arquitetura também contam. E o ciclo de instrução é sempre busca, decodificação e execução.", falar: "Resumindo: clóc alto não é tudo! Núcleos, quêch e arquitetura também contam. E o ciclo de instrução é sempre busca, decodificação e execução." },
       ],
       montar(c) {
         const q = quando(c, this);
@@ -287,12 +293,12 @@ serie.capitulo({
             <b style="width:110px;font-size:30px">32 bits</b><span class="barra" style="display:block;width:180px;height:30px;border-radius:15px;background:var(--cor-media)"></span>
             <span style="font-size:28px;color:var(--texto-suave)">até <b style="color:var(--texto)">≈ 4 GB</b> de RAM</span></div>
           <div class="b64" style="display:flex;align-items:center;gap:20px;margin-top:22px">
-            <b style="width:110px;font-size:30px">64 bits</b><span class="barra" style="display:block;width:420px;height:30px;border-radius:15px;background:var(--cor)"></span>
-            <span style="font-size:28px;color:var(--texto-suave)">supera o limite</span></div></div>`);
+            <b style="width:110px;font-size:30px">64 bits</b><span class="barra" style="display:block;width:380px;height:30px;border-radius:15px;background:var(--cor)"></span>
+            <span style="font-size:28px;color:var(--texto-suave);white-space:nowrap">supera o limite</span></div></div>`);
         c.entra(bits, c.t(1), "baixo");
         c.entra(bits.querySelector(".b32"), q(1, "um sistema"), "esquerda");
-        c.entra(bits.querySelector(".b64"), q(1, "Os de sessenta"), "esquerda");
-        c.tl.fromTo(bits.querySelector(".b64 .barra"), { width: 180 }, { width: 420, duration: 1, ease: "power2.out", immediateRender: false }, q(1, "superam"));
+        c.entra(bits.querySelector(".b64"), q(1, "os de sessenta"), "esquerda");
+        c.tl.fromTo(bits.querySelector(".b64 .barra"), { width: 180 }, { width: 380, duration: 1, ease: "power2.out", immediateRender: false }, q(1, "superam"));
         [cache, bits].forEach((e) => c.sai(e, c.t(2) - 0.4));
         cartaoLado(c, { icone: "gpu", titulo: "GPU", texto: "processamento <b>gráfico</b>: imagens e cálculos em <b>paralelo</b>", tam: 96 }, { left: 140, top: 330, width: 560, height: 290 }, c.t(2));
         cartaoLado(c, { icone: "cpu", titulo: "Integrada", texto: "no próprio processador" }, { left: 740, top: 330, width: 390, height: 290 }, q(3, "integrada"));
@@ -310,7 +316,7 @@ serie.capitulo({
         { texto: "Outro tema clássico: as arquiteturas CISC e RISC. A CISC tem um conjunto grande de instruções complexas.", falar: "Outro tema clássico: as arquiteturas císc e rísc. A císc tem um conjunto grande de instruções complexas." },
         { texto: "Ela aparece nos processadores x86 da Intel e da AMD, usados em desktops e notebooks.", falar: "Ela aparece nos processadores xis oitenta e seis da Intel e da AMD, usados em desktops e notebooks." },
         { texto: "A RISC tem um conjunto reduzido de instruções simples e rápidas, com menor consumo de energia. É o caso dos processadores ARM, de celulares, tablets e dos computadores da Apple com chip M.", falar: "A rísc tem um conjunto reduzido de instruções simples e rápidas, com menor consumo de energia. É o caso dos processadores ARM, de celulares, tébléts e dos computadores da Apple com chip M." },
-        { texto: "E, nos celulares, o processador fica dentro de um SoC, um System on a Chip: um único chip que reúne CPU, GPU, controlador de memória e outros componentes.", falar: "E, nos celulares, o processador fica dentro de um ésse ó cê, um sístem ón a tchíp: um único chip que reúne CPU, gê pê u, controlador de memória e outros componentes." },
+        { texto: "Nos celulares, o processador fica em um SoC, o System on a Chip: um único chip que reúne CPU, GPU, controlador de memória e outros componentes.", falar: "Nos celulares, o processador fica em um ésse ó cê, o sístem ón a tchíp: um único chip que reúne CPU, gê pê u, controlador de memória e outros componentes." },
       ],
       montar(c) {
         const q = quando(c, this);
@@ -328,7 +334,7 @@ serie.capitulo({
           <div class="onde" style="display:flex;gap:20px;align-items:center;margin-top:26px">${ic("celular", 70)}<p style="font-size:27px"><b>ARM</b> · celulares, tablets<br>Apple com chip M</p></div></div>`);
         c.entra(risc, c.t(2), "direita");
         c.entra(risc.querySelector(".onde"), q(2, "É o caso"), "baixo");
-        c.chave("Celular → <em>RISC (ARM)</em> &nbsp;·&nbsp; PC → <em>CISC (x86)</em>", q(2, "É o caso", 1.5), c.t(3) - 0.3);
+        faixa(c, "Celular → <em>RISC (ARM)</em> &nbsp;·&nbsp; PC → <em>CISC (x86)</em>", q(2, "É o caso", 1.5), c.t(3) - 0.3);
         [cisc, risc].forEach((e) => c.sai(e, c.t(3) - 0.4));
         const soc = c.novo(`<div class="abs" style="left:140px;top:340px;width:760px;height:500px;border-radius:36px;background:var(--cor);box-shadow:var(--sombra);padding:34px">
           <div class="rotulo" style="color:#fff;opacity:.85">SoC · um único chip</div>
@@ -352,8 +358,7 @@ serie.capitulo({
       falas: [
         { texto: "Agora, as memórias. Elas são organizadas em uma hierarquia: no topo, os registradores; depois, a cache, a RAM, o SSD e, na base, o HD.", falar: "Agora, as memórias. Elas são organizadas em uma hierarquia: no topo, os registradores; depois, a quêch, a RAM, o SSD e, na base, o HD." },
         "A regra é: quanto mais perto do processador, mais rápida, menor e mais cara por gigabyte é a memória.",
-        { texto: "Os registradores guardam apenas bytes. A cache, de kilobytes a dezenas de megabytes. A RAM, de oito a sessenta e quatro gigabytes.", falar: "Os registradores guardam apenas bytes. A quêch, de quilobáites a dezenas de megabytes. A RAM, de oito a sessenta e quatro gigabytes." },
-        { texto: "O SSD, de duzentos e cinquenta e seis gigabytes a alguns terabytes. E o HD, de um a vários terabytes.", falar: "O SSD, de duzentos e cinquenta e seis gigabytes a alguns terabáites. E o HD, de um a vários terabáites." },
+        { texto: "Já a capacidade cresce para baixo: os registradores guardam só bytes, a RAM tem de oito a sessenta e quatro gigabytes, e o HD, de um a vários terabytes.", falar: "Já a capacidade cresce para baixo: os registradores guardam só bytes, a RAM tem de oito a sessenta e quatro gigabytes, e o HD, de um a vários terabáites." },
         { texto: "E repare: registradores, cache e RAM são voláteis. O SSD e o HD, não.", falar: "E repare: registradores, quêch e RAM são voláteis. O SSD e o HD, não." },
         { texto: "Memorize: do mais rápido para o mais lento, registradores, cache, RAM, SSD e HD. A capacidade cresce no sentido inverso.", falar: "Memorize: do mais rápido para o mais lento, registradores, quêch, RAM, SSD e HD. A capacidade cresce no sentido inverso." },
       ],
@@ -363,11 +368,11 @@ serie.capitulo({
         const cx = 600, topo = 330, alt = 104, passo = 112;
         const hw = (y) => 125 + (y - topo) * (300 / 560);
         const niveis = [
-          ["Registradores", "registradores;", "bytes", ["Os registradores", 2]],
-          ["Cache", "a quêch, a RAM", "KB a dezenas de MB", ["A quêch", 2]],
-          ["RAM", "a RAM, o SSD", "8 a 64 GB", ["A RAM", 2]],
-          ["SSD", "o SSD e", "256 GB a alguns TB", ["O SSD", 3]],
-          ["HD", "o HD.", "1 a vários TB", ["E o HD", 3]],
+          ["Registradores", "registradores;", "bytes", ["os registradores", 2]],
+          ["Cache", "a quêch, a RAM", "KB a dezenas de MB", ["os registradores", 2, 0.9]],
+          ["RAM", "a RAM, o SSD", "8 a 64 GB", ["a RAM tem", 2]],
+          ["SSD", "o SSD e", "256 GB a alguns TB", ["a RAM tem", 2, 1.2]],
+          ["HD", "o HD.", "1 a vários TB", ["e o HD", 2]],
         ];
         const tags = [];
         niveis.forEach((n, i) => {
@@ -380,19 +385,19 @@ serie.capitulo({
           c.entra(e, q(0, n[1], -0.1), "baixo");
           const meio = (y0 + y1) / 2;
           const tag = c.novo(`<div class="abs pilula" style="left:${cx + hw(meio) + 34}px;top:${meio - 28}px;font-size:28px">${n[2]}</div>`);
-          c.entra(tag, q(n[3][1], n[3][0], -0.1), "esquerda");
+          c.entra(tag, q(n[3][1], n[3][0], (n[3][2] || 0) - 0.1), "esquerda");
           tags.push(tag);
         });
-        c.chave("Mais perto da CPU → <em>mais rápida, menor e mais cara por GB</em>", c.t(1, 0.4), c.t(2) - 0.3);
+        faixa(c, "Mais perto da CPU → <em>mais rápida, menor e mais cara por GB</em>", c.t(1, 0.4), c.t(2) - 0.3);
         const yLinha = topo + 3 * passo - 4;
         const linha = c.novo(`<svg class="abs" style="left:0;top:0;width:1920px;height:1080px" viewBox="0 0 1920 1080"><path d="M240 ${yLinha} H1540" stroke="var(--prova)" stroke-width="5" stroke-dasharray="14 12" fill="none"/></svg>`);
-        c.desenhar(linha.querySelector("path"), c.t(4, 0.2), 1);
+        c.desenhar(linha.querySelector("path"), c.t(3, 0.2), 1);
         const vol = c.novo(`<div class="abs" style="left:1330px;top:${yLinha - 62}px;font:700 28px var(--sans);color:var(--prova)">▲ voláteis</div>`);
         const nvol = c.novo(`<div class="abs" style="left:1330px;top:${yLinha + 14}px;font:700 28px var(--sans);color:var(--prova)">▼ não voláteis</div>`);
-        c.entra(vol, q(4, "registradores"), "fade");
-        c.entra(nvol, q(4, "O SSD"), "fade");
-        [...tags, linha, vol, nvol].forEach((e) => c.sai(e, c.t(5) - 0.4));
-        const m = c.quadro("dica", "Registradores → cache → RAM → SSD → HD.<br>Velocidade cai; a <b>capacidade cresce</b> no sentido inverso.", { left: 1010, top: 330, width: 530 }, c.t(5));
+        c.entra(vol, q(3, "registradores"), "fade");
+        c.entra(nvol, q(3, "O SSD"), "fade");
+        [...tags, linha, vol, nvol].forEach((e) => c.sai(e, c.t(4) - 0.4));
+        const m = c.quadro("dica", "Registradores → cache → RAM → SSD → HD.<br>Velocidade cai; a <b>capacidade cresce</b> no sentido inverso.", { left: 1010, top: 330, width: 530 }, c.t(4));
         m.querySelector("p").style.fontSize = "36px";
       },
     },
@@ -402,8 +407,8 @@ serie.capitulo({
       secao: "Memórias",
       bit: BIT_CANTO,
       falas: [
-        { texto: "Vamos olhar a cache de perto. Ela é uma memória extremamente rápida, feita de SRAM, que guarda os dados e as instruções que o processador mais usa.", falar: "Vamos olhar a quêch de perto. Ela é uma memória extremamente rápida, feita de ésse ram, que guarda os dados e as instruções que o processador mais usa." },
-        "Assim, a CPU não fica esperando a RAM, que é bem mais lenta. É como deixar na mesa o material que você mais usa, em vez de buscá-lo no armário toda hora.",
+        { texto: "Vamos olhar a cache de perto: uma memória extremamente rápida, feita de SRAM, que guarda os dados e as instruções que o processador mais usa.", falar: "Vamos olhar a quêch de perto: uma memória extremamente rápida, feita de ésse ram, que guarda os dados e as instruções que o processador mais usa." },
+        "Assim, a CPU não fica esperando a RAM, que é bem mais lenta. É como deixar na mesa o que você mais usa, em vez de buscar no armário.",
         { texto: "A cache tem níveis. A L1 é a menor e a mais rápida, e fica dentro de cada núcleo.", falar: "A quêch tem níveis. A L1 é a menor e a mais rápida, e fica dentro de cada núcleo." },
         "A L2 é maior e um pouco mais lenta. E a L3 é a maior, normalmente compartilhada entre os núcleos.",
         { texto: "Cuidado com a pegadinha: a cache é mais lenta que a RAM? Errado! A cache é mais rápida, porém bem menor.", falar: "Cuidado com a pegadinha: a quêch é mais lenta que a RAM? Errado! A quêch é mais rápida, porém bem menor." },
@@ -416,7 +421,7 @@ serie.capitulo({
         const n3 = c.no({ icone: "memoria", titulo: "RAM", texto: "bem mais lenta" }, { left: 1140, top: 330, width: 360, height: 300 }, q(1, "esperando a RAM"));
         const s1 = c.seta(510, 480, 590, 480, q(0, "que guarda"));
         const s2 = c.seta(1050, 480, 1130, 480, q(1, "esperando a RAM", 0.4), { cor: "var(--texto-fraco)" });
-        c.chave("Cache = <em>material na mesa</em> &nbsp;·&nbsp; RAM = <em>armário</em>", q(1, "É como"), c.t(2) - 0.3);
+        faixa(c, "Cache = <em>material na mesa</em> &nbsp;·&nbsp; RAM = <em>armário</em>", q(1, "É como"), c.t(2) - 0.3);
         [n1, n2, n3, s1, s2].forEach((e) => c.sai(e, c.t(2) - 0.4));
         const base = 600;
         const blocos = [
@@ -444,7 +449,7 @@ serie.capitulo({
         "A RAM é volátil: perde todo o conteúdo quando o computador é desligado. E permite leitura e escrita.",
         { texto: "Ela é feita de DRAM, a RAM dinâmica. As gerações atuais são a DDR4 e a DDR5.", falar: "Ela é feita de dê ram, a RAM dinâmica. As gerações atuais são a DDR4 e a DDR5." },
         "Se houver pouca RAM, o sistema passa a usar a memória virtual, no disco, e o computador fica lento.",
-        "Resumo estratégico: a RAM é a memória principal, temporária e volátil. Com mais RAM, você mantém mais programas abertos sem perder desempenho.",
+        "Resumindo: a RAM é a memória principal, temporária e volátil. Mais RAM permite manter mais programas abertos sem perder desempenho.",
       ],
       montar(c) {
         const q = quando(c, this);
@@ -452,7 +457,7 @@ serie.capitulo({
         const card = c.novo(`<div class="cartao" style="left:140px;top:330px;width:460px;height:470px">
           ${ic("memoria", 150, "margin-bottom:16px")}<h3 style="font-size:52px">RAM</h3><p><i>Random Access Memory</i><br>memória de <b>acesso aleatório</b></p></div>`);
         c.entra(card, c.t(0, 0.3), "baixo");
-        const painel = c.novo(`<div class="cartao" style="left:660px;top:330px;width:880px;height:300px">
+        const painel = c.novo(`<div class="cartao" style="left:660px;top:330px;width:880px;height:330px">
           <div class="rotulo">Na RAM agora</div>
           <div class="itens" style="display:flex;gap:18px;margin-top:26px;flex-wrap:wrap">
             ${["Sistema operacional", "Programas abertos", "Dados em uso"].map((t) => `<span class="pilula" style="font-size:30px">${t}</span>`).join("")}</div>
@@ -465,7 +470,7 @@ serie.capitulo({
         c.tl.to(itens, { opacity: 0.18, duration: 0.5 }, q(2, "quando o computador"));
         c.entra(painel.querySelector(".volatil"), q(2, "perde"), "baixo");
         c.entra(painel.querySelector(".le"), q(2, "E permite"), "fade");
-        const ger = c.novo(`<div class="abs" style="left:660px;top:680px;display:flex;gap:18px;align-items:center">
+        const ger = c.novo(`<div class="abs" style="left:660px;top:710px;display:flex;gap:18px;align-items:center">
           <span style="font-size:30px;color:var(--texto-suave)">feita de</span><span class="pilula g">DRAM</span>
           <span style="font-size:30px;color:var(--texto-suave);margin-left:14px">gerações</span><span class="pilula g">DDR4</span><span class="pilula g">DDR5</span></div>`);
         c.entra(ger, c.t(3), "fade");
@@ -491,7 +496,7 @@ serie.capitulo({
       falas: [
         { texto: "E a ROM? É a Read Only Memory: a memória somente de leitura.", falar: "E a ROM? É a ríd ôunli mémori: a memória somente de leitura." },
         "Ela é não volátil: mantém os dados mesmo sem energia. E guarda o firmware que inicia o computador.",
-        "Existem vários tipos. A ROM de máscara é gravada na fábrica e não pode ser alterada. A PROM pode ser gravada uma única vez pelo usuário.",
+        "Há vários tipos. A ROM de máscara é gravada na fábrica e não pode ser alterada. A PROM pode ser gravada uma única vez pelo usuário.",
         { texto: "A EPROM é apagável com luz ultravioleta e regravável. A EEPROM é apagável eletricamente, e também regravável.", falar: "A é prom é apagável com luz ultravioleta e regravável. A é é prom é apagável eletricamente, e também regravável." },
         { texto: "E a memória flash é um tipo de EEPROM rápida, regravada em blocos. Ela é usada no chip da BIOS, em pen drives e em SSDs.", falar: "E a memória flash é um tipo de é é prom rápida, regravada em blocos. Ela é usada no chip da BIOS, em pén dráivs e em ésse ésse dês." },
       ],
@@ -501,7 +506,7 @@ serie.capitulo({
         const card = c.novo(`<div class="cartao" style="left:140px;top:330px;width:440px;height:520px">
           ${ic("chip", 130, "margin-bottom:16px")}<h3 style="font-size:52px">ROM</h3><p><i>Read Only Memory</i><br>somente <b>leitura</b></p>
           <div class="selos" style="display:flex;flex-direction:column;gap:14px;margin-top:26px;align-items:flex-start">
-            <span class="pilula s1">não volátil</span><span class="pilula s2" style="font-size:26px">firmware de inicialização</span></div></div>`);
+            <span class="pilula s1">não volátil</span><span class="pilula s2" style="font-size:23px;white-space:nowrap;padding:8px 18px">firmware de inicialização</span></div></div>`);
         c.entra(card, c.t(0, 0.3), "baixo");
         c.entra(card.querySelector(".s1"), c.t(1, 0.3), "pop");
         c.entra(card.querySelector(".s2"), q(1, "E guarda"), "pop");
@@ -514,6 +519,7 @@ serie.capitulo({
         ], { left: 640, top: 330, width: 900 }, c.t(2), [q(2, "A ROM de"), q(2, "A PROM"), c.t(3), q(3, "A é é prom"), c.t(4)]);
         tab.style.fontSize = "27px";
         tab.querySelectorAll("td").forEach((td) => { td.style.padding = "17px 26px"; });
+        tab.querySelectorAll("td:first-child").forEach((td) => { td.style.whiteSpace = "nowrap"; });
         tab.querySelectorAll("th").forEach((th) => { th.style.padding = "18px 26px"; });
       },
     },
@@ -523,7 +529,7 @@ serie.capitulo({
       secao: "ROM e BIOS",
       bit: BIT_CANTO,
       falas: [
-        "Esse firmware de inicialização é a BIOS, ou a sua substituta moderna, a UEFI. Ele fica na placa-mãe, inicializa o hardware e carrega o sistema operacional.",
+        "Esse firmware da placa-mãe é a BIOS, ou a sua substituta moderna, a UEFI. Ele inicializa o hardware e carrega o sistema operacional.",
         { texto: "A UEFI trouxe interface gráfica, suporte a discos maiores e inicialização segura, o Secure Boot.", falar: "A UEFI trouxe interface gráfica, suporte a discos maiores e inicialização segura, o sequiúr bút." },
         { texto: "E, ao ligar o computador, a BIOS ou a UEFI faz o POST, o Power-On Self-Test: um teste automático do hardware.", falar: "E, ao ligar o computador, a BIOS ou a UEFI faz o póst, o páuer ón sélf tést: um teste automático do hardware." },
         { texto: "As configurações da BIOS ficam em uma pequena memória, mantida por uma bateria na placa-mãe: a memória CMOS.", falar: "As configurações da BIOS ficam em uma pequena memória, mantida por uma bateria na placa-mãe: a memória cê mós." },
@@ -547,7 +553,7 @@ serie.capitulo({
         passos.forEach(([n, x, w, t]) => c.no(n, { left: x, top: 640, width: w, height: 240, padding: "20px" }, t));
         c.seta(400, 760, 460, 760, q(2, "faz o póst", -0.2));
         c.seta(780, 760, 840, 760, q(2, "um teste", 0.6));
-        c.chave("POST = <em>Power-On Self-Test</em>", q(2, "páuer", 0.5), c.t(3) - 0.3);
+        faixa(c, "POST = <em>Power-On Self-Test</em>", q(2, "páuer", 0.5), c.t(3) - 0.3);
         cartaoLado(c, { icone: "nobreak", titulo: "CMOS", texto: "configurações da BIOS, mantidas por <b>bateria</b>", tam: 76, fs: 32, ps: 25 }, { left: 1150, top: 640, width: 390, height: 240, padding: "24px" }, c.t(3));
       },
     },
@@ -559,25 +565,25 @@ serie.capitulo({
       falas: [
         "Vamos comparar. A RAM é volátil e guarda os programas e os dados em uso, com leitura e escrita livres.",
         "A ROM é não volátil, guarda o firmware de inicialização e, no uso normal, é somente leitura.",
-        "Pegadinha: a RAM mantém os dados após o desligamento? Errado! A RAM é volátil. Quem mantém os dados é a ROM e os dispositivos de armazenamento, a memória secundária.",
+        "Pegadinha: a RAM mantém os dados após o desligamento? Errado! Quem mantém é a ROM e os dispositivos de armazenamento, a memória secundária.",
       ],
       montar(c) {
         const q = quando(c, this);
         c.titulo("Comparação", "RAM × ROM", { left: 140, top: 150 }, c.t(0), { medio: true });
         const linhas = (vals) => ["Volatilidade", "Uso", "Escrita"].map((r, i) => `<div class="lin" style="margin-top:${i ? 16 : 22}px"><div class="rotulo" style="font-size:20px">${r}</div><p style="font-size:30px;margin-top:2px;color:var(--texto)">${vals[i]}</p></div>`).join("");
-        const ram = c.novo(`<div class="cartao" style="left:140px;top:330px;width:680px;height:350px">
+        const ram = c.novo(`<div class="cartao" style="left:140px;top:330px;width:680px;height:380px">
           <div style="display:flex;gap:18px;align-items:center">${ic("memoria", 64)}<h3 style="margin:0">RAM</h3></div>
           ${linhas(["<b>volátil</b>", "programas e dados em uso", "leitura e escrita livres"])}</div>`);
         c.entra(ram, c.t(0, 0.2), "esquerda");
         const rl = ram.querySelectorAll(".lin");
         [q(0, "é volátil"), q(0, "guarda"), q(0, "com leitura")].forEach((t, i) => c.entra(rl[i], t, "fade"));
-        const rom = c.novo(`<div class="cartao" style="left:860px;top:330px;width:680px;height:350px">
+        const rom = c.novo(`<div class="cartao" style="left:860px;top:330px;width:680px;height:380px">
           <div style="display:flex;gap:18px;align-items:center">${ic("chip", 64)}<h3 style="margin:0">ROM</h3></div>
           ${linhas(["<b>não volátil</b>", "firmware de inicialização", "somente leitura (uso normal)"])}</div>`);
         c.entra(rom, c.t(1), "direita");
         const ol = rom.querySelectorAll(".lin");
         [q(1, "é não volátil"), q(1, "guarda"), q(1, "no uso normal")].forEach((t, i) => c.entra(ol[i], t, "fade"));
-        c.quadro("prova", "“A RAM mantém os dados após o desligamento.” <b>Errado</b>: a RAM é volátil. Quem mantém é a <b>ROM</b> e o <b>armazenamento</b> (memória secundária).", { left: 140, top: 720, width: 1400 }, c.t(2)).querySelector("p").style.fontSize = "36px";
+        c.quadro("prova", "“A RAM mantém os dados após o desligamento.” <b>Errado</b>: a RAM é volátil. Quem mantém é a <b>ROM</b> e o <b>armazenamento</b> (memória secundária).", { left: 140, top: 745, width: 1400 }, c.t(2)).querySelector("p").style.fontSize = "36px";
       },
     },
 
@@ -588,9 +594,9 @@ serie.capitulo({
       secao: "Armazenamento",
       bit: BIT_CANTO,
       falas: [
-        "Agora, o armazenamento, também chamado de memória secundária. Ele guarda os dados de forma permanente, não volátil, mesmo com o computador desligado.",
-        "Os mais conhecidos são o HD e o SSD. O HD usa discos magnéticos giratórios e uma cabeça de leitura. Já o SSD usa memória flash, sem partes móveis.",
-        "Por isso, o SSD é muito mais rápido e mais resistente a impactos, já que o HD tem partes mecânicas. E o SSD é silencioso e econômico.",
+        "Agora, o armazenamento, ou memória secundária. Ele guarda os dados de forma permanente, mesmo com o computador desligado.",
+        "O HD usa discos magnéticos giratórios e uma cabeça de leitura. Já o SSD usa memória flash, sem partes móveis.",
+        "Por isso, o SSD é muito mais rápido e mais resistente a impactos. E ainda é silencioso e econômico.",
         "Já a vantagem do HD é o preço: o custo por gigabyte é menor.",
         "Pegadinha: o SSD é um disco magnético? Errado! O SSD usa memória flash. O disco magnético é o HD.",
       ],
@@ -608,7 +614,7 @@ serie.capitulo({
           ["Resistência a impactos", "menor (partes mecânicas)", "<b>maior</b>"],
           ["Ruído e consumo", "maiores", "<b>silencioso e econômico</b>"],
           ["Custo por GB", "<b>menor</b>", "maior"],
-        ], { left: 140, top: 410, width: 1400 }, c.t(1), [q(1, "O HD usa"), q(2, "muito mais rápido"), q(2, "resistente"), q(2, "E o SSD é"), q(3, "o custo")]);
+        ], { left: 140, top: 410, width: 1400 }, c.t(1), [q(1, "O HD usa"), q(2, "muito mais rápido"), q(2, "resistente"), q(2, "E ainda"), q(3, "o custo")]);
         tab.style.fontSize = "29px";
         tab.querySelectorAll("td").forEach((td) => { td.style.padding = "15px 30px"; });
         tab.querySelectorAll("th").forEach((th) => { th.style.padding = "12px 30px"; });
@@ -624,7 +630,7 @@ serie.capitulo({
       secao: "Armazenamento",
       bit: BIT_CANTO,
       falas: [
-        { texto: "Existem dois tipos principais de SSD. O SSD SATA usa a mesma interface dos HDs, e fica limitado a cerca de seiscentos megabytes por segundo.", falar: "Existem dois tipos principais de SSD. O SSD sáta usa a mesma interface dos agá dês, e fica limitado a cerca de seiscentos megabytes por segundo." },
+        { texto: "Há dois tipos de SSD. O SSD SATA usa a mesma interface dos HDs e fica limitado a cerca de seiscentos megabytes por segundo.", falar: "Há dois tipos de SSD. O SSD sáta usa a mesma interface dos agá dês e fica limitado a cerca de seiscentos megabytes por segundo." },
         { texto: "Já o SSD NVMe se conecta pelo PCIe, normalmente no formato M.2, e passa facilmente de três mil megabytes por segundo.", falar: "Já o SSD ene vê eme é se conecta pelo pê cê i é, normalmente no formato eme ponto dois, e passa facilmente de três mil megabytes por segundo." },
         { texto: "E existem outras mídias. O pen drive e o cartão de memória SD também usam memória flash, e vão de oito gigabytes a um terabyte.", falar: "E existem outras mídias. O pén dráiv e o cartão de memória SD também usam memória flash, e vão de oito gigabytes a um terabyte." },
         { texto: "O CD, o DVD e o Blu-ray são mídias ópticas, lidas por laser. O CD guarda cerca de setecentos megabytes, e o DVD, quatro vírgula sete gigabytes em camada simples.", falar: "O CD, o DVD e o blu rêi são mídias ópticas, lidas por laser. O CD guarda cerca de setecentos megabytes, e o DVD, quatro vírgula sete gigabytes em camada simples." },
@@ -647,7 +653,7 @@ serie.capitulo({
         barra(460, "SSD NVMe", "via PCIe · formato M.2", 750, c.t(1), q(1, "e passa"), 3000, "+ ");
         c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:600px">Outras mídias</div>`), c.t(2), "fade");
         const midias = [
-          ["pendrive", "Pen drive e SD", "8 GB a 1 TB", "memória flash", q(2, "O pén")],
+          ["pendrive", "Pen drive / SD", "8 GB a 1 TB", "memória flash", q(2, "O pén")],
           ["disco", "CD", "≈ 700 MB", "óptica (laser)", q(3, "O CD guarda")],
           ["disco", "DVD", "4,7 GB", "óptica · camada simples", q(3, "e o DVD")],
           ["disco", "Blu-ray", "25 GB", "por camada · laser azul-violeta", c.t(4)],
@@ -668,7 +674,7 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         { texto: "E o RAID? Ele combina vários discos para ganhar desempenho, segurança contra falhas, ou as duas coisas.", falar: "E o réid? Ele combina vários discos para ganhar desempenho, segurança contra falhas, ou as duas coisas." },
-        { texto: "No RAID 0, o striping, os dados são divididos entre os discos. Ganha-se desempenho, mas não há redundância: se um disco falhar, perde-se tudo.", falar: "No réid zero, o stráipin, os dados são divididos entre os discos. Ganha-se desempenho, mas não há redundância: se um disco falhar, perde-se tudo." },
+        { texto: "No RAID 0, o striping, os dados são divididos entre os discos: mais desempenho, mas sem redundância. Se um disco falhar, perde-se tudo.", falar: "No réid zero, o stráipin, os dados são divididos entre os discos: mais desempenho, mas sem redundância. Se um disco falhar, perde-se tudo." },
         { texto: "No RAID 1, o espelhamento, os mesmos dados são gravados em dois discos. Se um disco falhar, o outro mantém os dados.", falar: "No réid um, o espelhamento, os mesmos dados são gravados em dois discos. Se um disco falhar, o outro mantém os dados." },
         { texto: "O RAID 5 distribui dados e paridade em três ou mais discos, e suporta a falha de um disco.", falar: "O réid cinco distribui dados e paridade em três ou mais discos, e suporta a falha de um disco." },
         { texto: "E o RAID 10 combina espelhamento e divisão: desempenho e redundância, mas com um custo maior.", falar: "E o réid dez combina espelhamento e divisão: desempenho e redundância, mas com um custo maior." },
@@ -683,7 +689,7 @@ serie.capitulo({
           ["RAID 0", "striping", [["A1", "A3"], ["A2", "A4"]], "+ desempenho<br><b>sem redundância</b>", c.t(1)],
           ["RAID 1", "espelhamento", [["A1", "A2"], ["A1", "A2"]], "se um falha,<br><b>o outro mantém</b>", c.t(2)],
           ["RAID 5", "dados + paridade", [["A1", "B1", "P3"], ["A2", "P2", "C1"], ["P1", "B2", "C2"]], "3 ou mais discos<br><b>suporta 1 falha</b>", c.t(3)],
-          ["RAID 10", "1 + 0", [["A1", "A3"], ["A1", "A3"], ["A2", "A4"], ["A2", "A4"]], "desempenho e<br>redundância · <b>custo maior</b>", c.t(4)],
+          ["RAID 10", "1 + 0", [["A1", "A3"], ["A1", "A3"], ["A2", "A4"], ["A2", "A4"]], "desempenho e redundância<br><b>custo maior</b>", c.t(4)],
         ];
         const cards = niveis.map(([nome, sub, discos, txt, t], k) => {
           const e = c.novo(`<div class="cartao" style="left:${140 + k * 355}px;top:330px;width:335px;height:370px;padding:26px 28px">
@@ -694,7 +700,7 @@ serie.capitulo({
         });
         // Falhas: no RAID 0 tudo se perde; no RAID 1 o outro disco segue.
         const d0 = cards[0].querySelectorAll(".disco");
-        c.tl.to(d0[1], { backgroundColor: "#f6d9d4", borderColor: "var(--errado)", duration: 0.3 }, q(1, "se um disco"));
+        c.tl.to(d0[1], { backgroundColor: "#f6d9d4", borderColor: "var(--errado)", duration: 0.3 }, q(1, "Se um disco"));
         c.tl.to(cards[0].querySelectorAll(".disco span"), { backgroundColor: "#c9ced8", duration: 0.4 }, q(1, "perde-se"));
         const d1 = cards[1].querySelectorAll(".disco");
         c.tl.to(d1[0], { backgroundColor: "#f6d9d4", borderColor: "var(--errado)", duration: 0.3 }, q(2, "Se um disco"));
@@ -709,7 +715,7 @@ serie.capitulo({
       secao: "Armazenamento",
       bit: BIT_CANTO,
       falas: [
-        "E como um disco é organizado? Em partições: divisões lógicas do disco. Cada partição pode ter seu próprio sistema de arquivos, como as unidades C e D no mesmo disco.",
+        "E como um disco é organizado? Em partições: divisões lógicas, cada uma com seu próprio sistema de arquivos, como as unidades C e D no mesmo disco.",
         "O MBR e o GPT são esquemas de particionamento.",
         { texto: "O MBR, mais antigo, aceita discos de até dois terabytes e quatro partições primárias.", falar: "O MBR, mais antigo, aceita discos de até dois terabáites e quatro partições primárias." },
         "Já o GPT, usado com a UEFI, aceita discos muito maiores e muitas partições.",
@@ -725,17 +731,17 @@ serie.capitulo({
           <div class="p2" style="flex:4;border-radius:0 22px 22px 0;background:var(--cor-media);display:flex;align-items:center;padding:0 34px;font:800 40px var(--sans)">D: <span style="font:500 26px var(--sans);margin-left:18px;color:var(--texto-suave)">partição 2</span></div></div>`);
         c.entra(barra.querySelector(".p1"), q(0, "Em partições"), "esquerda");
         c.entra(barra.querySelector(".p2"), q(0, "Em partições", 0.5), "esquerda");
-        c.entra(c.novo(`<div class="abs" style="left:300px;top:470px;font-size:28px;color:var(--texto-suave)">cada partição com seu <b style="color:var(--texto)">próprio sistema de arquivos</b></div>`), q(0, "Cada partição"), "fade");
-        cartaoLado(c, { icone: "relogio", titulo: "MBR <span style='font-weight:600;color:var(--texto-fraco)'>· antigo</span>", texto: "discos de até <b>2 TB</b> · <b>4</b> partições primárias", tam: 72 }, { left: 140, top: 550, width: 680, height: 190 }, c.t(2));
-        cartaoLado(c, { icone: "placamae", titulo: "GPT <span style='font-weight:600;color:var(--texto-fraco)'>· com UEFI</span>", texto: "discos <b>muito maiores</b> · <b>muitas</b> partições", tam: 72 }, { left: 860, top: 550, width: 680, height: 190 }, c.t(3));
-        c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:510px">Esquemas de particionamento</div>`), c.t(1), "fade");
-        const fmt = c.novo(`<div class="abs" style="left:140px;top:770px;display:flex;align-items:center;gap:18px">
+        c.entra(c.novo(`<div class="abs" style="left:300px;top:470px;font-size:28px;color:var(--texto-suave)">cada partição com seu <b style="color:var(--texto)">próprio sistema de arquivos</b></div>`), q(0, "cada uma"), "fade");
+        cartaoLado(c, { icone: "relogio", titulo: "MBR <span style='font-weight:600;color:var(--texto-fraco)'>· antigo</span>", texto: "discos de até <b>2 TB</b> · <b>4</b> partições primárias", tam: 72 }, { left: 140, top: 585, width: 680, height: 180 }, c.t(2));
+        cartaoLado(c, { icone: "placamae", titulo: "GPT <span style='font-weight:600;color:var(--texto-fraco)'>· com UEFI</span>", texto: "discos <b>muito maiores</b> · <b>muitas</b> partições", tam: 72 }, { left: 860, top: 585, width: 680, height: 180 }, c.t(3));
+        c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:540px">Esquemas de particionamento</div>`), c.t(1), "fade");
+        const fmt = c.novo(`<div class="abs" style="left:140px;top:800px;display:flex;align-items:center;gap:18px">
           <span style="font:800 34px var(--sans)">Formatação</span><span style="font-size:34px;color:var(--texto-fraco)">→</span>
           <span class="pilula f">NTFS</span><span class="pilula f">exFAT</span><span class="pilula f">ext4</span></div>`);
         c.entra(fmt, c.t(4), "fade");
         const fs = fmt.querySelectorAll(".f");
         [q(4, "NTFS"), q(4, "éks"), q(4, "é xis")].forEach((t, i) => c.entra(fs[i], t, "pop"));
-        c.chave("Formatação rápida <em>não apaga com segurança</em>: os dados podem ser recuperados", c.t(5, 0.3));
+        faixa(c, "Formatação rápida <em>não apaga com segurança</em>", c.t(5, 0.3));
       },
     },
 
@@ -746,7 +752,7 @@ serie.capitulo({
       secao: "Placa-mãe e energia",
       bit: BIT_CANTO,
       falas: [
-        "A placa-mãe é a placa de circuito principal. Ela conecta o processador, a memória, o armazenamento e os periféricos, e permite a comunicação entre eles.",
+        "A placa-mãe é a placa de circuito principal: ela conecta processador, memória, armazenamento e periféricos, e permite a comunicação entre eles.",
         { texto: "Nela fica o soquete, o encaixe do processador. E o chipset: o conjunto de chips que controla a comunicação entre os componentes.", falar: "Nela fica o soquete, o encaixe do processador. E o tchípsét: o conjunto de chips que controla a comunicação entre os componentes." },
         { texto: "Os slots de memória recebem os pentes de RAM. E os slots PCIe recebem placas de expansão, como uma placa de vídeo dedicada.", falar: "Os slóts de memória recebem os pentes de RAM. E os slóts pê cê i é recebem placas de expansão, como uma placa de vídeo dedicada." },
         { texto: "Os conectores SATA e M.2 ligam os HDs e os SSDs.", falar: "Os conectores sáta e eme ponto dois ligam os agá dês e os ésse ésse dês." },
@@ -760,7 +766,7 @@ serie.capitulo({
         c.entra(placa, c.t(0, 0.3), "zoom");
         // Barramentos (desenhados no fim, atrás das peças)
         const bus = c.novo(`<svg class="abs" style="left:${X}px;top:${Y}px;width:1000px;height:600px;overflow:visible" viewBox="0 0 1000 600">
-          ${["M290 170 H340", "M180 280 V400 H600", "M600 420 H520 V465", "M750 400 H870 V430", "M675 330 V160"].map((d) => `<path d="${d}" stroke="var(--cor)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`).join("")}</svg>`);
+          ${["M290 170 H340", "M250 280 V400 H600", "M600 420 H520 V465", "M750 400 H870 V430", "M675 330 V160"].map((d) => `<path d="${d}" stroke="var(--cor)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`).join("")}</svg>`);
         bus.querySelectorAll("path").forEach((p, i) => c.desenhar(p, q(4, "vias", i * 0.25), 0.7));
         const peca = (html, est) => c.novo(`<div class="abs" style="left:${X + est[0]}px;top:${Y + est[1]}px;width:${est[2]}px;height:${est[3]}px;${est[4] || ""}">${html}</div>`);
         const etiqueta = (txt, x, y) => c.novo(`<div class="abs pilula" style="left:${X + x}px;top:${Y + y}px;font-size:25px;padding:6px 18px;background:#fff;box-shadow:var(--sombra)">${txt}</div>`);
@@ -768,7 +774,7 @@ serie.capitulo({
         const memo = peca(Array.from({ length: 4 }, () => `<span style="width:26px;border-radius:6px;background:var(--cor)"></span>`).join(""), [345, 40, 150, 300, "display:flex;gap:15px"]);
         const chipset = peca(`<span style="font:700 22px var(--sans);color:#fff">chipset</span>`, [600, 330, 150, 150, "border-radius:16px;background:var(--cor);display:grid;place-items:center"]);
         const pcie = peca(`<span style="height:32px;border-radius:8px;background:var(--cor)"></span><span style="height:32px;border-radius:8px;background:var(--cor)"></span>`, [70, 430, 450, 110, "display:flex;flex-direction:column;gap:26px;justify-content:center"]);
-        const m2 = peca(`<span style="font:700 22px var(--sans);color:#fff">M.2</span>`, [600, 110, 330, 50, "border-radius:10px;background:var(--cor);display:grid;place-items:center"]);
+        const m2 = peca(``, [600, 110, 330, 50, "border-radius:10px;background:var(--cor);display:grid;place-items:center"]);
         const sata = peca(Array.from({ length: 4 }, () => `<span style="border-radius:6px;background:var(--cor)"></span>`).join(""), [830, 420, 120, 100, "display:grid;grid-template-columns:1fr 1fr;gap:10px"]);
         c.entra(soq, q(1, "o soquete"), "pop");
         c.entra(etiqueta("Soquete", 95, 292), q(1, "o soquete", 0.3), "pop");
@@ -783,7 +789,7 @@ serie.capitulo({
         c.entra(m2, q(3, "eme ponto"), "pop");
         c.entra(etiqueta("M.2", 600, 172), q(3, "eme ponto", 0.3), "pop");
         c.entra(etiqueta("Barramentos", 380, 410), q(4, "vias", 1.2), "pop");
-        c.no({ icone: "placamae", titulo: "Placa-mãe", texto: "conecta tudo e permite a <b>comunicação</b>" }, { left: 1190, top: 330, width: 350, height: 380 }, q(0, "Ela conecta"));
+        c.no({ icone: "placamae", titulo: "Placa-mãe", texto: "conecta tudo e permite a <b>comunicação</b>" }, { left: 1190, top: 330, width: 350, height: 380 }, q(0, "ela conecta"));
       },
     },
     {
@@ -792,27 +798,27 @@ serie.capitulo({
       secao: "Placa-mãe e energia",
       bit: BIT_CANTO,
       falas: [
-        { texto: "E quem alimenta tudo isso? A fonte de alimentação converte a corrente alternada da tomada em corrente contínua para os componentes. A potência dela é medida em watts.", falar: "E quem alimenta tudo isso? A fonte de alimentação converte a corrente alternada da tomada em corrente contínua para os componentes. A potência dela é medida em uóts." },
+        { texto: "E quem alimenta tudo isso? A fonte de alimentação converte a corrente alternada da tomada em corrente contínua, e sua potência é medida em watts.", falar: "E quem alimenta tudo isso? A fonte de alimentação converte a corrente alternada da tomada em corrente contínua, e sua potência é medida em uóts." },
         "O filtro de linha protege contra picos e ruídos na rede elétrica, e oferece várias tomadas.",
         "O estabilizador corrige as variações de tensão: a subtensão e a sobretensão.",
-        { texto: "E o nobreak, ou UPS, tem bateria: na falta de energia, ele mantém o equipamento ligado por um tempo, para você salvar o trabalho e desligar com segurança.", falar: "E o nôbrêik, ou u pê ésse, tem bateria: na falta de energia, ele mantém o equipamento ligado por um tempo, para você salvar o trabalho e desligar com segurança." },
+        { texto: "E o nobreak, ou UPS, tem bateria: na falta de energia, mantém o equipamento ligado por um tempo, para salvar o trabalho e desligar com segurança.", falar: "E o nôbrêik, ou u pê ésse, tem bateria: na falta de energia, mantém o equipamento ligado por um tempo, para salvar o trabalho e desligar com segurança." },
         { texto: "Memorize: só o nobreak mantém o computador funcionando quando a energia cai, porque ele tem bateria.", falar: "Memorize: só o nôbrêik mantém o computador funcionando quando a energia cai, porque ele tem bateria." },
       ],
       montar(c) {
         const q = quando(c, this);
         c.titulo("Energia", "Da tomada ao computador", { left: 140, top: 150 }, c.t(0), { medio: true });
         const itens = [
-          ["fonte", "Fonte de alimentação", "<b>CA → CC</b> para os componentes · potência em <b>watts (W)</b>", c.t(0, 1)],
+          ["fonte", "Fonte de alimentação", "<b>CA → CC</b> · potência em <b>watts (W)</b>", c.t(0, 1)],
           ["filtro", "Filtro de linha", "protege contra <b>picos e ruídos</b> · várias tomadas", c.t(1)],
           ["estabilizador", "Estabilizador", "corrige a tensão: <b>subtensão</b> e <b>sobretensão</b>", c.t(2)],
           ["nobreak", "Nobreak (UPS)", "tem <b>bateria</b>: mantém ligado na falta de energia", c.t(3)],
         ];
-        const cards = itens.map(([i, h, p, t], k) => c.cartao({ icone: i, titulo: h, texto: p }, { left: 140 + k * 355, top: 330, width: 335, height: 350, padding: "30px 30px" }, t));
+        const cards = itens.map(([i, h, p, t], k) => c.cartao({ icone: i, titulo: h, texto: p }, { left: 140 + k * 355, top: 330, width: 335, height: 360, padding: "30px 30px" }, t));
         cards.forEach((e) => { e.querySelector("h3").style.fontSize = "31px"; e.querySelector("p").style.fontSize = "26px"; e.querySelector(".icone").style.cssText = "width:86px;height:86px;margin-bottom:16px"; });
         const queda = q(3, "na falta");
         cards.slice(0, 3).forEach((e) => c.tl.to(e, { opacity: 0.35, duration: 0.5 }, queda));
         c.tl.to(cards[3], { outline: "6px solid var(--cor)", duration: 0.3 }, queda);
-        c.quadro("dica", "Só o <b>nobreak</b> mantém o computador funcionando quando a energia cai, porque tem <b>bateria</b>.", { left: 140, top: 720, width: 1400 }, c.t(4));
+        c.quadro("dica", "Só o <b>nobreak</b> mantém o computador funcionando quando a energia cai, porque tem <b>bateria</b>.", { left: 140, top: 730, width: 1400 }, c.t(4));
       },
     },
 
@@ -823,11 +829,11 @@ serie.capitulo({
       secao: "Periféricos",
       bit: BIT_CANTO,
       falas: [
-        "Agora, os periféricos: os dispositivos que se conectam ao computador para trocar informações com o usuário ou com outros equipamentos.",
+        "Agora, os periféricos: dispositivos que se conectam ao computador para trocar informações com o usuário ou com outros equipamentos.",
         { texto: "Os de entrada enviam dados para o computador: teclado, mouse, scanner, microfone, webcam, leitor biométrico e leitor de código de barras.", falar: "Os de entrada enviam dados para o computador: teclado, máus, iscâner, microfone, uébcam, leitor biométrico e leitor de código de barras." },
         "Os de saída recebem dados do computador e os apresentam: monitor, impressora, caixa de som, fone de ouvido e projetor.",
         { texto: "E os híbridos, de entrada e saída, fazem as duas coisas: tela touchscreen, impressora multifuncional, modem, placa de rede, pen drive e headset com microfone.", falar: "E os híbridos, de entrada e saída, fazem as duas coisas: tela tâtch scrín, impressora multifuncional, modem, placa de rede, pén dráiv e rédsét com microfone." },
-        "Pegadinha: a tela sensível ao toque é de entrada e saída. Ela exibe a imagem, que é saída, e recebe o toque, que é entrada. O mesmo vale para a multifuncional, que imprime e digitaliza.",
+        "Pegadinha: a tela sensível ao toque é de entrada e saída: exibe a imagem e recebe o toque. A multifuncional também: imprime e digitaliza.",
       ],
       montar(c) {
         const q = quando(c, this);
@@ -855,9 +861,9 @@ serie.capitulo({
       falas: [
         { texto: "Nos monitores, o tipo mais comum é o LCD com iluminação LED: os cristais líquidos filtram a luz de LEDs posicionados atrás da tela.", falar: "Nos monitores, o tipo mais comum é o LCD com iluminação léd: os cristais líquidos filtram a luz de léds posicionados atrás da tela." },
         { texto: "Já no OLED, cada pixel emite a própria luz, com pretos perfeitos e alto contraste.", falar: "Já no ó léd, cada píxel emite a própria luz, com pretos perfeitos e alto contraste." },
-        { texto: "O tamanho é medido em polegadas, na diagonal da tela. Nas resoluções, o HD tem mil duzentos e oitenta por setecentos e vinte pixels, e o Full HD, mil novecentos e vinte por mil e oitenta.", falar: "O tamanho é medido em polegadas, na diagonal da tela. Nas resoluções, o HD tem mil duzentos e oitenta por setecentos e vinte píxels, e o fúl agá dê, mil novecentos e vinte por mil e oitenta." },
+        { texto: "O tamanho é medido em polegadas, na diagonal. Nas resoluções, o HD tem mil duzentos e oitenta por setecentos e vinte; o Full HD, mil novecentos e vinte por mil e oitenta.", falar: "O tamanho é medido em polegadas, na diagonal. Nas resoluções, o HD tem mil duzentos e oitenta por setecentos e vinte; o fúl agá dê, mil novecentos e vinte por mil e oitenta." },
         { texto: "O QHD tem dois mil quinhentos e sessenta por mil quatrocentos e quarenta. E o 4K UHD, três mil oitocentos e quarenta por dois mil cento e sessenta.", falar: "O quê agá dê tem dois mil quinhentos e sessenta por mil quatrocentos e quarenta. E o quatro cá, u agá dê, três mil oitocentos e quarenta por dois mil cento e sessenta." },
-        "E a taxa de atualização indica quantas vezes por segundo a imagem é redesenhada, em hertz: por exemplo, sessenta ou cento e quarenta e quatro hertz.",
+        "E a taxa de atualização é quantas vezes por segundo a imagem é redesenhada, em hertz: sessenta ou cento e quarenta e quatro, por exemplo.",
       ],
       montar(c) {
         const q = quando(c, this);
@@ -942,10 +948,10 @@ serie.capitulo({
       secao: "Conexões e impressoras",
       bit: BIT_CANTO,
       falas: [
-        "E como os periféricos se conectam? O USB é o padrão universal. O USB dois ponto zero chega a quatrocentos e oitenta megabits por segundo. O USB três chega a cinco, dez ou vinte gigabits por segundo. E o USB-C é o conector reversível.",
+        "E as conexões? O USB é o padrão universal: o USB dois ponto zero chega a quatrocentos e oitenta megabits por segundo, e o USB três, a cinco, dez ou vinte gigabits. O USB-C é o conector reversível.",
         { texto: "Para vídeo, o HDMI leva vídeo e áudio digitais para monitores e TVs. O DisplayPort também é vídeo digital, comum em monitores. E o VGA é vídeo analógico, um padrão antigo.", falar: "Para vídeo, o agá dê ême i leva vídeo e áudio digitais para monitores e tê vês. O displêi pórt também é vídeo digital, comum em monitores. E o vê gê á é vídeo analógico, um padrão antigo." },
-        { texto: "O RJ-45 é o conector do cabo de rede Ethernet. E o Bluetooth é uma conexão sem fio, de curto alcance, para mouse, teclado e fones.", falar: "O érre jóta quarenta e cinco é o conector do cabo de rede éternét. E o blutúf é uma conexão sem fio, de curto alcance, para máus, teclado e fones." },
-        { texto: "E o Plug and Play é a capacidade do sistema de reconhecer e configurar um dispositivo automaticamente, assim que ele é conectado.", falar: "E o plâg end plêi é a capacidade do sistema de reconhecer e configurar um dispositivo automaticamente, assim que ele é conectado." },
+        { texto: "O RJ-45 é o conector do cabo de rede Ethernet. E o Bluetooth é sem fio, de curto alcance, para mouse, teclado e fones.", falar: "O érre jóta quarenta e cinco é o conector do cabo de rede éternét. E o blutúf é sem fio, de curto alcance, para máus, teclado e fones." },
+        { texto: "E Plug and Play é a capacidade do sistema de reconhecer e configurar o dispositivo automaticamente ao conectá-lo.", falar: "E plâg end plêi é a capacidade do sistema de reconhecer e configurar o dispositivo automaticamente ao conectá-lo." },
       ],
       montar(c) {
         const q = quando(c, this);
@@ -962,7 +968,7 @@ serie.capitulo({
           const col = k % 3, lin = Math.floor(k / 3);
           cartaoLado(c, { icone: i, titulo: h, texto: p, tam: 84, fs: 32, ps: k === 0 ? 23 : 25 }, { left: 140 + col * 470, top: 330 + lin * 250, width: 450, height: 225, padding: "24px 26px" }, t);
         });
-        c.chave("Plug and Play: <em>conectou, o sistema reconhece e configura</em>", c.t(3, 0.3));
+        faixa(c, "Plug and Play: <em>conectou, o sistema reconhece e configura</em>", c.t(3, 0.3));
       },
     },
     {
@@ -971,7 +977,7 @@ serie.capitulo({
       secao: "Conexões e impressoras",
       bit: BIT_CANTO,
       falas: [
-        "Por fim, as impressoras. A matricial usa agulhas que batem em uma fita com tinta: é uma impressora de impacto. Por isso, imprime formulários em várias vias com carbono.",
+        "Por fim, as impressoras. Na matricial, agulhas batem em uma fita com tinta: é de impacto. Por isso, imprime formulários em várias vias com carbono.",
         "A jato de tinta solta gotas de tinta líquida. É boa para fotos coloridas e tem baixo custo inicial.",
         { texto: "A laser usa toner, um pó fixado no papel por calor. É rápida e tem baixo custo por página.", falar: "A laser usa tôner, um pó fixado no papel por calor. É rápida e tem baixo custo por página." },
         "A térmica imprime com calor sobre um papel especial, como em cupons fiscais e etiquetas. E a impressora 3D deposita material camada por camada, criando objetos físicos.",
@@ -1006,11 +1012,11 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Hora de revisar o que você aprendeu.",
-        { texto: "No processador, o desempenho depende do clock, dos núcleos e da cache. E três vírgula cinco gigahertz são três vírgula cinco bilhões de ciclos por segundo.", falar: "No processador, o desempenho depende do clóc, dos núcleos e da quêch. E três vírgula cinco gigahertz são três vírgula cinco bilhões de ciclos por segundo." },
+        { texto: "No processador, o desempenho depende do clock, dos núcleos e da cache. E giga é bilhão: três vírgula cinco gigahertz, três vírgula cinco bilhões de ciclos por segundo.", falar: "No processador, o desempenho depende do clóc, dos núcleos e da quêch. E giga é bilhão: três vírgula cinco gigahertz, três vírgula cinco bilhões de ciclos por segundo." },
         { texto: "Na hierarquia, do mais rápido para o mais lento: registradores, cache, RAM, SSD e HD.", falar: "Na hierarquia, do mais rápido para o mais lento: registradores, quêch, RAM, SSD e HD." },
         { texto: "A RAM é volátil; a ROM, não. E, ao ligar o computador, a BIOS ou a UEFI faz o POST.", falar: "A RAM é volátil; a ROM, não. E, ao ligar o computador, a BIOS ou a UEFI faz o póst." },
         "O HD é magnético; o SSD usa memória flash, sem partes móveis.",
-        { texto: "Celulares usam a arquitetura RISC, da família ARM. E o RAID 1 é o espelhamento, mas RAID não substitui o backup.", falar: "Celulares usam a arquitetura rísc, da família ARM. E o réid um é o espelhamento, mas réid não substitui o békâp." },
+        { texto: "Celulares usam RISC, da família ARM. E o RAID 1 é o espelhamento, mas não substitui o backup.", falar: "Celulares usam rísc, da família ARM. E o réid um é o espelhamento, mas não substitui o békâp." },
         { texto: "Na energia, só o nobreak tem bateria.", falar: "Na energia, só o nôbrêik tem bateria." },
         { texto: "A tela touchscreen é de entrada e saída, e o OCR transforma a imagem em texto editável.", falar: "A tela tâtch scrín é de entrada e saída, e o ó cê érre transforma a imagem em texto editável." },
         { texto: "E nas impressoras: toner é laser; várias vias com carbono, matricial.", falar: "E nas impressoras: tôner é laser; várias vias com carbono, matricial." },

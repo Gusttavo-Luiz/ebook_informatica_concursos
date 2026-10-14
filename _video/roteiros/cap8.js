@@ -170,11 +170,11 @@ const CENAS_CAP8 = [
     secao: "Abertura",
     bit: BIT_GRANDE,
     falas: [
-      "Olá! Eu sou o Bit, e chegamos ao último capítulo da nossa série.",
-      "Agora, vamos estudar a Lógica de Programação: a forma de pensar que vem antes de qualquer código.",
-      "Você vai ver o que é um algoritmo, como escrever pseudocódigo e como ler um fluxograma.",
-      "Vai aprender variáveis, operadores e a tabela-verdade, além das estruturas de decisão e de repetição.",
-      "E, para fechar, vetores, funções, recursividade, algoritmos clássicos e a tradução para o Python.",
+      "Olá! Eu sou o Bit, e chegamos ao último capítulo da série.",
+      "Agora, é a vez da Lógica de Programação: a forma de pensar que vem antes de qualquer código.",
+      "Você vai ver o que é um algoritmo, o pseudocódigo e o fluxograma.",
+      "Depois, variáveis, operadores e a tabela-verdade, além das estruturas de decisão e de repetição.",
+      "E, para fechar, vetores, funções, recursividade, algoritmos clássicos e o Python.",
       "Vamos lá?",
     ],
     montar(c) {
@@ -200,9 +200,9 @@ const CENAS_CAP8 = [
     bit: BIT_CANTO,
     falas: [
       "Afinal, o que é lógica de programação?",
-      "É a capacidade de pensar, organizar e descrever uma sequência de passos para resolver um problema de forma correta, clara e eficiente.",
-      "Antes de existir Python, Java ou qualquer outra linguagem, existe a lógica por trás da solução. Programar começa entendendo o problema.",
-      "Por isso, quem domina a lógica aprende qualquer linguagem com muito mais facilidade: já sabe resolver o problema antes de pensar na sintaxe.",
+      "É a capacidade de pensar, organizar e descrever os passos para resolver um problema de forma correta, clara e eficiente.",
+      "Antes de Python, Java ou qualquer linguagem, existe a lógica por trás da solução. Programar começa entendendo o problema.",
+      "Por isso, quem domina a lógica aprende qualquer linguagem com mais facilidade.",
       "Resumo estratégico: a linguagem é a ferramenta; a lógica é a estrutura mental da solução.",
     ],
     montar(c) {
@@ -230,9 +230,9 @@ const CENAS_CAP8 = [
     secao: "Lógica e algoritmos",
     bit: BIT_CANTO,
     falas: [
-      "Pense em uma tarefa do dia a dia: fazer café. Primeiro, você separa água, filtro e pó. Depois, coloca a água para esquentar e organiza o filtro.",
-      "Em seguida, despeja a água, espera o café passar e acompanha o processo. E o café pronto é a saída da sequência lógica.",
-      "No computador é igual: ele também precisa de instruções detalhadas, na ordem correta.",
+      "Pense em fazer café. Primeiro, você separa água, filtro e pó. Depois, esquenta a água e organiza o filtro.",
+      "Em seguida, despeja a água e espera o café passar. E o café pronto é a saída da sequência.",
+      "No computador é igual: ele precisa de instruções detalhadas, na ordem correta.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -260,9 +260,9 @@ const CENAS_CAP8 = [
     falas: [
       "Essa sequência de passos tem um nome: algoritmo.",
       "Um algoritmo é uma sequência finita, ordenada e lógica de passos para resolver um problema.",
-      "Ele precisa ser claro, sem ambiguidades; ordenado, com cada passo respeitando a sequência; executável, com ações que podem ser realizadas; e finito, com começo, meio e fim.",
-      "Uma forma de escrever um algoritmo é o pseudocódigo: uma escrita estruturada, que não depende da sintaxe de uma linguagem específica.",
-      "Ele aproxima você da programação real: primeiro, você entende o problema; depois, organiza a solução em pseudocódigo; e, por fim, implementa no código real.",
+      "Ele deve ser claro, sem ambiguidades; ordenado; executável, com ações possíveis; e finito, com começo, meio e fim.",
+      "Uma forma de escrevê-lo é o pseudocódigo: uma escrita estruturada, que não depende da sintaxe de nenhuma linguagem.",
+      "Primeiro, você entende o problema; depois, organiza a solução em pseudocódigo; e, por fim, implementa no código real.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -295,12 +295,12 @@ const CENAS_CAP8 = [
     secao: "Lógica e algoritmos",
     bit: BIT_CANTO,
     falas: [
-      "Veja um exemplo simples em pseudocódigo: somar dois números.",
-      "Primeiro, a entrada: o algoritmo pede e lê o primeiro número, e depois o segundo.",
-      "Depois, o processamento: soma recebe número um mais número dois. A seta indica que a variável recebe um valor.",
-      "Por fim, a saída: o algoritmo escreve o resultado na tela.",
-      "Quase todo algoritmo segue essas três partes: a entrada recebe dados; o processamento manipula esses dados; e a saída exibe o resultado final.",
-      "Dica do mestre: quando travar em um exercício, pergunte: o que entra? O que acontece com isso? O que sai no final?",
+      "Veja um exemplo em pseudocódigo: somar dois números.",
+      "Na entrada, o algoritmo pede e lê os dois números.",
+      "No processamento, soma recebe número um mais número dois. A seta indica atribuição.",
+      "E, na saída, escreve o resultado na tela.",
+      "Quase todo algoritmo tem essas três partes: a entrada recebe dados, o processamento manipula, e a saída exibe o resultado.",
+      "Dica do mestre: quando travar, pergunte: o que entra? O que acontece com isso? O que sai no final?",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -324,8 +324,8 @@ const CENAS_CAP8 = [
         ["Saída", "Exibe o resultado final.", "mostrar média, situação, mensagem", c.t(3)],
       ];
       const cards = partes.map((p, i) => {
-        const e = c.novo(`<div class="cartao" style="left:1000px;top:${320 + i * 160}px;width:540px;height:144px;padding:20px 28px;border-left:10px solid var(--cor)">
-          <h3 style="font-size:32px;margin:0">${p[0]}</h3><p style="font-size:24px;line-height:1.35">${p[1]}<br><i>${p[2]}</i></p></div>`);
+        const e = c.novo(`<div class="cartao" style="left:1000px;top:${320 + i * 160}px;width:560px;height:150px;padding:18px 26px;border-left:10px solid var(--cor)">
+          <h3 style="font-size:32px;margin:0 0 4px">${p[0]}</h3><p style="font-size:23px;line-height:1.3">${p[1]}<br><i>${p[2]}</i></p></div>`);
         return c.entra(e, p[3], "direita");
       });
       c.destaque(cards[0], em(4, "a entrada"));
@@ -342,11 +342,11 @@ const CENAS_CAP8 = [
     secao: "Fluxogramas e variáveis",
     bit: BIT_CANTO,
     falas: [
-      "Outra forma de representar um algoritmo é o fluxograma: símbolos gráficos ligados por setas. E as provas adoram cobrar o significado de cada símbolo.",
-      "O terminal, em forma de oval, marca o início ou o fim do algoritmo. O retângulo é o processo: um cálculo ou uma atribuição.",
-      "O losango é a decisão: um teste lógico, com duas saídas, sim e não.",
-      "O paralelogramo é a entrada ou a saída de dados, como uma leitura ou uma exibição. O círculo é o conector, que liga partes do fluxograma. E a seta, a linha de fluxo, indica a ordem de execução.",
-      "Memorize: decisão é o losango. É nele que o fluxo se divide em dois caminhos.",
+      "Outra forma de representar um algoritmo é o fluxograma: símbolos ligados por setas. E as provas cobram o significado de cada um.",
+      "O oval, ou terminal, marca o início ou o fim. O retângulo é o processo: um cálculo ou uma atribuição.",
+      "O losango é a decisão: um teste lógico, com saídas sim e não.",
+      "O paralelogramo é a entrada ou saída de dados. O círculo é o conector, que liga partes do fluxograma. E a seta indica a ordem de execução.",
+      "Memorize: decisão é o losango, onde o fluxo se divide em dois caminhos.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -379,13 +379,13 @@ const CENAS_CAP8 = [
     secao: "Fluxogramas e variáveis",
     bit: BIT_CANTO,
     falas: [
-      "Agora, as variáveis: espaços de memória que guardam valores, que podem ser usados e alterados durante a execução do programa.",
-      "Pense em uma caixa com etiqueta: o nome fica na etiqueta, e o valor fica dentro da caixa.",
-      "Cada variável tem um tipo. O inteiro guarda números como cinco, dezoito ou cento e vinte. O real guarda números com parte decimal, como sete e meio.",
-      "O texto guarda caracteres entre aspas, como um nome. E o lógico só tem dois valores: verdadeiro ou falso.",
-      { texto: "Os nomes seguem regras: começam com uma letra, ou sublinhado, e não têm espaços. Use nota_final ou notaFinal.", falar: "Os nomes seguem regras: começam com uma letra, ou sublinhado, e não têm espaços. Use nota sublinhado final, ou nota final, tudo junto." },
-      { texto: "Também não podem ser palavras reservadas, como SE, ENQUANTO, if ou while. E, em muitas linguagens, Nota e nota são variáveis diferentes.", falar: "Também não podem ser palavras reservadas, como se, enquanto, íf ou uáil. E, em muitas linguagens, Nota, com N maiúsculo, e nota, com N minúsculo, são variáveis diferentes." },
-      { texto: "Por fim, a constante é um valor que não muda durante a execução, como PI recebe três vírgula catorze." },
+      "Variáveis são espaços de memória com valores que podem ser usados e alterados durante a execução.",
+      "Pense em uma caixa com etiqueta: o nome fica na etiqueta, e o valor fica dentro.",
+      "O tipo inteiro guarda números como cinco, dezoito ou cento e vinte. O real tem parte decimal, como sete e meio.",
+      "O texto vem entre aspas, como um nome. E o lógico só tem dois valores: verdadeiro ou falso.",
+      { texto: "Nos nomes, comece com letra ou sublinhado, sem espaços: nota_final ou notaFinal.", falar: "Nos nomes, comece com letra ou sublinhado, sem espaços: nota sublinhado final, ou nota final, tudo junto." },
+      { texto: "Palavras reservadas, como SE ou while, são proibidas. E, em muitas linguagens, Nota e nota são variáveis diferentes.", falar: "Palavras reservadas, como se ou uáil, são proibidas. E, em muitas linguagens, Nota, com N maiúsculo, e nota, com N minúsculo, são variáveis diferentes." },
+      { texto: "Já a constante não muda durante a execução, como PI recebe três vírgula catorze." },
     ],
     montar(c) {
       const em = quando(c, this);
@@ -418,11 +418,11 @@ const CENAS_CAP8 = [
 
       const regra = (y, esquerda, direita, t) => {
         const e = c.novo(`<div class="cartao" style="left:140px;top:${y}px;width:1400px;height:120px;padding:0 36px;display:flex;align-items:center;justify-content:space-between;gap:30px">
-          <div style="font-size:32px;color:var(--texto)">${esquerda}</div><div style="display:flex;gap:18px;align-items:center">${direita}</div></div>`);
+          <div style="font-size:32px;color:var(--texto);white-space:nowrap">${esquerda}</div><div style="display:flex;gap:18px;align-items:center">${direita}</div></div>`);
         return c.entra(e, t, "baixo");
       };
-      const tk = (txt, ok) => `<span class="mono" style="font-size:30px;font-weight:700;padding:8px 18px;border-radius:14px;background:${ok === true ? "#e9f6ef" : ok === false ? "#fbe9e6" : "var(--cor-suave)"};color:${ok === true ? VERDE : ok === false ? VERMELHO : "var(--cor)"};${ok === false ? "text-decoration:line-through" : ""}">${ok === true ? "✓ " : ok === false ? "✗ " : ""}${txt}</span>`;
-      regra(330, "Começa com <b>letra</b> ou <b>_</b> · <b>sem espaços</b>", tk("nota final", false) + tk("nota_final", true) + tk("notaFinal", true), c.t(4));
+      const tk = (txt, ok) => `<span class="mono" style="white-space:nowrap;font-size:28px;font-weight:700;padding:8px 18px;border-radius:14px;background:${ok === true ? "#e9f6ef" : ok === false ? "#fbe9e6" : "var(--cor-suave)"};color:${ok === true ? VERDE : ok === false ? VERMELHO : "var(--cor)"};${ok === false ? "text-decoration:line-through" : ""}">${ok === true ? "✓ " : ok === false ? "✗ " : ""}${txt}</span>`;
+      regra(330, "Começa com <b>letra</b> ou <b>_</b>, <b>sem espaços</b>", tk("nota final", false) + tk("nota_final", true) + tk("notaFinal", true), c.t(4));
       regra(470, "Não pode ser <b>palavra reservada</b>", tk("SE", false) + tk("ENQUANTO", false) + tk("if", false) + tk("while", false), c.t(5));
       regra(610, "Maiúsculas e minúsculas <b>fazem diferença</b>", tk("Nota") + `<span style="font-size:40px;font-weight:800;color:var(--texto-fraco)">≠</span>` + tk("nota"), em(5, "E, em muitas"));
       const cons = regra(750, `<span style="display:inline-flex;align-items:center;gap:18px">${icone("cadeado")}<span><b>Constante</b>: não muda durante a execução</span></span>`, `<span class="mono" style="font-size:34px;font-weight:700">PI &lt;- 3.14</span>`, c.t(6));
@@ -437,7 +437,7 @@ const CENAS_CAP8 = [
     secao: "Operadores",
     bit: BIT_CANTO,
     falas: [
-      "Os operadores permitem calcular, comparar e montar expressões lógicas. Eles se dividem em três grupos.",
+      "Os operadores servem para calcular, comparar e montar expressões lógicas. São três grupos.",
       "Os aritméticos fazem as contas: soma, subtração, multiplicação, divisão, e ainda o DIV e o MOD.",
       "Os relacionais comparam valores: igual, diferente, maior, menor, maior ou igual e menor ou igual. E o resultado é sempre verdadeiro ou falso.",
       "Os lógicos, E, OU e NÃO, combinam ou invertem condições.",
@@ -475,10 +475,10 @@ const CENAS_CAP8 = [
     secao: "Operadores",
     bit: BIT_CANTO,
     falas: [
-      "O DIV e o MOD caem muito em prova. Os dois trabalham com a divisão inteira: o DIV devolve o quociente, e o MOD devolve o resto.",
-      "Pegue dezessete dividido por cinco. O cinco cabe três vezes no dezessete. Então, dezessete DIV cinco é igual a três.",
-      "E sobram dois. Então, dezessete MOD cinco é igual a dois.",
-      "Um uso clássico: um número é par quando número MOD dois é igual a zero, ou seja, quando a divisão por dois não deixa resto.",
+      "DIV e MOD caem muito em prova. Na divisão inteira, o DIV devolve o quociente, e o MOD devolve o resto.",
+      "Em dezessete dividido por cinco, o cinco cabe três vezes. Então, dezessete DIV cinco é três.",
+      "E sobram dois. Então, dezessete MOD cinco é dois.",
+      "Uso clássico: um número é par quando número MOD dois é igual a zero.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -520,11 +520,11 @@ const CENAS_CAP8 = [
     secao: "Operadores",
     bit: BIT_CANTO,
     falas: [
-      "Os operadores lógicos seguem regras fixas, resumidas na tabela-verdade. Considere duas condições, A e B.",
-      "Se A e B são verdadeiras, A E B é verdadeiro, e A OU B também.",
-      "Se só uma delas é verdadeira, o E já dá falso, mas o OU continua verdadeiro. E, com as duas falsas, os dois dão falso.",
-      "Já o NÃO simplesmente inverte: se A é verdadeiro, NÃO A é falso; se A é falso, NÃO A é verdadeiro.",
-      "Memorize: o E só é verdadeiro se tudo for verdadeiro. O OU só é falso se tudo for falso. E o NÃO inverte o valor.",
+      "Os operadores lógicos seguem a tabela-verdade. Considere duas condições, A e B.",
+      "Com A e B verdadeiras, A E B é verdadeiro, e A OU B também.",
+      "Se só uma é verdadeira, o E já dá falso, mas o OU continua verdadeiro; e, com as duas falsas, os dois dão falso.",
+      "O NÃO inverte: se A é verdadeiro, NÃO A é falso; se A é falso, NÃO A é verdadeiro.",
+      "Memorize: o E só é verdadeiro se tudo for verdadeiro; o OU só é falso se tudo for falso; e o NÃO inverte.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -548,7 +548,8 @@ const CENAS_CAP8 = [
         const e = c.novo(`<div class="abs mono" style="left:${xs[j]}px;top:${y0 + (i + 1) * h}px;width:${cols[j][1]}px;height:${h - 8}px;border-radius:16px;background:${v === "V" ? "#e9f6ef" : "#fbe9e6"};color:${v === "V" ? VERDE : VERMELHO};display:grid;place-items:center;font-size:44px;font-weight:800">${v}</div>`);
         c.entra(e, tempo(i, j), "pop");
       }));
-      c.quadro("dica", "<b>E</b>: só é V se <b>tudo</b> for V.<br><b>OU</b>: só é F se <b>tudo</b> for F.<br><b>NÃO</b>: inverte o valor.", { left: 1200, top: 320, width: 560, fontSize: "34px" }, c.t(4));
+      const qm = c.quadro("dica", "<b>E</b>: só é V se <b>tudo</b> for V.<br><b>OU</b>: só é F se <b>tudo</b> for F.<br><b>NÃO</b>: inverte o valor.", { left: 1190, top: 320, width: 600, padding: "36px 40px" }, c.t(4));
+      qm.querySelector("p").style.fontSize = "32px";
     },
   },
   {
@@ -557,12 +558,12 @@ const CENAS_CAP8 = [
     secao: "Operadores",
     bit: BIT_CANTO,
     falas: [
-      "Quando uma expressão mistura vários operadores, vale a ordem de precedência. Primeiro, os parênteses. Depois, os aritméticos.",
-      "Entre eles, multiplicação, divisão, DIV e MOD vêm antes de soma e subtração. Em seguida, os relacionais. E, por último, NÃO, depois E, depois OU.",
+      "Quando uma expressão mistura operadores, vale a precedência. Primeiro, os parênteses. Depois, os aritméticos.",
+      "Multiplicação, divisão, DIV e MOD vêm antes de soma e subtração. Em seguida, os relacionais. Por último, NÃO, depois E, depois OU.",
       "Vamos avaliar esta expressão, com x igual a quatro e y igual a dez.",
-      "No primeiro parêntese, a multiplicação vem antes: dois vezes três dá seis, e quatro mais seis dá dez. Dez é maior que dez? Não: falso.",
-      "No segundo, dez MOD três dá um, porque sobra um. E um igual a um é verdadeiro. Falso OU verdadeiro: verdadeiro.",
-      "Pegadinha de banca: dez maior que dez é falso. Só dez maior ou igual a dez seria verdadeiro. As bancas adoram montar a condição no limite exato.",
+      "No primeiro parêntese, a multiplicação vem antes: dois vezes três dá seis, e quatro mais seis, dez. Dez é maior que dez? Não: falso.",
+      "No segundo, dez MOD três é um, e um igual a um é verdadeiro. Falso OU verdadeiro: verdadeiro.",
+      "Pegadinha: dez maior que dez é falso; só dez maior ou igual a dez seria verdadeiro. As bancas adoram o limite exato.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -598,7 +599,7 @@ const CENAS_CAP8 = [
       c.destaque(linhas[1], em(3, "a multiplicação"));
       const p1 = passo(500, "x + 2 * 3 → 4 + 6 = 10", "10 &gt; 10 → FALSO", VERMELHO, em(3, "dois vezes"), em(3, "Dez é maior"));
       c.destaque(linhas[2], em(3, "Dez é maior"));
-      const p2 = passo(640, "y MOD 3 → 10 MOD 3 = 1", "1 = 1 → VERDADEIRO", VERDE, c.t(4), em(4, "E um igual"));
+      const p2 = passo(640, "y MOD 3 → 10 MOD 3 = 1", "1 = 1 → VERDADEIRO", VERDE, c.t(4), em(4, "e um igual"));
       const res = c.novo(`<div class="abs mono" style="left:740px;top:790px;font-size:32px;font-weight:800"><span style="color:${VERMELHO}">FALSO</span> <span style="color:var(--cor)">OU</span> <span style="color:${VERDE}">VERDADEIRO</span> → <span class="marca-texto">VERDADEIRO</span></div>`);
       c.entra(res, em(4, "Falso OU"), "zoom");
       c.destaque(linhas[5], em(4, "Falso OU"));
@@ -614,8 +615,8 @@ const CENAS_CAP8 = [
     secao: "Sequência e decisão",
     bit: BIT_CANTO,
     falas: [
-      "Agora, as estruturas do algoritmo. Na estrutura sequencial, as instruções são executadas uma após a outra, na ordem em que aparecem.",
-      "Veja o cálculo da área de um retângulo: o algoritmo lê a base, depois lê a altura, calcula a área, que é base vezes altura, e exibe o resultado.",
+      "Agora, as estruturas. Na sequencial, as instruções são executadas uma após a outra, na ordem em que aparecem.",
+      "Na área do retângulo, o algoritmo lê a base, depois lê a altura, calcula base vezes altura e exibe o resultado.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -629,7 +630,7 @@ const CENAS_CAP8 = [
         "    area <- base * altura",
         '    ESCREVA "A área do retângulo é: ", area',
         "FIM",
-      ], { left: 140, top: 320, width: 840 }, em(0, "Na estrutura"));
+      ], { left: 140, top: 320, width: 840 }, em(0, "Na sequencial"));
       const t0 = em(0, "uma após");
       cod.ln.forEach((l, i) => realce(c, l, t0 + i * 0.3, t0 + i * 0.3 + 0.35));
       const passos = [["Passo 1", "Ler base", em(1, "lê a base"), [1, 2]], ["Passo 2", "Ler altura", em(1, "depois lê"), [3, 4]], ["Passo 3", "Calcular área", em(1, "calcula"), [5]], ["Passo 4", "Exibir resultado", em(1, "e exibe"), [6]]];
@@ -649,10 +650,10 @@ const CENAS_CAP8 = [
     secao: "Sequência e decisão",
     bit: BIT_CANTO,
     falas: [
-      "Já as estruturas condicionais permitem que o programa tome decisões, com base em testes lógicos.",
-      "Neste exemplo, o algoritmo lê a idade e testa a condição: a idade é maior ou igual a dezoito?",
-      "Se a condição for verdadeira, segue um caminho e escreve: você é maior de idade. Se for falsa, segue o outro e escreve: você é menor de idade.",
-      "Armadilha da banca: não confunda x recebe dez com x igual a dez. O primeiro é uma atribuição; o segundo, uma comparação.",
+      "As estruturas condicionais permitem que o programa tome decisões com base em testes lógicos.",
+      "Aqui, o algoritmo lê a idade e testa: ela é maior ou igual a dezoito?",
+      "Se for verdadeira, escreve: maior de idade. Se for falsa, segue o outro caminho e escreve: menor de idade.",
+      "Armadilha: não confunda x recebe dez com x igual a dez. O primeiro é atribuição; o segundo, comparação.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -677,10 +678,10 @@ const CENAS_CAP8 = [
       forma(c, "decisao", "<span class=\"mono\" style=\"font-size:24px\">idade &gt;= 18?</span>", 1040, 460, 320, 160, em(1, "e testa"), { pad: 0 });
       caminho(c, [[1040, 540], [960, 540], [960, 682]], c.t(2, 0.2));
       etiqueta(c, "sim", 970, 496, c.t(2, 0.3), `color:${VERDE}`);
-      forma(c, "es", "maior de idade", 845, 690, 230, 84, em(2, "escreve"), { fonte: 24, pad: 26 });
+      forma(c, "es", "maior de idade", 830, 690, 260, 84, em(2, "escreve"), { fonte: 24, pad: 30 });
       caminho(c, [[1360, 540], [1440, 540], [1440, 682]], em(2, "Se for falsa", -0.2));
       etiqueta(c, "não", 1380, 496, em(2, "Se for falsa"), `color:${VERMELHO}`);
-      forma(c, "es", "menor de idade", 1325, 690, 230, 84, em(2, "o outro e escreve"), { fonte: 24, pad: 26 });
+      forma(c, "es", "menor de idade", 1310, 690, 260, 84, em(2, "o outro caminho"), { fonte: 24, pad: 30 });
       quadroCap8(c, "prova", "Armadilha da banca", "<span class=\"mono\">x &lt;- 10</span> é <b>atribuição</b>; <span class=\"mono\">x = 10</span> é <b>comparação</b>.", { left: 140, top: 812, width: 1400, padding: "30px 44px" }, c.t(3));
     },
   },
@@ -690,11 +691,11 @@ const CENAS_CAP8 = [
     secao: "Sequência e decisão",
     bit: BIT_CANTO,
     falas: [
-      "E quando há mais de duas possibilidades? Podemos encadear condições, uma dentro da outra.",
-      "Na classificação de uma nota: com nove ou mais, excelente. Senão, com sete ou mais, aprovado. Senão, com cinco ou mais, recuperação. E, se nenhum teste passar, reprovado.",
-      "Agora, quando a mesma variável é comparada com vários valores fixos, a estrutura ESCOLHA deixa o algoritmo mais limpo do que vários SE encadeados.",
-      "No dia da semana, por exemplo: no CASO um, escreve domingo; no CASO sete, sábado.",
-      "E o OUTROCASO é executado quando nenhum dos casos anteriores corresponde ao valor: aqui, dia útil.",
+      "Com mais de duas possibilidades, podemos encadear condições, uma dentro da outra.",
+      "Na nota: com nove ou mais, excelente. Senão, com sete ou mais, aprovado. Senão, com cinco ou mais, recuperação. E, se nenhum teste passar, reprovado.",
+      "Quando a mesma variável é comparada com vários valores fixos, a estrutura ESCOLHA fica mais limpa que vários SE encadeados.",
+      "No dia da semana: no CASO um, escreve domingo; no CASO sete, sábado.",
+      "E o OUTROCASO roda quando nenhum caso corresponde ao valor: aqui, dia útil.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -740,10 +741,10 @@ const CENAS_CAP8 = [
     secao: "Repetição",
     bit: BIT_CANTO,
     falas: [
-      "As estruturas de repetição executam um bloco de instruções várias vezes, sem que você precise escrever a mesma lógica de novo.",
-      "No ENQUANTO, o bloco se repete enquanto a condição for verdadeira. Este exemplo conta de um até cinco, e o contador começa em um.",
-      "A cada volta, ele testa: contador menor ou igual a cinco? Se for, escreve o contador e soma um a ele. Assim, a tela mostra de um até cinco.",
-      "Quando o contador chega a seis, a condição fica falsa, e a repetição termina. Ou seja: definir o contador, executar e atualizar, e encerrar quando a condição falhar.",
+      "As estruturas de repetição executam um bloco várias vezes, sem reescrever a mesma lógica.",
+      "No ENQUANTO, o bloco se repete enquanto a condição for verdadeira. Aqui, ele conta de um até cinco, e o contador começa em um.",
+      "A cada volta, testa se o contador é menor ou igual a cinco. Se for, escreve o contador e soma um. Assim, a tela mostra de um a cinco.",
+      "Com seis, a condição fica falsa e a repetição termina. Ou seja: definir o contador, executar e atualizar, e encerrar quando a condição falhar.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -785,7 +786,7 @@ const CENAS_CAP8 = [
       mudarTexto(c, selo, "V", "F", c.t(3, 0.4));
       c.tl.to(selo, { backgroundColor: VERMELHO, duration: 0.2 }, c.t(3, 0.4));
       realce(c, cod.ln[5], em(3, "e a repetição"), c.f(3));
-      c.chave("Definir contador → <em>executar e atualizar</em> → encerrar quando a condição falhar", em(3, "Ou seja"));
+      c.chave("Definir contador → <em>executar e atualizar</em> → encerrar", em(3, "Ou seja"));
     },
   },
   {
@@ -794,12 +795,12 @@ const CENAS_CAP8 = [
     secao: "Repetição",
     bit: BIT_CANTO,
     falas: [
-      "O PARA é usado quando o número de repetições é definido antes de começar. Na tabuada, o contador vai de um até dez, e cada volta calcula e escreve número vezes contador.",
-      "Já o REPITA executa o bloco primeiro e só testa a condição no final. Aqui, ele pede a senha até que ela seja um, dois, três, quatro. Aí, escreve: acesso liberado.",
-      "Compare as três estruturas. O PARA tem o número de repetições definido antes de começar: é ideal para percorrer de um até N, tabuadas e vetores.",
-      "O ENQUANTO testa a condição no início. Se ela já começar falsa, o bloco pode não executar nenhuma vez.",
-      "O REPITA testa no final: executa pelo menos uma vez e para quando a condição fica verdadeira. É comum em menus e na validação de entrada.",
-      "Pegadinha: o ENQUANTO continua enquanto a condição é verdadeira; o REPITA continua até a condição se tornar verdadeira. E só o REPITA garante pelo menos uma execução.",
+      "O PARA é usado quando o número de repetições é definido antes. Na tabuada, o contador vai de um até dez, e cada volta calcula e escreve o resultado.",
+      "Já o REPITA executa o bloco primeiro e só testa no final: pede a senha até que ela seja um, dois, três, quatro. Aí, escreve: acesso liberado.",
+      "Comparando: o PARA tem o número de repetições definido antes de começar. É ideal para tabuadas e vetores.",
+      "O ENQUANTO testa no início: se a condição já começar falsa, o bloco pode não executar nenhuma vez.",
+      "O REPITA testa no final: executa pelo menos uma vez e para quando a condição fica verdadeira. É comum em menus e validações.",
+      "Pegadinha: o ENQUANTO continua enquanto a condição é verdadeira; o REPITA continua até ela se tornar verdadeira. Só o REPITA garante pelo menos uma execução.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -849,7 +850,7 @@ const CENAS_CAP8 = [
         ["PARA", "Nº de repetições <b>definido antes</b> de começar", "de 1 até N, tabuadas, vetores"],
         ["ENQUANTO", "No <b>início</b>: pode não executar <b>nenhuma vez</b>", "repetir enquanto algo for verdade"],
         ["REPITA...ATÉ", "No <b>final</b>: executa <b>pelo menos uma vez</b> e para quando a condição fica verdadeira", "menus, validação de entrada"],
-      ], { left: 140, top: 320, width: 1410 }, c.t(2, 0.6), [em(2, "O PARA tem"), c.t(3), c.t(4)]);
+      ], { left: 140, top: 320, width: 1410 }, c.t(2, 0.6), [em(2, "o PARA tem"), c.t(3), c.t(4)]);
       tab.style.fontSize = "30px";
       tab.querySelectorAll("td:first-child").forEach((td) => { td.classList.add("mono"); td.style.color = "var(--cor)"; });
       sairTodos(c, [tit2, tab], c.t(5) - 0.4);
@@ -863,10 +864,10 @@ const CENAS_CAP8 = [
     secao: "Repetição",
     bit: BIT_CANTO,
     falas: [
-      "Dois conceitos aparecem em praticamente todo algoritmo. O contador normalmente aumenta de um em um, para marcar quantas vezes algo aconteceu.",
+      "Dois conceitos aparecem em quase todo algoritmo. O contador normalmente aumenta de um em um, para contar quantas vezes algo aconteceu.",
       "Já o acumulador soma valores ao longo da execução.",
-      "Veja os dois juntos: este algoritmo lê três notas e calcula a média. O PARA usa o contador, que vai de um até três.",
-      "E, a cada nota lida, soma recebe soma mais nota: esse é o acumulador. No final, a média é a soma dividida por três.",
+      "Neste algoritmo, que lê três notas e calcula a média, o PARA usa o contador, de um até três.",
+      "E, a cada nota, soma recebe soma mais nota: é o acumulador. No final, a média é a soma dividida por três.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -891,8 +892,8 @@ const CENAS_CAP8 = [
         '    ESCREVA "A média é: ", media',
         "FIM",
       ], { left: 140, top: 320, width: 800 }, c.t(2), { fonte: 24 });
-      realce(c, cod.ln[2], em(2, "O PARA"), c.f(2));
-      c.destaque(k1, em(2, "O PARA"));
+      realce(c, cod.ln[2], em(2, "o PARA"), c.f(2));
+      c.destaque(k1, em(2, "o PARA"));
       realce(c, cod.ln[5], c.t(3), em(3, "No final"));
       c.destaque(k2, em(3, "soma recebe"));
       realce(c, cod.ln[7], em(3, "No final"), c.f(3));
@@ -904,12 +905,12 @@ const CENAS_CAP8 = [
     secao: "Repetição",
     bit: BIT_CANTO,
     falas: [
-      "Para saber o que um algoritmo faz, use o teste de mesa: a simulação manual da execução. Ele ajuda a encontrar erros, prever resultados e entender como as variáveis mudam.",
-      "Anote cada variável em uma coluna. Com x recebe dois e y recebe três, z recebe x mais y e termina valendo cinco.",
-      "Nas provas, o teste de mesa é a melhor forma de resolver questões com laços. O que este trecho escreve?",
-      "x começa em um. Como um é menor que vinte, x dobra para dois, e o dois é escrito. Depois, vêm quatro, oito e dezesseis.",
-      "Com dezesseis, o teste ainda passa: x vira trinta e dois, e o trinta e dois também é escrito. Só na volta seguinte o teste falha, porque trinta e dois não é menor que vinte.",
-      "A saída é: dois, quatro, oito, dezesseis e trinta e dois. Repare: o trinta e dois é escrito, porque o teste só acontece no início da volta seguinte.",
+      "O teste de mesa é a simulação manual da execução. Ele ajuda a encontrar erros, prever resultados e entender como as variáveis mudam.",
+      "Anote cada variável em uma coluna: com x recebe dois e y recebe três, z recebe x mais y, e vale cinco.",
+      "Nas provas, é a melhor forma de resolver questões com laços. O que este trecho escreve?",
+      "x começa em um. Um é menor que vinte, então x dobra para dois e escreve dois. Depois, quatro, oito e dezesseis.",
+      "Com dezesseis, o teste passa, x vira trinta e dois, e o trinta e dois é escrito. Só depois o teste falha.",
+      "Saída: dois, quatro, oito, dezesseis e trinta e dois. O trinta e dois aparece porque o teste só acontece no início da volta seguinte.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -921,7 +922,7 @@ const CENAS_CAP8 = [
         ["<span class=\"mono\">x &lt;- 2</span>", "2", "-", "-"],
         ["<span class=\"mono\">y &lt;- 3</span>", "2", "3", "-"],
         ["<span class=\"mono\">z &lt;- x + y</span>", "2", "3", "<b style=\"color:var(--cor)\">5</b>"],
-      ], { left: 140, top: 500, width: 900 }, c.t(1), [em(1, "Com x"), em(1, "y recebe"), em(1, "z recebe")]);
+      ], { left: 140, top: 500, width: 900 }, c.t(1), [em(1, "com x"), em(1, "y recebe"), em(1, "z recebe")]);
       tab1.querySelectorAll("td").forEach((td) => td.classList.add("mono"));
       sairTodos(c, [def, ...pils, tab1], c.t(2) - 0.4);
 
@@ -939,12 +940,12 @@ const CENAS_CAP8 = [
         ["4", "8", "sim", "16", "16"],
         ["5", "16", "sim", "32", "<b style=\"color:#c27c0e\">32</b>"],
         ["—", "32", "<b style=\"color:#c2412f\">não</b>", "—", "encerra"],
-      ], { left: 720, top: 320, width: 820 }, c.t(2, 1.2), [em(3, "x dobra"), em(3, "Depois", 0.3), em(3, "oito"), em(3, "dezesseis"), c.t(4, 0.5), em(4, "Só na volta")]);
+      ], { left: 720, top: 320, width: 820 }, c.t(2, 1.2), [em(3, "x dobra"), em(3, "Depois", 0.3), em(3, "oito"), em(3, "dezesseis"), c.t(4, 0.5), em(4, "Só depois")]);
       tab.style.fontSize = "28px";
       tab.querySelectorAll("th, td").forEach((x) => { x.style.padding = "13px 22px"; x.style.textAlign = "center"; });
       tab.querySelectorAll("th").forEach((x) => { x.style.fontSize = "20px"; });
-      realce(c, cod.ln[0], c.t(3), em(3, "Como um"));
-      realce(c, cod.ln.slice(1, 4), em(3, "Como um"), c.f(4));
+      realce(c, cod.ln[0], c.t(3), em(3, "Um é menor"));
+      realce(c, cod.ln.slice(1, 4), em(3, "Um é menor"), c.f(4));
       const said = c.novo(`<div class="cartao" style="left:140px;top:690px;width:520px;padding:26px 32px">
         <div class="rotulo">Saída</div><div class="mono" style="margin-top:10px;font-size:44px;font-weight:700">2, 4, 8, 16, <span class="marca-texto" style="color:${AMBAR}">32</span></div></div>`);
       c.entra(said, c.t(5), "baixo");
@@ -958,12 +959,12 @@ const CENAS_CAP8 = [
     secao: "Vetores e funções",
     bit: BIT_CANTO,
     falas: [
-      { texto: "Agora, os vetores. Um vetor, ou array, é uma variável que guarda vários valores do mesmo tipo, acessados por um índice.", falar: "Agora, os vetores. Um vetor, ou arrêi, é uma variável que guarda vários valores do mesmo tipo, acessados por um índice." },
-      "Em vez de criar nota um, nota dois, nota três, e assim por diante, você cria um único vetor, notas. Com um laço, dá para ler cinco notas, calcular a média e mostrar só as que ficaram acima dela.",
-      "Pegadinha de banca: em pseudocódigo, o primeiro índice costuma ser um. Mas, em linguagens como C, Java, Python e JavaScript, ele é zero: um vetor de cinco posições vai de zero a quatro.",
-      "Já a matriz é um vetor com duas dimensões, linhas e colunas, acessada por dois índices. O total de elementos é linhas vezes colunas.",
-      "Com as notas de três alunos em duas provas, temos uma matriz de três por dois: seis notas. E notas dois, um é a nota do aluno dois na prova um.",
-      "Para preencher a matriz, usamos um laço aninhado: para cada valor de i, o laço interno percorre todos os valores de j. Assim, o LEIA é executado três vezes dois: seis vezes.",
+      { texto: "Um vetor, ou array, é uma variável que guarda vários valores do mesmo tipo, acessados por um índice.", falar: "Um vetor, ou arrêi, é uma variável que guarda vários valores do mesmo tipo, acessados por um índice." },
+      "Em vez de nota um, nota dois, nota três, cria-se um único vetor, notas. Com um laço, dá para ler cinco notas, calcular a média e mostrar as que ficaram acima dela.",
+      "Pegadinha: em pseudocódigo, o primeiro índice costuma ser um; mas, em linguagens como C, Java, Python e JavaScript, ele é zero. Cinco posições vão de zero a quatro.",
+      "Já a matriz tem duas dimensões, linhas e colunas, e usa dois índices. O total de elementos é linhas vezes colunas.",
+      "Três alunos em duas provas formam uma matriz de três por dois: seis notas. E notas dois, um é a nota do aluno dois na prova um.",
+      "Para preenchê-la, usamos um laço aninhado: para cada i, o laço interno percorre todos os j. Assim, o LEIA roda três vezes dois: seis vezes.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -981,7 +982,7 @@ const CENAS_CAP8 = [
       const r1 = etiqueta(c, "pseudocódigo", 1080, 362, em(2, "em pseudocódigo"), "font-size:22px;letter-spacing:.1em;text-transform:uppercase", "fade");
       const r0 = etiqueta(c, "C, Java, Python, JavaScript", 1080, 534, em(2, "em linguagens"), `font-size:22px;letter-spacing:.06em;text-transform:uppercase;color:${AMBAR}`, "fade");
       const troca = c.novo(`<div class="cartao" style="left:1080px;top:400px;width:460px;height:120px;padding:0 28px;display:flex;align-items:center;gap:18px;font-size:28px">
-        <span class="mono" style="color:${VERMELHO};text-decoration:line-through">nota1, nota2…</span><span style="color:var(--texto-fraco)">→</span><b class="mono" style="color:${VERDE}">notas[i]</b></div>`);
+        <span class="mono" style="white-space:nowrap;color:${VERMELHO};text-decoration:line-through">nota1, nota2…</span><span style="color:var(--texto-fraco)">→</span><b class="mono" style="color:${VERDE}">notas[i]</b></div>`);
       c.entra(troca, c.t(1), "direita");
       c.sai(troca, em(2, "em pseudocódigo") - 0.4);
       const fluxo = c.novo(`<div class="abs" style="left:140px;top:640px;display:flex;align-items:center;gap:18px">
@@ -1043,12 +1044,12 @@ const CENAS_CAP8 = [
     secao: "Vetores e funções",
     bit: BIT_CANTO,
     falas: [
-      "Para não repetir o mesmo trecho várias vezes, o algoritmo pode ser dividido em sub-rotinas. É a modularização.",
-      "A função recebe parâmetros e retorna um valor, como calcular a média de duas notas. Já o procedimento executa uma tarefa, mas não retorna valor, como exibir um cabeçalho na tela.",
+      "Para não repetir trechos, o algoritmo pode ser dividido em sub-rotinas. É a modularização.",
+      "A função recebe parâmetros e retorna um valor, como a média de duas notas. Já o procedimento executa uma tarefa sem retornar valor, como exibir um cabeçalho.",
       "Veja a função média: ela recebe a e b e retorna a mais b, dividido por dois. Então, média de seis e nove dá sete e meio.",
-      "As variáveis criadas dentro de uma sub-rotina são locais: só existem ali dentro. Já as declaradas no programa principal, e visíveis em todo o algoritmo, são globais.",
-      "Os parâmetros podem ser passados por valor: a sub-rotina recebe uma cópia, e as alterações feitas dentro dela não afetam a variável original.",
-      "Ou por referência: a sub-rotina recebe acesso à própria variável, e as alterações feitas dentro dela mudam a variável original.",
+      "Variáveis criadas dentro de uma sub-rotina são locais: só existem ali. Já as declaradas no programa principal, visíveis em todo o algoritmo, são globais.",
+      "Na passagem por valor, a sub-rotina recebe uma cópia, e as alterações não afetam a variável original.",
+      "Na passagem por referência, ela acessa a própria variável, e as alterações mudam a original.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -1101,8 +1102,8 @@ const CENAS_CAP8 = [
       painel(860, "Por referência", "Acessa a própria variável", c.t(5));
       const o2 = caixaVar(c, "x · programa", "5", 900, 490, c.t(5, 0.6), { w: 220, h: 130, fonte: 64, fonteNome: 24 });
       const s2 = c.novo(`<div class="abs" style="left:1270px;top:532px;width:230px;height:130px;border-radius:22px;border:4px dashed var(--cor-media);display:grid;place-items:center;font-size:26px;font-weight:700;color:var(--cor);text-align:center">sub-rotina<br><span class="mono">altera x</span></div>`);
-      c.entra(s2, em(5, "acesso"), "pop");
-      caminho(c, [[1262, 600], [1130, 600]], em(5, "acesso", 0.2), { dur: 0.4 });
+      c.entra(s2, em(5, "acessa"), "pop");
+      caminho(c, [[1262, 600], [1130, 600]], em(5, "acessa", 0.2), { dur: 0.4 });
       mudarTexto(c, o2.val, "5", "9", em(5, "mudam"));
       etiqueta(c, `original muda para <b class="mono">9</b>`, 900, 680, em(5, "mudam"), `font-size:28px;color:${AMBAR}`, "baixo");
     },
@@ -1113,10 +1114,10 @@ const CENAS_CAP8 = [
     secao: "Vetores e funções",
     bit: BIT_CANTO,
     falas: [
-      "Uma função é recursiva quando chama a si mesma. Ela precisa de um caso base, que encerra as chamadas. Sem ele, a recursão nunca termina.",
-      "O exemplo clássico é o fatorial. Se n for menor ou igual a um, a função retorna um: esse é o caso base. Senão, retorna n vezes o fatorial de n menos um.",
+      "Uma função é recursiva quando chama a si mesma. Ela precisa de um caso base, que encerra as chamadas; sem ele, a recursão nunca termina.",
+      "No fatorial, se n for menor ou igual a um, a função retorna um: é o caso base. Senão, retorna n vezes o fatorial de n menos um.",
       "Então, fatorial de quatro é quatro vezes fatorial de três, que é três vezes fatorial de dois, que é dois vezes fatorial de um.",
-      "Fatorial de um cai no caso base e retorna um. Multiplicando tudo: quatro vezes três vezes dois vezes um, que dá vinte e quatro.",
+      "Fatorial de um é o caso base e retorna um. Multiplicando tudo: quatro vezes três vezes dois vezes um, que dá vinte e quatro.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -1137,7 +1138,7 @@ const CENAS_CAP8 = [
         "    FIMSE",
         "FIMFUNÇÃO",
       ], { left: 140, top: 320, width: 680 }, c.t(1), { fonte: 26 });
-      realce(c, cod.ln.slice(1, 3), em(1, "Se n"), em(1, "Senão"));
+      realce(c, cod.ln.slice(1, 3), em(1, "se n"), em(1, "Senão"));
       realce(c, cod.ln.slice(3, 5), em(1, "Senão"), c.f(1));
       const chamadas = [
         ["fatorial(4) = 4 * fatorial(3)", c.t(2)],
@@ -1164,11 +1165,11 @@ const CENAS_CAP8 = [
     secao: "Algoritmos na prática",
     bit: BIT_CANTO,
     falas: [
-      "Agora, vamos juntar tudo em um exemplo completo: a aprovação de um aluno. Na entrada, o algoritmo lê duas notas e a frequência.",
+      "Juntando tudo: a aprovação de um aluno. Na entrada, o algoritmo lê duas notas e a frequência.",
       "No processamento, calcula a média das duas notas.",
-      "Na decisão, testa duas condições ao mesmo tempo: média maior ou igual a sete E frequência maior ou igual a setenta e cinco. Com o E, as duas precisam ser verdadeiras.",
-      "Na saída, escreve aluno aprovado ou aluno reprovado, e mostra a média final.",
-      "Resumo estratégico: programar bem é saber identificar, com clareza, as entradas, os processamentos, as decisões, as repetições e as saídas.",
+      "Na decisão, testa: média maior ou igual a sete E frequência maior ou igual a setenta e cinco. Com o E, as duas precisam ser verdadeiras.",
+      "Na saída, escreve aprovado ou reprovado, e mostra a média final.",
+      "Resumo estratégico: programar bem é identificar com clareza entradas, processamentos, decisões, repetições e saídas.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -1216,11 +1217,11 @@ const CENAS_CAP8 = [
     secao: "Algoritmos na prática",
     bit: BIT_CANTO,
     falas: [
-      "Agora, alguns algoritmos clássicos. O primeiro troca os valores de duas variáveis, a e b, com a ajuda de uma variável auxiliar.",
+      "Agora, os algoritmos clássicos. O primeiro troca os valores de a e b, com uma variável auxiliar.",
       { texto: "Primeiro, aux recebe a: guardamos o valor de a. Depois, a recebe b. E, por fim, b recebe aux, que é o valor antigo de a.", falar: "Primeiro, áux recebe a: guardamos o valor de a. Depois, a recebe bê. E, por fim, bê recebe áux, que é o valor antigo de a." },
-      "Sem a variável auxiliar, o valor de a seria perdido na segunda linha.",
-      "O segundo encontra o maior de dez números. O algoritmo lê o primeiro número e o guarda como o maior.",
-      "Depois, lê os outros nove, um por vez. Sempre que um número for maior que o maior atual, ele vira o novo maior. No fim, escreve o maior valor.",
+      "Sem o auxiliar, o valor de a se perderia na segunda linha.",
+      "O segundo acha o maior de dez números: lê o primeiro e o guarda como o maior.",
+      "Depois, lê os outros nove. Sempre que um número superar o maior atual, vira o novo maior. No fim, escreve o maior valor.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -1265,7 +1266,7 @@ const CENAS_CAP8 = [
         "FIMPARA",
         'ESCREVA "Maior valor: ", maior',
       ], { left: 140, top: 320, width: 660 }, c.t(3, 0.5), { fonte: 26 });
-      realce(c, cod2.ln.slice(0, 2), em(3, "O algoritmo lê"), c.f(3));
+      realce(c, cod2.ln.slice(0, 2), em(3, "lê o primeiro"), c.f(3));
       const alturas = [140, 90, 210, 170, 260, 120, 300, 200, 240, 110];
       const base = 800;
       c.entra(c.novo(`<div class="abs" style="left:850px;top:${base}px;width:690px;height:6px;border-radius:3px;background:var(--borda)"></div>`), c.t(3, 0.5), "fade");
@@ -1304,9 +1305,9 @@ const CENAS_CAP8 = [
     bit: BIT_CANTO,
     falas: [
       "A busca sequencial percorre o vetor do início ao fim, comparando cada elemento com o valor procurado, até encontrá-lo ou chegar ao final.",
-      "É simples, mas, em um vetor de N elementos, pode precisar de até N comparações.",
-      { texto: "Já a ordenação bolha, o bubble sort, compara elementos vizinhos e troca os dois de lugar quando estão fora de ordem. As passadas se repetem até não haver mais trocas.", falar: "Já a ordenação bolha, o bâbol sórt, compara elementos vizinhos e troca os dois de lugar quando estão fora de ordem. As passadas se repetem até não haver mais trocas." },
-      "A cada passada, o maior valor sobe para o final. Veja com cinco, três, oito e um: na primeira passada, o cinco troca com o três, e o oito troca com o um.",
+      "É simples, mas, num vetor de N elementos, pode precisar de até N comparações.",
+      { texto: "A ordenação bolha, ou bubble sort, compara vizinhos e troca os dois quando estão fora de ordem, repetindo as passadas até não haver trocas.", falar: "A ordenação bolha, ou bâbol sórt, compara vizinhos e troca os dois quando estão fora de ordem, repetindo as passadas até não haver trocas." },
+      "A cada passada, o maior valor sobe para o final. Com cinco, três, oito e um: na primeira passada, o cinco troca com o três, e o oito troca com o um.",
       "Na segunda passada, o cinco troca com o um. Na terceira, o três troca com o um. E o vetor fica ordenado: um, três, cinco e oito.",
     ],
     montar(c) {
@@ -1331,7 +1332,7 @@ const CENAS_CAP8 = [
         else c.tl.to(caixas[i], { backgroundColor: "#e9f6ef", color: VERDE, duration: 0.3 }, t + 0.1);
       }
       const n = c.novo(`<div class="cartao" style="left:960px;top:560px;width:580px;padding:30px 36px;font-size:34px">Vetor de <b>N</b> elementos<br>→ até <b style="color:var(--cor)">N comparações</b></div>`);
-      c.entra(n, em(1, "em um vetor"), "baixo");
+      c.entra(n, em(1, "num vetor"), "baixo");
       sairTodos(c, [tit, proc, ...caixas, lupa, cont, n], c.t(2) - 0.4);
 
       c.titulo("Busca e ordenação", "Ordenação bolha (bubble sort)", { left: 140, top: 150 }, c.t(2), { medio: true });
@@ -1380,11 +1381,11 @@ const CENAS_CAP8 = [
     secao: "Algoritmos na prática",
     bit: BIT_CANTO,
     falas: [
-      "A lógica é a mesma em qualquer linguagem; muda apenas a forma de escrever. Veja a equivalência com o Python, uma das linguagens mais usadas para começar a programar.",
+      "A lógica é a mesma em qualquer linguagem; só muda a escrita. Veja a equivalência com o Python.",
       { texto: "O LEIA vira input, e o ESCREVA vira print.", falar: "O leia vira ínput, e o escreva vira prínt." },
-      "Atenção aos sinais: a atribuição vira um sinal de igual, a comparação vira dois sinais de igual, e o diferente vira exclamação e igual.",
+      "Nos sinais: a atribuição vira igual, a comparação vira dois iguais, e o diferente vira exclamação e igual.",
       { texto: "SE, ENQUANTO e PARA viram if, while e for. E, OU e NÃO viram and, or e not. E o MOD e o DIV viram porcentagem e duas barras.", falar: "Se, enquanto e para viram íf, uáil e fór. E, ou e não viram ênd, ór e nót. E o mód e o div viram porcentagem e duas barras." },
-      { texto: "Pegadinha de banca: em Python, range de um a onze vai de um até dez, porque o último número nunca é incluído. E a indentação, o recuo, define os blocos, no lugar de FIMSE ou FIMPARA.", falar: "Pegadinha de banca: em Python, rêindj de um a onze vai de um até dez, porque o último número nunca é incluído. E a indentação, o recuo, define os blocos, no lugar de fim-se ou fim-para." },
+      { texto: "Pegadinha: range de um a onze vai de um até dez, porque o último número nunca entra. E a indentação, o recuo, define os blocos, no lugar de FIMSE ou FIMPARA.", falar: "Pegadinha: rêindj de um a onze vai de um até dez, porque o último número nunca entra. E a indentação, o recuo, define os blocos, no lugar de fim-se ou fim-para." },
     ],
     montar(c) {
       const em = quando(c, this);
@@ -1425,9 +1426,9 @@ const CENAS_CAP8 = [
     secao: "Erros e revisão",
     bit: BIT_CANTO,
     falas: [
-      "Antes da revisão, fique atento aos erros mais comuns de quem está começando: não entender o problema antes de tentar resolver, e confundir entrada com saída.",
-      "Também é comum esquecer de atualizar o contador em um laço, montar condições erradas e não testar o algoritmo com valores reais.",
-      "Pegadinha de lógica: se o contador nunca for atualizado, a condição nunca muda. E o programa pode entrar em repetição infinita.",
+      "Cuidado com os erros comuns de iniciantes: não entender o problema antes de resolver, e confundir entrada com saída.",
+      "Também: esquecer de atualizar o contador no laço, montar condições erradas e não testar com valores reais.",
+      "Pegadinha de lógica: se o contador nunca for atualizado, a condição não muda, e o programa pode entrar em repetição infinita.",
     ],
     montar(c) {
       const em = quando(c, this);
@@ -1459,14 +1460,14 @@ const CENAS_CAP8 = [
     secao: "Erros e revisão",
     bit: BIT_CANTO,
     falas: [
-      "Hora de revisar o que você aprendeu.",
-      "Algoritmo é uma sequência finita, ordenada e lógica de passos. E, no fluxograma, a decisão é o losango.",
-      "DIV dá o quociente, e MOD dá o resto. E a seta é atribuição, enquanto o igual é comparação.",
-      "Na tabela-verdade, o E só é verdadeiro se tudo for verdadeiro, e o OU só é falso se tudo for falso. Na precedência, os parênteses vêm primeiro.",
-      "O ENQUANTO testa no início; o REPITA testa no final e executa pelo menos uma vez; e o PARA tem o número de repetições definido.",
-      "No teste de mesa, acompanhe as variáveis volta a volta. E, em muitas linguagens, o vetor começa no índice zero.",
-      "A função retorna valor, e o procedimento não. Por valor vai uma cópia; por referência, a própria variável. E toda recursão precisa de um caso base.",
-      { texto: "E, no Python, o range não inclui o último número, e a indentação define os blocos.", falar: "E, no Python, o rêindj não inclui o último número, e a indentação define os blocos." },
+      "Hora de revisar.",
+      "Algoritmo é uma sequência finita, ordenada e lógica de passos. No fluxograma, decisão é o losango.",
+      "DIV dá o quociente, e MOD dá o resto. A seta atribui; o igual compara.",
+      "O E só é verdadeiro se tudo for verdadeiro; o OU só é falso se tudo for falso. E os parênteses vêm primeiro.",
+      "O ENQUANTO testa no início; o REPITA, no final, executando pelo menos uma vez; e o PARA tem repetições definidas.",
+      "No teste de mesa, siga as variáveis volta a volta. E, em muitas linguagens, o vetor começa no índice zero.",
+      "A função retorna valor; o procedimento, não. Por valor vai uma cópia; por referência, a própria variável. E toda recursão precisa de caso base.",
+      { texto: "No Python, o range não inclui o último número, e a indentação define os blocos.", falar: "No Python, o rêindj não inclui o último número, e a indentação define os blocos." },
     ],
     montar(c) {
       c.titulo("Revisão", "O que você aprendeu", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -1495,9 +1496,9 @@ const CENAS_CAP8 = [
     secao: "Erros e revisão",
     bit: BIT_GRANDE,
     falas: [
-      "Agora é a sua vez: faça as quinze questões do final do Capítulo 8 e confira a correção comentada.",
-      "E, para fechar a série, encare o desafio final: o simulado, com quarenta questões sorteadas dos oito capítulos, cinco de cada, em sessenta minutos, com correção comentada no final.",
-      "Parabéns por chegar até aqui! Você concluiu todos os capítulos da série.",
+      "Agora é a sua vez: faça as quinze questões do final do Capítulo 8, com correção comentada.",
+      "E encare o desafio final: o simulado, com quarenta questões sorteadas dos oito capítulos, cinco de cada, em sessenta minutos.",
+      "Parabéns! Você concluiu todos os capítulos da série.",
       "Boa prova, e bons estudos!",
     ],
     montar(c) {

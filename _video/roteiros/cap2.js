@@ -57,6 +57,7 @@ if (typeof document !== "undefined") {
     .camada-so.forte{background:var(--cor);color:#fff}
     .camada-so.forte .rotulo{color:#fff;opacity:.85}
     .bloco{position:absolute;display:grid;place-items:center;border-radius:18px;font:800 30px var(--sans);text-align:center;line-height:1.1}
+    .chave{transform:none}
     .pilula.alerta{background:var(--prova-fundo);color:var(--prova)}
     .pilula.ok{background:var(--dica-fundo);color:var(--certo)}
     .pilula.nao{background:#fbe9e6;color:var(--errado)}
@@ -293,7 +294,7 @@ serie.capitulo({
         c.titulo("Conceitos", "Processos e memória", { left: 140, top: 150 }, c.t(0), { medio: true });
         const fase1 = [];
         fase1.push(cartaoH(c, { icone: "janela", titulo: "Processo", texto: "programa em <b>execução</b>" }, { left: 140, top: 300, width: 640, height: 160 }, w(0, "Processo é")));
-        fase1.push(c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:500px">Multitarefa · uso do processador</div>`), c.t(1), "fade"));
+        fase1.push(c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:500px">Multitarefa</div>`), c.t(1), "fade"));
         const cores = ["var(--cor)", "color-mix(in srgb, var(--cor) 60%, white)", "var(--cor-media)"];
         const fatias = c.novo(`<div class="abs" style="left:140px;top:545px;display:flex;gap:8px">${[0, 1, 2, 0, 1, 2, 0, 1, 2].map((k) => `<div class="bloco" style="position:relative;width:148px;height:96px;background:${cores[k]};color:${k === 2 ? "var(--cor)" : "#fff"}">${"ABC"[k]}</div>`).join("")}</div>`);
         [...fatias.children].forEach((f, i) => c.entra(f, w(1, "vários", 0.3 + i * 0.3), "pop"));
@@ -435,7 +436,7 @@ serie.capitulo({
         const tit = c.titulo("Kernel", "O núcleo do sistema", { left: 140, top: 150 }, c.t(0), { medio: true });
         const fase1 = [];
         const kern = c.novo(`<div class="abs" style="left:250px;top:330px;width:480px;height:480px;border-radius:50%;background:var(--cor);display:flex;justify-content:center;padding-top:56px;color:#fff;font:800 44px var(--sans)">Kernel</div>`);
-        c.entra(kern, w(0, "o kernel"), "zoom");
+        c.entra(kern, w(0, "kernel"), "zoom");
         const hw = c.novo(`<div class="abs" style="left:375px;top:500px;width:230px;height:230px;border-radius:50%;background:var(--serie);display:grid;place-items:center;color:#fff;font:800 34px var(--sans)">Hardware</div>`);
         c.entra(hw, w(0, "diretamente"), "pop");
         const priv = c.novo(`<div class="abs pilula" style="left:600px;top:340px;background:#fff;box-shadow:var(--sombra)">privilégio máximo</div>`);
@@ -499,7 +500,7 @@ serie.capitulo({
             ${icone(p[0])}<strong style="font-size:${p[1].length > 12 ? 27 : 32}px;line-height:1.15">${p[1]}</strong></div>`);
           e.querySelector(".icone").style.cssText = "width:84px;height:84px;margin-bottom:12px";
           c.entra(e, p[3], "pop");
-          c.texto(p[2], { left: x, top: 575, width: 250, fontSize: "24px", lineHeight: 1.35 }, p[3] + 0.4);
+          c.texto(p[2], { left: x, top: 575, width: 250, fontSize: "24px", lineHeight: "1.35" }, p[3] + 0.4);
           if (i > 0) c.seta(x - 54, 435, x - 8, 435, p[3] - 0.3);
         });
         c.chave("Dual boot: <em>escolher entre dois sistemas instalados</em>", c.t(3), c.t(4) - 0.2);
@@ -532,7 +533,7 @@ serie.capitulo({
         c.entra(c.novo(`<div class="abs rotulo" style="left:${x2}px;top:358px">Tipo 2 · hospedado</div>`), c.t(3), "fade");
         c.entra(camada(x2, 700, 620, "Hardware", "var(--serie)", "#fff"), c.t(3, 0.3), "baixo");
         c.entra(camada(x2, 608, 620, "Sistema operacional", "var(--cor-media)", "var(--texto)"), w(3, "sobre um sistema", -0.4), "baixo");
-        c.entra(camada(x2, 516, 620, "Hypervisor", "var(--cor)", "#fff"), w(3, "como um programa"), "baixo");
+        c.entra(camada(x2, 516, 620, "Hypervisor", "var(--cor)", "#fff"), w(3, "como programa"), "baixo");
         [0, 1].forEach((k) => c.entra(vm(x2 + k * 318, 424, 302), w(3, "sobre um sistema", 0.4 + k * 0.25), "pop"));
         c.entra(c.novo(`<div class="abs" style="left:${x2}px;top:810px;width:640px;display:flex;flex-wrap:wrap;gap:10px">${["VirtualBox", "VMware Workstation"].map((x) => `<span class="pilula" style="font-size:26px">${x}</span>`).join("")}</div>`), w(3, "como o VirtualBox"), "baixo");
       },
@@ -665,8 +666,8 @@ serie.capitulo({
           { icone: "grafico", titulo: "Gerenciador de Tarefas", texto: "processos, desempenho e inicialização", extra: `<div style="margin-top:12px">${tecla("Ctrl", "Shift", "Esc")}</div>`, t: c.t(3) },
           { icone: "lixeira", titulo: "Lixeira", texto: "guarda os excluídos do <b>disco local</b> para restaurar", t: c.t(4) },
         ];
-        const pos = [[140, 300], [620, 300], [1100, 300], [140, 550], [620, 550]];
-        k.forEach((o, i) => cartaoH(c, o, { left: pos[i][0], top: pos[i][1], width: 450, height: 220 }, o.t));
+        const pos = [[140, 300, 450], [620, 300, 450], [1100, 300, 460], [140, 550, 690], [860, 550, 700]];
+        k.forEach((o, i) => cartaoH(c, o, { left: pos[i][0], top: pos[i][1], width: pos[i][2], height: 220 }, o.t));
       },
     },
     {
@@ -708,12 +709,12 @@ serie.capitulo({
       secao: "Windows",
       bit: BIT_CANTO,
       falas: [
-        { texto: "Agora, os atalhos com a tecla Windows. Windows + E abre o Explorador de Arquivos, e Windows + D mostra ou oculta a área de trabalho.", falar: "Agora, os atalhos com a tecla Windows. Windows mais é abre o Explorador de Arquivos, e Windows mais dê mostra ou oculta a área de trabalho." },
-        { texto: "Windows + L bloqueia o computador, Windows + R abre a janela Executar, e Windows + I abre as Configurações.", falar: "Windows mais éle bloqueia o computador, Windows mais érre abre a janela Executar, e Windows mais i abre as Configurações." },
+        { texto: "Atalhos com a tecla Windows: Windows + E abre o Explorador, e Windows + D mostra ou oculta a área de trabalho.", falar: "Atalhos com a tecla Windows: Windows mais é abre o Explorador, e Windows mais dê mostra ou oculta a área de trabalho." },
+        { texto: "Windows + L bloqueia o computador, Windows + R abre o Executar, e Windows + I, as Configurações.", falar: "Windows mais éle bloqueia o computador, Windows mais érre abre o Executar, e Windows mais i, as Configurações." },
         { texto: "Windows + V mostra o histórico da área de transferência, e Windows + Shift + S captura parte da tela.", falar: "Windows mais vê mostra o histórico da área de transferência, e Windows, Shift, ésse captura parte da tela." },
-        { texto: "Memorize: as letras vêm das iniciais em inglês. E de Explorer, D de Desktop, L de Lock, R de Run, e I de settings.", falar: "Memorize: as letras vêm das iniciais em inglês. É de Explorer, dê de Desktop, éle de Lock, érre de rân, e i de sétings." },
-        { texto: "Outros atalhos: Alt + Tab alterna entre as janelas abertas, Alt + F4 fecha a janela ou o programa ativo, e F2 renomeia o item selecionado.", falar: "Outros atalhos: Alt mais Tab alterna entre as janelas abertas, Alt mais éfe quatro fecha a janela ou o programa ativo, e éfe dois renomeia o item selecionado." },
-        { texto: "Ctrl + Shift + Esc abre o Gerenciador de Tarefas. E os clássicos: Ctrl + C copia, Ctrl + X recorta, Ctrl + V cola, e Ctrl + Z desfaz.", falar: "Ctrl, Shift, Esc abre o Gerenciador de Tarefas. E os clássicos: Ctrl cê copia, Ctrl xis recorta, Ctrl vê cola, e Ctrl zê desfaz." },
+        { texto: "Memorize: são iniciais em inglês. E de Explorer, D de Desktop, L de Lock, R de Run, e I de settings.", falar: "Memorize: são iniciais em inglês. É de Explorer, dê de Desktop, éle de Lock, érre de rân, e i de sétings." },
+        { texto: "Alt + Tab alterna entre as janelas, Alt + F4 fecha a janela ou o programa ativo, e F2 renomeia o item selecionado.", falar: "Alt mais Tab alterna entre as janelas, Alt mais éfe quatro fecha a janela ou o programa ativo, e éfe dois renomeia o item selecionado." },
+        { texto: "Ctrl + Shift + Esc abre o Gerenciador de Tarefas. E Ctrl + C copia, Ctrl + X recorta, Ctrl + V cola, e Ctrl + Z desfaz.", falar: "Ctrl, Shift, Esc abre o Gerenciador de Tarefas. E Ctrl cê copia, Ctrl xis recorta, Ctrl vê cola, e Ctrl zê desfaz." },
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -753,7 +754,7 @@ serie.capitulo({
         cards.forEach((k, i) => {
           const col = i < 4 ? 0 : 1, lin = i % 4;
           const e = c.novo(`<div class="cartao" style="left:${140 + col * 740}px;top:${300 + lin * 135}px;width:${col ? 600 : 700}px;height:115px;padding:0 30px;display:flex;align-items:center;gap:26px">
-            <div style="width:${col ? 210 : 330}px">${tecla(...k[0])}</div><span style="font-size:29px;color:var(--texto-suave)">${k[1]}</span></div>`);
+            <div style="width:${col ? 200 : 290}px">${tecla(...k[0])}</div><span style="font-size:29px;color:var(--texto-suave)">${k[1]}</span></div>`);
           c.entra(e, k[2], "baixo");
         });
       },
@@ -766,12 +767,12 @@ serie.capitulo({
       secao: "Windows: arquivos e segurança",
       bit: BIT_CANTO,
       falas: [
-        { texto: "No Windows, o caminho começa pela letra da unidade e usa a barra invertida, como em C:\\Users\\Maria\\Documentos\\relatorio.docx.", falar: "No Windows, o caminho começa pela letra da unidade e usa a barra invertida, como em cê, dois pontos, iúzers, Maria, Documentos, relatório ponto dóc xis." },
-        { texto: "Esse é um caminho absoluto: completo, desde a unidade. Já o relativo parte da pasta atual, e o .. indica a pasta acima.", falar: "Esse é um caminho absoluto: completo, desde a unidade. Já o relativo parte da pasta atual, e o ponto ponto indica a pasta acima." },
-        "Os nomes de arquivos no Windows não podem conter estes caracteres.",
-        { texto: "E um atalho, o arquivo .lnk, apenas aponta para o original: apagar o atalho não apaga o arquivo.", falar: "E um atalho, o arquivo ponto éle ene cá, apenas aponta para o original: apagar o atalho não apaga o arquivo." },
-        { texto: "Já a extensão indica o tipo do arquivo e qual programa o abre: .exe é executável, .txt é texto simples, .docx é do Word, e .xlsx é do Excel.", falar: "Já a extensão indica o tipo do arquivo e qual programa o abre: ponto é xis é é executável, ponto tê xis tê é texto simples, ponto dóc xis é do Word, e ponto xis éle ésse xis é do Excel." },
-        { texto: "Temos ainda o .pdf, o .jpg e o .png, de imagens, o .mp3, de áudio, o .mp4, de vídeo, e o .zip, compactado.", falar: "Temos ainda o pê dê éfe, o jota pê gê e o pê ene gê, de imagens, o ême pê três, de áudio, o ême pê quatro, de vídeo, e o zíp, compactado." },
+        { texto: "No Windows, o caminho começa pela letra da unidade e usa a barra invertida, como em C:\\Users\\Maria\\Documentos\\relatorio.docx.", falar: "No Windows, o caminho começa pela letra da unidade e usa a barra invertida, como em cê dois pontos, iúzers, Maria, Documentos, relatório ponto dóc xis." },
+        { texto: "Esse caminho é absoluto: completo, desde a unidade. O relativo parte da pasta atual, e o .. indica a pasta acima.", falar: "Esse caminho é absoluto: completo, desde a unidade. O relativo parte da pasta atual, e o ponto ponto indica a pasta acima." },
+        "Nomes de arquivos não podem conter estes caracteres.",
+        { texto: "E um atalho, o .lnk, só aponta para o original: apagar o atalho não apaga o arquivo.", falar: "E um atalho, o ponto éle ene cá, só aponta para o original: apagar o atalho não apaga o arquivo." },
+        { texto: "A extensão indica o tipo do arquivo e o programa que o abre: .exe é executável, .txt é texto simples, .docx é do Word, e .xlsx, do Excel.", falar: "A extensão indica o tipo do arquivo e o programa que o abre: ponto é xis é é executável, ponto tê xis tê é texto simples, ponto dóc xis é do Word, e ponto xis éle ésse xis, do Excel." },
+        { texto: "Há ainda o .pdf, o .jpg e o .png, de imagens, o .mp3, de áudio, o .mp4, de vídeo, e o .zip, compactado.", falar: "Há ainda o pê dê éfe, o jota pê gê e o pê ene gê, de imagens, o ême pê três, de áudio, o ême pê quatro, de vídeo, e o zíp, compactado." },
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -789,7 +790,7 @@ serie.capitulo({
         const abs = c.novo(`<div class="abs pilula" style="left:560px;top:400px">caminho absoluto: completo, desde a unidade</div>`);
         c.entra(abs, c.t(1), "pop");
         const rel = c.novo(`<div class="abs" style="left:140px;top:520px;display:flex;align-items:center;gap:30px"><span class="mono" style="font-size:52px;font-weight:700"><span style="color:var(--cor)">..</span>\\Imagens</span><span style="font-size:30px;color:var(--texto-suave)">caminho <b style="color:var(--texto)">relativo</b> · <b style="color:var(--cor)">..</b> = pasta acima</span></div>`);
-        c.entra(rel, w(1, "o relativo"), "baixo");
+        c.entra(rel, w(1, "relativo"), "baixo");
         c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:640px;color:var(--errado)">Proibidos em nomes de arquivo</div>`), c.t(2), "fade");
         const proib = c.novo(`<div class="abs" style="left:140px;top:690px;display:flex;gap:12px">${["\\", "/", ":", "*", "?", "\"", "&lt;", "&gt;", "|"].map((x) => `<span class="mono" style="display:grid;place-items:center;width:68px;height:68px;border-radius:14px;background:#fbe9e6;color:var(--errado);font-size:38px;font-weight:700">${x}</span>`).join("")}</div>`);
         [...proib.children].forEach((x, i) => c.entra(x, w(2, "estes", i * 0.15), "pop"));
@@ -824,7 +825,7 @@ serie.capitulo({
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
         c.titulo("Segurança no Windows", "Contas e proteção", { left: 140, top: 150 }, c.t(0), { medio: true });
-        cartaoH(c, { icone: "admin", titulo: "Administrador", texto: "instala programas e altera configurações" }, { left: 140, top: 300, width: 450, height: 200 }, w(0, "o administrador"));
+        cartaoH(c, { icone: "admin", titulo: "Administrador", texto: "instala programas e altera configurações" }, { left: 140, top: 300, width: 450, height: 200 }, w(0, "administrador"));
         cartaoH(c, { icone: "pessoa", titulo: "Conta padrão", texto: "dia a dia, permissões limitadas" }, { left: 620, top: 300, width: 450, height: 200 }, w(0, "A conta padrão"));
         const uac = c.novo(`<div class="abs" style="left:1100px;top:300px;width:460px;height:200px;border-radius:22px;background:#fff;box-shadow:var(--sombra);overflow:hidden">
           <div style="background:var(--cor);color:#fff;font:700 22px var(--sans);padding:12px 22px">Controle de Conta de Usuário (UAC)</div>
@@ -875,7 +876,7 @@ serie.capitulo({
         "Agora, o Linux. Ele é um kernel de código aberto, criado por Linus Torvalds em 1991, sob a licença GPL.",
         "Com ferramentas do projeto GNU e outros programas, ele forma as distribuições, como Ubuntu, Debian, Fedora, Mint e Red Hat.",
         "É multiusuário e multitarefa, domina os servidores e é a base do Android.",
-        { texto: "E ele diferencia maiúsculas de minúsculas: Relatorio.txt, com R maiúsculo, e relatorio.txt, com r minúsculo, são arquivos diferentes.", falar: "E ele diferencia maiúsculas de minúsculas: relatório ponto tê xis tê, com érre maiúsculo, e relatório ponto tê xis tê, com érre minúsculo, são arquivos diferentes." },
+        { texto: "E ele diferencia maiúsculas de minúsculas: Relatorio.txt e relatorio.txt são arquivos diferentes.", falar: "E ele diferencia maiúsculas de minúsculas: relatório com érre maiúsculo e com érre minúsculo são arquivos diferentes." },
         "O administrador, o superusuário, se chama root.",
         "E o sudo executa um comando com privilégios de administrador.",
       ],
@@ -887,7 +888,7 @@ serie.capitulo({
           [{ icone: "engrenagem", titulo: "Kernel Linux" }, 140, w(0, "kernel")],
           [{ icone: "ferramenta", titulo: "Ferramentas GNU" }, 520, w(1, "ferramentas")],
           [{ icone: "janela", titulo: "Outros programas" }, 900, w(1, "outros programas")],
-          [{ icone: "pacote", titulo: "Distribuição" }, 1280, w(1, "formar")],
+          [{ icone: "pacote", titulo: "Distribuição" }, 1280, w(1, "forma as")],
         ];
         nos.forEach(([o, x, t]) => {
           const e = c.no(o, { left: x, top: 290, width: 280, height: 200, padding: "18px" }, t);
@@ -895,7 +896,7 @@ serie.capitulo({
           e.querySelector("strong").style.fontSize = "28px";
           f1.push(e);
         });
-        [["+", 438, w(1, "ferramentas")], ["+", 818, w(1, "outros programas")], ["=", 1198, w(1, "formar")]].forEach(([s, x, t]) => {
+        [["+", 438, w(1, "ferramentas")], ["+", 818, w(1, "outros programas")], ["=", 1198, w(1, "forma as")]].forEach(([s, x, t]) => {
           f1.push(c.entra(c.novo(`<div class="abs" style="left:${x}px;top:350px;width:64px;text-align:center;font:800 60px var(--sans);color:var(--texto-fraco)">${s}</div>`), t, "pop"));
         });
         const fatos = c.novo(`<div class="abs" style="left:140px;top:530px;display:flex;gap:12px">${["código aberto", "Linus Torvalds", "1991", "licença GPL"].map((x) => `<span class="pilula" style="background:#fff;box-shadow:var(--sombra)">${x}</span>`).join("")}</div>`);
@@ -928,12 +929,12 @@ serie.capitulo({
       secao: "Linux",
       bit: BIT_CANTO,
       falas: [
-        { texto: "No Linux, tudo parte de um único diretório raiz, representado pela barra. Não existem letras de unidade, como C: ou D:.", falar: "No Linux, tudo parte de um único diretório raiz, representado pela barra. Não existem letras de unidade, como cê ou dê." },
-        { texto: "Em /home ficam as pastas pessoais dos usuários, como /home/maria. E /root é a pasta pessoal do superusuário.", falar: "Em barra rôme ficam as pastas pessoais dos usuários, como barra rôme barra maria. E barra root é a pasta pessoal do superusuário." },
-        { texto: "O /etc guarda os arquivos de configuração do sistema. O /bin e o /sbin têm os comandos essenciais e os de administração.", falar: "O barra é tê cê guarda os arquivos de configuração do sistema. O barra bin e o barra ésse bin têm os comandos essenciais e os de administração." },
-        { texto: "O /usr guarda os programas e bibliotecas instalados. O /var, dados variáveis, como os logs. E o /tmp, os arquivos temporários.", falar: "O barra u ésse érre guarda os programas e bibliotecas instalados. O barra var, dados variáveis, como os logs. E o barra tê ême pê, os arquivos temporários." },
-        { texto: "O /dev tem arquivos que representam dispositivos, e o /boot, os de inicialização e o kernel. Já /media e /mnt são pontos de montagem de pen drives e outras unidades.", falar: "O barra dév tem arquivos que representam dispositivos, e o barra boot, os de inicialização e o kernel. Já barra mídia e barra ême ene tê são pontos de montagem de pen drives e outras unidades." },
-        { texto: "Pegadinha: não confunda a barra, que é a raiz do sistema, com /root, a pasta pessoal do administrador.", falar: "Pegadinha: não confunda a barra, que é a raiz do sistema, com barra root, a pasta pessoal do administrador." },
+        { texto: "No Linux, tudo parte de uma única raiz, representada pela barra. Não existem letras de unidade, como C: ou D:.", falar: "No Linux, tudo parte de uma única raiz, representada pela barra. Não existem letras de unidade, como cê ou dê." },
+        { texto: "Em /home ficam as pastas dos usuários, e /root é a pasta do superusuário.", falar: "Em barra rôme ficam as pastas dos usuários, e barra root é a pasta do superusuário." },
+        { texto: "O /etc guarda as configurações do sistema. O /bin e o /sbin, os comandos essenciais e os de administração.", falar: "O barra é tê cê guarda as configurações do sistema. O barra bin e o barra ésse bin, os comandos essenciais e os de administração." },
+        { texto: "O /usr tem programas e bibliotecas. O /var, dados variáveis, como os logs. E o /tmp, os temporários.", falar: "O barra u ésse érre tem programas e bibliotecas. O barra var, dados variáveis, como os logs. E o barra tê ême pê, os temporários." },
+        { texto: "O /dev representa os dispositivos, e o /boot guarda a inicialização e o kernel. Já /media e /mnt são pontos de montagem de pen drives e outras unidades.", falar: "O barra dév representa os dispositivos, e o barra boot guarda a inicialização e o kernel. Já barra mídia e barra ême ene tê são pontos de montagem de pen drives e outras unidades." },
+        { texto: "Pegadinha: não confunda a barra, a raiz do sistema, com /root, a pasta do administrador.", falar: "Pegadinha: não confunda a barra, a raiz do sistema, com barra root, a pasta do administrador." },
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -943,7 +944,7 @@ serie.capitulo({
         c.entra(c.novo(`<div class="abs" style="left:300px;top:305px;font:600 30px var(--sans);color:var(--texto-suave)">raiz · <span style="text-decoration:line-through;color:var(--errado)">C:</span> <span style="text-decoration:line-through;color:var(--errado)">D:</span> não existem</div>`), w(0, "Não existem"), "fade");
         const pastas = [
           ["/home", "pastas dos usuários", w(1, "/home")],
-          ["/root", "pasta do superusuário", w(1, "E /root")],
+          ["/root", "pasta do superusuário", w(1, "/root é")],
           ["/etc", "configurações", c.t(2)],
           ["/bin · /sbin", "comandos essenciais · de administração", w(2, "O /bin")],
           ["/usr", "programas e bibliotecas", c.t(3)],
@@ -961,7 +962,7 @@ serie.capitulo({
         pastas.forEach((p, i) => {
           const col = i % 5, lin = Math.floor(i / 5);
           const e = c.novo(`<div class="no" style="left:${260 + col * 265}px;top:${440 + lin * 190}px;width:245px;height:150px;padding:14px 16px">
-            <strong class="mono" style="font-size:${p[0].length > 7 ? 26 : 34}px;color:var(--cor)">${p[0]}</strong><span style="font-size:21px;line-height:1.25">${p[1]}</span></div>`);
+            <strong class="mono" style="font-size:${p[0].length > 7 ? 26 : 34}px;color:var(--cor)">${p[0]}</strong><span style="font-size:23px;line-height:1.25">${p[1]}</span></div>`);
           c.entra(e, p[2], "pop");
         });
         c.quadro("prova", "<b>/</b> é a raiz do sistema. <b>/root</b> é a pasta pessoal do administrador.", { left: 140, top: 800, width: 1400 }, c.t(5)).querySelector("p").style.fontSize = "34px";
@@ -975,17 +976,17 @@ serie.capitulo({
       secao: "Terminal do Linux",
       bit: BIT_CANTO,
       falas: [
-        { texto: "Agora, os comandos básicos. O pwd mostra o diretório atual, o ls lista arquivos e pastas, e o ls -l mostra detalhes e permissões. O cd muda de diretório.", falar: "Agora, os comandos básicos. O pê dáblio dê mostra o diretório atual, o éle ésse lista arquivos e pastas, e o éle ésse traço éle mostra detalhes e permissões. O cê dê muda de diretório." },
+        { texto: "Comandos básicos: o pwd mostra o diretório atual, o ls lista arquivos e pastas, e o ls -l mostra detalhes e permissões. O cd muda de diretório.", falar: "Comandos básicos: o pê dáblio dê mostra o diretório atual, o éle ésse lista arquivos e pastas, e o éle ésse traço éle mostra detalhes e permissões. O cê dê muda de diretório." },
         { texto: "O mkdir cria um diretório, o cp copia arquivos, e o mv move ou renomeia.", falar: "O ême cá dir cria um diretório, o cê pê copia arquivos, e o ême vê move ou renomeia." },
         { texto: "O rm remove arquivos, e o rm -r remove diretórios. O cat exibe o conteúdo de um arquivo.", falar: "O érre ême remove arquivos, e o érre ême traço érre remove diretórios. O cát exibe o conteúdo de um arquivo." },
-        { texto: "O chmod altera permissões, o chown altera o dono do arquivo, e o sudo executa um comando como administrador.", falar: "O cê agá mód altera permissões, o cê agá ôun altera o dono do arquivo, e o sudo executa um comando como administrador." },
-        { texto: "O ps lista os processos, o kill encerra um processo, e o man abre o manual de um comando.", falar: "O pê ésse lista os processos, o kíl encerra um processo, e o mén abre o manual de um comando." },
+        { texto: "O chmod altera permissões, o chown altera o dono, e o sudo executa como administrador.", falar: "O cê agá mód altera permissões, o cê agá ôun altera o dono, e o sudo executa como administrador." },
+        { texto: "O ps lista os processos, o kill encerra um processo, e o man abre o manual.", falar: "O pê ésse lista os processos, o kíl encerra um processo, e o mén abre o manual." },
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
         c.titulo("Terminal", "Comandos básicos", { left: 140, top: 150 }, c.t(0), { medio: true });
         const cmds = [
-          ["pwd", "mostra o diretório atual", w(0, "O pwd")],
+          ["pwd", "mostra o diretório atual", w(0, "o pwd")],
           ["ls", "lista arquivos · <b>ls -l</b>: detalhes e permissões", w(0, "o ls lista")],
           ["cd", "muda de diretório", w(0, "O cd")],
           ["mkdir", "cria diretório", c.t(1)],
@@ -1012,11 +1013,11 @@ serie.capitulo({
       secao: "Terminal do Linux",
       bit: BIT_CANTO,
       falas: [
-        { texto: "Mais comandos cobrados: o touch cria um arquivo vazio ou atualiza a data de modificação. O find procura arquivos pelo nome e outros critérios, e o grep procura um texto dentro de arquivos.", falar: "Mais comandos cobrados: o tâtch cria um arquivo vazio ou atualiza a data de modificação. O fáind procura arquivos pelo nome e outros critérios, e o grép procura um texto dentro de arquivos." },
+        { texto: "Mais comandos: o touch cria um arquivo vazio ou atualiza a data de modificação. O find procura arquivos, e o grep procura um texto dentro de arquivos.", falar: "Mais comandos: o tâtch cria um arquivo vazio ou atualiza a data de modificação. O fáind procura arquivos, e o grép procura um texto dentro de arquivos." },
         { texto: "O tar agrupa e compacta arquivos. O nano e o vi são editores de texto no terminal.", falar: "O tár agrupa e compacta arquivos. O nâno e o vê i são editores de texto no terminal." },
         { texto: "O apt e o dnf instalam e atualizam programas: o apt no Debian e no Ubuntu, e o dnf no Fedora.", falar: "O á pê tê e o dê ene éfe instalam e atualizam programas: o á pê tê no Debian e no Ubuntu, e o dê ene éfe no Fedora." },
-        { texto: "O df mostra o espaço livre nos discos, e o du, o espaço ocupado por pastas. O top mostra os processos e o uso de CPU e memória em tempo real.", falar: "O dê éfe mostra o espaço livre nos discos, e o dê u, o espaço ocupado por pastas. O tóp mostra os processos e o uso de CPU e memória em tempo real." },
-        { texto: "O ip addr mostra os endereços de rede, e o antigo ifconfig também é cobrado. O passwd altera a senha, e o whoami mostra o usuário atual.", falar: "O i pê ádres mostra os endereços de rede, e o antigo if cónfig também é cobrado. O pás uórd altera a senha, e o rú ém ái mostra o usuário atual." },
+        { texto: "O df mostra o espaço livre nos discos, e o du, o ocupado por pastas. O top mostra processos, CPU e memória em tempo real.", falar: "O dê éfe mostra o espaço livre nos discos, e o dê u, o ocupado por pastas. O tóp mostra processos, CPU e memória em tempo real." },
+        { texto: "O ip addr mostra os endereços de rede, assim como o antigo ifconfig. O passwd altera a senha, e o whoami mostra o usuário atual.", falar: "O i pê ádres mostra os endereços de rede, assim como o antigo if cónfig. O pás uórd altera a senha, e o rú ém ái mostra o usuário atual." },
       ],
       montar(c) {
         const w = (i, s, d) => em(c, this, i, s, d);
@@ -1048,10 +1049,10 @@ serie.capitulo({
       secao: "Terminal do Linux",
       bit: BIT_CANTO,
       falas: [
-        { texto: "No terminal, o til representa a pasta pessoal do usuário, como /home/maria. O ponto é o diretório atual, e o ponto ponto é o diretório acima.", falar: "No terminal, o til representa a pasta pessoal do usuário, como barra rôme barra maria. O ponto é o diretório atual, e o ponto ponto é o diretório acima." },
+        { texto: "No terminal, o til é a pasta pessoal, como /home/maria. O ponto é o diretório atual, e o ponto ponto, o diretório acima.", falar: "No terminal, o til é a pasta pessoal, como barra rôme barra maria. O ponto é o diretório atual, e o ponto ponto, o diretório acima." },
         "O caminho absoluto começa com a barra; o relativo parte do diretório atual.",
         { texto: "Arquivos cujo nome começa com ponto, como o .bashrc, são ocultos. Eles aparecem com ls -a.", falar: "Arquivos cujo nome começa com ponto, como o ponto bésh érre cê, são ocultos. Eles aparecem com éle ésse traço á." },
-        "Agora, três símbolos que as bancas adoram. O sinal de maior grava a saída de um comando em um arquivo, substituindo o conteúdo.",
+        "Três símbolos que caem muito: o sinal de maior grava a saída de um comando em um arquivo, substituindo o conteúdo.",
         "Dois sinais de maior acrescentam a saída ao final do arquivo.",
         "E a barra vertical, o pipe, envia a saída de um comando para o próximo.",
       ],
@@ -1078,8 +1079,8 @@ serie.capitulo({
           `<span class="p">$</span> ls -l <b style="color:#fbbf24">&gt;</b> lista.txt`,
           `<span class="p">$</span> ls -l <b style="color:#fbbf24">&gt;&gt;</b> lista.txt`,
           `<span class="p">$</span> cat lista.txt <b style="color:#fbbf24">|</b> grep pdf`,
-        ], { left: 140, top: 320, width: 900, height: 320 }, [w(3, "O sinal"), c.t(4), c.t(5)], c.t(3, 1));
-        [[">", "grava, <b>substituindo</b> o conteúdo", w(3, "O sinal", 0.5)], [">>", "<b>acrescenta</b> ao final", c.t(4, 0.4)], ["|", "pipe: saída → <b>próximo comando</b>", c.t(5, 0.6)]].forEach((k, i) => {
+        ], { left: 140, top: 320, width: 900, height: 320 }, [w(3, "sinal de maior"), c.t(4), c.t(5)], c.t(3, 1));
+        [[">", "grava, <b>substituindo</b> o conteúdo", w(3, "sinal de maior", 0.5)], [">>", "<b>acrescenta</b> ao final", c.t(4, 0.4)], ["|", "pipe: saída → <b>próximo comando</b>", c.t(5, 0.6)]].forEach((k, i) => {
           const e = c.novo(`<div class="cartao" style="left:1100px;top:${300 + i * 165}px;width:460px;height:145px;display:flex;align-items:center;gap:26px;padding:20px 30px">
             <span class="mono" style="font-size:60px;font-weight:700;color:var(--cor);min-width:90px;text-align:center">${k[0].replace(/>/g, "&gt;")}</span><p style="font-size:28px">${k[1]}</p></div>`);
           c.entra(e, k[2], "direita");
@@ -1129,7 +1130,7 @@ serie.capitulo({
         { texto: "Veja o exemplo: chmod 754 relatorio.sh.", falar: "Veja o exemplo: cê agá mód sete cinco quatro, relatório ponto ésse agá." },
         { texto: "O dono recebe 7: 4, mais 2, mais 1. Ou seja, rwx: ler, escrever e executar.", falar: "O dono recebe sete: quatro, mais dois, mais um. Ou seja, érre, dáblio, xis: ler, escrever e executar." },
         { texto: "O grupo recebe 5: 4, mais 0, mais 1. É r-x: ler e executar.", falar: "O grupo recebe cinco: quatro, mais zero, mais um. É érre, traço, xis: ler e executar." },
-        { texto: "E os outros recebem 4: r--, apenas ler. No ls -l, tudo aparece assim: -rwxr-xr--.", falar: "E os outros recebem quatro: érre, traço, traço, apenas ler. No éle ésse traço éle, tudo aparece assim: traço, érre dáblio xis, érre traço xis, érre traço traço." },
+        { texto: "E os outros recebem 4: apenas ler. No ls -l, aparece assim: -rwxr-xr--.", falar: "E os outros recebem quatro: apenas ler. No éle ésse traço éle, aparece assim: traço, érre dáblio xis, érre traço xis, érre traço traço." },
         { texto: "Treine com o chmod 640: o grupo recebeu 4, ou seja, somente leitura.", falar: "Treine com o cê agá mód seis quatro zero: o grupo recebeu quatro, ou seja, somente leitura." },
         { texto: "Memorize: r vale 4, w vale 2 e x vale 1. E a ordem dos dígitos é sempre dono, grupo e outros.", falar: "Memorize: érre vale quatro, dáblio vale dois e xis vale um. E a ordem dos dígitos é sempre dono, grupo e outros." },
       ],
@@ -1157,7 +1158,7 @@ serie.capitulo({
         f1.forEach((e) => c.sai(e, c.t(4) - 0.4));
 
         c.titulo("Treine", "chmod 640", { left: 140, top: 150 }, c.t(4), { medio: true });
-        [["Dono", "6", "rw-"], ["Grupo", "4", "r-- · somente leitura"], ["Outros", "0", "---"]].forEach((k, i) => {
+        [["Dono", "6", "rw-"], ["Grupo", "4", "r--<br><span style=\"font:700 28px var(--sans);color:var(--cor)\">somente leitura</span>"], ["Outros", "0", "---"]].forEach((k, i) => {
           const e = c.novo(`<div class="cartao" style="left:${140 + i * 470}px;top:300px;width:440px;height:240px;text-align:center;padding:24px">
             <div class="rotulo">${k[0]}</div><div class="mono" style="font-size:84px;font-weight:700;color:var(--cor);line-height:1.15">${k[1]}</div><div class="mono" style="font-size:34px;font-weight:700">${k[2]}</div></div>`);
           c.entra(e, c.t(4, 0.4 + i * 0.3), "pop");
@@ -1205,7 +1206,7 @@ serie.capitulo({
         "Para fechar, Windows contra Linux. O Windows é proprietário, da Microsoft, e fechado. O Linux é software livre, com licença GPL, e aberto.",
         "O kernel do Windows é híbrido; o do Linux, monolítico. O sistema de arquivos padrão é o NTFS no Windows e o ext4 no Linux.",
         "O Windows usa letras nas unidades; o Linux, uma árvore a partir da barra. E só o Linux diferencia maiúsculas de minúsculas.",
-        "O administrador do Linux é o root. E o Windows é mais comum em computadores pessoais e empresas; o Linux, em servidores, supercomputadores e no Android.",
+        "O administrador do Linux é o root. E o Windows domina os computadores pessoais e as empresas; o Linux, servidores, supercomputadores e Android.",
         "Última pegadinha: o Linux não é gratuito por falta de licença. Ele tem licença, sim: a GPL, que garante as liberdades do software livre.",
       ],
       montar(c) {
@@ -1219,14 +1220,14 @@ serie.capitulo({
           ["Unidades", "letras (C:, D:)", "árvore única a partir de /"],
           ["Maiúsculas/minúsculas", "não diferencia", "diferencia"],
           ["Administrador", "conta de Administrador", "root"],
-          ["Uso mais comum", "PCs e empresas", "servidores, supercomputadores, Android"],
-        ], { left: 140, top: 290, width: 1420 }, c.t(0, 0.6), [w(0, "O Windows é"), w(0, "código fechado"), c.t(1), w(1, "O sistema"), c.t(2), w(2, "E só"), c.t(3), w(3, "O Windows é")]);
+          ["Uso mais comum", "computadores pessoais e empresas", "servidores, supercomputadores, Android"],
+        ], { left: 140, top: 290, width: 1420 }, c.t(0, 0.6), [w(0, "O Windows é"), w(0, "e fechado"), c.t(1), w(1, "O sistema"), c.t(2), w(2, "E só"), c.t(3), w(3, "Windows domina")]);
         tab.style.fontSize = "27px";
         tab.querySelectorAll("td, th").forEach((td) => (td.style.padding = "13px 28px"));
         [tab, tit].forEach((e) => c.sai(e, c.t(4) - 0.4));
         c.titulo("Pegadinha de banca", "O Linux tem licença", { left: 140, top: 150 }, c.t(4), { medio: true });
         c.quadro("prova", "“O Linux é gratuito porque não possui licença.” <b>Errado</b>: ele possui licença, a <b>GPL</b>, que garante as liberdades do software livre.", { left: 140, top: 340, width: 1400 }, c.t(4, 0.4));
-        cartaoH(c, { icone: "documento", titulo: "Licença GPL", texto: "garante as liberdades do <b>software livre</b>" }, { left: 140, top: 640, width: 700, height: 170 }, w(4, "Ele possui"));
+        cartaoH(c, { icone: "documento", titulo: "Licença GPL", texto: "garante as liberdades do <b>software livre</b>" }, { left: 140, top: 640, width: 700, height: 170 }, w(4, "Ele tem"));
       },
     },
 
@@ -1243,7 +1244,7 @@ serie.capitulo({
         "O kernel do Linux é monolítico; o do Windows, híbrido. E Linux é só o kernel.",
         "O FAT32 limita cada arquivo a 4 gigabytes; o exFAT e o NTFS resolvem.",
         "Shift + Delete, pen drives e rede não passam pela Lixeira. E os atalhos da tecla Windows usam iniciais em inglês.",
-        { texto: "No Linux, / é a raiz, e /root é a pasta do administrador. O sinal de maior substitui, e dois sinais de maior acrescentam.", falar: "No Linux, a barra é a raiz, e barra root é a pasta do administrador. O sinal de maior substitui, e dois sinais de maior acrescentam." },
+        { texto: "No Linux, / é a raiz, e /root, a pasta do administrador. O sinal de maior substitui; dois sinais acrescentam.", falar: "No Linux, a barra é a raiz, e barra root, a pasta do administrador. O sinal de maior substitui; dois sinais acrescentam." },
         { texto: "E, nas permissões, r vale 4, w vale 2 e x vale 1, sempre na ordem dono, grupo e outros.", falar: "E, nas permissões, érre vale quatro, dáblio vale dois e xis vale um, sempre na ordem dono, grupo e outros." },
       ],
       montar(c) {
@@ -1253,7 +1254,7 @@ serie.capitulo({
           ["Processos", "Esperando E/S = bloqueado · Round Robin = quantum"],
           ["Kernel", "Linux monolítico · Windows híbrido · Linux = kernel"],
           ["Arquivos", "FAT32: até 4 GB por arquivo · exFAT e NTFS resolvem"],
-          ["Windows", "Shift + Delete não usa a Lixeira · Win + E, D, L, R, I"],
+          ["Windows", "Shift + Delete pula a Lixeira · Win + iniciais em inglês"],
           ["Linux", "/ ≠ /root · <b>&gt;</b> substitui · <b>&gt;&gt;</b> acrescenta"],
           ["Permissões", "r = 4 · w = 2 · x = 1 · dono, grupo, outros"],
         ];

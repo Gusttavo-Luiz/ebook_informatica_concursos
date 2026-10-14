@@ -111,6 +111,8 @@ if (typeof ICONES !== "undefined") {
       <path class="s1" d="M60 18v54a20 20 0 0 1-40 0v-6" style="stroke-width:10"/>
       <path class="c1" d="M20 54l-10 16h20z"/>
       <rect class="c2" x="64" y="72" width="48" height="34" rx="6"/><path class="sb" d="M69 79l19 13 19-13" style="stroke-width:5"/>`,
+    chave: `<circle class="c1" cx="34" cy="60" r="26"/><circle class="cb" cx="28" cy="60" r="9"/>
+      <rect class="c1" x="52" y="53" width="62" height="14" rx="5"/><rect class="c2" x="86" y="60" width="11" height="24" rx="3"/><rect class="c2" x="102" y="60" width="11" height="17" rx="3"/>`,
     envelope: `<rect class="c1" x="10" y="26" width="100" height="70" rx="10"/><path class="sb" d="M20 38l40 28 40-28"/>`,
     muro: `${[[10, 20, 46], [60, 20, 50], [10, 46, 22], [36, 46, 46], [86, 46, 24], [10, 72, 46], [60, 72, 50]].map(([x, y, w], i) => `<rect class="${i % 2 ? "c2" : "c1"}" x="${x}" y="${y}" width="${w}" height="22" rx="4"/>`).join("")}
       <rect class="c1" x="10" y="98" width="100" height="10" rx="4"/>`,
@@ -244,7 +246,7 @@ serie.capitulo({
       bit: { x: 470, y: 990, s: 1.3 },
       falas: [
         "Olá! Eu sou o Bit. Neste capítulo, vamos estudar um dos temas mais cobrados em concursos: a Segurança da Informação.",
-        "Você vai ver os princípios, os riscos e as normas; e vai aprender a diferenciar os tipos de malware, os golpes e os ataques.",
+        "Você vai ver princípios, riscos e normas, e aprender a diferenciar malware, golpes e ataques.",
         "Depois, vamos entender a criptografia, a assinatura e o certificado digital.",
         "E, para fechar, autenticação, ferramentas de proteção, backup e a LGPD. Vamos lá?",
       ],
@@ -272,7 +274,7 @@ serie.capitulo({
         "Segurança da informação é o conjunto de práticas, políticas e tecnologias que protegem a informação.",
         "Ela protege contra acesso não autorizado, alteração indevida, destruição e indisponibilidade.",
         "E vale para a informação em qualquer formato: arquivos digitais, documentos em papel e até conversas.",
-        "Cuidado com a pegadinha: ela não protege apenas dados digitais. A proteção específica dos meios digitais é que costuma ser chamada de segurança cibernética.",
+        "Cuidado com a pegadinha: ela não protege só dados digitais. A proteção específica dos meios digitais costuma ser chamada de segurança cibernética.",
       ],
       montar(c) {
         c.titulo("Conceito", "Segurança da informação", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -301,8 +303,8 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "A base de tudo é a tríade CID, ou CIA, em inglês: confidencialidade, integridade e disponibilidade.",
-        "A confidencialidade garante que só pessoas autorizadas acessem a informação. Os mecanismos são senhas, criptografia e controle de acesso.",
-        "A integridade garante que a informação não foi alterada indevidamente. Aqui entram o hash e a assinatura digital.",
+        "A confidencialidade garante que só pessoas autorizadas acessem a informação, com senhas, criptografia e controle de acesso.",
+        "A integridade garante que a informação não foi alterada indevidamente, com hash e assinatura digital.",
         "E a disponibilidade garante que ela esteja acessível quando necessária, com backup, redundância, nobreak e proteção contra DDoS.",
       ],
       montar(c) {
@@ -373,11 +375,11 @@ serie.capitulo({
       secao: "Riscos e normas",
       bit: BIT_CANTO,
       falas: [
-        "Quatro conceitos caem juntos. Vulnerabilidade é uma fraqueza que pode ser explorada, como um sistema desatualizado ou uma senha fraca.",
+        "Vulnerabilidade é uma fraqueza que pode ser explorada, como um sistema desatualizado ou uma senha fraca.",
         "Ameaça é o agente ou evento que pode explorar essa vulnerabilidade: um invasor, um malware, ou até um incêndio.",
         "Risco é a probabilidade de uma ameaça explorar uma vulnerabilidade, e o impacto que isso causaria.",
         "E incidente é o evento que efetivamente compromete a segurança.",
-        "Pense em uma casa: a janela aberta é a vulnerabilidade; o ladrão, a ameaça; a chance de ele entrar, e o prejuízo, é o risco; e o furto, o incidente.",
+        "Numa casa: a janela aberta é a vulnerabilidade; o ladrão, a ameaça; a chance de furto e o prejuízo, o risco; e o furto, o incidente.",
       ],
       montar(c) {
         c.titulo("Conceitos básicos", "Ameaça, vulnerabilidade e risco", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -393,8 +395,8 @@ serie.capitulo({
             ${k[3] ? `<p style="font-size:23px;margin-top:10px;color:var(--cor);font-weight:700">ex.: ${k[3]}</p>` : ""}
             <div class="pilula anal" style="position:absolute;left:32px;bottom:28px;font-size:24px;background:var(--fundo);color:var(--texto)">casa: ${k[4]}</div></div>`);
           e.querySelector(".icone").style.cssText = "width:76px;height:76px;margin-bottom:14px";
-          c.entra(e, c.t(i, i === 0 ? 1.6 : 0), "baixo");
-          c.entra(e.querySelector(".anal"), c.t(4, [1.8, 3.6, 5.2, 7.6][i]), "pop");
+          c.entra(e, c.t(i, i === 0 ? 0.4 : 0), "baixo");
+          c.entra(e.querySelector(".anal"), c.t(4, [1.6, 3.4, 5.2, 7.2][i]), "pop");
         });
       },
     },
@@ -406,8 +408,8 @@ serie.capitulo({
       falas: [
         "A segurança física protege instalações e equipamentos: controle de acesso a salas, câmeras, nobreak e proteção contra incêndio.",
         "A segurança lógica protege sistemas e dados: senhas, permissões, criptografia, firewall e antivírus.",
-        "A Política de Segurança da Informação, a PSI, é um documento aprovado pela direção, que define regras, responsabilidades e penalidades sobre o uso da informação.",
-        "A norma ISO 27001 define os requisitos de um Sistema de Gestão de Segurança da Informação, o SGSI, e a organização pode ser certificada por ela.",
+        "A Política de Segurança da Informação, a PSI, é um documento aprovado pela direção que define regras, responsabilidades e penalidades no uso da informação.",
+        "A ISO 27001 define os requisitos do Sistema de Gestão de Segurança da Informação, o SGSI, e a organização pode ser certificada por ela.",
         "Já a ISO 27002 é um código de boas práticas para implementar os controles de segurança.",
       ],
       montar(c) {
@@ -457,7 +459,7 @@ serie.capitulo({
       falas: [
         "Um dos assuntos favoritos das bancas: malware, de malicious software. É qualquer programa criado para causar danos, roubar dados ou obter controle indevido de um sistema.",
         "O vírus se anexa a arquivos ou programas, e depende da execução do arquivo infectado para agir e se propagar.",
-        "O worm se propaga sozinho pela rede, explorando falhas. Ele não precisa infectar arquivos nem da ação do usuário, e consome recursos, congestionando a rede.",
+        "O worm se propaga sozinho pela rede, explorando falhas, sem infectar arquivos nem depender do usuário. Ele consome recursos e congestiona a rede.",
         "O cavalo de Troia, ou trojan, se disfarça de programa legítimo, como um jogo, um cartão virtual ou uma atualização, e executa ações maliciosas escondidas.",
       ],
       montar(c) {
@@ -504,7 +506,7 @@ serie.capitulo({
       falas: [
         "O backdoor abre uma porta dos fundos, para o invasor voltar a acessar o sistema.",
         "O rootkit é um conjunto de técnicas para esconder a presença do invasor e de outros malwares no sistema.",
-        "O bot permite controlar o computador remotamente. E uma botnet é uma rede de computadores infectados, os zumbis, usada, por exemplo, em ataques DDoS.",
+        "O bot permite controlar o computador remotamente. A botnet é uma rede de computadores infectados, os zumbis, usada, por exemplo, em DDoS.",
         "Agora, a diferença mais cobrada: o vírus precisa de um hospedeiro e da execução do arquivo; o worm se replica sozinho pela rede. E o cavalo de Troia, em geral, não se replica.",
       ],
       montar(c) {
@@ -533,9 +535,9 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "Agora, os golpes. A engenharia social manipula as pessoas, explorando confiança, medo ou urgência, para obter informações ou acessos.",
-        "O phishing é uma mensagem falsa, por e-mail, SMS ou rede social, que imita uma instituição para roubar dados ou induzir o usuário a clicar.",
-        "O spear phishing é o phishing direcionado a uma pessoa ou empresa específica, com informações personalizadas.",
-        "E o smishing e o vishing são o phishing por SMS e por ligação telefônica, ou seja, por voz.",
+        "O phishing é uma mensagem falsa, por e-mail, SMS ou rede social, que imita uma instituição para roubar dados ou induzir o clique.",
+        "O spear phishing é direcionado a uma pessoa ou empresa específica, com informações personalizadas.",
+        "Smishing e vishing são o phishing por SMS e por ligação telefônica.",
       ],
       montar(c) {
         c.titulo("Golpes", "Engenharia social e phishing", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -561,11 +563,11 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "O pharming altera a resolução de nomes, o DNS, para levar o usuário a um site falso, mesmo quando ele digita o endereço correto.",
-        "O DoS e o DDoS sobrecarregam um serviço com requisições, para torná-lo indisponível. No DDoS, o ataque vem de muitas máquinas ao mesmo tempo.",
+        "O DoS e o DDoS sobrecarregam um serviço com requisições para torná-lo indisponível; no DDoS, o ataque vem de muitas máquinas ao mesmo tempo.",
         "A força bruta testa inúmeras combinações de senha até acertar.",
         "No man-in-the-middle, o atacante se coloca entre duas partes, para interceptar ou alterar a comunicação.",
         "E o spoofing falsifica a origem, como o remetente de um e-mail ou um endereço IP.",
-        "Agora, atenção: phishing não é malware. É um golpe de engenharia social, que engana o usuário.",
+        "Atenção: phishing não é malware; é um golpe de engenharia social.",
         "O pharming é mais perigoso, porque o usuário cai no site falso mesmo digitando o endereço certo. E o DDoS ataca a disponibilidade.",
       ],
       montar(c) {
@@ -609,17 +611,17 @@ serie.capitulo({
       secao: "Golpes e ataques",
       bit: BIT_CANTO,
       falas: [
-        "Outros ataques também são cobrados. O zero-day, ou dia zero, explora uma falha ainda desconhecida pelo fabricante, para a qual não existe correção.",
+        "O zero-day, ou dia zero, explora uma falha ainda desconhecida pelo fabricante, para a qual não existe correção.",
         "O sniffing captura e analisa o tráfego da rede para obter dados, como senhas enviadas sem criptografia.",
         "O SQL injection insere comandos de banco de dados em campos de formulário. E o cross-site scripting, o XSS, injeta scripts maliciosos em páginas vistas por outros usuários.",
         "O defacement altera a página inicial de um site, pichando o seu conteúdo. E o hoax é um boato espalhado em massa, como as correntes.",
         "O cryptojacking usa o computador da vítima, sem permissão, para minerar criptomoedas.",
-        "E, no golpe do falso suporte, o criminoso se passa por técnico ou atendente, e convence a vítima a instalar um programa de acesso remoto ou a informar códigos.",
+        "No golpe do falso suporte, o criminoso se passa por técnico ou atendente e convence a vítima a instalar um programa de acesso remoto ou a informar códigos.",
       ],
       montar(c) {
         c.titulo("Outros ataques", "Mais oito nomes para reconhecer", { left: 140, top: 150 }, c.t(0), { medio: true });
         const itens = [
-          ["calendario", "Zero-day", "falha <b>desconhecida</b> pelo fabricante, sem correção", c.t(0, 3)],
+          ["calendario", "Zero-day", "falha <b>desconhecida</b> pelo fabricante, sem correção", c.t(0, 0.4)],
           ["lupa", "Sniffing", "captura o <b>tráfego da rede</b>, como senhas sem criptografia", c.t(1)],
           ["dados", "SQL injection", "comandos de banco de dados em <b>campos de formulário</b>", c.t(2)],
           ["codigo", "XSS", "cross-site scripting: <b>scripts maliciosos</b> em páginas vistas por outros", c.t(2, 6.2)],
@@ -646,7 +648,7 @@ serie.capitulo({
       secao: "Criptografia",
       bit: BIT_CANTO,
       falas: [
-        "Vamos à criptografia. Ela transforma a informação legível em um código ilegível, que só pode ser revertido por quem tem a chave correta.",
+        "A criptografia transforma a informação legível em um código ilegível, que só pode ser revertido por quem tem a chave correta.",
         "Por isso, a criptografia protege principalmente a confidencialidade.",
         "Na criptografia simétrica, uma única chave secreta cifra e decifra. Ela é mais rápida, e o desafio é compartilhar a chave com segurança. Exemplos: AES e 3DES.",
         "Na assimétrica, há um par de chaves: uma pública, que pode ser divulgada, e uma privada, secreta. Ela é mais lenta, e o desafio é proteger a chave privada. Exemplos: RSA e ECC.",
@@ -689,7 +691,7 @@ serie.capitulo({
       secao: "Criptografia",
       bit: BIT_CANTO,
       falas: [
-        "Para enviar uma mensagem sigilosa, o remetente cifra com a chave pública do destinatário. Assim, só a chave privada do destinatário, que só ele tem, consegue decifrar.",
+        "Para enviar uma mensagem sigilosa, o remetente cifra com a chave pública do destinatário; só a chave privada dele, que só ele tem, consegue decifrar.",
         "Para assinar digitalmente, o remetente usa a sua própria chave privada. E qualquer pessoa confere a assinatura com a chave pública do remetente.",
         "Memorize: sigilo, chave pública do destinatário. Assinatura, chave privada do remetente.",
       ],
@@ -851,7 +853,7 @@ serie.capitulo({
         "Algo que você tem: o celular que recebe um código, um token, um cartão, ou o certificado digital em mídia.",
         "E algo que você é: a biometria, como a impressão digital, o rosto ou a íris.",
         "A autenticação em dois fatores, ou multifator, combina fatores de tipos diferentes. Senha mais código no celular é dois fatores. Duas senhas, não.",
-        "Para as senhas: use senhas longas, como frases-senha; não reutilize a mesma senha em vários serviços; e use um gerenciador de senhas.",
+        "Nas senhas: use frases-senha longas, não repita a mesma senha em vários serviços e use um gerenciador de senhas.",
       ],
       montar(c) {
         c.titulo("Autenticação", "Os três fatores", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -877,12 +879,12 @@ serie.capitulo({
       secao: "Autenticação e proteção",
       bit: BIT_CANTO,
       falas: [
-        "Nas ferramentas de proteção, o antivírus, ou antimalware, detecta, bloqueia e remove malwares, por assinaturas e análise de comportamento. Um exemplo é o Microsoft Defender.",
+        "O antivírus, ou antimalware, detecta, bloqueia e remove malwares, por assinaturas e análise de comportamento, como o Microsoft Defender.",
         "O firewall controla o tráfego de rede, permitindo ou bloqueando conexões de acordo com regras.",
-        "O IDS, sistema de detecção de intrusão, monitora a rede e alerta sobre atividades suspeitas. Já o IPS, sistema de prevenção de intrusão, detecta e bloqueia automaticamente.",
+        "O IDS, de detecção de intrusão, monitora a rede e alerta sobre atividades suspeitas. Já o IPS, de prevenção de intrusão, detecta e bloqueia automaticamente.",
         "A VPN cria um túnel criptografado pela internet, permitindo acesso seguro à rede da organização.",
         "O antispam filtra mensagens indesejadas e suspeitas. E o proxy é um intermediário entre os usuários e a internet, que pode filtrar sites e registrar acessos.",
-        "E a pegadinha: o firewall não remove vírus. Ele filtra o tráfego de rede; quem remove malware é o antivírus. Um não substitui o outro.",
+        "Pegadinha: o firewall não remove vírus; ele filtra o tráfego. Quem remove malware é o antivírus, e um não substitui o outro.",
       ],
       montar(c) {
         c.titulo("Ferramentas de proteção", "Cada uma no seu papel", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -917,8 +919,8 @@ serie.capitulo({
       secao: "Autenticação e proteção",
       bit: BIT_CANTO,
       falas: [
-        "O antivírus detecta ameaças de quatro formas. Por assinatura: ele compara os arquivos com uma base de impressões digitais de malwares conhecidos. Por isso, essa base precisa estar atualizada.",
-        "Por heurística e comportamento: ele identifica ações suspeitas, como criptografar muitos arquivos de uma vez. Assim, detecta também ameaças novas.",
+        "O antivírus detecta de quatro formas. Por assinatura: compara os arquivos com uma base de “impressões digitais” de malwares conhecidos, que precisa estar atualizada.",
+        "Por heurística e comportamento: identifica ações suspeitas, como criptografar muitos arquivos de uma vez, e detecta também ameaças novas.",
         "Com o sandbox, o arquivo suspeito é executado em um ambiente isolado, para observar o que ele faz.",
         "E a quarentena isola o arquivo suspeito, impedindo que ele seja executado, sem apagá-lo de imediato.",
       ],
@@ -941,7 +943,7 @@ serie.capitulo({
       falas: [
         "A DMZ, ou zona desmilitarizada, é um segmento de rede separado, entre a internet e a rede interna, onde ficam os servidores acessados de fora, como o site e o e-mail.",
         "Se um desses servidores for invadido, a rede interna continua protegida.",
-        "Já o honeypot é um sistema-isca, propositalmente vulnerável. Ele atrai os atacantes para estudar o seu comportamento e desviá-los dos sistemas reais.",
+        "O honeypot é um sistema-isca, propositalmente vulnerável, que atrai atacantes para estudar seu comportamento e desviá-los dos sistemas reais.",
       ],
       montar(c) {
         c.titulo("Redes", "DMZ e honeypot", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -976,12 +978,12 @@ serie.capitulo({
       secao: "Backup",
       bit: BIT_CANTO,
       falas: [
-        "Backup é a cópia de segurança dos dados. Ele permite recuperá-los em caso de falha, exclusão acidental ou ataque, como um ransomware.",
-        "Existem três tipos. O completo, ou full, copia todos os dados selecionados. Para restaurar, basta o último backup completo.",
+        "Backup é a cópia de segurança dos dados, para recuperá-los em caso de falha, exclusão acidental ou ataque, como um ransomware.",
+        "O backup completo, ou full, copia todos os dados selecionados; para restaurar, basta o último completo.",
         "O incremental copia só o que mudou desde o último backup de qualquer tipo. Para restaurar: o último completo e todos os incrementais seguintes.",
         "O diferencial copia tudo o que mudou desde o último backup completo. Para restaurar: o último completo e apenas o último diferencial.",
-        "Resumindo: o incremental é o mais rápido de fazer e ocupa menos espaço, mas é o mais trabalhoso de restaurar. Já o diferencial cresce a cada dia, mas restaura com só duas cópias.",
-        "E memorize a regra três, dois, um: três cópias dos dados, em duas mídias diferentes, sendo uma fora do local, como na nuvem. E teste a restauração de tempos em tempos.",
+        "Resumindo: o incremental é o mais rápido e ocupa menos espaço, mas é o mais trabalhoso de restaurar. O diferencial cresce a cada dia, mas restaura com só duas cópias.",
+        "Memorize a regra três, dois, um: três cópias, em duas mídias diferentes, sendo uma fora do local, como na nuvem. E teste a restauração de tempos em tempos.",
       ],
       montar(c) {
         c.titulo("Backup", "Cópias de segurança", { left: 140, top: 150 }, c.t(0), { medio: true });
@@ -1019,8 +1021,8 @@ serie.capitulo({
             grupo.push(b);
           });
         });
-        c.chave("Incremental: <em>rápido e pequeno</em>, mas restauração trabalhosa", c.t(4), c.t(4, 6.8));
-        c.chave("Diferencial: <em>cresce a cada dia</em>, restaura com 2 cópias", c.t(4, 7.1), c.t(5) - 0.4);
+        c.chave("Incremental: <em>rápido e pequeno</em>, mas restauração trabalhosa", c.t(4), c.t(4, 6.3));
+        c.chave("Diferencial: <em>cresce a cada dia</em>, restaura com 2 cópias", c.t(4, 6.6), c.t(5) - 0.4);
         grupo.forEach((e) => c.sai(e, c.t(5) - 0.4));
         [["3", "cópias dos dados", ["documento", "documento", "documento"]], ["2", "mídias diferentes", ["dados", "notebook"]], ["1", "fora do local", ["nuvem"]]].forEach((k, i) => {
           const e = c.novo(`<div class="cartao" style="left:${140 + i * 480}px;top:320px;width:440px;height:330px;padding:30px;text-align:center">
@@ -1028,7 +1030,7 @@ serie.capitulo({
             <div style="font:700 32px var(--sans);margin-top:8px">${k[1]}</div>
             <div style="display:flex;justify-content:center;gap:10px;margin-top:20px">${k[2].map((n) => icone(n)).join("")}</div></div>`);
           e.querySelectorAll(".icone").forEach((ic) => { ic.style.cssText = "margin:0;width:64px;height:64px"; });
-          c.entra(e, c.t(5, 2.6 + i * 1.6), "pop");
+          c.entra(e, c.t(5, 2.2 + i * 1.6), "pop");
         });
         c.quadro("dica", "Regra <b>3-2-1</b>: 3 cópias, em 2 mídias diferentes, 1 fora do local. E <b>teste a restauração</b>.", { left: 140, top: 700, width: 1400 }, c.t(5, 8));
       },
@@ -1041,14 +1043,14 @@ serie.capitulo({
       secao: "LGPD",
       bit: BIT_CANTO,
       falas: [
-        "Por fim, a LGPD, a Lei Geral de Proteção de Dados, Lei treze mil, setecentos e nove, de dois mil e dezoito. Ela regula o tratamento de dados pessoais por pessoas e organizações, públicas e privadas, nos meios digitais e físicos.",
+        "Por fim, a Lei Geral de Proteção de Dados, a LGPD, Lei treze mil, setecentos e nove, de dois mil e dezoito, regula o tratamento de dados pessoais por pessoas e organizações, públicas e privadas, nos meios digitais e físicos.",
         "Dado pessoal é a informação relacionada a uma pessoa natural identificada ou identificável, como nome, CPF, endereço e até o IP.",
         "Dado pessoal sensível envolve origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização religiosa, filosófica ou política, dados de saúde ou vida sexual, e dados genéticos ou biométricos.",
         "E o dado anonimizado é aquele que não permite mais identificar o titular.",
       ],
       montar(c) {
         c.titulo("Lei nº 13.709/2018", "LGPD — Lei Geral de Proteção de Dados", { left: 140, top: 150 }, c.t(0), { medio: true });
-        ["pessoas e organizações", "públicas e privadas", "meios digitais <b>e físicos</b>"].forEach((p, i) => pilula(c, p, { left: [140, 530, 890][i], top: 310 }, c.t(0, 9.4 + i * 1.6), i === 2 ? AZUL : null));
+        ["pessoas e organizações", "públicas e privadas", "meios digitais <b>e físicos</b>"].forEach((p, i) => pilula(c, p, { left: [140, 530, 890][i], top: 310 }, c.t(0, 9 + i * 1.6), i === 2 ? AZUL : null));
         cartaoV(c, { icone: "pessoa", titulo: "Dado pessoal", texto: "Pessoa natural <b>identificada ou identificável</b>.", ti: 72, th: 34,
           extra: `<p style="font-size:24px;margin-top:14px;color:var(--cor);font-weight:700">nome · CPF · endereço · IP</p>` }, { left: 140, top: 400, width: 420, height: 470 }, c.t(1));
         cartaoV(c, { icone: "alerta", titulo: "Dado pessoal sensível", texto: "origem racial ou étnica · convicção religiosa · opinião política · filiação a sindicato ou a organização religiosa, filosófica ou política · saúde ou vida sexual · dados <b>genéticos</b> ou <b>biométricos</b>", ti: 72, th: 34, tp: 24 }, { left: 590, top: 400, width: 560, height: 470 }, c.t(2));
@@ -1095,10 +1097,10 @@ serie.capitulo({
       secao: "LGPD",
       bit: BIT_CANTO,
       falas: [
-        "As bases legais: o tratamento só é permitido nas hipóteses previstas na lei. O consentimento é apenas uma delas. Outras são o cumprimento de obrigação legal, a execução de políticas públicas e a execução de contrato.",
-        "Os direitos do titular incluem confirmar se seus dados são tratados, acessá-los e corrigi-los, pedir anonimização, bloqueio ou eliminação de dados desnecessários, a portabilidade e a revogação do consentimento.",
+        "Bases legais: o tratamento só é permitido nas hipóteses previstas na lei, e o consentimento é apenas uma delas. Outras são o cumprimento de obrigação legal, a execução de políticas públicas e a de contrato.",
+        "O titular tem direito a confirmar se seus dados são tratados, acessá-los, corrigi-los, pedir anonimização, bloqueio ou eliminação de dados desnecessários, portabilidade e revogação do consentimento.",
         "E as sanções vão de advertência a multa de até dois por cento do faturamento, limitada a cinquenta milhões de reais por infração.",
-        "Agora, duas pegadinhas. A LGPD não se aplica só a dados digitais: ela vale também para dados em papel.",
+        "Duas pegadinhas: a LGPD não vale só para dados digitais; vale também para dados em papel.",
         "E nem todo tratamento de dados exige consentimento: ele é só uma das bases legais.",
       ],
       montar(c) {
@@ -1166,14 +1168,14 @@ serie.capitulo({
       secao: "Revisão",
       bit: BIT_CANTO,
       falas: [
-        "Hora de revisar! A tríade é confidencialidade, integridade e disponibilidade. Autenticidade e não repúdio são complementares.",
-        "O vírus precisa de hospedeiro e de execução; o worm se espalha sozinho; o trojan se disfarça; e o ransomware pede resgate.",
-        "Phishing é engenharia social, e não malware. O pharming engana pelo DNS, e o DDoS derruba a disponibilidade.",
-        "Para sigilo, use a chave pública do destinatário. Para assinar, a chave privada do remetente. E a assinatura não garante sigilo.",
-        "O hash garante a integridade. No certificado A1, a chave fica em arquivo; no A3, em token ou cartão.",
-        "O firewall filtra o tráfego, e o antivírus remove malware. O IDS alerta, o IPS bloqueia, e a DMZ separa os servidores acessados de fora.",
+        "Revisando: a tríade é confidencialidade, integridade e disponibilidade; autenticidade e não repúdio são complementares.",
+        "Vírus precisa de hospedeiro e execução; worm se espalha sozinho; trojan se disfarça; ransomware pede resgate.",
+        "Phishing é engenharia social, não malware. Pharming engana pelo DNS. DDoS ataca a disponibilidade.",
+        "Sigilo: chave pública do destinatário. Assinatura: chave privada do remetente, sem garantir sigilo.",
+        "Hash garante integridade. No A1, a chave fica em arquivo; no A3, em token ou cartão.",
+        "Firewall filtra o tráfego; antivírus remove malware. IDS alerta, IPS bloqueia, e a DMZ separa os servidores acessados de fora.",
         "No backup, o incremental restaura com todos os incrementais; o diferencial, só com o último.",
-        "E lembre: a ISO 27001 permite certificação; na LAI, os prazos são vinte e cinco, quinze e cinco anos; e, na LGPD, o controlador decide, e o consentimento é só uma das bases legais.",
+        "E a ISO 27001 permite certificação; na LAI, os prazos são vinte e cinco, quinze e cinco anos; e, na LGPD, o controlador decide, e o consentimento é só uma das bases legais.",
       ],
       montar(c) {
         c.titulo("Revisão", "O que você aprendeu", { left: 140, top: 150 }, c.t(0), { medio: true });
