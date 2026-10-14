@@ -151,7 +151,7 @@ if (typeof document !== "undefined") {
     .c4-fn { display:flex; flex-direction:column; padding:26px 28px; }
     .c4-fn .nome { font:800 32px var(--mono); color:var(--cor); }
     .c4-fn p { font-size:25px; line-height:1.35; margin-top:10px; }
-    .c4-fn .ex { margin-top:auto; font:600 21px var(--mono); color:var(--texto); background:#f2f5f9; border-radius:10px; padding:8px 12px; overflow-wrap:anywhere; }
+    .c4-fn .ex { margin-top:auto; font:600 19px var(--mono); color:var(--texto); background:#f2f5f9; border-radius:10px; padding:8px 12px; overflow-wrap:anywhere; }
     .c4-cod { font-family:var(--mono); font-weight:700; }
     .c4-linha { position:absolute; display:grid; align-items:center; background:#fff; border-radius:18px; box-shadow:var(--sombra); }
     .c4-linha > div { padding:0 22px; }
@@ -616,13 +616,13 @@ serie.capitulo({
       ],
       montar(c) {
         c.titulo("Atalhos", "Alinhar, localizar e salvar", { left: 140, top: 150 }, c.t(0), { medio: true });
-        const t1 = tabelaAtalhos(c, { left: 140, top: 320, cols: [230, 180, 180] }, c.t(0), [
+        const t1 = tabelaAtalhos(c, { left: 140, top: 320, cols: [230, 195, 195] }, c.t(0), [
           ["Centralizar", "Ctrl+E", "Ctrl+E", em(c, this, 0, "Ctrl + E")],
           ["Justificar", "Ctrl+J", "Ctrl+J", em(c, this, 0, "Ctrl + J")],
           ["Alinhar à esquerda", "Ctrl+Q", "Ctrl+L", c.t(1)],
           ["Alinhar à direita", "Ctrl+G", "Ctrl+R", em(c, this, 1, "E alinhar")],
         ]);
-        const t2 = tabelaAtalhos(c, { left: 770, top: 320, cols: [280, 210, 290] }, c.t(2), [
+        const t2 = tabelaAtalhos(c, { left: 790, top: 320, cols: [270, 200, 300] }, c.t(2), [
           ["Localizar", "Ctrl+L", "Ctrl+F", c.t(2)],
           ["Localizar e substituir", "Ctrl+U", "Ctrl+H", em(c, this, 2, "E localizar")],
           ["Quebra de página", "Ctrl+Enter", "Ctrl+Enter", c.t(3)],
@@ -726,7 +726,7 @@ serie.capitulo({
         ];
         ops.forEach((o, i) => {
           const e = c.novo(`<div class="cartao" style="left:${140 + i * 289}px;top:520px;width:264px;height:290px;padding:26px 24px;display:flex;flex-direction:column">
-            <div class="c4-cod" style="font-size:${o[0].includes("<br>") ? 38 : 54}px;color:var(--cor);line-height:1.15;min-height:96px;display:flex;align-items:center">${o[0]}</div>
+            <div class="c4-cod" style="font-size:${o[0].includes("<br>") ? 38 : o[0].length > 3 ? 42 : 54}px;white-space:nowrap;color:var(--cor);line-height:1.15;min-height:96px;display:flex;align-items:center">${o[0]}</div>
             <h3 style="font-size:27px;margin:10px 0 0">${o[1]}</h3>
             <div class="c4-cod" style="margin-top:auto;font-size:23px;background:#f2f5f9;border-radius:10px;padding:8px 12px">${o[2]}</div></div>`);
           c.entra(e, o[3], "pop");
@@ -933,34 +933,26 @@ serie.capitulo({
         c.entra(barra, c.t(1), "baixo");
         const spans = barra.querySelectorAll(".arg");
         const tArgs = [em(c, this, 1, "conteúdo de A2"), em(c, this, 1, "na coluna F"), em(c, this, 1, "terceira"), em(c, this, 1, "terceira", 0.8)];
-        // Etiquetas abaixo de cada argumento (posições medidas na fonte monoespaçada: ~25 px por caractere a 42 px).
-        const xs = [140 + 30 + 74 + 22 + 25 * 7, 0, 0, 0];
-        const larg = 25.3;
-        let pos = 140 + 30 + 74 + 22 + larg * 7;
-        args.forEach((a, i) => {
-          xs[i] = pos;
-          pos += larg * (a[0].length + 1);
-        });
-        args.forEach((a, i) => {
-          const e = c.novo(`<div class="abs" style="left:${xs[i]}px;top:410px;font:700 22px var(--sans);color:${a[2]};white-space:nowrap">▲ ${a[1]}</div>`);
-          c.entra(e, tArgs[i], "cima");
+        const legenda = c.novo(`<div class="abs" style="left:140px;top:414px;display:flex;gap:14px">${args.map((a) => `<span class="leg" style="display:inline-flex;gap:10px;align-items:center;padding:6px 16px;border-radius:999px;background:#fff;box-shadow:0 4px 10px rgba(26,34,48,.06);font:700 22px var(--sans);color:var(--texto-suave)"><b class="c4-cod" style="color:${a[2]}">${a[0]}</b>${a[1]}</span>`).join("")}</div>`);
+        legenda.querySelectorAll(".leg").forEach((e, i) => {
+          c.entra(e, tArgs[i], "pop");
           c.destaque(spans[i], tArgs[i]);
         });
 
-        const g = grade(c, { left: 140, top: 480, cols: ["F", "G", "H"], linhas: 5, inicio: 2, cw: 190, ch: 52, rw: 60 });
+        const g = grade(c, { left: 140, top: 514, cols: ["F", "G", "H"], linhas: 5, inicio: 2, cw: 190, ch: 52, rw: 60 });
         c.entra(g.el, c.t(0, 2), "baixo");
         g.el.querySelectorAll(".c4-cel").forEach((cel, i) => {
           const w = [60, 110, 80][i % 3];
           cel.innerHTML = `<i style="display:block;width:${w}px;height:12px;border-radius:6px;background:#d3dae6"></i>`;
         });
         g.marcar("F2", "F6", em(c, this, 0, "primeira coluna"), "#c27c0e");
-        c.entra(c.novo(`<div class="abs pilula" style="left:${g.x("F")}px;top:440px;background:#fdf3e1;color:#c27c0e;font-size:22px;padding:4px 14px">procura aqui</div>`), em(c, this, 0, "primeira coluna"), "pop");
+        c.entra(c.novo(`<div class="abs pilula" style="left:${g.x("F")}px;top:472px;background:#fdf3e1;color:#c27c0e;font-size:22px;padding:4px 14px;z-index:2">procura aqui</div>`), em(c, this, 0, "primeira coluna"), "pop");
         c.seta(g.x("F") + 150, g.y(4) + 26, g.x("H") + 40, g.y(4) + 26, em(c, this, 0, "retorna"), { largura: 6 });
         g.marcar("H4", null, em(c, this, 0, "outra coluna"));
-        c.entra(c.novo(`<div class="abs pilula" style="left:${g.x("H") + 14}px;top:${g.y(6) + 64}px;font-size:22px;padding:4px 14px">retorna</div>`), em(c, this, 0, "outra coluna"), "pop");
+        c.entra(c.novo(`<div class="abs pilula" style="left:${g.x("H") + 14}px;top:${g.y(6) + 62}px;font-size:22px;padding:4px 14px">retorna</div>`), em(c, this, 0, "outra coluna"), "pop");
 
         const resumo = quadroLivre(c, "resumo", `<p style="font-size:31px;line-height:1.45"><b>FALSO</b> → correspondência <b>exata</b>.<br><b>VERDADEIRO</b> (ou omitido) → <b>aproximada</b>.<br>O valor procurado fica sempre na <b>1ª coluna</b>.</p>`,
-          { left: 900, top: 480, width: 660 }, c.t(2));
+          { left: 900, top: 514, width: 660 }, c.t(2));
         void resumo;
         c.chave("PROCX · Microsoft 365 e Excel 2021 → <em>busca em qualquer direção</em>", c.t(3));
       },
@@ -1082,6 +1074,7 @@ serie.capitulo({
         ];
         fns.forEach((k, i) => cartaoFn(c, { nome: k[0], texto: k[1], ex: k[2] }, { left: 140 + i * 289, top: 315, width: 264, height: 262 }, k[3]));
         c.el.querySelectorAll(".c4-fn .nome").forEach((n) => { if (n.textContent.length > 10) n.style.fontSize = "25px"; });
+        c.el.querySelectorAll(".c4-fn .ex").forEach((x) => { if (x.closest(".c4-fn").offsetWidth < 300) x.style.fontSize = "17px"; });
         const prova = quadroLivre(c, "prova", `<p style="font-size:34px"><span class="c4-cod">INT(-7,8)</span> = <b>-8</b> (arredonda para baixo) · <span class="c4-cod">TRUNCAR(-7,8)</span> = <b>-7</b> (só corta)</p>
           <p class="p2" style="font-size:34px;margin-top:12px">SOMASE: intervalo a somar é o <b>último</b> argumento · SOMASES: é o <b>primeiro</b></p>`,
         { left: 140, top: 620, width: 1420 }, c.t(5));
@@ -1138,7 +1131,7 @@ serie.capitulo({
             ? `${atalho("Ctrl+PgDn", "w")}<span class="c4-mais">/</span>${tecla("PgUp", "w")}`
             : atalho(k[0], "w");
           const e = c.novo(`<div class="abs" style="left:${140 + col * 730}px;top:${318 + lin * 92}px;width:700px;height:78px;display:flex;align-items:center;gap:22px">
-            <div style="width:${col ? 320 : 250}px;flex-shrink:0">${teclas}</div><span style="font-size:27px;color:var(--texto-suave)">${k[1]}</span></div>`);
+            <div style="width:${col ? 360 : 250}px;flex-shrink:0;white-space:nowrap">${teclas}</div><span style="font-size:27px;color:var(--texto-suave)">${k[1]}</span></div>`);
           c.entra(e, k[2], "esquerda");
         });
       },
@@ -1216,7 +1209,7 @@ serie.capitulo({
             <p style="font-size:25px;margin-top:18px">${k[1]}</p></div>`);
           c.entra(e, k[2], "pop");
         });
-        c.entra(c.novo(`<div class="abs pilula" style="left:1220px;top:${568 + 90}px;background:var(--cor);color:#fff;font-size:26px">não é erro de fórmula</div>`), em(c, this, 4, "não são"), "pop");
+        c.entra(c.novo(`<div class="abs pilula" style="left:1220px;top:${568 + 84}px;background:var(--cor);color:#fff;font-size:26px">não é erro de fórmula</div>`), em(c, this, 4, "não são"), "pop");
       },
     },
     {
@@ -1332,7 +1325,7 @@ serie.capitulo({
           { icone: "camadas", titulo: "Slide Mestre", texto: "Padrão visual (fontes, cores, logotipo) para <b>todos os slides</b>.", t: c.t(0, 1) },
           { icone: "layouts", titulo: "Layouts", texto: "Disposição dos elementos: título e conteúdo, duas colunas…", t: c.t(1) },
           { icone: "temas", titulo: "Temas", texto: "Conjuntos de cores, fontes e efeitos.", t: em(c, this, 1, "E os temas") },
-        ].map((k, i) => c.cartao(k, { left: 140 + i * 470, top: 320, width: 440, height: 360 }, k.t));
+        ].map((k, i) => c.cartao(k, { left: 140 + i * 470, top: 320, width: 440, height: 400 }, k.t));
         cards.forEach((e) => c.sai(e, c.t(2) - 0.4));
 
         const miniSlide = (cor, conteudo = "") => `<div style="position:absolute;width:240px;height:135px;border-radius:12px;background:${cor};box-shadow:var(--sombra);overflow:hidden">
@@ -1407,16 +1400,16 @@ serie.capitulo({
         ];
         formatos.forEach((k, i) => {
           const destaque = i === 1;
-          const e = c.novo(`<div class="cartao" style="left:${140 + i * 300}px;top:310px;width:280px;height:180px;padding:24px 26px;${destaque ? `outline:5px solid ${COR}` : ""}">
+          const e = c.novo(`<div class="cartao" style="left:${140 + i * 300}px;top:310px;width:280px;height:206px;padding:24px 26px;${destaque ? `outline:5px solid ${COR}` : ""}">
             <span class="c4-ext" style="font-size:34px">${k[0]}</span><p style="font-size:24px;margin-top:16px">${k[1]}</p></div>`);
           c.entra(e, k[2], "pop");
         });
-        const exp = c.novo(`<div class="cartao" style="left:1060px;top:310px;width:500px;height:180px;padding:24px 28px">
+        const exp = c.novo(`<div class="cartao" style="left:1060px;top:310px;width:500px;height:206px;padding:24px 28px">
           <div class="rotulo" style="font-size:22px">Exportar para</div><div style="display:flex;gap:16px;margin-top:20px">
           <span class="c4-ext velho" style="font-size:32px">PDF</span><span class="c4-ext velho" style="font-size:32px">vídeo MP4</span></div></div>`);
         c.entra(exp, em(c, this, 3, "Também"), "baixo");
 
-        c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:530px">Atalhos da apresentação</div>`), c.t(4), "fade");
+        c.entra(c.novo(`<div class="abs rotulo" style="left:140px;top:552px">Atalhos da apresentação</div>`), c.t(4), "fade");
         const tecl = [
           [tecla("F5", "w"), "começa do <b>primeiro</b> slide", "", c.t(4, 0.6)],
           [atalho("Shift+F5", "w"), "começa do slide <b>atual</b>", "", em(c, this, 4, "e Shift")],
@@ -1425,7 +1418,7 @@ serie.capitulo({
           [`${tecla("W", "w")}<span class="c4-mais">ou</span>${tecla(",", "w")}`, "tela <b>branca</b>", "#ffffff", em(c, this, 5, "e a tecla W")],
         ];
         tecl.forEach((k, i) => {
-          const e = c.novo(`<div class="cartao" style="left:${140 + i * 286}px;top:580px;width:268px;height:220px;padding:26px 24px">
+          const e = c.novo(`<div class="cartao" style="left:${140 + i * 286}px;top:600px;width:268px;height:210px;padding:26px 24px">
             <div style="height:66px;display:flex;align-items:center">${k[0]}</div>
             <div style="display:flex;gap:12px;align-items:center;margin-top:18px">${k[2] ? `<i style="width:34px;height:26px;border-radius:6px;background:${k[2]};border:2px solid #d3dae6;flex-shrink:0"></i>` : ""}
             <p style="font-size:25px">${k[1]}</p></div></div>`);
@@ -1501,7 +1494,7 @@ function tabelaAtalhos(c, o, tCab, linhas) {
   const [w1, w2, w3] = o.cols;
   const grid = `grid-template-columns:${w1}px ${w2}px ${w3}px`;
   const cab = c.novo(`<div class="abs" style="left:${o.left}px;top:${o.top}px;width:${w1 + w2 + w3}px;height:56px;display:grid;${grid};align-items:center;
-    background:${COR_SUAVE};border-radius:16px 16px 0 0;font:700 21px var(--sans);letter-spacing:.1em;text-transform:uppercase">
+    background:${COR_SUAVE};border-radius:16px 16px 0 0;font:700 20px var(--sans);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap">
     <div style="padding:0 18px;color:var(--texto-fraco)">Ação</div><div style="padding:0 12px;color:${COR}">Word PT-BR</div><div style="padding:0 12px;color:${NAVY}">Writer</div></div>`);
   c.entra(cab, tCab, "fade");
   const els = [cab];
