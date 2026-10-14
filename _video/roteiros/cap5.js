@@ -170,7 +170,7 @@ serie.capitulo({
         "Vamos começar pelo conceito. Hardware é o conjunto de componentes físicos do computador: tudo aquilo que pode ser visto e tocado.",
         { texto: "Por exemplo: o processador, a memória RAM, a placa-mãe, o HD, o SSD, a placa de vídeo, a fonte de alimentação, o teclado, o mouse e o monitor.", falar: "Por exemplo: o processador, a memória RAM, a placa-mãe, o HD, o SSD, a placa de vídeo, a fonte de alimentação, o teclado, o máus e o monitor." },
         "Mas essas peças só funcionam juntas graças ao software, que diz ao hardware o que fazer.",
-        "Quatro delas formam o núcleo da máquina: a CPU processa, a RAM é a memória temporária, o SSD ou o HD armazena, e a placa-mãe conecta tudo.",
+        "Quatro delas são centrais: a CPU processa, a RAM é a memória temporária, o SSD ou o HD armazena, e a placa-mãe conecta tudo.",
         { texto: "Pegadinha: o Windows é hardware? Errado, é software. E o firmware, como a BIOS, é software gravado em um chip, e não hardware.", falar: "Pegadinha: o uíndous é hardware? Errado, é software. E o firmware, como a BIOS, é software gravado em um chip, e não hardware." },
       ],
       montar(c) {
@@ -632,7 +632,7 @@ serie.capitulo({
       falas: [
         { texto: "Há dois tipos de SSD. O SSD SATA usa a mesma interface dos HDs e fica limitado a cerca de seiscentos megabytes por segundo.", falar: "Há dois tipos de SSD. O SSD sáta usa a mesma interface dos agá dês e fica limitado a cerca de seiscentos megabytes por segundo." },
         { texto: "Já o SSD NVMe se conecta pelo PCIe, normalmente no formato M.2, e passa facilmente de três mil megabytes por segundo.", falar: "Já o SSD ene vê eme é se conecta pelo pê cê i é, normalmente no formato eme ponto dois, e passa facilmente de três mil megabytes por segundo." },
-        { texto: "E existem outras mídias. O pen drive e o cartão de memória SD também usam memória flash, e vão de oito gigabytes a um terabyte.", falar: "E existem outras mídias. O pén dráiv e o cartão de memória SD também usam memória flash, e vão de oito gigabytes a um terabyte." },
+        { texto: "Outras mídias: o pen drive e o cartão de memória SD também usam memória flash, de oito gigabytes a um terabyte.", falar: "Outras mídias: o pén dráiv e o cartão de memória SD também usam memória flash, de oito gigabytes a um terabyte." },
         { texto: "O CD, o DVD e o Blu-ray são mídias ópticas, lidas por laser. O CD guarda cerca de setecentos megabytes, e o DVD, quatro vírgula sete gigabytes em camada simples.", falar: "O CD, o DVD e o blu rêi são mídias ópticas, lidas por laser. O CD guarda cerca de setecentos megabytes, e o DVD, quatro vírgula sete gigabytes em camada simples." },
         { texto: "Já o Blu-ray usa um laser azul-violeta, e guarda vinte e cinco gigabytes por camada.", falar: "Já o blu rêi usa um laser azul-violeta, e guarda vinte e cinco gigabytes por camada." },
       ],
@@ -673,12 +673,12 @@ serie.capitulo({
       secao: "Armazenamento",
       bit: BIT_CANTO,
       falas: [
-        { texto: "E o RAID? Ele combina vários discos para ganhar desempenho, segurança contra falhas, ou as duas coisas.", falar: "E o réid? Ele combina vários discos para ganhar desempenho, segurança contra falhas, ou as duas coisas." },
+        { texto: "O RAID combina vários discos para ganhar desempenho, segurança contra falhas, ou os dois.", falar: "O réid combina vários discos para ganhar desempenho, segurança contra falhas, ou os dois." },
         { texto: "No RAID 0, o striping, os dados são divididos entre os discos: mais desempenho, mas sem redundância. Se um disco falhar, perde-se tudo.", falar: "No réid zero, o stráipin, os dados são divididos entre os discos: mais desempenho, mas sem redundância. Se um disco falhar, perde-se tudo." },
         { texto: "No RAID 1, o espelhamento, os mesmos dados são gravados em dois discos. Se um disco falhar, o outro mantém os dados.", falar: "No réid um, o espelhamento, os mesmos dados são gravados em dois discos. Se um disco falhar, o outro mantém os dados." },
         { texto: "O RAID 5 distribui dados e paridade em três ou mais discos, e suporta a falha de um disco.", falar: "O réid cinco distribui dados e paridade em três ou mais discos, e suporta a falha de um disco." },
         { texto: "E o RAID 10 combina espelhamento e divisão: desempenho e redundância, mas com um custo maior.", falar: "E o réid dez combina espelhamento e divisão: desempenho e redundância, mas com um custo maior." },
-        { texto: "Atenção: RAID não substitui o backup! Se um arquivo for apagado ou criptografado por um ransomware, a mudança é replicada em todos os discos.", falar: "Atenção: réid não substitui o békâp! Se um arquivo for apagado ou criptografado por um rânsomuér, a mudança é replicada em todos os discos." },
+        { texto: "Atenção: RAID não substitui backup! Se um arquivo for apagado ou criptografado por um ransomware, a mudança vai para todos os discos.", falar: "Atenção: réid não substitui békâp! Se um arquivo for apagado ou criptografado por um rânsomuér, a mudança vai para todos os discos." },
       ],
       montar(c) {
         const q = quando(c, this);
@@ -720,7 +720,7 @@ serie.capitulo({
         { texto: "O MBR, mais antigo, aceita discos de até dois terabytes e quatro partições primárias.", falar: "O MBR, mais antigo, aceita discos de até dois terabáites e quatro partições primárias." },
         "Já o GPT, usado com a UEFI, aceita discos muito maiores e muitas partições.",
         { texto: "E a formatação prepara a partição com um sistema de arquivos, como o NTFS, o exFAT ou o ext4.", falar: "E a formatação prepara a partição com um sistema de arquivos, como o NTFS, o éks fét ou o é xis tê quatro." },
-        "Mas cuidado: a formatação rápida não apaga os dados de forma segura. Eles ainda podem ser recuperados com ferramentas específicas.",
+        "Cuidado: a formatação rápida não apaga os dados com segurança; eles ainda podem ser recuperados com ferramentas específicas.",
       ],
       montar(c) {
         const q = quando(c, this);
@@ -802,7 +802,7 @@ serie.capitulo({
         "O filtro de linha protege contra picos e ruídos na rede elétrica, e oferece várias tomadas.",
         "O estabilizador corrige as variações de tensão: a subtensão e a sobretensão.",
         { texto: "E o nobreak, ou UPS, tem bateria: na falta de energia, mantém o equipamento ligado por um tempo, para salvar o trabalho e desligar com segurança.", falar: "E o nôbrêik, ou u pê ésse, tem bateria: na falta de energia, mantém o equipamento ligado por um tempo, para salvar o trabalho e desligar com segurança." },
-        { texto: "Memorize: só o nobreak mantém o computador funcionando quando a energia cai, porque ele tem bateria.", falar: "Memorize: só o nôbrêik mantém o computador funcionando quando a energia cai, porque ele tem bateria." },
+        { texto: "Memorize: só o nobreak mantém o computador funcionando quando a energia cai, porque tem bateria.", falar: "Memorize: só o nôbrêik mantém o computador funcionando quando a energia cai, porque tem bateria." },
       ],
       montar(c) {
         const q = quando(c, this);
@@ -829,7 +829,7 @@ serie.capitulo({
       secao: "Periféricos",
       bit: BIT_CANTO,
       falas: [
-        "Agora, os periféricos: dispositivos que se conectam ao computador para trocar informações com o usuário ou com outros equipamentos.",
+        "Agora, os periféricos: dispositivos que trocam informações entre o computador e o usuário ou outros equipamentos.",
         { texto: "Os de entrada enviam dados para o computador: teclado, mouse, scanner, microfone, webcam, leitor biométrico e leitor de código de barras.", falar: "Os de entrada enviam dados para o computador: teclado, máus, iscâner, microfone, uébcam, leitor biométrico e leitor de código de barras." },
         "Os de saída recebem dados do computador e os apresentam: monitor, impressora, caixa de som, fone de ouvido e projetor.",
         { texto: "E os híbridos, de entrada e saída, fazem as duas coisas: tela touchscreen, impressora multifuncional, modem, placa de rede, pen drive e headset com microfone.", falar: "E os híbridos, de entrada e saída, fazem as duas coisas: tela tâtch scrín, impressora multifuncional, modem, placa de rede, pén dráiv e rédsét com microfone." },
@@ -859,7 +859,7 @@ serie.capitulo({
       secao: "Periféricos",
       bit: BIT_CANTO,
       falas: [
-        { texto: "Nos monitores, o tipo mais comum é o LCD com iluminação LED: os cristais líquidos filtram a luz de LEDs posicionados atrás da tela.", falar: "Nos monitores, o tipo mais comum é o LCD com iluminação léd: os cristais líquidos filtram a luz de léds posicionados atrás da tela." },
+        { texto: "Nos monitores, o mais comum é o LCD com iluminação LED: os cristais líquidos filtram a luz de LEDs que ficam atrás da tela.", falar: "Nos monitores, o mais comum é o LCD com iluminação léd: os cristais líquidos filtram a luz de léds que ficam atrás da tela." },
         { texto: "Já no OLED, cada pixel emite a própria luz, com pretos perfeitos e alto contraste.", falar: "Já no ó léd, cada píxel emite a própria luz, com pretos perfeitos e alto contraste." },
         { texto: "O tamanho é medido em polegadas, na diagonal. Nas resoluções, o HD tem mil duzentos e oitenta por setecentos e vinte; o Full HD, mil novecentos e vinte por mil e oitenta.", falar: "O tamanho é medido em polegadas, na diagonal. Nas resoluções, o HD tem mil duzentos e oitenta por setecentos e vinte; o fúl agá dê, mil novecentos e vinte por mil e oitenta." },
         { texto: "O QHD tem dois mil quinhentos e sessenta por mil quatrocentos e quarenta. E o 4K UHD, três mil oitocentos e quarenta por dois mil cento e sessenta.", falar: "O quê agá dê tem dois mil quinhentos e sessenta por mil quatrocentos e quarenta. E o quatro cá, u agá dê, três mil oitocentos e quarenta por dois mil cento e sessenta." },
@@ -949,7 +949,7 @@ serie.capitulo({
       bit: BIT_CANTO,
       falas: [
         "E as conexões? O USB é o padrão universal: o USB dois ponto zero chega a quatrocentos e oitenta megabits por segundo, e o USB três, a cinco, dez ou vinte gigabits. O USB-C é o conector reversível.",
-        { texto: "Para vídeo, o HDMI leva vídeo e áudio digitais para monitores e TVs. O DisplayPort também é vídeo digital, comum em monitores. E o VGA é vídeo analógico, um padrão antigo.", falar: "Para vídeo, o agá dê ême i leva vídeo e áudio digitais para monitores e tê vês. O displêi pórt também é vídeo digital, comum em monitores. E o vê gê á é vídeo analógico, um padrão antigo." },
+        { texto: "Para vídeo, o HDMI leva vídeo e áudio digitais a monitores e TVs. O DisplayPort também é digital, comum em monitores. E o VGA é analógico, um padrão antigo.", falar: "Para vídeo, o agá dê ême i leva vídeo e áudio digitais a monitores e tê vês. O displêi pórt também é digital, comum em monitores. E o vê gê á é analógico, um padrão antigo." },
         { texto: "O RJ-45 é o conector do cabo de rede Ethernet. E o Bluetooth é sem fio, de curto alcance, para mouse, teclado e fones.", falar: "O érre jóta quarenta e cinco é o conector do cabo de rede éternét. E o blutúf é sem fio, de curto alcance, para máus, teclado e fones." },
         { texto: "E Plug and Play é a capacidade do sistema de reconhecer e configurar o dispositivo automaticamente ao conectá-lo.", falar: "E plâg end plêi é a capacidade do sistema de reconhecer e configurar o dispositivo automaticamente ao conectá-lo." },
       ],
@@ -980,7 +980,7 @@ serie.capitulo({
         "Por fim, as impressoras. Na matricial, agulhas batem em uma fita com tinta: é de impacto. Por isso, imprime formulários em várias vias com carbono.",
         "A jato de tinta solta gotas de tinta líquida. É boa para fotos coloridas e tem baixo custo inicial.",
         { texto: "A laser usa toner, um pó fixado no papel por calor. É rápida e tem baixo custo por página.", falar: "A laser usa tôner, um pó fixado no papel por calor. É rápida e tem baixo custo por página." },
-        "A térmica imprime com calor sobre um papel especial, como em cupons fiscais e etiquetas. E a impressora 3D deposita material camada por camada, criando objetos físicos.",
+        "A térmica usa calor sobre papel especial, em cupons fiscais e etiquetas. E a impressora 3D deposita material camada por camada, criando objetos físicos.",
         { texto: "Memorize: a impressora que usa toner é a laser. E a que imprime em várias vias com carbono é a matricial, a única de impacto.", falar: "Memorize: a impressora que usa tôner é a laser. E a que imprime em várias vias com carbono é a matricial, a única de impacto." },
       ],
       montar(c) {
@@ -1011,15 +1011,15 @@ serie.capitulo({
       secao: "Revisão",
       bit: BIT_CANTO,
       falas: [
-        "Hora de revisar o que você aprendeu.",
-        { texto: "No processador, o desempenho depende do clock, dos núcleos e da cache. E giga é bilhão: três vírgula cinco gigahertz, três vírgula cinco bilhões de ciclos por segundo.", falar: "No processador, o desempenho depende do clóc, dos núcleos e da quêch. E giga é bilhão: três vírgula cinco gigahertz, três vírgula cinco bilhões de ciclos por segundo." },
-        { texto: "Na hierarquia, do mais rápido para o mais lento: registradores, cache, RAM, SSD e HD.", falar: "Na hierarquia, do mais rápido para o mais lento: registradores, quêch, RAM, SSD e HD." },
-        { texto: "A RAM é volátil; a ROM, não. E, ao ligar o computador, a BIOS ou a UEFI faz o POST.", falar: "A RAM é volátil; a ROM, não. E, ao ligar o computador, a BIOS ou a UEFI faz o póst." },
-        "O HD é magnético; o SSD usa memória flash, sem partes móveis.",
-        { texto: "Celulares usam RISC, da família ARM. E o RAID 1 é o espelhamento, mas não substitui o backup.", falar: "Celulares usam rísc, da família ARM. E o réid um é o espelhamento, mas não substitui o békâp." },
-        { texto: "Na energia, só o nobreak tem bateria.", falar: "Na energia, só o nôbrêik tem bateria." },
-        { texto: "A tela touchscreen é de entrada e saída, e o OCR transforma a imagem em texto editável.", falar: "A tela tâtch scrín é de entrada e saída, e o ó cê érre transforma a imagem em texto editável." },
-        { texto: "E nas impressoras: toner é laser; várias vias com carbono, matricial.", falar: "E nas impressoras: tôner é laser; várias vias com carbono, matricial." },
+        "Hora de revisar!",
+        { texto: "Processador: clock, núcleos e cache definem o desempenho. E giga é bilhão: três vírgula cinco gigahertz são três vírgula cinco bilhões de ciclos por segundo.", falar: "Processador: clóc, núcleos e quêch definem o desempenho. E giga é bilhão: três vírgula cinco gigahertz são três vírgula cinco bilhões de ciclos por segundo." },
+        { texto: "Memórias, da mais rápida para a mais lenta: registradores, cache, RAM, SSD e HD.", falar: "Memórias, da mais rápida para a mais lenta: registradores, quêch, RAM, SSD e HD." },
+        { texto: "A RAM é volátil; a ROM, não. E, ao ligar, a BIOS ou a UEFI faz o POST.", falar: "A RAM é volátil; a ROM, não. E, ao ligar, a BIOS ou a UEFI faz o póst." },
+        "O HD é magnético; o SSD é flash, sem partes móveis.",
+        { texto: "Celular usa RISC, da família ARM. E o RAID 1 espelha, mas não substitui backup.", falar: "Celular usa rísc, da família ARM. E o réid um espelha, mas não substitui békâp." },
+        { texto: "Só o nobreak tem bateria.", falar: "Só o nôbrêik tem bateria." },
+        { texto: "Touchscreen é entrada e saída, e o OCR transforma imagem em texto editável.", falar: "Tâtch scrín é entrada e saída, e o ó cê érre transforma imagem em texto editável." },
+        { texto: "E toner é laser; várias vias com carbono, matricial.", falar: "E tôner é laser; várias vias com carbono, matricial." },
       ],
       montar(c) {
         c.titulo("Revisão", "O que você aprendeu", { left: 140, top: 150 }, c.t(0), { medio: true });

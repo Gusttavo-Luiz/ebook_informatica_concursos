@@ -10,11 +10,11 @@
 
 **Narração:**
 
-- Olá! Eu sou o Bit, e chegamos ao último capítulo da nossa série.
-- Agora, vamos estudar a Lógica de Programação: a forma de pensar que vem antes de qualquer código.
-- Você vai ver o que é um algoritmo, como escrever pseudocódigo e como ler um fluxograma.
-- Vai aprender variáveis, operadores e a tabela-verdade, além das estruturas de decisão e de repetição.
-- E, para fechar, vetores, funções, recursividade, algoritmos clássicos e a tradução para o Python.
+- Olá! Eu sou o Bit, e chegamos ao último capítulo da série.
+- Agora, é a vez da Lógica de Programação: a forma de pensar que vem antes de qualquer código.
+- Você vai ver o que é um algoritmo, o pseudocódigo e o fluxograma.
+- Depois, variáveis, operadores e a tabela-verdade, além das estruturas de decisão e de repetição.
+- E, para fechar, vetores, funções, recursividade, algoritmos clássicos e o Python.
 - Vamos lá?
 
 ## Lógica e algoritmos
@@ -26,9 +26,9 @@
 **Narração:**
 
 - Afinal, o que é lógica de programação?
-- É a capacidade de pensar, organizar e descrever uma sequência de passos para resolver um problema de forma correta, clara e eficiente.
-- Antes de existir Python, Java ou qualquer outra linguagem, existe a lógica por trás da solução. Programar começa entendendo o problema.
-- Por isso, quem domina a lógica aprende qualquer linguagem com muito mais facilidade: já sabe resolver o problema antes de pensar na sintaxe.
+- É a capacidade de pensar, organizar e descrever os passos para resolver um problema de forma correta, clara e eficiente.
+- Antes de Python, Java ou qualquer linguagem, existe a lógica por trás da solução. Programar começa entendendo o problema.
+- Por isso, quem domina a lógica aprende qualquer linguagem com mais facilidade.
 - Resumo estratégico: a linguagem é a ferramenta; a lógica é a estrutura mental da solução.
 
 ### Cena 3 · `cafe`
@@ -37,9 +37,9 @@
 
 **Narração:**
 
-- Pense em uma tarefa do dia a dia: fazer café. Primeiro, você separa água, filtro e pó. Depois, coloca a água para esquentar e organiza o filtro.
-- Em seguida, despeja a água, espera o café passar e acompanha o processo. E o café pronto é a saída da sequência lógica.
-- No computador é igual: ele também precisa de instruções detalhadas, na ordem correta.
+- Pense em fazer café. Primeiro, você separa água, filtro e pó. Depois, esquenta a água e organiza o filtro.
+- Em seguida, despeja a água e espera o café passar. E o café pronto é a saída da sequência.
+- No computador é igual: ele precisa de instruções detalhadas, na ordem correta.
 
 ### Cena 4 · `algoritmo`
 
@@ -49,9 +49,9 @@
 
 - Essa sequência de passos tem um nome: algoritmo.
 - Um algoritmo é uma sequência finita, ordenada e lógica de passos para resolver um problema.
-- Ele precisa ser claro, sem ambiguidades; ordenado, com cada passo respeitando a sequência; executável, com ações que podem ser realizadas; e finito, com começo, meio e fim.
-- Uma forma de escrever um algoritmo é o pseudocódigo: uma escrita estruturada, que não depende da sintaxe de uma linguagem específica.
-- Ele aproxima você da programação real: primeiro, você entende o problema; depois, organiza a solução em pseudocódigo; e, por fim, implementa no código real.
+- Ele deve ser claro, sem ambiguidades; ordenado; executável, com ações possíveis; e finito, com começo, meio e fim.
+- Uma forma de escrevê-lo é o pseudocódigo: uma escrita estruturada, que não depende da sintaxe de nenhuma linguagem.
+- Primeiro, você entende o problema; depois, organiza a solução em pseudocódigo; e, por fim, implementa no código real.
 
 ### Cena 5 · `soma`
 
@@ -59,12 +59,12 @@
 
 **Narração:**
 
-- Veja um exemplo simples em pseudocódigo: somar dois números.
-- Primeiro, a entrada: o algoritmo pede e lê o primeiro número, e depois o segundo.
-- Depois, o processamento: soma recebe número um mais número dois. A seta indica que a variável recebe um valor.
-- Por fim, a saída: o algoritmo escreve o resultado na tela.
-- Quase todo algoritmo segue essas três partes: a entrada recebe dados; o processamento manipula esses dados; e a saída exibe o resultado final.
-- Dica do mestre: quando travar em um exercício, pergunte: o que entra? O que acontece com isso? O que sai no final?
+- Veja um exemplo em pseudocódigo: somar dois números.
+- Na entrada, o algoritmo pede e lê os dois números.
+- No processamento, soma recebe número um mais número dois. A seta indica atribuição.
+- E, na saída, escreve o resultado na tela.
+- Quase todo algoritmo tem essas três partes: a entrada recebe dados, o processamento manipula, e a saída exibe o resultado.
+- Dica do mestre: quando travar, pergunte: o que entra? O que acontece com isso? O que sai no final?
 
 ## Fluxogramas e variáveis
 
@@ -74,11 +74,11 @@
 
 **Narração:**
 
-- Outra forma de representar um algoritmo é o fluxograma: símbolos gráficos ligados por setas. E as provas adoram cobrar o significado de cada símbolo.
-- O terminal, em forma de oval, marca o início ou o fim do algoritmo. O retângulo é o processo: um cálculo ou uma atribuição.
-- O losango é a decisão: um teste lógico, com duas saídas, sim e não.
-- O paralelogramo é a entrada ou a saída de dados, como uma leitura ou uma exibição. O círculo é o conector, que liga partes do fluxograma. E a seta, a linha de fluxo, indica a ordem de execução.
-- Memorize: decisão é o losango. É nele que o fluxo se divide em dois caminhos.
+- Outra forma de representar um algoritmo é o fluxograma: símbolos ligados por setas. E as provas cobram o significado de cada um.
+- O oval, ou terminal, marca o início ou o fim. O retângulo é o processo: um cálculo ou uma atribuição.
+- O losango é a decisão: um teste lógico, com saídas sim e não.
+- O paralelogramo é a entrada ou saída de dados. O círculo é o conector, que liga partes do fluxograma. E a seta indica a ordem de execução.
+- Memorize: decisão é o losango, onde o fluxo se divide em dois caminhos.
 
 ### Cena 7 · `variaveis`
 
@@ -86,13 +86,13 @@
 
 **Narração:**
 
-- Agora, as variáveis: espaços de memória que guardam valores, que podem ser usados e alterados durante a execução do programa.
-- Pense em uma caixa com etiqueta: o nome fica na etiqueta, e o valor fica dentro da caixa.
-- Cada variável tem um tipo. O inteiro guarda números como cinco, dezoito ou cento e vinte. O real guarda números com parte decimal, como sete e meio.
-- O texto guarda caracteres entre aspas, como um nome. E o lógico só tem dois valores: verdadeiro ou falso.
-- Os nomes seguem regras: começam com uma letra, ou sublinhado, e não têm espaços. Use nota_final ou notaFinal.
-- Também não podem ser palavras reservadas, como SE, ENQUANTO, if ou while. E, em muitas linguagens, Nota e nota são variáveis diferentes.
-- Por fim, a constante é um valor que não muda durante a execução, como PI recebe três vírgula catorze.
+- Variáveis são espaços de memória com valores que podem ser usados e alterados durante a execução.
+- Pense em uma caixa com etiqueta: o nome fica na etiqueta, e o valor fica dentro.
+- O tipo inteiro guarda números como cinco, dezoito ou cento e vinte. O real tem parte decimal, como sete e meio.
+- O texto vem entre aspas, como um nome. E o lógico só tem dois valores: verdadeiro ou falso.
+- Nos nomes, comece com letra ou sublinhado, sem espaços: nota_final ou notaFinal.
+- Palavras reservadas, como SE ou while, são proibidas. E, em muitas linguagens, Nota e nota são variáveis diferentes.
+- Já a constante não muda durante a execução, como PI recebe três vírgula catorze.
 
 ## Operadores
 
@@ -102,7 +102,7 @@
 
 **Narração:**
 
-- Os operadores permitem calcular, comparar e montar expressões lógicas. Eles se dividem em três grupos.
+- Os operadores servem para calcular, comparar e montar expressões lógicas. São três grupos.
 - Os aritméticos fazem as contas: soma, subtração, multiplicação, divisão, e ainda o DIV e o MOD.
 - Os relacionais comparam valores: igual, diferente, maior, menor, maior ou igual e menor ou igual. E o resultado é sempre verdadeiro ou falso.
 - Os lógicos, E, OU e NÃO, combinam ou invertem condições.
@@ -113,10 +113,10 @@
 
 **Narração:**
 
-- O DIV e o MOD caem muito em prova. Os dois trabalham com a divisão inteira: o DIV devolve o quociente, e o MOD devolve o resto.
-- Pegue dezessete dividido por cinco. O cinco cabe três vezes no dezessete. Então, dezessete DIV cinco é igual a três.
-- E sobram dois. Então, dezessete MOD cinco é igual a dois.
-- Um uso clássico: um número é par quando número MOD dois é igual a zero, ou seja, quando a divisão por dois não deixa resto.
+- DIV e MOD caem muito em prova. Na divisão inteira, o DIV devolve o quociente, e o MOD devolve o resto.
+- Em dezessete dividido por cinco, o cinco cabe três vezes. Então, dezessete DIV cinco é três.
+- E sobram dois. Então, dezessete MOD cinco é dois.
+- Uso clássico: um número é par quando número MOD dois é igual a zero.
 
 ### Cena 10 · `tabela-verdade`
 
@@ -124,11 +124,11 @@
 
 **Narração:**
 
-- Os operadores lógicos seguem regras fixas, resumidas na tabela-verdade. Considere duas condições, A e B.
-- Se A e B são verdadeiras, A E B é verdadeiro, e A OU B também.
-- Se só uma delas é verdadeira, o E já dá falso, mas o OU continua verdadeiro. E, com as duas falsas, os dois dão falso.
-- Já o NÃO simplesmente inverte: se A é verdadeiro, NÃO A é falso; se A é falso, NÃO A é verdadeiro.
-- Memorize: o E só é verdadeiro se tudo for verdadeiro. O OU só é falso se tudo for falso. E o NÃO inverte o valor.
+- Os operadores lógicos seguem a tabela-verdade. Considere duas condições, A e B.
+- Com A e B verdadeiras, A E B é verdadeiro, e A OU B também.
+- Se só uma é verdadeira, o E já dá falso, mas o OU continua verdadeiro; e, com as duas falsas, os dois dão falso.
+- O NÃO inverte: se A é verdadeiro, NÃO A é falso; se A é falso, NÃO A é verdadeiro.
+- Memorize: o E só é verdadeiro se tudo for verdadeiro; o OU só é falso se tudo for falso; e o NÃO inverte.
 
 ### Cena 11 · `precedencia`
 
@@ -136,12 +136,12 @@
 
 **Narração:**
 
-- Quando uma expressão mistura vários operadores, vale a ordem de precedência. Primeiro, os parênteses. Depois, os aritméticos.
-- Entre eles, multiplicação, divisão, DIV e MOD vêm antes de soma e subtração. Em seguida, os relacionais. E, por último, NÃO, depois E, depois OU.
+- Quando uma expressão mistura operadores, vale a precedência. Primeiro, os parênteses. Depois, os aritméticos.
+- Multiplicação, divisão, DIV e MOD vêm antes de soma e subtração. Em seguida, os relacionais. Por último, NÃO, depois E, depois OU.
 - Vamos avaliar esta expressão, com x igual a quatro e y igual a dez.
-- No primeiro parêntese, a multiplicação vem antes: dois vezes três dá seis, e quatro mais seis dá dez. Dez é maior que dez? Não: falso.
-- No segundo, dez MOD três dá um, porque sobra um. E um igual a um é verdadeiro. Falso OU verdadeiro: verdadeiro.
-- Pegadinha de banca: dez maior que dez é falso. Só dez maior ou igual a dez seria verdadeiro. As bancas adoram montar a condição no limite exato.
+- No primeiro parêntese, a multiplicação vem antes: dois vezes três dá seis, e quatro mais seis, dez. Dez é maior que dez? Não: falso.
+- No segundo, dez MOD três é um, e um igual a um é verdadeiro. Falso OU verdadeiro: verdadeiro.
+- Pegadinha: dez maior que dez é falso; só dez maior ou igual a dez seria verdadeiro. As bancas adoram o limite exato.
 
 ## Sequência e decisão
 
@@ -151,8 +151,8 @@
 
 **Narração:**
 
-- Agora, as estruturas do algoritmo. Na estrutura sequencial, as instruções são executadas uma após a outra, na ordem em que aparecem.
-- Veja o cálculo da área de um retângulo: o algoritmo lê a base, depois lê a altura, calcula a área, que é base vezes altura, e exibe o resultado.
+- Agora, as estruturas. Na sequencial, as instruções são executadas uma após a outra, na ordem em que aparecem.
+- Na área do retângulo, o algoritmo lê a base, depois lê a altura, calcula base vezes altura e exibe o resultado.
 
 ### Cena 13 · `condicional`
 
@@ -160,10 +160,10 @@
 
 **Narração:**
 
-- Já as estruturas condicionais permitem que o programa tome decisões, com base em testes lógicos.
-- Neste exemplo, o algoritmo lê a idade e testa a condição: a idade é maior ou igual a dezoito?
-- Se a condição for verdadeira, segue um caminho e escreve: você é maior de idade. Se for falsa, segue o outro e escreve: você é menor de idade.
-- Armadilha da banca: não confunda x recebe dez com x igual a dez. O primeiro é uma atribuição; o segundo, uma comparação.
+- As estruturas condicionais permitem que o programa tome decisões com base em testes lógicos.
+- Aqui, o algoritmo lê a idade e testa: ela é maior ou igual a dezoito?
+- Se for verdadeira, escreve: maior de idade. Se for falsa, segue o outro caminho e escreve: menor de idade.
+- Armadilha: não confunda x recebe dez com x igual a dez. O primeiro é atribuição; o segundo, comparação.
 
 ### Cena 14 · `encadeadas`
 
@@ -171,11 +171,11 @@
 
 **Narração:**
 
-- E quando há mais de duas possibilidades? Podemos encadear condições, uma dentro da outra.
-- Na classificação de uma nota: com nove ou mais, excelente. Senão, com sete ou mais, aprovado. Senão, com cinco ou mais, recuperação. E, se nenhum teste passar, reprovado.
-- Agora, quando a mesma variável é comparada com vários valores fixos, a estrutura ESCOLHA deixa o algoritmo mais limpo do que vários SE encadeados.
-- No dia da semana, por exemplo: no CASO um, escreve domingo; no CASO sete, sábado.
-- E o OUTROCASO é executado quando nenhum dos casos anteriores corresponde ao valor: aqui, dia útil.
+- Com mais de duas possibilidades, podemos encadear condições, uma dentro da outra.
+- Na nota: com nove ou mais, excelente. Senão, com sete ou mais, aprovado. Senão, com cinco ou mais, recuperação. E, se nenhum teste passar, reprovado.
+- Quando a mesma variável é comparada com vários valores fixos, a estrutura ESCOLHA fica mais limpa que vários SE encadeados.
+- No dia da semana: no CASO um, escreve domingo; no CASO sete, sábado.
+- E o OUTROCASO roda quando nenhum caso corresponde ao valor: aqui, dia útil.
 
 ## Repetição
 
@@ -185,10 +185,10 @@
 
 **Narração:**
 
-- As estruturas de repetição executam um bloco de instruções várias vezes, sem que você precise escrever a mesma lógica de novo.
-- No ENQUANTO, o bloco se repete enquanto a condição for verdadeira. Este exemplo conta de um até cinco, e o contador começa em um.
-- A cada volta, ele testa: contador menor ou igual a cinco? Se for, escreve o contador e soma um a ele. Assim, a tela mostra de um até cinco.
-- Quando o contador chega a seis, a condição fica falsa, e a repetição termina. Ou seja: definir o contador, executar e atualizar, e encerrar quando a condição falhar.
+- As estruturas de repetição executam um bloco várias vezes, sem reescrever a mesma lógica.
+- No ENQUANTO, o bloco se repete enquanto a condição for verdadeira. Aqui, ele conta de um até cinco, e o contador começa em um.
+- A cada volta, testa se o contador é menor ou igual a cinco. Se for, escreve o contador e soma um. Assim, a tela mostra de um a cinco.
+- Com seis, a condição fica falsa e a repetição termina. Ou seja: definir o contador, executar e atualizar, e encerrar quando a condição falhar.
 
 ### Cena 16 · `para-repita`
 
@@ -196,12 +196,12 @@
 
 **Narração:**
 
-- O PARA é usado quando o número de repetições é definido antes de começar. Na tabuada, o contador vai de um até dez, e cada volta calcula e escreve número vezes contador.
-- Já o REPITA executa o bloco primeiro e só testa a condição no final. Aqui, ele pede a senha até que ela seja um, dois, três, quatro. Aí, escreve: acesso liberado.
-- Compare as três estruturas. O PARA tem o número de repetições definido antes de começar: é ideal para percorrer de um até N, tabuadas e vetores.
-- O ENQUANTO testa a condição no início. Se ela já começar falsa, o bloco pode não executar nenhuma vez.
-- O REPITA testa no final: executa pelo menos uma vez e para quando a condição fica verdadeira. É comum em menus e na validação de entrada.
-- Pegadinha: o ENQUANTO continua enquanto a condição é verdadeira; o REPITA continua até a condição se tornar verdadeira. E só o REPITA garante pelo menos uma execução.
+- O PARA é usado quando o número de repetições é definido antes. Na tabuada, o contador vai de um até dez, e cada volta calcula e escreve o resultado.
+- Já o REPITA executa o bloco primeiro e só testa no final: pede a senha até que ela seja um, dois, três, quatro. Aí, escreve: acesso liberado.
+- Comparando: o PARA tem o número de repetições definido antes de começar. É ideal para tabuadas e vetores.
+- O ENQUANTO testa no início: se a condição já começar falsa, o bloco pode não executar nenhuma vez.
+- O REPITA testa no final: executa pelo menos uma vez e para quando a condição fica verdadeira. É comum em menus e validações.
+- Pegadinha: o ENQUANTO continua enquanto a condição é verdadeira; o REPITA continua até ela se tornar verdadeira. Só o REPITA garante pelo menos uma execução.
 
 ### Cena 17 · `contadores`
 
@@ -209,10 +209,10 @@
 
 **Narração:**
 
-- Dois conceitos aparecem em praticamente todo algoritmo. O contador normalmente aumenta de um em um, para marcar quantas vezes algo aconteceu.
+- Dois conceitos aparecem em quase todo algoritmo. O contador normalmente aumenta de um em um, para contar quantas vezes algo aconteceu.
 - Já o acumulador soma valores ao longo da execução.
-- Veja os dois juntos: este algoritmo lê três notas e calcula a média. O PARA usa o contador, que vai de um até três.
-- E, a cada nota lida, soma recebe soma mais nota: esse é o acumulador. No final, a média é a soma dividida por três.
+- Neste algoritmo, que lê três notas e calcula a média, o PARA usa o contador, de um até três.
+- E, a cada nota, soma recebe soma mais nota: é o acumulador. No final, a média é a soma dividida por três.
 
 ### Cena 18 · `teste-mesa`
 
@@ -220,12 +220,12 @@
 
 **Narração:**
 
-- Para saber o que um algoritmo faz, use o teste de mesa: a simulação manual da execução. Ele ajuda a encontrar erros, prever resultados e entender como as variáveis mudam.
-- Anote cada variável em uma coluna. Com x recebe dois e y recebe três, z recebe x mais y e termina valendo cinco.
-- Nas provas, o teste de mesa é a melhor forma de resolver questões com laços. O que este trecho escreve?
-- x começa em um. Como um é menor que vinte, x dobra para dois, e o dois é escrito. Depois, vêm quatro, oito e dezesseis.
-- Com dezesseis, o teste ainda passa: x vira trinta e dois, e o trinta e dois também é escrito. Só na volta seguinte o teste falha, porque trinta e dois não é menor que vinte.
-- A saída é: dois, quatro, oito, dezesseis e trinta e dois. Repare: o trinta e dois é escrito, porque o teste só acontece no início da volta seguinte.
+- O teste de mesa é a simulação manual da execução. Ele ajuda a encontrar erros, prever resultados e entender como as variáveis mudam.
+- Anote cada variável em uma coluna: com x recebe dois e y recebe três, z recebe x mais y, e vale cinco.
+- Nas provas, é a melhor forma de resolver questões com laços. O que este trecho escreve?
+- x começa em um. Um é menor que vinte, então x dobra para dois e escreve dois. Depois, quatro, oito e dezesseis.
+- Com dezesseis, o teste passa, x vira trinta e dois, e o trinta e dois é escrito. Só depois o teste falha.
+- Saída: dois, quatro, oito, dezesseis e trinta e dois. O trinta e dois aparece porque o teste só acontece no início da volta seguinte.
 
 ## Vetores e funções
 
@@ -235,12 +235,12 @@
 
 **Narração:**
 
-- Agora, os vetores. Um vetor, ou array, é uma variável que guarda vários valores do mesmo tipo, acessados por um índice.
-- Em vez de criar nota um, nota dois, nota três, e assim por diante, você cria um único vetor, notas. Com um laço, dá para ler cinco notas, calcular a média e mostrar só as que ficaram acima dela.
-- Pegadinha de banca: em pseudocódigo, o primeiro índice costuma ser um. Mas, em linguagens como C, Java, Python e JavaScript, ele é zero: um vetor de cinco posições vai de zero a quatro.
-- Já a matriz é um vetor com duas dimensões, linhas e colunas, acessada por dois índices. O total de elementos é linhas vezes colunas.
-- Com as notas de três alunos em duas provas, temos uma matriz de três por dois: seis notas. E notas dois, um é a nota do aluno dois na prova um.
-- Para preencher a matriz, usamos um laço aninhado: para cada valor de i, o laço interno percorre todos os valores de j. Assim, o LEIA é executado três vezes dois: seis vezes.
+- Um vetor, ou array, é uma variável que guarda vários valores do mesmo tipo, acessados por um índice.
+- Em vez de nota um, nota dois, nota três, cria-se um único vetor, notas. Com um laço, dá para ler cinco notas, calcular a média e mostrar as que ficaram acima dela.
+- Pegadinha: em pseudocódigo, o primeiro índice costuma ser um; mas, em linguagens como C, Java, Python e JavaScript, ele é zero. Cinco posições vão de zero a quatro.
+- Já a matriz tem duas dimensões, linhas e colunas, e usa dois índices. O total de elementos é linhas vezes colunas.
+- Três alunos em duas provas formam uma matriz de três por dois: seis notas. E notas dois, um é a nota do aluno dois na prova um.
+- Para preenchê-la, usamos um laço aninhado: para cada i, o laço interno percorre todos os j. Assim, o LEIA roda três vezes dois: seis vezes.
 
 ### Cena 20 · `funcoes`
 
@@ -248,12 +248,12 @@
 
 **Narração:**
 
-- Para não repetir o mesmo trecho várias vezes, o algoritmo pode ser dividido em sub-rotinas. É a modularização.
-- A função recebe parâmetros e retorna um valor, como calcular a média de duas notas. Já o procedimento executa uma tarefa, mas não retorna valor, como exibir um cabeçalho na tela.
+- Para não repetir trechos, o algoritmo pode ser dividido em sub-rotinas. É a modularização.
+- A função recebe parâmetros e retorna um valor, como a média de duas notas. Já o procedimento executa uma tarefa sem retornar valor, como exibir um cabeçalho.
 - Veja a função média: ela recebe a e b e retorna a mais b, dividido por dois. Então, média de seis e nove dá sete e meio.
-- As variáveis criadas dentro de uma sub-rotina são locais: só existem ali dentro. Já as declaradas no programa principal, e visíveis em todo o algoritmo, são globais.
-- Os parâmetros podem ser passados por valor: a sub-rotina recebe uma cópia, e as alterações feitas dentro dela não afetam a variável original.
-- Ou por referência: a sub-rotina recebe acesso à própria variável, e as alterações feitas dentro dela mudam a variável original.
+- Variáveis criadas dentro de uma sub-rotina são locais: só existem ali. Já as declaradas no programa principal, visíveis em todo o algoritmo, são globais.
+- Na passagem por valor, a sub-rotina recebe uma cópia, e as alterações não afetam a variável original.
+- Na passagem por referência, ela acessa a própria variável, e as alterações mudam a original.
 
 ### Cena 21 · `recursividade`
 
@@ -261,10 +261,10 @@
 
 **Narração:**
 
-- Uma função é recursiva quando chama a si mesma. Ela precisa de um caso base, que encerra as chamadas. Sem ele, a recursão nunca termina.
-- O exemplo clássico é o fatorial. Se n for menor ou igual a um, a função retorna um: esse é o caso base. Senão, retorna n vezes o fatorial de n menos um.
+- Uma função é recursiva quando chama a si mesma. Ela precisa de um caso base, que encerra as chamadas; sem ele, a recursão nunca termina.
+- No fatorial, se n for menor ou igual a um, a função retorna um: é o caso base. Senão, retorna n vezes o fatorial de n menos um.
 - Então, fatorial de quatro é quatro vezes fatorial de três, que é três vezes fatorial de dois, que é dois vezes fatorial de um.
-- Fatorial de um cai no caso base e retorna um. Multiplicando tudo: quatro vezes três vezes dois vezes um, que dá vinte e quatro.
+- Fatorial de um é o caso base e retorna um. Multiplicando tudo: quatro vezes três vezes dois vezes um, que dá vinte e quatro.
 
 ## Algoritmos na prática
 
@@ -274,11 +274,11 @@
 
 **Narração:**
 
-- Agora, vamos juntar tudo em um exemplo completo: a aprovação de um aluno. Na entrada, o algoritmo lê duas notas e a frequência.
+- Juntando tudo: a aprovação de um aluno. Na entrada, o algoritmo lê duas notas e a frequência.
 - No processamento, calcula a média das duas notas.
-- Na decisão, testa duas condições ao mesmo tempo: média maior ou igual a sete E frequência maior ou igual a setenta e cinco. Com o E, as duas precisam ser verdadeiras.
-- Na saída, escreve aluno aprovado ou aluno reprovado, e mostra a média final.
-- Resumo estratégico: programar bem é saber identificar, com clareza, as entradas, os processamentos, as decisões, as repetições e as saídas.
+- Na decisão, testa: média maior ou igual a sete E frequência maior ou igual a setenta e cinco. Com o E, as duas precisam ser verdadeiras.
+- Na saída, escreve aprovado ou reprovado, e mostra a média final.
+- Resumo estratégico: programar bem é identificar com clareza entradas, processamentos, decisões, repetições e saídas.
 
 ### Cena 23 · `classicos`
 
@@ -286,11 +286,11 @@
 
 **Narração:**
 
-- Agora, alguns algoritmos clássicos. O primeiro troca os valores de duas variáveis, a e b, com a ajuda de uma variável auxiliar.
+- Agora, os algoritmos clássicos. O primeiro troca os valores de a e b, com uma variável auxiliar.
 - Primeiro, aux recebe a: guardamos o valor de a. Depois, a recebe b. E, por fim, b recebe aux, que é o valor antigo de a.
-- Sem a variável auxiliar, o valor de a seria perdido na segunda linha.
-- O segundo encontra o maior de dez números. O algoritmo lê o primeiro número e o guarda como o maior.
-- Depois, lê os outros nove, um por vez. Sempre que um número for maior que o maior atual, ele vira o novo maior. No fim, escreve o maior valor.
+- Sem o auxiliar, o valor de a se perderia na segunda linha.
+- O segundo acha o maior de dez números: lê o primeiro e o guarda como o maior.
+- Depois, lê os outros nove. Sempre que um número superar o maior atual, vira o novo maior. No fim, escreve o maior valor.
 
 ### Cena 24 · `busca-bolha`
 
@@ -299,9 +299,9 @@
 **Narração:**
 
 - A busca sequencial percorre o vetor do início ao fim, comparando cada elemento com o valor procurado, até encontrá-lo ou chegar ao final.
-- É simples, mas, em um vetor de N elementos, pode precisar de até N comparações.
-- Já a ordenação bolha, o bubble sort, compara elementos vizinhos e troca os dois de lugar quando estão fora de ordem. As passadas se repetem até não haver mais trocas.
-- A cada passada, o maior valor sobe para o final. Veja com cinco, três, oito e um: na primeira passada, o cinco troca com o três, e o oito troca com o um.
+- É simples, mas, num vetor de N elementos, pode precisar de até N comparações.
+- A ordenação bolha, ou bubble sort, compara vizinhos e troca os dois quando estão fora de ordem, repetindo as passadas até não haver trocas.
+- A cada passada, o maior valor sobe para o final. Com cinco, três, oito e um: na primeira passada, o cinco troca com o três, e o oito troca com o um.
 - Na segunda passada, o cinco troca com o um. Na terceira, o três troca com o um. E o vetor fica ordenado: um, três, cinco e oito.
 
 ### Cena 25 · `python`
@@ -310,11 +310,11 @@
 
 **Narração:**
 
-- A lógica é a mesma em qualquer linguagem; muda apenas a forma de escrever. Veja a equivalência com o Python, uma das linguagens mais usadas para começar a programar.
+- A lógica é a mesma em qualquer linguagem; só muda a escrita. Veja a equivalência com o Python.
 - O LEIA vira input, e o ESCREVA vira print.
-- Atenção aos sinais: a atribuição vira um sinal de igual, a comparação vira dois sinais de igual, e o diferente vira exclamação e igual.
+- Nos sinais: a atribuição vira igual, a comparação vira dois iguais, e o diferente vira exclamação e igual.
 - SE, ENQUANTO e PARA viram if, while e for. E, OU e NÃO viram and, or e not. E o MOD e o DIV viram porcentagem e duas barras.
-- Pegadinha de banca: em Python, range de um a onze vai de um até dez, porque o último número nunca é incluído. E a indentação, o recuo, define os blocos, no lugar de FIMSE ou FIMPARA.
+- Pegadinha: range de um a onze vai de um até dez, porque o último número nunca entra. E a indentação, o recuo, define os blocos, no lugar de FIMSE ou FIMPARA.
 
 ## Erros e revisão
 
@@ -324,9 +324,9 @@
 
 **Narração:**
 
-- Antes da revisão, fique atento aos erros mais comuns de quem está começando: não entender o problema antes de tentar resolver, e confundir entrada com saída.
-- Também é comum esquecer de atualizar o contador em um laço, montar condições erradas e não testar o algoritmo com valores reais.
-- Pegadinha de lógica: se o contador nunca for atualizado, a condição nunca muda. E o programa pode entrar em repetição infinita.
+- Cuidado com os erros comuns de iniciantes: não entender o problema antes de resolver, e confundir entrada com saída.
+- Também: esquecer de atualizar o contador no laço, montar condições erradas e não testar com valores reais.
+- Pegadinha de lógica: se o contador nunca for atualizado, a condição não muda, e o programa pode entrar em repetição infinita.
 
 ### Cena 27 · `revisao`
 
@@ -334,14 +334,14 @@
 
 **Narração:**
 
-- Hora de revisar o que você aprendeu.
-- Algoritmo é uma sequência finita, ordenada e lógica de passos. E, no fluxograma, a decisão é o losango.
-- DIV dá o quociente, e MOD dá o resto. E a seta é atribuição, enquanto o igual é comparação.
-- Na tabela-verdade, o E só é verdadeiro se tudo for verdadeiro, e o OU só é falso se tudo for falso. Na precedência, os parênteses vêm primeiro.
-- O ENQUANTO testa no início; o REPITA testa no final e executa pelo menos uma vez; e o PARA tem o número de repetições definido.
-- No teste de mesa, acompanhe as variáveis volta a volta. E, em muitas linguagens, o vetor começa no índice zero.
-- A função retorna valor, e o procedimento não. Por valor vai uma cópia; por referência, a própria variável. E toda recursão precisa de um caso base.
-- E, no Python, o range não inclui o último número, e a indentação define os blocos.
+- Hora de revisar.
+- Algoritmo é uma sequência finita, ordenada e lógica de passos. No fluxograma, decisão é o losango.
+- DIV dá o quociente, e MOD dá o resto. A seta atribui; o igual compara.
+- O E só é verdadeiro se tudo for verdadeiro; o OU só é falso se tudo for falso. E os parênteses vêm primeiro.
+- O ENQUANTO testa no início; o REPITA, no final, executando pelo menos uma vez; e o PARA tem repetições definidas.
+- No teste de mesa, siga as variáveis volta a volta. E, em muitas linguagens, o vetor começa no índice zero.
+- A função retorna valor; o procedimento, não. Por valor vai uma cópia; por referência, a própria variável. E toda recursão precisa de caso base.
+- No Python, o range não inclui o último número, e a indentação define os blocos.
 
 ### Cena 28 · `encerramento`
 
@@ -349,7 +349,7 @@
 
 **Narração:**
 
-- Agora é a sua vez: faça as quinze questões do final do Capítulo 8 e confira a correção comentada.
-- E, para fechar a série, encare o desafio final: o simulado, com quarenta questões sorteadas dos oito capítulos, cinco de cada, em sessenta minutos, com correção comentada no final.
-- Parabéns por chegar até aqui! Você concluiu todos os capítulos da série.
+- Agora é a sua vez: faça as quinze questões do final do Capítulo 8, com correção comentada.
+- E encare o desafio final: o simulado, com quarenta questões sorteadas dos oito capítulos, cinco de cada, em sessenta minutos.
+- Parabéns! Você concluiu todos os capítulos da série.
 - Boa prova, e bons estudos!

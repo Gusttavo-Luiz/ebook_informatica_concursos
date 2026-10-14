@@ -391,7 +391,7 @@ serie.capitulo({
           ["SJF", "o processo mais curto primeiro"],
           ["Round Robin (circular)", "fatia de tempo fixa (<i>quantum</i>) e volta para o fim da fila"],
           ["Por prioridade", "o de maior prioridade é executado primeiro"],
-        ], { left: 140, top: 300, width: 1420 }, c.t(1) - 0.3, [c.t(1), w(1, "No SJF"), c.t(2), c.t(3)]);
+        ], { left: 140, top: 300, width: 1420 }, w(0, "escalonador", 0.4), [c.t(1), w(1, "No SJF"), c.t(2), c.t(3)]);
         tab.style.fontSize = "30px";
         c.sai(tab, c.t(4) - 0.4);
         c.sai(tit, c.t(4) - 0.4);
@@ -405,13 +405,13 @@ serie.capitulo({
           e.querySelector(".icone").style.cssText = "margin:0;width:76px;height:76px";
           return e;
         };
-        c.entra(rec(310, "impressora", "Recurso A"), w(5, "cada um"), "pop");
-        c.entra(rec(680, "disco", "Recurso B"), w(5, "cada um", 0.4), "pop");
-        const t0 = w(5, "recurso");
-        c.seta(690, 395, 530, 450, t0);
-        c.seta(530, 600, 690, 715, t0 + 0.6);
-        c.seta(1030, 715, 1180, 600, t0 + 1.2);
-        c.seta(1180, 450, 1030, 395, t0 + 1.8);
+        c.entra(rec(310, "impressora", "Recurso A"), c.t(5, 0.1), "pop");
+        c.entra(rec(680, "disco", "Recurso B"), c.t(5, 0.4), "pop");
+        const t0 = w(5, "esperam");
+        c.seta(690, 395, 530, 450, t0, { dur: 0.5 });
+        c.seta(530, 600, 690, 715, t0 + 0.5, { dur: 0.5 });
+        c.seta(1030, 715, 1180, 600, t0 + 1.0, { dur: 0.5 });
+        c.seta(1180, 450, 1030, 395, t0 + 1.5, { dur: 0.5 });
         c.chave("Ninguém avança: <em>espera indefinida</em>", w(5, "preso"));
       },
     },
