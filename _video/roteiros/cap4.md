@@ -2,9 +2,11 @@
 
 > Arquivo gerado por `ferramentas/exportar-roteiro.cjs` a partir de `roteiros/cap4.js`. Edite o `.js` e gere este arquivo de novo.
 
+**Duração:** 20:06 · **Cenas:** 28
+
 ## Abertura
 
-### Cena 1 · `abertura`
+### Cena 1 · `abertura` (0:05–0:48)
 
 **Visual:** Bit grande à esquerda acena. À direita surgem o rótulo “Capítulo 4” e o título “Pacote Office”. Um roteiro de 5 tópicos aparece item por item, cada um na frase que o anuncia. Na última frase, Bit dá um pulinho.
 
@@ -20,7 +22,7 @@
 
 ## Suítes de escritório
 
-### Cena 2 · `suites`
+### Cena 2 · `suites` (0:48–1:22)
 
 **Visual:** Três blocos com ícones — Textos, Planilhas, Apresentações. Depois, um quadro comparativo: cabeçalhos “Microsoft Office · proprietário” e “LibreOffice · software livre” e três linhas, uma por frase: Word .docx × Writer .odt; Excel .xlsx × Calc .ods; PowerPoint .pptx × Impress .odp.
 
@@ -32,7 +34,7 @@
 - Para planilhas, temos o Excel, com .xlsx, e o Calc, com .ods.
 - E, para apresentações, o PowerPoint, com .pptx, e o Impress, com .odp.
 
-### Cena 3 · `formatos`
+### Cena 3 · `formatos` (1:22–1:49)
 
 **Visual:** Linha do tempo dos formatos: etiquetas cinza .doc .xls .ppt (“Office até 2003”) com seta para .docx .xlsx .pptx (“Office atual”). Cartão “ODF · OpenDocument — padrão aberto” com .odt .ods .odp e a nota de compatibilidade e exportação para PDF. Quadro verde “Memorize”: a letra do meio indica o tipo; as letras t, s e p se destacam nas etiquetas.
 
@@ -44,7 +46,7 @@
 
 ## Microsoft Word
 
-### Cena 4 · `word-faixa`
+### Cena 4 · `word-faixa` (1:49–2:37)
 
 **Visual:** Bloco com ícone de documento e etiquetas “ofícios”, “relatórios”, “memorandos”. Depois, uma janela genérica com a Faixa de Opções e suas 8 guias; cada guia acende quando é citada e o cartão correspondente, com os recursos principais, entra numa grade 4 × 2.
 
@@ -56,7 +58,7 @@
 - Em Layout: margens, orientação, tamanho do papel, colunas e quebras de seção. Em Referências: sumário, notas de rodapé, citações e bibliografia.
 - Correspondências cuida da mala direta, de envelopes e etiquetas. Revisão traz ortografia, comentários e controlar alterações. E Exibir, os modos de exibição, a régua e o zoom.
 
-### Cena 5 · `word-recursos`
+### Cena 5 · `word-recursos` (2:37–3:35)
 
 **Visual:** Quatro miniaturas de parágrafo: à esquerda, centralizado, à direita e justificado. Na pegadinha, a miniatura “à esquerda” ganha o selo “padrão” e entra o quadro âmbar. Depois, grade 3 × 2 de cartões com ícones: Estilos → sumário, Quebra de página, Quebra de seção, Controlar Alterações, Mala direta e Pincel de Formatação.
 
@@ -69,7 +71,7 @@
 - O Controlar Alterações registra tudo o que foi incluído ou excluído, para que outra pessoa aceite ou rejeite as mudanças.
 - A mala direta combina um documento-modelo com uma lista de dados para gerar várias cartas personalizadas. E o Pincel de Formatação copia a formatação de um trecho e aplica em outro.
 
-### Cena 6 · `word-formatacao`
+### Cena 6 · `word-formatacao` (3:35–4:09)
 
 **Visual:** Quatro cartões ilustrados (2 × 2), um por frase: Tabelas e listas (grade com células mescladas e lista com marcadores), Recuos (parágrafo com recuo de primeira linha × recuo deslocado), Espaçamento (blocos 1,0 · 1,5 · 2,0) e Colunas (página de jornal em duas colunas).
 
@@ -80,7 +82,7 @@
 - O espaçamento entre linhas pode ser simples, de 1,5 linha ou duplo, e ainda há o espaçamento antes e depois do parágrafo.
 - E as colunas dividem o texto como em um jornal.
 
-### Cena 7 · `word-notas`
+### Cena 7 · `word-notas` (4:09–4:54)
 
 **Visual:** Duas páginas desenhadas: “Nota de rodapé” (a nota aparece no pé da mesma página) e “Nota de fim” (três páginas, a nota no final da última). Quadro verde “Memorize”. Depois, quatro cartões: Legendas, AutoCorreção, Proteger documento e Salvar como PDF. Por fim, a fileira dos 5 modos de exibição, com “Layout de Impressão” marcado como padrão.
 
@@ -94,7 +96,7 @@
 
 ## Atalhos: Word × Writer
 
-### Cena 8 · `atalhos-1`
+### Cena 8 · `atalhos-1` (4:54–5:31)
 
 **Visual:** Duas tabelas de teclas (Ação · Word PT-BR em verde · Writer em azul-marinho). Linhas entram uma por vez: Negrito, Itálico, Sublinhado, Salvar | Novo documento, Abrir, Selecionar tudo, Imprimir. Quando o atalho é igual nos dois, aparece o selo “igual”.
 
@@ -107,7 +109,7 @@
 - Novo documento: Ctrl + O no Word e Ctrl + N no Writer. Abrir: Ctrl + A no Word e Ctrl + O no Writer.
 - Selecionar tudo: Ctrl + T no Word e Ctrl + A no Writer. Já imprimir é igual: Ctrl + P nos dois.
 
-### Cena 9 · `atalhos-2`
+### Cena 9 · `atalhos-2` (5:31–6:27)
 
 **Visual:** Mais duas tabelas: alinhamentos (Centralizar, Justificar, Esquerda, Direita) e Localizar, Localizar e substituir, Quebra de página, Ortografia e Salvar como. Depois, quadro “Memorize” com as teclas N I S A T (português) × B U S O A (inglês) acendendo uma a uma, e o quadro âmbar da pegadinha do Ctrl + S.
 
@@ -123,7 +125,7 @@
 
 ## Excel: fórmulas
 
-### Cena 10 · `excel-estrutura`
+### Cena 10 · `excel-estrutura` (6:27–7:12)
 
 **Visual:** Planilha desenhada (colunas A–F, linhas 1–10) com abas Planilha1, Planilha2, Planilha3. À direita, cartões que entram por frase: Pasta de trabalho, Colunas e linhas (cabeçalhos acendem), Célula B3 (destacada na grade) e Intervalo A1:A10 (moldura na coluna A). Por fim, contadores “1.048.576 linhas” e “16.384 colunas (até XFD)”.
 
@@ -136,7 +138,7 @@
 - E um intervalo é um conjunto de células, como A1 até A10.
 - Nas versões atuais, cada planilha tem 1.048.576 linhas e 16.384 colunas, até a coluna XFD.
 
-### Cena 11 · `excel-operadores`
+### Cena 11 · `excel-operadores` (7:12–7:48)
 
 **Visual:** Barra de fórmulas “fx =SOMA(A1;A5)” com o sinal de igual e o ponto e vírgula destacados e etiquetas “começa com =” e “; separa argumentos”. Abaixo, cinco peças de operador, uma por menção: + - * /, ^ (=2^3 → 8), % (=200*10% → 20), & (junta textos) e comparação (= <> > < >= <=).
 
@@ -147,7 +149,7 @@
 - O acento circunflexo é a potência: 2 elevado a 3 resulta em 8. E o símbolo de porcentagem calcula o percentual: 200 vezes 10% resulta em 20.
 - O e comercial junta textos, ou seja, concatena. E os operadores de comparação são: igual, diferente, maior, menor, maior ou igual e menor ou igual.
 
-### Cena 12 · `excel-intervalo`
+### Cena 12 · `excel-intervalo` (7:48–8:30)
 
 **Visual:** Duas mini-planilhas lado a lado: “=SOMA(A1:A5)” com a moldura cobrindo A1 a A5 (“até → 5 células”) e “=SOMA(A1;A5)” com apenas A1 e A5 marcadas (“e → só 2 células”), e o quadro âmbar. Depois, escada de precedência 1º ( ) → 2º ^ → 3º * / → 4º + - e as contas =2+3*4 → 14 e =(2+3)*4 → 20.
 
@@ -159,7 +161,7 @@
 - Também cai muito a ordem de precedência: primeiro os parênteses, depois a potência, em seguida multiplicação e divisão, e por último soma e subtração.
 - Assim, =2+3*4 resulta em 14. Mas, com o 2+3 entre parênteses, o resultado é 20.
 
-### Cena 13 · `excel-referencias`
+### Cena 13 · `excel-referencias` (8:30–9:26)
 
 **Visual:** Tabela Tipo · Exemplo · Ao copiar, uma linha por frase (relativa A1, absoluta $A$1, mistas $A1 e A$1) e, ao lado, um cifrão grande com cadeado: “trava”. Depois, planilha A–D × 1–3: C1 tem =A1+$B$1; setas levam a fórmula para C2, D1 e D3, onde a parte que muda aparece em verde e $B$1 fica igual. Painel com a tecla F4 alternando A1 → $A$1 → A$1 → $A1 e quadro “Memorize”.
 
@@ -175,7 +177,7 @@
 
 ## Excel: funções
 
-### Cena 14 · `funcoes-basicas`
+### Cena 14 · `funcoes-basicas` (9:26–10:01)
 
 **Visual:** Grade 4 × 2 de cartões de função, cada um com o nome em fonte de código, o que faz e um exemplo: SOMA, MÉDIA, MÁXIMO/MÍNIMO, CONT.NÚM, CONT.VALORES, CONTAR.VAZIO, ARRED (=ARRED(7,456;2) → 7,46) e HOJE/AGORA.
 
@@ -186,7 +188,7 @@
 - Para contar, existem três funções: CONT.NÚM conta as células com números, CONT.VALORES conta as células não vazias, e CONTAR.VAZIO conta as células vazias.
 - ARRED arredonda para um número de casas decimais: ARRED de 7,456 com 2 casas resulta em 7,46. E HOJE e AGORA retornam a data atual, e a data e a hora atuais.
 
-### Cena 15 · `funcoes-criterio`
+### Cena 15 · `funcoes-criterio` (10:01–10:35)
 
 **Visual:** Quatro faixas, uma por frase, com o nome da função à esquerda e o exemplo em código: CONT.SE, SOMASE, SE (com um mini-fluxograma “A1 ≥ 7?” → Aprovado / Reprovado) e E / OU.
 
@@ -197,7 +199,7 @@
 - A função SE faz um teste lógico com dois resultados: se A1 for maior ou igual a 7, Aprovado; senão, Reprovado.
 - E as funções E e OU combinam condições. Neste exemplo, o resultado é Sim quando A1 é maior ou igual a 7 e B1 é maior ou igual a 75.
 
-### Cena 16 · `procv`
+### Cena 16 · `procv` (10:35–11:17)
 
 **Visual:** Barra de fórmula =PROCV(A2;F2:H50;3;FALSO) com cada argumento colorido e etiquetado (valor procurado, tabela, nº da coluna, exata). Mini-tabela F–H: a primeira coluna recebe a moldura “procura aqui”, uma seta corre a linha até a 3ª coluna (“retorna”). Quadro azul “Resumo estratégico”. Faixa final sobre o PROCX.
 
@@ -208,7 +210,7 @@
 - Resumo estratégico: o quarto argumento FALSO exige correspondência exata; VERDADEIRO, ou omitido, aceita correspondência aproximada. E o valor procurado sempre precisa estar na primeira coluna.
 - Já o PROCX é a versão moderna do PROCV, do Microsoft 365 e do Excel 2021, e busca em qualquer direção.
 
-### Cena 17 · `exemplo-prova`
+### Cena 17 · `exemplo-prova` (11:17–12:01)
 
 **Visual:** À esquerda, a coluna A com 4, 8, 3, vazia e “texto”, preenchida célula a célula. À direita, sete fórmulas entram por frase, cada uma com o resultado contando: SOMA 15, MÉDIA 5, MÁXIMO 8, CONT.NÚM 3, CONT.VALORES 4, SE “Alto” e =A1+A2*A3 → 28. Quadro âmbar sobre as células vazias e com texto; A4 e A5 ficam marcadas como “ignoradas”.
 
@@ -220,7 +222,7 @@
 - O SE que testa se A2 é maior que 5 resulta em Alto. E A1 mais A2 vezes A3 dá 28, porque a multiplicação vem antes da soma.
 - Pegadinha: MÉDIA, SOMA e CONT.NÚM ignoram células vazias e com texto. Por isso, a média de 4, 8, 3 e uma célula vazia é 5, e não 3,75.
 
-### Cena 18 · `mais-funcoes`
+### Cena 18 · `mais-funcoes` (12:01–12:33)
 
 **Visual:** Grade 3 × 2 de cartões de função: SOMASES (intervalo a somar primeiro), CONT.SES, MÉDIASE, SEERRO (=SEERRO(A1/B1;0)), PROCH (procura na primeira linha) e ÍNDICE + CORRESP, cada um entrando na frase que o cita.
 
@@ -231,7 +233,7 @@
 - O PROCH funciona como o PROCV, mas procura na primeira linha e retorna o valor de outra linha.
 - E a dupla ÍNDICE e CORRESP: CORRESP acha a posição de um valor, e ÍNDICE retorna o valor que está nessa posição.
 
-### Cena 19 · `funcoes-texto`
+### Cena 19 · `funcoes-texto` (12:33–13:32)
 
 **Visual:** A palavra CONCURSO em 8 caixas numeradas: as três primeiras acendem para =ESQUERDA("Concurso";3) → Con, e a 4ª, 5ª e 6ª para =EXT.TEXTO("Concurso";4;3) → cur. Cartões MAIÚSCULA e CONCAT. Depois, cinco cartões numéricos (INT, TRUNCAR, MOD, MAIOR/MENOR, DIA/MÊS/ANO) e o quadro âmbar com INT × TRUNCAR e SOMASE × SOMASES.
 
@@ -247,7 +249,7 @@
 
 ## Excel: recursos
 
-### Cena 20 · `planilhas-atalhos`
+### Cena 20 · `planilhas-atalhos` (13:32–14:27)
 
 **Visual:** Tabela Excel × LibreOffice Calc com as referências a outra planilha, nome com espaço e outro arquivo (a exclamação e o ponto em destaque). Quadro “Memorize”. Depois, grade de 10 atalhos do Excel com teclas desenhadas, entrando conforme a narração.
 
@@ -261,7 +263,7 @@
 - Ctrl com as setas vai até o fim de um bloco de dados. E Ctrl + Page Down ou Page Up passa para a próxima ou para a anterior planilha.
 - Shift + F11 insere uma nova planilha, e F11 cria um gráfico em uma planilha separada.
 
-### Cena 21 · `graficos`
+### Cena 21 · `graficos` (14:27–14:49)
 
 **Visual:** Quatro cartões com gráficos animados: colunas crescendo (“comparar categorias”), uma linha sendo desenhada (“evolução no tempo”), uma pizza com fatias surgindo (“partes de um todo”) e pontos de dispersão aparecendo (“relação entre duas variáveis”).
 
@@ -271,7 +273,7 @@
 - O de linhas mostra a evolução ao longo do tempo, como o faturamento mês a mês.
 - O de pizza mostra as partes de um todo, com uma única série. E o de dispersão mostra a relação entre duas variáveis numéricas.
 
-### Cena 22 · `erros`
+### Cena 22 · `erros` (14:49–15:26)
 
 **Visual:** Sete “células de erro” com o código em vermelho e a causa embaixo, entrando conforme a narração: #DIV/0!, #N/D, #NOME?, #REF!, #VALOR!, #NÚM! e, por último, ##### em verde, com o selo “não é erro de fórmula”.
 
@@ -283,7 +285,7 @@
 - #NÚM! indica um problema com número, como um valor grande demais.
 - E atenção: as cerquilhas não são erro de fórmula. Elas só indicam que a coluna é estreita demais para mostrar o valor.
 
-### Cena 23 · `recursos`
+### Cena 23 · `recursos` (15:26–16:24)
 
 **Visual:** Duas colunas de cartões com ícones. “Outros recursos”: Alça de preenchimento (1, 2, 3… · jan, fev, mar…), Classificar e Filtrar, Formatação Condicional e Tabela dinâmica. “Organização e proteção”: Congelar Painéis [Exibir], Validação de Dados [Dados], Proteger Planilha / Pasta [Revisão] e Remover Duplicatas · Texto para Colunas [Dados].
 
@@ -298,7 +300,7 @@
 
 ## Microsoft PowerPoint
 
-### Cena 24 · `ppt-modos`
+### Cena 24 · `ppt-modos` (16:24–17:00)
 
 **Visual:** Um slide desenhado ganha título, texto, imagem, gráfico e um botão de vídeo conforme são citados. Depois, cinco miniaturas esquemáticas dos modos de exibição — Normal, Classificação de Slides, Anotações, Leitura e Apresentação de Slides —, cada uma na frase que a descreve.
 
@@ -309,7 +311,7 @@
 - O modo Anotações mostra a página com o slide e as anotações do apresentador. E o Modo de Exibição de Leitura apresenta dentro da janela do programa.
 - E a Apresentação de Slides ocupa a tela cheia, para o público.
 
-### Cena 25 · `ppt-recursos`
+### Cena 25 · `ppt-recursos` (17:00–17:41)
 
 **Visual:** Três cartões: Slide Mestre (camadas), Layouts e Temas. Depois, dois painéis: “Transição” — um slide dá lugar ao seguinte, com seta entre eles — e “Animação” — uma estrela voa para dentro do slide, com as etiquetas entrada, ênfase, saída e trajetórias. Quadro âmbar: transição entre slides × animação nos elementos.
 
@@ -321,7 +323,7 @@
 - Já as animações são efeitos aplicados aos objetos dentro do slide: de entrada, de ênfase, de saída e trajetórias.
 - Pegadinha clássica: transição e animação são coisas diferentes. A transição acontece entre slides; a animação, nos elementos de um slide.
 
-### Cena 26 · `ppt-mais`
+### Cena 26 · `ppt-mais` (17:41–18:43)
 
 **Visual:** Dois monitores: “Público” mostra só o slide; “Apresentador” mostra o slide, o próximo, as anotações e o cronômetro. Ao lado, cartões Anotações, Testar Intervalos, Ocultar slide e Seções. Depois, os formatos .pptx, .ppsx (destacado) e .potx, com PDF e MP4, e as teclas da apresentação: F5, Shift + F5, Esc, B ou . (tela preta) e W ou , (tela branca).
 
@@ -336,7 +338,7 @@
 
 ## Revisão
 
-### Cena 27 · `revisao`
+### Cena 27 · `revisao` (18:43–19:48)
 
 **Visual:** Oito cartões de revisão com ícone de verificação, um por frase: Suítes, Word, Atalhos, Fórmulas, Referências, Funções, Erros e PowerPoint.
 
@@ -352,7 +354,7 @@
 - Divisão por zero gera #DIV/0!, e as cerquilhas indicam apenas uma coluna estreita.
 - E, no PowerPoint, a transição é entre slides, e a animação, nos objetos. O .ppsx abre direto na apresentação.
 
-### Cena 28 · `encerramento`
+### Cena 28 · `encerramento` (19:48–20:03)
 
 **Visual:** Bit grande à esquerda. Cartão “Pratique agora: 15 questões” e cartão “Próximo vídeo: Capítulo 5 — Hardware” na cor do capítulo 5. Bit acena na despedida.
 
