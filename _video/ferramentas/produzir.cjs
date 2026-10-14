@@ -55,7 +55,13 @@ async function previa() {
     await pagina.evaluate((t) => irPara(t), t);
     await pagina.screenshot({ path: path.join(pasta, `${String(n++).padStart(3, "0")}-${nome}.jpg`), type: "jpeg", quality: 80 });
   }
-  console.log(`Prévia: ${n} imagens em ${pasta} · duração estimada ${(agenda.duracao / 60).toFixed(1)} min`);
+  // Folhas de contato: 12 imagens por folha (3 × 4), para conferir o layout rapidamente
+  const folhas = path.join(SAIDA, "folhas");
+  fs.rmSync(folhas, { recursive: true, force: true });
+  fs.mkdirSync(folhas, { recursive: true });
+  spawnSync("ffmpeg", ["-y", "-loglevel", "error", "-pattern_type", "glob", "-i", path.join(pasta, "*.jpg"),
+    "-vf", "scale=640:-1,tile=3x4:padding=6:color=white", path.join(folhas, "folha%02d.jpg")], { stdio: "inherit" });
+  console.log(`Prévia: ${n} imagens em ${pasta} · folhas em ${folhas} · duração estimada ${(agenda.duracao / 60).toFixed(1)} min`);
   if (erros.length) console.log("Erros na página:", erros);
   await navegador.close();
 }
