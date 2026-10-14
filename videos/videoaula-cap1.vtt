@@ -1,0 +1,843 @@
+WEBVTT
+
+00:06.500 --> 00:09.360
+Olá! Eu sou o Bit, e vou
+acompanhar você nesta
+
+00:09.360 --> 00:12.469
+série de videoaulas de Informática
+para Concursos.
+
+00:12.849 --> 00:18.105
+Neste primeiro capítulo, vamos construir a base de
+tudo: a Introdução à Informática.
+
+00:18.485 --> 00:23.382
+Você vai entender o que é informática e como um
+sistema computacional é formado.
+
+00:23.762 --> 00:27.294
+Vai ver a diferença entre dados e
+informação, e aprender
+
+00:27.294 --> 00:30.384
+as unidades de medida e os
+sistemas de numeração.
+
+00:30.764 --> 00:34.136
+Depois, vamos passear pela evolução
+dos computadores,
+
+00:34.136 --> 00:37.827
+pelos tipos de software e pelas
+linguagens de programação.
+
+00:38.207 --> 00:41.768
+E, para fechar, vamos entender como o
+computador funciona por
+
+00:41.768 --> 00:45.270
+dentro: a arquitetura de Von Neumann e
+o ciclo de instrução.
+
+00:45.650 --> 00:46.501
+Vamos lá?
+
+00:48.601 --> 00:50.293
+Vamos começar pelo nome.
+
+00:50.673 --> 00:53.469
+Informática é a área que cuida
+do tratamento
+
+00:53.469 --> 00:56.392
+automático da informação, usando
+computadores.
+
+00:56.772 --> 01:00.990
+A palavra nasce da junção de duas outras:
+informação e automática.
+
+01:01.370 --> 01:06.138
+Ou seja: processar dados de forma automática,
+com sistemas computacionais.
+
+01:06.518 --> 01:10.278
+E todo computador segue a mesma
+lógica: ele recebe dados na
+
+01:10.278 --> 01:14.101
+entrada, processa esses dados e entrega
+informação na saída.
+
+01:14.481 --> 01:18.218
+Pense no boletim da escola: as notas
+entram, o computador
+
+01:18.218 --> 01:21.299
+calcula a média, e o resultado
+aparece na tela.
+
+01:22.999 --> 01:27.680
+Um sistema computacional é formado por três
+elementos que trabalham juntos.
+
+01:28.060 --> 01:31.387
+O hardware é a parte física: o
+processador, a memória,
+
+01:31.387 --> 01:34.530
+o teclado, o monitor. É tudo o que
+você pode tocar.
+
+01:34.910 --> 01:38.581
+O software é a parte lógica: os
+programas, como o sistema
+
+01:38.581 --> 01:41.865
+operacional e os aplicativos. É o
+que você executa.
+
+01:42.245 --> 01:46.788
+E o peopleware são as pessoas: quem usa,
+opera e desenvolve os sistemas.
+
+01:47.168 --> 01:50.614
+Existe ainda o firmware: um software
+gravado diretamente
+
+01:50.614 --> 01:54.244
+em um chip do hardware, como a BIOS ou
+a UEFI da placa-mãe.
+
+01:54.624 --> 01:57.482
+Resumindo: hardware é o que você
+toca, software
+
+01:57.482 --> 02:00.279
+é o que você executa, e
+peopleware é quem usa.
+
+02:02.379 --> 02:04.883
+Agora, uma diferença que as bancas adoram
+
+02:04.883 --> 02:07.814
+cobrar: dado não é a mesma coisa
+que informação.
+
+02:08.194 --> 02:11.067
+Dado é um valor bruto, sem
+contexto. Por exemplo,
+
+02:11.067 --> 02:13.764
+o número trinta e dois, sozinho,
+não diz nada.
+
+02:14.144 --> 02:18.256
+Informação é o dado processado e colocado
+em contexto: a média de
+
+02:18.256 --> 02:22.241
+idade da turma é de trinta e dois anos.
+Agora sim, faz sentido.
+
+02:22.621 --> 02:27.127
+E o conhecimento é a informação interpretada
+e usada para tomar decisões:
+
+02:27.127 --> 02:31.695
+se a turma é adulta, o material pode usar
+exemplos do mercado de trabalho.
+
+02:32.075 --> 02:36.033
+Atenção à pegadinha: um dado isolado
+não tem significado. Ele
+
+02:36.033 --> 02:40.120
+só vira informação depois de processado
+e colocado em contexto.
+
+02:42.220 --> 02:45.690
+O computador representa tudo com dois
+estados elétricos:
+
+02:45.690 --> 02:48.540
+ligado e desligado, que chamamos
+de um e zero.
+
+02:48.920 --> 02:52.930
+Cada um desses dígitos é um bit, a menor
+unidade de informação.
+
+02:53.310 --> 02:57.890
+Oito bits formam um byte, que representa um
+caractere simples, como uma letra.
+
+02:58.270 --> 03:01.733
+A partir daí, cada degrau multiplica
+por mil e vinte e
+
+03:01.733 --> 03:05.452
+quatro: kilobyte, megabyte, gigabyte,
+terabyte e petabyte.
+
+03:05.832 --> 03:11.048
+Uma curiosidade: os fabricantes de discos contam
+de mil em mil. Por isso, um HD de
+
+03:11.048 --> 03:16.265
+um terabyte aparece com cerca de novecentos e
+trinta e um gigabytes no computador.
+
+03:17.965 --> 03:20.200
+E aqui mora uma pegadinha clássica.
+
+03:20.580 --> 03:23.363
+A velocidade da internet é
+medida em bits por
+
+03:23.363 --> 03:26.456
+segundo, os megabits por segundo,
+com b minúsculo.
+
+03:26.836 --> 03:31.487
+Já o tamanho dos arquivos é medido em bytes,
+os megabytes, com B maiúsculo.
+
+03:31.867 --> 03:36.895
+Como um byte tem oito bits, basta dividir por
+oito: uma conexão de cem megabits
+
+03:36.895 --> 03:41.986
+por segundo baixa, no máximo, cerca de doze
+vírgula cinco megabytes por segundo.
+
+03:43.686 --> 03:46.191
+Três sistemas de numeração aparecem com
+
+03:46.191 --> 03:49.339
+frequência: o binário, o decimal
+e o hexadecimal.
+
+03:49.719 --> 03:52.388
+O binário tem base dois e usa
+só zero e um.
+
+03:52.768 --> 03:56.702
+O decimal, que usamos no dia a dia, tem
+base dez: de zero a nove.
+
+03:57.082 --> 04:02.192
+E o hexadecimal tem base dezesseis: usa de zero
+a nove e as letras de A até F.
+
+04:02.572 --> 04:05.765
+Repare: um, zero, um, zero em
+binário, dez em decimal
+
+04:05.765 --> 04:08.778
+e A em hexadecimal representam o
+mesmo valor: dez.
+
+04:10.478 --> 04:12.699
+E como converter binário para decimal?
+
+04:13.079 --> 04:16.441
+Cada posição vale uma potência de
+dois, da direita para
+
+04:16.441 --> 04:19.804
+a esquerda: um, dois, quatro, oito,
+e assim por diante.
+
+04:20.184 --> 04:22.148
+Vamos converter um, zero, um, um.
+
+04:22.528 --> 04:25.116
+Somamos o valor das posições
+que têm o número
+
+04:25.116 --> 04:27.934
+um: oito, mais dois, mais um. O
+resultado é onze.
+
+04:28.314 --> 04:31.689
+O caminho inverso também é simples:
+divida o número por
+
+04:31.689 --> 04:35.003
+dois várias vezes e leia os restos
+de baixo para cima.
+
+04:35.383 --> 04:37.719
+Treze, por exemplo, vira um, um, zero, um.
+
+04:39.419 --> 04:41.715
+Para o hexadecimal, existe um atalho.
+
+04:42.095 --> 04:45.406
+Como dezesseis é dois elevado a
+quatro, cada dígito
+
+04:45.406 --> 04:48.587
+hexadecimal corresponde a
+exatamente quatro bits.
+
+04:48.967 --> 04:52.088
+É só separar o número binário em
+grupos de quatro, da
+
+04:52.088 --> 04:55.563
+direita para a esquerda. Um, zero, um,
+zero vale dez, que é
+
+04:55.563 --> 04:59.096
+A. E um, um, um, um vale quinze, que é
+F. O resultado é A F.
+
+04:59.476 --> 05:03.270
+No sistema octal, de base oito, os
+grupos são de três bits.
+
+05:03.650 --> 05:08.331
+Memorize: hexadecimal, grupos de quatro bits.
+Octal, grupos de três bits.
+
+05:10.431 --> 05:13.291
+Textos, imagens e sons também viram bits.
+
+05:13.671 --> 05:18.582
+Para os textos, existem tabelas de caracteres. O
+ASCII original usa sete bits e
+
+05:18.582 --> 05:23.741
+representa cento e vinte e oito caracteres: letras
+sem acento, números e pontuação.
+
+05:24.121 --> 05:29.159
+O Unicode abrange praticamente todos os
+idiomas do mundo, além de símbolos
+
+05:29.159 --> 05:33.789
+e emojis. E o UTF-8 é a forma de gravar o
+Unicode mais usada na web.
+
+05:34.169 --> 05:38.848
+Quando um texto aparece com símbolos estranhos
+no lugar dos acentos, o problema
+
+05:38.848 --> 05:43.053
+é de codificação: o arquivo foi gravado em
+um padrão e aberto em outro.
+
+05:44.753 --> 05:48.781
+Nas imagens, o menor ponto é o pixel. E a
+resolução é a quantidade
+
+05:48.781 --> 05:52.260
+de pixels, como mil novecentos e
+vinte por mil e oitenta.
+
+05:52.640 --> 05:56.327
+Cada pixel mistura vermelho, verde e
+azul, o famoso RGB.
+
+05:56.327 --> 06:00.015
+Com oito bits para cada cor, são
+vinte e quatro bits por
+
+06:00.015 --> 06:03.702
+pixel: cerca de dezesseis vírgula
+sete milhões de cores.
+
+06:04.082 --> 06:07.991
+A imagem matricial, ou bitmap, é
+feita de pixels e perde
+
+06:07.991 --> 06:11.621
+qualidade quando ampliada. É o caso
+do JPG e do PNG.
+
+06:12.001 --> 06:15.688
+Já a imagem vetorial é descrita por
+formas matemáticas
+
+06:15.688 --> 06:19.307
+e pode ser ampliada sem perder
+qualidade, como o SVG.
+
+06:21.007 --> 06:24.813
+E, para economizar espaço, os arquivos
+podem ser compactados.
+
+06:25.193 --> 06:30.262
+Na compressão com perda, alguns detalhes são
+descartados: o arquivo fica
+
+06:30.262 --> 06:35.191
+bem menor, mas o original não volta. É o
+caso do JPG, do MP3 e do MP4.
+
+06:35.571 --> 06:38.192
+Na compressão sem perda, o arquivo volta
+
+06:38.192 --> 06:41.534
+exatamente igual ao original, como
+no PNG e no ZIP.
+
+06:41.914 --> 06:46.660
+Por isso, um documento compactado em ZIP volta
+idêntico ao ser descompactado.
+
+06:48.760 --> 06:52.494
+Agora, vamos viajar no tempo. A
+evolução dos computadores é
+
+06:52.494 --> 06:56.355
+dividida em cinco gerações, de acordo
+com a tecnologia usada.
+
+06:56.735 --> 07:01.381
+A primeira geração usava válvulas
+eletrônicas. O ENIAC, de mil novecentos
+
+07:01.381 --> 07:06.154
+e quarenta e seis, era enorme, gastava muita
+energia e esquentava bastante.
+
+07:06.534 --> 07:09.734
+Na segunda geração, as válvulas
+foram trocadas por
+
+07:09.734 --> 07:13.766
+transistores: máquinas menores, mais
+rápidas e mais confiáveis.
+
+07:14.146 --> 07:17.314
+A terceira geração trouxe os
+circuitos integrados,
+
+07:17.314 --> 07:19.911
+com vários transistores em um único chip.
+
+07:20.291 --> 07:24.843
+Na quarta geração surgiu o microprocessador,
+com o Intel quatro mil e quatro,
+
+07:24.843 --> 07:29.454
+de mil novecentos e setenta e um. E os
+computadores pessoais se popularizaram.
+
+07:29.834 --> 07:32.380
+A quinta geração, a atual, é marcada pela
+
+07:32.380 --> 07:35.733
+inteligência artificial e pelo
+processamento paralelo.
+
+07:37.433 --> 07:41.911
+Para memorizar a sequência, use a sigla
+VTCMI: válvulas, transistores,
+
+07:41.911 --> 07:46.197
+circuitos integrados, microprocessadores e
+inteligência artificial.
+
+07:46.577 --> 07:51.418
+E cuidado com a pegadinha: os
+microprocessadores surgiram na quarta geração.
+
+07:51.418 --> 07:56.195
+A terceira é a dos circuitos integrados, e as
+bancas adoram trocar as duas.
+
+07:57.895 --> 08:00.938
+Os computadores também podem ser
+classificados.
+
+08:01.318 --> 08:05.170
+Quanto ao tipo de sinal, existem os
+analógicos, que trabalham com
+
+08:05.170 --> 08:09.023
+grandezas contínuas; os digitais, que
+trabalham com zeros e uns e
+
+08:09.023 --> 08:12.816
+são os computadores atuais; e os
+híbridos, que combinam os dois.
+
+08:13.196 --> 08:16.441
+Quanto ao porte, temos os
+supercomputadores, usados em
+
+08:16.441 --> 08:19.986
+pesquisas científicas e previsão do
+tempo, e os mainframes,
+
+08:19.986 --> 08:23.591
+que processam enormes volumes de
+transações, como em bancos.
+
+08:23.971 --> 08:27.894
+Temos também os servidores, que
+fornecem serviços em rede, os
+
+08:27.894 --> 08:32.138
+computadores pessoais, e os dispositivos
+móveis e embarcados, como
+
+08:32.138 --> 08:36.253
+celulares e os computadores dentro de
+carros e eletrodomésticos.
+
+08:38.353 --> 08:42.485
+Vamos falar de software. Ele pode ser
+dividido em quatro tipos.
+
+08:42.865 --> 08:47.045
+O software básico, ou de sistema, controla
+o hardware e serve de base
+
+08:47.045 --> 08:51.225
+para os outros programas: o Windows, o
+Linux, o Android e os drivers.
+
+08:51.605 --> 08:54.361
+O software aplicativo executa
+as tarefas do
+
+08:54.361 --> 08:57.374
+usuário, como o Word, o Excel e
+os navegadores.
+
+08:57.754 --> 09:00.539
+O utilitário cuida da manutenção
+e do apoio ao
+
+09:00.539 --> 09:03.324
+sistema, como os antivírus e os
+compactadores.
+
+09:03.704 --> 09:06.925
+E as ferramentas de programação,
+como compiladores e
+
+09:06.925 --> 09:10.085
+interpretadores, servem para criar
+novos programas.
+
+09:11.785 --> 09:14.841
+Os programas também têm
+licenças diferentes.
+
+09:15.221 --> 09:18.296
+O software proprietário tem código
+fechado e segue
+
+09:18.296 --> 09:21.309
+as regras do fabricante, como o
+Microsoft Office.
+
+09:21.689 --> 09:26.529
+O freeware é gratuito, mas normalmente tem
+código fechado. Já o shareware é
+
+09:26.529 --> 09:31.821
+distribuído para teste, com tempo ou recursos
+limitados, e depois é preciso pagar.
+
+09:32.201 --> 09:37.148
+O software livre garante quatro liberdades:
+executar o programa para qualquer
+
+09:37.148 --> 09:41.709
+finalidade, estudar como ele funciona,
+redistribuir cópias, e modificar
+
+09:41.709 --> 09:46.270
+e distribuir versões modificadas. O Linux e
+o LibreOffice são exemplos.
+
+09:46.650 --> 09:50.147
+Existem ainda o código aberto, em
+que o código-fonte é
+
+09:50.147 --> 09:54.746
+disponibilizado, e o domínio público, sem
+direitos autorais reservados.
+
+09:55.126 --> 09:59.233
+E a pegadinha mais famosa: software livre
+não significa software
+
+09:59.233 --> 10:03.083
+gratuito. A liberdade está no uso, no
+estudo, na modificação
+
+10:03.083 --> 10:06.805
+e na distribuição. Um software livre
+pode até ser vendido.
+
+10:08.505 --> 10:11.498
+E como os programas são criados?
+O processador só
+
+10:11.498 --> 10:14.674
+entende linguagem de máquina:
+instruções em binário.
+
+10:15.054 --> 10:18.308
+A linguagem de montagem, o
+Assembly, usa abreviações
+
+10:18.308 --> 10:20.873
+para essas instruções e é de baixo nível.
+
+10:21.253 --> 10:23.970
+Já as linguagens de alto nível,
+como Python,
+
+10:23.970 --> 10:26.934
+Java e C, são mais próximas da
+linguagem humana.
+
+10:27.314 --> 10:31.111
+Para o computador entender, esse código
+precisa ser traduzido.
+
+10:31.491 --> 10:35.379
+O compilador traduz o código inteiro de
+uma vez e gera um programa
+
+10:35.379 --> 10:39.091
+executável, como um tradutor que entrega
+um livro já traduzido.
+
+10:39.471 --> 10:42.598
+O interpretador traduz e executa
+linha por linha, a
+
+10:42.598 --> 10:45.664
+cada execução, como um intérprete
+em uma palestra.
+
+10:46.044 --> 10:49.730
+E o Java combina os dois: ele é
+compilado para um código
+
+10:49.730 --> 10:54.139
+intermediário, o bytecode, que roda na
+máquina virtual Java, a JVM.
+
+10:56.239 --> 11:01.068
+Chegamos ao coração do computador: a arquitetura
+de Von Neumann, proposta em mil
+
+11:01.068 --> 11:05.958
+novecentos e quarenta e cinco. Ela é o modelo
+clássico dos computadores modernos.
+
+11:06.338 --> 11:09.689
+A ideia central é o programa
+armazenado: as instruções
+
+11:09.689 --> 11:12.419
+e os dados ficam guardados na
+mesma memória.
+
+11:12.799 --> 11:16.994
+A CPU, a unidade central de
+processamento, reúne três partes.
+
+11:17.374 --> 11:20.048
+A unidade de controle busca as
+instruções na
+
+11:20.048 --> 11:22.601
+memória, interpreta e coordena a execução.
+
+11:22.981 --> 11:27.662
+A unidade lógica e aritmética, a ULA, faz
+as contas e as comparações.
+
+11:28.042 --> 11:32.874
+E os registradores são pequenas memórias
+internas, as mais rápidas do computador.
+
+11:33.254 --> 11:36.630
+Completam o modelo a memória
+principal, os dispositivos de
+
+11:36.630 --> 11:40.471
+entrada e saída, e os barramentos, que são
+as vias que ligam tudo.
+
+11:42.171 --> 11:46.291
+Como dados e instruções passam pelo mesmo
+caminho, o processador às
+
+11:46.291 --> 11:50.472
+vezes precisa esperar a memória. É o
+chamado gargalo de Von Neumann.
+
+11:50.852 --> 11:55.035
+A arquitetura Harvard resolve isso com
+memórias e caminhos separados
+
+11:55.035 --> 11:58.971
+para instruções e para dados. Ela é comum
+em microcontroladores.
+
+11:59.351 --> 12:04.100
+E atenção: CPU e ULA não são sinônimos. A
+ULA é só uma parte da CPU.
+
+12:04.100 --> 12:09.407
+Memorize: CPU é igual a unidade de controle
+mais ULA, mais os registradores.
+
+12:11.107 --> 12:14.239
+E como o processador executa um
+programa? Repetindo
+
+12:14.239 --> 12:17.371
+sempre o mesmo ciclo, bilhões de
+vezes por segundo.
+
+12:17.751 --> 12:21.286
+Primeiro, a busca: a unidade de
+controle pega na memória a
+
+12:21.286 --> 12:25.065
+próxima instrução, cujo endereço está no
+contador de programa.
+
+12:25.445 --> 12:28.811
+Depois, a decodificação: a instrução
+é interpretada, e
+
+12:28.811 --> 12:32.176
+o processador descobre o que fazer e
+quais dados usar.
+
+12:32.556 --> 12:36.299
+Por fim, a execução: a operação é
+realizada, normalmente pela
+
+12:36.299 --> 12:40.104
+ULA, e o resultado é guardado em um
+registrador ou na memória.
+
+12:40.104 --> 12:43.970
+Alguns autores contam esse armazenamento
+como uma quarta etapa.
+
+12:44.350 --> 12:48.832
+Em inglês: Fetch, Decode, Execute.
+Memorize a sigla FDE.
+
+12:50.932 --> 12:55.885
+Para terminar o conteúdo, algumas tecnologias
+atuais que aparecem nas provas.
+
+12:56.265 --> 13:00.739
+A inteligência artificial executa tarefas
+que exigiriam inteligência
+
+13:00.739 --> 13:04.884
+humana. Com o aprendizado de máquina, o
+sistema aprende padrões
+
+13:04.884 --> 13:09.358
+a partir de dados; e a IA generativa cria
+textos, imagens e códigos.
+
+13:09.738 --> 13:13.384
+A Internet das Coisas conecta objetos
+do dia a dia, como
+
+13:13.384 --> 13:16.770
+sensores, câmeras, lâmpadas e
+relógios inteligentes.
+
+13:17.150 --> 13:21.102
+O Big Data trata volumes enormes de
+dados, gerados em alta
+
+13:21.102 --> 13:25.123
+velocidade e em formatos variados. Ele
+costuma ser descrito
+
+13:25.123 --> 13:29.211
+pelos Vs: volume, velocidade,
+variedade, veracidade e valor.
+
+13:29.591 --> 13:33.347
+E a computação em nuvem, que você vai
+estudar no capítulo seis.
+
+13:35.447 --> 13:37.743
+Hora de revisar o que você aprendeu.
+
+13:38.123 --> 13:41.615
+Hardware é o que você toca, software é
+o que você executa,
+
+13:41.615 --> 13:45.407
+peopleware é quem usa, e firmware é o
+software gravado no chip.
+
+13:45.787 --> 13:48.761
+Dado é bruto; informação é o
+dado com contexto;
+
+13:48.761 --> 13:51.229
+e conhecimento é a informação aplicada.
+
+13:51.609 --> 13:55.157
+Oito bits formam um byte, e cada
+unidade multiplica por
+
+13:55.157 --> 13:58.964
+mil e vinte e quatro. Velocidade em
+bits, tamanho em bytes.
+
+13:59.344 --> 14:02.329
+No hexadecimal, cada dígito
+vale quatro bits.
+
+14:02.709 --> 14:06.941
+As gerações seguem a sigla VTCMI, e o
+microprocessador é da quarta.
+
+14:07.321 --> 14:10.695
+Software livre não é sinônimo de
+gratuito. O compilador
+
+14:10.695 --> 14:14.315
+gera um executável; o interpretador
+traduz linha por linha.
+
+14:14.695 --> 14:18.485
+E a CPU reúne unidade de controle,
+ULA e registradores,
+
+14:18.485 --> 14:22.207
+executando o ciclo de busca,
+decodificação e execução.
+
+14:23.907 --> 14:26.611
+Agora é a sua vez: faça as
+quinze questões do
+
+14:26.611 --> 14:29.555
+final do capítulo e confira a
+correção comentada.
+
+14:29.935 --> 14:33.579
+No próximo vídeo, vamos estudar os
+sistemas operacionais.
+
+14:33.959 --> 14:35.699
+Até lá, e bons estudos!

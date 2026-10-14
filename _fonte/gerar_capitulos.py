@@ -4,6 +4,9 @@ Cada capítulo tem dois arquivos:
     conteudo/capN.html  corpo do capítulo (HTML com as classes do style.css)
     conteudo/capN.quiz  questões do capítulo
 
+Se existir videos/videoaula-capN.mp4, a página ganha o player da videoaula
+(com legendas videos/videoaula-capN.vtt e capa videos/videoaula-capN.jpg).
+
 Formato do .quiz (questões separadas por uma linha em branco):
     ? Enunciado
     - alternativa errada
@@ -178,6 +181,45 @@ def montar_quiz(n, questoes):
     return "\n".join(partes) + "\n"
 
 
+def montar_video(n):
+    """Player da videoaula, se o vídeo do capítulo já foi publicado em videos/."""
+    video = REPO / "videos" / f"videoaula-cap{n}.mp4"
+    if not video.exists():
+        return ""
+    minutos = round(duracao_video(video) / 60)
+    legenda = (
+        f'<track kind="subtitles" label="Português" src="videos/videoaula-cap{n}.vtt" srclang="pt-BR"/>\n'
+        if (REPO / "videos" / f"videoaula-cap{n}.vtt").exists() else ""
+    )
+    # Sem h2/p: a narração do capítulo ("Ouvir capítulo") lê só o texto da leitura.
+    return (
+        '<section aria-label="Videoaula do capítulo" class="videoaula">\n'
+        '<div class="videoaula-cabecalho">\n'
+        f'<div><span class="videoaula-rotulo">Videoaula</span><strong class="videoaula-titulo">Os conceitos do capítulo em animação</strong></div>\n'
+        f'<span class="videoaula-duracao">{minutos} min · narrada e legendada</span>\n'
+        '</div>\n'
+        f'<video controls playsinline poster="videos/videoaula-cap{n}.jpg" preload="none">\n'
+        f'<source src="videos/videoaula-cap{n}.mp4" type="video/mp4"/>\n'
+        + legenda +
+        '</video>\n'
+        '</section>\n'
+    )
+
+
+def duracao_video(video):
+    """Duração do MP4 em segundos, lida do cabeçalho mvhd (sem depender do ffprobe)."""
+    dados = video.read_bytes()
+    i = dados.find(b"mvhd")
+    versao = dados[i + 4]
+    if versao == 1:
+        escala = int.from_bytes(dados[i + 24:i + 28], "big")
+        duracao = int.from_bytes(dados[i + 28:i + 36], "big")
+    else:
+        escala = int.from_bytes(dados[i + 16:i + 20], "big")
+        duracao = int.from_bytes(dados[i + 20:i + 24], "big")
+    return duracao / escala
+
+
 def gerar(n):
     corpo = (ROOT / "conteudo" / f"cap{n}.html").read_text(encoding="utf-8").strip() + "\n"
     questoes = ler_quiz(n)
@@ -193,6 +235,7 @@ def gerar(n):
     )
     pagina = (
         HEAD.format(n=n, titulo=TITULOS[n])
+        + montar_video(n)
         + corpo
         + montar_quiz(n, questoes)
         + TAIL.format(anterior=anterior, proximo=proximo)
