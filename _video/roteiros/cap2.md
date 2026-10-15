@@ -2,9 +2,11 @@
 
 > Arquivo gerado por `ferramentas/exportar-roteiro.cjs` a partir de `roteiros/cap2.js`. Edite o `.js` e gere este arquivo de novo.
 
+**Duração:** 17:54 · **Cenas:** 30
+
 ## Abertura
 
-### Cena 1 · `abertura`
+### Cena 1 · `abertura` (0:05–0:31)
 
 **Visual:** Bit grande à esquerda acena para o público. À direita surgem o rótulo “Capítulo 2” e o título “Sistemas Operacionais”. Em seguida, um roteiro de 6 tópicos aparece item por item, cada um na frase que o anuncia. Na última frase, Bit dá um pulinho.
 
@@ -19,7 +21,7 @@
 
 ## O sistema operacional
 
-### Cena 2 · `conceito`
+### Cena 2 · `conceito` (0:31–1:02)
 
 **Visual:** Três camadas empilhadas à esquerda: Usuário (interação), Sistema operacional (gerencia recursos, em destaque na cor do capítulo) e Hardware (executa fisicamente). À direita, cartão com a definição de SO. Depois, as pílulas processador, memória, disco e periféricos; elas se apagam e surge a faixa “base comum para os aplicativos”.
 
@@ -30,7 +32,7 @@
 - Sem ele, cada programa teria que controlar sozinho o processador, a memória, o disco e cada periférico.
 - O SO esconde essa complexidade e oferece uma base comum para todos os aplicativos.
 
-### Cena 3 · `exemplos`
+### Cena 3 · `exemplos` (1:02–1:29)
 
 **Visual:** Três cartões com exemplos: Computadores (notebook), Dispositivos móveis (celular) e Servidores (servidor), cada um na frase que o cita. Quadro âmbar “Pegadinha de banca”: o SO não é hardware nem aplicativo, é software básico.
 
@@ -41,7 +43,7 @@
 - E, nos servidores, o Windows Server e distribuições Linux como Red Hat Enterprise Linux e Debian.
 - Pegadinha: o SO não é hardware, nem aplicativo. Ele é software básico, ou de sistema.
 
-### Cena 4 · `funcoes`
+### Cena 4 · `funcoes` (1:29–2:08)
 
 **Visual:** Seis cartões em grade, um por função: gerência de processos (CPU), de memória, de arquivos (pasta), de dispositivos (impressora), segurança (cadeado) e interface (janela, GUI ou CLI). Quadro azul “Resumo estratégico” com os quatro grandes recursos.
 
@@ -56,7 +58,7 @@
 
 ## Processos
 
-### Cena 5 · `processos`
+### Cena 5 · `processos` (2:08–2:53)
 
 **Visual:** Cartão “Processo = programa em execução”. Faixa do processador com fatias A, B e C alternadas surgindo uma a uma (“parece simultâneo”); um marcador âmbar “SO” mostra a interrupção da multitarefa preemptiva. Cartão Multiusuário. Depois, barra da RAM que enche com programas; o excesso vai para a área “memória virtual” do disco, com as pílulas “arquivo de paginação” e “swap” e o aviso “bem mais lento”. Por fim, cartão Driver com uma impressora.
 
@@ -70,7 +72,7 @@
 - No Windows, ela fica no arquivo de paginação; no Linux, na área de swap. Funciona, mas é bem mais lento.
 - E o driver é o software que permite ao SO controlar um dispositivo específico, como uma impressora.
 
-### Cena 6 · `estados`
+### Cena 6 · `estados` (2:53–3:28)
 
 **Visual:** Diagrama de estados: Novo → Pronto → Executando → Terminado, com Bloqueado abaixo (setas Executando → Bloqueado → Pronto). Cada estado surge e pulsa na frase que o explica. Quadro âmbar: espera de E/S = bloqueado, não pronto.
 
@@ -83,7 +85,7 @@
 - E, ao encerrar, fica terminado, e seus recursos são liberados.
 - Pegadinha: quem espera entrada e saída está bloqueado, e não pronto. Pronto é quem só aguarda a vez do processador.
 
-### Cena 7 · `escalonamento`
+### Cena 7 · `escalonamento` (3:28–4:03)
 
 **Visual:** Faixa “Escalonador: decide qual processo pronto usa o processador”. Tabela Algoritmo / Como escolhe, uma linha por algoritmo: FIFO (FCFS), SJF, Round Robin (quantum) e por prioridade. Depois, diagrama do deadlock: Processo 1 e Processo 2, cada um segurando um recurso e esperando o outro, com setas formando um ciclo.
 
@@ -98,7 +100,7 @@
 
 ## Kernel e boot
 
-### Cena 8 · `kernel`
+### Cena 8 · `kernel` (4:03–4:48)
 
 **Visual:** Círculo do Kernel envolvendo o núcleo Hardware, com a etiqueta “privilégio máximo”; à direita, quatro cartões: processos, memória, dispositivos e interrupções. Depois, três cartões com mini-diagramas: Monolítico (Linux), Microkernel (Minix) e Híbrido (Windows NT, macOS XNU). Por fim, quadro âmbar com as duas pegadinhas: interface gráfica não é o kernel; Linux é o kernel, o sistema completo é uma distribuição.
 
@@ -112,7 +114,7 @@
 - Pegadinha: o kernel não cuida da interface gráfica. Ela é um programa que roda sobre ele.
 - E, tecnicamente, Linux é só o kernel. O sistema completo é uma distribuição.
 
-### Cena 9 · `boot`
+### Cena 9 · `boot` (4:48–5:25)
 
 **Visual:** Fluxo horizontal de cinco etapas numeradas, ligadas por setas, cada uma na frase que a explica: POST (verificação), BIOS/UEFI (chip), Gerenciador de boot (menu; Windows ou GRUB), Kernel e serviços (engrenagem; systemd) e Login (cadeado). Faixa “Dual boot: escolher entre dois sistemas instalados”.
 
@@ -125,7 +127,7 @@
 - Então o kernel vai para a memória e inicia os serviços, no Linux normalmente pelo systemd.
 - Por fim, o login: o usuário se identifica, e a sessão é aberta.
 
-### Cena 10 · `virtualizacao`
+### Cena 10 · `virtualizacao` (5:25–5:54)
 
 **Visual:** Pilha à esquerda: Hardware na base e três máquinas virtuais em cima; o Hypervisor desliza entre eles (Tipo 1 · nativo/bare metal, com VMware ESXi, Hyper-V e KVM). À direita, a pilha do Tipo 2 (hospedado): Hardware, Sistema operacional, Hypervisor e duas máquinas virtuais, com VirtualBox e VMware Workstation.
 
@@ -138,7 +140,7 @@
 
 ## Interfaces e arquivos
 
-### Cena 11 · `interfaces`
+### Cena 11 · `interfaces` (5:54–6:17)
 
 **Visual:** À esquerda, uma janela gráfica com barra de título, menu lateral, ícones e botão (GUI), com as pílulas GNOME, KDE Plasma, XFCE e Cinnamon. À direita, um terminal onde comandos aparecem linha a linha (CLI), com a etiqueta “shell” e as pílulas Bash, Prompt de Comando e PowerShell.
 
@@ -149,7 +151,7 @@
 - Na CLI, a linha de comando, você digita comandos em um interpretador: o shell.
 - Exemplos de shell são o Bash, no Linux, e o Prompt de Comando e o PowerShell, no Windows.
 
-### Cena 12 · `sistemas-arquivos`
+### Cena 12 · `sistemas-arquivos` (6:17–6:59)
 
 **Visual:** Definição em uma linha e tabela Sistema / Uso típico / Características, com uma linha por frase: NTFS, FAT32 (limite de 4 GB por arquivo em destaque), exFAT, ext4 e APFS.
 
@@ -162,7 +164,7 @@
 - O ext4 é o padrão em muitas distribuições Linux: journaling, bom desempenho e arquivos grandes.
 - E o APFS é o do macOS e do iOS: otimizado para SSD, com criptografia nativa.
 
-### Cena 13 · `fat32`
+### Cena 13 · `fat32` (6:59–7:24)
 
 **Visual:** Journaling: Registro (alterações pendentes) → Gravação no disco; um raio de “queda de energia” interrompe e surge “disco consistente ✓”. Depois, um vídeo de 5 GB tenta ir para um pen drive FAT32 e recebe um ✗ (limite de 4 GB por arquivo); surgem as soluções exFAT e NTFS. Quadro âmbar da pegadinha.
 
@@ -175,7 +177,7 @@
 
 ## Windows
 
-### Cena 14 · `windows`
+### Cena 14 · `windows` (7:24–7:57)
 
 **Visual:** Cinco cartões com os componentes mais cobrados: Explorador de Arquivos (pasta, teclas Windows + E), Área de Trabalho (Barra de Tarefas e Menu Iniciar), Configurações e Painel de Controle (engrenagem), Gerenciador de Tarefas (gráfico, teclas Ctrl + Shift + Esc) e Lixeira.
 
@@ -187,7 +189,7 @@
 - O Gerenciador de Tarefas mostra os processos, o desempenho e os programas que iniciam com o Windows. O atalho é Ctrl + Shift + Esc.
 - E a Lixeira guarda os arquivos excluídos do disco local, para que possam ser restaurados.
 
-### Cena 15 · `lixeira`
+### Cena 15 · `lixeira` (7:57–8:26)
 
 **Visual:** Um arquivo à esquerda. Seta para a Lixeira com a tecla Delete; seta para “Excluído para sempre” com Shift + Delete. À direita, coluna “Excluídos direto”: pen drive, cartão de memória, pasta de rede e arquivo maior que a Lixeira. Quadro âmbar: nem tudo passa pela Lixeira.
 
@@ -199,7 +201,7 @@
 - Nem os maiores que o espaço reservado para a Lixeira: o Windows avisa e exclui permanentemente.
 - Então, é errado dizer que todo arquivo excluído pode ser recuperado pela Lixeira.
 
-### Cena 16 · `atalhos`
+### Cena 16 · `atalhos` (8:26–9:13)
 
 **Visual:** Lista de atalhos com teclas desenhadas, um por vez: Windows + E, D, L, R, I, V e Windows + Shift + S, com a ação ao lado. Quadro verde “Memorize” com as iniciais em inglês (Explorer, Desktop, Lock, Run, settings). Depois, oito cartões: Alt + Tab, Alt + F4, F2, Ctrl + Shift + Esc, Ctrl + C, X, V e Z.
 
@@ -214,7 +216,7 @@
 
 ## Windows: arquivos e segurança
 
-### Cena 17 · `caminhos`
+### Cena 17 · `caminhos` (9:13–10:01)
 
 **Visual:** Caminho C:\Users\Maria\Documentos\relatorio.docx montado parte por parte, com as etiquetas “letra da unidade” e “barra invertida”; pílula “caminho absoluto”; caminho relativo ..\Imagens; fila de caracteres proibidos; cartão Atalho (.lnk). Depois, dez fichas de extensões: .exe, .txt, .docx, .xlsx, .pdf, .jpg, .png, .mp3, .mp4 e .zip.
 
@@ -227,7 +229,7 @@
 - A extensão indica o tipo do arquivo e o programa que o abre: .exe é executável, .txt é texto simples, .docx é do Word, e .xlsx, do Excel.
 - Há ainda o .pdf, o .jpg e o .png, de imagens, o .mp3, de áudio, o .mp4, de vídeo, e o .zip, compactado.
 
-### Cena 18 · `contas`
+### Cena 18 · `contas` (10:01–10:34)
 
 **Visual:** Cartões Administrador (pessoa com estrela) e Conta padrão; janela de confirmação do UAC com botões Sim e Não. Linha inferior: Windows Update (setas circulares), Segurança do Windows (escudo; antivírus e firewall) e BitLocker (cadeado; edições Pro e superiores).
 
@@ -239,7 +241,7 @@
 - A Segurança do Windows, com o Microsoft Defender, traz antivírus e firewall integrados.
 - E o BitLocker criptografa unidades inteiras, nas edições Pro e superiores.
 
-### Cena 19 · `restauracao`
+### Cena 19 · `restauracao` (10:34–11:10)
 
 **Visual:** Quatro cartões: Restauração do Sistema (relógio com seta), Histórico de Arquivos (documento), Arquivos ocultos (olho riscado; Exibir → Itens ocultos) e Pastas compactadas (.zip). Quadro âmbar: Restauração do Sistema não é backup de documentos; a segunda parte, sobre backup, entra na última frase.
 
@@ -253,7 +255,7 @@
 
 ## Linux
 
-### Cena 20 · `linux`
+### Cena 20 · `linux` (11:10–11:48)
 
 **Visual:** Equação: Kernel Linux + Ferramentas GNU + Outros programas = Distribuição, com as informações “código aberto · Linus Torvalds · 1991 · GPL”, as distribuições e as características em pílulas. Depois, os arquivos Relatorio.txt ≠ relatorio.txt (maiúsculas importam), o cartão root e um terminal com sudo.
 
@@ -266,7 +268,7 @@
 - O administrador, o superusuário, se chama root.
 - E o sudo executa um comando com privilégios de administrador.
 
-### Cena 21 · `diretorios`
+### Cena 21 · `diretorios` (11:48–12:36)
 
 **Visual:** Árvore de diretórios: a raiz “/” no alto, ligada a dez pastas em duas fileiras, que surgem na frase que as cita: /home, /root, /etc, /bin e /sbin, /usr, /var, /tmp, /dev, /boot, /media e /mnt. Quadro âmbar: / (raiz) ≠ /root (pasta do administrador).
 
@@ -281,7 +283,7 @@
 
 ## Terminal do Linux
 
-### Cena 22 · `comandos`
+### Cena 22 · `comandos` (12:36–13:12)
 
 **Visual:** Duas colunas de comandos, cada um em uma etiqueta monoespaçada com a função ao lado, entrando quando citados: pwd, ls, cd, mkdir, cp, mv, rm | cat, chmod, chown, sudo, ps / kill, man.
 
@@ -293,7 +295,7 @@
 - O chmod altera permissões, o chown altera o dono, e o sudo executa como administrador.
 - O ps lista os processos, o kill encerra um processo, e o man abre o manual.
 
-### Cena 23 · `mais-comandos`
+### Cena 23 · `mais-comandos` (13:12–13:52)
 
 **Visual:** Grade de onze fichas de comando (nome em fonte monoespaçada e função), entrando quando citadas: touch, find, grep, tar, nano / vi, apt / dnf, df / du, top, ip addr (e ifconfig), passwd e whoami.
 
@@ -305,7 +307,7 @@
 - O df mostra o espaço livre nos discos, e o du, o ocupado por pastas. O top mostra processos, CPU e memória em tempo real.
 - O ip addr mostra os endereços de rede, assim como o antigo ifconfig. O passwd altera a senha, e o whoami mostra o usuário atual.
 
-### Cena 24 · `terminal`
+### Cena 24 · `terminal` (13:52–14:30)
 
 **Visual:** Três fichas de símbolos: ~ (pasta pessoal), . (diretório atual) e .. (diretório acima), e as pílulas “absoluto: começa com /” e “relativo: parte do diretório atual”; terminal com ls -a revelando o .bashrc oculto. Depois, terminal com três linhas (>, >> e |), cada uma explicada por um cartão à direita.
 
@@ -320,7 +322,7 @@
 
 ## Permissões no Linux
 
-### Cena 25 · `permissoes`
+### Cena 25 · `permissoes` (14:30–14:54)
 
 **Visual:** Três fichas grandes: r = 4 (leitura · read), w = 2 (escrita · write) e x = 1 (execução · execute). Abaixo, três grupos na ordem Dono → Grupo → Outros, com setas. À direita, a conta 4 + 2 + 1 = 7 e a faixa “cada grupo: um dígito de 0 a 7”.
 
@@ -332,7 +334,7 @@
 - As permissões são definidas, nesta ordem, para o dono, o grupo e os outros.
 - Somando os valores, cada um recebe um dígito de 0 a 7.
 
-### Cena 26 · `chmod`
+### Cena 26 · `chmod` (14:54–15:34)
 
 **Visual:** Comando “chmod 754 relatorio.sh” no alto. Três colunas — Dono 7 (4+2+1, rwx), Grupo 5 (4+0+1, r-x) e Outros 4 (4+0+0, r--) — preenchidas frase a frase. Linha do ls -l: -rwxr-xr--. Depois, exercício chmod 640 com o grupo destacado (4 = somente leitura) e quadro verde “Memorize”.
 
@@ -345,7 +347,7 @@
 - Treine com o chmod 640: o grupo recebeu 4, ou seja, somente leitura.
 - Memorize: r vale 4, w vale 2 e x vale 1. E a ordem dos dígitos é sempre dono, grupo e outros.
 
-### Cena 27 · `chmod-simbolico`
+### Cena 27 · `chmod-simbolico` (15:34–16:03)
 
 **Visual:** Fichas das letras u (dono), g (grupo), o (outros) e a (todos), e dos sinais + (adiciona), - (remove) e = (define exatamente). Terminal com chmod u+x, chmod g-w, chmod o=r e chown maria dados.txt, cada linha com o comentário do que faz.
 
@@ -358,7 +360,7 @@
 
 ## Windows × Linux
 
-### Cena 28 · `comparacao`
+### Cena 28 · `comparacao` (16:03–16:50)
 
 **Visual:** Tabela Aspecto / Windows / Linux com oito linhas, duas por frase: licença, código-fonte, kernel, sistema de arquivos, unidades, maiúsculas e minúsculas, administrador e uso mais comum. Na última frase, a tabela sai e entra o quadro âmbar: o Linux tem licença, a GPL.
 
@@ -372,7 +374,7 @@
 
 ## Revisão
 
-### Cena 29 · `revisao`
+### Cena 29 · `revisao` (16:50–17:38)
 
 **Visual:** Sete cartões de revisão com ícone de verificação, um por frase: SO, Processos, Kernel, Arquivos, Windows, Linux e Permissões.
 
@@ -387,7 +389,7 @@
 - No Linux, / é a raiz, e /root, a pasta do administrador. O sinal de maior substitui; dois sinais acrescentam.
 - E, nas permissões, r vale 4, w vale 2 e x vale 1, sempre na ordem dono, grupo e outros.
 
-### Cena 30 · `encerramento`
+### Cena 30 · `encerramento` (17:38–17:52)
 
 **Visual:** Bit grande à esquerda. Cartão “Pratique agora: 15 questões” e cartão “Próximo vídeo: Capítulo 3 — Internet e Navegadores” na cor do capítulo 3. Bit acena na despedida.
 

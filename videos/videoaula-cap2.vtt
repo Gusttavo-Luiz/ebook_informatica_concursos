@@ -1,0 +1,1006 @@
+WEBVTT
+
+00:06.500 --> 00:09.331
+Olá! Eu sou o Bit. Que bom ter
+você de volta!
+
+00:09.711 --> 00:13.567
+Neste segundo capítulo, o tema são os
+Sistemas Operacionais.
+
+00:13.947 --> 00:16.573
+Você vai ver o que é um sistema
+operacional,
+
+00:16.573 --> 00:19.140
+o que ele faz e como gerencia
+os processos.
+
+00:19.520 --> 00:24.290
+Vai conhecer o kernel, a inicialização do
+computador e os sistemas de arquivos.
+
+00:24.670 --> 00:29.532
+E vamos explorar o Windows e o Linux: Lixeira,
+atalhos, comandos e permissões.
+
+00:29.912 --> 00:30.763
+Vamos lá?
+
+00:32.863 --> 00:36.386
+Pense em três camadas. Em cima, o
+usuário, que interage.
+
+00:36.386 --> 00:39.532
+Embaixo, o hardware, que executa
+tudo fisicamente.
+
+00:39.912 --> 00:44.396
+No meio, o sistema operacional, ou SO: o
+software básico que gerencia
+
+00:44.396 --> 00:48.555
+os recursos e faz a ponte entre hardware,
+aplicativos e usuário.
+
+00:48.935 --> 00:52.003
+Sem ele, cada programa teria que
+controlar sozinho
+
+00:52.003 --> 00:55.194
+o processador, a memória, o disco e
+cada periférico.
+
+00:55.574 --> 01:01.418
+O SO esconde essa complexidade e oferece uma base
+comum para todos os aplicativos.
+
+01:03.118 --> 01:06.788
+Nos computadores, temos o Windows 10
+e 11, o macOS e as
+
+01:06.788 --> 01:10.925
+distribuições Linux, como Ubuntu,
+Debian, Fedora e Linux Mint.
+
+01:11.305 --> 01:16.029
+Nos dispositivos móveis, o Android, baseado
+no kernel Linux, e o iOS.
+
+01:16.409 --> 01:19.607
+E, nos servidores, o Windows
+Server e distribuições
+
+01:19.607 --> 01:22.429
+Linux como Red Hat Enterprise
+Linux e Debian.
+
+01:22.809 --> 01:25.886
+Pegadinha: o SO não é hardware,
+nem aplicativo.
+
+01:25.886 --> 01:28.309
+Ele é software básico, ou de sistema.
+
+01:30.009 --> 01:33.131
+E o que o SO faz? A gerência de
+processos decide
+
+01:33.131 --> 01:36.513
+qual programa usa o processador, e
+por quanto tempo.
+
+01:36.893 --> 01:39.759
+A de memória distribui a RAM
+entre os programas
+
+01:39.759 --> 01:42.137
+e impede que um invada a área do outro.
+
+01:42.517 --> 01:46.724
+A de arquivos organiza os dados em arquivos
+e pastas, os diretórios.
+
+01:47.104 --> 01:51.173
+A de dispositivos controla os
+periféricos, por meio dos drivers.
+
+01:51.553 --> 01:55.625
+Ele também cuida da segurança, com
+contas, senhas e permissões, e
+
+01:55.625 --> 01:59.823
+oferece a interface: gráfica, a GUI, ou de
+linha de comando, a CLI.
+
+02:00.203 --> 02:04.303
+Resumindo: o SO gerencia quatro grandes
+recursos: processador,
+
+02:04.303 --> 02:07.742
+memória, arquivos e dispositivos de
+entrada e saída.
+
+02:09.842 --> 02:13.400
+Agora, os processos. Processo é um
+programa em execução.
+
+02:13.780 --> 02:17.407
+Multitarefa é ter vários programas
+executando juntos. O SO
+
+02:17.407 --> 02:21.535
+alterna o processador entre eles tão
+rápido que parece simultâneo.
+
+02:21.915 --> 02:25.240
+Na multitarefa preemptiva, a dos
+sistemas atuais, o SO
+
+02:25.240 --> 02:28.442
+pode interromper um programa para
+dar a vez a outro.
+
+02:28.822 --> 02:32.890
+Multiusuário são várias contas, com
+arquivos e permissões separados.
+
+02:33.270 --> 02:36.048
+Quando a RAM acaba, o SO usa
+parte do disco
+
+02:36.048 --> 02:39.019
+como extensão da memória: é a
+memória virtual.
+
+02:39.399 --> 02:42.364
+No Windows, ela fica no arquivo
+de paginação; no
+
+02:42.364 --> 02:45.762
+Linux, na área de swap. Funciona,
+mas é bem mais lento.
+
+02:46.142 --> 02:49.390
+E o driver é o software que
+permite ao SO controlar
+
+02:49.390 --> 02:52.384
+um dispositivo específico, como
+uma impressora.
+
+02:54.084 --> 02:56.984
+Todo processo passa por estados.
+Primeiro, ele é
+
+02:56.984 --> 02:59.823
+novo: está sendo criado e
+carregado na memória.
+
+03:00.203 --> 03:04.549
+Depois, fica pronto: está na fila, esperando
+a vez de usar o processador.
+
+03:04.929 --> 03:07.607
+Quando ganha o processador,
+passa a executando.
+
+03:07.987 --> 03:12.135
+Se esperar um evento externo, como a leitura
+do disco ou a digitação do
+
+03:12.135 --> 03:16.166
+usuário, fica bloqueado. Quando o evento
+acontece, volta para pronto.
+
+03:16.546 --> 03:20.366
+E, ao encerrar, fica terminado, e seus
+recursos são liberados.
+
+03:20.746 --> 03:24.081
+Pegadinha: quem espera entrada e
+saída está bloqueado, e
+
+03:24.081 --> 03:27.535
+não pronto. Pronto é quem só aguarda a
+vez do processador.
+
+03:29.235 --> 03:31.922
+Quem decide qual processo
+pronto vai usar o
+
+03:31.922 --> 03:34.735
+processador é o escalonador,
+uma parte do SO.
+
+03:35.115 --> 03:38.222
+No FIFO, ou FCFS, vale a ordem de chegada.
+
+03:38.222 --> 03:41.403
+No SJF, o processo mais curto
+vai primeiro.
+
+03:41.783 --> 03:45.411
+No Round Robin, ou circular, cada
+processo usa a CPU por uma
+
+03:45.411 --> 03:48.978
+fatia fixa de tempo, o quantum, e
+volta para o fim da fila.
+
+03:49.358 --> 03:53.403
+E, por prioridade, o de maior prioridade
+é executado primeiro.
+
+03:53.783 --> 03:56.414
+Cuidado também com o deadlock, o impasse.
+
+03:56.794 --> 03:59.738
+Dois ou mais processos esperam
+indefinidamente,
+
+03:59.738 --> 04:02.307
+cada um por um recurso preso com o outro.
+
+04:04.407 --> 04:07.954
+O kernel, ou núcleo, é a parte
+central do SO. Roda com
+
+04:07.954 --> 04:11.370
+privilégio máximo e fala
+diretamente com o hardware.
+
+04:11.750 --> 04:16.433
+O kernel controla os processos, a memória, os
+dispositivos e as interrupções.
+
+04:16.813 --> 04:20.308
+No kernel monolítico, quase tudo roda
+dentro do núcleo: é
+
+04:20.308 --> 04:24.294
+rápido, mas uma falha pode derrubar o
+sistema. É o caso do Linux.
+
+04:24.674 --> 04:27.890
+No microkernel, o núcleo tem só o
+essencial, e o resto
+
+04:27.890 --> 04:31.105
+roda separado: é mais modular e
+estável, como o Minix.
+
+04:31.485 --> 04:36.203
+O híbrido mistura os dois: é o Windows, com
+o NT, e o macOS, com o XNU.
+
+04:36.583 --> 04:39.131
+Pegadinha: o kernel não cuida da interface
+
+04:39.131 --> 04:41.922
+gráfica. Ela é um programa que
+roda sobre ele.
+
+04:42.302 --> 04:47.083
+E, tecnicamente, Linux é só o kernel. O sistema
+completo é uma distribuição.
+
+04:48.783 --> 04:51.820
+Ao ligar o computador, começa o
+boot. Primeiro vem
+
+04:51.820 --> 04:54.796
+o POST: o firmware da placa-mãe
+testa o hardware.
+
+04:55.176 --> 04:58.742
+Depois, a BIOS ou a UEFI
+localiza o dispositivo
+
+04:58.742 --> 05:02.156
+de inicialização: o SSD, o HD
+ou o pen drive.
+
+05:02.536 --> 05:05.973
+Em seguida, o gerenciador de boot
+carrega o sistema: o
+
+05:05.973 --> 05:09.855
+Gerenciador de Inicialização do
+Windows, ou o GRUB, no Linux.
+
+05:10.235 --> 05:14.478
+No dual boot, é ele que deixa escolher entre
+dois sistemas instalados.
+
+05:14.858 --> 05:17.667
+Então o kernel vai para a
+memória e inicia os
+
+05:17.667 --> 05:20.414
+serviços, no Linux normalmente
+pelo systemd.
+
+05:20.794 --> 05:24.556
+Por fim, o login: o usuário se
+identifica, e a sessão é aberta.
+
+05:26.256 --> 05:30.315
+A virtualização permite executar vários
+sistemas operacionais,
+
+05:30.315 --> 05:33.719
+as máquinas virtuais, em um mesmo
+computador físico.
+
+05:34.099 --> 05:37.762
+Quem cria e controla as máquinas
+virtuais é o hypervisor.
+
+05:38.142 --> 05:41.867
+O tipo 1, nativo ou bare metal,
+roda direto sobre o
+
+05:41.867 --> 05:46.030
+hardware. Exemplos: VMware ESXi,
+Microsoft Hyper-V e KVM.
+
+05:46.410 --> 05:50.161
+O tipo 2, hospedado, roda como
+programa sobre um sistema
+
+05:50.161 --> 05:53.779
+operacional, como o VirtualBox e o
+VMware Workstation.
+
+05:55.879 --> 06:00.588
+Na GUI, a interface gráfica, você usa
+janelas, ícones, menus e botões.
+
+06:00.968 --> 06:05.455
+No Linux, exemplos são o GNOME, o KDE
+Plasma, o XFCE e o Cinnamon.
+
+06:05.835 --> 06:10.841
+Na CLI, a linha de comando, você digita comandos
+em um interpretador: o shell.
+
+06:11.221 --> 06:13.707
+Exemplos de shell são o Bash,
+no Linux, e o
+
+06:13.707 --> 06:16.308
+Prompt de Comando e o
+PowerShell, no Windows.
+
+06:18.008 --> 06:20.844
+O sistema de arquivos define
+como os dados são
+
+06:20.844 --> 06:23.557
+organizados, nomeados e
+protegidos no disco.
+
+06:23.937 --> 06:26.878
+O NTFS é o padrão do Windows,
+com permissões,
+
+06:26.878 --> 06:29.819
+criptografia, compressão, cotas
+e journaling.
+
+06:30.199 --> 06:34.165
+O FAT32, de pen drives e cartões
+antigos, é compatível
+
+06:34.165 --> 06:38.130
+com quase tudo, mas limita cada
+arquivo a 4 gigabytes.
+
+06:38.510 --> 06:41.462
+O exFAT, dos pen drives e
+cartões atuais, é
+
+06:41.462 --> 06:44.757
+compatível com Windows e macOS,
+sem esse limite.
+
+06:45.137 --> 06:48.446
+O ext4 é o padrão em muitas
+distribuições Linux:
+
+06:48.446 --> 06:51.618
+journaling, bom desempenho e
+arquivos grandes.
+
+06:51.998 --> 06:58.253
+E o APFS é o do macOS e do iOS: otimizado para
+SSD, com criptografia nativa.
+
+06:59.953 --> 07:03.658
+E o que é journaling? É um registro das
+alterações pendentes.
+
+07:04.038 --> 07:07.199
+Se o computador desligar no meio
+de uma gravação, o
+
+07:07.199 --> 07:10.360
+sistema consegue recuperar a
+consistência do disco.
+
+07:10.740 --> 07:14.774
+Pegadinha: um vídeo de 5 gigabytes
+não pode ser copiado
+
+07:14.774 --> 07:18.881
+para um pen drive em FAT32, mesmo que
+haja espaço livre.
+
+07:19.261 --> 07:23.105
+A solução é formatar o pen drive
+em exFAT ou NTFS.
+
+07:25.205 --> 07:27.945
+Agora, o Windows. O Explorador de Arquivos
+
+07:27.945 --> 07:31.272
+gerencia pastas e arquivos, e abre
+com Windows + E.
+
+07:31.652 --> 07:35.758
+Temos também a Área de Trabalho, a Barra de
+Tarefas e o Menu Iniciar.
+
+07:36.138 --> 07:39.268
+Nas Configurações e no Painel de
+Controle, você
+
+07:39.268 --> 07:42.131
+ajusta sistema, contas, rede e
+aplicativos.
+
+07:42.511 --> 07:46.543
+O Gerenciador de Tarefas mostra os
+processos, o desempenho e os
+
+07:46.543 --> 07:50.830
+programas que iniciam com o Windows. O
+atalho é Ctrl + Shift + Esc.
+
+07:51.210 --> 07:53.846
+E a Lixeira guarda os arquivos
+excluídos do
+
+07:53.846 --> 07:56.605
+disco local, para que possam
+ser restaurados.
+
+07:58.305 --> 08:02.065
+Atenção à Lixeira. A tecla Delete
+envia o arquivo para ela.
+
+08:02.445 --> 08:06.893
+Já Shift + Delete exclui permanentemente,
+sem passar pela Lixeira.
+
+08:07.273 --> 08:10.600
+Arquivos de pen drives, cartões de
+memória e pastas de
+
+08:10.600 --> 08:14.111
+rede também não vão para a Lixeira:
+são excluídos direto.
+
+08:14.491 --> 08:17.205
+Nem os maiores que o espaço
+reservado para a
+
+08:17.205 --> 08:20.290
+Lixeira: o Windows avisa e exclui
+permanentemente.
+
+08:20.670 --> 08:25.551
+Então, é errado dizer que todo arquivo excluído
+pode ser recuperado pela Lixeira.
+
+08:27.251 --> 08:30.997
+Atalhos com a tecla Windows: Windows +
+E abre o Explorador,
+
+08:30.997 --> 08:34.171
+e Windows + D mostra ou oculta a
+área de trabalho.
+
+08:34.551 --> 08:37.695
+Windows + L bloqueia o
+computador, Windows + R
+
+08:37.695 --> 08:41.044
+abre o Executar, e Windows + I,
+as Configurações.
+
+08:41.424 --> 08:45.002
+Windows + V mostra o histórico da
+área de transferência,
+
+08:45.002 --> 08:47.813
+e Windows + Shift + S captura
+parte da tela.
+
+08:48.193 --> 08:51.460
+Memorize: são iniciais em inglês.
+E de Explorer, D
+
+08:51.460 --> 08:54.662
+de Desktop, L de Lock, R de Run,
+e I de settings.
+
+08:55.042 --> 08:59.505
+Alt + Tab alterna entre as janelas,
+Alt + F4 fecha a janela
+
+08:59.505 --> 09:03.589
+ou o programa ativo, e F2 renomeia o
+item selecionado.
+
+09:03.969 --> 09:08.055
+Ctrl + Shift + Esc abre o Gerenciador
+de Tarefas. E Ctrl +
+
+09:08.055 --> 09:12.282
+C copia, Ctrl + X recorta, Ctrl + V
+cola, e Ctrl + Z desfaz.
+
+09:14.382 --> 09:19.198
+No Windows, o caminho começa pela letra
+da unidade e usa a barra
+
+09:19.198 --> 09:23.713
+invertida, como em
+C:\Users\Maria\Documentos\relatorio.docx.
+
+09:24.093 --> 09:27.716
+Esse caminho é absoluto: completo,
+desde a unidade. O
+
+09:27.716 --> 09:31.749
+relativo parte da pasta atual, e o ..
+indica a pasta acima.
+
+09:32.129 --> 09:35.360
+Nomes de arquivos não podem conter
+estes caracteres.
+
+09:35.740 --> 09:41.203
+E um atalho, o .lnk, só aponta para o original:
+apagar o atalho não apaga o arquivo.
+
+09:41.583 --> 09:47.098
+A extensão indica o tipo do arquivo e o
+programa que o abre: .exe é
+
+09:47.098 --> 09:52.778
+executável, .txt é texto simples, .docx é
+do Word, e .xlsx, do Excel.
+
+09:53.158 --> 09:57.067
+Há ainda o .pdf, o .jpg e o .png,
+de imagens, o .mp3,
+
+09:57.067 --> 10:00.681
+de áudio, o .mp4, de vídeo, e o
+.zip, compactado.
+
+10:02.381 --> 10:06.477
+A conta de administrador instala programas
+e altera configurações.
+
+10:06.477 --> 10:10.200
+A conta padrão é para o dia a dia, com
+permissões limitadas.
+
+10:10.580 --> 10:14.141
+O Controle de Conta de Usuário, o
+UAC, pede confirmação
+
+10:14.141 --> 10:17.701
+antes de ações que exigem
+privilégios de administrador.
+
+10:18.081 --> 10:22.207
+O Windows Update instala atualizações e
+correções de segurança.
+
+10:22.587 --> 10:25.101
+A Segurança do Windows, com o Microsoft
+
+10:25.101 --> 10:28.131
+Defender, traz antivírus e
+firewall integrados.
+
+10:28.511 --> 10:33.504
+E o BitLocker criptografa unidades inteiras,
+nas edições Pro e superiores.
+
+10:35.204 --> 10:38.826
+A Restauração do Sistema volta as
+configurações a um ponto
+
+10:38.826 --> 10:42.323
+de restauração anterior, sem apagar
+documentos pessoais.
+
+10:42.703 --> 10:47.710
+Já o Histórico de Arquivos faz cópias de segurança
+periódicas das pastas do usuário.
+
+10:48.090 --> 10:52.146
+Arquivos ocultos só aparecem com a opção
+Itens ocultos marcada, na
+
+10:52.146 --> 10:56.509
+guia Exibir. E o Windows abre e cria
+arquivos zip sem programas extras.
+
+10:56.889 --> 11:00.880
+Pegadinha: a Restauração do Sistema não
+é backup de documentos.
+
+11:00.880 --> 11:04.554
+Ela desfaz mudanças em programas,
+drivers e configurações.
+
+11:04.934 --> 11:09.435
+Para os arquivos pessoais, use backup, como o
+Histórico de Arquivos ou a nuvem.
+
+11:11.535 --> 11:15.368
+Agora, o Linux. Ele é um kernel
+de código aberto,
+
+11:15.368 --> 11:19.513
+criado por Linus Torvalds em 1991,
+sob a licença GPL.
+
+11:19.893 --> 11:23.592
+Com ferramentas do projeto GNU e outros
+programas, ele forma
+
+11:23.592 --> 11:27.414
+as distribuições, como Ubuntu, Debian,
+Fedora, Mint e Red Hat.
+
+11:27.794 --> 11:32.095
+É multiusuário e multitarefa, domina os
+servidores e é a base do Android.
+
+11:32.475 --> 11:35.601
+E ele diferencia maiúsculas de minúsculas:
+
+11:35.601 --> 11:39.619
+Relatorio.txt e relatorio.txt são
+arquivos diferentes.
+
+11:39.999 --> 11:42.955
+O administrador, o superusuário,
+se chama root.
+
+11:43.335 --> 11:47.080
+E o sudo executa um comando com
+privilégios de administrador.
+
+11:48.780 --> 11:52.063
+No Linux, tudo parte de uma única
+raiz, representada
+
+11:52.063 --> 11:55.662
+pela barra. Não existem letras de
+unidade, como C: ou D:.
+
+11:56.042 --> 12:01.137
+Em /home ficam as pastas dos usuários, e
+/root é a pasta do superusuário.
+
+12:01.517 --> 12:05.423
+O /etc guarda as configurações do
+sistema. O /bin e o
+
+12:05.423 --> 12:09.255
+/sbin, os comandos essenciais e os
+de administração.
+
+12:09.635 --> 12:13.536
+O /usr tem programas e
+bibliotecas. O /var, dados
+
+12:13.536 --> 12:17.516
+variáveis, como os logs. E o /tmp,
+os temporários.
+
+12:17.896 --> 12:23.785
+O /dev representa os dispositivos, e o /boot
+guarda a inicialização e o kernel.
+
+12:23.785 --> 12:29.152
+Já /media e /mnt são pontos de montagem de
+pen drives e outras unidades.
+
+12:29.532 --> 12:32.170
+Pegadinha: não confunda a barra, a raiz do
+
+12:32.170 --> 12:34.996
+sistema, com /root, a pasta do
+administrador.
+
+12:37.096 --> 12:42.418
+Comandos básicos: o pwd mostra o diretório
+atual, o ls lista arquivos e
+
+12:42.418 --> 12:47.739
+pastas, e o ls -l mostra detalhes e
+permissões. O cd muda de diretório.
+
+12:48.119 --> 12:53.177
+O mkdir cria um diretório, o cp copia
+arquivos, e o mv move ou renomeia.
+
+12:53.557 --> 12:56.456
+O rm remove arquivos, e o rm -r remove
+
+12:56.456 --> 13:00.195
+diretórios. O cat exibe o
+conteúdo de um arquivo.
+
+13:00.575 --> 13:03.469
+O chmod altera permissões, o
+chown altera o
+
+13:03.469 --> 13:06.295
+dono, e o sudo executa como administrador.
+
+13:06.675 --> 13:11.062
+O ps lista os processos, o kill encerra um
+processo, e o man abre o manual.
+
+13:12.762 --> 13:17.610
+Mais comandos: o touch cria um arquivo vazio ou
+atualiza a data de modificação.
+
+13:17.610 --> 13:21.906
+O find procura arquivos, e o grep procura um
+texto dentro de arquivos.
+
+13:22.286 --> 13:27.432
+O tar agrupa e compacta arquivos. O nano e o vi
+são editores de texto no terminal.
+
+13:27.812 --> 13:31.123
+O apt e o dnf instalam e
+atualizam programas:
+
+13:31.123 --> 13:34.581
+o apt no Debian e no Ubuntu, e o
+dnf no Fedora.
+
+13:34.961 --> 13:39.006
+O df mostra o espaço livre nos discos,
+e o du, o ocupado por
+
+13:39.006 --> 13:43.051
+pastas. O top mostra processos, CPU e
+memória em tempo real.
+
+13:43.431 --> 13:47.918
+O ip addr mostra os endereços de rede,
+assim como o antigo ifconfig.
+
+13:47.918 --> 13:51.812
+O passwd altera a senha, e o whoami
+mostra o usuário atual.
+
+13:53.512 --> 13:57.174
+No terminal, o til é a pasta pessoal,
+como /home/maria. O
+
+13:57.174 --> 14:01.157
+ponto é o diretório atual, e o ponto
+ponto, o diretório acima.
+
+14:01.537 --> 14:06.247
+O caminho absoluto começa com a barra; o
+relativo parte do diretório atual.
+
+14:06.627 --> 14:09.905
+Arquivos cujo nome começa com
+ponto, como o
+
+14:09.905 --> 14:13.412
+.bashrc, são ocultos. Eles
+aparecem com ls -a.
+
+14:13.792 --> 14:16.982
+Três símbolos que caem muito: o
+sinal de maior grava a
+
+14:16.982 --> 14:20.467
+saída de um comando em um arquivo,
+substituindo o conteúdo.
+
+14:20.847 --> 14:24.470
+Dois sinais de maior acrescentam a
+saída ao final do arquivo.
+
+14:24.850 --> 14:29.081
+E a barra vertical, o pipe, envia a saída de
+um comando para o próximo.
+
+14:31.181 --> 14:34.508
+Cada arquivo do Linux tem três
+tipos de permissão.
+
+14:34.508 --> 14:37.568
+Leitura, em inglês read, é a
+letra r e vale 4.
+
+14:37.948 --> 14:40.804
+Escrita, write, é a letra w e vale 2.
+
+14:41.184 --> 14:44.265
+E execução, execute, é a letra x e vale 1.
+
+14:44.645 --> 14:49.008
+As permissões são definidas, nesta ordem, para
+o dono, o grupo e os outros.
+
+14:49.388 --> 14:52.993
+Somando os valores, cada um recebe
+um dígito de 0 a 7.
+
+14:54.693 --> 14:58.963
+Veja o exemplo: chmod 754 relatorio.sh.
+
+14:59.343 --> 15:05.713
+O dono recebe 7: 4, mais 2, mais 1. Ou seja,
+rwx: ler, escrever e executar.
+
+15:06.093 --> 15:11.300
+O grupo recebe 5: 4, mais 0, mais 1. É
+r-x: ler e executar.
+
+15:11.680 --> 15:20.067
+E os outros recebem 4: apenas ler. No ls -l,
+aparece assim: -rwxr-xr--.
+
+15:20.447 --> 15:26.009
+Treine com o chmod 640: o grupo recebeu 4,
+ou seja, somente leitura.
+
+15:26.389 --> 15:29.711
+Memorize: r vale 4, w vale 2 e
+x vale 1. E a
+
+15:29.711 --> 15:33.334
+ordem dos dígitos é sempre dono,
+grupo e outros.
+
+15:35.034 --> 15:38.456
+O chmod também aceita letras, no
+modo simbólico: u é
+
+15:38.456 --> 15:41.878
+o dono, g é o grupo, o são os
+outros, e a são todos.
+
+15:42.258 --> 15:47.157
+O sinal de mais adiciona, o de menos remove, e
+o de igual define exatamente.
+
+15:47.537 --> 15:52.090
+Assim, chmod u+x dá execução ao dono,
+chmod g-w retira a
+
+15:52.090 --> 15:57.050
+escrita do grupo, e chmod o=r deixa os
+outros só com leitura.
+
+15:57.430 --> 16:02.636
+E, para mudar o dono do arquivo, use o
+chown: chown maria dados.txt.
+
+16:04.736 --> 16:08.771
+Para fechar, Windows contra Linux. O
+Windows é proprietário, da
+
+16:08.771 --> 16:13.511
+Microsoft, e fechado. O Linux é software
+livre, com licença GPL, e aberto.
+
+16:13.891 --> 16:18.423
+O kernel do Windows é híbrido; o do
+Linux, monolítico. O sistema
+
+16:18.423 --> 16:22.460
+de arquivos padrão é o NTFS no
+Windows e o ext4 no Linux.
+
+16:22.840 --> 16:26.865
+O Windows usa letras nas unidades; o
+Linux, uma árvore a partir
+
+16:26.865 --> 16:30.634
+da barra. E só o Linux diferencia
+maiúsculas de minúsculas.
+
+16:31.014 --> 16:35.319
+O administrador do Linux é o root. E o
+Windows domina os computadores
+
+16:35.319 --> 16:39.873
+pessoais e as empresas; o Linux, servidores,
+supercomputadores e Android.
+
+16:40.253 --> 16:44.524
+Última pegadinha: o Linux não é gratuito
+por falta de licença. Ele
+
+16:44.524 --> 16:48.989
+tem licença, sim: a GPL, que garante as
+liberdades do software livre.
+
+16:51.089 --> 16:53.385
+Hora de revisar o que você aprendeu.
+
+16:53.765 --> 16:59.121
+O SO é software básico e gerencia processador,
+memória, arquivos e dispositivos.
+
+16:59.501 --> 17:03.844
+Quem espera entrada e saída está bloqueado. E
+o Round Robin usa o quantum.
+
+17:04.224 --> 17:08.739
+O kernel do Linux é monolítico; o do Windows,
+híbrido. E Linux é só o kernel.
+
+17:09.119 --> 17:15.363
+O FAT32 limita cada arquivo a 4 gigabytes;
+o exFAT e o NTFS resolvem.
+
+17:15.743 --> 17:19.546
+Shift + Delete, pen drives e rede não
+passam pela Lixeira.
+
+17:19.546 --> 17:23.087
+E os atalhos da tecla Windows usam
+iniciais em inglês.
+
+17:23.467 --> 17:27.314
+No Linux, / é a raiz, e /root, a
+pasta do administrador.
+
+17:27.314 --> 17:30.886
+O sinal de maior substitui; dois
+sinais acrescentam.
+
+17:31.266 --> 17:34.290
+E, nas permissões, r vale 4, w vale 2 e x
+
+17:34.290 --> 17:37.610
+vale 1, sempre na ordem dono,
+grupo e outros.
+
+17:39.310 --> 17:42.014
+Agora é a sua vez: faça as
+quinze questões do
+
+17:42.014 --> 17:44.958
+final do capítulo e confira a
+correção comentada.
+
+17:45.338 --> 17:49.183
+No próximo vídeo, vamos estudar a
+internet e os navegadores.
+
+17:49.563 --> 17:51.303
+Até lá, e bons estudos!
