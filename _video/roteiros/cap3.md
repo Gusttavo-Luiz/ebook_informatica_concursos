@@ -2,9 +2,11 @@
 
 > Arquivo gerado por `ferramentas/exportar-roteiro.cjs` a partir de `roteiros/cap3.js`. Edite o `.js` e gere este arquivo de novo.
 
+**Duração:** 18:18 · **Cenas:** 26
+
 ## Abertura
 
-### Cena 1 · `abertura`
+### Cena 1 · `abertura` (0:05–0:32)
 
 **Visual:** Bit grande à esquerda acena. À direita surgem o rótulo “Capítulo 3” e o título “Internet e Navegadores”. Um roteiro de 5 tópicos aparece item por item, cada um na frase que o anuncia. No “Vamos lá?”, Bit dá um pulinho.
 
@@ -19,7 +21,7 @@
 
 ## Redes de computadores
 
-### Cena 2 · `abrangencia`
+### Cena 2 · `abrangencia` (0:32–1:10)
 
 **Visual:** Definição de rede com três nós ligados por uma linha tracejada (Arquivos, Impressoras, Internet). Depois, círculos concêntricos crescem do centro — PAN (fone), LAN (prédio), MAN (cidade), WAN (globo) — enquanto à direita entra um cartão por tipo, com o nome em inglês e o exemplo. Faixa “LAN sem fio = WLAN (Wi-Fi)”.
 
@@ -31,7 +33,7 @@
 - A MAN é a rede metropolitana, de uma cidade, como a que liga as unidades de uma prefeitura.
 - E a WAN alcança países e continentes, como a própria internet.
 
-### Cena 3 · `intranet`
+### Cena 3 · `intranet` (1:10–1:44)
 
 **Visual:** Três cartões: Internet (globo), Intranet (prédio, com cadeado) e Extranet (pessoas), com seta da intranet para a extranet. Quadro âmbar “Pegadinha de banca” sobre a intranet; no fim, uma seta âmbar com a etiqueta VPN liga a internet à intranet.
 
@@ -42,7 +44,7 @@
 - A extranet é a parte da intranet liberada a usuários externos autorizados, como fornecedores e parceiros.
 - Pegadinha: a intranet usa, sim, os protocolos da internet, como TCP/IP e HTTP, e o navegador. O que muda é o acesso, que é restrito. E dá para acessá-la de fora, por uma VPN.
 
-### Cena 4 · `topologias`
+### Cena 4 · `topologias` (1:44–2:12)
 
 **Visual:** Quatro cartões, um por frase, cada um com um minidiagrama desenhado: Barramento (cabo único), Anel (círculo), Estrela (nós ligados a um switch central, com o selo “a mais usada”) e Malha (vários caminhos).
 
@@ -53,7 +55,7 @@
 - Na estrela, todos se ligam a um equipamento central, o switch. É a mais usada, mas, se o centro falhar, a rede para.
 - E na malha, vários caminhos interligam os dispositivos: alta tolerância a falhas, mas custo maior.
 
-### Cena 5 · `equipamentos`
+### Cena 5 · `equipamentos` (2:12–3:05)
 
 **Visual:** Grade de seis cartões com ícones, cada um na frase que o cita: Placa de rede (MAC), Hub, Switch, Roteador, Modem e Ponto de acesso. Embaixo, três cartões de padrões: Ethernet, Wi-Fi e Bluetooth; depois eles saem e entra o quadro verde “Memorize”.
 
@@ -68,7 +70,7 @@
 
 ## Meios de transmissão
 
-### Cena 6 · `meios`
+### Cena 6 · `meios` (3:05–3:46)
 
 **Visual:** Quatro cartões, um por meio: Par trançado (cabo com conector RJ-45), Fibra óptica (fios de luz), Cabo coaxial (corte em camadas) e Sem fio (sinal Wi-Fi). Abaixo da fibra surgem as etiquetas “monomodo → longas distâncias” e “multimodo → distâncias menores”.
 
@@ -80,7 +82,7 @@
 - O cabo coaxial tem condutor central blindado e é usado na TV e na internet a cabo.
 - E os meios sem fio usam ondas de rádio: Wi-Fi, Bluetooth, redes móveis 4G e 5G, e satélite.
 
-### Cena 7 · `wifi`
+### Cena 7 · `wifi` (3:46–4:32)
 
 **Visual:** Três colunas. Padrões: barras crescentes Wi-Fi 4 (802.11n), Wi-Fi 5 (802.11ac) e Wi-Fi 6 (802.11ax). Frequência: cartões 2,4 GHz (barra de alcance longa) e 5 GHz (barra curta, mais rápida). Segurança: WEP em vermelho (✗), WPA2 e WPA3 em verde (✓). Quadro âmbar sobre o SSID.
 
@@ -92,7 +94,7 @@
 - Na segurança, o WEP é obsoleto e inseguro. Use WPA2 ou, melhor, WPA3, com senha forte.
 - Pegadinha: esconder o nome da rede, o SSID, não protege, porque a rede continua detectável. O que protege é WPA2 ou WPA3 com senha forte.
 
-### Cena 8 · `acesso`
+### Cena 8 · `acesso` (4:32–5:08)
 
 **Visual:** Cinco nós de acesso à internet: ADSL (telefone), Cabo (coaxial), Fibra FTTH (em destaque), Rede móvel (celular) e Satélite. Depois, título “Modos de transmissão” e três linhas: Simplex (antena → TV, uma seta), Half-duplex (setas que se alternam) e Full-duplex (setas nos dois sentidos ao mesmo tempo).
 
@@ -106,7 +108,7 @@
 
 ## Modelos OSI e TCP/IP
 
-### Cena 9 · `osi`
+### Cena 9 · `osi` (5:08–6:06)
 
 **Visual:** Sete espaços tracejados numerados formam uma pilha. As camadas do OSI entram de baixo para cima, cada uma na frase que a explica, com função e exemplos (Física: cabos, hub; Enlace: MAC, switch; Rede: IP, roteador; Transporte: TCP, UDP; Sessão; Apresentação: TLS; Aplicação: HTTP, SMTP, FTP, DNS). Quadro verde “Memorize: FERTSAA” à direita, com as iniciais destacadas.
 
@@ -121,7 +123,7 @@
 - No topo, a de aplicação oferece serviços aos programas, como HTTP, SMTP, FTP e DNS.
 - Memorize, da camada 1 para a 7: física, enlace, rede, transporte, sessão, apresentação e aplicação. FERTSAA.
 
-### Cena 10 · `tcpip`
+### Cena 10 · `tcpip` (6:06–6:35)
 
 **Visual:** À esquerda, as 7 camadas do OSI em coluna. À direita, as 4 camadas do TCP/IP entram uma a uma, cada uma da altura das camadas OSI que agrupa, com linhas de ligação e etiquetas de protocolos: Aplicação (HTTP, HTTPS, FTP, SMTP, POP3, IMAP, DNS, SSH), Transporte (TCP, UDP), Internet (IP, ICMP) e Acesso à rede (Ethernet, Wi-Fi).
 
@@ -132,7 +134,7 @@
 - A de transporte equivale à do OSI, com TCP e UDP. A de internet equivale à de rede, com IP e ICMP.
 - E a de acesso à rede junta enlace e física, com Ethernet e Wi-Fi.
 
-### Cena 11 · `tcp-udp`
+### Cena 11 · `tcp-udp` (6:35–7:13)
 
 **Visual:** Dois cartões. TCP: pacotes 1, 2, 3, 4 chegam em ordem, com ✓, e itens (orientado à conexão, garante entrega e ordem, mais lento, web/e-mail/arquivos). UDP: pacotes 1, 3, ✗, 2 (fora de ordem e um perdido), e itens (sem conexão, não garante, mais rápido, streaming/jogos/voz/DNS). Quadro âmbar “Pegadinha de banca”.
 
@@ -146,7 +148,7 @@
 
 ## Endereçamento IP
 
-### Cena 12 · `ipv4-ipv6`
+### Cena 12 · `ipv4-ipv6` (7:13–8:03)
 
 **Visual:** Um envelope (pacote) viaja até um notebook com a etiqueta “endereço IP”. Depois, dois cartões: IPv4 (32 bits, 192.168.0.1, 0 a 255, contador até ≈ 4,3 bilhões · esgotados) e IPv6 (128 bits, endereço hexadecimal em 8 grupos, praticamente ilimitados). Quadro âmbar “Pegadinha de banca”.
 
@@ -158,7 +160,7 @@
 - O IPv6 tem 128 bits, em oito grupos hexadecimais separados por dois-pontos, e uma quantidade praticamente ilimitada de endereços.
 - Pegadinha: o IPv6 substitui o IPv4, e não o TCP. E o número 256 nunca aparece em um IPv4, porque cada parte vai de 0 a 255.
 
-### Cena 13 · `ip-privado`
+### Cena 13 · `ip-privado` (8:03–8:34)
 
 **Visual:** Roteador ligado à Internet, com a etiqueta “IP público · do provedor”. Depois, uma área tracejada “Rede local · IPs privados” com notebook, celular e computador (192.168.0.2, .3, .4) e as faixas privadas. As linhas dos aparelhos convergem no roteador (etiqueta NAT); por fim, a etiqueta DHCP e os IPs dos aparelhos pulsam.
 
@@ -169,7 +171,7 @@
 - Vários aparelhos compartilham um único IP público graças ao NAT, um recurso do roteador.
 - E quem distribui os IPs automaticamente na rede é o DHCP.
 
-### Cena 14 · `mascara`
+### Cena 14 · `mascara` (8:34–9:40)
 
 **Visual:** Octetos do IP 192.168.0.1 sobre a máscara 255.255.255.0 (/24); chaves marcam “rede” (três primeiros) e “dispositivo” (último). Cartões Gateway padrão (roteador) e 127.0.0.1 · loopback. Depois, título “Classes do IPv4”: tabela A, B e C, linha a linha; cartões das classes D (multicast) e E (experimental) e faixa sobre o CIDR.
 
@@ -183,7 +185,7 @@
 - As classes D, de 224 a 239, multicast, e E, de 240 a 255, experimental, não endereçam computadores.
 - Hoje se usam máscaras flexíveis, o CIDR, mas as classes ainda caem em prova.
 
-### Cena 15 · `comandos`
+### Cena 15 · `comandos` (9:40–10:09)
 
 **Visual:** Janela de terminal escura; cada comando aparece como uma linha digitada, com a explicação ao lado: ping (ICMP), ipconfig / ip addr, tracert / traceroute, nslookup e netstat.
 
@@ -196,7 +198,7 @@
 
 ## DNS e protocolos
 
-### Cena 16 · `dns-url`
+### Cena 16 · `dns-url` (10:09–11:00)
 
 **Visual:** Fluxo em três nós com setas: Nome (www.site.gov.br) → DNS (traduz para IP) → Navegador (exibe a página); os nós pulsam na ordem. Depois, barra de endereço com https://www.gov.br/receitafederal/pt-br: cada parte ganha sublinhado colorido e rótulo (protocolo, domínio, 1º nível do Brasil, caminho). Embaixo, cinco cartões de domínios brasileiros.
 
@@ -208,7 +210,7 @@
 - O https é o protocolo. O www.gov.br é o nome do domínio, resolvido pelo DNS. O ponto br é o domínio de primeiro nível do Brasil. E o resto é o caminho até a página.
 - Outros domínios brasileiros: gov.br, governo; edu.br, ensino; com.br, comercial; org.br, organizações sem fins lucrativos; e jus.br, Judiciário.
 
-### Cena 17 · `portas`
+### Cena 17 · `portas` (11:00–11:57)
 
 **Visual:** Grade de dez blocos “protocolo + porta”, cada um entrando quando é citado: HTTP 80, HTTPS 443, FTP 20·21, SSH 22 (verde), Telnet 23 (vermelho), SMTP 25·587, POP3 110·995, IMAP 143·993, DNS 53, DHCP 67·68. Quadro verde “Memorize: SMTP = Sua Mensagem Tá Partindo”.
 
@@ -223,7 +225,7 @@
 
 ## Correio eletrônico
 
-### Cena 18 · `email`
+### Cena 18 · `email` (11:57–12:53)
 
 **Visual:** Painel POP3: envelopes saem do servidor e vão para o notebook (“baixa e, por padrão, remove do servidor”). Painel IMAP: servidor com envelope, ícone de sincronização, celular e notebook. Cartões Webmail e Cliente de e-mail. Depois, janela “Nova mensagem” com os campos Para, Cc e Cco, e ao lado quem vê cada um (olho aberto / olho riscado). Quadro âmbar “Pegadinha de banca”.
 
@@ -239,7 +241,7 @@
 
 ## Web e serviços
 
-### Cena 19 · `web`
+### Cena 19 · `web` (12:53–13:35)
 
 **Visual:** Um nó “Web · WWW” surge; em volta dele cresce o círculo tracejado “Internet”, com outros serviços (E-mail, Arquivos, Outros). À direita, três faixas HTML (estrutura), CSS (aparência) e JavaScript (interatividade), e o cartão Web 2.0. No fim, a coluna da direita dá lugar ao quadro âmbar “internet ≠ web”.
 
@@ -251,7 +253,7 @@
 - Na Web 2.0, os usuários passaram a produzir conteúdo e interagir: redes sociais, blogs e wikis.
 - Pegadinha: internet e web não são sinônimos. A internet é a rede física e lógica mundial; a web é um serviço sobre ela.
 
-### Cena 20 · `deep-web`
+### Cena 20 · `deep-web` (13:35–14:08)
 
 **Visual:** Iceberg na água, revelado em três partes com rótulos: Surface web (ponta, indexada), Deep web (parte submersa: e-mails, bancos de dados, login) e Dark web (fundo escuro, Tor). Depois, dois cartões: VoIP (celular – ondas – globo – ondas – celular) e P2P (computadores ligados entre si, sem servidor central; BitTorrent).
 
@@ -265,7 +267,7 @@
 
 ## Navegadores
 
-### Cena 21 · `recursos`
+### Cena 21 · `recursos` (14:08–15:03)
 
 **Visual:** Etiquetas com os navegadores (Chrome, Edge, Firefox, Safari) e cinco cartões de recursos: Histórico, Favoritos, Cookies, Cache e Extensões. Depois, janela escura da navegação privativa com os nomes em cada navegador e a faixa “ao fechar, apaga” (histórico, cookies, formulários). Quadro âmbar e três olhos: provedor, rede da empresa e sites ainda veem o acesso.
 
@@ -278,7 +280,7 @@
 - A navegação privativa, anônima no Chrome, InPrivate no Edge e privativa no Firefox, apaga histórico, cookies e dados de formulários da sessão ao fechar a janela.
 - Pegadinha: ela não deixa você invisível. Provedor, rede da empresa e sites visitados ainda identificam o acesso. E downloads e favoritos criados continuam salvos.
 
-### Cena 22 · `atalhos`
+### Cena 22 · `atalhos` (15:03–15:29)
 
 **Visual:** Grade de dez blocos com teclas desenhadas e a ação de cada atalho, entrando na frase que o cita: Ctrl+T, Ctrl+W, Ctrl+Shift+T, Ctrl+Shift+N, Ctrl+Shift+P, Ctrl+H, Ctrl+J, Ctrl+D, Ctrl+F e F5.
 
@@ -289,7 +291,7 @@
 - Ctrl + H abre o histórico, Ctrl + J, os downloads, e Ctrl + D adiciona aos favoritos.
 - Ctrl + F localiza um texto na página, e F5 recarrega.
 
-### Cena 23 · `privacidade`
+### Cena 23 · `privacidade` (15:29–16:18)
 
 **Visual:** Seis cartões com ícones, um por recurso: Limpar dados (Ctrl+Shift+Delete), Bloqueador de pop-ups, Gerenciador de senhas, Sincronização, Cookies de terceiros e Aviso “Não seguro”. Quadro azul “Resumo estratégico” sobre o cadeado e o HTTPS.
 
@@ -304,7 +306,7 @@
 
 ## Mecanismos de busca
 
-### Cena 24 · `busca`
+### Cena 24 · `busca` (16:18–17:02)
 
 **Visual:** Caixa de busca com lupa e “concurso público”, etiquetas Google, Bing e DuckDuckGo. Depois, tabela de operadores (aspas, menos, site:, filetype:, OR, asterisco, intitle:) com exemplos, linha a linha. No fim, quadro âmbar e dois cartões: Chrome = navegador ≠ Google = buscador.
 
@@ -318,7 +320,7 @@
 
 ## Revisão
 
-### Cena 25 · `revisao`
+### Cena 25 · `revisao` (17:02–18:03)
 
 **Visual:** Sete cartões de revisão com ícone de verificação, um por frase: Redes, Equipamentos, Transmissão, Modelos, Endereços, Protocolos e Web e navegadores.
 
@@ -333,7 +335,7 @@
 - O HTTPS usa a porta 443. O SMTP envia, o POP3 baixa, o IMAP sincroniza, e ninguém vê quem está em Cco.
 - E a web é um serviço da internet, a navegação anônima não torna ninguém invisível, e o Google é buscador, não navegador.
 
-### Cena 26 · `encerramento`
+### Cena 26 · `encerramento` (18:03–18:16)
 
 **Visual:** Bit grande à esquerda. Cartão “Pratique agora: 15 questões” e cartão “Próximo vídeo: Capítulo 4 — Pacote Office” na cor do capítulo 4. Bit acena na despedida.
 
